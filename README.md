@@ -24,26 +24,20 @@
 
 
 
-# Example : TOURISM-PROJECT
+# The project : SAUDI-INDUSTRY-HIGHLIGHTS
 
-## Using Django create a website for Tourism in Saudi Arabia . The project name is : Tourister
+## Using Django Im making a website about the industries of saudi arabia and prominant cities in these industries
 
-### Your website has the following pages :
+### my website will have the following pages :
 
 #### "" : home page , with the following content:
-- Title of the page , with a catchy phrase about tourism in Saudi Arabia
+- Title of the page , with general information about industry in Saudi Arabia
 - A single wide image covering the page.
-- A paragraph about the tourism in Saudi Arabia in General.
+- A paragraph about the industries in Saudi Arabia in General.
 - A list of cities pages with links to them (the pages are listed down below).
 
 
 #### "city/Riyadh/"
-- Title of city with a catchy phrase
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
-- Top Attraction of the city.
-- A briefe history / timeline of the city.
-- Major events in the city.
 
 #### "city/Abha/"
 - Title of city with a catchy phrase.
