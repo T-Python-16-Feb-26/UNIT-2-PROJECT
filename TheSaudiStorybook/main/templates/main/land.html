@@ -1,0 +1,145 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}The Land{% endblock %}
+
+{% block content %}
+<section class="land-page">
+	<div class="container-fluid px-4 px-md-5 py-4 py-md-5">
+		<header class="land-hero rounded-4 overflow-hidden mb-4 mb-md-5">
+			<div class="land-hero-bg" role="img" aria-label="Landscape view of Saudi Arabia"></div>
+			<div class="land-hero-content text-white p-4 p-md-5">
+				<p class="land-kicker mb-2">Chapter 1</p>
+				<h1 class="display-5 fw-semibold mb-3">The Land of Saudi Arabia</h1>
+				<p class="lead mb-0 land-hero-copy">
+					A country of vast deserts, dramatic mountains, rich heritage sites, and modern skylines rising from ancient ground.
+				</p>
+			</div>
+		</header>
+
+		<section class="mb-4 mb-md-5" aria-label="Quick facts about Saudi Arabia">
+			<div class="row g-3 g-md-4">
+				<div class="col-6 col-lg-3">
+					<article class="land-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="land-fact-label mb-2">Area</p>
+						<p class="land-fact-value mb-1">2.15M km2</p>
+						<p class="land-fact-note mb-0">One of the largest countries in the Arab world.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="land-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="land-fact-label mb-2">Regions</p>
+						<p class="land-fact-value mb-1">13</p>
+						<p class="land-fact-note mb-0">Each region has its own terrain and identity.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="land-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="land-fact-label mb-2">Climate</p>
+						<p class="land-fact-value mb-1">Arid to mild</p>
+						<p class="land-fact-note mb-0">From hot desert interiors to cooler highlands.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="land-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="land-fact-label mb-2">Heritage</p>
+						<p class="land-fact-value mb-1">UNESCO Sites</p>
+						<p class="land-fact-note mb-0">Historic places like Hegra connect land and legacy.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="land-regions-title">
+			<div class="d-flex align-items-center justify-content-between mb-3">
+				<h2 id="land-regions-title" class="h3 mb-0">Landscapes Across the Kingdom</h2>
+			</div>
+
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="land-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">The Desert Heart</h3>
+						<p class="mb-0">Golden sands and open horizons define much of the kingdom's geography.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="land-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Mountain Highlands</h3>
+						<p class="mb-0">Southwestern highlands offer cooler air, terraces, and dramatic views.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="land-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Coastal Fronts</h3>
+						<p class="mb-0">The Red Sea and Arabian Gulf shape trade, culture, and marine life.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="land-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Urban Horizons</h3>
+						<p class="mb-0">Modern cities rise from ancient routes, linking history with innovation.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="land-spotlight rounded-4 overflow-hidden mb-4 mb-md-5" aria-label="Landmark spotlight">
+			<div class="row g-0">
+				<div class="col-12 col-lg-6">
+					<div class="land-spotlight-image" role="img" aria-label="Historic landmark in AlUla"></div>
+				</div>
+				<div class="col-12 col-lg-6 d-flex align-items-center">
+					<div class="p-4 p-md-5">
+						<p class="land-kicker mb-2">Spotlight</p>
+						<h2 class="h3 mb-3">From Hegra to Tomorrow</h2>
+						<p class="mb-0">
+							The land preserves stories carved in stone while inspiring future architecture, tourism, and cultural life.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="land-gallery-title">
+			<h2 id="land-gallery-title" class="h3 mb-3">Gallery of Moments</h2>
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-4">
+					<figure class="land-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="land-gallery-image land-gallery-image-one" role="img" aria-label="Saudi skyline and flags"></div>
+						<figcaption class="p-3">Modern roads and skylines reflect national growth.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="land-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="land-gallery-image land-gallery-image-two" role="img" aria-label="Traditional coffee in the desert"></div>
+						<figcaption class="p-3">Desert hospitality remains a living tradition.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="land-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="land-gallery-image land-gallery-image-three" role="img" aria-label="National celebration with flags and fireworks"></div>
+						<figcaption class="p-3">Celebrations unite heritage, pride, and future vision.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="land-closing text-center rounded-4 p-4 p-md-5">
+			<h2 class="h3 mb-3">A Living Land, A Continuing Story</h2>
+			<p class="mb-4 mx-auto land-closing-copy">
+				From ancient stone to future skylines, the land of Saudi Arabia continues to shape identity, memory, and ambition.
+			</p>
+			<div class="d-flex flex-wrap justify-content-center gap-2">
+				<a class="btn btn-success px-4" href="{% url 'main:people_view' %}">Chapter 2: People</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:traditions_view' %}">Chapter 3: Traditions</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:cities_view' %}">Chapter 4: Cities</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:royal_family_view' %}">Chapter 5: Royal Family</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:future_view' %}">Chapter 6: Future</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:legacy_view' %}">Chapter 7: Legacy</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:celebrations_view' %}">Chapter 8: Celebrations</a>
+				<a class="btn btn-outline-dark px-4" href="{% url 'main:home_view' %}">Back Home</a>
+			</div>
+		</section>
+	</div>
+</section>
+{% endblock %}

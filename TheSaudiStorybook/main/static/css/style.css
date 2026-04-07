@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f5ef;
+    color: #1f2a37;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* ================================================
+****************** The home PAGE ******************
+=================================================*/ 
+
+.homepage-section {
+    max-width: 1400px;
+}
+
+.homepage-section .chapter-card {
+    border: 0;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff, #f1ece2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    aspect-ratio: 1 / 1;
+    min-height: 280px;
+}
+
+.chapter-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 1.8rem rgba(31, 42, 55, 0.12) !important;
+}
+
+.chapter-card .card-title {
+    color: #8a6b2f;
+    font-weight: 700;
+}
+
+.chapter-card .card-text {
+    color: #243447;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.homepage-section .land-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/land.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .land-card-bg .card-title,
+.homepage-section .land-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .people-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/people.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .people-card-bg .card-title,
+.homepage-section .people-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .traditions-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/traditions.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .traditions-card-bg .card-title,
+.homepage-section .traditions-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .cities-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/cities.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .cities-card-bg .card-title,
+.homepage-section .cities-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .future-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/future.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .future-card-bg .card-title,
+.homepage-section .future-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .legacy-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/legacy.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .legacy-card-bg .card-title,
+.homepage-section .legacy-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .celebrations-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/celebrations.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .celebrations-card-bg .card-title,
+.homepage-section .celebrations-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.homepage-section .royal-family-card-bg {
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/royal-family.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage-section .royal-family-card-bg .card-title,
+.homepage-section .royal-family-card-bg .card-text {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* ================================================
+****************** The LAND PAGE ******************
+=================================================*/ 
+
+.land-page {
+    --land-sand: #efe2c8;
+    --land-ink: #1f2a37;
+    --land-palm: #0f6a45;
+    --land-gold: #b68a2e;
+    --land-card: #fffdfa;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(182, 138, 46, 0.14), transparent 35%),
+        radial-gradient(circle at 90% 18%, rgba(15, 106, 69, 0.1), transparent 30%),
+        linear-gradient(180deg, #f7f2e8 0%, #f3ecdf 45%, #f8f5ef 100%);
+    color: var(--land-ink);
+}
+
+.land-hero {
+    position: relative;
+    min-height: 420px;
+    border: 1px solid rgba(182, 138, 46, 0.25);
+    box-shadow: 0 1.25rem 2rem rgba(31, 42, 55, 0.13);
+}
+
+.land-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(110deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.28) 52%, rgba(20, 30, 36, 0.18)),
+        url("../images/vast-saudi.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+}
+
+.land-hero-content {
+    position: relative;
+    max-width: 760px;
+}
+
+.land-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--land-sand);
+}
+
+.land-hero-copy {
+    max-width: 62ch;
+}
+
+.land-fact-card {
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.95), rgba(239, 226, 200, 0.55));
+    border: 1px solid rgba(182, 138, 46, 0.24);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.08);
+}
+
+.land-fact-label {
+    color: #5d4d2d;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.land-fact-value {
+    color: #1f2a37;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.land-fact-note {
+    color: #3b4d5f;
+    font-size: 0.94rem;
+}
+
+.land-region-card {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: var(--land-card);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.land-region-card h3 {
+    color: var(--land-palm);
+}
+
+.land-region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(31, 42, 55, 0.11);
+}
+
+.land-spotlight {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: #fffaf0;
+    box-shadow: 0 1rem 1.6rem rgba(31, 42, 55, 0.08);
+}
+
+.land-spotlight-image {
+    min-height: 320px;
+    background-image:
+        linear-gradient(rgba(24, 32, 38, 0.2), rgba(24, 32, 38, 0.2)),
+        url("../images/hegra.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.land-gallery-card {
+    background: #ffffff;
+    border: 1px solid rgba(31, 42, 55, 0.1);
+    box-shadow: 0 0.8rem 1.4rem rgba(31, 42, 55, 0.08);
+}
+
+.land-gallery-image {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.28s ease;
+}
+
+.land-gallery-card:hover .land-gallery-image {
+    transform: scale(1.04);
+}
+
+.land-gallery-image-one {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/roads-skylines.webp");
+}
+
+.land-gallery-image-two {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.28), rgba(20, 30, 36, 0.28)),
+        url("../images/desert-hospitality.jpg");
+    background-position: 30% center;
+}
+
+.land-gallery-image-three {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/united-celebrations.png");
+    background-position: 70% center;
+}
+
+.land-gallery-card figcaption {
+    color: #2d3e4e;
+    font-size: 0.95rem;
+}
+
+.land-closing {
+    background: linear-gradient(160deg, rgba(15, 106, 69, 0.12), rgba(182, 138, 46, 0.18));
+    border: 1px solid rgba(15, 106, 69, 0.24);
+}
+
+.land-closing h2 {
+    color: #183c2d;
+}
+
+.land-closing-copy {
+    max-width: 64ch;
+}
+
+@media (max-width: 767.98px) {
+    .land-hero {
+        min-height: 360px;
+    }
+
+    .land-hero-bg {
+        background-image:
+            linear-gradient(160deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.4)),
+            url("../images/land.avif");
+    }
+
+    .land-spotlight-image {
+        min-height: 240px;
+    }
+
+    .land-gallery-image {
+        height: 190px;
+    }
+}
+
+/* ================================================
+***************** The People PAGE *****************
+=================================================*/ 
