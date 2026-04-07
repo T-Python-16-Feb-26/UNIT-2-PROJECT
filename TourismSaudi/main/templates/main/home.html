@@ -1,0 +1,176 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Let's Discover Saudi {% endblock %}
+
+{% block content %}
+<main>
+    <div class="video-container">
+        <video autoplay muted loop class="Big-Vid">
+            <source src="{% static 'videos/main-video.MP4' %}">
+        </video>
+        <img src="{% static 'images/Saudi-logo-rm.png' %}" class="center-image"> 
+    </div>
+
+    <section class="city-section">
+        <div class="section-header">
+            <h2 id="#discover" class="translate-text" data-ar="استكشف المدن" data-en="Explore Cities">Explore Cities</h2>
+            <a href="{% url 'main:discover_view' %}" class= "translate-text"class="view-all-link" data-ar="عرض الكل" data-en="View All">View All</a>
+        </div>
+
+        <div class="slider-wrapper">
+            <button class="nav-btn prev" onclick="scrollSlider(-1)">&#10094;</button>
+            
+            <div class="cards-container">
+                
+                <a href="{% url 'main:riyadh_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Riyadh.jpg' %}" alt="Riyadh">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="الرياض" data-en="Riyadh">Riyadh</h3>
+                            <p class="location translate-text" data-ar="العاصمة والقلب النابض" data-en="The vibrant Capital">The vibrant Capital</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:aseer_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Aseer.jpg' %}" alt="Aseer">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="عسير" data-en="Aseer">Aseer</h3>
+                            <p class="location translate-text" data-ar="طبيعة وضباب" data-en="Nature & Mist">Nature & Mist</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:jazan_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Jazan.jpg' %}" alt="Jazan">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="جازان" data-en="Jazan">Jazan</h3>
+                            <p class="location translate-text" data-ar="لؤلؤة الجنوب" data-en="Southern Pearl">Southern Pearl</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:aljouf_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Aljouf.jpg' %}" alt="Aljouf">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="الجوف" data-en="Aljouf">Aljouf</h3>
+                            <p class="location translate-text" data-ar="عراقة الزيتون" data-en="History & Olives">History & Olives</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:jeddah_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Jeddah.jpg' %}" alt="jeddah">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="جدة" data-en="Jeddah">Jeddah</h3>
+                            <p class="location translate-text" data-ar="عروس البحر الأحمر" data-en="Bride of the Red Sea">Bride of the Red Sea</p>
+                            </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:khobar_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Khobar.jpg' %}" alt="khobar">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="الخبر" data-en="khobar">khobar</h3>
+                            <p class="location translate-text" data-ar="لؤلؤة الخليج" data-en="Pearl of the Gulf">Pearl of the Gulf</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:mecca_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Mecca.jpg' %}" alt="mecca">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="مكة المكرمة" data-en="Mecca">Mecca</h3>
+                            <p class="location translate-text" data-ar="مهبط الوحي" data-en="The Holy City">The Holy City</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:medina_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Medina.jpg'%}" alt="medina">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="المدينة المنورة" data-en="Medina">Medina</h3>
+                            <p class="location translate-text" data-ar="طيبة" data-en="The Prophet's City">The Prophet's City</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:tabuk_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Tabuk.jpg' %}" alt="tabuk">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="تبوك" data-en="Tabuk">Tabuk</h3>
+                            <p class="location translate-text" data-ar="تبوك الثلج" data-en="The Snow City">The Snow City</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:alula_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Alula.jpg' %}" alt="alula">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="العلا" data-en="Alula">Alula</h3>
+                            <p class="location translate-text" data-ar="متحف من الطبيعة" data-en="A Museum of Nature">A Museum of Nature</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:taif_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/Taif.jpg' %}" alt="taif">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="الطائف" data-en="Taif">Taif</h3>
+                            <p class="location translate-text" data-ar="مدينة الورد" data-en="City of Roses">City of Roses</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div> <button class="nav-btn next" onclick="scrollSlider(1)">&#10095;</button>
+        </div>
+        </section>
+        </main>
+
+        <script>
+        // السكربت هنا للتأكيد، والأفضل أن يكون في base.html كما فعلنا سابقاً
+        function scrollSlider(direction) {
+            const slider = document.querySelector('.cards-container');
+            const scrollAmount = 350; 
+            if (slider) {
+                slider.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        </script>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>{% block title %}Discover Saudi{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img class="logo" src="{% static 'images/Saudi-logo-rm.png' %}">
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+            <a href="#contact" class="translate-text" data-ar="تواصل معنا" data-en="Contact">Contact</a>
+            <a href="#" class="translate-text" data-ar="سجل دخول" data-en="Log in">Log in</a>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <section id="contact">
+        <div class="contact-container">
+            <h1 class="translate-text" data-ar="تواصل معي" data-en="Contact Me">Contact Me</h1>
+            <p class="translate-text" data-ar="دعنا نعمل معاً 👇" data-en="Let’s work together 👇">Let’s work together 👇</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="translate-text" data-ar="إرسال" data-en="Send Message">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: sadeem@email.com</p>
+                <p>GitHub: github.com/sadeem21alharbi</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="lang-switcher">
+            <button onclick="changeLanguage('ar')">العربية</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+        <p>&copy; 2026 Let's Discover Saudi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollSlider(direction) {
+            const slider = document.querySelector('.cards-container');
+            const scrollAmount = 350; 
+            if (slider) {
+                slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('.translate-text');
+            elements.forEach(el => {
+                el.innerText = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+            });
+            document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            localStorage.setItem('prefLang', lang);
+        }
+
+        window.onload = () => {
+            const saved = localStorage.getItem('prefLang') || 'en';
+            changeLanguage(saved);
+        };
+    </script>
+</body>
+</html>

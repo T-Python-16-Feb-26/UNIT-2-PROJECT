@@ -1,0 +1,338 @@
+/* --- الإعدادات العامة --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden; /* يمنع ظهور سكرول بار أفقي للمتصفح ككل */
+    background-color: #f9f9f9;
+}
+
+/* --- قسم الفيديو --- */
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Big-Vid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 2;
+}
+
+/* --- قسم المدن (Slider Section) --- */
+.city-section {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* الحاوية الخارجية للسلايدر */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* الحاوية الفعلية للكروت - هي التي تتحرك */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* يسمح بالتمرير البرمجي */
+    scroll-behavior: smooth;
+    padding: 20px 10px;
+    width: 100%;
+    scrollbar-width: none; /* إخفاء السكرول في فايرفوكس */
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none; /* إخفاء السكرول في كروم وسافاري */
+}
+
+/* تنسيق الرابط والكارد */
+.city-card-link {
+    flex: 0 0 300px; /* تثبيت عرض الكارد (مهم جداً للتمرير الأفقي) */
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.city-card-link:hover {
+    transform: translateY(-10px);
+}
+
+.city-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.card-image {
+    height: 380px;
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #2f2b4e;
+}
+
+.location {
+    color: #777;
+    font-size: 14px;
+}
+
+/* --- أزرار الأسهم --- */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2f2b4e; /* لون غامق ليتناسب مع الهوية */
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #fca311; /* يقلب أصفر عند التمرير */
+}
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+/* --- قسم التواصل (Contact Me) المصحح --- */
+#contact {
+    background: #0d1b2a;
+    color: white;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: #fff;
+    font-size: 16px;
+}
+
+#contact button {
+    background: #fca311;
+    color: #000;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    background: #ffb703;
+    transform: scale(1.02);
+}
+
+/* --- الفوتر وأزرار اللغة --- */
+.footer {
+    padding: 40px;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.lang-switcher {
+    margin-bottom: 20px;
+}
+
+.lang-switcher button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-switcher button:hover {
+    background: #2f2b4e;
+    color: white;
+}
+
+/* تنسيق رابط View All في الصفحة الرئيسية */
+.view-all-link {
+    text-decoration: none;
+    color: #2f2b4e;
+    font-weight: bold;
+    border-bottom: 2px solid #fca311;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+.view-all-link:hover {
+    color: #fca311;
+}
+
+/* تنسيق صفحة "جميع المدن" */
+.all-cities-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.all-cities-section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2f2b4e;
+    font-size: 36px;
+}
+
+/* نظام الشبكة (Grid) لترتيب 3 كروت في الصف */
+.cities-grid {
+    display: grid;
+    /* هذا السطر هو السحر: ينشئ 3 أعمدة متساوية */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* لجعلها متجاوبة (في الجوال تظهر كرت واحد تحت بعض) */
+@media (max-width: 992px) {
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr); /* في الأجهزة المتوسطة 2 جنب بعض */
+    }
+}
+
+@media (max-width: 600px) {
+    .cities-grid {
+        grid-template-columns: 1fr; /* في الجوال كرت واحد فقط */
+    }
+}
+
+/* تأكيد تنسيق الكارد ليعمل داخل الشبكة */
+.cities-grid .city-card-link {
+    width: 100%; /* ليأخذ عرض العمود في الشبكة */
+}
+
+/* --- تنسيق عنوان القسم وزر "عرض الكل" --- */
+.section-header {
+    display: flex;
+    justify-content: space-between; /* يضع العنوان على اليسار والزر على اليمين */
+    align-items: center; /* يوسطهم رأسياً */
+    margin-bottom: 30px; /* مسافة أسفل العنوان */
+    max-width: 1200px; /* ليصطف مع السلايدر */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* مسافة جانبية */
+}
+
+.section-header h2 {
+    font-size: 28px;
+    color: #2f2b4e; /* لون الهوية */
+    font-weight: 700;
+}
+
+/* --- تنسيق زر "عرض الكل" (View All Button) --- */
+.view-all-link {
+    text-decoration: none; /* إزالة الخط السفلي الافتراضي */
+    color: #fca311; /* اللون الأصفر للشعار */
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #fca311; /* إطار أصفر */
+    padding: 8px 20px; /* مسافة داخلية */
+    border-radius: 20px; /* زوايا دائرية */
+    transition: all 0.3s ease; /* تأثير ناعم عند التأشير */
+    background-color: transparent; /* خلفية شفافة في البداية */
+}
+
+/* تأثير عند التأشير بالماوس (Hover) */
+.view-all-link:hover {
+    background-color: #fca311; /* يقلب الخلفية صفراء */
+    color: #fff; /* يقلب النص أبيض */
+    box-shadow: 0 4px 8px rgba(252, 163, 17, 0.3); /* ظل ناعم */
+    transform: translateY(-2px); /* يرتفع قليلاً */
+}
+
+/* تنسيق إضافي ليتناسب مع الاتجاه العربي */
+body[dir="rtl"] .section-header {
+    flex-direction: row-reverse; /* يقلب الأماكن في العربي */
+}
