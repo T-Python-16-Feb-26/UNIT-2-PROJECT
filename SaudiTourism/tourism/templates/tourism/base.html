@@ -6,27 +6,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Saudi Tourism{% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
     </head>
     <!-- body  -->
     <body>
         <!-- nav-top  -->
-        <nav class="nav-top">
+        <!-- <nav class="nav-top">
             <a href="/">Home</a>
             <a href="#">Riyadh</a>
             <a href="#">Qassim</a>
             <a href="#">Makkah</a>
             <a href="#">Madina</a>
+            <a href="#">Jeddah</a>
             <a href="#">Al-Ula</a>
             <a href="#">Abha</a>
-        </nav>
-        <!-- content  -->
+        </nav>  -->
+        <!-- content --> 
+         
         {% block content %}
-
+            
         {% endblock %}
+         
     
-        <footer>
+        <!-- <footer>
             <p> Saudi Tourism © 2026</p>
-        </footer>
+        </footer> -->
     </body>
 </html>
