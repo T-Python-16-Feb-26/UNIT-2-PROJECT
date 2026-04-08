@@ -1,0 +1,104 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block title %}Heritage{%endblock%}
+
+        {%block header%}
+       <video autoplay loop muted plays-inline class="back-video">
+            <source src="{% static 'video/video-header.mp4'%}" type="video/mp4">
+        </video>
+        {%endblock%}
+
+        {%block title-header%}
+            <div class="title-header">
+        <h1>Heritage Of Saudi Arabia </h1>
+        <p>
+            <i>"A heritage we are proud of… and a culture we deeply cherish"</i>
+        </p>
+
+        <a href="#" class="btn">Learn More</a>
+    </div>
+        {%endblock%}
+{% block content%}
+    <div class="main-page">
+        <section class="box-intro">
+            <div class="intro">
+                <h2>About Saudi Heritage</h2>
+                <p>
+                    Saudi heritage reflects the rich traditions, customs, and values that have shaped the Kingdom over generations. 
+                    From traditional clothing and local cuisine to crafts and social practices, it represents a unique identity 
+                    that continues to be preserved and celebrated today.
+                </p>
+            </div>
+        </section>
+        <div class="content">
+            <div class="card-main">
+                <article class="card-article">
+                    <img src="{% static 'images/food-card.jpg'%}" alt="" class="card-img">
+                    <div class="card-data">
+                        <span class="card-desc">food of daudi arabia blah blah balh</span>
+                        <h2 class="card-title">Food</h2>
+                        <a href="" class="card-button">Explore</a>
+                    </div>
+
+                </article>
+            </div>
+                    <div class="card-main">
+                <article class="card-article">
+                    <img src="{% static 'images/clothing-card.jpg'%}" alt="" class="card-img">
+                    <div class="card-data">
+                        <span class="card-desc">food of daudi arabia blah blah balh</span>
+                        <h2 class="card-title">Food</h2>
+                        <a href="" class="card-button">Explore</a>
+                    </div>
+
+                </article>
+            </div>
+               <div class="card-main">
+                <article class="card-article">
+                    <img src="{% static 'images/game-card.jpg'%}" alt="" class="card-img">
+                    <div class="card-data">
+                        <span class="card-desc">food of daudi arabia blah blah balh</span>
+                        <h2 class="card-title">Food</h2>
+                        <a href="" class="card-button">Explore</a>
+                    </div>
+
+                </article>
+            </div>
+                           <div class="card-main">
+                <article class="card-article">
+                    <img src="{% static 'images/art-card.jpg'%}" alt="" class="card-img">
+                    <div class="card-data">
+                        <span class="card-desc">food of daudi arabia blah blah balh</span>
+                        <h2 class="card-title">Food</h2>
+                        <a href="" class="card-button">Explore</a>
+                    </div>
+
+                </article>
+            </div>
+                           <div class="card-main">
+                <article class="card-article">
+                    <img src="{% static 'images/play-card.jpg'%}" alt="" class="card-img">
+                    <div class="card-data">
+                        <span class="card-desc">food of daudi arabia blah blah balh</span>
+                        <h2 class="card-title">Food</h2>
+                        <a href="" class="card-button">Explore</a>
+                    </div>
+
+                </article>
+            </div>
+                           <div class="card-main">
+                <article class="card-article">
+                    <img src="{% static 'images/tradtional-card.jpg'%}" alt="" class="card-img">
+                    <div class="card-data">
+                        <span class="card-desc">food of daudi arabia blah blah balh</span>
+                        <h2 class="card-title">Food</h2>
+                        <a href="" class="card-button">Explore</a>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+{% endblock %}

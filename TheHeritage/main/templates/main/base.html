@@ -1,0 +1,38 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="hero">
+        {% block header %}{%endblock%}
+        <nav class="nav-bar">
+        <img src="{%static 'images/logo.png'%}" alt="" class="logo">
+        <ul class="nav-list">
+            <li><a href="" class="links-nav">Home</a></li>
+            <li><a href="{% url 'main:clothing_view' %}" class="links-nav">clothing</a></li>
+            <li><a href="" class="links-nav">Home</a></li>
+            <li><a href="" class="links-nav">Home</a></li>
+        </ul>
+    </nav>
+    {% block title-header%}
+
+    {%endblock%}
+    </div>
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <footer>
+        
+    </footer>
+   
+</body>
+</html>
