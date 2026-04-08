@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saudi ESport</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+<!--  NAVBAR -->
+<div class="nav">
+    <div class="nav-center">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+         <a href="#">TIMELINE</a>
+        <a href="#">GAMES</a>
+        <a href="#">TEAMS</a>
+        <a href="#">EVENTS</a>
+        <a href="#">INFRASTRUCTURE</a>
+
+
+        <button class="playnow">PLAY NOW</button>
+    </div>
+</div>
+
+<!--for page contant-->
+{% block content %}
+{% endblock %}
+
+<!-- GOOGLE SEARCH FOOTER-->
+<div class="footer">
+    
+    <div class="footer-top">
+        Saudi Arabia
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-left">
+            <a href="{% url 'core:home_view' %}">Google</a> 
+            <a href="#">About</a>
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search works</a>
+        </div>
+
+        <div class="footer-right">
+            <a href="#">Privacy</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
