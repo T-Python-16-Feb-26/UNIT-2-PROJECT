@@ -66,79 +66,79 @@
         <div class="slides">
             <!-- Riyadh  -->
             <div class="slide">
-                <img src="{% static 'images/Riyadh.png' %}" alt="Riyadh">
+                <img src="{% static 'images_and_videos/riyadh/riyadh.png' %}" alt="Riyadh">
                 <h3>الرياض</h3>
             </div>
             <!-- Qassim  -->    
             <div class="slide">
-                <img src="{% static 'images/Qassim.png' %}" alt="Qassim">
+                <img src="{% static 'images_and_videos/qassim/Qassim.png' %}" alt="Qassim">
                 <h3>القصيم</h3>
             </div>
             <!-- Makkah  -->
             <div class="slide">
-                <img src="{% static 'images/Makkah.png' %}" alt="Makkah">
+                <img src="{% static 'images_and_videos/makkah/Makkah.png' %}" alt="Makkah">
                 <h3>مكة المكرمة</h3>
             </div>
             <!-- Madina  -->
             <div class="slide">
-                <img src="{% static 'images/Madina.png' %}" alt="Madina">
+                <img src="{% static 'images_and_videos/madina/Madina.png' %}" alt="Madina">
                 <h3>المدينة المنورة</h3>
             </div>
             <!-- Jeddah  -->
             <div class="slide">
-                <img src="{% static 'images/Jeddah.png' %}" alt="Jeddah">
+                <img src="{% static 'images_and_videos/jeddah/Jeddah.png' %}" alt="Jeddah">
                 <h3>جدة</h3>
             </div>
             <!-- Al-Ula  -->
             <div class="slide">
-                <img src="{% static 'images/Al-Ula.png' %}" alt="Al-Ula">
+                <img src="{% static 'images_and_videos/al-ula/Al-Ula.png' %}" alt="Al-Ula">
                 <h3>العلا</h3>
             </div>
             <!-- Abha  -->
             <div class="slide">
-                <img src="{% static 'images/Abha.png' %}" alt="Abha">
+                <img src="{% static 'images_and_videos/abha/Abha.png' %}" alt="Abha">
                 <h3>أبها</h3>
             </div>
             <!-- Two more cities -->
             <!-- Riyadh  -->
             <div class="slide">
-                <img src="{% static 'images/Riyadh.png' %}" alt="Riyadh">
+                <img src="{% static 'images_and_videos/riyadh/riyadh.png' %}" alt="Riyadh">
                 <h3>الرياض</h3>
             </div>
             <!-- Qassim  -->
             <div class="slide">
-                <img src="{% static 'images/Qassim.png' %}" alt="Qassim">
+                <img src="{% static 'images_and_videos/qassim/Qassim.png' %}" alt="Qassim">
                 <h3>القصيم</h3>
             </div>
             <!-- Makkah  -->
             <div class="slide">
-                <img src="{% static 'images/Makkah.png' %}" alt="Makkah">
+                <img src="{% static 'images_and_videos/makkah/Makkah.png' %}" alt="Makkah">
                 <h3>مكة المكرمة</h3>
             </div>
             <!-- Madina  -->
             <div class="slide">
-                <img src="{% static 'images/Madina.png' %}" alt="Madina">
+                <img src="{% static 'images_and_videos/madina/Madina.png' %}" alt="Madina">
                 <h3>المدينة المنورة</h3>
             </div>
             <!-- Jeddah  -->
             <div class="slide">
-                <img src="{% static 'images/Jeddah.png' %}" alt="Jeddah">
+                <img src="{% static 'images_and_videos/jeddah/Jeddah.png' %}" alt="Jeddah">
                 <h3>جدة</h3>
             </div>
             <!-- Al-Ula  -->
             <div class="slide">
-                <img src="{% static 'images/Al-Ula.png' %}" alt="Al-Ula">
+                <img src="{% static 'images_and_videos/al-ula/Al-Ula.png' %}" alt="Al-Ula">
                 <h3>العلا</h3>
             </div>
             <!-- Abha  -->
             <div class="slide">
-                <img src="{% static 'images/Abha.png' %}" alt="Abha">
+                <img src="{% static 'images_and_videos/abha/Abha.png' %}" alt="Abha">
                 <h3>أبها</h3>
             </div>
         </div>
     </div>
     <div class="home-content">
-        <img src="{% static 'images/Hero_image.png' %}" alt="Hero Image">
+        <img src="{% static 'images_and_videos/home-page/Hero_image.png' %}" alt="Hero Image">
         <div class="intro-saudi">
             <h2 class="title-saudi">السياحة في السعودية</h2>
             <p dir="rtl">تُعدّ المملكة العربية السعودية واحدة من أبرز الوجهات السياحية الصاعدة في العالم، حيث تجمع بين الأصالة العريقة والتطور
@@ -153,18 +153,19 @@
             عالمية تجمع بين الترفيه، الثقافة، المغامرة، والضيافة العربية الأصيلة.</p>
         </div>
     </div>
-    <section class="container my-5">
+    <section class="container my-5" dir="rtl">
     
         <h2 class="text-center mb-4">استكشف المدن</h2>
     
         <div class="row g-4">
-    
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Riyadh.png' %}" class="card-img-top" alt="Riyadh">
+                    <img src="{% static 'images_and_videos/riyadh/riyadh.png' %}" class="card-img-top" alt="Riyadh">
                     <div class="card-body text-center">
                         <h5 class="card-title">الرياض</h5>
+                        <p dir="rtl">الرياض هي العاصمة والمركز الاقتصادي والثقافي للمملكة العربية السعودية.</p>
+                        <a href="{% url 'tourism:riyadh_view' %}" class="btn btn-primary">تعرف على المزيد</a>
                     </div>
                 </div>
             </div>
@@ -172,7 +173,7 @@
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Jeddah.png' %}" class="card-img-top" alt="Jeddah">
+                    <img src="{% static 'images_and_videos/jeddah/Jeddah.png' %}" class="card-img-top" alt="Jeddah">
                     <div class="card-body text-center">
                         <h5 class="card-title">جدة</h5>
                     </div>
@@ -182,7 +183,7 @@
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Abha.png' %}" class="card-img-top" alt="Abha">
+                    <img src="{% static 'images_and_videos/abha/Abha.png' %}" class="card-img-top" alt="Abha">
                     <div class="card-body text-center">
                         <h5 class="card-title">أبها</h5>
                     </div>
@@ -192,7 +193,7 @@
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Al-Ula.png' %}" class="card-img-top" alt="AlUla">
+                    <img src="{% static 'images_and_videos/al-ula/Al-Ula.png' %}" class="card-img-top" alt="AlUla">
                     <div class="card-body text-center">
                         <h5 class="card-title">العلا</h5>
                     </div>
@@ -202,7 +203,7 @@
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Makkah.png' %}" class="card-img-top" alt="Makkah">
+                    <img src="{% static 'images_and_videos/makkah/Makkah.png' %}" class="card-img-top" alt="Makkah">
                     <div class="card-body text-center">
                         <h5 class="card-title">مكة المكرمة</h5>
                     </div>
@@ -212,7 +213,7 @@
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Madina.png' %}" class="card-img-top" alt="Madina">
+                    <img src="{% static 'images_and_videos/madina/Madina.png' %}" class="card-img-top" alt="Madina">
                     <div class="card-body text-center">
                         <h5 class="card-title">المدينة المنورة</h5>
                     </div>
@@ -221,7 +222,7 @@
             <!-- City -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{% static 'images/Qassim.png' %}" class="card-img-top" alt="Qassim">
+                    <img src="{% static 'images_and_videos/qassim/Qassim.png' %}" class="card-img-top" alt="Qassim">
                     <div class="card-body text-center">
                         <h5 class="card-title"> القصيم</h5>
                     </div>

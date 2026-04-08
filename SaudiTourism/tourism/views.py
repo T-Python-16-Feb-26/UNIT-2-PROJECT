@@ -6,5 +6,5 @@ from django.http import HttpRequest, HttpResponse
 def home_view(request: HttpRequest):
     return render(request, 'tourism/home_page.html')
 
-# def city_view(request:HttpRequest, city_name:str):
-#     return render (request, 'tourism/city_page.html', {'city_name': city_name})
+def riyadh_view(request:HttpRequest,):
+    return render (request, 'tourism/riyadh_page.html')
