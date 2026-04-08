@@ -243,3 +243,83 @@ body{
     color: white;
 }
 /* End container my-5 */
+
+/* file riyadh-page  */
+.card.text-bg-dark {
+    position: relative;
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 60px auto;
+    max-width: 95%;
+    height: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* الصورة */
+.card.text-bg-dark .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+
+/* طبقة شفافة فوق الصورة */
+.card.text-bg-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65));
+    z-index: 1;
+}
+
+/* محتوى النص */
+.card.text-bg-dark .card-img-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 60px;
+    color: white;
+}
+
+/* العنوان */
+.card.text-bg-dark .card-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* النص */
+.card.text-bg-dark .card-text {
+    font-size: 20px;
+    line-height: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+    .card.text-bg-dark {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .card.text-bg-dark .card-img-overlay {
+        padding: 30px 20px;
+    }
+
+    .card.text-bg-dark .card-title {
+        font-size: 30px;
+    }
+
+    .card.text-bg-dark .card-text {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
