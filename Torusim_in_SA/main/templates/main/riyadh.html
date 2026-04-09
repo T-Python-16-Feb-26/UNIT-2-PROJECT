@@ -1,0 +1,70 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Riyadh | Torusim in SA{% endblock title %}
+
+{% block content %}
+
+<section class="city-slider-section">
+    <div id="cityCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="{% static 'images/Riyadh_Skyline.jpg' %}" class="d-block w-100 city-slider-img" alt="Riyadh skyline">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Riyadh</span>
+                    <h1 class="fw-bold">The Vibrant Heart of the Kingdom</h1>
+                    <p>Explore a city where modern skyline views meet history, culture, and unforgettable experiences.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/kingdom-centre.jpg' %}" class="d-block w-100 city-slider-img" alt="Kingdom Centre">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Skyline Views</span>
+                    <h1 class="fw-bold">Modern Landmarks</h1>
+                    <p>Discover iconic towers, elegant architecture, and some of Riyadh’s most recognizable city scenes.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/diriyah.jpg' %}" class="d-block w-100 city-slider-img" alt="Diriyah">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Heritage</span>
+                    <h1 class="fw-bold">Where History Comes Alive</h1>
+                    <p>Experience the spirit of the Kingdom through heritage districts, culture, and timeless Najdi character.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/riyadh-night.jpg' %}" class="d-block w-100 city-slider-img" alt="Riyadh at night">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">City Energy</span>
+                    <h1 class="fw-bold">Lights, Life, and Experiences</h1>
+                    <p>From dining and entertainment to evening city views, Riyadh offers a dynamic atmosphere day and night.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-arrow" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#cityCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-arrow" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+{% endblock content %}

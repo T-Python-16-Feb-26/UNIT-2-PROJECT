@@ -1,0 +1,64 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Destinations | Torusim in SA{% endblock title %}
+
+{% block content %}
+
+<section class="destinations-hero py-5 text-white">
+    <div class="container text-center">
+        <h1 class="fw-bold display-4 mb-3">Explore Saudi Destinations</h1>
+        <p class="lead mb-0">
+            Discover vibrant cities, heritage landmarks, mountain escapes, and coastal experiences across Saudi Arabia.
+        </p>
+    </div>
+</section>
+
+<section class="destinations-list py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Popular Destinations</h2>
+            <p class="text-muted">Browse some of the most remarkable places to visit in the Kingdom.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card destination-card h-100 border-0 shadow-sm rounded-4">
+                    <img src="{% static 'images/Riyadh_Skyline.jpg' %}" class="card-img-top" alt="Riyadh skyline">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">Riyadh</h5>
+                        <p class="text-muted">Capital City</p>
+                        <p class="mb-3">A dynamic capital known for modern landmarks, museums, dining, and entertainment.</p>
+                        <a href="{% url 'main:riyadh_html' %}" class="btn btn-success">Explore More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card destination-card h-100 border-0 shadow-sm rounded-4">
+                    <img src="{% static 'images/Jeddah_city.jpg' %}" class="card-img-top" alt="Jeddah city">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">Jeddah</h5>
+                        <p class="text-muted">Red Sea Coast</p>
+                        <p class="mb-3">A coastal city known for the Corniche, Al-Balad, and a vibrant cultural atmosphere.</p>
+                        <a href="#" class="btn btn-success">Explore More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card destination-card h-100 border-0 shadow-sm rounded-4">
+                    <img src="{% static 'images/Alula.jpg' %}" class="card-img-top" alt="AlUla">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold">AlUla</h5>
+                        <p class="text-muted">Heritage & Nature</p>
+                        <p class="mb-3">A remarkable destination with desert landscapes, rock formations, and historical sites like Hegra.</p>
+                        <a href="#" class="btn btn-success">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

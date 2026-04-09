@@ -10,15 +10,13 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 sticky-top">
+            <div class="container-fluid px-4 px-lg-5">
                 <a class="navbar-brand fw-bold fs-4 text-success" href="/">Torusim in SA</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
@@ -29,10 +27,10 @@
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'main:home_view' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Destinations</a>
+                            <a class="nav-link" href="{% url 'main:destinations_view' %}">Destinations</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Packages</a>
@@ -43,6 +41,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
+                        <li class="nav-item" >
+                            <a href="" class="nav-link"><span class="material-symbols-outlined">search</span></a>
+                        </li>
                         <li class="nav-item mt-3 mt-lg-0">
                             <a class="btn btn-success px-4" href="#">Book Now</a>
                         </li>
@@ -50,12 +51,58 @@
                 </div>
             </div>
         </nav>    
-    </div>
+  
 
-    <main class="container py-4">
+    <main>
         {% block content %}
         {% endblock content %}
     </main>
+
+    <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="fw-bold">Torusim in SA</h5>
+                <p class="text-light mb-0">
+                    Discover the beauty, culture, and unforgettable destinations across Saudi Arabia.
+                </p>
+            </div>
+
+            <div class="col-md-2">
+                <h6 class="fw-bold">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="footer-link">Home</a></li>
+                    <li><a href="#" class="footer-link">Destinations</a></li>
+                    <li><a href="#" class="footer-link">Packages</a></li>
+                    <li><a href="#" class="footer-link">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h6 class="fw-bold">Support</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h6 class="fw-bold">Contact</h6>
+                <p class="mb-1">Riyadh, Saudi Arabia</p>
+                <p class="mb-1">info@torusimsa.com</p>
+                <p class="mb-0">+966 5X XXX XXXX</p>
+            </div>
+        </div>
+
+        <hr class="border-light my-4">
+
+        <div class="text-center">
+            <p class="mb-0">&copy; 2026 Torusim in SA. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>

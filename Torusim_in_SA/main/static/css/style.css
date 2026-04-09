@@ -1,7 +1,11 @@
+
+/* navbar */
 .navbar {
     border-bottom: 1px solid #e9ecef;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 .navbar-brand {
     letter-spacing: 0.5px;
 }
@@ -24,3 +28,288 @@
     border-radius: 30px;
     font-weight: 600;
 }
+
+/* end navbar*/
+
+
+/* footer */
+
+.footer {
+    background-color: #1f1f1f;
+}
+
+.footer h5,
+.footer h6 {
+    color: #ffffff;
+}
+
+.footer p {
+    color: #d6d6d6;
+}
+
+.footer-link {
+    color: #d6d6d6;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #198754;
+}
+
+/* end footer */
+
+.hero h1 {
+    line-height: 1.2;
+}
+
+.hero img,
+.card img {
+    object-fit: cover;
+}
+
+.card img {
+    height: 220px;
+}
+
+.cta-section .btn {
+    font-weight: 600;
+}
+
+.hero-video {
+    height: 100vh;
+    position: relative;
+    margin-top: 0 !important;
+}
+
+.hero-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-video:hover .hero-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content .container {
+    margin-top: 0;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #d1fae5;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.hero-text {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-video .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .hero-content {
+        height: 90vh;
+        padding-top: 8vh;
+    }
+
+    .hero-video h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+}
+
+/* event */
+.current-events {
+    background-color: #f8f9fa;
+}
+
+.current-events .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.current-events .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.current-events .badge {
+    border-radius: 999px;
+    padding: 0.6rem 0.9rem;
+}
+
+
+/* end event */
+
+/* destinations */
+
+.destinations-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("../images/Saudi_Arabia.jpg") center/cover no-repeat;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.destination-card img {
+    height: 260px;
+    object-fit: cover;
+}
+
+.destination-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+/* end destinations */
+
+/* cities */
+
+.city-slider-section {
+    position: relative;
+}
+
+#cityCarousel {
+    overflow: hidden;
+}
+
+.city-slider-img {
+    height: 88vh;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.65);
+}
+
+.city-caption {
+    bottom: 14%;
+    left: 10%;
+    right: auto;
+    text-align: left;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.30);
+    padding: 2rem;
+    border-radius: 24px;
+    backdrop-filter: blur(4px);
+}
+
+.city-caption-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.city-caption h1 {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    margin-bottom: 1rem;
+}
+
+.city-caption p {
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#cityCarousel .carousel-control-prev,
+#cityCarousel .carousel-control-next {
+    width: 7%;
+}
+
+.custom-arrow {
+    background-size: 60% 60%;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+}
+
+#cityCarousel .carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+#cityCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 6px;
+}
+
+@media (max-width: 991.98px) {
+    .city-slider-img {
+        height: 70vh;
+    }
+
+    .city-caption {
+        left: 5%;
+        right: 5%;
+        bottom: 10%;
+        max-width: unset;
+        padding: 1.25rem;
+    }
+
+    .city-caption h1 {
+        font-size: 2rem;
+    }
+
+    .city-caption p {
+        font-size: 0.95rem;
+    }
+}
+/* end cities */
