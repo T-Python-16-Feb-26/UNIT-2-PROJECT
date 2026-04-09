@@ -1,45 +1,242 @@
-body {
+/* الألوان الأساسية للموقع */
+:root {
+    --main-green: #006C35;
+    --bright-green: #00E676;
+    --dark-bg: #111111;
+    --soft-white: #f9f9f9;
+}
+
+html{
+    scroll-behavior: smooth ;
+}
+
+/* تصفير الإعدادات الافتراضية */
+* {
     margin: 0;
-    font-family: Arial;
-    direction: rtl;
-    text-align: right;
-    font-family: 'Tahoma', Arial;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
 }
 
-/* Navbar */
-nav {
-    background-color: #0b6623;
-    padding: 15px;
+body {
+    background-color: var(--soft-white);
+    color: #333;
+    ;
 }
 
-nav a {
+.my-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* تنسيق قسم الهيرو والناف بار المدمج */
+.top-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1518005020251-58296d321d7d?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.my-logo a {
     color: white;
-    margin-right: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.my-logo span { color: var(--bright-green); }
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.main-nav ul li a:hover { color: var(--bright-green); }
+
+.join-btn {
+    background: var(--main-green);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* محتوى وسط الهيرو */
+.hero-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-/* Content */
-.content {
-    padding: 20px;
+
+
+.hero-text-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 
-/* Footer */
-footer {
-    background-color: #111;
+.hero-text-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-1, .btn-2 {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+    transition:  0.4s;
+    scroll-behavior: smooth ;
+}
+
+.btn-1 { background: white; color: var(--main-green); }
+.btn-2 { border: 2px solid white; color: white; }
+
+.btn-1:hover { transform: scale(1.05); background: var(--bright-green); color: black; }
+
+/* تنسيق الأقسام */
+.page-section { padding: 40px 0; }
+.head-line {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.head-line::after {
+    content: '';
+    width: 50px; height: 3px;
+    background: var(--main-green);
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+}
+
+/* البطاقات */
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-card {
+    background: white;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.info-card:hover { transform: translateY(-10px); }
+
+.img-box { height: 200px; background-size: cover; background-position: center; }
+.text-box { padding: 20px; }
+.tag { color: var(--main-green); font-weight: bold; font-size: 14px; }
+
+/* الجاليري السموذي */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.photo-item {
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.photo-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: brightness(0.8);
+}
+
+.photo-item:hover img { transform: scale(1.1); filter: brightness(1); }
+
+/* الفوتر */
+.main-footer {
+    background: var(--dark-bg);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 30px 0;
+    margin-top: 50px;
 }
 
-h1 {
-    color: #0b6623;
+/* تنسيق قسم الإحصائيات */
+.bg-dark-stats {
+    background-color: #1a1a1a;
+    color: white;
 }
 
-p {
-    line-height: 1.8;
+.white-text { color: white !important; }
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+}
+
+.stat-item .stat-number {
+    display: block;
+    font-size: 45px;
+    font-weight: 900;
+    color: var(--bright-green);
+    margin-bottom: 10px;
+}
+
+/* تنسيق الجدول */
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.events-table th, .events-table td {
+    padding: 20px;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+}
+
+.events-table th {
+    background-color: var(--main-green);
+    color: white;
+}
+
+.events-table tr:hover {
+    background-color: #f1f1f1;
 }

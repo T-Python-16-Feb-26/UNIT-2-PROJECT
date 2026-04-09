@@ -1,10 +1,119 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block title %}الرئيسية{% endblock %}
+
+{% block hero %}
+<div class="hero-image-bg">
+    <div class="hero-text-content">
+        <h1>الرياضة في السعودية.. طموح لا حدود له</h1>
+        <p>مرحباً بكم في منصتنا التي تستعرض أهم الإنجازات والرياضات في مملكتنا الغالية وفق رؤية 2030.</p>
+        <div class="action-btns">
+            <a href="#about-us" class="btn-1">اكتشف المزيد</a>
+            <a href="#stats-section" class="btn-2">إحصائياتنا</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-    <h1>مرحبًا بك في موقع الدوري السعودي</h1>
-    <p>
-        هذا الموقع يقدم معلومات شاملة عن الدوري السعودي，
-        تاريخه، أنديته، وأبرز إنجازاته.
-    </p>
+<div class="my-container">
+    
+    <section id="about-us" class="page-section">
+        <h2 class="head-line">أحدث أخبارنا</h2>
+        <div class="cards-row">
+            
+            <div class="info-card">
+                <div class="img-box" style="background-image: url('https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="text-box">
+                    <span class="tag">كرة القدم</span>
+                    <h3>تحضيرات المونديال</h3>
+                    <p>المملكة تعمل على بناء ملاعب عالمية لاستضافة أكبر حدث رياضي في التاريخ.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="img-box" style="background-image: url('https://images.pexels.com/photos/12795/pexels-photo-12795.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="text-box">
+                    <span class="tag">سباقات</span>
+                    <h3>فورمولا 1 جدة</h3>
+                    <p>نجاح باهر لسباق الجائزة الكبرى في حلبة كورنيش جدة وسط حضور ضخم.</p>
+                </div>
+            </div>
+
+           <div class="info-card">
+                <div class="img-box" style="background-image: url('https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="text-box">
+                    <span class="tag">E-Sports</span>
+                    <h3>كأس العالم للرياضات الإلكترونية</h3>
+                    <p>الرياض تحتضن أضخم حدث في تاريخ الألعاب الإلكترونية بمشاركة نخبة الفرق العالمية.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<section id="stats-section" class="page-section bg-dark-stats">
+    <div class="my-container">
+        <h2 class="head-line white-text">أرقام من الواقع الرياضي</h2>
+        <div class="stats-grid">
+            
+            <div class="stat-item">
+                <span class="stat-number">+100</span>
+                <p>فعالية رياضية دولية</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-number">2034</span>
+                <p>سنة استضافة المونديال</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-number">48%</span>
+                <p>ارتفاع ممارسة الرياضة</p>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-number">25</span>
+                <p>اتحاد رياضي جديد</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="schedule" class="page-section">
+    <div class="my-container">
+        <h2 class="head-line"> الفعاليات في 2026</h2>
+        <div class="table-responsive">
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th>الفعالية</th>
+                        <th>المكان</th>
+                        <th>التاريخ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>دوري روشن للمحترفين</td>
+                        <td>ملاعب المملكة</td>
+                        <td>مستمر</td>
+                    </tr>
+                    <tr>
+                        <td>جائزة السعودية الكبرى (F1)</td>
+                        <td>حلبة جدة</td>
+                        <td>أبريل 2026</td>
+                    </tr>
+                    <tr>
+                        <td>نهائيات التنس العالمية</td>
+                        <td>الرياض</td>
+                        <td>نوفمبر 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+</div>
 {% endblock %}
