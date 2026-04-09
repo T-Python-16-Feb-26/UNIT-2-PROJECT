@@ -18,7 +18,7 @@
         <div class="carousel-inner">
 
             <div class="carousel-item active">
-                <img src="{% static 'images/Riyadh_Skyline.jpg' %}" class="d-block w-100 city-slider-img" alt="Riyadh skyline">
+                <img src="{% static 'images/Riyadh/Riyadh_Skyline.jpg' %}" class="d-block w-100 city-slider-img" alt="Riyadh skyline">
                 <div class="carousel-caption city-caption">
                     <span class="city-caption-tag">Riyadh</span>
                     <h1 class="fw-bold">The Vibrant Heart of the Kingdom</h1>
@@ -27,16 +27,16 @@
             </div>
 
             <div class="carousel-item">
-                <img src="{% static 'images/kingdom-centre.jpg' %}" class="d-block w-100 city-slider-img" alt="Kingdom Centre">
+                <img src="{% static 'images/Riyadh/Boulevard.jpg' %}" class="d-block w-100 city-slider-img" alt="Boulevard Riyadh City">
                 <div class="carousel-caption city-caption">
-                    <span class="city-caption-tag">Skyline Views</span>
-                    <h1 class="fw-bold">Modern Landmarks</h1>
-                    <p>Discover iconic towers, elegant architecture, and some of Riyadh’s most recognizable city scenes.</p>
+                    <span class="city-caption-tag">Entertainment Hub</span>
+                    <h1 class="fw-bold">Boulevard Riyadh City</h1>
+                    <p>A lively destination for dining, shopping, and entertainment, bringing together some of Riyadh’s most energetic experiences.</p>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="{% static 'images/diriyah.jpg' %}" class="d-block w-100 city-slider-img" alt="Diriyah">
+                <img src="{% static 'images/Riyadh/diriyah.webp' %}" class="d-block w-100 city-slider-img" alt="Diriyah">
                 <div class="carousel-caption city-caption">
                     <span class="city-caption-tag">Heritage</span>
                     <h1 class="fw-bold">Where History Comes Alive</h1>
@@ -45,14 +45,13 @@
             </div>
 
             <div class="carousel-item">
-                <img src="{% static 'images/riyadh-night.jpg' %}" class="d-block w-100 city-slider-img" alt="Riyadh at night">
+                <img src="{% static 'images/Riyadh/Kingdom_Tower.webp' %}" class="d-block w-100 city-slider-img" alt="Kingdom Tower in Riyadh">
                 <div class="carousel-caption city-caption">
-                    <span class="city-caption-tag">City Energy</span>
-                    <h1 class="fw-bold">Lights, Life, and Experiences</h1>
-                    <p>From dining and entertainment to evening city views, Riyadh offers a dynamic atmosphere day and night.</p>
+                    <span class="city-caption-tag">Iconic Landmark</span>
+                    <h1 class="fw-bold">Kingdom Tower</h1>
+                    <p>A striking symbol of Riyadh’s modern skyline, known for its distinctive architecture and panoramic city views.</p>
                 </div>
             </div>
-
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
@@ -64,6 +63,145 @@
             <span class="carousel-control-next-icon custom-arrow" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+</section>
+
+<section class="city-tabs-wrapper py-4">
+    <div class="container-fluid px-4 px-lg-5">
+
+        <ul class="nav city-tabs flex-nowrap overflow-auto" id="cityTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="guide-tab" data-bs-toggle="tab" data-bs-target="#guide-pane" type="button" role="tab">
+                    Complete Guide
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="landmarks-tab" data-bs-toggle="tab" data-bs-target="#landmarks-pane" type="button" role="tab">
+                    Top Landmarks
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="experiences-tab" data-bs-toggle="tab" data-bs-target="#experiences-pane" type="button" role="tab">
+                    Tours & Experiences
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-pane" type="button" role="tab">
+                    Current Events
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips-pane" type="button" role="tab">
+                    Travel Tips
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content city-tab-content pt-4" id="cityTabContent">
+
+            <div class="tab-pane fade show active" id="guide-pane" role="tabpanel" aria-labelledby="guide-tab">
+
+                <div class="container">
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="guide-card h-100 p-4 rounded-4 shadow-sm">
+                                <div class="guide-icon mb-3">
+                                    <i class="fas fa-landmark text-success" style="font-size: 2.5rem;"><span class="material-symbols-outlined">history_edu</span></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Heritage & History</h5>
+                                <p class="text-muted mb-0">
+                                    Visit Al Masmak Fortress, Diriyah, and National Museum to explore Riyadh's rich past. [web:512][web:520]
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="guide-card h-100 p-4 rounded-4 shadow-sm">
+                                <div class="guide-icon mb-3">
+                                    <i class="fas fa-building text-primary" style="font-size: 2.5rem;"><span class="material-symbols-outlined">corporate_fare</span></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Modern Skyline</h5>
+                                <p class="text-muted mb-0">
+                                    Enjoy Kingdom Centre, Boulevard Riyadh City, and panoramic views of the capital. [web:499][web:502]
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="guide-card h-100 p-4 rounded-4 shadow-sm">
+                                <div class="guide-icon mb-3">
+                                    <i class="fas fa-utensils text-warning" style="font-size: 2.5rem;"><span class="material-symbols-outlined">dining
+</span></i>
+                                </div>
+                                <h5 class="fw-bold mb-3">Dining & Shopping</h5>
+                                <p class="text-muted mb-0">
+                                    Discover Souq Al Zal, local cafés, and Riyadh's vibrant food and shopping scene.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <p class="lead text-muted mb-4">
+                                Start with heritage at Al Masmak Fortress and Diriyah, then discover the National Museum and Souq Al Zal for culture and local history. [web:512][web:434]
+                            </p>
+                            <p class="text-muted">
+                                For modern experiences, visit Kingdom Centre, Boulevard Riyadh City, and districts that showcase the city's skyline, dining, and entertainment. [web:499][web:516]
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="quick-facts-card p-4 rounded-4 shadow-sm">
+                                <h5 class="fw-bold mb-4">Riyadh at a glance</h5>
+                                <div class="fact-item mb-3">
+                                    <span class="fact-label">Best time:</span>
+                                    <span class="fact-value">Nov - Feb</span>
+                                </div>
+                                <div class="fact-item mb-3">
+                                    <span class="fact-label">Top attraction:</span>
+                                    <span class="fact-value">Diriyah</span>
+                                </div>
+                                <div class="fact-item mb-3">
+                                    <span class="fact-label">Must-do:</span>
+                                    <span class="fact-value">Kingdom Centre</span>
+                                </div>
+                                <div class="fact-item">
+                                    <span class="fact-label">Style:</span>
+                                    <span class="fact-value">Heritage + Modern</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="landmarks-pane" role="tabpanel" aria-labelledby="landmarks-tab">
+                <h2 class="fw-bold mb-3">Top Landmarks</h2>
+                <p class="text-muted">
+                    Explore Diriyah, Al Masmak Fortress, Kingdom Centre, and other iconic places across Riyadh.
+                </p>
+            </div>
+
+            <div class="tab-pane fade" id="experiences-pane" role="tabpanel" aria-labelledby="experiences-tab">
+                <h2 class="fw-bold mb-3">Tours & Experiences</h2>
+                <p class="text-muted">
+                    Enjoy heritage visits, local dining, shopping districts, and city entertainment experiences.
+                </p>
+            </div>
+
+            <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
+                <h2 class="fw-bold mb-3">Current Events</h2>
+                <p class="text-muted">
+                    Stay updated with seasonal activities, festivals, and events taking place in Riyadh.
+                </p>
+            </div>
+
+            <div class="tab-pane fade" id="tips-pane" role="tabpanel" aria-labelledby="tips-tab">
+                <h2 class="fw-bold mb-3">Travel Tips</h2>
+                <p class="text-muted">
+                    Plan the best time to visit, discover how to get around, and make the most of your trip.
+                </p>
+            </div>
+
+        </div>
+
     </div>
 </section>
 
