@@ -1,0 +1,144 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Jeddah{% endblock %}
+{% block content %}
+<main>
+    <section class="city-detail-header">
+        <h1 class="translate-text" 
+            data-ar=" جدة " 
+            data-en=" Jeddah City">
+            Jeddah City
+        </h1>
+    </section>
+
+    <div class="filter-container">
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
+        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+    </div>
+
+    <div class="riyadh-grid">
+    
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/corneshe.jpg' %}" alt="corneshe"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" كورنيش جدة " data-en="jeddah corneshe">Jeddah Corneshe</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature sea entertaiment">
+            <div class="card-image"><img src="{% static 'images/jeddah_sea.jpg' %}" alt="Jeddah cornish"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" كورنيش " data-en=" Jeddah Cornish ">Jeddah Cornish</h3>
+                <p class="translate-text" data-ar="طبيعةو بحر" data-en="Nature & Sea">Nature & Sea</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/KingFahadFountain.jpg' %}" alt="KingFahadFountain"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" نافورةالملك فهد " data-en=" King Fahad Fountain ">King Fahad Fountain</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/aquarium.jpg' %}" alt="aquarium"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" اكواريوم فقية " data-en=" Aquarium Faqih">Aquarium Faqih</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item culture">
+            <div class="card-image"><img src="{% static 'images/balad.jpg' %}" alt="Albalad"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" البلد " data-en="Albalad">Albalad</h3>
+                <p class="translate-text" data-ar="ثقافة وتاريخ " data-en="Cultre & History">Cultre & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/jedPark.jpg' %}" alt="Jeddah Park"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" حديقة الأمير ماجد " data-en="Prince Majed Park">Prince Majed Park</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature sea">
+            <div class="card-image"><img src="{% static 'images/jedIsland.jpg' %}" alt="jedIsland"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" جزيرة بياضه " data-en="Alhada Mountain">Alhada Mountain</h3>
+                <p class="translate-text" data-ar="طبيعة وبحر" data-en="Nature & Sea">Nature & Sea</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item shopping">
+            <div class="card-image"><img src="{% static 'images/redseamall.jpg' %}" alt="Red Sea Mall"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" رد سي مول " data-en="Red Sea Mall">Red Sea Mall</h3>
+                <p class="translate-text" data-ar="تسوق " data-en="Shopping">Shopping</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature">
+            <div class="card-image"><img src="{% static 'images/mall-of-arab.jpg' %}" alt="Mall of Arab"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مول العرب " data-en="Mall of Arab">Mall of Arab</h3>
+                <p class="translate-text" data-ar="تسوق " data-en="Shopping">Shopping</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature">
+            <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature">
+            <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature">
+            <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+// وظيفة التصفية (Filtering)
+function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filter-item");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        if (x[i].className.indexOf(c) > -1) {
+            x[i].style.display = "block";
+        }
+    }
+    // تغيير شكل الزر النشط
+    var btns = document.getElementsByClassName("filter-btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("active");
+    }
+    event.currentTarget.classList.add("active");
+}
+</script>
+{% endblock %}
