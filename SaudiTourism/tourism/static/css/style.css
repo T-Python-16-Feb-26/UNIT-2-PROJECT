@@ -4,12 +4,21 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Amiri", serif;
+    font-weight: 700;
+    font-style: normal;
     /* background-color: rgb(6, 21, 4); */
     /* background-image: url('/static/images/Riyadh.png');
     background-size: cover;
     background-repeat: no-repeat; */
-    background: linear-gradient(-45deg, #0b5d3b, #0f2f22, #145a32, #081c15);
+    /* background: linear-gradient(-45deg, #0b5d3b, #0f2f22, #145a32, #081c15); */
+    /* background: linear-gradient(135deg, #0b3d2e 0%, #145a32 25%, #1f7a4c 50%, #d4af37 75%, #f4e4a6 100%); */
+    background: linear-gradient(135deg,
+                #faf8f2,
+                #f1f8f4,
+                #e6f4ec,
+                #f3ead2,
+                #fffaf0);
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
 }
@@ -30,7 +39,13 @@ body{
     overflow: hidden;
     padding: 0 0 20px 0;
     /* background: linear-gradient(-45deg, #0b5d3b, #0f2f22, #145a32, #081c15); */
-    background: linear-gradient(-45deg, #063220, #000000, #1c3326, #081c15);
+    /* background: linear-gradient(-45deg, #063220, #000000, #1c3326, #081c15); */
+    background: linear-gradient(-45deg,
+                #071a14 0%,
+                #0d2f24 25%,
+                #1b5a43 50%,
+                #2f8a63 75%,
+                #d4af37 100%);
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -95,9 +110,9 @@ body{
     
 }
 .slider-header h1{
-    font-size: 35px;
+    font-size: 60px;
     margin-bottom: 10px;
-    font-family: 'Amiri', sans-serif;
+    /* font-family: 'Amiri', sans-serif; */
 }
  /* End slider-header  */
 
@@ -109,6 +124,9 @@ body{
     width: 200%;
     animation: slide 25s infinite linear;
     gap: 28px;
+    /* background-image: url('/static/images_and_videos/home-page/image.png'); */
+    
+
 }
 .slide{
     display: flex;
@@ -121,8 +139,8 @@ body{
     gap: 5px;
 }
 .slide img{
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 15px;
     display: block;
@@ -240,7 +258,7 @@ body{
 .container h2{
     text-align: center;
     margin-bottom: 30px;
-    color: white;
+    color:#0b5d3b;
 }
 /* End container my-5 */
 
