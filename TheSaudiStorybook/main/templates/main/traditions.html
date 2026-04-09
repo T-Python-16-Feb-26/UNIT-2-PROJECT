@@ -1,0 +1,145 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Traditions{% endblock %}
+
+{% block content %}
+<section class="traditions-page">
+	<div class="container-fluid px-4 px-md-5 py-4 py-md-5">
+		<header class="traditions-hero rounded-4 overflow-hidden mb-4 mb-md-5">
+			<div class="traditions-hero-bg" role="img" aria-label="Traditional Saudi gathering and cultural atmosphere"></div>
+			<div class="traditions-hero-content text-white p-4 p-md-5">
+				<p class="traditions-kicker mb-2">Chapter 3</p>
+				<h1 class="display-5 fw-semibold mb-3">Traditions of Saudi Arabia</h1>
+				<p class="lead mb-0 traditions-hero-copy">
+					From hospitality and family gatherings to poetry, dress, and cuisine, Saudi traditions continue to shape daily life.
+				</p>
+			</div>
+		</header>
+
+		<section class="mb-4 mb-md-5" aria-label="Quick facts about Saudi traditions">
+			<div class="row g-3 g-md-4">
+				<div class="col-6 col-lg-3">
+					<article class="traditions-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="traditions-fact-label mb-2">Hospitality</p>
+						<p class="traditions-fact-value mb-1">A Core Value</p>
+						<p class="traditions-fact-note mb-0">Welcoming guests with coffee and dates remains a proud custom.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="traditions-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="traditions-fact-label mb-2">Majlis</p>
+						<p class="traditions-fact-value mb-1">Shared Space</p>
+						<p class="traditions-fact-note mb-0">The majlis brings families and communities together in dialogue.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="traditions-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="traditions-fact-label mb-2">Saudi Coffee</p>
+						<p class="traditions-fact-value mb-1">Symbolic Ritual</p>
+						<p class="traditions-fact-note mb-0">Preparing and serving qahwa reflects respect, generosity, and heritage.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="traditions-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="traditions-fact-label mb-2">Traditional Arts</p>
+						<p class="traditions-fact-value mb-1">Still Alive</p>
+						<p class="traditions-fact-note mb-0">Dance, crafts, and oral storytelling are passed across generations.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="traditions-regions-title">
+			<div class="d-flex align-items-center justify-content-between mb-3">
+				<h2 id="traditions-regions-title" class="h3 mb-0">Living Traditions Across the Kingdom</h2>
+			</div>
+
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="traditions-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Hospitality and Welcome</h3>
+						<p class="mb-0">Guests are honored through warm greetings, coffee rituals, and generous hosting.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="traditions-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Family and Community</h3>
+						<p class="mb-0">Celebrations, visits, and shared meals strengthen social bonds year-round.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="traditions-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Dress and Identity</h3>
+						<p class="mb-0">Traditional clothing reflects modesty, elegance, and regional identity.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="traditions-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Arts and Expression</h3>
+						<p class="mb-0">Music, poetry, and dance keep cultural memory vibrant in modern life.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="traditions-spotlight rounded-4 overflow-hidden mb-4 mb-md-5" aria-label="Tradition spotlight">
+			<div class="row g-0">
+				<div class="col-12 col-lg-6">
+					<div class="traditions-spotlight-image" role="img" aria-label="Saudi coffee being served in a traditional setting"></div>
+				</div>
+				<div class="col-12 col-lg-6 d-flex align-items-center">
+					<div class="p-4 p-md-5">
+						<p class="traditions-kicker mb-2">Spotlight</p>
+						<h2 class="h3 mb-3">The Ritual of Saudi Coffee</h2>
+						<p class="mb-0">
+							Saudi coffee is more than a drink; it is a gesture of welcome that connects homes, stories, and generations.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="traditions-gallery-title">
+			<h2 id="traditions-gallery-title" class="h3 mb-3">Traditions in Everyday Life</h2>
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-4">
+					<figure class="traditions-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="traditions-gallery-image traditions-gallery-image-one" role="img" aria-label="Traditional Saudi gathering in a majlis"></div>
+						<figcaption class="p-3">Majlis gatherings preserve respect and conversation.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="traditions-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="traditions-gallery-image traditions-gallery-image-two" role="img" aria-label="Traditional coffee in the desert"></div>
+						<figcaption class="p-3">Serving coffee and dates remains a timeless act of hospitality.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="traditions-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="traditions-gallery-image traditions-gallery-image-three" role="img" aria-label="Traditional dance performed during a cultural celebration"></div>
+						<figcaption class="p-3">Traditional dances and songs keep heritage alive.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="traditions-closing text-center rounded-4 p-4 p-md-5">
+			<h2 class="h3 mb-3">A Living Heritage, A Continuing Story</h2>
+			<p class="mb-4 mx-auto traditions-closing-copy">
+				From daily customs to national celebrations, Saudi traditions continue to shape identity, belonging, and pride.
+			</p>
+			<div class="d-flex flex-wrap justify-content-center gap-2">
+				<a class="btn btn-outline-success px-4" href="{% url 'main:land_view' %}">Chapter 1: Land</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:people_view' %}">Chapter 2: People</a>
+				<a class="btn btn-success px-4" href="{% url 'main:cities_view' %}">Chapter 4: Cities</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:royal_family_view' %}">Chapter 5: Royal Family</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:future_view' %}">Chapter 6: Future</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:legacy_view' %}">Chapter 7: Legacy</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:celebrations_view' %}">Chapter 8: Celebrations</a>
+				<a class="btn btn-outline-dark px-4" href="{% url 'main:home_view' %}">Back Home</a>
+			</div>
+		</section>
+	</div>
+</section>
+{% endblock %}

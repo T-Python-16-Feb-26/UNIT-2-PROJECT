@@ -57,7 +57,7 @@ footer {
 }
 
 .homepage-section .land-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/land.avif");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/land.avif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ footer {
 }
 
 .homepage-section .people-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/people.jpg");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/people.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,7 +83,7 @@ footer {
 }
 
 .homepage-section .traditions-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/traditions.jpg");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/traditions.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@ footer {
 }
 
 .homepage-section .cities-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/cities.jpg");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/cities.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -109,7 +109,7 @@ footer {
 }
 
 .homepage-section .future-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/future.jpg");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/future.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,7 +122,7 @@ footer {
 }
 
 .homepage-section .legacy-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/legacy.webp");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/legacy.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ footer {
 }
 
 .homepage-section .celebrations-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/celebrations.jpg");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/celebrations.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@ footer {
 }
 
 .homepage-section .royal-family-card-bg {
-    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/royal-family.jpg");
+    background-image: linear-gradient(rgba(22, 29, 38, 0.45), rgba(22, 29, 38, 0.45)), url("../images/home-images/royal-family.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,7 +189,7 @@ footer {
     inset: 0;
     background-image:
         linear-gradient(110deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.28) 52%, rgba(20, 30, 36, 0.18)),
-        url("../images/vast-saudi.jpg");
+        url("../images/land-images/vast-saudi.jpg");
     background-size: cover;
     background-position: center;
     transform: scale(1.03);
@@ -263,7 +263,7 @@ footer {
     min-height: 320px;
     background-image:
         linear-gradient(rgba(24, 32, 38, 0.2), rgba(24, 32, 38, 0.2)),
-        url("../images/hegra.jpg");
+        url("../images/land-images/hegra.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -288,20 +288,20 @@ footer {
 .land-gallery-image-one {
     background-image:
         linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
-        url("../images/roads-skylines.webp");
+        url("../images/land-images/roads-skylines.webp");
 }
 
 .land-gallery-image-two {
     background-image:
         linear-gradient(rgba(20, 30, 36, 0.28), rgba(20, 30, 36, 0.28)),
-        url("../images/desert-hospitality.jpg");
+        url("../images/land-images/desert-hospitality.jpg");
     background-position: 30% center;
 }
 
 .land-gallery-image-three {
     background-image:
         linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
-        url("../images/united-celebrations.png");
+        url("../images/land-images/united-celebrations.png");
     background-position: 70% center;
 }
 
@@ -331,7 +331,7 @@ footer {
     .land-hero-bg {
         background-image:
             linear-gradient(160deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.4)),
-            url("../images/land.avif");
+            url("../images/land-images/vast-saudi.jpg");
     }
 
     .land-spotlight-image {
@@ -346,7 +346,6 @@ footer {
 /* ================================================
 ***************** The People PAGE *****************
 =================================================*/ 
-
 
 .people-page {
     --people-sand: #efe2c8;
@@ -527,3 +526,190 @@ footer {
         height: 190px;
     }
 }
+
+/* ================================================
+*************** The Traditions PAGE ***************
+=================================================*/
+
+.traditions-page {
+    --traditions-sand: #efe2c8;
+    --traditions-ink: #1f2a37;
+    --traditions-palm: #0f6a45;
+    --traditions-gold: #b68a2e;
+    --traditions-card: #fffdfa;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(182, 138, 46, 0.14), transparent 35%),
+        radial-gradient(circle at 90% 18%, rgba(15, 106, 69, 0.1), transparent 30%),
+        linear-gradient(180deg, #f7f2e8 0%, #f3ecdf 45%, #f8f5ef 100%);
+    color: var(--traditions-ink);
+}
+
+.traditions-hero {
+    position: relative;
+    min-height: 420px;
+    border: 1px solid rgba(182, 138, 46, 0.25);
+    box-shadow: 0 1.25rem 2rem rgba(31, 42, 55, 0.13);
+}
+
+.traditions-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(110deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.28) 52%, rgba(20, 30, 36, 0.18)),
+        url("../images/traditions-images/traditions-main.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+}
+
+.traditions-hero-content {
+    position: relative;
+    max-width: 760px;
+}
+
+.traditions-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--traditions-sand);
+}
+
+.traditions-hero-copy {
+    max-width: 62ch;
+}
+
+.traditions-fact-card {
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.95), rgba(239, 226, 200, 0.55));
+    border: 1px solid rgba(182, 138, 46, 0.24);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.08);
+}
+
+.traditions-fact-label {
+    color: #5d4d2d;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.traditions-fact-value {
+    color: #1f2a37;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.traditions-fact-note {
+    color: #3b4d5f;
+    font-size: 0.94rem;
+}
+
+.traditions-region-card {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: var(--traditions-card);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.traditions-region-card h3 {
+    color: var(--traditions-palm);
+}
+
+.traditions-region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(31, 42, 55, 0.11);
+}
+
+.traditions-spotlight {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: #fffaf0;
+    box-shadow: 0 1rem 1.6rem rgba(31, 42, 55, 0.08);
+}
+
+.traditions-spotlight-image {
+    min-height: 320px;
+    background-image:
+        linear-gradient(rgba(24, 32, 38, 0.2), rgba(24, 32, 38, 0.2)),
+        url("../images/traditions-images/saudi-coffee.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.traditions-gallery-card {
+    background: #ffffff;
+    border: 1px solid rgba(31, 42, 55, 0.1);
+    box-shadow: 0 0.8rem 1.4rem rgba(31, 42, 55, 0.08);
+}
+
+.traditions-gallery-image {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.28s ease;
+}
+
+.traditions-gallery-card:hover .traditions-gallery-image {
+    transform: scale(1.04);
+}
+
+.traditions-gallery-image-one {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/traditions-images/saudi-majlis.jpg");
+}
+
+.traditions-gallery-image-two {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.28), rgba(20, 30, 36, 0.28)),
+        url("../images/traditions-images/saudi-dates.jpg");
+    background-position: 30% center;
+}
+
+.traditions-gallery-image-three {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/traditions-images/saudi-dance.jpg");
+    background-position: 70% center;
+}
+
+.traditions-gallery-card figcaption {
+    color: #2d3e4e;
+    font-size: 0.95rem;
+}
+
+.traditions-closing {
+    background: linear-gradient(160deg, rgba(15, 106, 69, 0.12), rgba(182, 138, 46, 0.18));
+    border: 1px solid rgba(15, 106, 69, 0.24);
+}
+
+.traditions-closing h2 {
+    color: #183c2d;
+}
+
+.traditions-closing-copy {
+    max-width: 64ch;
+}
+
+@media (max-width: 767.98px) {
+    .traditions-hero {
+        min-height: 360px;
+    }
+
+    .traditions-hero-bg {
+        background-image:
+            linear-gradient(160deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.4)),
+            url("../images/traditions-images/traditions-main.jpg");
+    }
+
+    .traditions-spotlight-image {
+        min-height: 240px;
+    }
+
+    .traditions-gallery-image {
+        height: 190px;
+    }
+}
+
+/* ================================================
+***************** The Cities PAGE *****************
+=================================================*/
