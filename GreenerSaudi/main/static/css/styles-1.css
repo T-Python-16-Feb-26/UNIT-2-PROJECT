@@ -276,4 +276,12 @@ body {
 .footer {
   padding: 5rem 0;
 }
-
+.material-symbols-outlined {
+  color: white;
+  padding-top: 5%;
+  font-size: 2rem;
+}
+.material-symbols-outlined:hover {
+  color: #64a19d;
+  font-size: 3rem;
+}
