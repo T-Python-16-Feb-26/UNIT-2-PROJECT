@@ -9,4 +9,140 @@
 
 {% block content %}
 
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="container">
+
+      <p class="hero-label">برنامج تحقيق الرؤية</p>
+
+      <h1 class="hero-title">
+        برنامج خدمة<br>
+        ضيوف الرحمن
+      </h1>
+
+      <div class="hero-divider"></div>
+
+      <p class="hero-date">خطة التنفيذ 2021 – 2025</p>
+
+      <p class="hero-body">
+        برنامج وطني طموح يهدف إلى خدمة المزيد من ضيوف الرحمن على أكمل وجه،
+        وتعزيز تجربتهم الروحانية والثقافية، ورفع جودة الخدمات المقدمة لهم.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-label">تمرير</span>
+  </div>
+
+</section>
+
+<!-- LEADERSHIP QUOTES -->
+<section class="leadership-section">
+  <div class="container">
+
+    <div class="leadership-heading">
+      <span class="section-eyebrow">التوجيهات السامية</span>
+      <h2 class="section-title">كلمات القيادة الرشيدة</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="quotes-slider">
+
+      <!-- SLIDE 1 -->
+      <div class="quote-slide active" id="slide-1">
+        <div class="quote-layout quote-layout--img-right">
+
+          <div class="quote-text-col">
+            <span class="quote-mark" aria-hidden="true">❝</span>
+            <blockquote class="quote-body">
+              وإنّنا في المملكة العربية السعودية وقد شرّفنا الله بخدمة الحرمين الشريفين
+              وقاصديهما نذرنا أنفسنا وإمكاناتنا، وما أوتينا من جهد قيادةً وحكومةً وشعباً
+              لراحة ضيوف الرحمن، والسهر على أمنهم وسلامتهم.
+               نشكر الله الذي مكننا من مواصلة هذا العمل الرائع و نحن فخورين بذلك, 
+              و يشرفنا ان نواصل المهمة باعلى مستويات الكفاءة من خلال الجهود المتميزة
+            </blockquote>
+            <footer class="quote-footer">
+              <div class="quote-name">خادم الحرمين الشريفين</div>
+              <div class="quote-title-label">الملك سلمان بن عبدالعزيز — حفظه الله</div>
+              <div class="quote-source">كلمة للحجاج عام 1436هـ - 2015م</div>
+            </footer>
+          </div>
+
+          <div class="quote-img-col">
+            <div class="quote-img-placeholder">
+              <img src="{% static 'main/images/الملك سلمان بن عبدالعزيز — حفظه الله.png' %}" alt="الملك سلمان بن عبدالعزيز — حفظه الله">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 2: -->
+      <div class="quote-slide" id="slide-2">
+        <div class="quote-layout quote-layout--img-left">
+
+          <div class="quote-img-col">
+            <div class="quote-img-placeholder">
+              <img src="{% static 'main/images/ولي العهد — حفظه الله.png' %}" alt="ولي العهد — حفظه الله">
+            </div>
+          </div>
+
+          <div class="quote-text-col">
+            <span class="quote-mark" aria-hidden="true">❝</span>
+            <blockquote class="quote-body">
+              نحمد الله تعالى على ما أكرم به بلادنا من خدمة الحرمين الشريفين
+              ورعاية الحجاج والمعتمرين والزوار.
+            </blockquote>
+            <footer class="quote-footer">
+              <div class="quote-name">صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز</div>
+              <div class="quote-title-label">ولي العهد — حفظه الله</div>
+              <div class="quote-source">في اليوم الوطني عام 1440هـ - 2018م</div>
+            </footer>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /quotes-slider -->
+
+    <div class="quotes-dots" role="tablist" aria-label="اختيار الاقتباس">
+      <button class="quote-dot active" data-slide="slide-1" aria-label="الاقتباس الأول"  aria-selected="true"  role="tab"></button>
+      <button class="quote-dot"        data-slide="slide-2" aria-label="الاقتباس الثاني" aria-selected="false" role="tab"></button>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  (function () {
+    const dots   = document.querySelectorAll('.quote-dot');
+    const slides = document.querySelectorAll('.quote-slide');
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        const target = this.dataset.slide;
+
+        slides.forEach(function (s) { s.classList.remove('active'); });
+        document.getElementById(target).classList.add('active');
+
+        dots.forEach(function (d) {
+          d.classList.remove('active');
+          d.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+      });
+    });
+  })();
+</script>
 {% endblock %}
