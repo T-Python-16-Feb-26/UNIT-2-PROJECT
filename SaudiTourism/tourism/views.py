@@ -11,3 +11,9 @@ def riyadh_view(request:HttpRequest,):
 
 def makkah_view(request:HttpRequest,):
     return render (request, 'tourism/makkah_page.html')
+
+def madinah_view(request:HttpRequest,):
+    return render (request, 'tourism/madinah_page.html')
+
+def qassim_view(request:HttpRequest,):
+    return render (request, 'tourism/qassim_page.html')

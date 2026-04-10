@@ -1,6 +1,6 @@
 {% extends 'tourism/base.html' %}
 {% load static %}
-{% block title %}Makkah - Saudi Tourism{% endblock %}
+{% block title %}مكة المكرمة - السياحة السعودية{% endblock %}
 {% block body_class %}{% endblock %}
 {% block content %}
 <div class="slider">
@@ -89,8 +89,23 @@
         </div>
     </div>
 </div>
-
-<div class="home-content">
+<!-- Makkah History -->
+<div class="card text-bg-dark" dir="rtl">
+    <img src="{% static 'images_and_videos/makkah/makkah-bg.png' %}" class="card-img" alt="makkah-bg">
+    <div class="card-img-overlay">
+        <h5 class="card-title">تاريخ مكة المكرمة</h5>
+        <p class="card-text">مكة المكرمة من أعرق مدن العالم وأقدسها مكانة، إذ يمتد تاريخها لآلاف السنين، وكانت منذ القدم
+            مركزًا دينيًا وتجاريًا مهمًا
+            في شبه الجزيرة العربية. ارتبطت مكة بقصة بناء الكعبة المشرفة على يد النبي إبراهيم وابنه إسماعيل عليهما
+            السلام، لتصبح
+            قبلةً للمسلمين ومهوى أفئدتهم. كما شهدت مكة مولد النبي محمد ﷺ وبداية نزول الوحي، مما منحها مكانة تاريخية
+            وروحية فريدة.
+            وعلى مر العصور، حافظت مكة على قدسيتها ومكانتها، وشهدت تطورًا عمرانيًا كبيرًا مع الحفاظ على إرثها الإسلامي
+            العريق.</p>
+        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
+    </div>
+</div>
+<!-- <div class="home-content">
     <img src="{% static 'images_and_videos/makkah/makkah.png' %}" alt="Makkah" class="riyadh-img">
     <div class="intro-saudi">
         <h2 class="title-saudi">مكة المكرمة</h2>
@@ -98,9 +113,8 @@
         الحرام والكعبة المشرفة، ويقصدها ملايين الزوار سنويًا لأداء الحج والعمرة. كما تجمع مكة بين عبق التاريخ وروحانية المكان،
         وبين التطور العمراني الحديث الذي يسهم في راحة الزائرين وخدمتهم، لتبقى رمزًا للإيمان والسلام ووحدة المسلمين.</p>
     </div>
-</div>
-</div>
-<!-- Riyadh Attractions -->
+</div> -->
+<!-- Makkah Attractions -->
 <div class="container my-5" dir="rtl">
     <h2 class="text-center mb-4">أبرز المعالم في مكة المكرمة</h2>
 
@@ -177,18 +191,7 @@
         </div>
     </div>
 </div>
-<!-- Makkah History -->
-<div class="card text-bg-dark" dir="rtl">
-    <img src="{% static 'images_and_videos/makkah/makkah-bg.png' %}" class="card-img" alt="makkah-bg">
-    <div class="card-img-overlay">
-        <h5 class="card-title">تاريخ مكة المكرمة</h5>
-        <p class="card-text">مكة المكرمة من أعرق مدن العالم وأقدسها مكانة، إذ يمتد تاريخها لآلاف السنين، وكانت منذ القدم مركزًا دينيًا وتجاريًا مهمًا
-        في شبه الجزيرة العربية. ارتبطت مكة بقصة بناء الكعبة المشرفة على يد النبي إبراهيم وابنه إسماعيل عليهما السلام، لتصبح
-        قبلةً للمسلمين ومهوى أفئدتهم. كما شهدت مكة مولد النبي محمد ﷺ وبداية نزول الوحي، مما منحها مكانة تاريخية وروحية فريدة.
-        وعلى مر العصور، حافظت مكة على قدسيتها ومكانتها، وشهدت تطورًا عمرانيًا كبيرًا مع الحفاظ على إرثها الإسلامي العريق.</p>
-        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
-    </div>
-</div>
+
 <!-- Makkah Attractions -->
 <div class="container my-5" dir="rtl">
     <h2 class="text-center mb-4">أبرز الفعاليات في مكة المكرمة</h2>
@@ -198,17 +201,47 @@
                 <img src="{% static 'images_and_videos/makkah/museum.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية</h5>
-                    <p class="card-text">يُعد من أبرز الوجهات الثقافية في مكة المكرمة، حيث يقدم تجربة تفاعلية حديثة تأخذ الزائر في رحلة ثرية عبر سيرة النبي محمد
-                    ﷺ والحضارة الإسلامية. يضم المتحف أكثر من 30 قسماً و200 عرض تفاعلي بعدة لغات، تشمل مجسمات رقمية، شاشات بانورامية، وتقنيات
-                    واقع افتراضي، مما يجعل الزيارة تجربة تعليمية وروحانية مميزة تجمع بين المعرفة والإبهار البصري. يقع المتحف في أبراج الساعة
-                    بالقرب من المسجد الحرام، ويُعد وجهة مناسبة للعائلات والزوار الراغبين في استكشاف التاريخ الإسلامي بأسلوب عصري.</p>
+                    <p class="card-text">يُعد من أبرز الوجهات الثقافية في مكة المكرمة، حيث يقدم تجربة تفاعلية حديثة تأخذ
+                        الزائر في رحلة ثرية عبر سيرة النبي محمد
+                        ﷺ والحضارة الإسلامية. يضم المتحف أكثر من 30 قسماً و200 عرض تفاعلي بعدة لغات، تشمل مجسمات رقمية،
+                        شاشات بانورامية، وتقنيات
+                        واقع افتراضي، مما يجعل الزيارة تجربة تعليمية وروحانية مميزة تجمع بين المعرفة والإبهار البصري.
+                        يقع المتحف في أبراج الساعة
+                        بالقرب من المسجد الحرام، ويُعد وجهة مناسبة للعائلات والزوار الراغبين في استكشاف التاريخ الإسلامي
+                        بأسلوب عصري.</p>
                 </div>
                 <div class="card-footer">
                     <small class="text-body-secondary">يقع المتحف في أبراج الساعة بالقرب من المسجد الحرام</small>
                 </div>
             </div>
         </div>
-        
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/makkah/quran_museum.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">متحف القرآن الكريم</h5>
+                    <p class="card-text">يقدّم متحف القرآن الكريم، الواقع ضمن مشروع حيّ حراء الثقافي بمكة المكرمة، تجربة معرفية وتفاعلية متكاملة تسلّط الضوء على
+                    القرآن الكريم ومراحل نزول الوحي، بأسلوب حديث يجمع بين الأصالة والتقنيات المعاصرة. ويهدف المتحف إلى تعريف الزوّار بالبعد
+                    الرسالي والإنساني للقرآن الكريم، من خلال محتوى علمي موثّق يُعرض بأساليب بصرية وتفاعلية.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يقع في حيّ حراء الثقافي بمكة المكرمة</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/makkah/clock _tower_museum.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> متحف برج الساعة</h5>
+                    <p class="card-text">يقدّم متحف برج الساعة في مكة المكرمة تجربة معرفية فريدة تجمع بين الإيمان والعلم والكون، حيث يأخذ زائريه في رحلة تبدأ من
+                    المجرات والفضاء، وتمتد إلى ساعة مكة المكرمة، رمز توقيت العالم الإسلامي.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يقع المتحف في أعلى نقطة في مكة المكرمة، ضمن شرفة برج الساعة</small>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

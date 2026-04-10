@@ -1,0 +1,245 @@
+{% extends 'tourism/base.html' %}
+{% load static %}
+{% block title %}المدينة المنورة - السياحة السعودية{% endblock %}
+{% block body_class %}{% endblock %}
+{% block content %}
+<div class="slider">
+    <div class="balls-icon">
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <!-- Repeat -->
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+    </div>
+
+    <!-- title  -->
+    <div class="slider-header">
+        <h1> المدينة المنورة</h1>
+    </div>
+
+    <div class="slides">
+        <!-- madina -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/madina.png' %}" alt="madina">
+            <h3> المسجد النبوي</h3>
+        </div>
+        <!--quba -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/quba.png' %}" alt="quba">
+            <h3> مسجد قباء </h3>
+        </div>
+        <!-- Mount_Uhud -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/mount_uhud.png' %}" alt="mount_uhud">
+            <h3>جبل أحد  </h3>
+        </div>
+        <!-- mosque_qiblah -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/mosque_qiblah.png' %}" alt="mosque_qiblah">
+            <h3>مسجد القبلتين</h3>
+        </div>
+        <!--madina_museum-->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/madina_museum.png' %}" alt="madina_museum">
+            <h3> متحف دار المدينة </h3>
+        </div>
+        <!-- wadi_alaqiq -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/wadi_alaqiq.png' %}" alt="wadi_alaqiq">
+            <h3>وادي العقيق</h3>
+        </div>
+        <!-- Two more cities -->
+        <!-- madina -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/madina.png' %}" alt="madina">
+            <h3> المسجد النبوي</h3>
+        </div>
+        <!--quba -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/quba.png' %}" alt="quba">
+            <h3> مسجد قباء </h3>
+        </div>
+        <!-- Mount_Uhud -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/mount_uhud.png' %}" alt="mount_uhud">
+            <h3>جبل أحد </h3>
+        </div>
+        <!-- mosque_qiblah -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/mosque_qiblah.png' %}" alt="mosque_qiblah">
+            <h3>مسجد القبلتين</h3>
+        </div>
+        <!--madina_museum-->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/madina_museum.png' %}" alt="madina_museum">
+            <h3> متحف دار المدينة </h3>
+        </div>
+        <!-- wadi_alaqiq -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/madina/wadi_alaqiq.png' %}" alt="wadi_alaqiq">
+            <h3>وادي العقيق</h3>
+        </div>
+    </div>
+</div>
+<!-- Makkah History -->
+<div class="card text-bg-dark" dir="rtl">
+    <img src="{% static 'images_and_videos/madina/madina2.png' %}" class="card-img" alt="madina-bg">
+    <div class="card-img-overlay">
+        <h5 class="card-title">تاريخ المدينة المنورة</h5>
+        <p class="card-text">المدينة المنورة تُعد من أعرق المدن الإسلامية وأكثرها مكانةً في التاريخ، إذ كانت تُعرف
+            قديمًا باسم يثرب قبل أن يهاجر
+            إليها النبي محمد ﷺ. شهدت المدينة حدث الهجرة النبوية الذي شكّل نقطة تحول في التاريخ الإسلامي، ومنها انطلقت
+            الدعوة
+            الإسلامية وانتشر نور الإسلام. كما احتضنت أول مجتمع إسلامي، وشهدت بناء المسجد النبوي الذي أصبح من أهم المعالم
+            الدينية في
+            العالم. وعلى مر العصور، حافظت المدينة المنورة على مكانتها الروحية والتاريخية، لتبقى رمزًا للإيمان والسلام.
+        </p>
+        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
+    </div>
+</div>
+
+<!-- <div class="home-content">
+    <img src="{% static 'images_and_videos/madina/madina2.png' %}" class="card-img" alt="Madina">
+    <div class="intro-saudi">
+        <h2 class="title-saudi">المدينة المنورة</h2>
+        <p dir="rtl">المدينة المنورة مدينةٌ مباركة تنبض بالسكينة والروحانية، وتُعد من أقدس المدن في الإسلام لما تحتضنه من معالم دينية عظيمة،
+        في مقدمتها المسجد النبوي. تمتاز المدينة بتاريخها الإسلامي العريق وأجوائها الهادئة التي تمنح الزائر شعورًا بالطمأنينة،
+        كما تجمع بين عبق التراث وجمال التطور العمراني الحديث، لتبقى وجهةً مميزة للزوار من مختلف أنحاء العالم.
+        </p>
+    </div>
+</div> -->
+
+<!-- madina Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز المعالم في المدينة المنورة</h2>
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- madina -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/madina/madina.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">المسجد النبوي</h5>
+                    <p class="card-text">يُعد من أعظم المعالم الإسلامية في العالم، ويتميز بمكانته الدينية العظيمة لاحتضانه الروضة الشريفة وقبر النبي محمد ﷺ. كما
+                    يشتهر بتصميمه المعماري الفريد وساحاته الواسعة التي تمنح الزوار أجواءً من السكينة والطمأنينة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- quba -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/madina/quba.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> مسجد قباء</h5>
+                    <p class="card-text">أول مسجد بُني في الإسلام، ويتميز بأجوائه الروحانية الهادئة وتصميمه الجميل. يُعد وجهة مهمة للزوار الراغبين في التعرف على
+                    بدايات التاريخ الإسلامي والاستمتاع بمكان يحمل قيمة دينية كبيرة.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Mount_Uhud -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/madina/mount_uhud.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جبل أحد</h5>
+                    <p class="card-text">ن أشهر المعالم التاريخية في المدينة، ويرتبط بغزوة أحد الشهيرة. يتميز الجبل بطبيعته الصخرية وإطلالته الواسعة، ويمنح
+                    الزوار تجربة تجمع بين التأمل واستحضار أحداث مهمة من السيرة النبوية.</p>
+                </div>
+            </div>
+        </div>
+        <!-- mosque_qiblah-->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/madina/mosque_qiblah.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">مسجد القبلتين</h5>
+                    <p class="card-text"> يُعرف بمكانته التاريخية الفريدة، إذ شهد حادثة تحويل القبلة من المسجد الأقصى إلى الكعبة المشرفة. ويتميز بتصميمه المعماري
+                    الجميل وموقعه الذي يجذب الزوار من مختلف أنحاء العالم.</p>
+                </div>
+            </div>
+        </div>
+        <!-- madina_museum -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/madina/madina_museum.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> متحف دار المدينة</h5>
+                    <p class="card-text"> يوفر تجربة ثقافية ثرية للتعرف على تاريخ المدينة المنورة وتطورها عبر العصور. يضم مجسمات، صورًا، ومقتنيات تروي تفاصيل
+                    الحياة في المدينة بأسلوب ممتع ومفيد.</p>
+                </div>
+            </div>
+        </div>
+        <!-- wadi_alaqiq -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/madina/wadi_alaqiq.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> وادي العقيق</h5>
+                    <p class="card-text">من أجمل المواقع الطبيعية في المدينة، ويتميز بأجوائه الهادئة ومناظره الخلابة. يُعد مكانًا مناسبًا للتنزه والاستمتاع
+                    بالطبيعة، ويجمع بين الجمال الطبيعي والقيمة التاريخية.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Madinah Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز الفعاليات في المدينة المنورة  </h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4" dir="rtl">
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/madina/festival_of_cultures.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مهرجان الثقافات والشعوب</h5>
+                    <p class="card-text">مهرجان الثقافات والشعوب يُعد من أبرز الفعاليات الثقافية في المدينة المنورة، حيث يجمع ثقافات من مختلف دول العالم في مكان
+                    واحد. يضم المهرجان أجنحة دولية، عروضًا تراثية، فنونًا شعبية، وأطعمة متنوعة، مما يمنح الزوار تجربة غنية وممتعة للتعرف على
+                    حضارات متعددة، ويستقطب أعدادًا كبيرة من الزوار سنويًا لما يقدمه
+                    من أجواء تفاعلية مميزة.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يُقام المهرجان في الجامعة الإسلامية بالمدينة المنورة</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/madina/quba2.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">تجربة السيرة: الرحلة إلى قباء</h5>
+                    <p class="card-text">تجربة تفاعلية تسرد رحلة الأنصار من مبايعتهم لرسول الله ﷺ وصولًا إلى استقبالهم له في المدينة بعد الهجرة. تتيح التجربة
+                    للزوار معايشة الأحداث التاريخية بشكل حسي ومرئي، وتعكس فرحة الأنصار وقصة بناء مسجد قباء.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">تُقام التجربة في منطقة قباء بجوار مسجد قباء، وتحديدًا في موقع   بحي العصبة في المدينة
+                    المنورة.</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/madina/marbad.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مزرعة المربد</h5>
+                    <p class="card-text"> تُعد مزرعة المربد وجهة طبيعية مميّزة تجمع بين جمال الطبيعة والتجربة الريفية الهادئة، حيث تحتوي على محمية مخصصة للطيور
+                    تتيح للزوار التعرّف على أنواع متعددة منها في بيئة طبيعية خلّابة. ويقدّم المكان تجربة متكاملة تجمع بين الاستكشاف
+                    والاسترخاء، ضمن أجواء مفتوحة تبعث على الهدوء.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">تقع في المدينة المنورة على طريق علي بن أبي طالب بحي العهن، وقريبة جدًا من مسجد قباء</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

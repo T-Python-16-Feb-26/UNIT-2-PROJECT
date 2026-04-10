@@ -1,0 +1,244 @@
+{% extends 'tourism/base.html' %}
+{% load static %}
+{% block title %}القصيم - السياحة السعودية{% endblock %}
+{% block body_class %}{% endblock %}
+{% block content %}
+<div class="slider">
+    <div class="balls-icon">
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <!-- Repeat -->
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+    </div>
+
+    <!-- title  -->
+    <div class="slider-header">
+        <h1>القصيم</h1>
+    </div>
+
+    <div class="slides">
+        <!-- qassim_tower -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/qassim_tower.png' %}" alt="qassim_tower">
+            <h3>برج مياه بريدة</h3>
+        </div>
+        <!--almasoukef_market -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/almasoukef_market.png' %}" alt="almasoukef_market">
+            <h3> سوق المسوكف</h3>
+        </div>
+        <!-- qassim_museum -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/qassim_museum.png' %}" alt="qassim_museum">
+            <h3> متحف بريدة </h3>
+        </div>
+        <!-- silayl_mountains -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/silayl_mountains.png' %}" alt="silayl_mountains">
+            <h3>جبال السليل</h3>
+        </div>
+        <!-- tomor_market -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/tomor_market.png' %}" alt="tomor_market">
+            <h3>سوق التمور</h3>
+        </div>
+        <!-- Nakheel Avenue -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/nakheel_avenue.png' %}" alt="nakheel_avenue">
+            <h3>جادة النخيل </h3>
+        </div>
+        <!-- Two more cities -->
+        <!-- qassim_tower -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/qassim_tower.png' %}" alt="qassim_tower">
+            <h3>برج مياه بريدة</h3>
+        </div>
+        <!--almasoukef_market -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/almasoukef_market.png' %}" alt="almasoukef_market">
+            <h3> سوق المسوكف</h3>
+        </div>
+        <!-- qassim_museum -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/qassim_museum.png' %}" alt="qassim_museum">
+            <h3> متحف بريدة </h3>
+        </div>
+        <!-- silayl_mountains -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/silayl_mountains.png' %}" alt="silayl_mountains">
+            <h3>جبال السليل</h3>
+        </div>
+        <!-- tomor_market -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/tomor_market.png' %}" alt="tomor_market">
+            <h3>سوق التمور</h3>
+        </div>
+        <!-- Nakheel Avenue -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/qassim/nakheel_avenue.png' %}" alt="nakheel_avenue">
+            <h3>جادة النخيل </h3>
+        </div>
+    </div>
+</div>
+<!-- qassim History -->
+<div class="card text-bg-dark" dir="rtl">
+    <img src="{% static 'images_and_videos/qassim/qassim.png' %}" class="card-img" alt="qassim-bg">
+    <div class="card-img-overlay">
+        <h5 class="card-title">تاريخ القصيم</h5>
+        <p class="card-text">منطقة القصيم تُعد من المناطق التاريخية العريقة في المملكة، إذ كانت قديمًا محطة مهمة على طرق التجارة والحج بين شمال
+        الجزيرة العربية ووسطها. اشتهرت القصيم بأسواقها القديمة وقراها الزراعية، خاصة في زراعة النخيل وإنتاج التمور، مما منحها
+        مكانة اقتصادية بارزة عبر العصور. ومع مرور الزمن، تطورت المنطقة مع الحفاظ على تراثها الأصيل، لتبقى رمزًا للتاريخ والثقافة
+        في قلب المملكة.
+        </p>
+        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
+    </div>
+</div>
+<!-- qassim Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز المعالم في القصيم</h2>
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- qassim -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/qassim/qassim_tower.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">برج مياه بريدة</h5>
+                    <p class="card-text">برج مياه بريدة من أبرز معالم منطقة القصيم، ويُعد رمزًا حضاريًا يميز مدينة بريدة. يتميز البرج بتصميمه العصري وارتفاعه
+                    اللافت، كما يوفر إطلالة بانورامية جميلة على المدينة، مما يجعله وجهة مفضلة للزوار ومحبي التصوير. ويحيط به متنزه ومساحات
+                    خضراء تضفي على المكان أجواءً مميزة ومناسبة للعائلات.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- almasoukef_market -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/qassim/almasoukef_market.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> سوق المسوكف</h5>
+                    <p class="card-text">سوق المسوكف من أشهر الأسواق التراثية في منطقة القصيم، ويعكس تاريخ المنطقة وأصالتها من خلال تصميمه النجدي القديم وأجوائه
+                    الشعبية المميزة. يضم السوق محلات للحرف اليدوية، والمنتجات التراثية، والمقاهي الشعبية، مما يمنح الزوار تجربة ممتعة تجمع
+                    بين التسوق واستكشاف التراث السعودي.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Nakheel Avenue -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/qassim/nakheel_avenue.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> جادة النخيل</h5>
+                    <p class="card-text">جادة النخيل من أبرز الوجهات الحديثة في القصيم، وتتميز بممرات واسعة تحفها أشجار النخيل، وجلسات خارجية، ومناطق مخصصة للمشي
+                    والاسترخاء. كما تضم الجادة مقاهي ومطاعم متنوعة، وتستضيف فعاليات موسمية، مما يجعلها مكانًا مثاليًا للعائلات والزوار
+                    للاستمتاع بالأجواء الهادئة والمميزة.</p>
+                </div>
+            </div>
+        </div>
+        <!-- mosque_qiblah-->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/qassim/qassim_museum.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">متحف بريدة </h5>
+                    <p class="card-text">متحف بريدة من أبرز المعالم الثقافية في منطقة القصيم، ويأخذ الزوار في رحلة عبر تاريخ المنطقة وتراثها العريق. يضم المتحف
+                    مقتنيات أثرية، وأدوات تراثية، ووثائق وصورًا تاريخية تروي تطور الحياة في القصيم عبر العصور، مما يجعله وجهة مميزة لمحبي
+                    الثقافة والتاريخ.</p>
+                </div>
+            </div>
+        </div>
+        <!-- qassim_mountains -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/qassim/silayl_mountains.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جبال السليل</h5>
+                    <p class="card-text">جبال السليل من أجمل المعالم الطبيعية في منطقة القصيم، وتقع غرب القصيم قرب محافظة النبهانية. تتميز بتكويناتها الصخرية
+                    الفريدة وأجوائها الهادئة، وتُعد وجهة مثالية لمحبي الطبيعة والتخييم والتصوير، خاصة في مواسم الربيع والأمطار، حيث تكتسي
+                    المنطقة بجمال طبيعي ساحر يجذب الزوار من مختلف المناطق.</p>
+                </div>
+            </div>
+        </div>
+        <!-- wadi_alaqiq -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/qassim/tomor_market.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">سوق التمور</h5>
+                    <p class="card-text">سوق التمور ببريدة من أبرز المعالم الاقتصادية والسياحية في منطقة القصيم، ويُعد من أكبر أسواق التمور في العالم. يشتهر
+                    السوق بتنوع أصناف التمور وجودتها العالية، ويستقطب التجار والزوار من داخل المملكة وخارجها، خاصة خلال موسم الحصاد. كما
+                    يمنح الزائر تجربة مميزة للتعرف على تراث القصيم الزراعي وأجوائها الشعبية الأصيلة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Madinah Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز الفعاليات في المدينة المنورة </h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4" dir="rtl">
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/madina/festival_of_cultures.png' %}" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مهرجان الثقافات والشعوب</h5>
+                    <p class="card-text">مهرجان الثقافات والشعوب يُعد من أبرز الفعاليات الثقافية في المدينة المنورة، حيث
+                        يجمع ثقافات من مختلف دول العالم في مكان
+                        واحد. يضم المهرجان أجنحة دولية، عروضًا تراثية، فنونًا شعبية، وأطعمة متنوعة، مما يمنح الزوار
+                        تجربة غنية وممتعة للتعرف على
+                        حضارات متعددة، ويستقطب أعدادًا كبيرة من الزوار سنويًا لما يقدمه
+                        من أجواء تفاعلية مميزة.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يُقام المهرجان في الجامعة الإسلامية بالمدينة المنورة</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/madina/quba2.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">تجربة السيرة: الرحلة إلى قباء</h5>
+                    <p class="card-text">تجربة تفاعلية تسرد رحلة الأنصار من مبايعتهم لرسول الله ﷺ وصولًا إلى استقبالهم
+                        له في المدينة بعد الهجرة. تتيح التجربة
+                        للزوار معايشة الأحداث التاريخية بشكل حسي ومرئي، وتعكس فرحة الأنصار وقصة بناء مسجد قباء.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">تُقام التجربة في منطقة قباء بجوار مسجد قباء، وتحديدًا في موقع بحي
+                        العصبة في المدينة
+                        المنورة.</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/madina/marbad.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مزرعة المربد</h5>
+                    <p class="card-text"> تُعد مزرعة المربد وجهة طبيعية مميّزة تجمع بين جمال الطبيعة والتجربة الريفية
+                        الهادئة، حيث تحتوي على محمية مخصصة للطيور
+                        تتيح للزوار التعرّف على أنواع متعددة منها في بيئة طبيعية خلّابة. ويقدّم المكان تجربة متكاملة
+                        تجمع بين الاستكشاف
+                        والاسترخاء، ضمن أجواء مفتوحة تبعث على الهدوء.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">تقع في المدينة المنورة على طريق علي بن أبي طالب بحي العهن، وقريبة
+                        جدًا من مسجد قباء</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
