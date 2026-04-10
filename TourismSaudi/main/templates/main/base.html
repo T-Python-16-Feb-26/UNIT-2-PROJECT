@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <title>{% block title %}Discover Saudi{% endblock %}</title>
+    <title>{% block title %} Discover Saudi {% endblock %}</title>
 </head>
 <body>
     <nav class="navbar">
@@ -16,109 +16,261 @@
             <div class="nav-right">
                 <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
                 <a href="#contact" class="translate-text" data-ar="تواصل معنا" data-en="Contact">Contact</a>
-                <a href="#" class="translate-text" data-ar="سجل دخول" data-en="Log in">Log in</a>
+                <a href="{% url 'main:login_view' %}" class="translate-text" data-ar="سجل دخول" data-en="Log in">Log in</a>
             </div>
     </nav>
 
     {% block content %}{% endblock %}
 
-    <section id="contact">
-        <div class="contact-container">
-            <h1 class="translate-text" data-ar="تواصل معي" data-en="Contact Me">Contact Me</h1>
-            <p class="translate-text" data-ar="دعنا نعمل معاً 👇" data-en="Let’s work together 👇">Let’s work together 👇</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="translate-text" data-ar="إرسال" data-en="Send Message">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>Email: sadeem@email.com</p>
-                <p>GitHub: github.com/sadeem21alharbi</p>
+    <div id="ai-bot-container">
+    <div id="bot-bubble" class="translate-text" 
+         data-ar="أهلاً بك! أنا سديم مساعدتك الذكية" 
+         data-en="Hi Welcome! I'm Sadeem, Your AI Assistant">
+         Hi Welcome! I'm Sadeem, Your AI Assistant
+    </div>
+
+    <div id="ai-bot-circle" onclick="toggleChat()">
+        <img src="{% static 'images/chatbot-avatar.png' %}" alt="Sadeem AI">
+    </div>
+
+    <div id="chat-window">
+        <div class="chat-header">
+            <span class="translate-text" data-ar="مساعدك الذكي" data-en="Virtual Travel Assistant">Virtual Travel Assistant</span>
+            <button onclick="toggleChat()">×</button>
+        </div>
+        <div id="chat-messages">
+            <div class="bot-msg translate-text" 
+                 data-ar="مرحباً! أنا سديم مرشدتك الذكية. كيف يمكنني مساعدتك اليوم؟" 
+                 data-en="Hello! I'm Sadeem, your smart tour guide. How can I assist you today?">
+                 Hello! I'm Sadeem, your smart tour guide. How can I assist you today?
             </div>
         </div>
-    </section>
+        <div class="chat-input-area">
+            <input type="text" id="user-input" class="translate-text" data-ar="اكتب هنا..." data-en="Start Typing..." placeholder="Start Typing...">
+            <button id="send-btn">➤</button>
+        </div>
+    </div>
+</div>
 
-    <footer class="footer">
-        <div class="lang-switcher">
-            <button onclick="changeLanguage('ar')">العربية</button>
-            <button onclick="changeLanguage('en')">English</button>
+    <section id="contact">
+    <div class="contact-container">
+        <div class="contact-box">
+            <h1 class="translate-text" data-ar="تواصل معي" data-en="Contact Me">Contact Me</h1>
+            <p class="translate-text" data-ar="دعنا نعمل معاً 👇" data-en="Let’s work together 👇">Let’s work together 👇</p>
+            
+            <form class="contact-form">
+                {% csrf_token %} <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                
+                <button type="submit" class="contact-submit translate-text" data-ar="إرسال" data-en="Send Message">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <p>Email: <a href="mailto:sadeem@email.com">sadeem@email.com</a></p>
+                <p>GitHub: <a href="https://github.com/sadeem21alharbi" target="_blank">github.com/sadeem21alharbi</a></p>
+            </div>
         </div>
-        <div class="accessibility-controls">
-        <button onclick="changeFontSize('increase')" title="A+">A+</button>
-        <button onclick="changeFontSize('decrease')" title="A-">A-</button>
-        
-        <button id="theme-toggle" onclick="toggleTheme()">
-            <span id="theme-icon">🌙</span> </button>
+    </div>
+</section>
+<br>
+<br>
+<br>
+   <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-controls">
+            <div class="lang-switcher">
+                <button onclick="changeLanguage('ar')" class="footer-btn">العربية</button>
+                <button onclick="changeLanguage('en')" class="footer-btn">English</button>
+            </div>
+
+            <div class="accessibility-controls">
+                <button onclick="changeFontSize('increase')" class="footer-icon-btn" title="A+">A+</button>
+                <button onclick="changeFontSize('decrease')" class="footer-icon-btn" title="A-">A-</button>
+                <button id="theme-toggle" onclick="toggleTheme()" class="footer-icon-btn">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
         </div>
-        <p>&copy; 2026 Let's Discover Saudi. All rights reserved.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Let's Discover Saudi. All rights reserved.</p>
+        </div>
+    </div>
     </footer>
-
-        <script>
-    // --- أولاً: وظائف الكوكيز (يجب أن تكون موجودة ليشتغل الكود) ---
-    function setCookie(name, value, days) {
-        let expires = "";
-        if (days) {
-            let date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    <script>
+// 1. وظائف الكوكيز (الأساس الذي تعتمد عليه كل الوظائف الأخرى)
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
     }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-    function getCookie(name) {
-        let nameEQ = name + "=";
-        let ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
+    return null;
+}
 
-    // --- ثانياً: التحكم في حجم الخط ---
-    // أضفنا let هنا لتعريف المتغير بشكل صحيح
-    let currentFontSize = parseInt(getCookie('fontSize')) || 16;
-    document.body.style.fontSize = currentFontSize + "px";
-
-    function changeFontSize(action) {
-        if (action === 'increase' && currentFontSize < 24) {
-            currentFontSize += 2;
-        } else if (action === 'decrease' && currentFontSize > 12) {
-            currentFontSize -= 2;
-        }
-        document.body.style.fontSize = currentFontSize + "px";
-        setCookie('fontSize', currentFontSize, 7);
-    }
-
-    // --- ثالثاً: التحكم في الدارك مود ---
-    let currentTheme = getCookie('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    function toggleTheme() {
-        let theme = document.documentElement.getAttribute('data-theme');
-        let newTheme = (theme === 'light') ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        setCookie('theme', newTheme, 7);
-        updateThemeIcon(newTheme);
-    }
-
-    function updateThemeIcon(theme) {
-        const icon = document.getElementById('theme-icon');
-        if (icon) {
-            icon.innerText = (theme === 'light') ? '🌙' : '☀️';
-        }
-    }
-
-    // انتظر تحميل الصفحة ثم طبق الإعدادات
-    window.addEventListener('DOMContentLoaded', () => {
-        updateThemeIcon(getCookie('theme') || 'light');
-        // تأكدي من تطبيق الخط عند التحميل أيضاً
-        document.body.style.fontSize = (getCookie('fontSize') || 16) + "px";
+// 2. وظيفة تحويل اللغة
+function changeLanguage(lang) {
+    const elements = document.querySelectorAll('.translate-text');
+    elements.forEach(el => {
+        const text = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        if (text) el.innerText = text;
     });
-    </script>
+    document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    setCookie('prefLang', lang, 7);
+}
+
+// 3. وظيفة التحكم في حجم الخط
+let currentFontSize = parseInt(getCookie('fontSize')) || 16;
+function changeFontSize(action) {
+    if (action === 'increase' && currentFontSize < 24) currentFontSize += 2;
+    else if (action === 'decrease' && currentFontSize > 12) currentFontSize -= 2;
+    
+    document.body.style.fontSize = currentFontSize + "px";
+    setCookie('fontSize', currentFontSize, 7);
+}
+
+// 4. وظائف الدارك مود (الثيم)
+function toggleTheme() {
+    let theme = document.documentElement.getAttribute('data-theme') || 'light';
+    let newTheme = (theme === 'light') ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    setCookie('theme', newTheme, 7);
+    updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.getElementById('theme-icon');
+    if (icon) {
+        icon.innerText = (theme === 'light') ? '🌙' : '☀️';
+    }
+}
+
+// 5. التشغيل التلقائي عند تحميل أي صفحة
+window.addEventListener('DOMContentLoaded', () => {
+    // تطبيق اللغة المحفوظة
+    const savedLang = getCookie('prefLang') || 'en';
+    changeLanguage(savedLang);
+
+    // تطبيق حجم الخط المحفوظ
+    const savedSize = getCookie('fontSize') || 16;
+    document.body.style.fontSize = savedSize + "px";
+    
+    // تطبيق الثيم المحفوظ
+    const savedTheme = getCookie('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+});
+
+    function toggleChat() {
+    const chatWin = document.getElementById('chat-window');
+    const bubble = document.getElementById('bot-bubble');
+    
+    if (chatWin.style.display === 'none' || chatWin.style.display === '') {
+        chatWin.style.display = 'flex';
+        bubble.style.display = 'none'; // إخفاء الفقاعة عند فتح الشات
+    } else {
+        chatWin.style.display = 'none';
+        bubble.style.display = 'block';
+    }
+}
+
+    document.getElementById('send-btn').addEventListener('click', sendMessage);
+
+// السماح بالإرسال عند الضغط على زر Enter
+document.getElementById('user-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') sendMessage();
+});
+
+function sendMessage() {
+    const inputField = document.getElementById('user-input');
+    const message = inputField.value.trim();
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (message === "") return;
+
+    // 1. إضافة رسالة المستخدم للدردشة
+    appendMessage('user', message);
+    inputField.value = "";
+
+    // 2. محاكاة تفكير البوت (تأخير بسيط)
+    setTimeout(() => {
+        const botResponse = getAIResponse(message);
+        appendMessage('bot', botResponse);
+    }, 600);
+}
+
+function appendMessage(sender, text) {
+    const chatMessages = document.getElementById('chat-messages');
+    const msgDiv = document.createElement('div');
+    msgDiv.className = sender === 'user' ? 'user-msg' : 'bot-msg';
+    msgDiv.style.cssText = sender === 'user' 
+        ? "align-self: flex-end; background: #e2d5e2; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px;" 
+        : "align-self: flex-start; background: #7a1b80; color: white; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px;";
+    
+    msgDiv.innerText = text;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight; // النزول لآخر رسالة
+}
+
+// "دماغ" البوت - يمكنك توسيع هذه القائمة لتشمل كل أسئلة السياحة
+function getAIResponse(input) {
+    const query = input.toLowerCase();
+    
+    if (query.includes("مكة") || query.includes("makkah")) {
+        return "مكة المكرمة وجهة الروحانية؛ بجانب الحرم، يمكنك زيارة غار حراء ومتحف برج الساعة.";
+    } else if (query.includes("مدينة") || query.includes("madinah")) {
+        return "المدينة المنورة السكينة والجمال؛ لا تفوت زيارة المسجد النبوي، ومسجد قباء، ومزارع النخيل التاريخية.";
+    } else if (query.includes("جدة") || query.includes("jeddah")) {
+        return "جدة غير! أنصحك بزيارة الكورنيش الجديد، ومنطقة 'البلد' التاريخية، وفقيه أكواريوم.";
+    } else if (query.includes("طائف") || query.includes("taif")) {
+        return "عروس المصائف! استمتع بأجواء الهدا والشفا، وزيارة مزارع الورد الطائفي الشهيرة.";
+    } else if (query.includes("رياض") || query.includes("riyadh")) {
+        return "الرياض تنبض بالحياة! لا تفوتك منطقة 'فيا رياض'، 'بوليفارد سيتي'، وقلعة المصمك التاريخية.";
+    } else if (query.includes("قصيم") || query.includes("qassim")) {
+        return "أرض النخيل والكرم؛ أنصحك بزيارة سوق التمور في بريدة وبلدة خب الخبراء التراثية.";
+    } else if (query.includes("خبر")  || query.includes("khobar") || query.includes("دمام") || query.includes("dammam") || query.includes("الشرقية")) {
+        return "المنطقة الشرقية وجهة بحرية رائعة! استمتع بواجهة الخبر البحرية، وجزيرة المرجان بالدمام، ومركز إثراء.";
+    } else if (query.includes("أحساء") || query.includes("ahsa")) {
+        return "الأحساء أكبر واحة نخيل عالمية؛ لا تفوت جبل القارة، وسوق القيصرية، وبحيرة الأصفر.";
+    } else if (query.includes("تبوك") || query.includes("tabuk")) {
+        return "تبوك الورد والجمال؛ أنصحك بوادي الديسة الساحر وشواطئ حقل حيث تقع السفينة الغارقة.";
+    } else if (query.includes("علا") || query.includes("alula")) {
+        return "العلا متحف مفتوح! استكشف الحجر (مدائن صالح)، وجبل الفيل، والبلدة القديمة.";
+    } else if (query.includes("جوف") || query.includes("jouf")) {
+        return "أرض الزيتون؛ قم بزيارة قلعة مارد ومسجد عمر بن الخطاب في دومة الجندل.";
+    } else if (query.includes("أبها") || query.includes("عسير") || query.includes("abha")) {
+        return "عسير الأجواء الباردة والغيوم! توجه إلى جبل السودة، وقرية رجال ألمع التراثية، ومنتزه الحبلة.";
+    } else if (query.includes("جازان") || query.includes("jizan")) {
+        return "جازان لؤلؤة الجنوب؛ أنصحك بزيارة جزر فرسان الساحرة ووادي لجب الجبلي.";
+    } else if (query.includes("بحر") || query.includes("sea")) {
+        return "للبحر والأنشطة البحرية، أنصحك بشواطئ أملج (مالديف السعودية) أو واجهة جدة والخبر البحرية.";
+    } else if (query.includes("طبيعة") || query.includes("nature")) {
+        return "للأماكن الطبيعية، أنصحك بوادي الديسة في تبوك أو غابات جبال السودة في عسير.";
+    } else if (query.includes("تسوق") || query.includes("shopping")) {
+        return "عشاق التسوق! الرياض وجدة تضمان أفخم المولات مثل 'النخيل مول' و'رد سي مول'.";
+    } else if (query.includes("تاريخ") || query.includes("متحف") || query.includes("history")) {
+        return "لعشاق التاريخ، المملكة غنية بالمتاحف! أنصحك بالمتحف الوطني بالرياض، وقصر شبرا بالطائف.";
+    } else if (query.includes("ثلج") || query.includes("snow")) {
+        return "هل تبحث عن الثلج؟ في الشتاء، جبل اللوز في تبوك يكتسي بالبياض ويقدم تجربة لا تُنسى!";
+    } else {
+        return "أهلاً بك! أنا سديم، مساعدتك السياحية. يمكنك سؤالي عن أي مدينة أو نشاط في مملكتنا الغالية.";
+    }
+}
+</script>
     
 </body>
 </html>

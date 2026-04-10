@@ -1,0 +1,144 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Eastern{% endblock %}
+{% block content %}
+<main>
+    <section class="city-detail-header">
+        <h1 class="translate-text" 
+            data-ar=" المنطقة الوسطى " 
+            data-en=" Eastern City">
+            Eastern City
+        </h1>
+    </section>
+
+    <div class="filter-container">
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
+        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+    </div>
+
+    <div class="riyadh-grid">
+    
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/ethraalibraray.jpg' %}" alt="ethraa"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مكتبة اثراء" data-en="Ethraa Library">Ethraa Library</h3>
+                <p class="translate-text" data-ar= " ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item cultrue">
+            <div class="card-image"><img src="{% static 'images/musuim.jpg' %}" alt="ethraa"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" متحف الطيبين " data-en="old Museum">Ethraa Library</h3>
+                <p class="translate-text" data-ar= " ثقافة وتاريخ " data-en="cultrue & History">cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/princeSpace.jpg' %}" alt="Space"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مركز سلطان بن عبدالعزيز للعلوم والتقنية - سايتك " data-en="SAITIC">SAITIC</h3>
+                <p class="translate-text" data-ar= " ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/khobarCornish.jpg' %}" alt="Khobar Cornish"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" كورنيش الخبر " data-en="khobar Cornish">khobar Cornish</h3>
+                <p class="translate-text" data-ar= " ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/Duck.jpg' %}" alt="Duck"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" بحيرة البط " data-en="Duck Lake">Duck Lake</h3>
+                <p class="translate-text" data-ar= " ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/globalCity.jpg' %}" alt="Global CITY"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" المدينة العالمية  " data-en="Global City">Global City</h3>
+                <p class="translate-text" data-ar= " ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/alhasaaShop.jpg' %}" alt="shop"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" سوق القيصرية " data-en="Al-Qaysariyah Shop">Al-Qaysariyah Shop</h3>
+                <p class="translate-text" data-ar= " ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item cultrue ">
+            <div class="card-image"><img src="{% static 'images/village.jpg' %}" alt="Village"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" القرية التراثية " data-en="Heritage Village">Heritage Village</h3>
+                <p class="translate-text" data-ar= " ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item cultrue ">
+            <div class="card-image"><img src="{% static 'images/Qara.jpg' %}" alt="Qara"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" القارة " data-en="Qara">Qara</h3>
+                <p class="translate-text" data-ar= " ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item cultrue ">
+            <div class="card-image"><img src="{% static 'images/ibrahimVillage.jpg' %}" alt="ibrahimVillage"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" قصر ابراهيم الاثري " data-en="Ibrahim Palace Archaeological Site">Ibrahim Palace Archaeological Site</h3>
+                <p class="translate-text" data-ar= " ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item cultrue ">
+            <div class="card-image"><img src="{% static 'images/tarotCastle.jpg' %}" alt="castle"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" قلعة تاروت " data-en="Tarout Castle">Tarout Castle</h3>
+                <p class="translate-text" data-ar= " ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</main>
+
+<script>
+// وظيفة التصفية (Filtering)
+function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filter-item");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        if (x[i].className.indexOf(c) > -1) {
+            x[i].style.display = "block";
+        }
+    }
+    // تغيير شكل الزر النشط
+    var btns = document.getElementsByClassName("filter-btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("active");
+    }
+    event.currentTarget.classList.add("active");
+}
+</script>
+{% endblock %}

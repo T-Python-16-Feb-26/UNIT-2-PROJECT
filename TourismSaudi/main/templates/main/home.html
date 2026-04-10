@@ -6,11 +6,12 @@
 {% block content %}
 <main>
     <div class="video-container">
-        <video autoplay muted loop class="Big-Vid">
-            <source src="{% static 'videos/main-video.MP4' %}">
-        </video>
-        <img src="{% static 'images/Saudi-logo-rm.png' %}" class="center-image"> 
+        <img class="Big-Vid" src="{% static 'images/finalImage.jpg' %}"> 
+       <p class="center-image translate-text middle-p" data-ar=" مابين رمال الماضي ومستقبل واعد ... نفتح لكم قلوبنا " data-en=" Between the sand of the past and a promising future,
+        we open our hearts  "></p>
     </div>
+
+
 
     <section class="city-section">
         <div class="section-header">
@@ -83,13 +84,13 @@
                     </div>
                 </a>
 
-                <a href="{% url 'main:khobar_view' %}" class="city-card-link">
+                <a href="{% url 'main:eastern_view' %}" class="city-card-link">
                     <div class="city-card">
                         <div class="card-image">
                             <img src="{% static 'images/Khobar.jpg' %}" alt="khobar">
                         </div>
                         <div class="card-content">
-                            <h3 class="translate-text" data-ar="الخبر" data-en="khobar">khobar</h3>
+                            <h3 class="translate-text" data-ar="الشرقية" data-en="Eastern">Eastern</h3>
                             <p class="location translate-text" data-ar="لؤلؤة الخليج" data-en="Pearl of the Gulf">Pearl of the Gulf</p>
                         </div>
                     </div>
