@@ -1,0 +1,171 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section id="king4"> 
+        <section id="info" class="center-section">
+            <div class="container d-flex justify-content-center my-5">
+                <div class="card mb-3 king-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/king4/king4,1.jpg' %}" 
+                                 class="img-fluid rounded-start king-img" 
+                                 alt="جلالة الملك خالد">
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="pg-titl">السيرة الرسمية</h2>
+                            <div class="card-body text-end">
+                                <h5 class="card-title">الاسم الكامل:</h5>
+                                <p class="card-text">
+                                    خالد بن عبد العزيز بن عبد الرحمن آل سعود
+                                </p>
+                                <h5 class="card-title">تاريخ الميلاد:</h5>
+                                <p class="card-text">
+                                    ٦ ربيع الأول ١٣٣١ هـ / ١٣ فبراير ١٩١٣ م.
+                                </p>
+                                <h5 class="card-title">مكان الميلاد:</h5>
+                                <p class="card-text">
+                                    مدينة الرياض
+                                </p>
+                                <h5 class="card-title">النشأة:</h5>
+                                <p class="card-text">
+                                    نشأ في كنف والده الملك عبدالعزيز، وتلقى تعليمه على يد كبار العلماء. شارك في مهام سياسية وعسكرية عديدة، وعُرف بالتواضع والقرب من الشعب، بويع ملكاً في عام ١٣٩٥ هـ.
+                                </p>
+                                <p class="card-text">
+                                    <small class="date-label">تولي الحكم: ١٣٩٥ هـ</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="king4-physical" class="center-section">
+            <h2 class="pg-titl">الصفات الشكلية</h2>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'images/king4/king4,2.png' %}" class="d-block w-100" alt="الملك خالد">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/king4/king4,3.png' %}" class="d-block w-100" alt="الملك خالد">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">السابق</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">التالي</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="achievements" class="center-section">
+            <h2 class="pg-titl">أبرز إنجازات الملك خالد</h2>
+            <div class="container my-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king4/achieve1.jpg' %}" class="card-img-top rounded-top-3" alt="الاقتصاد" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">طفرة الرخاء الاقتصادي</h5>
+                                <p class="card-text">
+                                    شهد عهده زيادة كبيرة في دخل الدولة، مما انعكس على تحسين مستوى معيشة المواطنين ودعم الصناديق التنموية والعقارية.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">عهد الخير: ١٣٩٥ - ١٤٠٢ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king4/achieve2.jpg' %}" class="card-img-top rounded-top-3" alt="السياسة" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">تأسيس مجلس التعاون</h5>
+                                <p class="card-text">
+                                    ساهم بفاعلية في تأسيس مجلس التعاون لدول الخليج العربية لتعزيز الترابط والتكامل بين دول المنطقة.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">قمة أبوظبي: ١٤٠١ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king4/achieve3.jpg' %}" class="card-img-top rounded-top-3" alt="الصناعة" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">المدن الصناعية (الجبيل وينبع)</h5>
+                                <p class="card-text">
+                                    تأسيس الهيئة الملكية للجبيل وينبع، وبناء قلاع صناعية عالمية وضعت المملكة على خارطة الصناعة البتروكيماوية.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">تأسيس الهيئة: ١٣٩٥ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king4/achieve4.jpg' %}" class="card-img-top rounded-top-3" alt="التعليم" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">التوسع في التعليم العالي</h5>
+                                <p class="card-text">
+                                    افتتاح جامعة الملك فيصل بالأحساء وجامعة أم القرى بمكة، والتوسع الكبير في الابتعاث الخارجي وبناء المدارس.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">نهضة الجامعات: عهد خالد</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king4/achieve5.jpg' %}" class="card-img-top rounded-top-3" alt="النقل" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">تطوير المطارات والموانئ</h5>
+                                <p class="card-text">
+                                    افتتاح مطار الملك عبدالعزيز الدولي بجدة، وتطوير الموانئ السعودية لاستقبال أضخم السفن التجارية العالمية.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">مطار الملك عبدالعزيز: ١٤٠١ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="departure" class="center-section">
+            <h2 class="pg-titl">وفاته</h2>
+            <div class="card">
+                <div class="card-body text-end">
+                    <h5 class="card-title">وفاة الملك خالد</h5>
+                    <p class="card-text">
+                        انتقل الملك خالد بن عبدالعزيز إلى رحمة الله في مدينة الطائف، يوم الأحد ٢١ شعبان ١٤٠٢ هـ الموافق ١٣ يونيو ١٩٨٢ م. نُقل جثمانه إلى الرياض وصُلي عليه في جامع الإمام تركي بن عبدالله، ودُفن في مقبرة العود.
+                    </p>
+                    <p class="card-text">
+                        <small>التاريخ: ٢١ شعبان ١٤٠٢ هـ / ١٣ يونيو ١٩٨٢ م</small>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</main>
+{% endblock %}
