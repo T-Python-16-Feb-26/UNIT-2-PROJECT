@@ -184,10 +184,131 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="landmarks-pane" role="tabpanel" aria-labelledby="landmarks-tab">
-                <h2 class="fw-bold mb-3">Top Landmarks</h2>
-                <p class="text-muted">
-                    Explore Diriyah, Al Masmak Fortress, Kingdom Centre, and other iconic places across Riyadh.
-                </p>
+                <section class="landmarks-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Top Landmarks</span>
+                            <h2 class="fw-bold mt-3 mb-3">Riyadh’s Most Iconic Places</h2>
+                            <p class="text-muted mx-auto landmarks-intro">
+                                From the historic roots of Diriyah and Al Masmak Palace to the skyline views of Kingdom Centre,
+                                Riyadh offers a rich mix of heritage, culture, and modern attractions.
+                            </p>
+                        </div>
+
+                            <div class="row g-4">
+                                <!-- Diriyah Card -->
+                                <div class="col-12 col-xl-6">
+                                    <div class="landmark-feature-card h-100">
+                                        <div class="landmark-feature-image-wrap">
+                                            <img src="{% static 'images/Riyadh/diriyah.webp' %}" alt="Diriyah in Riyadh" class="landmark-feature-image">
+                                        </div>
+
+                                        <div class="landmark-feature-content">
+                                            <span class="landmark-tag">UNESCO Heritage</span>
+                                            <h3 class="fw-bold mb-3">Diriyah</h3>
+                                            <p class="text-muted mb-4">
+                                                Diriyah is one of the most important heritage destinations near Riyadh, known for At-Turaif and its deep connection to the origins of the Saudi state.
+                                            </p>
+
+                                            <div class="landmark-facts">
+                                                <div class="fact-box">
+                                                    <small>Known for</small>
+                                                    <strong>At-Turaif & Najdi heritage</strong>
+                                                </div>
+                                                <div class="fact-box">
+                                                    <small>Best for</small>
+                                                    <strong>History & culture</strong>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="btn btn-success mt-4 px-4">Explore Diriyah</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Boulevard Card -->
+                                <div class="col-12 col-xl-6">
+                                    <div class="landmark-feature-card h-100">
+                                        <div class="landmark-feature-image-wrap">
+                                            <img src="{% static 'images/Riyadh/Boulevard.jpg' %}" alt="Boulevard Riyadh City" class="landmark-feature-image">
+                                        </div>
+
+                                        <div class="landmark-feature-content">
+                                            <span class="landmark-tag">Entertainment Hub</span>
+                                            <h3 class="fw-bold mb-3">Boulevard Riyadh City</h3>
+                                            <p class="text-muted mb-4">
+                                                Boulevard Riyadh City is one of the capital’s best-known modern attractions, bringing together dining, events, shopping, and large-scale entertainment experiences.
+                                            </p>
+
+                                            <div class="landmark-facts">
+                                                <div class="fact-box">
+                                                    <small>Known for</small>
+                                                    <strong>Shows, dining & attractions</strong>
+                                                </div>
+                                                <div class="fact-box">
+                                                    <small>Best for</small>
+                                                    <strong>Nightlife & entertainment</strong>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="btn btn-success mt-4 px-4">Explore Boulevard</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            <!-- Card 1 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Riyadh/mosamq.jpg' %}" alt="Al Masmak Palace" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Historic Fort</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Al Masmak Palace</h4>
+                                        <p class="text-muted mb-3">
+                                            One of Riyadh’s most prominent historical landmarks and an important symbol tied to the unification of the Kingdom.
+                                        </p>
+                                        <div class="mini-info">Old Riyadh • Heritage experience</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Riyadh/National_Museum.jpg' %}" alt="National Museum of Saudi Arabia" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Culture</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">National Museum</h4>
+                                        <p class="text-muted mb-3">
+                                            A must-visit cultural stop in Riyadh for visitors who want to understand Saudi history, heritage, and civilization.
+                                        </p>
+                                        <div class="mini-info">Museums • Family friendly</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Riyadh/Kingdom_Tower.webp' %}" alt="Kingdom Centre" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Modern Icon</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Kingdom Centre</h4>
+                                        <p class="text-muted mb-3">
+                                            One of Riyadh’s most iconic modern landmarks, known for its distinctive architecture and panoramic city views.
+                                        </p>
+                                        <div class="mini-info">Sky bridge • Shopping & views</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <div class="tab-pane fade" id="experiences-pane" role="tabpanel" aria-labelledby="experiences-tab">
