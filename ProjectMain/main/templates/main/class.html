@@ -1,0 +1,68 @@
+{% extends "main/base.html" %}
+{% block title %}{{ animal_class.name }} — Saudi Wildlife{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  {# Page header #}
+  <div class="mb-4">
+    <p class="text-uppercase fw-bold small mb-1" style="color: var(--accent-gold); letter-spacing: .1em;">
+      Animal Class
+    </p>
+    <h1 class="section-heading mb-1">{{ animal_class.icon }} {{ animal_class.name }}</h1>
+    <p style="color: var(--text-muted);">{{ animal_class.description }}</p>
+  </div>
+
+  {# Interactive province map placeholder #}
+  <div class="province-map-placeholder rounded-3 mb-5 p-4 text-center">
+    <p class="mb-0" style="color: var(--text-muted);">
+      🗺️ Interactive province map — coming soon
+    </p>
+  </div>
+
+  {# Species count #}
+  <p class="mb-3" style="color: var(--text-muted);">
+    Showing <strong style="color: var(--text);">{{ species_list|length }}</strong> species
+  </p>
+
+  {# Species grid #}
+  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+    {% for species in species_list %}
+    <div class="col">
+      <div class="card species-card h-100 {% if species.slug in featured_slugs %}featured{% endif %}">
+        {% if species.slug in featured_slugs %}
+          <span class="featured-badge">⭐ Featured</span>
+        {% endif %}
+        <div class="row g-0 h-100">
+          <div class="col-5 d-flex">
+            {% if species.image %}
+              <img src="{{ species.image }}" alt="{{ species.name }}" class="species-card-img">
+            {% else %}
+              <div class="species-card-img-placeholder w-100"></div>
+            {% endif %}
+          </div>
+          <div class="col-7 d-flex flex-column">
+            <div class="card-body flex-grow-1 p-3">
+              <h5 class="card-title mb-0">{{ species.name }}</h5>
+              <p class="card-subtitle fst-italic mb-2">{{ species.scientific_name }}</p>
+              <p class="card-text">{{ species.short_description }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 p-3 pt-0">
+              <a href="{% url 'main:species_detail' species.slug %}"
+                 class="btn btn-sm btn-primary-green w-100">
+                Learn More →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+      <p style="color: var(--text-muted);">No species found in this class.</p>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}

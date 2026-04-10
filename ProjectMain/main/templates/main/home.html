@@ -1,8 +1,97 @@
- {% extends "base.html" %}
-{% block title %}Home - My Site{% endblock %}
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}101 Wildlife Species of Saudi Arabia{% endblock %}
+
+{% block nav_class %}nav-transparent{% endblock %}
+
+{% block nav_links %}
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+      Browse by Class
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="{% url 'main:class' 'mammals' %}">🦌 Mammals</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:class' 'birds' %}">🦅 Birds</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:class' 'reptiles' %}">🦎 Reptiles</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:class' 'marine' %}">🐠 Marine</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:class' 'insects' %}">🦋 Insects</a></li>
+    </ul>
+  </li>
+  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+</ul>
+{% endblock %}
 
 {% block content %}
-    <h1>Welcome to My Site!</h1>
-    <p>This is the home page. it has nothing rn</p>
-    <p>Feel free to explore and contact us if you have any questions.</p>
+
+{# ── 1. Hero ── #}
+<section class="hero-section">
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://www.ncw.gov.sa/assets/media/videos/ncw-media.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content container text-center text-white">
+    <h1 class="display-3 fw-bold mb-2">101 Wildlife Species</h1>
+    <p class="lead mb-4">of the Kingdom of Saudi Arabia</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="{% url 'main:class' 'mammals' %}" class="btn btn-gold btn-lg px-4">Explore Mammals</a>
+      <a href="{% url 'main:class' 'birds' %}" class="btn btn-outline-light btn-lg px-4">Explore Birds</a>
+    </div>
+  </div>
+</section>
+
+{# ── 2. About ── #}
+<section id="about" class="about-section py-5">
+  <div class="container py-3">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <p class="text-uppercase fw-bold small mb-1" style="color: var(--accent-gold); letter-spacing: .1em;">The Wild Kingdom</p>
+        <h2 class="section-heading mb-3">Saudi Arabia's Remarkable Biodiversity</h2>
+        <p class="mb-3">
+          From the mist-shrouded escarpments of Asir to the coral gardens of the Red Sea,
+          the Kingdom of Saudi Arabia shelters a far richer tapestry of life than most expect.
+          This catalogue brings together 101 representative species — mammals, birds, reptiles,
+          marine creatures, and insects — that call the Arabian Peninsula home.
+        </p>
+        <p class="mb-4" style="color: var(--text-muted);">
+          Ten featured species receive an in-depth spotlight, with detailed information on their
+          ecology, conservation status, and natural history.
+        </p>
+        <a href="{% url 'main:class' 'mammals' %}" class="btn btn-primary-green px-4">Start Exploring</a>
+      </div>
+      <div class="col-md-6">
+        <div class="about-img-placeholder d-flex align-items-center justify-content-center">
+          <span style="font-size: 5rem;">🦅</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── 3. Class Spotlights (first 3 classes) ── #}
+{% for animal_class in classes_list|slice:":3" %}
+<section class="spotlight-section py-5 {% if forloop.counter|divisibleby:2 %}bg-surface-alt{% endif %}">
+  <div class="container py-2">
+    <div class="row align-items-center g-5 {% if forloop.counter|divisibleby:2 %}flex-md-row-reverse{% endif %}">
+      <div class="col-md-6">
+        <p class="text-uppercase fw-bold small mb-1" style="color: var(--accent-gold); letter-spacing: .1em;">
+          {{ animal_class.name }}
+        </p>
+        <h3 class="section-heading mb-3">{{ animal_class.description }}</h3>
+        <a href="{% url 'main:class' animal_class.slug %}" class="btn btn-primary-green px-4">
+          View All {{ animal_class.name }}
+        </a>
+      </div>
+      <div class="col-md-6">
+        <div class="spotlight-img-placeholder rounded-4 d-flex align-items-center justify-content-center">
+          <span style="font-size: 5rem;">{{ animal_class.icon }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
 {% endblock %}

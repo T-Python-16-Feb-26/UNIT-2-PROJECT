@@ -1,0 +1,84 @@
+{% extends "main/base.html" %}
+{% block title %}{{ species.name }} — Saudi Wildlife{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <a href="{% url 'main:class' species.class %}" class="btn btn-sm btn-outline-secondary mb-4">
+    ← Back to {{ species.class|title }}
+  </a>
+
+  <div class="row g-5 align-items-start">
+
+    {# Image column #}
+    <div class="col-md-4">
+      {% if species.image %}
+        <img src="{{ species.image }}" alt="{{ species.name }}"
+             class="img-fluid rounded-4 w-100">
+      {% else %}
+        <div class="species-detail-img-placeholder rounded-4"></div>
+      {% endif %}
+    </div>
+
+    {# Info column #}
+    <div class="col-md-8">
+      {% if extra %}
+        <span class="badge bg-gold mb-2">⭐ Featured Species</span>
+      {% endif %}
+      <h1 class="mb-0">{{ species.name }}</h1>
+      <p class="fst-italic mb-4" style="color: var(--text-muted);">{{ species.scientific_name }}</p>
+
+      {% if extra and extra.long_description %}
+        <p class="mb-4">{{ extra.long_description }}</p>
+      {% else %}
+        <p class="mb-4">{{ species.short_description }}</p>
+      {% endif %}
+
+      {% if extra %}
+      {# Conservation & Habitat info cards #}
+      <div class="row g-3 mb-4">
+        <div class="col-sm-6">
+          <div class="info-card p-3 rounded-3">
+            <p class="small mb-0" style="color: var(--text-muted);">Conservation Status</p>
+            <strong>{{ extra.conservation_status }}</strong>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="info-card p-3 rounded-3">
+            <p class="small mb-0" style="color: var(--text-muted);">Habitat</p>
+            <strong>{{ extra.habitat }}</strong>
+          </div>
+        </div>
+      </div>
+
+      {% if extra.fun_facts %}
+      <h5 class="mb-2">Fun Facts</h5>
+      <ul class="mb-4">
+        {% for fact in extra.fun_facts %}
+        <li class="mb-1">{{ fact }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endif %}
+
+      {# Province tags #}
+      {% if species.provinces %}
+      <div class="mb-4">
+        <span class="small me-2" style="color: var(--text-muted);">Found in:</span>
+        {% for province in species.provinces %}
+          <span class="badge me-1" style="background-color: var(--surface-alt); color: var(--text);">
+            {{ province|title }}
+          </span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <a href="{{ species.wikipedia_url }}" target="_blank" rel="noopener"
+         class="btn btn-outline-gold">
+        View on Wikipedia ↗
+      </a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
