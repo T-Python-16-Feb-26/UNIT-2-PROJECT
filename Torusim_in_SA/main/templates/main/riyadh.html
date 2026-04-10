@@ -99,91 +99,141 @@
 
         <div class="tab-content city-tab-content pt-4" id="cityTabContent">
 
-            <div class="tab-pane fade show active" id="guide-pane" role="tabpanel" aria-labelledby="guide-tab">
+<div class="tab-pane fade show active" id="guide-pane" role="tabpanel" aria-labelledby="guide-tab">
+    <section class="guide-section py-4">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-badge">Complete Guide</span>
+                <h2 class="fw-bold mt-3 mb-3">Discover Riyadh</h2>
+                <p class="text-muted mx-auto guide-intro">
+                    Riyadh brings together heritage landmarks, traditional markets, cultural attractions,
+                    modern towers, and large entertainment destinations in one fast-changing capital.
+                </p>
+            </div>
 
-                <div class="container">
-                            <!-- Designed Intro Block -->
+            <div class="guide-main-card">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="guide-main-image-wrap">
+                            <img src="{% static 'images/Riyadh/Riyadh_Skyline.jpg' %}" alt="Riyadh skyline" class="guide-main-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="guide-main-content">
+                            <span class="guide-label">Capital Experience</span>
+                            <h3 class="fw-bold mb-3">A City of Heritage and Modern Energy</h3>
+                            <p class="text-muted mb-4">
+                                From Diriyah and Al Masmak to Kingdom Centre and Boulevard Riyadh City,
+                                Riyadh offers a strong mix of history, culture, shopping, dining, and skyline views.
+                            </p>
 
-                    <div class="row g-4 mb-5">
-                        <div class="guide-hero-block rounded-4 p-4 p-lg-5 mb-5">
-                            <div class="row align-items-center g-4">
-                                <div class="col-lg-7">
-                                    <span class="text-uppercase small fw-semibold text-success d-inline-block mb-2">
-                                        Complete Guide
-                                    </span>
-                                    <h2 class="fw-bold mb-3">Discover Riyadh</h2>
-                                    <p class="text-muted mb-0">
-                                    Riyadh is a city of contrast, where historic landmarks, traditional souqs, and Najdi heritage meet
-                                    modern towers, lively boulevards, and a fast-growing cultural scene. From Diriyah and Al Masmak
-                                    Fortress to Kingdom Centre and Boulevard Riyadh City, the capital offers a unique blend of history,
-                                    entertainment, and urban energy.
-                                </p>
-                                </div>
+                            <div class="guide-tags">
+                                <span>Heritage sites</span>
+                                <span>Modern skyline</span>
+                                <span>Shopping & dining</span>
+                                <span>Culture & museums</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="col-md-6 col-lg-4">
-                            <div class="guide-card h-100 p-4 rounded-4 shadow-sm">
-                                <div class="guide-icon mb-3">
-                                    <span class="material-symbols-outlined text-success" style="font-size: 2.5rem;">history_edu</span>
-                                </div>
-                                <h5 class="fw-bold mb-3">Heritage & History</h5>
-                                <p class="text-muted mb-0">
-                                    Visit Al Masmak Fortress, Diriyah, and National Museum to explore Riyadh's rich past. [web:512][web:520]
-                                </p>
-                            </div>
+            <div class="row g-4 mt-1">
+                <div class="col-md-6 col-xl-4">
+                    <div class="guide-feature-card h-100">
+                        <div class="guide-feature-icon">
+                            <span class="material-symbols-outlined">history_edu</span>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="guide-card h-100 p-4 rounded-4 shadow-sm">
-                                <div class="guide-icon mb-3">
-                                    <i class="fas fa-building text-primary" style="font-size: 2.5rem;"><span class="material-symbols-outlined">corporate_fare</span></i>
-                                </div>
-                                <h5 class="fw-bold mb-3">Modern Skyline</h5>
-                                <p class="text-muted mb-0">
-                                    Enjoy Kingdom Centre, Boulevard Riyadh City, and panoramic views of the capital. [web:499][web:502]
-                                </p>
-                            </div>
+                        <h4 class="fw-bold mb-3">Heritage & History</h4>
+                        <p class="text-muted mb-0">
+                            Visit Diriyah, Al Masmak, and the National Museum to explore the city’s historical and cultural foundations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="guide-feature-card h-100">
+                        <div class="guide-feature-icon">
+                            <span class="material-symbols-outlined">corporate_fare</span>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="guide-card h-100 p-4 rounded-4 shadow-sm">
-                                <div class="guide-icon mb-3">
-                                    <i class="fas fa-utensils text-warning" style="font-size: 2.5rem;"><span class="material-symbols-outlined">dining</span></i>
-                                </div>
-                                <h5 class="fw-bold mb-3">Dining & Shopping</h5>
-                                <p class="text-muted mb-0">
-                                    Discover Souq Al Zal, local cafés, and Riyadh's vibrant food and shopping scene.
-                                </p>
+                        <h4 class="fw-bold mb-3">Modern Skyline</h4>
+                        <p class="text-muted mb-0">
+                            Enjoy city views, iconic towers, and major leisure destinations that reflect Riyadh’s modern identity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="guide-feature-card h-100">
+                        <div class="guide-feature-icon">
+                            <span class="material-symbols-outlined">storefront</span>
+                        </div>
+                        <h4 class="fw-bold mb-3">Dining & Shopping</h4>
+                        <p class="text-muted mb-0">
+                            Discover Souq Al Zal, local cafés, major malls, and a growing food scene across the capital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-info-card mt-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold mb-4">Riyadh at a glance</h3>
+
+                        <div class="guide-facts-grid">
+                            <div class="guide-mini-box">
+                                <small>Best time</small>
+                                <strong>Nov - Mar</strong>
+                            </div>
+                            <div class="guide-mini-box">
+                                <small>Top attraction</small>
+                                <strong>Diriyah</strong>
+                            </div>
+                            <div class="guide-mini-box">
+                                <small>Must-do</small>
+                                <strong>Kingdom Centre views</strong>
+                            </div>
+                            <div class="guide-mini-box">
+                                <small>Travel style</small>
+                                <strong>Heritage + Modern</strong>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="guide-side-box">
+                            <h4 class="fw-bold mb-3">What makes Riyadh special</h4>
+                            <p class="text-muted mb-3">
+                                Riyadh stands out for the way it combines Saudi heritage, traditional souqs,
+                                museums, skyline landmarks, and large entertainment areas within one destination.
+                            </p>
 
-                        <div class="col-lg-4">
-                            <div class="quick-facts-card p-4 rounded-4 shadow-sm">
-                                <h5 class="fw-bold mb-4">Riyadh at a glance</h5>
-                                <div class="fact-item mb-3">
-                                    <span class="fact-label">Best time:</span>
-                                    <span class="fact-value">Nov - Feb</span>
+                            <div class="guide-side-points">
+                                <div class="guide-point-item">
+                                    <span class="guide-point-check">✓</span>
+                                    <p class="mb-0">Historic roots in Diriyah and Al Masmak.</p>
                                 </div>
-                                <div class="fact-item mb-3">
-                                    <span class="fact-label">Top attraction:</span>
-                                    <span class="fact-value">Diriyah</span>
+                                <div class="guide-point-item">
+                                    <span class="guide-point-check">✓</span>
+                                    <p class="mb-0">Strong museum and cultural stops for first-time visitors.</p>
                                 </div>
-                                <div class="fact-item mb-3">
-                                    <span class="fact-label">Must-do:</span>
-                                    <span class="fact-value">Kingdom Centre</span>
+                                <div class="guide-point-item">
+                                    <span class="guide-point-check">✓</span>
+                                    <p class="mb-0">A modern side with towers, boulevards, and large attractions.</p>
                                 </div>
-                                <div class="fact-item">
-                                    <span class="fact-label">Style:</span>
-                                    <span class="fact-value">Heritage + Modern</span>
+                                <div class="guide-point-item">
+                                    <span class="guide-point-check">✓</span>
+                                    <p class="mb-0">A good mix of sightseeing, shopping, and dining in one trip.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="landmarks-pane" role="tabpanel" aria-labelledby="landmarks-tab">
+        </div>
+    </section>
+</div>            <div class="tab-pane fade" id="landmarks-pane" role="tabpanel" aria-labelledby="landmarks-tab">
                 <section class="landmarks-section py-4">
                     <div class="container">
                         <div class="text-center mb-5">
@@ -319,21 +369,221 @@
             </div>
 
             <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
-                <h2 class="fw-bold mb-3">Current Events</h2>
-                <p class="text-muted">
-                    Stay updated with seasonal activities, festivals, and events taking place in Riyadh.
-                </p>
-            </div>
+                <section class="events-section py-4">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                            <div>
+                                <span class="section-badge">Current Events</span>
+                                <h2 class="fw-bold mt-3 mb-1">Events in Riyadh</h2>
+                                <p class="text-muted mb-0">
+                                    Stay updated with seasonal activities, festivals, and cultural events happening in Riyadh.
+                                </p>
+                            </div>
 
+                            {% if riyadh_event_slides|length > 1 %}
+                            <div class="mt-3 mt-md-0">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#riyadhEventsCarousel" data-bs-slide="prev">
+                                    Prev
+                                </button>
+                                <button class="btn btn-success" type="button" data-bs-target="#riyadhEventsCarousel" data-bs-slide="next">
+                                    Next
+                                </button>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div id="riyadhEventsCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                {% for slide in riyadh_event_slides %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <div class="row g-4">
+                                        {% for event in slide %}
+                                        <div class="col-md-6 col-xl-4">
+                                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
+                                                {% if event.image %}
+                                                <img src="{% static event.image %}" class="card-img-top" alt="{{ event.title }}">
+                                                {% endif %}
+                                                <div class="card-body p-4">
+                                                    <span class="badge bg-success mb-3">{{ event.category }}</span>
+                                                    <h5 class="fw-bold">{{ event.title }}</h5>
+                                                    <p class="text-muted mb-2">{{ event.date }}</p>
+                                                    <p class="mb-2">{{ event.description }}</p>
+                                                    <small class="text-success fw-semibold">{{ event.location }}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% empty %}
+                                <div class="carousel-item active">
+                                    <div class="text-center py-5">
+                                        <h5 class="fw-bold mb-2">No Riyadh events available right now</h5>
+                                        <p class="text-muted mb-0">
+                                            Please check back later for upcoming seasonal activities and city events.
+                                        </p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div class="tab-pane fade" id="tips-pane" role="tabpanel" aria-labelledby="tips-tab">
-                <h2 class="fw-bold mb-3">Travel Tips</h2>
-                <p class="text-muted">
-                    Plan the best time to visit, discover how to get around, and make the most of your trip.
-                </p>
+                <section class="travel-tips-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Travel Tips</span>
+                            <h2 class="fw-bold mt-3 mb-3">Plan Your Riyadh Visit Better</h2>
+                            <p class="text-muted mx-auto travel-tips-intro">
+                                Make the most of your time in Riyadh with practical tips on weather, transport,
+                                timing, and how to enjoy the city more comfortably.
+                            </p>
+                        </div>
+
+                        <div class="travel-tips-hero">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="travel-tips-image-wrap">
+                                        <img src="{% static 'images/Riyadh/Riyadh_Skyline.jpg' %}" alt="Travel tips for Riyadh" class="travel-tips-image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="travel-tips-hero-content">
+                                        <span class="travel-tip-label">Before You Go</span>
+                                        <h3 class="fw-bold mb-3">Useful Tips for First-Time Visitors</h3>
+                                        <p class="text-muted mb-4">
+                                            Riyadh is easiest to enjoy when you plan around the weather, choose the right transport,
+                                            and organize your day between heritage attractions, indoor stops, and evening experiences.
+                                        </p>
+
+                                        <div class="travel-tip-tags">
+                                            <span>Best season</span>
+                                            <span>Getting around</span>
+                                            <span>Daily planning</span>
+                                            <span>Comfort tips</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-1">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">wb_sunny</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Best Time to Visit</h4>
+                                    <p class="text-muted mb-0">
+                                        The most comfortable months for exploring Riyadh are usually from November to March,
+                                        when the weather is cooler and better for outdoor sightseeing.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">directions_car</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Getting Around</h4>
+                                    <p class="text-muted mb-0">
+                                        Ride-hailing apps, taxis, and the Riyadh Metro are among the most practical ways
+                                        to move around the city depending on your route and schedule.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">schedule</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Plan Your Day</h4>
+                                    <p class="text-muted mb-0">
+                                        Heritage visits and outdoor attractions are best earlier or later in the day,
+                                        while afternoons can be ideal for museums, malls, and cafés.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">travel</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Travel Comfort</h4>
+                                    <p class="text-muted mb-0">
+                                        Wear comfortable shoes, carry water, and keep a light layer for cooler evenings
+                                        during the winter season.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tips-checklist-card mt-5">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <h3 class="fw-bold mb-4">Quick visitor tips</h3>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Choose cooler months for walking tours and open-air attractions.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Use transport apps or metro options to save time across the city.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Combine heritage spots in the daytime with dining or entertainment at night.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Keep indoor attractions in mind during hotter periods of the year.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="tips-side-box">
+                                        <h4 class="fw-bold mb-3">Ideal Riyadh rhythm</h4>
+                                        <p class="text-muted mb-3">
+                                            A balanced Riyadh day often starts with cultural or heritage visits,
+                                            continues with lunch and an indoor stop, and ends with skyline views,
+                                            shopping, or evening entertainment.
+                                        </p>
+
+                                        <div class="tips-mini-grid">
+                                            <div class="mini-tip-box">
+                                                <small>Outdoor exploring</small>
+                                                <strong>Morning / Late afternoon</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Indoor attractions</small>
+                                                <strong>Midday</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Dining & leisure</small>
+                                                <strong>Evening</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Recommended stay</small>
+                                                <strong>3 to 5 days</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-
         </div>
-
     </div>
 </section>
 

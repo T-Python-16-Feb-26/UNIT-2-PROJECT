@@ -1,0 +1,670 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Jeddah | Torusim in SA{% endblock title %}
+
+{% block content %}
+
+<section class="city-slider-section">
+    <div id="cityCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/Jeddah/Jeddah_city.jpg' %}" class="d-block w-100 city-slider-img" alt="Jeddah skyline">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Jeddah</span>
+                    <h1 class="fw-bold">The Bride of the Red Sea</h1>
+                    <p>Discover a city where heritage streets, seaside views, and modern attractions come together.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/Jeddah/Al-balad.webp' %}" class="d-block w-100 city-slider-img" alt="Al-Balad in Jeddah">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Heritage</span>
+                    <h1 class="fw-bold">Al-Balad</h1>
+                    <p>Walk through Jeddah’s historic district with coral-stone houses, traditional markets, and old city charm.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/Jeddah/Jeddah_Corniche.jpg' %}" class="d-block w-100 city-slider-img" alt="Jeddah Corniche">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Coastal Escape</span>
+                    <h1 class="fw-bold">Jeddah Corniche</h1>
+                    <p>Enjoy sea views, walking paths, public art, and a relaxed Red Sea atmosphere along the coast.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/Jeddah/redsea-new.jpg' %}" class="d-block w-100 city-slider-img" alt="Red Sea view in Jeddah">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Modern City Life</span>
+                    <h1 class="fw-bold">Red Sea Evenings</h1>
+                    <p>Experience Jeddah’s lively dining, shopping, and entertainment scene after sunset.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-arrow" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#cityCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-arrow" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<section class="city-tabs-wrapper py-4">
+    <div class="container-fluid px-4 px-lg-5">
+        <ul class="nav city-tabs flex-nowrap overflow-auto" id="cityTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="guide-tab" data-bs-toggle="tab" data-bs-target="#guide-pane" type="button" role="tab">
+                    Complete Guide
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="landmarks-tab" data-bs-toggle="tab" data-bs-target="#landmarks-pane" type="button" role="tab">
+                    Top Landmarks
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="experiences-tab" data-bs-toggle="tab" data-bs-target="#experiences-pane" type="button" role="tab">
+                    Tours & Experiences
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-pane" type="button" role="tab">
+                    Current Events
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips-pane" type="button" role="tab">
+                    Travel Tips
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content city-tab-content pt-4" id="cityTabContent">
+
+            <div class="tab-pane fade show active" id="guide-pane" role="tabpanel" aria-labelledby="guide-tab">
+                <section class="guide-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Complete Guide</span>
+                            <h2 class="fw-bold mt-3 mb-3">Discover Jeddah</h2>
+                            <p class="text-muted mx-auto guide-intro">
+                                Jeddah combines UNESCO-listed heritage, Red Sea views, lively waterfront spaces,
+                                historic markets, and a modern urban lifestyle in one of Saudi Arabia’s most distinctive cities.
+                            </p>
+                        </div>
+
+                        <div class="guide-main-card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="guide-main-image-wrap">
+                                        <img src="{% static 'images/Jeddah/Jeddah_city.jpg' %}" alt="Jeddah skyline" class="guide-main-image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="guide-main-content">
+                                        <span class="guide-label">Red Sea City</span>
+                                        <h3 class="fw-bold mb-3">A Blend of Heritage and Coastal Life</h3>
+                                        <p class="text-muted mb-4">
+                                            From Al-Balad and traditional souqs to the Corniche, waterfront views,
+                                            and iconic city landmarks, Jeddah offers a balanced mix of history,
+                                            culture, leisure, and seaside atmosphere.
+                                        </p>
+
+                                        <div class="guide-tags">
+                                            <span>Historic districts</span>
+                                            <span>Red Sea coast</span>
+                                            <span>Waterfront leisure</span>
+                                            <span>Food & shopping</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-1">
+                            <div class="col-md-6 col-xl-4">
+                                <div class="guide-feature-card h-100">
+                                    <div class="guide-feature-icon">
+                                        <span class="material-symbols-outlined">history_edu</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Heritage & History</h4>
+                                    <p class="text-muted mb-0">
+                                        Visit Al-Balad, traditional markets, and heritage buildings to explore the city’s old urban character.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="guide-feature-card h-100">
+                                    <div class="guide-feature-icon">
+                                        <span class="material-symbols-outlined">beach_access</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Coastal Experience</h4>
+                                    <p class="text-muted mb-0">
+                                        Enjoy the Corniche, public art, sea views, and sunset walks along Jeddah’s Red Sea waterfront.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="guide-feature-card h-100">
+                                    <div class="guide-feature-icon">
+                                        <span class="material-symbols-outlined">restaurant</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Dining & Lifestyle</h4>
+                                    <p class="text-muted mb-0">
+                                        Discover local seafood, cafés, shopping districts, and lively evening spots across the city.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-info-card mt-5">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <h3 class="fw-bold mb-4">Jeddah at a glance</h3>
+
+                                    <div class="guide-facts-grid">
+                                        <div class="guide-mini-box">
+                                            <small>Best time</small>
+                                            <strong>Nov - Mar</strong>
+                                        </div>
+                                        <div class="guide-mini-box">
+                                            <small>Top attraction</small>
+                                            <strong>Al-Balad</strong>
+                                        </div>
+                                        <div class="guide-mini-box">
+                                            <small>Must-do</small>
+                                            <strong>Corniche sunset walk</strong>
+                                        </div>
+                                        <div class="guide-mini-box">
+                                            <small>Travel style</small>
+                                            <strong>Heritage + Coast</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="guide-side-box">
+                                        <h4 class="fw-bold mb-3">What makes Jeddah special</h4>
+                                        <p class="text-muted mb-3">
+                                            Jeddah stands out for its historic old town, Red Sea setting,
+                                            walkable waterfront, and the way heritage and modern city life
+                                            come together in one destination.
+                                        </p>
+
+                                        <div class="guide-side-points">
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">UNESCO-listed Al-Balad with hundreds of historic buildings.</p>
+                                            </div>
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">A popular Corniche known for sea views and family-friendly spaces.</p>
+                                            </div>
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">Iconic landmarks like King Fahd Fountain along the waterfront.</p>
+                                            </div>
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">A strong mix of heritage, leisure, shopping, and dining.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="landmarks-pane" role="tabpanel" aria-labelledby="landmarks-tab">
+                <section class="landmarks-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Top Landmarks</span>
+                            <h2 class="fw-bold mt-3 mb-3">Jeddah’s Most Iconic Places</h2>
+                            <p class="text-muted mx-auto landmarks-intro">
+                                From the UNESCO-listed Al-Balad to the Corniche and Red Sea attractions, Jeddah offers a unique blend of heritage, coastal scenery, and modern city life.
+                            </p>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-12 col-xl-6">
+                                <div class="landmark-feature-card h-100">
+                                    <div class="landmark-feature-image-wrap">
+                                        <img src="{% static 'images/Jeddah/Al-balad.webp' %}" alt="Al-Balad in Jeddah" class="landmark-feature-image">
+                                    </div>
+                                    <div class="landmark-feature-content">
+                                        <span class="landmark-tag">UNESCO Heritage</span>
+                                        <h3 class="fw-bold mb-3">Al-Balad</h3>
+                                        <p class="text-muted mb-4">
+                                            Jeddah’s historic district is known for its coral-stone houses, winding lanes, and traditional markets.
+                                        </p>
+                                        <div class="landmark-facts">
+                                            <div class="fact-box">
+                                                <small>Known for</small>
+                                                <strong>Historic streets & souqs</strong>
+                                            </div>
+                                            <div class="fact-box">
+                                                <small>Best for</small>
+                                                <strong>Heritage & culture</strong>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-success mt-4 px-4">Explore Al-Balad</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xl-6">
+                                <div class="landmark-feature-card h-100">
+                                    <div class="landmark-feature-image-wrap">
+                                        <img src="{% static 'images/Jeddah/Jeddah_Corniche.jpg' %}" alt="Jeddah Corniche" class="landmark-feature-image">
+                                    </div>
+                                    <div class="landmark-feature-content">
+                                        <span class="landmark-tag">Coastal Escape</span>
+                                        <h3 class="fw-bold mb-3">Jeddah Corniche</h3>
+                                        <p class="text-muted mb-4">
+                                            A lively waterfront destination with sea views, art installations, parks, and sunset walks.
+                                        </p>
+                                        <div class="landmark-facts">
+                                            <div class="fact-box">
+                                                <small>Known for</small>
+                                                <strong>Sea views & promenade</strong>
+                                            </div>
+                                            <div class="fact-box">
+                                                <small>Best for</small>
+                                                <strong>Relaxing evenings</strong>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-success mt-4 px-4">Explore Corniche</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Jeddah/redsea-new.jpg' %}" alt="Red Sea in Jeddah" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Red Sea</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Red Sea Views</h4>
+                                        <p class="text-muted mb-3">
+                                            Enjoy the coastal atmosphere, waterfront leisure, and the city’s signature seaside energy.
+                                        </p>
+                                        <div class="mini-info">Waterfront • Scenic views</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Jeddah/Nassif_House.jpg' %}" alt="Nassif House" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Historic House</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Nassif House</h4>
+                                        <p class="text-muted mb-3">
+                                            One of Jeddah’s best-known heritage homes, giving visitors a deeper look at the city’s old quarter.
+                                        </p>
+                                        <div class="mini-info">Museum • Old Jeddah</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Jeddah/King-Fahd-Fountain-Saudi.jpg' %}" alt="King Fahd Fountain" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Iconic Landmark</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">King Fahd Fountain</h4>
+                                        <p class="text-muted mb-3">
+                                            A famous Jeddah landmark that lights up the waterfront and adds to the city’s night skyline.
+                                        </p>
+                                        <div class="mini-info">Night views • City icon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="experiences-pane" role="tabpanel" aria-labelledby="experiences-tab">
+                <section class="experiences-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Tours & Experiences</span>
+                            <h2 class="fw-bold mt-3 mb-3">Ways to Experience Jeddah</h2>
+                            <p class="text-muted mx-auto experiences-intro">
+                                Discover Jeddah through heritage walks, coastal outings, shopping, and sunset experiences along the Red Sea.
+                            </p>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-12 col-lg-6">
+                                <div class="experience-highlight-card h-100">
+                                    <div class="experience-highlight-image-wrap">
+                                        <img src="{% static 'images/Jeddah/Albalad.jpg' %}" alt="Jeddah heritage experience" class="experience-highlight-image">
+                                    </div>
+                                    <div class="experience-highlight-content">
+                                        <span class="experience-badge">Heritage Journey</span>
+                                        <h3 class="fw-bold mb-3">Walk Through Historic Jeddah</h3>
+                                        <p class="text-muted mb-4">
+                                            Explore Al-Balad, traditional souqs, and old houses to experience the city’s cultural roots.
+                                        </p>
+                                        <div class="experience-points">
+                                            <div class="experience-point">UNESCO heritage district</div>
+                                            <div class="experience-point">Local markets & culture</div>
+                                            <div class="experience-point">Historic architecture</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <div class="experience-highlight-card h-100">
+                                    <div class="experience-highlight-image-wrap">
+                                        <img src="{% static 'images/Jeddah/Corniche.jpg' %}" alt="Jeddah coastal experience" class="experience-highlight-image">
+                                    </div>
+                                    <div class="experience-highlight-content">
+                                        <span class="experience-badge">Coastal Escape</span>
+                                        <h3 class="fw-bold mb-3">Enjoy the Red Sea Coast</h3>
+                                        <p class="text-muted mb-4">
+                                            Spend the day walking the Corniche, enjoying sea views, cafés, and a relaxed waterfront mood.
+                                        </p>
+                                        <div class="experience-points">
+                                            <div class="experience-point">Sunset walks</div>
+                                            <div class="experience-point">Public art & parks</div>
+                                            <div class="experience-point">Family-friendly leisure</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-1">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="experience-card h-100">
+                                    <div class="experience-icon">
+                                        <span class="material-symbols-outlined">museum</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Heritage Tours</h4>
+                                    <p class="text-muted mb-0">
+                                        Visit Al-Balad, Nassif House, and old Jeddah for a deeper historical experience.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="experience-card h-100">
+                                    <div class="experience-icon">
+                                        <span class="material-symbols-outlined">restaurant</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Food Experiences</h4>
+                                    <p class="text-muted mb-0">
+                                        Enjoy seafood, local dishes, cafés, and waterfront dining throughout the city.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="experience-card h-100">
+                                    <div class="experience-icon">
+                                        <span class="material-symbols-outlined">shopping_bag</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Shopping Spots</h4>
+                                    <p class="text-muted mb-0">
+                                        Browse traditional souqs and modern malls for souvenirs, fashion, and local finds.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="experience-card h-100">
+                                    <div class="experience-icon">
+                                        <span class="material-symbols-outlined">nightlife</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Evening Views</h4>
+                                    <p class="text-muted mb-0">
+                                        Enjoy the Corniche, King Fahd Fountain, and Jeddah’s vibrant night atmosphere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
+                <section class="events-section py-4">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                            <div>
+                                <span class="section-badge">Current Events</span>
+                                <h2 class="fw-bold mt-3 mb-1">Events in Jeddah</h2>
+                                <p class="text-muted mb-0">
+                                    Stay updated with seasonal activities, festivals, and cultural events happening in Jeddah.
+                                </p>
+                            </div>
+
+                            {% if jeddah_event_slides|length > 1 %}
+                            <div class="mt-3 mt-md-0">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#jeddahEventsCarousel" data-bs-slide="prev">
+                                    Prev
+                                </button>
+                                <button class="btn btn-success" type="button" data-bs-target="#jeddahEventsCarousel" data-bs-slide="next">
+                                    Next
+                                </button>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div id="jeddahEventsCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                {% for slide in jeddah_event_slides %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <div class="row g-4">
+                                        {% for event in slide %}
+                                        <div class="col-md-6 col-xl-4">
+                                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
+                                                {% if event.image %}
+                                                <img src="{% static event.image %}" class="card-img-top" alt="{{ event.title }}">
+                                                {% endif %}
+                                                <div class="card-body p-4">
+                                                    <span class="badge bg-success mb-3">{{ event.category }}</span>
+                                                    <h5 class="fw-bold">{{ event.title }}</h5>
+                                                    <p class="text-muted mb-2">{{ event.date }}</p>
+                                                    <p class="mb-2">{{ event.description }}</p>
+                                                    <small class="text-success fw-semibold">{{ event.location }}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% empty %}
+                                <div class="carousel-item active">
+                                    <div class="text-center py-5">
+                                        <h5 class="fw-bold mb-2">No Jeddah events available right now</h5>
+                                        <p class="text-muted mb-0">Please check back later for upcoming seasonal activities and city events.</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="tips-pane" role="tabpanel" aria-labelledby="tips-tab">
+                <section class="travel-tips-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Travel Tips</span>
+                            <h2 class="fw-bold mt-3 mb-3">Plan Your Jeddah Visit Better</h2>
+                            <p class="text-muted mx-auto travel-tips-intro">
+                                Make the most of your time in Jeddah with practical tips on weather, transport, timing, and how to enjoy the city comfortably.
+                            </p>
+                        </div>
+
+                        <div class="travel-tips-hero">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="travel-tips-image-wrap">
+                                        <img src="{% static 'images/Jeddah/Jeddah_city.jpg' %}" alt="Travel tips for Jeddah" class="travel-tips-image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="travel-tips-hero-content">
+                                        <span class="travel-tip-label">Before You Go</span>
+                                        <h3 class="fw-bold mb-3">Useful Tips for First-Time Visitors</h3>
+                                        <p class="text-muted mb-4">
+                                            Jeddah is easiest to enjoy when you plan around the weather, choose the right transport, and balance heritage visits with seaside relaxation.
+                                        </p>
+                                        <div class="travel-tip-tags">
+                                            <span>Best season</span>
+                                            <span>Getting around</span>
+                                            <span>Daily planning</span>
+                                            <span>Coastal comfort</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-1">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">wb_sunny</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Best Time to Visit</h4>
+                                    <p class="text-muted mb-0">
+                                        The most comfortable months for exploring Jeddah are usually from November to March, when the weather is cooler and better for walking outdoors.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">directions_car</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Getting Around</h4>
+                                    <p class="text-muted mb-0">
+                                        Taxis and ride-hailing apps are practical for city travel, especially when moving between the Corniche, Al-Balad, and malls.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">schedule</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Plan Your Day</h4>
+                                    <p class="text-muted mb-0">
+                                        Heritage visits are great in the morning, while the Corniche and waterfront areas are ideal later in the day and at sunset.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">travel</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Travel Comfort</h4>
+                                    <p class="text-muted mb-0">
+                                        Wear comfortable shoes, carry water, and plan some indoor breaks for midday, especially in warmer months.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tips-checklist-card mt-5">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <h3 class="fw-bold mb-4">Quick visitor tips</h3>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Choose cooler months for walking around Al-Balad and the Corniche.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Use ride-hailing or taxis to move easily between major attractions.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Plan heritage spots in the morning and seaside spots around sunset.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Keep indoor attractions in mind for hot midday hours.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="tips-side-box">
+                                        <h4 class="fw-bold mb-3">Ideal Jeddah rhythm</h4>
+                                        <p class="text-muted mb-3">
+                                            A balanced Jeddah day often starts with heritage in Al-Balad, continues with lunch or a museum stop,
+                                            and ends with a sunset walk on the Corniche or a relaxed evening by the sea.
+                                        </p>
+
+                                        <div class="tips-mini-grid">
+                                            <div class="mini-tip-box">
+                                                <small>Outdoor exploring</small>
+                                                <strong>Morning / Sunset</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Indoor attractions</small>
+                                                <strong>Midday</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Dining & leisure</small>
+                                                <strong>Evening</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Recommended stay</small>
+                                                <strong>2 to 4 days</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

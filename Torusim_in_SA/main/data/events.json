@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Passport to the World",
+    "city": "Riyadh",
+    "category": "Cultural Experience",
+    "date": "30 Mar - 10 Apr",
+    "location": "Riyadh",
+    "image": "images/passport.jpg",
+    "description": "A global cultural experience with performances, food, and immersive entertainment."
+  },
+  {
+    "id": 2,
+    "title": "AlUla Skies Festival",
+    "city": "AlUla",
+    "category": "Festival",
+    "date": "18 Apr - 27 Apr",
+    "location": "AlUla",
+    "image": "images/Alula.jpg",
+    "description": "A festival celebrating the skies through scenic, cultural, and outdoor experiences."
+  },
+  {
+    "id": 3,
+    "title": "Saudi Film Festival",
+    "city": "Dhahran",
+    "category": "Cinema",
+    "date": "17 Apr - 23 Apr",
+    "location": "Ithra, Dhahran",
+    "image": "images/film_festival.jpg",
+    "description": "An annual cinema event hosted by Ithra with films, workshops, and cultural programming."
+  },
+  {
+    "id": 4,
+    "title": "Saudi Travel Market",
+    "city": "Riyadh",
+    "category": "Tourism",
+    "date": "Upcoming",
+    "location": "Riyadh",
+    "image": "images/travel_market.jpg",
+    "description": "A key tourism and travel event connecting destinations, businesses, and travelers."
+  },
+  {
+    "id": 5,
+    "title": "Seasonal Waterfront Events",
+    "city": "Jeddah",
+    "category": "Entertainment",
+    "date": "Ongoing",
+    "location": "Jeddah Waterfront",
+    "image": "images/Jeddah_city.jpg",
+    "description": "Enjoy city events, entertainment, and family-friendly experiences along the coast."
+  },
+  {
+    "id": 6,
+    "title": "Saudi Calendar Highlights",
+    "city": "Multiple Cities",
+    "category": "Seasonal",
+    "date": "Year-round",
+    "location": "Across Saudi Arabia",
+    "image": "images/saudi_calendar.jpg",
+    "description": "Discover festivals, holiday activities, and destination-based celebrations across the Kingdom."
+  }
+]

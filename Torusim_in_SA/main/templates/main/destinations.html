@@ -24,24 +24,24 @@
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <div class="card destination-card h-100 border-0 shadow-sm rounded-4">
-                    <img src="{% static 'images/Riyadh_Skyline.jpg' %}" class="card-img-top" alt="Riyadh skyline">
+                    <img src="{% static 'images/Riyadh/Riyadh_Skyline.jpg' %}" class="card-img-top" alt="Riyadh skyline">
                     <div class="card-body p-4">
                         <h5 class="fw-bold">Riyadh</h5>
                         <p class="text-muted">Capital City</p>
                         <p class="mb-3">A dynamic capital known for modern landmarks, museums, dining, and entertainment.</p>
-                        <a href="{% url 'main:riyadh_html' %}" class="btn btn-success">Explore More</a>
+                        <a href="{% url 'main:riyadh_view' %}" class="btn btn-success">Explore More</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
                 <div class="card destination-card h-100 border-0 shadow-sm rounded-4">
-                    <img src="{% static 'images/Jeddah_city.jpg' %}" class="card-img-top" alt="Jeddah city">
+                    <img src="{% static 'images/Jeddah/Jeddah_city.jpg' %}" class="card-img-top" alt="Jeddah city">
                     <div class="card-body p-4">
                         <h5 class="fw-bold">Jeddah</h5>
                         <p class="text-muted">Red Sea Coast</p>
                         <p class="mb-3">A coastal city known for the Corniche, Al-Balad, and a vibrant cultural atmosphere.</p>
-                        <a href="#" class="btn btn-success">Explore More</a>
+                        <a href="{% url 'main:jeddah_view' %}" class="btn btn-success">Explore More</a>
                     </div>
                 </div>
             </div>

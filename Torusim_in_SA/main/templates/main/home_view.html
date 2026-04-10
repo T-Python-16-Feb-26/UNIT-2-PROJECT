@@ -25,7 +25,7 @@
                                 start your next journey with us.
                             </p>
                             <div class="d-flex justify-content-center flex-wrap gap-3">
-                                <a href="#" class="btn btn-success btn-lg px-4 py-3">Start Exploring</a>
+                                <a href="{% url 'main:destinations_view' %}" class="btn btn-success btn-lg px-4 py-3">Start Exploring</a>
                                 <a href="#" class="btn btn-outline-light btn-lg px-4 py-3">View Packages</a>
                             </div>
                         </div>
@@ -36,64 +36,85 @@
     </div>
 </section>
 
-
-<section class="featured-destinations py-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold">Featured Destinations</h2>
-        <p class="text-muted">Explore some of the most popular places in Saudi Arabia.</p>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <div class="col">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="{% static 'images/Riyadh_Skyline.jpg' %}" class="card-img-top" alt="Riyadh">
-                <div class="card-body">
-                    <h5 class="card-title">Riyadh</h5>
-                    <p class="card-text">A modern capital with culture, entertainment, and iconic landmarks.</p>
-                </div>
-            </div>
+<section class="featured-destinations home-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-badge">Top Places</span>
+            <h2 class="fw-bold mt-3">Featured Destinations</h2>
+            <p class="text-muted home-section-intro mx-auto">
+                Explore some of the most popular places in Saudi Arabia, from vibrant cities to mountain escapes and heritage landscapes.
+            </p>
         </div>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="{% static 'images/Jeddah_city.jpg' %}" class="card-img-top" alt="Jeddah">
-                <div class="card-body">
-                    <h5 class="card-title">Jeddah</h5>
-                    <p class="card-text">A coastal city known for its waterfront, history, and vibrant atmosphere.</p>
-                </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <article class="home-destination-card h-100">
+                    <div class="home-destination-image-wrap">
+                        <img src="{% static 'images/Riyadh/Riyadh_Skyline.jpg' %}" class="home-destination-image" alt="Riyadh skyline">
+                        <span class="home-card-badge">Capital</span>
+                    </div>
+                    <div class="home-destination-body">
+                        <h5 class="fw-bold mb-2">Riyadh</h5>
+                        <p class="text-muted mb-3">A modern capital with culture, entertainment, and iconic landmarks.</p>
+                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">Discover Riyadh</a>
+                    </div>
+                </article>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="{% static 'images/Alula.jpg' %}" class="card-img-top" alt="AlUla">
-                <div class="card-body">
-                    <h5 class="card-title">AlUla</h5>
-                    <p class="card-text">A breathtaking destination filled with heritage, nature, and adventure.</p>
-                </div>
+            <div class="col-md-6 col-xl-3">
+                <article class="home-destination-card h-100">
+                    <div class="home-destination-image-wrap">
+                        <img src="{% static 'images/Jeddah/Jeddah_city.jpg' %}" class="home-destination-image" alt="Jeddah waterfront">
+                        <span class="home-card-badge">Coastal City</span>
+                    </div>
+                    <div class="home-destination-body">
+                        <h5 class="fw-bold mb-2">Jeddah</h5>
+                        <p class="text-muted mb-3">A coastal city known for its waterfront, history, and vibrant atmosphere.</p>
+                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">Explore Jeddah</a>
+                    </div>
+                </article>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm border-0">
-                <img src="{% static 'images/Abha.webp' %}" class="card-img-top" alt="Abha">
-                <div class="card-body">
-                    <h5 class="card-title">Abha</h5>
-                    <p class="card-text">A mountain escape with cool weather, greenery, and scenic views.</p>
-                </div>
+            <div class="col-md-6 col-xl-3">
+                <article class="home-destination-card h-100">
+                    <div class="home-destination-image-wrap">
+                        <img src="{% static 'images/Alula.jpg' %}" class="home-destination-image" alt="AlUla landscape">
+                        <span class="home-card-badge">Heritage</span>
+                    </div>
+                    <div class="home-destination-body">
+                        <h5 class="fw-bold mb-2">AlUla</h5>
+                        <p class="text-muted mb-3">A breathtaking destination filled with heritage, nature, and adventure.</p>
+                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">Visit AlUla</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <article class="home-destination-card h-100">
+                    <div class="home-destination-image-wrap">
+                        <img src="{% static 'images/Abha.webp' %}" class="home-destination-image" alt="Abha mountains">
+                        <span class="home-card-badge">Mountain Escape</span>
+                    </div>
+                    <div class="home-destination-body">
+                        <h5 class="fw-bold mb-2">Abha</h5>
+                        <p class="text-muted mb-3">A mountain escape with cool weather, greenery, and scenic views.</p>
+                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">See Abha</a>
+                    </div>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
-<section class="current-events py-5">
+<section class="current-events home-section py-5">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
             <div>
-                <h2 class="fw-bold mb-1">Current Events</h2>
+                <span class="section-badge">Happening Now</span>
+                <h2 class="fw-bold mt-3 mb-1">Current Events</h2>
                 <p class="text-muted mb-0">See what’s happening across Saudi Arabia right now.</p>
             </div>
-            <div class="mt-3 mt-md-0">
+            <div class="mt-2 mt-md-0">
                 <button class="btn btn-outline-success me-2" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
                     Prev
                 </button>
@@ -105,119 +126,45 @@
 
         <div id="eventsCarousel" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
-
-                <div class="carousel-item active">
+                {% for slide in event_slides %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
                     <div class="row g-4">
+                        {% for event in slide %}
                         <div class="col-md-6 col-lg-4">
-                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
-                                <img src="{% static 'images/passport.jpg' %}" class="card-img-top" alt="Passport to the World event">
-                                <div class="card-body p-4">
-                                    <span class="badge bg-success mb-3">Riyadh</span>
-                                    <h5 class="fw-bold">Passport to the World</h5>
-                                    <p class="text-muted mb-2">30 Mar - 10 Apr</p>
-                                    <p class="mb-0">A global cultural experience with performances, food, and immersive entertainment.</p>
+                            <article class="event-card home-event-card h-100">
+                                <div class="home-event-image-wrap">
+                                    <img src="{% static event.image %}" class="home-event-image" alt="{{ event.title }}">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
                                 <div class="card-body p-4">
-                                    <span class="badge bg-success mb-3">AlUla</span>
-                                    <h5 class="fw-bold">AlUla Skies Festival</h5>
-                                    <p class="text-muted mb-2">18 Apr - 27 Apr</p>
-                                    <p class="mb-0">A festival celebrating the skies through scenic, cultural, and outdoor experiences.</p>
+                                    <span class="badge bg-success mb-3">{{ event.city }}</span>
+                                    <h5 class="fw-bold mb-2">{{ event.title }}</h5>
+                                    <p class="text-muted mb-2">{{ event.date }}</p>
+                                    <p class="mb-0">{{ event.description }}</p>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-
-                        <div class="col-md-6 col-lg-4 d-none d-lg-block">
-                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
-                                <div class="card-body p-4">
-                                    <span class="badge bg-success mb-3">Dhahran</span>
-                                    <h5 class="fw-bold">Saudi Film Festival</h5>
-                                    <p class="text-muted mb-2">17 Apr - 23 Apr</p>
-                                    <p class="mb-0">An annual cinema event hosted by Ithra with films, workshops, and cultural programming.</p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
-
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
-                                <div class="card-body p-4">
-                                    <span class="badge bg-success mb-3">Riyadh</span>
-                                    <h5 class="fw-bold">Saudi Travel Market</h5>
-                                    <p class="text-muted mb-2">Upcoming</p>
-                                    <p class="mb-0">A key tourism and travel event connecting destinations, businesses, and travelers.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
-                                <div class="card-body p-4">
-                                    <span class="badge bg-success mb-3">Jeddah</span>
-                                    <h5 class="fw-bold">Seasonal Waterfront Events</h5>
-                                    <p class="text-muted mb-2">Ongoing</p>
-                                    <p class="mb-0">Enjoy city events, entertainment, and family-friendly experiences along the coast.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4 d-none d-lg-block">
-                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
-                                <div class="card-body p-4">
-                                    <span class="badge bg-success mb-3">Multiple Cities</span>
-                                    <h5 class="fw-bold">Saudi Calendar Highlights</h5>
-                                    <p class="text-muted mb-2">Year-round</p>
-                                    <p class="mb-0">Discover festivals, holiday activities, and destination-based celebrations across the Kingdom.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
         </div>
     </div>
 </section>
 
-<section class="why-us py-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold">Why Travel With Us</h2>
-        <p class="text-muted">We make discovering Saudi Arabia simple and memorable.</p>
-    </div>
-
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="p-4 bg-light rounded-4 shadow-sm h-100">
-                <h5 class="fw-bold">Curated Destinations</h5>
-                <p class="mb-0">Handpicked places and experiences across Saudi Arabia.</p>
+<section class="home-cta-section py-5">
+    <div class="container">
+        <div class="home-cta-box text-center">
+            <span class="section-badge">Plan Your Journey</span>
+            <h2 class="fw-bold mt-3 mb-3">Start your next Saudi adventure</h2>
+            <p class="text-muted mx-auto home-section-intro mb-4">
+                Browse destinations, discover seasonal events, and find the right place for your next trip.
+            </p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="{% url 'main:destinations_view' %}" class="btn btn-success px-4 py-3">Explore Destinations</a>
+                <a href="#" class="btn btn-outline-success px-4 py-3">Browse Packages</a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="p-4 bg-light rounded-4 shadow-sm h-100">
-                <h5 class="fw-bold">Easy Planning</h5>
-                <p class="mb-0">Simple travel ideas, package options, and destination guidance.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="p-4 bg-light rounded-4 shadow-sm h-100">
-                <h5 class="fw-bold">Trusted Experience</h5>
-                <p class="mb-0">Designed to help visitors enjoy safe and memorable journeys.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-section py-5 text-center">
-    <div class="p-5 bg-success text-white rounded-4 shadow">
-        <h2 class="fw-bold mb-3">Ready to start your adventure?</h2>
-        <p class="mb-4">Discover destinations, plan your next trip, and experience Saudi Arabia like never before.</p>
-        <a href="#" class="btn btn-light btn-lg px-4">Book Your Trip</a>
     </div>
 </section>
 

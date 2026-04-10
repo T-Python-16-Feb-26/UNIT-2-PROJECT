@@ -19,3 +19,34 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+    (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const currentTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
+
+        document.documentElement.setAttribute("data-bs-theme", currentTheme);
+
+        window.addEventListener("DOMContentLoaded", function () {
+            const themeToggle = document.getElementById("themeToggle");
+            const themeIcon = document.getElementById("themeIcon");
+
+            function updateIcon(theme) {
+                if (!themeIcon) return;
+                themeIcon.textContent = theme === "dark" ? "light_mode" : "dark_mode";
+            }
+
+            updateIcon(currentTheme);
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", function () {
+                    const html = document.documentElement;
+                    const newTheme = html.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+                    html.setAttribute("data-bs-theme", newTheme);
+                    localStorage.setItem("theme", newTheme);
+                    updateIcon(newTheme);
+                });
+            }
+        });
+    })();
