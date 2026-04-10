@@ -1,0 +1,145 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}The Cities{% endblock %}
+
+{% block content %}
+<section class="cities-page">
+	<div class="container-fluid px-4 px-md-5 py-4 py-md-5">
+		<header class="cities-hero rounded-4 overflow-hidden mb-4 mb-md-5">
+			<div class="cities-hero-bg" role="img" aria-label="Skyline view of a major Saudi city"></div>
+			<div class="cities-hero-content text-white p-4 p-md-5">
+				<p class="cities-kicker mb-2">Chapter 4</p>
+				<h1 class="display-5 fw-semibold mb-3">The cities of Saudi Arabia</h1>
+				<p class="lead mb-0 cities-hero-copy">
+					From historic centers to futuristic skylines, Saudi cities connect heritage, opportunity, and bold urban growth.
+				</p>
+			</div>
+		</header>
+
+		<section class="mb-4 mb-md-5" aria-label="Quick facts about Saudi cities">
+			<div class="row g-3 g-md-4">
+				<div class="col-6 col-lg-3">
+					<article class="cities-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="cities-fact-label mb-2">Major Hubs</p>
+						<p class="cities-fact-value mb-1">Riyadh, Jeddah, Dammam</p>
+						<p class="cities-fact-note mb-0">These cities drive business, culture, and innovation across the kingdom.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="cities-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="cities-fact-label mb-2">Urban Expansion</p>
+						<p class="cities-fact-value mb-1">Fast-Paced</p>
+						<p class="cities-fact-note mb-0">New districts, metros, and public spaces are reshaping daily life.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="cities-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="cities-fact-label mb-2">Economic Power</p>
+						<p class="cities-fact-value mb-1">Diverse Sectors</p>
+						<p class="cities-fact-note mb-0">Cities support finance, tourism, technology, logistics, and industry.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="cities-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="cities-fact-label mb-2">Quality of Life</p>
+						<p class="cities-fact-value mb-1">Parks and Culture</p>
+						<p class="cities-fact-note mb-0">Events, museums, and green spaces are central to modern city living.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="cities-regions-title">
+			<div class="d-flex align-items-center justify-content-between mb-3">
+				<h2 id="cities-regions-title" class="h3 mb-0">City Life Across the Kingdom</h2>
+			</div>
+
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="cities-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Riyadh: Capital Momentum</h3>
+						<p class="mb-0">A fast-growing capital where business districts, culture, and innovation meet.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="cities-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Jeddah: Coastal Culture</h3>
+						<p class="mb-0">Historic neighborhoods and seaside life give Jeddah its unique rhythm.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="cities-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Dammam: Eastern Gateway</h3>
+						<p class="mb-0">Linked to industry and ports, Dammam supports trade and regional connectivity.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="cities-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">AlUla and Beyond</h3>
+						<p class="mb-0">Emerging destinations blend heritage tourism with sustainable development.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="cities-spotlight rounded-4 overflow-hidden mb-4 mb-md-5" aria-label="City spotlight">
+			<div class="row g-0">
+				<div class="col-12 col-lg-6">
+					<div class="cities-spotlight-image" role="img" aria-label="Modern skyline of Riyadh at sunset"></div>
+				</div>
+				<div class="col-12 col-lg-6 d-flex align-items-center">
+					<div class="p-4 p-md-5">
+						<p class="cities-kicker mb-2">Spotlight</p>
+						<h2 class="h3 mb-3">Cities Shaping Vision 2030</h2>
+						<p class="mb-0">
+							Saudi cities are investing in transport, culture, and innovation to build vibrant, connected communities for the future.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="cities-gallery-title">
+			<h2 id="cities-gallery-title" class="h3 mb-3">City Scenes Across Saudi Arabia</h2>
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-4">
+					<figure class="cities-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="cities-gallery-image cities-gallery-image-one" role="img" aria-label="Riyadh skyline with modern high-rise towers"></div>
+						<figcaption class="p-3">Riyadh stands as the kingdom's dynamic capital, where landmark towers and new districts shape modern city life.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="cities-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="cities-gallery-image cities-gallery-image-two" role="img" aria-label="NEOM city development with futuristic architecture"></div>
+						<figcaption class="p-3">NEOM reflects Saudi Arabia's future vision through smart planning, clean technologies, and bold urban design.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="cities-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="cities-gallery-image cities-gallery-image-three" role="img" aria-label="Makkah city view with surrounding mountains"></div>
+						<figcaption class="p-3">Makkah remains a spiritual center for Muslims worldwide, welcoming millions of visitors every year.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="cities-closing text-center rounded-4 p-4 p-md-5">
+			<h2 class="h3 mb-3">Growing Cities, Shared Future</h2>
+			<p class="mb-4 mx-auto cities-closing-copy">
+				From historic streets to smart neighborhoods, Saudi cities continue to connect people, preserve heritage, and inspire future generations.
+			</p>
+			<div class="d-flex flex-wrap justify-content-center gap-2">
+				<a class="btn btn-outline-success px-4" href="{% url 'main:land_view' %}">Chapter 1: Land</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:people_view' %}">Chapter 2: People</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:traditions_view' %}">Chapter 3: Traditions</a>
+				<a class="btn btn-success px-4" href="{% url 'main:royal_family_view' %}">Chapter 5: Royal Family</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:future_view' %}">Chapter 6: Future</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:legacy_view' %}">Chapter 7: Legacy</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:celebrations_view' %}">Chapter 8: Celebrations</a>
+				<a class="btn btn-outline-dark px-4" href="{% url 'main:home_view' %}">Back Home</a>
+			</div>
+		</section>
+	</div>
+</section>
+{% endblock %}

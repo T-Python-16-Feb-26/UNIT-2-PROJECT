@@ -713,3 +713,367 @@ footer {
 /* ================================================
 ***************** The Cities PAGE *****************
 =================================================*/
+
+.cities-page {
+    --cities-sand: #efe2c8;
+    --cities-ink: #1f2a37;
+    --cities-palm: #0f6a45;
+    --cities-gold: #b68a2e;
+    --cities-card: #fffdfa;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(182, 138, 46, 0.14), transparent 35%),
+        radial-gradient(circle at 90% 18%, rgba(15, 106, 69, 0.1), transparent 30%),
+        linear-gradient(180deg, #f7f2e8 0%, #f3ecdf 45%, #f8f5ef 100%);
+    color: var(--cities-ink);
+}
+
+.cities-hero {
+    position: relative;
+    min-height: 420px;
+    border: 1px solid rgba(182, 138, 46, 0.25);
+    box-shadow: 0 1.25rem 2rem rgba(31, 42, 55, 0.13);
+}
+
+.cities-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(110deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.28) 52%, rgba(20, 30, 36, 0.18)),
+        url("../images/cities-images/cities-main.webp");
+    background-size: cover;
+    background-position: center 65%;
+    transform: scale(1.03);
+}
+
+.cities-hero-content {
+    position: relative;
+    max-width: 760px;
+}
+
+.cities-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--cities-sand);
+}
+
+.cities-hero-copy {
+    max-width: 62ch;
+}
+
+.cities-fact-card {
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.95), rgba(239, 226, 200, 0.55));
+    border: 1px solid rgba(182, 138, 46, 0.24);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.08);
+}
+
+.cities-fact-label {
+    color: #5d4d2d;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.cities-fact-value {
+    color: #1f2a37;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cities-fact-note {
+    color: #3b4d5f;
+    font-size: 0.94rem;
+}
+
+.cities-region-card {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: var(--cities-card);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.cities-region-card h3 {
+    color: var(--cities-palm);
+}
+
+.cities-region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(31, 42, 55, 0.11);
+}
+
+.cities-spotlight {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: #fffaf0;
+    box-shadow: 0 1rem 1.6rem rgba(31, 42, 55, 0.08);
+}
+
+.cities-spotlight-image {
+    min-height: 320px;
+    background-image:
+        linear-gradient(rgba(24, 32, 38, 0.2), rgba(24, 32, 38, 0.2)),
+        url("../images/cities-images/KAFD.jpg");
+    background-size: cover;
+    background-position: center 50%;
+}
+
+.cities-gallery-card {
+    background: #ffffff;
+    border: 1px solid rgba(31, 42, 55, 0.1);
+    box-shadow: 0 0.8rem 1.4rem rgba(31, 42, 55, 0.08);
+}
+
+.cities-gallery-image {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.28s ease;
+}
+
+.cities-gallery-card:hover .cities-gallery-image {
+    transform: scale(1.04);
+}
+
+.cities-gallery-image-one {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/cities-images/Riyadh.jpg");
+        background-position: center 100%;
+}
+
+.cities-gallery-image-two {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.28), rgba(20, 30, 36, 0.28)),
+        url("../images/cities-images/neom.webp");
+    background-position: center 30%;
+}
+
+.cities-gallery-image-three {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/cities-images/Makkah.jpg");
+    background-position: center 40%;
+}
+
+.cities-gallery-card figcaption {
+    color: #2d3e4e;
+    font-size: 0.95rem;
+}
+
+.cities-closing {
+    background: linear-gradient(160deg, rgba(15, 106, 69, 0.12), rgba(182, 138, 46, 0.18));
+    border: 1px solid rgba(15, 106, 69, 0.24);
+}
+
+.cities-closing h2 {
+    color: #183c2d;
+}
+
+.cities-closing-copy {
+    max-width: 64ch;
+}
+
+@media (max-width: 767.98px) {
+    .cities-hero {
+        min-height: 360px;
+    }
+
+    .cities-hero-bg {
+        background-image:
+            linear-gradient(160deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.4)),
+            url("../images/cities-images/cities-main.webp");
+    }
+
+    .cities-spotlight-image {
+        min-height: 240px;
+    }
+
+    .cities-gallery-image {
+        height: 190px;
+    }
+}
+
+/* ================================================
+************** The Royal Family PAGE **************
+=================================================*/
+
+.royal-family-page {
+    --royal-family-sand: #efe2c8;
+    --royal-family-ink: #1f2a37;
+    --royal-family-palm: #0f6a45;
+    --royal-family-gold: #b68a2e;
+    --royal-family-card: #fffdfa;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(182, 138, 46, 0.14), transparent 35%),
+        radial-gradient(circle at 90% 18%, rgba(15, 106, 69, 0.1), transparent 30%),
+        linear-gradient(180deg, #f7f2e8 0%, #f3ecdf 45%, #f8f5ef 100%);
+    color: var(--royal-family-ink);
+}
+
+.royal-family-hero {
+    position: relative;
+    min-height: 420px;
+    border: 1px solid rgba(182, 138, 46, 0.25);
+    box-shadow: 0 1.25rem 2rem rgba(31, 42, 55, 0.13);
+}
+
+.royal-family-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(180deg, rgba(166, 169, 167, 0.78), rgba(32, 48, 57, 0.28) 52%, rgba(20, 30, 36, 0.18)),
+        url("../images/royal-family-images/rf-1.png");
+    background-size: cover;
+    background-position: center 20%;
+    transform: scale(1.03);
+}
+
+.royal-family-hero-content {
+    position: relative;
+    max-width: 760px;
+}
+
+.royal-family-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--royal-family-sand);
+}
+
+.royal-family-hero-copy {
+    max-width: 62ch;
+}
+
+.royal-family-fact-card {
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.95), rgba(239, 226, 200, 0.55));
+    border: 1px solid rgba(182, 138, 46, 0.24);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.08);
+}
+
+.royal-family-fact-label {
+    color: #5d4d2d;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.royal-family-fact-value {
+    color: #1f2a37;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.royal-family-fact-note {
+    color: #3b4d5f;
+    font-size: 0.94rem;
+}
+
+.royal-family-region-card {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: var(--royal-family-card);
+    box-shadow: 0 0.6rem 1.2rem rgba(31, 42, 55, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.royal-family-region-card h3 {
+    color: var(--royal-family-palm);
+}
+
+.royal-family-region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(31, 42, 55, 0.11);
+}
+
+.royal-family-spotlight {
+    border: 1px solid rgba(31, 42, 55, 0.12);
+    background: #fffaf0;
+    box-shadow: 0 1rem 1.6rem rgba(31, 42, 55, 0.08);
+}
+
+.royal-family-spotlight-image {
+    min-height: 320px;
+    background-image:
+        linear-gradient(rgba(24, 32, 38, 0.2), rgba(24, 32, 38, 0.2)),
+        url("../images/royal-family-images/vision.jpg");
+    background-size: cover;
+    background-position: center 50%;
+}
+
+.royal-family-gallery-card {
+    background: #ffffff;
+    border: 1px solid rgba(31, 42, 55, 0.1);
+    box-shadow: 0 0.8rem 1.4rem rgba(31, 42, 55, 0.08);
+}
+
+.royal-family-gallery-image {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.28s ease;
+}
+
+.royal-family-gallery-card:hover .royal-family-gallery-image {
+    transform: scale(1.04);
+}
+
+.royal-family-gallery-image-one {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/royal-family-images/rf-2.jpg");
+        background-position: center 100%;
+}
+
+.royal-family-gallery-image-two {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.28), rgba(20, 30, 36, 0.28)),
+        url("../images/royal-family-images/rf-3.avif");
+    background-position: center 30%;
+}
+
+.royal-family-gallery-image-three {
+    background-image:
+        linear-gradient(rgba(20, 30, 36, 0.22), rgba(20, 30, 36, 0.22)),
+        url("../images/royal-family-images/rf-4.avif");
+    background-position: center 40%;
+}
+
+.royal-family-gallery-card figcaption {
+    color: #2d3e4e;
+    font-size: 0.95rem;
+}
+
+.royal-family-closing {
+    background: linear-gradient(160deg, rgba(15, 106, 69, 0.12), rgba(182, 138, 46, 0.18));
+    border: 1px solid rgba(15, 106, 69, 0.24);
+}
+
+.royal-family-closing h2 {
+    color: #183c2d;
+}
+
+.royal-family-closing-copy {
+    max-width: 64ch;
+}
+
+@media (max-width: 767.98px) {
+    .royal-family-hero {
+        min-height: 360px;
+    }
+
+    .royal-family-hero-bg {
+        background-image:
+            linear-gradient(160deg, rgba(20, 30, 36, 0.78), rgba(20, 30, 36, 0.4)),
+            url("../images/royal-family-images/rf-1.png");
+    }
+
+    .royal-family-spotlight-image {
+        min-height: 240px;
+    }
+
+    .royal-family-gallery-image {
+        height: 190px;
+    }
+}

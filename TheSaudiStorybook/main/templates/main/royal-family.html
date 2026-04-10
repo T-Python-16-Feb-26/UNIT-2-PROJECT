@@ -1,0 +1,145 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}The Royal Family{% endblock %}
+
+{% block content %}
+<section class="royal-family-page">
+	<div class="container-fluid px-4 px-md-5 py-4 py-md-5">
+		<header class="royal-family-hero rounded-4 overflow-hidden mb-4 mb-md-5">
+			<div class="royal-family-hero-bg" role="img" aria-label="Portrait-style image representing Saudi royal leadership"></div>
+			<div class="royal-family-hero-content text-white p-4 p-md-5">
+				<p class="royal-family-kicker mb-2">Chapter 5</p>
+				<h1 class="display-5 fw-semibold mb-3">The Saudi Royal Family</h1>
+				<p class="lead mb-0 royal-family-hero-copy">
+					The royal family has guided Saudi Arabia through nation-building, modernization, and a long-term vision for future generations.
+				</p>
+			</div>
+		</header>
+
+		<section class="mb-4 mb-md-5" aria-label="Quick facts about Saudi royal leadership">
+			<div class="row g-3 g-md-4">
+				<div class="col-6 col-lg-3">
+					<article class="royal-family-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="royal-family-fact-label mb-2">Founding Legacy</p>
+						<p class="royal-family-fact-value mb-1">King Abdulaziz</p>
+						<p class="royal-family-fact-note mb-0">The founder unified the kingdom and established the modern Saudi state in 1932.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="royal-family-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="royal-family-fact-label mb-2">Continuity</p>
+						<p class="royal-family-fact-value mb-1">Stable Leadership</p>
+						<p class="royal-family-fact-note mb-0">Successive leaders have focused on unity, development, and public service.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="royal-family-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="royal-family-fact-label mb-2">National Development</p>
+						<p class="royal-family-fact-value mb-1">Diverse Sectors</p>
+						<p class="royal-family-fact-note mb-0">Leadership supports economic diversification, education, infrastructure, and innovation.</p>
+					</article>
+				</div>
+				<div class="col-6 col-lg-3">
+					<article class="royal-family-fact-card h-100 p-3 p-md-4 rounded-4">
+						<p class="royal-family-fact-label mb-2">Global Presence</p>
+						<p class="royal-family-fact-value mb-1">Regional Influence</p>
+						<p class="royal-family-fact-note mb-0">Saudi leadership plays a major role in diplomacy, humanitarian efforts, and global cooperation.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="royal-family-regions-title">
+			<div class="d-flex align-items-center justify-content-between mb-3">
+				<h2 id="royal-family-regions-title" class="h3 mb-0">Leadership Across Eras</h2>
+			</div>
+
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="royal-family-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Foundation and Unity</h3>
+						<p class="mb-0">From unification to state-building, the early era established national identity and institutions.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="royal-family-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Service to Society</h3>
+						<p class="mb-0">Public welfare, healthcare, education, and infrastructure remain central priorities.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="royal-family-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Economic Transformation</h3>
+						<p class="mb-0">Leadership has expanded opportunities through industry, tourism, technology, and entrepreneurship.</p>
+					</article>
+				</div>
+				<div class="col-12 col-md-6 col-xl-3">
+					<article class="royal-family-region-card h-100 rounded-4 p-4">
+						<h3 class="h5 mb-2">Future Vision</h3>
+						<p class="mb-0">Vision 2030 advances sustainability, innovation, and a globally connected Saudi Arabia.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="royal-family-spotlight rounded-4 overflow-hidden mb-4 mb-md-5" aria-label="Royal family spotlight">
+			<div class="row g-0">
+				<div class="col-12 col-lg-6">
+					<div class="royal-family-spotlight-image" role="img" aria-label="Saudi royal family symbolism and national heritage"></div>
+				</div>
+				<div class="col-12 col-lg-6 d-flex align-items-center">
+					<div class="p-4 p-md-5">
+						<p class="royal-family-kicker mb-2">Spotlight</p>
+						<h2 class="h3 mb-3">Royal Leadership and Vision 2030</h2>
+						<p class="mb-0">
+							Under royal leadership, Vision 2030 promotes national growth, stronger institutions, and new opportunities for citizens.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-4 mb-md-5" aria-labelledby="royal-family-gallery-title">
+			<h2 id="royal-family-gallery-title" class="h3 mb-3">Moments in Royal History</h2>
+			<div class="row g-3 g-md-4">
+				<div class="col-12 col-md-4">
+					<figure class="royal-family-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="royal-family-gallery-image royal-family-gallery-image-one" role="img" aria-label="Historic moment from the founding era"></div>
+						<figcaption class="p-3">The founding era reflects determination, unity, and the beginning of modern Saudi Arabia.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="royal-family-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="royal-family-gallery-image royal-family-gallery-image-two" role="img" aria-label="Ceremonial royal gathering"></div>
+						<figcaption class="p-3">Royal ceremonies and public events represent continuity, service, and national solidarity.</figcaption>
+					</figure>
+				</div>
+				<div class="col-12 col-md-4">
+					<figure class="royal-family-gallery-card rounded-4 overflow-hidden m-0">
+						<div class="royal-family-gallery-image royal-family-gallery-image-three" role="img" aria-label="Modern leadership and future-focused development"></div>
+						<figcaption class="p-3">Today's leadership connects heritage with innovation to prepare the kingdom for the decades ahead.</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="royal-family-closing text-center rounded-4 p-4 p-md-5">
+			<h2 class="h3 mb-3">Heritage, Leadership, and Future</h2>
+			<p class="mb-4 mx-auto royal-family-closing-copy">
+				The story of the Saudi royal family is one of continuity and renewal, linking the kingdom's heritage with its ambitions for a stronger future.
+			</p>
+			<div class="d-flex flex-wrap justify-content-center gap-2">
+				<a class="btn btn-outline-success px-4" href="{% url 'main:land_view' %}">Chapter 1: Land</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:people_view' %}">Chapter 2: People</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:traditions_view' %}">Chapter 3: Traditions</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:cities_view' %}">Chapter 4: Cities</a>
+				<a class="btn btn-success px-4" href="{% url 'main:future_view' %}">Chapter 6: Future</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:legacy_view' %}">Chapter 7: Legacy</a>
+				<a class="btn btn-outline-success px-4" href="{% url 'main:celebrations_view' %}">Chapter 8: Celebrations</a>
+				<a class="btn btn-outline-dark px-4" href="{% url 'main:home_view' %}">Back Home</a>
+			</div>
+		</section>
+	</div>
+</section>
+{% endblock %}
