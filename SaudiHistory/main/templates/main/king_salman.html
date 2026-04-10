@@ -1,0 +1,171 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section id="king7"> 
+        <section id="info" class="center-section">
+            <div class="container d-flex justify-content-center my-5">
+                <div class="card mb-3 king-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/king7/king7,1.jpg' %}" 
+                                 class="img-fluid rounded-start king-img" 
+                                 alt="خادم الحرمين الشريفين الملك سلمان">
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="pg-titl">السيرة الرسمية</h2>
+                            <div class="card-body text-end">
+                                <h5 class="card-title">الاسم الكامل:</h5>
+                                <p class="card-text">
+                                    سلمان بن عبد العزيز بن عبد الرحمن آل سعود
+                                </p>
+                                <h5 class="card-title">تاريخ الميلاد:</h5>
+                                <p class="card-text">
+                                    ٥ شوال ١٣٥٤ هـ / ٣١ ديسمبر ١٩٣٥ م.
+                                </p>
+                                <h5 class="card-title">مكان الميلاد:</h5>
+                                <p class="card-text">
+                                    مدينة الرياض
+                                </p>
+                                <h5 class="card-title">النشأة:</h5>
+                                <p class="card-text">
+                                    تلقى تعليمه المبكر في مدرسة الأمراء بالرياض، وختم القرآن كاملاً وهو في سن العاشرة. تولى إمارة منطقة الرياض لأكثر من خمسة عقود، مما منحه خبرة إدارية وسياسية واسعة، بويع ملكاً في عام ١٤٣٦ هـ.
+                                </p>
+                                <p class="card-text">
+                                    <small class="date-label">تولي الحكم: ١٤٣٦ هـ</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="king7-physical" class="center-section">
+            <h2 class="pg-titl">الصفات الشكلية</h2>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'images/king7/king7,2.png' %}" class="d-block w-100" alt="الملك سلمان">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/king7/king7,3.png' %}" class="d-block w-100" alt="الملك سلمان">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">السابق</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">التالي</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="achievements" class="center-section">
+            <h2 class="pg-titl">أبرز إنجازات الملك سلمان</h2>
+            <div class="container my-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king7/achieve1.jpg' %}" class="card-img-top rounded-top-3" alt="رؤية المملكة" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">إطلاق رؤية ٢٠٣٠</h5>
+                                <p class="card-text">
+                                    تدشين رؤية المملكة ٢٠٣٠ بقيادة سمو ولي العهد، لإعادة هيكلة الاقتصاد وتنويع مصادر الدخل وبناء مستقبل مستدام.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">إطلاق الرؤية: ١٤٣٧ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king7/achieve2.jpg' %}" class="card-img-top rounded-top-3" alt="العمل الإنساني" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">مركز الملك سلمان للإغاثة</h5>
+                                <p class="card-text">
+                                    تأسيس مركز الملك سلمان للإغاثة والأعمال الإنسانية ليكون الواجهة العالمية للمملكة في تقديم الدعم والمساعدات للدول المنكوبة.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">تأسيس المركز: ١٤٣٦ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king7/achieve3.jpg' %}" class="card-img-top rounded-top-3" alt="التراث" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">تطوير الدرعية والقديّية</h5>
+                                <p class="card-text">
+                                    إطلاق مشاريع عملاقة للحفاظ على التراث الوطني كبوابة الدرعية، وتدشين مشاريع ترفيهية ورياضية كبرى كمدينة القدية.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">مشاريع كبرى: عهد سلمان</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king7/achieve4.jpg' %}" class="card-img-top rounded-top-3" alt="المرأة" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">تمكين المرأة السعودية</h5>
+                                <p class="card-text">
+                                    إصدار قرارات تاريخية لتمكين المرأة، منها السماح بقيادة السيارة، وتعزيز مشاركتها في سوق العمل وفي المناصب القيادية العليا.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">قرار القيادة: ١٤٣٩ هـ</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                            <img src="{% static 'images/king7/achieve5.jpg' %}" class="card-img-top rounded-top-3" alt="الرقمنة" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-end">
+                                <h5 class="card-title fw-bold">التحول الرقمي الحكومي</h5>
+                                <p class="card-text">
+                                    تحقيق قفزة نوعية في الخدمات الرقمية والأتمتة الحكومية، مما جعل المملكة تتصدر المؤشرات العالمية في التحول الرقمي.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <small class="text-secondary">نهضة تقنية: عهد سلمان</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="departure" class="center-section">
+            <h2 class="pg-titl">رؤية المستقبل</h2>
+            <div class="card">
+                <div class="card-body text-end">
+                    <h5 class="card-title">حفظ الله خادم الحرمين</h5>
+                    <p class="card-text">
+                        يستمر عهد الملك سلمان بن عبدالعزيز في كتابة فصول جديدة من المجد للمملكة العربية السعودية، مع تركيز دائم على بناء المواطن، وتطوير المكان، وتعزيز مكانة المملكة الرائدة في قلب العالم الإسلامي والعالم أجمع.
+                    </p>
+                    <p class="card-text">
+                        <small>بويع ملكاً في: ٣ ربيع الآخر ١٤٣٦ هـ</small>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</main>
+{% endblock %}

@@ -13,6 +13,38 @@
 }
 
 :root {
+    /* ألوان النصوص */
+    --color-title: #FFFFFF;          /* لون العنوان: أبيض ناصع للبروز */
+    --color-text-main: #F4F4F4;      /* لون النصوص الأساسية: أبيض مكسور مريح للعين */
+    --color-accent-gold: #E2C165;    /* لون التميز (روابط/أيقونات): ذهبي ملكي فاتح */
+    
+    /* ألوان التكست بوكس (صناديق المحتوى) */
+    --bg-textbox: rgba(48, 25, 52, 0.7); /* أرجواني عميق شفاف ليتناغم مع الخلفية */
+    --border-textbox: rgba(226, 193, 101, 0.3); /* حدود نحيفة جداً بلون ذهبي شفاف */
+    --shadow-textbox: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* ظلال لتعطي عمق للصندوق */
+    
+    /* لون الخطوط التوضيحية أو الفواصل */
+    --color-divider: rgba(226, 193, 101, 0.5); 
+}
+
+
+
+.text-box {
+    background: var(--bg-textbox);
+    border: 1px solid var(--border-textbox);
+    backdrop-filter: blur(8px); /* تأثير الضبابية خلف الصندوق ليعطي لمسة فخمة */
+    border-radius: 15px; /* حواف ناعمة */
+    padding: 20px;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-textbox);
+}
+
+.nav-link:hover {
+    color: var(--color-accent-gold);
+    transition: 0.3s;
+}
+
+:root {
     --back-color: #fcd18d; 
     --text-color: #451c0a; 
     --title-color: #712d0a;
@@ -79,7 +111,7 @@ button {
 }
 
 button:hover {
-  background:  rgba(192, 192, 192, 0.4);
+  background:  var(--color-divider);
   box-shadow: 0 0 30px 5px  rgba(192, 192, 192, 0.4);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -380,13 +412,12 @@ a{
 .text-box
 {
     padding: 20px 30px;
-    background-color: var(--box-color);
+    background-color: var(--bg-textbox);
     color: var(--title-color1);
     font-family: var(--font-body);
     text-align: center;
-    border: 1px solid rgba(192, 192, 192, 0.4);
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.2), 
-                0 5px 15px rgba(0, 0, 0, 0.3);
+    border: var(--border-textbox);
+    box-shadow: var(--shadow-textbox);
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -431,7 +462,7 @@ a{
     position: absolute;
     width: 6px;
     height: 100%;
-    background: #ffffff;
+    background: var(--color-divider);
     top: 0;
     /* نستخدم left: 50% مع margin-left بالسالب لضمان التوسط الحسابي */
     left: 50%;
@@ -624,4 +655,73 @@ a{
         margin: 30px 5% 30px 5%;
     }
 }
+
+/* حاوية التمرير العرضي */
+.stories-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scrollbar-width: thin; /* للمتصفحات الحديثة */
+    scrollbar-color: var(--color-accent-gold) transparent;
+    scroll-behavior: smooth;
+}
+
+/* تخصيص شكل الـ Scrollbar للمتصفحات مثل Chrome */
+.stories-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+.stories-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--color-accent-gold);
+    border-radius: 10px;
+}
+
+/* تصميم كارد القصة */
+.story-card {
+    min-width: 300px;
+    max-width: 300px;
+    background: var(--bg-textbox); /* الأرجواني الشفاف */
+    border: 1px solid var(--border-textbox);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-textbox);
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent-gold);
+}
+
+/* أيقونة الاقتباس */
+.story-icon {
+    font-size: 50px;
+    color: var(--color-accent-gold);
+    opacity: 0.3;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-family: serif;
+}
+
+.story-text {
+    color: var(--color-text-main);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.story-author {
+    color: var(--color-accent-gold);
+    font-weight: 600;
+    text-align: left; /* لجعل الاسم في جهة والقصة في جهة */
+    font-size: 0.9rem;
+}
+
+
+
+
 /* king page styling end */
