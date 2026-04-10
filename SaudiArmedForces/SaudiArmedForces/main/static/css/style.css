@@ -5,11 +5,7 @@
     box-sizing: border-box;
 }
 
-body,
-main,
-section {
-    background-color: white !important;
-}
+
 
 body {
     display: flex;
@@ -142,7 +138,7 @@ main {
     transform: translateY(0);
 }
 
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -168,7 +164,7 @@ main {
 }
 
 
-/* =====footer start===== */
+/* *********************************** footer start ***********************************/
 .footer {
     background: #29504D;
     color: #ddd;
@@ -186,7 +182,7 @@ main {
     align-items: center;
 }
 
-/* left */
+/* left icons */
 .footer-left h3 {
     color: #fff;
     margin-bottom: 8px;
@@ -198,7 +194,7 @@ main {
     max-width: 400px;
 }
 
-/* right (icons) */
+/* right icons */
 .socials {
     display: flex;
     align-items: center;
@@ -220,13 +216,12 @@ main {
     transition: 0.3s;
 }
 
-
 .socials i:hover {
     background: #fff;
     color: #000;
 }
 
-/* ===== Back to Top Button ===== */
+/*  Back to Top Button */
 .back-to-top {
     position: absolute;
     bottom: 15px;
@@ -249,7 +244,7 @@ main {
     color: #fff;
 }
 
-/* ===== Responsive ===== */
+/*  Responsive  */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -262,5 +257,554 @@ main {
     }
 }
 
-/* end footer */
-/* ========================================================================================================================*/
+/* *********************************** footer end ****************************************/
+
+/* *********************************** home page start ***********************************/
+/* video slider Start */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 120px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #F0F4F6;
+}
+
+.slider-wrapper {
+    background-color: #F0F4F6;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.video-card {
+    background: #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.video-wrapper video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.nav-btn.prev {
+    right: 10px;
+}
+
+.nav-btn.next {
+    left: 10px;
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #333;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #333;
+    transform: scale(1.2);
+}
+
+/* video slider end */
+
+/* military system section start */
+.military-system-section {
+    width: 100%;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #f5f5f5, #eeeeee);
+    overflow: hidden;
+}
+
+.military-system-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.military-system-image {
+    position: relative;
+}
+
+.military-system-image img {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+    object-fit: cover;
+}
+
+.military-system-content {
+    color: #1b1b1b;
+}
+
+.military-system-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #111;
+}
+
+.military-system-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 28px;
+    max-width: 560px;
+}
+
+.system-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #111;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.35s ease;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.system-btn:hover {
+    background: #2b2b2b;
+    transform: translateY(-3px);
+}
+
+/* Animation  */
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: all 0.9s ease;
+}
+
+.reveal-left {
+    transform: translateX(-70px);
+}
+
+.reveal-right {
+    transform: translateX(70px);
+}
+
+.reveal-section.is-visible .reveal-left,
+.reveal-section.is-visible .reveal-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* responsive */
+@media (max-width: 992px) {
+    .military-system-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .military-system-image img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .military-system-content p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .military-system-content h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 576px) {
+    .military-system-section {
+        padding: 70px 16px;
+    }
+
+    .military-system-content h2 {
+        font-size: 28px;
+    }
+
+    .military-system-content p {
+        font-size: 14px;
+    }
+
+    .system-btn {
+        width: 100%;
+    }
+}
+
+/* military system section end */
+
+/* forces start */
+.forces-showcase {
+    width: 100%;
+    padding: 100px 20px 120px;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 1)), #f5f5f5;
+    overflow: hidden;
+}
+
+.forces-header {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.forces-header h2 {
+    font-size: 40px;
+    color: #151515;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.forces-header p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.forces-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+}
+
+.main-circle {
+    width: 35000px;
+    height: 350px;
+}
+
+.forces-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    flex-wrap: wrap;
+}
+
+.force-circle {
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: #fff;
+    border: 6px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10),
+        0 3px 10px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+    cursor: pointer;
+}
+
+.force-circle.main-circle {
+    width: 230px;
+    height: 230px;
+}
+
+.force-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.force-circle:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 24px 40px rgba(0, 0, 0, 0.16),
+        0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.force-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.force-overlay span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.force-circle:hover .force-overlay {
+    opacity: 1;
+}
+
+.force-circle::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -120%;
+    width: 60%;
+    height: 140%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: rotate(18deg);
+    transition: left 0.7s ease;
+    z-index: 2;
+}
+
+.force-circle:hover::before {
+    left: 140%;
+}
+
+/* animations */
+.reveal-up,
+.reveal-drop,
+.reveal-rise {
+    opacity: 0;
+    transition:
+        transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-up {
+    transform: translateY(40px);
+}
+
+.reveal-drop {
+    transform: translateY(-80px) scale(0.9);
+}
+
+.reveal-rise {
+    transform: translateY(60px) scale(0.92);
+}
+
+.reveal-up.is-visible,
+.reveal-drop.is-visible,
+.reveal-rise.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.main-circle.reveal-drop {
+    transition-delay: 0.2s;
+}
+
+.forces-row .reveal-rise:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+.forces-row .reveal-rise:nth-child(2),
+.forces-row .reveal-rise:nth-child(4) {
+    transition-delay: 1.2s;
+}
+
+.forces-row .reveal-rise:nth-child(1),
+.forces-row .reveal-rise:nth-child(5) {
+    transition-delay: 1.7s;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .forces-showcase {
+        padding: 80px 16px 100px;
+    }
+
+    .forces-header h2 {
+        font-size: 28px;
+    }
+
+    .forces-header p {
+        font-size: 14px;
+    }
+
+    .main-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .force-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .forces-row {
+        gap: 20px;
+    }
+
+    .force-overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.08));
+    }
+
+    .force-overlay span {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
+/* forces end */
+
+/* tech start */
+.tech-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #08131c, #0b1f2e);
+}
+
+.tech-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.tech-header p {
+    color: #b0c4d4;
+    margin-bottom: 50px;
+}
+
+.tech-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tech-card {
+    width: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #101922;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+}
+
+.tech-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tech-card:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    padding: 22px 20px 24px;
+    background: #101922;
+    color: white;
+    min-height: 150px;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 0.95rem;
+    color: #d2d8de;
+    line-height: 1.7;
+}
+
+.tech-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.tech-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* tech end */
+/* ********************* home end ***************************** */
+
+/* ******************************* Military System Page **************************** */
