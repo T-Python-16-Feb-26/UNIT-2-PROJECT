@@ -16,3 +16,7 @@ def clothing_view(request:HttpRequest):
 def foods_view(request:HttpRequest):
 
     return render(request,'main/foods.html')  
+
+def game_view(request:HttpRequest):
+
+    return render(request,'main/game.html')
