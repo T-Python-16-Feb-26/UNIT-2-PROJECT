@@ -1,0 +1,214 @@
+{% extends 'tourism/base.html' %}
+{% load static %}
+{% block title %}Makkah - Saudi Tourism{% endblock %}
+{% block body_class %}{% endblock %}
+{% block content %}
+<div class="slider">
+    <div class="balls-icon">
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <!-- Repeat -->
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+    </div>
+
+    <!-- title  -->
+    <div class="slider-header">
+        <h1>مكة المكرمة</h1>
+    </div>
+
+    <div class="slides">
+        <!-- Kaaba -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/kaaba.png' %}" alt="Kaaba">
+            <h3> الكعبة المشرفة</h3>
+        </div>
+        <!-- Jabal_al-Nour -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/jabal_alnour.png' %}" alt="jabal_alnour">
+            <h3> جبل النور</h3>
+        </div>
+        <!-- Abraj_AlBait -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/abraj_albait.png' %}" alt="abraj_albait">
+            <h3>برج الساعة </h3>
+        </div>
+        <!-- Mina -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/mina.png' %}" alt="mina">
+            <h3>منى</h3>
+        </div>
+        <!-- Mount_Arafat  -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/mount_arafat.png' %}" alt="arafat">
+            <h3> جبل عرافات</h3>
+        </div>
+        <!-- Muzdalifah -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/muzdalifah.png' %}" alt="muzdalifah">
+            <h3>مزدلفة</h3>
+        </div>
+        <!-- Two more cities -->
+        <!-- Kaaba -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/kaaba.png' %}" alt="Kaaba">
+            <h3> الكعبة المشرفة</h3>
+        </div>
+        <!-- Jabal_al-Nour -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/jabal_alnour.png' %}" alt="jabal_alnour">
+            <h3> جبل النور</h3>
+        </div>
+        <!-- Abraj_AlBait -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/abraj_albait.png' %}" alt="abraj_albait">
+            <h3>برج الساعة </h3>
+        </div>
+        <!-- Mina -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/mina.png' %}" alt="mina">
+            <h3>منى</h3>
+        </div>
+        <!-- Mount_Arafat  -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/mount_arafat.png' %}" alt="arafat">
+            <h3> جبل عرافات</h3>
+        </div>
+        <!-- Muzdalifah -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/makkah/muzdalifah.png' %}" alt="muzdalifah">
+            <h3>مزدلفة</h3>
+        </div>
+    </div>
+</div>
+
+<div class="home-content">
+    <img src="{% static 'images_and_videos/makkah/makkah.png' %}" alt="Makkah" class="riyadh-img">
+    <div class="intro-saudi">
+        <h2 class="title-saudi">مكة المكرمة</h2>
+        <p dir="rtl">مكة المكرمة مدينةٌ مقدسة تحتضن أقدس بقاع الأرض، وتتميّز بمكانتها الدينية العظيمة في قلوب المسلمين حول العالم. تضم المسجد
+        الحرام والكعبة المشرفة، ويقصدها ملايين الزوار سنويًا لأداء الحج والعمرة. كما تجمع مكة بين عبق التاريخ وروحانية المكان،
+        وبين التطور العمراني الحديث الذي يسهم في راحة الزائرين وخدمتهم، لتبقى رمزًا للإيمان والسلام ووحدة المسلمين.</p>
+    </div>
+</div>
+</div>
+<!-- Riyadh Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز المعالم في مكة المكرمة</h2>
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- Kaaba -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/makkah/kaaba.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">الكعبة المشرفة</h5>
+                    <p class="card-text">الكعبة هي قبلة المسلمين ورمز التوحيد، وتقع في قلب المسجد الحرام. يقصدها الحجاج والمعتمرون للطواف حولها، وتمثل مكانة
+                    روحية عظيمة في قلوب المسلمين، إذ ترتبط بتاريخ الأنبياء وبناء سيدنا إبراهيم وابنه إسماعيل عليهما السلام.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abraj_AlBait -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/makkah/abraj_albait.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">برج الساعة</h5>
+                    <p class="card-text">تُعد الدرعية من أهم المعالم التاريخية في الرياض، حيث تمثل مهد الدولة السعودمن أبرز المعالم العمرانية الحديثة في مكة. تطل على الحرم المكي، وتضم فنادق ومرافق وخدمات للزوار، إضافة إلى ساعة مكة
+                    الشهيرة التي تُعد من أكبر الساعات في العالم، ما جعلها رمزًا بصريًا حديثًا للمدينة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jabal_AlNour -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/makkah/jabal_alnour.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جبل النور</h5>
+                    <p class="card-text">من أشهر المواقع التاريخية في مكة، ويقع شمال شرق المدينة. اشتهر باحتضانه غار حراء، حيث كان النبي ﷺ يتعبد قبل البعثة، وفيه
+                    نزل الوحي لأول مرة. لذلك يعدّ من أكثر الأماكن روحانيةً وتاريخًا للزوار.</p>
+                </div>
+            </div>
+        </div>
+        <!-- MIna -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/makkah/mIna.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> منى</h5>
+                    <p class="card-text">تُعد منى من أهم المشاعر المقدسة، وتقع بين مكة المكرمة ومزدلفة. تُعرف بمدينة الخيام البيضاء، حيث يقيم الحجاج فيها خلال
+                    أيام التشريق، ويؤدون فيها شعائر رمي الجمرات. وتمثل منى محطة روحانية عظيمة تجتمع فيها مشاعر الطمأنينة والتقرب إلى الله.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Muzdalifah -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/makkah/muzdalifah.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">مزدلفة</h5>
+                    <p class="card-text">مشعر مقدس يقع بين منى وعرفات، ويبيت فيه الحجاج بعد النفرة من عرفات في ليلة العاشر من ذي الحجة. تتميز مزدلفة بأجوائها
+                    الإيمانية الهادئة، حيث يجمع الحجاج الحصى استعدادًا لرمي الجمرات، وتُجسد لحظات من السكينة والتأمل والخشوع.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Mount Arafat -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/makkah/mount_arafat.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جبل عرفات</h5>
+                    <p class="card-text">هو من أعظم المشاعر المقدسة، ويقف عليه الحجاج في يوم عرفة، الركن الأعظم من الحج. ويُعرف بجبل الرحمة، حيث يقف الملايين في
+                    مشهد إيماني مهيب للدعاء والتضرع، ما يجعل عرفات رمزًا للرحمة والمغفرة ووحدة المسلمين.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Makkah History -->
+<div class="card text-bg-dark" dir="rtl">
+    <img src="{% static 'images_and_videos/makkah/makkah-bg.png' %}" class="card-img" alt="makkah-bg">
+    <div class="card-img-overlay">
+        <h5 class="card-title">تاريخ مكة المكرمة</h5>
+        <p class="card-text">مكة المكرمة من أعرق مدن العالم وأقدسها مكانة، إذ يمتد تاريخها لآلاف السنين، وكانت منذ القدم مركزًا دينيًا وتجاريًا مهمًا
+        في شبه الجزيرة العربية. ارتبطت مكة بقصة بناء الكعبة المشرفة على يد النبي إبراهيم وابنه إسماعيل عليهما السلام، لتصبح
+        قبلةً للمسلمين ومهوى أفئدتهم. كما شهدت مكة مولد النبي محمد ﷺ وبداية نزول الوحي، مما منحها مكانة تاريخية وروحية فريدة.
+        وعلى مر العصور، حافظت مكة على قدسيتها ومكانتها، وشهدت تطورًا عمرانيًا كبيرًا مع الحفاظ على إرثها الإسلامي العريق.</p>
+        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
+    </div>
+</div>
+<!-- Makkah Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز الفعاليات في مكة المكرمة</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4" dir="rtl">
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/makkah/museum.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية</h5>
+                    <p class="card-text">يُعد من أبرز الوجهات الثقافية في مكة المكرمة، حيث يقدم تجربة تفاعلية حديثة تأخذ الزائر في رحلة ثرية عبر سيرة النبي محمد
+                    ﷺ والحضارة الإسلامية. يضم المتحف أكثر من 30 قسماً و200 عرض تفاعلي بعدة لغات، تشمل مجسمات رقمية، شاشات بانورامية، وتقنيات
+                    واقع افتراضي، مما يجعل الزيارة تجربة تعليمية وروحانية مميزة تجمع بين المعرفة والإبهار البصري. يقع المتحف في أبراج الساعة
+                    بالقرب من المسجد الحرام، ويُعد وجهة مناسبة للعائلات والزوار الراغبين في استكشاف التاريخ الإسلامي بأسلوب عصري.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يقع المتحف في أبراج الساعة بالقرب من المسجد الحرام</small>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

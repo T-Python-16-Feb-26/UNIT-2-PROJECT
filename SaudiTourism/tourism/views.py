@@ -8,3 +8,6 @@ def home_view(request: HttpRequest):
 
 def riyadh_view(request:HttpRequest,):
     return render (request, 'tourism/riyadh_page.html')
+
+def makkah_view(request:HttpRequest,):
+    return render (request, 'tourism/makkah_page.html')

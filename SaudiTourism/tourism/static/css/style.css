@@ -13,12 +13,7 @@ body{
     background-repeat: no-repeat; */
     /* background: linear-gradient(-45deg, #0b5d3b, #0f2f22, #145a32, #081c15); */
     /* background: linear-gradient(135deg, #0b3d2e 0%, #145a32 25%, #1f7a4c 50%, #d4af37 75%, #f4e4a6 100%); */
-    background: linear-gradient(135deg,
-                #faf8f2,
-                #f1f8f4,
-                #e6f4ec,
-                #f3ead2,
-                #fffaf0);
+    background: linear-gradient(135deg,#faf8f2, #f1f8f4, #e6f4ec,#f3ead2, #fffaf0);
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
 }
@@ -31,6 +26,38 @@ body{
         transform: translateX(-50%);
     }
 }
+/* nav  */
+.custom-navbar {
+    background: rgba(0, 0, 0,0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: white !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.custom-navbar .nav-link:hover {
+    color:#0b5d3b !important;
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* End nav  */
 /* home page slider */
 /* slider */
 .slider{
@@ -109,7 +136,12 @@ body{
     z-index: 2;
     
 }
-.slider-header h1{
+.slider-header .home-title {
+    font-size: 100px;
+    margin-bottom: 10px;
+    /* font-family: 'Amiri', sans-serif; */
+}
+.slider-header h1 {
     font-size: 60px;
     margin-bottom: 10px;
     /* font-family: 'Amiri', sans-serif; */
