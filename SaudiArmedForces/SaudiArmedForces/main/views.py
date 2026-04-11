@@ -34,3 +34,6 @@ def military_system_view(request : HttpRequest):
 def heroes_view(request : HttpRequest):
     return render(request,"main/heroes.html")
 
+
+def technology_view(request : HttpRequest):
+    return render(request,"main/technology.html")
