@@ -18,7 +18,7 @@
 .section-title::after{
     content: "";
     display: block;
-  
+    margin: 1px auto 0;
     width: 70px;
     height: 3px;
     background-color: #3fa37c;
@@ -33,7 +33,6 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
     transition: 0.5s ease-in-out;
 }
 
@@ -49,7 +48,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom ,rgba(0,176,155,0.5), rgba(150,201,61,0.5));
+    background: linear-gradient(to bottom ,rgba(221, 158, 21, 0.5), rgba(201, 159, 61, 0.5));
     z-index: 2;
     transition: 0.5s all;
     opacity: 0;

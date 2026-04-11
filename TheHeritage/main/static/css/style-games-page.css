@@ -41,3 +41,19 @@
   transform: scale(1.08) rotate(-1deg);
 }
 
+@media (max-width: 750px) {
+
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .game-content h2 {
+        font-size: 14px;
+    }
+
+    .game-content p {
+        font-size: 11px;
+    }
+}

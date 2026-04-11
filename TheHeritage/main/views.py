@@ -20,3 +20,7 @@ def foods_view(request:HttpRequest):
 def game_view(request:HttpRequest):
 
     return render(request,'main/game.html')
+
+def handicrafts_view(request:HttpRequest):
+
+    return render(request, 'main/handicrafts.html')
