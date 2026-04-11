@@ -1,0 +1,609 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'main/css/focus.css' %}">
+{% endblock %}
+
+{% block title %}محاور التركيز — برنامج خدمة ضيوف الرحمن{% endblock %}
+
+{% block content %}
+
+<!--  HERO  -->
+<section class="focus-hero">
+
+  <div class="focus-hero-overlay"></div>
+
+  <div class="focus-hero-shapes" aria-hidden="true">
+    <span class="focus-shape focus-shape-1"></span>
+    <span class="focus-shape focus-shape-2"></span>
+    <span class="focus-shape focus-shape-3"></span>
+    <span class="focus-shape focus-shape-4"></span>
+    <span class="focus-shape focus-shape-5"></span>
+  </div>
+
+  <!-- Animated orbit rings -->
+  <div class="focus-orbits" aria-hidden="true">
+    <span class="focus-orbit focus-orbit-1"></span>
+    <span class="focus-orbit focus-orbit-2"></span>
+    <span class="focus-orbit focus-orbit-3"></span>
+  </div>
+
+  <div class="focus-hero-content">
+    <div class="container">
+
+      <p class="focus-hero-eyebrow">١.د | نطاق البرنامج</p>
+
+      <h1 class="focus-hero-title">
+        محاور تركيز<br>
+        <span class="focus-hero-accent">البرنامج</span>
+      </h1>
+
+      <div class="focus-hero-divider"></div>
+
+      <p class="focus-hero-sub">
+        رحلة ضيف الرحمن كاملة — من الفكرة إلى الذكرى<br class="d-none d-md-inline">
+        ومنظومة الخدمات المرتبطة بها
+      </p>
+
+      <!-- Three goal anchors -->
+      <div class="focus-hero-anchors">
+        <a href="#focus-goals"   class="focus-anchor-chip">تكامل الأهداف</a>
+        <a href="#focus-journey" class="focus-anchor-chip">رحلة ضيف الرحمن</a>
+        <a href="#focus-system"  class="focus-anchor-chip">عناصر المنظومة</a>
+        <a href="#focus-groups"  class="focus-anchor-chip">الفئات المستفيدة</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="focus-hero-scroll">
+    <div class="focus-scroll-line"></div>
+    <span class="focus-scroll-label">تمرير</span>
+  </div>
+
+</section>
+
+
+<!--  GOALS INTEGRATION  -->
+<section class="focus-goals-section" id="focus-goals">
+
+  <div class="focus-goals-bg-shape" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <div class="focus-section-header">
+      <span class="focus-eyebrow">تكامل الأهداف</span>
+      <h2 class="focus-section-title">محاور تركيز البرنامج</h2>
+      <div class="focus-ornament" aria-hidden="true">
+        <span class="focus-orn-line"></span>
+        <span class="focus-orn-diamond"></span>
+        <span class="focus-orn-line focus-orn-line--rev"></span>
+      </div>
+      <p class="focus-section-intro">
+        يتمحور تركيز البرنامج حول ثلاثة أهداف رئيسة تتكامل معاً؛ لتُسهم في تحقيق تجربة
+        روحانية ثرية وسلسة للحجاج والمعتمرين في رحلتهم كاملة، وعكس الصورة المشرّفة
+        والحضارية للمملكة في خدمة الحرمين الشريفين وضيوف الرحمن.
+      </p>
+      <p class="focus-section-note">
+        وترتبط هذه الأهداف ارتباطاً وثيقاً برحلة ضيف الرحمن باختلاف مراحلها، التي
+        تتقاطع نقاط الاتصال فيها مع قطاعات متعددة؛ لتمثل عناصر منظومة خدمة ضيوف الرحمن.
+      </p>
+    </div>
+
+    <!-- Three goal cards in a triangle arrangement -->
+    <div class="focus-goals-cluster">
+
+      <!-- Central connecting node -->
+      <div class="focus-cluster-center" aria-hidden="true">
+        <div class="focus-cluster-node">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 3" opacity=".4"/>
+            <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="24" cy="24" r="3"  fill="currentColor" opacity=".7"/>
+          </svg>
+        </div>
+        <div class="focus-cluster-lines" aria-hidden="true">
+          <span class="focus-cl focus-cl-1"></span>
+          <span class="focus-cl focus-cl-2"></span>
+          <span class="focus-cl focus-cl-3"></span>
+        </div>
+      </div>
+
+      <div class="focus-goal-card focus-goal-card--1 js-reveal" style="--i:0">
+        <div class="focus-goal-num">١</div>
+        <div class="focus-goal-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="24" cy="24" r="7"  stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+            <path d="M24 10 L24 38 M10 24 L38 24"
+                  stroke="currentColor" stroke-width="1" opacity=".3"/>
+            <path d="M14 14 L34 34 M34 14 L14 34"
+                  stroke="currentColor" stroke-width=".8" opacity=".2" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <h3 class="focus-goal-title">تيسير استضافة المزيد من المعتمرين</h3>
+        <div class="focus-goal-audience">
+          <span class="focus-aud-dot"></span>
+          المعتمرون من خارج المملكة
+        </div>
+        <div class="focus-goal-ref">١.٢.١</div>
+      </div>
+
+      <div class="focus-goal-card focus-goal-card--2 js-reveal" style="--i:1">
+        <div class="focus-goal-num">٢</div>
+        <div class="focus-goal-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M8 36 L16 22 L24 28 L32 14 L40 20"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="40" cy="20" r="3" fill="currentColor" opacity=".6"/>
+            <path d="M8 40 L40 40" stroke="currentColor" stroke-width="1" opacity=".3"/>
+            <circle cx="16" cy="22" r="2" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+            <circle cx="24" cy="28" r="2" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+            <circle cx="32" cy="14" r="2" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 class="focus-goal-title">تقديم خدمات ذات جودة عالية</h3>
+        <div class="focus-goal-audience">
+          <span class="focus-aud-dot"></span>
+          الحجاج والمعتمرون والزائرون من داخل وخارج المملكة
+        </div>
+        <div class="focus-goal-ref">٢.٢.١</div>
+      </div>
+
+      <div class="focus-goal-card focus-goal-card--3 js-reveal" style="--i:2">
+        <div class="focus-goal-num">٣</div>
+        <div class="focus-goal-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 6 L28 16 L38 16 L30 23 L33 34 L24 28 L15 34 L18 23 L10 16 L20 16 Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width=".8"
+                    stroke-dasharray="3 4" opacity=".25"/>
+          </svg>
+        </div>
+        <h3 class="focus-goal-title">إثراء التجربة الدينية والثقافية</h3>
+        <div class="focus-goal-audience">
+          <span class="focus-aud-dot"></span>
+          المجتمع المحلي — القطاع الخاص
+        </div>
+        <div class="focus-goal-ref">٣.٢.١</div>
+      </div>
+
+    </div><!-- /focus-goals-cluster -->
+
+  </div>
+</section>
+
+
+<!--  JOURNEY TIMELINE  -->
+<section class="focus-journey-section" id="focus-journey">
+
+  <div class="focus-journey-shapes" aria-hidden="true">
+    <span class="focus-jshape focus-jshape-1"></span>
+    <span class="focus-jshape focus-jshape-2"></span>
+  </div>
+
+  <div class="container">
+
+    <div class="focus-section-header focus-section-header--light">
+      <span class="focus-eyebrow focus-eyebrow--light">المسار الكامل</span>
+      <h2 class="focus-section-title focus-section-title--light">رحلة ضيف الرحمن</h2>
+      <div class="focus-ornament focus-ornament--light" aria-hidden="true">
+        <span class="focus-orn-line"></span>
+        <span class="focus-orn-diamond"></span>
+        <span class="focus-orn-line focus-orn-line--rev"></span>
+      </div>
+      <p class="focus-section-intro focus-section-intro--light">
+        من الفكرة إلى الذكرى — سبع مراحل متكاملة ترسم رحلة ضيف الرحمن كاملة
+      </p>
+    </div>
+
+    <!-- Timeline track -->
+    <div class="focus-timeline" role="list">
+
+      <!-- Horizontal connecting rail -->
+      <div class="focus-timeline-rail" aria-hidden="true">
+        <div class="focus-rail-line"></div>
+        <div class="focus-rail-progress js-rail-progress"></div>
+      </div>
+
+      <!-- Stage 1 -->
+      <div class="focus-stage js-reveal" style="--i:0" role="listitem">
+        <div class="focus-stage-node focus-stage-node--first">
+          <span class="focus-stage-num">١</span>
+        </div>
+        <div class="focus-stage-card focus-stage-card--first">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5"/>
+              <ellipse cx="20" cy="20" rx="6" ry="12" stroke="currentColor" stroke-width="1" opacity=".5"/>
+              <line x1="8" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1" opacity=".4"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">ما قبل الوصول</h3>
+          <p class="focus-stage-desc">التخطيط، التأشيرة، الحجز</p>
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="focus-stage js-reveal" style="--i:1" role="listitem">
+        <div class="focus-stage-node focus-stage-node--first">
+          <span class="focus-stage-num">٢</span>
+        </div>
+        <div class="focus-stage-card focus-stage-card--first">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M6 24 C12 10 24 8 34 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M28 12 L34 16 L30 22" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="4" y1="30" x2="36" y2="30" stroke="currentColor" stroke-width="1.2" opacity=".35"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">القدوم والمغادرة</h3>
+          <p class="focus-stage-desc">المطارات والمنافذ</p>
+        </div>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="focus-stage js-reveal" style="--i:2" role="listitem">
+        <div class="focus-stage-node focus-stage-node--ritual">
+          <span class="focus-stage-num">٣</span>
+        </div>
+        <div class="focus-stage-card focus-stage-card--ritual">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="18" width="32" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="11" cy="30" r="3.5" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="29" cy="30" r="3.5" stroke="currentColor" stroke-width="1.4"/>
+              <rect x="8" y="12" width="24" height="8" rx="2" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">التنقل</h3>
+          <p class="focus-stage-desc">بين المدن والمواقع</p>
+        </div>
+      </div>
+
+      <!-- Stage 4 -->
+      <div class="focus-stage focus-stage--center js-reveal" style="--i:3" role="listitem">
+        <div class="focus-stage-node focus-stage-node--ritual focus-stage-node--highlight">
+          <span class="focus-stage-num">٤</span>
+          <div class="focus-stage-pulse" aria-hidden="true"></div>
+        </div>
+        <div class="focus-stage-card focus-stage-card--ritual focus-stage-card--highlight">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="10" y="18" width="20" height="18" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M15 18 L15 14 C15 10 25 10 25 14 L25 18" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="20" cy="8" r="3.5" stroke="currentColor" stroke-width="1.4"/>
+              <rect x="16" y="24" width="8" height="12" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">الحرمان والمشاعر</h3>
+          <p class="focus-stage-desc">أداء النسك</p>
+          <div class="focus-stage-highlight-badge">قلب الرحلة</div>
+        </div>
+      </div>
+
+      <!-- Stage 5 -->
+      <div class="focus-stage js-reveal" style="--i:4" role="listitem">
+        <div class="focus-stage-node focus-stage-node--ritual">
+          <span class="focus-stage-num">٥</span>
+        </div>
+        <div class="focus-stage-card focus-stage-card--ritual">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 6 C20 6 8 14 8 24 C8 31 13.4 36 20 36 C26.6 36 32 31 32 24 C32 14 20 6 20 6Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M14 22 C16 20 18 19 20 20 C22 21 24 20 26 18"
+                    stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".55"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">الصحة والأمن</h3>
+          <p class="focus-stage-desc">السلامة والطمأنينة</p>
+        </div>
+      </div>
+
+      <!-- Stage 6 -->
+      <div class="focus-stage js-reveal" style="--i:5" role="listitem">
+        <div class="focus-stage-node focus-stage-node--enrich">
+          <span class="focus-stage-num">٦</span>
+        </div>
+        <div class="focus-stage-card focus-stage-card--enrich">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="6" y="14" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 16 L20 6 L37 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="22" width="12" height="12" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">الضيافة</h3>
+          <p class="focus-stage-desc">الإقامة والإعاشة</p>
+        </div>
+      </div>
+
+      <!-- Stage 7 -->
+      <div class="focus-stage js-reveal" style="--i:6" role="listitem">
+        <div class="focus-stage-node focus-stage-node--enrich">
+          <span class="focus-stage-num">٧</span>
+        </div>
+        <div class="focus-stage-card focus-stage-card--enrich">
+          <div class="focus-stage-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M6 34 L6 20 L20 10 L34 20 L34 34 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <rect x="14" y="22" width="12" height="12" rx="1" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="20" cy="7" r="2.5" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <h3 class="focus-stage-title">اكتشاف المملكة</h3>
+          <p class="focus-stage-desc">المواقع والفعاليات</p>
+        </div>
+      </div>
+
+    </div><!-- /focus-timeline -->
+
+    <!-- Phase legend -->
+    <div class="focus-phase-legend js-reveal" style="--i:7">
+      <div class="focus-legend-item">
+        <span class="focus-legend-dot focus-legend-dot--first"></span>
+        <span>الانطباع الأول — المراحل ١ – ٢</span>
+      </div>
+      <div class="focus-legend-item">
+        <span class="focus-legend-dot focus-legend-dot--ritual"></span>
+        <span>أداء النسك — المراحل ٣ – ٥</span>
+      </div>
+      <div class="focus-legend-item">
+        <span class="focus-legend-dot focus-legend-dot--enrich"></span>
+        <span>إثراء التجربة — المراحل ٦ – ٧</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!--  SYSTEM ELEMENTS  -->
+<section class="focus-system-section" id="focus-system">
+
+  <div class="container">
+
+    <div class="focus-section-header">
+      <span class="focus-eyebrow">منظومة الخدمات</span>
+      <h2 class="focus-section-title">عناصر المنظومة</h2>
+      <div class="focus-ornament" aria-hidden="true">
+        <span class="focus-orn-line"></span>
+        <span class="focus-orn-diamond"></span>
+        <span class="focus-orn-line focus-orn-line--rev"></span>
+      </div>
+      <p class="focus-section-intro">
+        منظومة خدمة ضيوف الرحمن — ثلاث طبقات متكاملة تدعم الرحلة في كل مراحلها
+      </p>
+    </div>
+
+    <div class="focus-system-stack">
+
+      <!-- Layer 1-->
+      <div class="focus-layer focus-layer--supply js-reveal" style="--i:0">
+        <div class="focus-layer-label">
+          <div class="focus-layer-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="10" width="24" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M2 12 L16 4 L30 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="12" y="18" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="focus-layer-cat">العرض</div>
+            <div class="focus-layer-name">الخدمات</div>
+          </div>
+        </div>
+        <div class="focus-layer-chips">
+          <span class="focus-chip focus-chip--supply">خدمات الطيران</span>
+          <span class="focus-chip focus-chip--supply">خدمات السياحة</span>
+          <span class="focus-chip focus-chip--supply">خدمات السكن</span>
+          <span class="focus-chip focus-chip--supply">خدمات النقل</span>
+          <span class="focus-chip focus-chip--supply">خدمات الاتصالات</span>
+          <span class="focus-chip focus-chip--supply">الإعاشة والتجزئة</span>
+        </div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div class="focus-layer focus-layer--infra js-reveal" style="--i:1">
+        <div class="focus-layer-label">
+          <div class="focus-layer-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="2"  y="22" width="8"  height="8"  rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="12" y="14" width="8"  height="16" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="22" y="6"  width="8"  height="24" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 20 L16 12 L26 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 2" opacity=".5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="focus-layer-cat">البنية التحتية</div>
+            <div class="focus-layer-name">المنشآت والشبكات</div>
+          </div>
+        </div>
+        <div class="focus-layer-chips">
+          <span class="focus-chip focus-chip--infra">المطارات والطرق</span>
+          <span class="focus-chip focus-chip--infra">المياه والكهرباء</span>
+          <span class="focus-chip focus-chip--infra">الحرمان والمشاعر</span>
+          <span class="focus-chip focus-chip--infra">الاتصالات والإنترنت</span>
+          <span class="focus-chip focus-chip--infra">المواقع التاريخية والمتاحف</span>
+          <span class="focus-chip focus-chip--infra">التطوير والإنشاء</span>
+        </div>
+      </div>
+
+      <!-- Layer 3 -->
+      <div class="focus-layer focus-layer--enablers js-reveal" style="--i:2">
+        <div class="focus-layer-label">
+          <div class="focus-layer-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 6 L16 26 M6 16 L26 16" stroke="currentColor" stroke-width="1" opacity=".4"/>
+              <circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="16" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="focus-layer-cat">الممكّنات</div>
+            <div class="focus-layer-name">الأطر والحوكمة</div>
+          </div>
+        </div>
+        <div class="focus-layer-chips">
+          <span class="focus-chip focus-chip--enablers">الحوكمة والأدوار</span>
+          <span class="focus-chip focus-chip--enablers">النموذج الاقتصادي</span>
+          <span class="focus-chip focus-chip--enablers">البيانات والمعلومات</span>
+          <span class="focus-chip focus-chip--enablers">الإشراف والمراقبة</span>
+          <span class="focus-chip focus-chip--enablers">التوعية والتشويق</span>
+          <span class="focus-chip focus-chip--enablers">القطاع الخاص</span>
+        </div>
+      </div>
+
+    </div><!-- /focus-system-stack -->
+
+  </div>
+</section>
+
+
+<!--  BENEFICIARY GROUPS  -->
+<section class="focus-groups-section" id="focus-groups">
+
+  <div class="focus-groups-shapes" aria-hidden="true">
+    <span class="focus-gshape focus-gshape-1"></span>
+    <span class="focus-gshape focus-gshape-2"></span>
+    <span class="focus-gshape focus-gshape-3"></span>
+  </div>
+
+  <div class="container">
+
+    <div class="focus-section-header focus-section-header--light">
+      <span class="focus-eyebrow focus-eyebrow--light">من يخدم البرنامج؟</span>
+      <h2 class="focus-section-title focus-section-title--light">الفئات المستفيدة</h2>
+      <div class="focus-ornament focus-ornament--light" aria-hidden="true">
+        <span class="focus-orn-line"></span>
+        <span class="focus-orn-diamond"></span>
+        <span class="focus-orn-line focus-orn-line--rev"></span>
+      </div>
+    </div>
+
+    <div class="focus-groups-grid">
+
+      <!-- Group 1 -->
+      <div class="focus-group-card js-reveal" style="--i:0">
+        <div class="focus-group-accent focus-group-accent--primary"></div>
+        <div class="focus-group-type">مستفيد مباشر أول</div>
+        <div class="focus-group-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="18" r="9" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M10 46 C10 36 18 30 28 30 C38 30 46 36 46 46"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+
+            <circle cx="14" cy="22" r="5" stroke="currentColor" stroke-width="1.3" opacity=".4"/>
+            <path d="M4 40 C4 33 9 28 14 28 C17 28 20 29.5 22 32"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".4"/>
+            <circle cx="42" cy="22" r="5" stroke="currentColor" stroke-width="1.3" opacity=".4"/>
+            <path d="M52 40 C52 33 47 28 42 28 C39 28 36 29.5 34 32"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <h3 class="focus-group-title">الحجاج والمعتمرون</h3>
+        <p class="focus-group-desc">
+          الحجاج والمعتمرون والزائرون من داخل وخارج المملكة العربية السعودية —
+          الفئة المستفيدة المباشرة الأولى من البرنامج وخدماته.
+        </p>
+        <div class="focus-group-tag">الفئة المحورية</div>
+      </div>
+
+      <!-- Group 2 -->
+      <div class="focus-group-card js-reveal" style="--i:1">
+        <div class="focus-group-accent focus-group-accent--secondary"></div>
+        <div class="focus-group-type">مستفيد غير مباشر</div>
+        <div class="focus-group-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none">
+            <path d="M28 8 L52 20 L52 44 L28 56 L4 44 L4 20 Z"
+                  stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M28 8 L28 56 M4 20 L52 20 M4 44 L52 44"
+                  stroke="currentColor" stroke-width="1" opacity=".25"/>
+            <circle cx="28" cy="32" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="28" cy="32" r="2" fill="currentColor" opacity=".6"/>
+          </svg>
+        </div>
+        <h3 class="focus-group-title">المجتمع المحلي</h3>
+        <p class="focus-group-desc">
+          سكان مكة المكرمة والمدينة المنورة والمناطق المحيطة —
+          يستفيدون من مشاريع التطوير والبنية التحتية والنمو الاقتصادي.
+        </p>
+        <div class="focus-group-tag">تطوير المجتمع</div>
+      </div>
+
+      <!-- Group 3 -->
+      <div class="focus-group-card js-reveal" style="--i:2">
+        <div class="focus-group-accent focus-group-accent--gold"></div>
+        <div class="focus-group-type">شريك استراتيجي</div>
+        <div class="focus-group-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none">
+            <rect x="6"  y="30" width="12" height="20" rx="2" stroke="currentColor" stroke-width="1.7"/>
+            <rect x="22" y="20" width="12" height="30" rx="2" stroke="currentColor" stroke-width="1.7"/>
+            <rect x="38" y="10" width="12" height="40" rx="2" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M12 28 L28 18 L44 8" stroke="currentColor" stroke-width="1.4"
+                  stroke-linecap="round" stroke-dasharray="3 2.5" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 class="focus-group-title">القطاع الخاص</h3>
+        <p class="focus-group-desc">
+          الشركات والمنشآت العاملة في منظومة الحج والعمرة والسياحة —
+          شريك استراتيجي في التنفيذ ومحرك للنمو الاقتصادي.
+        </p>
+        <div class="focus-group-tag">شراكة وتنفيذ</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+  'use strict';
+
+  /*  js-reveal observer  */
+  var revealEls = document.querySelectorAll('.js-reveal');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(function (el) { observer.observe(el); });
+
+  /*  Rail progress animation  */
+  var rail = document.querySelector('.js-rail-progress');
+  if (rail) {
+    var railObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          rail.classList.add('rail-active');
+          railObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    railObserver.observe(document.querySelector('.focus-timeline'));
+  }
+
+  /*  Smooth scroll for anchor chips  */
+  document.querySelectorAll('.focus-anchor-chip').forEach(function (chip) {
+    chip.addEventListener('click', function (e) {
+      var target = document.querySelector(chip.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+{% endblock %}
