@@ -13,15 +13,14 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         
     </head>
-    <!-- body  -->
-    <body class="{% block body_class %}{% endblock %}">
+    
             <nav class="navbar navbar-expand-lg custom-navbar">
                 <div class="container">
                     <a class="navbar-brand" href="#">السياحة السعودية</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse" id="navbarNav" dir="rtl">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'tourism:home_view' %}">الرئيسية</a>
@@ -42,13 +41,15 @@
                                 <a class="nav-link" href="{% url 'tourism:jeddah_view' %}">جدة</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'tourism:alula_view' %}">العلا</a>
+                                <a class="nav-link" href="{% url 'tourism:alula_view' %}">العُلا</a>
                             </li>
                             <!-- Add more navigation links as needed -->
                         </ul>
                     </div>
                 </div>
             </nav>
+    <!-- body  -->
+    <body class="{% block body_class %}{% endblock %}">
         <!-- content --> 
         {% block content %}
             

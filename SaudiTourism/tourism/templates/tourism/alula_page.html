@@ -1,0 +1,234 @@
+{% extends 'tourism/base.html' %}
+{% load static %}
+{% block title %}العُلا - السياحة السعودية{% endblock %}
+{% block body_class %}{% endblock %}
+{% block content %}
+<div class="slider">
+    <div class="balls-icon">
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <!-- Repeat -->
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+    </div>
+
+    <!-- title  -->
+    <div class="slider-header">
+        <h1>العُلا</h1>
+    </div>
+
+    <div class="slides">
+        <!-- saleh_cities -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/saleh_cities.png' %}" alt="saleh_cities">
+            <h3>مدائن صالح (الحِجر)</h3>
+        </div>
+        <!-- Elephant rock -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/al-ula.png' %}" alt="Elephant rock">
+            <h3> صخرة الفيل </h3>
+        </div>
+        <!-- old_town -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/old_town.png' %}" alt="old_town">
+            <h3>البلدة القديمة</h3>
+        </div>
+        <!-- maraya -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/maraya.png' %}" alt="maraya">
+            <h3>مرايا </h3>
+        </div>
+        <!-- Jabal_Ikmah -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/jabal_ikmah.png' %}" alt="Jabal_Ikmah">
+            <h3>جبل عكمة</h3>
+        </div>
+        <!-- dadan -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/dadan.png' %}" alt="dadan">
+            <h3>  دادان</h3>
+        </div>
+        <!-- Two more cities -->
+        <!-- saleh_cities -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/saleh_cities.png' %}" alt="saleh_cities">
+            <h3>مدائن صالح (الحِجر)</h3>
+        </div>
+        <!-- Elephant_rock -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/al-ula.png' %}" alt="Elephant rock">
+            <h3> صخرة الفيل </h3>
+        </div>
+        <!-- old_town -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/old_town.png' %}" alt="old_town">
+            <h3>البلدة القديمة</h3>
+        </div>
+        <!-- maraya -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/maraya.png' %}" alt="maraya">
+            <h3>مرايا </h3>
+        </div>
+        <!-- Jabal_Ikmah -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/jabal_ikmah.png' %}" alt="Jabal_Ikmah">
+            <h3>جبل عكمة</h3>
+        </div>
+        <!-- dadan -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/al-ula/dadan.png' %}" alt="dadan">
+            <h3>  دادان</h3>
+        </div>
+    </div>
+</div>
+<!--alula_History -->
+<div class="card text-bg-dark" dir="rtl">
+    <img src="{% static 'images_and_videos/al-ula/al-ula.png' %}" class="card-img" alt="al-ula-bg">
+    <div class="card-img-overlay">
+        <h5 class="card-title">تاريخ العُلا</h5>
+        <p class="card-text">العلا تُعد من أقدم المناطق المأهولة في شبه الجزيرة العربية، حيث يعود تاريخها لآلاف السنين، وكانت مركزًا مهمًا على طرق
+        التجارة القديمة بين جنوب الجزيرة وشمالها. ازدهرت فيها حضارات مثل دادان ولحيان، ثم جاءت الحضارة النبطية التي تركت آثارًا
+        عظيمة مثل مدائن صالح. ومع مرور الزمن، استمرت العلا كمحطة مهمة للحجاج والتجار، لتبقى اليوم وجهة تاريخية وسياحية بارزة
+        تعكس عمق الحضارات التي مرت بها.
+        </p>
+        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
+    </div>
+</div>
+<!-- jeddah Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز المعالم في العُلا</h2>
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- saleh_cities -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/al-ula/saleh_cities.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">مدائن صالح (الحِجر)</h5>
+                    <p class="card-text">من أبرز المواقع الأثرية في المملكة، وتُعد أول موقع سعودي مُدرج في قائمة التراث العالمي لليونسكو. تتميز بواجهاتها الصخرية
+                    المنحوتة بدقة والتي تعود للحضارة النبطية قبل أكثر من ألفي عام، حيث كانت مركزًا تجاريًا مهمًا على طريق القوافل. ويمنح
+                    الموقع زواره تجربة فريدة تجمع بين التاريخ العريق وروعة التكوينات الصخرية في قلب الصحراء.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elephant_rock -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/al-ula/al-ula.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">صخرة الفيل</h5>
+                    <p class="card-text">من أشهر المعالم الطبيعية في العلا، وهي تكوين صخري ضخم نُحت بفعل عوامل التعرية عبر آلاف السنين ليأخذ شكل فيل عملاق. تتميز
+                    بموقعها المفتوح وسط الصحراء، وتُعد وجهة مثالية للزيارة خاصة وقت الغروب أو في المساء، حيث تُضاء المنطقة بأجواء جميلة
+                    وتحيط بها جلسات ومقاهي تضفي تجربة ممتعة للزوار.</p>
+                </div>
+            </div>
+        </div>
+        <!-- old_town -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/al-ula/old_town.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">البلدة القديمة</h5>
+                    <p class="card-text"> من أهم المعالم التراثية في العلا، وتتميز بأزقتها الضيقة وبيوتها الطينية المتلاصقة التي تعكس نمط الحياة القديم. كانت
+                    مركزًا سكنيًا وتجاريًا مهمًا لقرون، وتُعد اليوم وجهة سياحية بارزة تتيح للزوار استكشاف التاريخ والتجول بين معالمها
+                    الأصيلة في أجواء فريدة.</p>
+                </div>
+            </div>
+        </div>
+        <!-- maraya -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/al-ula/maraya.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">مرايا</h5>
+                    <p class="card-text">مبنى فريد يُعد أكبر مبنى مغطى بالمرايا في العالم، حيث يعكس جمال صحراء العلا والجبال المحيطة بشكل مذهل. يتميز بتصميمه
+                    العصري واستخدامه كمسرح لإقامة الحفلات الموسيقية والفعاليات الثقافية، مما يجعله من أبرز المعالم الحديثة التي تجمع بين
+                    الفن والطبيعة في تجربة استثنائية.</p>
+                </div>
+            </div>
+        </div>
+        <!-- qassim_mountains -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/al-ula/jabal_ikmah.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جبل عكمة</h5>
+                    <p class="card-text">من أهم المواقع التاريخية في العلا، ويُعرف بـ“متحف النقوش المفتوح” لاحتوائه على مئات النقوش والكتابات القديمة التي تعود
+                    لآلاف السنين. يعكس الجبل تاريخ حضارات مثل دادان ولحيان، ويتميز بتضاريسه الصخرية الفريدة وأوديته الضيقة، مما يجعله وجهة
+                    مميزة لمحبي التاريخ والاستكشاف.</p>
+                </div>
+            </div>
+        </div>
+        <!-- dadan -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/al-ula/dadan.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">دادان</h5>
+                    <p class="card-text">من أبرز المواقع الأثرية في العلا، وكانت عاصمة لمملكتي دادان ولحيان في العصور القديمة. تتميز بآثارها المنحوتة في الصخور
+                    مثل “مقابر الأسود” الشهيرة، والتي تعكس قوة الحضارة التي ازدهرت في المنطقة قبل آلاف السنين، مما يجعلها وجهة مميزة لمحبي
+                    التاريخ والتراث.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- alula Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز الفعاليات في العُلا </h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4" dir="rtl">
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/al-ula/winter_festival.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مهرجان شتاء طنطورة</h5>
+                    <p class="card-text">يُعد من أشهر الفعاليات في المملكة، حيث يجمع بين الحفلات الموسيقية، والعروض الثقافية، والتجارب التراثية في أجواء صحراوية
+                    ساحرة. يتميز المهرجان بتنوع أنشطته مثل العروض الفنية، والمغامرات الصحراوية， وتجارب الطعام， مما يجعله تجربة سياحية فريدة
+                    تجمع بين التاريخ والترفيه.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يُقام سنويًا في فصل الشتاء، وغالبًا يكون من منتصف ديسمبر إلى بداية يناير</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/al-ula/al-ula_festival.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مهرجان فنون العلا</h5>
+                    <p class="card-text">يُعد من أبرز الفعاليات الثقافية في العلا، حيث يجمع بين الفن المعاصر والتراث في بيئة صحراوية مميزة. يضم المهرجان معارض
+                    فنية، وتركيبات إبداعية في الهواء الطلق، وورش عمل، وعروضًا ثقافية لفنانين من مختلف أنحاء العالم، مما يمنح الزوار تجربة
+                    فنية فريدة.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يُقام سنويًا غالبًا في فصل الشتاء، خلال الفترة من يناير إلى فبراير</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/al-ula/sky_festival.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">مهرجان سماء العلا</h5>
+                    <p class="card-text">من أبرز الفعاليات في العلا، ويقدم تجربة فريدة تجمع بين المغامرة والطبيعة. يشتهر بعروض المناطيد الملونة التي تملأ سماء
+                    العلا، إضافة إلى أنشطة مراقبة النجوم، وتجارب فلكية في أجواء صحراوية ساحرة.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يُقام عادةً في بداية السنة (فصل الشتاء)، غالبًا خلال يناير أو فبراير,ويتميز بعروض المناطيد ومراقبة النجوم في تجربة فريدة.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
