@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>عين الصقر - اختر شخصيتك</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .persona-card {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .persona-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .icon-size { font-size: 4rem; }
+    </style>
+</head>
+<body class="d-flex align-items-center vh-100">
+    <div class="container text-center">
+        <h1 class="mb-5 fw-bold">عين الصقر | SaqrEye</h1>
+        <h3 class="mb-4">اختر شخصيتك لتبدأ الرحلة</h3>
+        
+        <div class="row justify-content-center g-4">
+            <div class="col-md-4">
+                <a href="{% url 'set_persona' 'tourist' %}" class="text-decoration-none text-dark">
+                    <div class="card persona-card p-4 h-100 bg-white">
+                        <div class="icon-size mb-3">🗺️</div>
+                        <h2>سائح</h2>
+                        <p class="text-muted">استكشف جمال المملكة، الفعاليات، والأماكن السياحية الساحرة.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{% url 'set_persona' 'investor' %}" class="text-decoration-none text-dark">
+                    <div class="card persona-card p-4 h-100 bg-white">
+                        <div class="icon-size mb-3"></div>
+                        <h2>مستثمر</h2>
+                        <p class="text-muted">اطلع على المشاريع الكبرى، نسب الإنجاز، والفرص الاستثمارية الواعدة.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
