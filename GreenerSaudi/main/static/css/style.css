@@ -155,6 +155,28 @@ body p {
   margin-bottom: 0;
 }
 
+.goal-highlight-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.goal-highlight-card .metric-badge {
+  justify-content: flex-start;
+}
+
+.goal-highlight-card .metric-value {
+  min-height: 2.4em;
+}
+
+@media screen and (max-width: 767px) {
+  .goal-highlight-card .metric-value {
+    min-height: 0;
+  }
+}
+
 .metric-badge {
   display: inline-flex;
   align-items: center;
@@ -345,6 +367,9 @@ body p {
 }
 
 .theme-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.6rem 1rem;
   border: 1px solid var(--site-toggle-border);
   border-radius: 999px;
@@ -354,6 +379,7 @@ body p {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.08rem;
   text-transform: uppercase;
+  text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -413,7 +439,42 @@ body p {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
+  overflow: hidden;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%) center / cover no-repeat scroll, var(--masthead-image, url("../img/pr-cover-image.jpg")) center / cover no-repeat;
+}
+
+.masthead > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.masthead--video {
+  background: #000;
+}
+
+.masthead--video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.58) 58%, #000 100%);
+}
+
+.masthead-video {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 136%;
+  top: -22%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 767px) {
+  .masthead-video {
+    height: 146%;
+    top: -28%;
+  }
 }
 
 .masthead h1, .masthead .h1 {

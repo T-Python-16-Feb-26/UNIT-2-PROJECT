@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html data-bs-theme="{{ theme_mode }}" lang="en">
+<html data-bs-theme="{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -75,6 +75,7 @@
       class="masthead{% block hero_class %}{% endblock %}"
       style="--masthead-image: url('{% block hero_image %}{% static 'img/pr-cover-image.jpg' %}{% endblock %}');"
     >
+      {% block hero_media %}{% endblock %}
       <div
         class="container d-flex h-100 justify-content-center align-items-center px-4 px-lg-5"
       >
@@ -170,18 +171,19 @@
               </ul>
             </div>
             <div class="col">
-              <form class="theme-toggle-form footer-theme-toggle" method="post" action="{% url 'main:set_theme_view' %}">
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.get_full_path }}" />
-                <input type="hidden" name="theme" value="{% if theme_mode == 'light' %}dark{% else %}light{% endif %}" />
-                <button class="theme-toggle-button" type="submit" aria-label="Switch to {% if theme_mode == 'light' %}dark{% else %}light{% endif %} mode">
-                  {% if theme_mode == 'light' %}
-                  Dark Mode
-                  {% else %}
+              <div class="theme-toggle-form footer-theme-toggle">
+                <a
+                  class="theme-toggle-button"
+                  href="{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}{% url 'main:mode_view' 'light' %}{% else %}{% url 'main:mode_view' 'dark' %}{% endif %}?next={{ request.path }}"
+                  aria-label="Switch to {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}light{% else %}dark{% endif %} mode"
+                >
+                  {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}
                   Light Mode
+                  {% else %}
+                  Dark Mode
                   {% endif %}
-                </button>
-              </form>
+                </a>
+              </div>
             </div>
           </div>
         </div>

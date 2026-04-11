@@ -5,7 +5,7 @@ from . import views
 app_name = 'main'
 urlpatterns = [
     path('', views.home_view, name='home_view'),
-    path('theme/', views.set_theme_view, name='set_theme_view'),
+    path('mode/<mode>/', views.mode_view, name='mode_view'),
     path('about/', views.about_view, name='about_view'),
     path('impact/', views.impact_view, name='impact_view'),
     path('progress/', views.progress_view, name='progress_view'),

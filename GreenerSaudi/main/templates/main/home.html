@@ -2,6 +2,13 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block body_attrs %} style="background: rgb(0, 0, 0);"{% endblock %}
+{% block hero_class %} masthead--video{% endblock %}
+{% block hero_image %}{% static 'img/pr-cover-image.jpg' %}{% endblock %}
+{% block hero_media %}
+<video class="masthead-video" autoplay muted loop playsinline poster="{% static 'img/pr-cover-image.jpg' %}">
+  <source src="{% static 'videos/videoplayback_V1.mp4' %}" type="video/mp4" />
+</video>
+{% endblock %}
 {% block content %}
 <div class="image-section image-section--balanced" style="--section-image: url('{% static 'img/sgi-approach.jpg' %}');">
   <div class="container section-shell">
