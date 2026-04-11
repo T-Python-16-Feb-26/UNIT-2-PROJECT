@@ -353,109 +353,66 @@
             <div class="tab-pane fade" id="experiences-pane" role="tabpanel" aria-labelledby="experiences-tab">
                 <section class="experiences-section py-4">
                     <div class="container">
-                        <div class="text-center mb-5">
-                            <span class="section-badge">Tours & Experiences</span>
-                            <h2 class="fw-bold mt-3 mb-3">Ways to Experience Jeddah</h2>
-                            <p class="text-muted mx-auto experiences-intro">
-                                Discover Jeddah through heritage walks, coastal outings, shopping, and sunset experiences along the Red Sea.
-                            </p>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                            <div>
+                                <span class="section-badge">Tours & Experiences</span>
+                                <h2 class="fw-bold mt-3 mb-1">Tours in Jeddah</h2>
+                                <p class="text-muted mb-0">
+                                    Discover Red Sea trips, heritage walks, food experiences, and guided city highlights in Jeddah.
+                                </p>
+                            </div>
+
+                            {% if jeddah_experience_slides|length > 1 %}
+                            <div class="mt-3 mt-md-0">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#jeddahExperiencesCarousel" data-bs-slide="prev">
+                                    Prev
+                                </button>
+                                <button class="btn btn-success" type="button" data-bs-target="#jeddahExperiencesCarousel" data-bs-slide="next">
+                                    Next
+                                </button>
+                            </div>
+                            {% endif %}
                         </div>
 
-                        <div class="row g-4">
-                            <div class="col-12 col-lg-6">
-                                <div class="experience-highlight-card h-100">
-                                    <div class="experience-highlight-image-wrap">
-                                        <img src="{% static 'images/Jeddah/Albalad.jpg' %}" alt="Jeddah heritage experience" class="experience-highlight-image">
-                                    </div>
-                                    <div class="experience-highlight-content">
-                                        <span class="experience-badge">Heritage Journey</span>
-                                        <h3 class="fw-bold mb-3">Walk Through Historic Jeddah</h3>
-                                        <p class="text-muted mb-4">
-                                            Explore Al-Balad, traditional souqs, and old houses to experience the city’s cultural roots.
-                                        </p>
-                                        <div class="experience-points">
-                                            <div class="experience-point">UNESCO heritage district</div>
-                                            <div class="experience-point">Local markets & culture</div>
-                                            <div class="experience-point">Historic architecture</div>
+                        <div id="jeddahExperiencesCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                {% for slide in jeddah_experience_slides %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <div class="row g-4">
+                                        {% for experience in slide %}
+                                        <div class="col-md-6 col-xl-4">
+                                            <div class="card experience-card h-100 border-0 shadow-sm rounded-4">
+                                                {% if experience.image %}
+                                                <img src="{% static experience.image %}" class="card-img-top" alt="{{ experience.title }}">
+                                                {% endif %}
+                                                <div class="card-body p-4">
+                                                    <span class="badge bg-success mb-3">{{ experience.category }}</span>
+                                                    <h5 class="fw-bold">{{ experience.title }}</h5>
+                                                    <p class="text-muted mb-2">{{ experience.duration }}</p>
+                                                    <p class="mb-2">{{ experience.description }}</p>
+                                                    <small class="text-success fw-semibold">{{ experience.location }}</small>
+                                                    <a href="{% url 'main:experience_detail' slug=experience.slug %}" class="btn btn-success mt-3">Explore More</a>
+                                                </div>
+                                            </div>
                                         </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-12 col-lg-6">
-                                <div class="experience-highlight-card h-100">
-                                    <div class="experience-highlight-image-wrap">
-                                        <img src="{% static 'images/Jeddah/Corniche.jpg' %}" alt="Jeddah coastal experience" class="experience-highlight-image">
-                                    </div>
-                                    <div class="experience-highlight-content">
-                                        <span class="experience-badge">Coastal Escape</span>
-                                        <h3 class="fw-bold mb-3">Enjoy the Red Sea Coast</h3>
-                                        <p class="text-muted mb-4">
-                                            Spend the day walking the Corniche, enjoying sea views, cafés, and a relaxed waterfront mood.
+                                {% empty %}
+                                <div class="carousel-item active">
+                                    <div class="text-center py-5">
+                                        <h5 class="fw-bold mb-2">No Jeddah experiences available right now</h5>
+                                        <p class="text-muted mb-0">
+                                            Please check back later for upcoming sea trips, heritage walks, and city experiences.
                                         </p>
-                                        <div class="experience-points">
-                                            <div class="experience-point">Sunset walks</div>
-                                            <div class="experience-point">Public art & parks</div>
-                                            <div class="experience-point">Family-friendly leisure</div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="row g-4 mt-1">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="experience-card h-100">
-                                    <div class="experience-icon">
-                                        <span class="material-symbols-outlined">museum</span>
-                                    </div>
-                                    <h4 class="fw-bold mb-3">Heritage Tours</h4>
-                                    <p class="text-muted mb-0">
-                                        Visit Al-Balad, Nassif House, and old Jeddah for a deeper historical experience.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="experience-card h-100">
-                                    <div class="experience-icon">
-                                        <span class="material-symbols-outlined">restaurant</span>
-                                    </div>
-                                    <h4 class="fw-bold mb-3">Food Experiences</h4>
-                                    <p class="text-muted mb-0">
-                                        Enjoy seafood, local dishes, cafés, and waterfront dining throughout the city.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="experience-card h-100">
-                                    <div class="experience-icon">
-                                        <span class="material-symbols-outlined">shopping_bag</span>
-                                    </div>
-                                    <h4 class="fw-bold mb-3">Shopping Spots</h4>
-                                    <p class="text-muted mb-0">
-                                        Browse traditional souqs and modern malls for souvenirs, fashion, and local finds.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="experience-card h-100">
-                                    <div class="experience-icon">
-                                        <span class="material-symbols-outlined">nightlife</span>
-                                    </div>
-                                    <h4 class="fw-bold mb-3">Evening Views</h4>
-                                    <p class="text-muted mb-0">
-                                        Enjoy the Corniche, King Fahd Fountain, and Jeddah’s vibrant night atmosphere.
-                                    </p>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-
             <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
                 <section class="events-section py-4">
                     <div class="container">

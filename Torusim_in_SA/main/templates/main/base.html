@@ -15,44 +15,75 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg bg-body shadow-sm py-3 fixed-top">
-            <div class="container-fluid px-4 px-lg-5">
-                <a class="navbar-brand fw-bold fs-4 text-success" href="/">Torusim in SA</a>
+<nav class="navbar navbar-expand-lg bg-body shadow-sm py-3 fixed-top">
+    <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand fw-bold fs-4 text-success" href="{% url 'main:home_view' %}">Torusim in SA</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'main:home_view' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'main:destinations_view' %}">Destinations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Packages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item" >
-                            <a href="" class="nav-link"><span class="material-symbols-outlined">search</span></a>
-                        </li>
-                        <li>
-                            <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
-                            <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>    
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                {% url 'main:home_view' as home_url %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == home_url %}active{% endif %}"
+                       {% if request.path == home_url %}aria-current="page"{% endif %}
+                       href="{{ home_url }}">
+                        Home
+                    </a>
+                </li>
+
+                {% url 'main:destinations_view' as destinations_url %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == destinations_url %}active{% endif %}"
+                       {% if request.path == destinations_url %}aria-current="page"{% endif %}
+                       href="{{ destinations_url }}">
+                        Destinations
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/packages/' %}active{% endif %}"
+                       {% if request.path == '/packages/' %}aria-current="page"{% endif %}
+                       href="/packages/">
+                        Packages
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/about/' %}active{% endif %}"
+                       {% if request.path == '/about/' %}aria-current="page"{% endif %}
+                       href="/about/">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
+                       {% if request.path == '/contact/' %}aria-current="page"{% endif %}
+                       href="/contact/">
+                        Contact
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-label="Search">
+                        <span class="material-symbols-outlined">search</span>
+                    </a>
+                </li>
+
+                <li>
+                    <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                        <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
   
 
     <main>

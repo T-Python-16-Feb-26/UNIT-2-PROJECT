@@ -42,29 +42,57 @@ body {
     color: var(--page-text);
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 .navbar {
     border-bottom: 1px solid var(--page-navbar-border);
     background-color: var(--page-surface);
 }
-html, body {
-    overflow-x: hidden;
-}
+
 .navbar-brand {
     letter-spacing: 0.5px;
 }
 
 .nav-link {
+    position: relative;
+    display: inline-block;
     font-weight: 500;
     color: var(--page-text) !important;
     transition: color 0.3s ease;
 }
 
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    width: 100%;
+    height: 2px;
+    background-color: var(--page-accent-text);
+    border-radius: 999px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.28s ease;
+}
+
 .nav-link:hover {
-    color: var(--page-text);
+    color: var(--page-accent-text) !important;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(0.99);
 }
 
 .nav-link.active {
-    color: var(--page-text);
+    color: var(--page-accent-text) !important;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
 }
 
 .btn-success {
@@ -1115,6 +1143,188 @@ html, body {
     }
 }
 /* end cities */
+
+
+/* tours */
+
+.experience-hero-section {
+    background: linear-gradient(180deg, var(--page-bg) 0%, var(--page-surface) 100%);
+}
+
+.experience-hero-text {
+    max-width: 680px;
+    font-size: 1.04rem;
+}
+
+.experience-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.experience-meta-pill {
+    background: var(--page-surface-2);
+    border: 1px solid var(--page-border);
+    color: var(--page-text);
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.experience-hero-image-wrap {
+    overflow: hidden;
+    border-radius: 1.75rem;
+    box-shadow: var(--page-shadow-strong);
+    border: 1px solid var(--page-border);
+}
+
+.experience-hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+}
+
+.experience-details-section {
+    background: linear-gradient(180deg, var(--page-bg) 0%, var(--page-surface) 100%);
+}
+
+.experience-main-card,
+.experience-side-card {
+    background: var(--page-surface);
+    border: 1px solid var(--page-border);
+    border-radius: 1.5rem;
+    box-shadow: var(--page-shadow);
+    padding: 2rem;
+}
+
+.experience-mini-card {
+    background: var(--page-surface-2);
+    border: 1px solid var(--page-border);
+    border-radius: 1.15rem;
+    padding: 1.25rem;
+    height: 100%;
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.experience-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--page-border);
+}
+
+.experience-timeline-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.experience-step {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--page-accent-bg);
+    color: var(--page-accent-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.experience-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.experience-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--page-border);
+}
+
+.experience-info-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.experience-info-row small {
+    color: var(--page-text-muted);
+    display: block;
+}
+
+.experience-info-row strong {
+    color: var(--page-text);
+    text-align: right;
+}
+
+.experience-check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.experience-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.experience-check {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--page-accent-bg);
+    color: var(--page-accent-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+@media (max-width: 991.98px) {
+    .experience-hero-image {
+        min-height: 300px;
+    }
+
+    .experience-main-card,
+    .experience-side-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .experience-main-card,
+    .experience-side-card,
+    .experience-mini-card {
+        padding: 1.25rem;
+    }
+
+    .experience-info-row {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .experience-info-row strong {
+        text-align: left;
+    }
+}
+
+/* end tours*/
+
+
 
 .guide-main-card,
 .guide-feature-card,

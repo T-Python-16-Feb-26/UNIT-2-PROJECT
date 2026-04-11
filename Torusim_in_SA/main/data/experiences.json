@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Half-Day in Jeddah: Private Cultural Tour of Al Balad & Iconic Heritage Sites with Professional Guide",
+    "slug": "half-day-jeddah-al-balad-cultural-tour",
+    "city": "Jeddah",
+    "category": "Private Tour",
+    "duration": "4–5 hours",
+    "location": "Al Balad, Jeddah",
+    "image": "images/Jeddah/al_balad.jpg",
+    "description": "Explore UNESCO-listed Al Balad's historic streets, coral architecture, and cultural landmarks with a local expert guide."
+  },
+  {
+    "id": 2,
+    "title": "Riyadh Heritage Day: Al Masmak Fortress, Souq Al Zal & Cultural Walk",
+    "slug": "riyadh-heritage-day-al-masmak-souq-al-zal",
+    "city": "Riyadh",
+    "category": "Heritage Tour",
+    "duration": "4 hours",
+    "location": "Old Riyadh",
+    "image": "images/Riyadh/al_masmak.jpg",
+    "description": "Discover Riyadh's historic heart with guided visits to Al Masmak Fortress, traditional markets, and cultural landmarks."
+  },
+  {
+    "id": 3,
+    "title": "AlUla Wonders: Hegra & Elephant Rock Sunset Tour",
+    "slug": "alula-wonders-hegra-elephant-rock-sunset-tour",
+    "city": "AlUla",
+    "category": "Heritage Adventure",
+    "duration": "Full day",
+    "location": "Hegra, AlUla",
+    "image": "images/Alula/hegra.jpg",
+    "description": "Visit UNESCO Hegra tombs and the dramatic Elephant Rock for sunset views in ancient AlUla."
+  },
+  {
+    "id": 4,
+    "title": "Abha Mountain Escape: Cable Car, Foggy Peaks & Asir Village Walk",
+    "slug": "abha-mountain-escape-cable-car-asir-village",
+    "city": "Abha",
+    "category": "Nature Tour",
+    "duration": "5 hours",
+    "location": "Abha Mountains",
+    "image": "images/Abha/cable_car.jpg",
+    "description": "Ride the cable car to cool mountain peaks, explore Asir villages, and enjoy fresh highland air."
+  },
+  {
+    "id": 5,
+    "title": "Jeddah Corniche Seaside Day: Waterfront Walks, Cafés & Red Sea Views",
+    "slug": "jeddah-corniche-seaside-day-red-sea-views",
+    "city": "Jeddah",
+    "category": "Seaside Escape",
+    "duration": "Full day",
+    "location": "Jeddah Corniche",
+    "image": "images/Jeddah/corniche.jpg",
+    "description": "Enjoy Jeddah's 30km Corniche with sea views, Floating Mosque, cafés, and relaxed waterfront time."
+  },
+  {
+    "id": 6,
+    "title": "Riyadh Food & Coffee Experience: Interactive Saudi Cuisine Tour",
+    "slug": "riyadh-food-coffee-experience-saudi-cuisine-tour",
+    "city": "Riyadh",
+    "category": "Food Experience",
+    "duration": "3 hours",
+    "location": "Souq Al Zal",
+    "image": "images/Riyadh/food_cuisine.jpg",
+    "description": "Learn Saudi cooking traditions, blend spices, and enjoy a Nadj feast with cultural activities."
+  }
+]
