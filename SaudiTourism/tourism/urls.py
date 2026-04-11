@@ -8,5 +8,7 @@ urlpatterns =[
     path('makkah/',views.makkah_view,name='makkah_view'),
     path('madinah/',views.madinah_view,name='madinah_view'),
     path('qassim/',views.qassim_view,name='qassim_view'),
+    path('jeddah/',views.jeddah_view,name='jeddah_view'),
+    path('alula/',views.alula_view,name='alula_view'),
     
 ]

@@ -1,0 +1,247 @@
+{% extends 'tourism/base.html' %}
+{% load static %}
+{% block title %}جدة - السياحة السعودية{% endblock %}
+{% block body_class %}{% endblock %}
+{% block content %}
+<div class="slider">
+    <div class="balls-icon">
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <!-- Repeat -->
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+        <div class="ball white"></div>
+        <div class="ball green"></div>
+    </div>
+
+    <!-- title  -->
+    <div class="slider-header">
+        <h1>جدة</h1>
+    </div>
+
+    <div class="slides">
+        <!-- albalad -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/albalad.png' %}" alt="albalad">
+            <h3>جدة التاريخية (البلد)</h3>
+        </div>
+        <!-- jeddah_club -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/jeddah_club.png' %}" alt="jeddah_club">
+            <h3>نادي جدة لليخوت</h3>
+        </div>
+        <!-- jeddah_art -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/jeddah_art.png' %}" alt="jeddah_art">
+            <h3>جدة آرت بروميناد</h3>
+        </div>
+        <!-- corniche -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/corniche.png' %}" alt="corniche">
+            <h3>كورنيش جدة</h3>
+        </div>
+        <!-- king_fahad_fountain -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/king_fahad_fountain.png' %}" alt="king_fahad_fountain">
+            <h3>نافورة الملك فهد</h3>
+        </div>
+        <!-- jeddah_museum -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/jeddah_museum.png' %}" alt="jeddah_museum">
+            <h3> متحف الطيبات </h3>
+        </div>
+        <!-- Two more cities -->
+        <!-- albalad -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/albalad.png' %}" alt="albalad">
+            <h3>جدة التاريخية (البلد)</h3>
+        </div>
+        <!-- jeddah_club -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/jeddah_club.png' %}" alt="jeddah_club">
+            <h3>نادي جدة لليخوت</h3>
+        </div>
+        <!-- jeddah_art -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/jeddah_art.png' %}" alt="jeddah_art">
+            <h3>جدة آرت بروميناد</h3>
+        </div>
+        <!-- corniche -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/corniche.png' %}" alt="corniche">
+            <h3>كورنيش جدة</h3>
+        </div>
+        <!-- king_fahad_fountain -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/king_fahad_fountain.png' %}" alt="king_fahad_fountain">
+            <h3>نافورة الملك فهد</h3>
+        </div>
+        <!-- jeddah_museum -->
+        <div class="slide">
+            <img src="{% static 'images_and_videos/jeddah/jeddah_museum.png' %}" alt="jeddah_museum">
+            <h3> متحف الطيبات </h3>
+        </div>
+    </div>
+</div>
+<!-- jeddah History -->
+<div class="card text-bg-dark" dir="rtl">
+    <img src="{% static 'images_and_videos/jeddah/jeddah.png' %}" class="card-img" alt="jeddah-bg">
+    <div class="card-img-overlay">
+        <h5 class="card-title">تاريخ جدة</h5>
+        <p class="card-text">جدة من أقدم مدن المملكة وأكثرها تاريخًا، حيث كانت منذ قرون بوابة الحرمين الشريفين وميناءً رئيسيًا للتجارة والحجاج
+        القادمين عبر البحر الأحمر. ازدهرت جدة عبر العصور الإسلامية، خاصة في العهد العثماني، حيث بُني سورها التاريخي وأسواقها
+        القديمة في منطقة “البلد”. ومع مرور الزمن، تطورت المدينة لتصبح مركزًا اقتصاديًا وسياحيًا مهمًا، مع حفاظها على طابعها
+        التراثي العريق.
+        </p>
+        <!-- <p class="card-text"><small>Last updated 3 mins ago</small></p> -->
+    </div>
+</div>
+<!-- jeddah Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز المعالم في جدة</h2>
+
+    <div class="row g-4 align-items-stretch">
+
+        <!-- albalad -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/jeddah/albalad.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جدة التريخية (البلد)</h5>
+                    <p class="card-text">من أقدم وأهم المناطق التراثية في المملكة، وتُعد قلب مدينة جدة التاريخي. تتميز بأزقتها الضيقة وبيوتها القديمة ذات
+                    الرواشين الخشبية الجميلة، وتعكس تاريخًا عريقًا كميناء رئيسي للحجاج والتجار. كما تضم أسواقًا شعبية ومعالم تاريخية تمنح
+                    الزوار تجربة ثقافية أصيلة تجمع بين عبق الماضي وروح المكان.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- jeddah_club -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/jeddah/jeddah_club.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">نادي جدة لليخوت</h5>
+                    <p class="card-text">يقع نادي جدة لليخوت على الواجهة البحرية بجوار حلبة كورنيش جدة، في موقع حيوي يجمع بين روح البحر وأناقة التصميم الساحلي.
+                    ويمتد النادي على مساحة تقارب 122 ألف متر مربع، ويضم مرسى حديثًا يُعد من أوائل مراسي اليخوت على ساحل البحر الأحمر. كما
+                    يحظى المرسى باعتراف رسمي كميناء دخول لليخوت الدولية.</p>
+                </div>
+            </div>
+        </div>
+        <!-- jeddah_art -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/jeddah/jeddah_art.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">جدة آرت بروميناد </h5>
+                    <p class="card-text">جدة آرت بروميناد وجهة ترفيهية حديثة على كورنيش جدة، تجمع بين الفنون والأنشطة الترفيهية في أجواء بحرية مميزة. تضم ممشى
+                    جميل، مطاعم ومقاهي متنوعة، إضافة إلى فعاليات وعروض حية تجعلها مكانًا مثاليًا للتنزه وقضاء وقت ممتع مع العائلة والأصدقاء.</p>
+                </div>
+            </div>
+        </div>
+        <!-- jeddah_corniche -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/jeddah/corniche.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">كورنيش جدة</h5>
+                    <p class="card-text">كورنيش جدة من أشهر الوجهات السياحية في المدينة، ويتميز بإطلالته الجميلة على البحر الأحمر وأجوائه الهادئة. يضم مساحات
+                    خضراء، وممرات للمشي، ومناطق ترفيهية ومطاعم، مما يجعله مكانًا مثاليًا للتنزه وقضاء وقت ممتع مع العائلة والأصدقاء.</p>
+                </div>
+            </div>
+        </div>
+        <!-- qassim_mountains -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/jeddah/king_fahad_fountain.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">نافورة الملك فهد</h5>
+                    <p class="card-text">نافورة الملك فهد من أشهر معالم جدة وأعلى نافورة في العالم، حيث يصل ارتفاع مياهها إلى أكثر من 300 متر. تقع على ساحل البحر
+                    الأحمر، وتُعد رمزًا مميزًا للمدينة، خاصة في الليل عندما تُضاء بألوان جميلة، مما يجعلها وجهة رائعة للزوار ومحبي التصوير.</p>
+                </div>
+            </div>
+        </div>
+        <!-- jeddah_museum -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="{% static 'images_and_videos/jeddah/jeddah_museum.png' %}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">متحف الطيبات</h5>
+                    <p class="card-text">متحف الطيبات من أبرز المتاحف في جدة، ويتميز بتصميمه التراثي المستوحى من العمارة الحجازية. يضم مجموعة كبيرة من المقتنيات
+                    التي تروي تاريخ الجزيرة العربية والحضارة الإسلامية، مثل الأدوات القديمة، والمخطوطات، والمجسمات، مما يمنح الزائر تجربة
+                    ثقافية غنية تجمع بين المعرفة وجمال التراث.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Qassim Attractions -->
+<div class="container my-5" dir="rtl">
+    <h2 class="text-center mb-4">أبرز الفعاليات في القصيم </h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4" dir="rtl">
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/qassim/bostan_garden.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">البستان بريدة</h5>
+                    <p class="card-text">يُعد البستان من الوجهات السياحية في بريدة، والتي تتميّز بالمساحات المفتوحة
+                        والأجواء الهادئة؛ ما يجعله مكانًا مناسبًا
+                        للعائلات ومحبي الجلسات الخارجية. صُمّم الموقع بعناية ليلائم الزوار، مع حضور لافت لأشجار النخيل
+                        والإضاءة الهادئة التي
+                        تضفي على المكان طابعًا مريحًا، خاصة في فترات المساء.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">تقع في مدينة بريدة بمنطقة القصيم</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/qassim/asseb.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">جادة عسيب</h5>
+                    <p class="card-text">تقدم جادة عسيب تجربة مميزة في مدينة بريدة النابضة بالحياة. تضم الجادة مجموعة
+                        متنوعة من المقاهي، المخابز، الأماكن المختصة
+                        بالشاي، بالإضافة إلى مطاعم فاخرة تقدم أطباقاً شهية ومتنوعة.
+
+
+                        كما تحتوي الجادة على بوتيكات مميزة لعشاق التسوق، إلى جانب منطقة ألعاب ترفيهية تشمل أنشطة مثل
+                        السهام والرماية، مما يضمن
+                        تجربة ممتعة لجميع الأعمار. سواء كنت تبحث عن طعام لذيذ، أنشطة مسلية، أو وقت ممتع مع العائلة
+                        والأصدقاء، جادة عسيب هي وجهتك
+                        المثالية في بريدة.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">تقع في مدينة بريدة بمنطقة القصيم</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images_and_videos/qassim/historical_museum.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">متحف العقيلات التاريخي</h5>
+                    <p class="card-text">متحف العقيلات التاريخي هو متحف توثيقي أسّسه بدر الوهيبي، وهو باحث في التاريخ
+                        عمل
+                        لسنوات على جمع وتوثيق مواد تاريخية مرتبطة بالمنطقة.
+
+                        يركّز المتحف على حفظ الوثائق والسجلات المكتوبة والمرئية التي تعكس الجوانب الاجتماعية والاقتصادية
+                        لتاريخ القصيم، ويعرضها
+                        بأسلوب واضح ومنظّم. ويتميّز المتحف بسرده لتاريخ الشخصيات البارزة وتقسيمها بحسب اهتماماتها
+                        وقطاعاتها، مثل الاقتصادية
+                        والسياسية والاجتماعية والتجارية.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">يقع في مدينة بريدة بمنطقة القصيم</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
