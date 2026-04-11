@@ -78,6 +78,21 @@ body {
     margin-right: auto;
 }
 
+.section-header a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    background-color: #7a1b80; 
+    border-radius: 20px ;
+    padding-bottom: 2px;
+    transition: 0.3s;
+    padding: 10px 20px;
+}
+
+.section-header a:hover {
+    background-color: #cc91d1;
+}
+
 /* الحاوية الخارجية للسلايدر */
 .slider-wrapper {
     position: relative;
@@ -92,11 +107,13 @@ body {
 .cards-container {
     display: flex;
     gap: 20px;
+    white-space: nowrap;
     overflow-x: auto; /* يسمح بالتمرير البرمجي */
     scroll-behavior: smooth;
     padding: 20px 10px;
     width: 100%;
-    scrollbar-width: none; /* إخفاء السكرول في فايرفوكس */
+    scrollbar-width: none; 
+    -webkit-overflow-scolling: touch;
 }
 
 .cards-container::-webkit-scrollbar {
@@ -150,6 +167,48 @@ body {
     font-size: 14px;
 }
 
+.nav-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.breadcrumb-static{
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items:center;
+    gap: 8px;
+}
+
+.breadcrumb-static a{
+    color: #7a1b80;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-static .sep{
+    color: #ccc;
+}
+
+.bread-static .current-page{
+    color: #333;
+    font-weight: bold;
+}
+
+.back-btn{
+    background-color: transparent;
+    color: #7a1b80;
+    border: 2px solid #7a1b80;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
 /* --- أزرار الأسهم --- */
 .nav-btn {
     position: absolute;
@@ -307,19 +366,6 @@ body {
     color: white;
 }
 
-/* تنسيق رابط View All في الصفحة الرئيسية */
-.view-all-link {
-    text-decoration: none;
-    color: #2f2b4e;
-    font-weight: bold;
-    border-bottom: 2px solid #fca311;
-    padding-bottom: 2px;
-    transition: 0.3s;
-}
-
-.view-all-link:hover {
-    color: #fca311;
-}
 
 /* تنسيق صفحة "جميع المدن" */
 .all-cities-section {
@@ -330,7 +376,7 @@ body {
 .all-cities-section h1 {
     text-align: center;
     margin-bottom: 50px;
-    color: #f9f9f9;
+    color:  #5a145d;
     font-size: 36px;
 }
 
@@ -376,8 +422,9 @@ body {
 
 .section-header h2 {
     font-size: 28px;
-    color: #2f2b4e; /* لون الهوية */
+    color: #2f2b4e; 
     font-weight: 700;
+
 }
 
 /* --- تنسيق زر "عرض الكل" (View All Button) --- */
@@ -402,18 +449,18 @@ body {
 }
 
 /* تنسيق إضافي ليتناسب مع الاتجاه العربي */
-body[dir="rtl"] .section-header {
+body[dir="rtl"] .section-header h2{
     flex-direction: row-reverse; /* يقلب الأماكن في العربي */
 }
 
 /* --- تنسيق الناف بار (الملاحة) --- */
 .navbar {
-    position: absolute; /* يجعله فوق الفيديو */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 50px;
+    padding: 20px 0;
     background: transparent; /* شفاف في البداية */
 }
 
@@ -421,20 +468,22 @@ body[dir="rtl"] .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    width: 90%;
     margin: 0 auto;
     color:white;
 }
 
 .logo {
-    width: 130px; /* حجم الشعار */
+    width: auto; /* حجم الشعار */
     height: auto;
+    display: block;
+    
 }
 
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 30px; /* مسافة بين الروابط */
+    gap: 5px; 
 }
 
 .nav-right a {
@@ -605,7 +654,9 @@ body {
     backdrop-filter: blur(5px);
     transition: 0.3s;
 }
-.back-btn:hover { background: white; color: black; }
+.back-btn:hover {
+     background: white; color: black; 
+    }
 
 /* حاوية الخلفية الكاملة */
 .auth-container {
@@ -926,7 +977,6 @@ body {
     width: 100%;
     height: 100%;
     /* استخدمي مسار صورتك هنا */
-    background-image: url('static' /images/cover.jpg'); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; /* تأثير العمق عند السكرول */
@@ -980,12 +1030,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: transparent !important; /* شفاف ليظهر جمال الصورة */
+    background: transparent; 
     z-index: 100;
 }
 
 .nav-right a {
-    color: white !important;
+    color: white ;
     text-decoration: none;
     margin-left: 25px;
     font-weight: 500;
@@ -994,7 +1044,7 @@ body {
 }
 
 .nav-right a:hover {
-    color: #f3e5f5 !important;
+    color:  #5d1461 ;
     transform: translateY(-2px);
 }
 
@@ -1104,4 +1154,401 @@ body {
     .intro-title { font-size: 1.8rem; }
     .intro-p { font-size: 1.1rem; }
     .intro-stats { gap: 20px; }
+}
+
+/* --- إعدادات الأقسام الجديدة --- */
+.saudi-vision-section {
+    padding: 80px 5%;
+    background: #fdfbff; /* بنفسجي باهت جداً */
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.vision-card {
+    background: linear-gradient(135deg, #7a1b80 0%, #4A148C 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(122, 27, 128, 0.2);
+    text-align: center;
+}
+
+.vision-icon {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffca28; /* ذهبي */
+    margin-bottom: 15px;
+}
+
+.tourism-intro-card h2 {
+    color: #7a1b80;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.tourism-intro-card p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.15rem;
+}
+
+/* --- قسم الأماكن المفضلة --- */
+.favorite-places {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-title {
+    color: #7a1b80;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.places-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.place-item {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px solid #7a1b80;
+    color: #7a1b80;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.place-item:hover {
+    background: #7a1b80;
+    color: white;
+}
+
+.place-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffca28;
+    border-radius: 50%;
+}
+
+/* --- التجاوب مع الجوال --- */
+@media (max-width: 768px) {
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+    .vision-card { padding: 25px; }
+}
+
+/* --- الأقسام الموحدة لصفحات المدن --- */
+
+/* 1. قسم المقدمة (City Intro) */
+.city-intro-section {
+    padding: 80px 10%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.city-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.city-description {
+    flex: 1.5;
+}
+
+.city-description h2 {
+    color: #7a1b80; /* لونك البنفسجي */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.city-description p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    text-align: justify;
+}
+
+/* 2. بوكس الرؤية (Vision Box) */
+.city-vision-box {
+    flex: 1;
+    background: linear-gradient(135deg, #7a1b80 0%, #4A148C 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(122, 27, 128, 0.2);
+    text-align: center;
+}
+
+.city-vision-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #ffca28; /* لمسة ذهبية للعنوان */
+}
+
+.city-vision-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 3. قسم المعالم (Landmarks Section) */
+.city-landmarks {
+    padding: 80px 10%;
+    background-color: #fcfaff; /* خلفية بنفسجية باهتة جداً للتمييز */
+}
+
+.main-section-title {
+    text-align: center;
+    color: #7a1b80;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* خط صغير تحت العنوان للزينة */
+.main-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffca28;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* 4. كروت المعالم (Generic Cards) */
+.landmark-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.generic-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.generic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(122, 27, 128, 0.1);
+    border-color: #7a1b80;
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #7a1b80;
+    margin-bottom: 20px;
+}
+
+.generic-card h4 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.generic-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- التجاوب مع الجوال (Responsive) --- */
+@media (max-width: 992px) {
+    .city-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .city-description h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .city-intro-section, .city-landmarks {
+        padding: 50px 5%;
+    }
+}
+
+.back-container {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: left; /* يضع الزر في اليمين بما أن الموقع عربي */
+}
+
+.back-btn {
+    background-color: transparent;
+    color: #7a1b80; /* لونك البنفسجي */
+    border: 2px solid #7a1b80;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.back-btn i {
+    font-size: 0.9rem;
+}
+
+.back-btn:hover {
+    background-color: #7a1b80;
+    color: #fff;
+    transform: translateX(-5px); /* حركة بسيطة لليمين عند التمرير */
+}
+
+/* للتجاوب مع الجوال */
+@media (max-width: 768px) {
+    .back-container {
+        justify-content: center; /* يتوسط في الجوال */
+    }
+}
+
+/* هيدر الفعالية */
+.event-hero {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.diriyah-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/diriyah-header.jpg'); /* ضعي صورة للدرعية هنا */
+}
+
+.hero-overlay h1 { font-size: 3rem; margin-bottom: 10px; }
+
+/* تقسيم المحتوى */
+.event-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 50px 10%;
+}
+
+.event-info h2, .event-info h3 { color: #7a1b80; margin-top: 25px; }
+.activities-list { padding-right: 20px; line-height: 2; }
+
+/* كرت الحجز الجانبي */
+.booking-card {
+    background: #fdfbff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.booking-btn {
+    display: block;
+    background: #7a1b80;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.booking-btn:hover { background: #5a145d; }
+
+.detail-item { margin: 15px 0; display: flex; gap: 10px; font-size: 0.9rem; }
+
+/* للجوال */
+@media (max-width: 768px) {
+    .event-grid { grid-template-columns: 1fr; }
+}
+
+/* هذا الكود يضمن أن الرابط لا يغير شكل الكارد */
+.card-link {
+    text-decoration: none; /* حذف الخط السفلي */
+    color: inherit;       /* الحفاظ على ألوان النصوص الأصلية */
+    display: block;      /* جعل الرابط يأخذ حجم الكارد كاملاً */
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* حركة اختيارية: تكبير بسيط جداً عند تمرير الماوس */
+.card-link:hover .city-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* تنسيق خاص بصفحة تسجيل الدخول لضمان الوضوح التام */
+
+/* جعل الروابط والفواصل والكلمات بيضاء تماماً */
+.login-nav .breadcrumb-static a, 
+.login-nav .breadcrumb-static .sep, 
+.login-nav .breadcrumb-static .current-page {
+    color: #ffffff !important; 
+    opacity: 1 !important; /* لضمان عدم وجود شفافية تجعل اللون باهتاً */
+    text-decoration: none;
+}
+
+/* زر العودة الأبيض */
+.back-btn-light {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.back-btn-light:hover {
+    background-color: #ffffff  !important;
+    color: #7a1b80  !important; 
+}
+
+/* التأكد من توزيع العناصر يميناً ويساراً */
+.login-nav .nav-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    
 }

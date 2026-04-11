@@ -11,6 +11,45 @@
         </h1>
     </section>
 
+    <div class="navigation-controls">
+    <div class="navigation-controls">
+    <div class="container nav-flex-container">  
+        <nav class="breadcrumb-static">
+            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+            <span class="sep">/</span>
+            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+            <span class="sep">/</span>
+            <span class="current-page translate-text" data-ar=" جازان " data-en="Jazan"> Jazan</span>
+        </nav>
+        <button onclick="window.history.back()" class="back-btn">
+            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+        </button>
+    </div>
+</div>
+    
+    <section class="city-intro-section">
+    <div class="container">
+        <div class="city-grid">
+            <div class="city-description">
+                <h2 class="translate-text" data-ar="جازان: لؤلؤة الجنوب" data-en="Jazan: Pearl of the South">جازان: لؤلؤة الجنوب</h2>
+                <p class="translate-text" 
+                   data-ar="تعتبر جازان بوابة المملكة البحرية على البحر الأحمر، وهي أرض التنوع المذهل؛ حيث تجتمع الشواطئ الفيروزية والجزر الحالمة مع المرتفعات الجبلية الخضراء. تشتهر جازان بإنتاج البن الخولاني الفاخر والفل الجازاني العبق، وتعد وجهة مثالية لمحبي الطبيعة والاستكشاف." 
+                   data-en="Jazan is the Kingdom's maritime gateway on the Red Sea, a land of stunning diversity where turquoise beaches and dreamy islands meet green mountain highlands. Famous for its premium Khawlani coffee and fragrant jasmine, Jazan is an ideal destination for nature lovers and explorers.">
+                   تعتبر جازان بوابة المملكة البحرية، حيث تجتمع الشواطئ الفيروزية مع المرتفعات الجبلية الخضراء.
+                </p>
+            </div>
+            <div class="city-vision-box">
+                <h3 class="translate-text" data-ar="جازان في رؤية 2030" data-en="Jazan in Vision 2030">جازان في رؤية 2030</h3>
+                <p class="translate-text" 
+                   data-ar="تركز رؤية 2030 على تحويل جازان إلى مركز لوجستي وصناعي عالمي عبر مدينة جازان للصناعات الأساسية والتحويلية، بالإضافة إلى تطوير جزر فرسان لتصبح وجهة سياحية بيئية عالمية تنافس أجمل جزر العالم." 
+                   data-en="Vision 2030 focuses on transforming Jazan into a global logistics and industrial hub, in addition to developing the Farasan Islands into a world-class ecotourism destination.">
+                   تركز الرؤية على تطوير جزر فرسان لتصبح وجهة سياحية بيئية عالمية تنافس أجمل جزر العالم.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="filter-container">
         <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
         <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
@@ -20,10 +59,33 @@
         <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
     </div>
 
+
+<section class="city-landmarks">
+    <div class="container">
+        <h2 class="main-section-title translate-text" data-ar="أبرز معالم جازان" data-en="Top Landmarks of Jazan">أبرز معالم جازان</h2>
+        <div class="landmark-cards-wrapper">
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-fish"></i></div>
+                <h4 class="translate-text" data-ar="جزر فرسان" data-en="Farasan Islands">جزر فرسان</h4>
+                <p class="translate-text" data-ar="أرخبيل من الجزر الساحرة التي تتميز بشواطئها البكر، وشعابها المرجانية النادرة، وتنوعها الحيوي الفريد." data-en="An archipelago of charming islands featuring pristine beaches, rare coral reefs, and unique biodiversity.">أرخبيل من الجزر الساحرة التي تتميز بشواطئها البكر وشعابها المرجانية النادرة.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-cloud-sun"></i></div>
+                <h4 class="translate-text" data-ar="جبال فيفاء" data-en="Fayfa Mountains">جبال فيفاء</h4>
+                <p class="translate-text" data-ar="تُعرف بجبال الزمرد لشدة خضرتها، وتتميز بمدرجاتها الزراعية التي تعانق الضباب وبيوتها الأسطوانية التقليدية." data-en="Known as the Emerald Mountains for their lush greenery, featuring agricultural terraces that embrace the clouds.">تُعرف بجبال الزمرد لمدرجاتها الزراعية الخضراء التي تعانق الضباب.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-water"></i></div>
+                <h4 class="translate-text" data-ar="وادي لجب" data-en="Wadi Lajab">وادي لجب</h4>
+                <p class="translate-text" data-ar="صدع صخري مذهل يضم شلالات ومساحات خضراء معلقة بين جبال شاهقة، ويعد جنة لهواة المغامرة." data-en="A stunning rocky canyon with waterfalls and hanging greenery, a paradise for adventure enthusiasts.">صدع صخري مذهل يضم شلالات ومساحات خضراء، وهو جنة لهواة المغامرة.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="riyadh-grid">
-    
         <div class="city-card filter-item nature">
-            <div class="card-image"><img src="{% static 'images/Farasn.jpg' %}" alt="Farasan Island"></div>
+            <div class="card-image"><img src="{% static 'images/Farasan.jpg' %}" alt="Farasan Island"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جزيرة فرسان " data-en="Farasan Island">Farasan Island</h3>
                 <p class="translate-text" data-ar="طبيعة " data-en="Nature">Nature</p>

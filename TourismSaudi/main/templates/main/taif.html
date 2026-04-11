@@ -11,6 +11,66 @@
         </h1>
     </section>
 
+    <div class="navigation-controls">
+    <div class="container nav-flex-container">  
+        <nav class="breadcrumb-static">
+            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+            <span class="sep">/</span>
+            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+            <span class="sep">/</span>
+            <span class="current-page translate-text" data-ar=" الطائف" data-en="Al Taif"> Al Taif</span>
+        </nav>
+        <button onclick="window.history.back()" class="back-btn">
+            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+        </button>
+    </div>
+</div>
+
+    <section class="city-intro-section">
+    <div class="container">
+        <div class="city-grid">
+            <div class="city-description">
+                <h2 class="translate-text" data-ar="الطائف: مدينة الورد" data-en="Taif: City of Roses">الطائف: مدينة الورد</h2>
+                <p class="translate-text" 
+                   data-ar="تعتبر الطائف عاصمة المصائف السعودية، وهي المدينة التي تتربع فوق قمم جبال السروات بهوائها العليل وبساتينها الغناء. تشتهر عالمياً بإنتاج أجود أنواع الورد الطائفي، وتعد وجهة تاريخية عريقة تجمع بين القصور الأثرية والمتنزهات الطبيعية الساحرة، مما يجعلها ملاذاً مفضلاً للزوار طوال العام." 
+                   data-en="Taif is the capital of Saudi summer resorts, perched atop the Sarawat Mountains with its cool breeze and lush orchards. Globally famous for its premium Taif roses, it is an ancient historical destination blending heritage palaces with charming natural parks, making it a favorite year-round retreat.">
+                   تعتبر الطائف عاصمة المصائف السعودية ومدينة الورد، حيث يلتقي الهواء العليل بعبق البساتين والتاريخ العريق فوق قمم الجبال.
+                </p>
+            </div>
+            <div class="city-vision-box">
+                <h3 class="translate-text" data-ar="الطائف في رؤية 2030" data-en="Taif in Vision 2030">الطائف في رؤية 2030</h3>
+                <p class="translate-text" 
+                   data-ar="تركز رؤية 2030 على تطوير الطائف كوجهة سياحية وثقافية عالمية عبر مشاريع كبرى مثل 'الطائف الجديدة' وتطوير مطار الطائف الدولي، بالإضافة إلى دعم صناعة الورد الطائفي وتحويلها إلى علامة تجارية عالمية تعزز الاقتصاد المحلي." 
+                   data-en="Vision 2030 focuses on developing Taif into a global tourism and cultural destination through mega-projects like 'New Taif' and supporting the Taif rose industry to become a global brand.">
+                   تهدف الرؤية لتحويل الطائف إلى وجهة سياحية عالمية رائدة عبر مشروع "الطائف الجديدة" ودعم الصناعات المحلية العريقة كالورد الطائفي.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="city-landmarks">
+    <div class="container">
+        <h2 class="main-section-title translate-text" data-ar="أبرز معالم الطائف" data-en="Top Landmarks of Taif">أبرز معالم الطائف</h2>
+        <div class="landmark-cards-wrapper">
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-cloud-sun"></i></div>
+                <h4 class="translate-text" data-ar="الهدا والشفا" data-en="Al-Hada & Ash-Shafa">الهدا والشفا</h4>
+                <p class="translate-text" data-ar="أشهر المرتفعات الجبلية التي تتميز بضبابها الكثيف، ومناظرها الخلابة، وتلفريك الهدا الذي يوفر إطلالات بانورامية ساحرة." data-en="The most famous mountain highlands known for thick mist, stunning views, and the Al-Hada cable car offering panoramic vistas.">مرتفعات جبلية ساحرة تتميز بالضباب الكثيف والتلفريك الذي يطل على أجمل المناظر الطبيعية.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                <h4 class="translate-text" data-ar="قصر شبرا التاريخي" data-en="Shubra Palace">قصر شبرا التاريخي</h4>
+                <p class="translate-text" data-ar="تحفة معمارية تمزج بين الطرازين الروماني والإسلامي، وكان مقراً صيفياً للملك عبد العزيز والملك فيصل رحمهما الله." data-en="An architectural masterpiece blending Roman and Islamic styles, once the summer residence of King Abdulaziz and King Faisal.">تحفة معمارية تاريخية ومتحف يروي تفاصيل العمارة الحجازية العريقة وقصص ملوك المملكة.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-feather-alt"></i></div>
+                <h4 class="translate-text" data-ar="سوق عكاظ" data-en="Souq Okaz">سوق عكاظ</h4>
+                <p class="translate-text" data-ar="ملتقى تاريخي للشعر والثقافة العربية، تم إحياؤه ليصبح وجهة سياحية ثقافية تنبض بالفعاليات والأنشطة التراثية." data-en="A historical hub for Arabic poetry and culture, revived as a cultural tourist destination vibrant with heritage activities.">ملتقى تاريخي للشعر والأدب العربي، يجسد عراقة التراث الثقافي بفعاليات إبداعية حديثة.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <div class="filter-container">
         <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>

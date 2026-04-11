@@ -11,6 +11,68 @@
         </h1>
     </section>
 
+    <div class="navigation-controls">
+     <div class="navigation-controls">
+    <div class="container nav-flex-container">  
+        <nav class="breadcrumb-static">
+            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+            <span class="sep">/</span>
+            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+            <span class="sep">/</span>
+            <span class="current-page translate-text" data-ar=" جدة " data-en="Jeddah">Jeddah</span>
+        </nav>
+        <button onclick="window.history.back()" class="back-btn">
+            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+        </button>
+    </div>
+</div>
+
+    <section class="city-intro-section">
+    <div class="container">
+        <div class="city-grid">
+            <div class="city-description">
+                <h2 class="translate-text" data-ar="جدة: عروس البحر الأحمر" data-en="Jeddah: Bride of the Red Sea">جدة: عروس البحر الأحمر</h2>
+                <p class="translate-text" 
+                   data-ar="تعد مدينة جدة بوابة الحرمين الشريفين وواحدة من أكثر المدن حيوية وانفتاحاً في المملكة. تتميز بروحها التاريخية في حي 'البلد' العتيق، وشواطئها العصرية الساحرة على كورنيش جدة، مما يجعلها وجهة سياحية عالمية تجمع بين الفن، الثقافة، والتسوق." 
+                   data-en="Jeddah is the gateway to the Two Holy Mosques and one of the most vibrant and open cities in the Kingdom. It is characterized by its historical spirit in the ancient 'Al-Balad' district and its charming modern beaches on the Jeddah Corniche, making it a global destination for art, culture, and shopping.">
+                   تعد جدة بوابة الحرمين الشريفين، حيث يلتقي تاريخ حي البلد العتيق مع حداثة الكورنيش والوجهات البحرية.
+                </p>
+            </div>
+            <div class="city-vision-box">
+                <h3 class="translate-text" data-ar="جدة في رؤية 2030" data-en="Jeddah in Vision 2030">جدة في رؤية 2030</h3>
+                <p class="translate-text" 
+                   data-ar="من خلال مشاريع كبرى مثل 'وسط جدة' وتطوير ميناء جدة الإسلامي، تهدف الرؤية لتعزيز مكانة جدة كمركز لوجستي وسياحي عالمي، مع تطوير وجهات ترفيهية تنافس أرقى مدن العالم الساحلية." 
+                   data-en="Through major projects like 'Jeddah Central' and the development of Jeddah Islamic Port, the Vision aims to enhance Jeddah's position as a global logistics and tourism hub.">
+                   تهدف الرؤية لتعزيز مكانة جدة كوجهة سياحية رائدة عبر مشاريع ضخمة مثل "وسط جدة" وتطوير الواجهات البحرية.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="city-landmarks">
+    <div class="container">
+        <h2 class="main-section-title translate-text" data-ar="أبرز معالم جدة" data-en="Top Landmarks of Jeddah">أبرز معالم جدة</h2>
+        <div class="landmark-cards-wrapper">
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                <h4 class="translate-text" data-ar="جدة التاريخية (البلد)" data-en="Historic Jeddah">جدة التاريخية (البلد)</h4>
+                <p class="translate-text" data-ar="موقع مسجل في اليونسكو، يتميز ببيوته الحجازية التقليدية ورواشينه الخشبية التي تحكي قصص الماضي." data-en="A UNESCO World Heritage site, famous for its traditional Hijazi houses and wooden Rawashins that tell stories of the past.">موقع مسجل في اليونسكو، يتميز ببيوته الحجازية ورواشينه الخشبية الفريدة.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-water"></i></div>
+                <h4 class="translate-text" data-ar="نافورة الملك فهد" data-en="King Fahd's Fountain">نافورة الملك فهد</h4>
+                <p class="translate-text" data-ar="أطول نافورة في العالم وأيقونة جدة الشهيرة التي تزين أفق المدينة بإطلالتها البحرية الخلابة." data-en="The tallest fountain in the world and Jeddah's famous icon, decorating the city's skyline with its stunning sea view.">أطول نافورة في العالم وأيقونة جدة الشهيرة التي تضيء سماء البحر الأحمر.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-umbrella-beach"></i></div>
+                <h4 class="translate-text" data-ar="واجهة جدة البحرية" data-en="Jeddah Waterfront">واجهة جدة البحرية</h4>
+                <p class="translate-text" data-ar="وجهة عصرية متكاملة تضم مسارات للمشي، مجسمات فنية، ومناطق ترفيهية تناسب جميع أفراد العائلة." data-en="A modern integrated destination featuring walking paths, art sculptures, and entertainment areas for all ages.">وجهة عصرية متكاملة تضم مسارات للمشي ومجسمات فنية عالمية على ساحل البحر.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="filter-container">
         <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
         <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>

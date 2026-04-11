@@ -11,9 +11,56 @@
         we open our hearts  "></p>
     </div>
 
+    <section class="saudi-vision-section">
+    <div class="container">
+        <div class="vision-grid">
+            <div class="vision-card animate-on-scroll">
+                <div class="vision-icon">2030</div>
+                <h2 class="translate-text" data-ar="رؤية المملكة 2030" data-en="Saudi Vision 2030">رؤية المملكة 2030</h2>
+                <p class="translate-text" 
+                   data-ar="نهدف لاستقبال 100 مليون زائر سنوياً، لنتشارك مع العالم سحر ثقافتنا وعمق تاريخنا، محولين المملكة إلى وجهة سياحية عالمية رائدة."
+                   data-en="We aim to welcome 100 million visitors annually, sharing our culture and history with the world, transforming the Kingdom into a leading global destination.">
+                   نهدف لاستقبال 100 مليون زائر سنوياً، لنتشارك مع العالم سحر ثقافتنا وعمق تاريخنا.
+                </p>
+            </div>
 
+            <div class="tourism-intro-card animate-on-scroll">
+                <h2 class="translate-text" data-ar="السياحة في السعودية" data-en="Tourism in Saudi">السياحة في السعودية</h2>
+                <p class="translate-text" 
+                   data-ar="اكتشف التنوع المذهل؛ من رمال الربع الخالي الذهبية إلى غابات عسير الخضراء، ومن عبق التاريخ في العلا إلى شواطئ البحر الأحمر الساحرة."
+                   data-en="Discover stunning diversity; from the golden sands of the Empty Quarter to the green forests of Asir, and from the history of AlUla to the Red Sea shores.">
+                   اكتشف التنوع المذهل؛ من رمال الربع الخالي الذهبية إلى غابات عسير الخضراء.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="city-section">
+<section class="favorite-places">
+    <div class="container">
+        <h2 class="section-title translate-text" data-ar="الأماكن المفضلة للسياح" data-en="Top Tourist Destinations">الأماكن المفضلة للسياح</h2>
+        <div class="places-grid">
+            <div class="place-item">
+                <div class="place-dot"></div>
+                <span class="translate-text" data-ar="مدينة العلا التاريخية" data-en="Historic AlUla">مدينة العلا التاريخية</span>
+            </div>
+            <div class="place-item">
+                <div class="place-dot"></div>
+                <span class="translate-text" data-ar="مشروع البحر الأحمر" data-en="The Red Sea Project">مشروع البحر الأحمر</span>
+            </div>
+            <div class="place-item">
+                <div class="place-dot"></div>
+                <span class="translate-text" data-ar="الدرعية التاريخية" data-en="Historic Diriyah">الدرعية التاريخية</span>
+            </div>
+            <div class="place-item">
+                <div class="place-dot"></div>
+                <span class="translate-text" data-ar="جبال السودة في أبها" data-en="Al-Soudah Mountains">جبال السودة في أبها</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="city-section" id="#cities">
         <div class="section-header">
             <h2 id="#discover" class="translate-text" data-ar="استكشف المدن" data-en="Explore Cities">Explore Cities</h2>
             <a href="{% url 'main:discover_view' %}" class= "translate-text"class="view-all-link" data-ar="عرض الكل" data-en="View All">View All</a>
@@ -155,6 +202,19 @@
                         </div>
                     </div>
                 </a>
+
+                <a href="{% url 'main:alqassim_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/alqassim.jpg' %}" alt="taif">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="القصيم" data-en="AlQassim">AlQassim</h3>
+                            <p class="location translate-text" data-ar=" واحة النخيل والكرم " data-en="The Oasis of Palm & Hospitality">The Oasis of Palm & Hospitality</p>
+                        </div>
+                    </div>
+                </a>
+
 
             </div> <button class="nav-btn next" onclick="scrollSlider(1)">&#10095;</button>
         </div>

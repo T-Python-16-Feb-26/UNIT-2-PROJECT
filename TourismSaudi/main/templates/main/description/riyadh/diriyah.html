@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}الدرعية - Diriyah{% endblock %}
+
+{% block city_breadcrumb %}
+<span class="translate-text" data-ar="الرياض" data-en="Riyadh">الرياض</span>
+<span class="sep">/</span>
+<span class="translate-text" data-ar="الدرعية" data-en="Diriyah">الدرعية</span>
+{% endblock %}
+
+{% block content %}
+<main class="event-detail-page">
+    <section class="event-hero diriyah-bg">
+        <div class="hero-overlay">
+            <h1 class="translate-text" data-ar="حي الطريف بالدرعية" data-en="At-Turaif, Diriyah">حي الطريف بالدرعية</h1>
+            <p class="translate-text" data-ar="جوهرة المملكة وتاريخها العريق" data-en="The Kingdom's Jewel & Ancient History">جوهرة المملكة وتاريخها العريق</p>
+        </div>
+    </section>
+
+    <div class="container event-grid">
+        <article class="event-info">
+            <h2 class="translate-text" data-ar="عن الدرعية" data-en="About Diriyah">عن الدرعية</h2>
+            <p class="translate-text" 
+               data-ar="تعتبر الدرعية رمزاً وطنياً وتاريخياً، حيث كانت عاصمة الدولة السعودية الأولى. حي الطريف المسجل في قائمة اليونسكو يضم قصوراً طينية شاهدة على مجد الماضي، والآن أصبحت وجهة سياحية عالمية تجمع بين الفخامة والأصالة." 
+               data-en="Diriyah is a national symbol and the capital of the first Saudi state. At-Turaif District, a UNESCO World Heritage site, features mud palaces witnessing past glory, now a global destination blending luxury with heritage.">
+               نبذة عن تاريخ الدرعية العريق...
+            </p>
+
+            <h3 class="translate-text" data-ar="الفعاليات والتجارب" data-en="Activities & Experiences">الفعاليات والتجارب</h3>
+            <ul class="activities-list">
+                <li class="translate-text" data-ar="جولات تاريخية في حي الطريف" data-en="Historical tours in At-Turaif">جولات تاريخية في حي الطريف</li>
+                <li class="translate-text" data-ar="مطل البجيري (أفخم المطاعم والكافيهات)" data-en="Bujairi Terrace (Fine Dining & Cafes)">مطل البجيري (أفخم المطاعم والكافيهات)</li>
+                <li class="translate-text" data-ar="عروض ضوئية وفنون شعبية" data-en="Light shows & Folk arts">عروض ضوئية وفنون شعبية</li>
+            </ul>
+        </article>
+
+        <aside class="booking-card">
+            <h3 class="translate-text" data-ar="معلومات الحجز" data-en="Booking Info">معلومات الحجز</h3>
+            <p class="translate-text" data-ar="يتم حجز التذاكر لدخول الدرعية ومطل البجيري عبر الموقع الرسمي:" data-en="Tickets for Diriyah & Bujairi Terrace can be booked via:">
+                يتم حجز التذاكر عبر الموقع الرسمي:
+            </p>
+            <a href="https://www.diriyah.sa/" target="_blank" class="booking-btn">Diriyah.sa</a>
+            
+            <div class="event-details-mini">
+                <div class="detail-item">
+                    <span class="icon">📍</span>
+                    <span class="translate-text" data-ar="الرياض، الدرعية" data-en="Riyadh, Diriyah">الرياض، الدرعية</span>
+                </div>
+                <div class="detail-item">
+                    <span class="icon">⏰</span>
+                    <span class="translate-text" data-ar="10:00 ص - 12:00 م" data-en="10:00 AM - 12:00 PM">10:00 ص - 12:00 م</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+{% endblock %}

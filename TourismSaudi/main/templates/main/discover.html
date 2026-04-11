@@ -4,10 +4,29 @@
 {% block title %} All Cities - Discover Saudi {% endblock %}
 
 {% block content %}
+ <section class="city-detail-header">
+        <h1 class="translate-text" 
+            data-ar=" جميع المدن " 
+            data-en="All Cities">
+            All cities
+        </h1>
+    </section>
+
+ <div class="navigation-controls">
+    <div class="container nav-flex-container">  
+        <nav class="breadcrumb-static">
+            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+            <span class="sep">/</span>
+            <span class="translate-text" data-ar=" جميع المدن " data-en="All Cities">All Cities</span>
+        </nav>
+        <button onclick="window.history.back()" class="back-btn">
+            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+        </button>
+    </div>
+</div>
+    
 <section class="all-cities-section">
     <div class="container">
-        <h1 class="translate-text" data-ar="جميع المدن" data-en="All Cities">All Cities</h1>
-        
         <div class="cities-grid">
             <a href="{% url 'main:riyadh_view' %}" class="city-card-link">
                 <div class="city-card">
@@ -135,6 +154,18 @@
                         </div>
                         <div class="card-content">
                             <h3 class="translate-text" data-ar="الطائف" data-en="Taif">Taif</h3>
+                            <p class="location translate-text" data-ar="مدينة الورد" data-en="City of Roses">City of Roses</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="{% url 'main:alqassim_view' %}" class="city-card-link">
+                    <div class="city-card">
+                        <div class="card-image">
+                            <img src="{% static 'images/alqassim.jpg' %}" alt="qassim">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="translate-text" data-ar="القصيم" data-en="Qassim">Qassim</h3>
                             <p class="location translate-text" data-ar="مدينة الورد" data-en="City of Roses">City of Roses</p>
                         </div>
                     </div>

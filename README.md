@@ -1,7 +1,7 @@
 # UNIT-2-PROJECT
 
-## Using Django create a project about our beloved kingdom of your choosing. Examples :
-- Tourism in Saudi Arabia.
+## Using Django create a project about our beloved kingdom of your choosing. Examples : 
+- Tourism in Saudi Arabia. 
 - Culture & Heritage in Saudi Arabia.
 - Manufacturing & Industries in Saudi Arabia.
 - Agriculture in Saudi Arabia.
@@ -11,16 +11,16 @@
 
 
 # Minumum Requirements
-- Use Django.
-- Use templates & templates inheritance.
-- Use dynamic urls where applicable.
-- Use static files where applicable.
-- homepage + at least 6 pages.
-- Coherent, uniform design .
-- Implement dark and light mode.
-- Must be Responsive. 
-- You can use a CSS library to style your website (such as Bootstrap or equivalent)
-- You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)
+- Use Django.  DONE!
+- Use templates & templates inheritance.   DONE!
+- Use dynamic urls where applicable.       DONE!
+- Use static files where applicable.       DONE!
+- homepage + at least 6 pages.             DONE!
+- Coherent, uniform design .               DONE!
+- Implement dark and light mode.           NOT YET!
+- Must be Responsive.                      NOT YET!
+- You can use a CSS library to style your website (such as Bootstrap or equivalent) I DONT NEED IT!
+- You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)      I DONT NEED IT!
 
 
 

@@ -47,3 +47,4 @@ def discover_view(request):
 
 def login_view(request):
     return render (request, "main/login.html")
+

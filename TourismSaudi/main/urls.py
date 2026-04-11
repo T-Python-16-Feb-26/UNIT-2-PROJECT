@@ -19,4 +19,5 @@ urlpatterns = [
     path("Alqassim/", views.alqassim_view, name="alqassim_view"),
     path("view/all", views.discover_view, name="discover_view"),
     path("login/", views.login_view, name="login_view"),
+
 ]

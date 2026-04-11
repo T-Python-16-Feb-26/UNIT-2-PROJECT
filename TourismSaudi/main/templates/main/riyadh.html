@@ -11,13 +11,73 @@
             Riyadh: The Heart of the Kingdom
         </h1>
     </section>
-    
+
+  
+    <div class="navigation-controls">
+    <div class="container nav-flex-container">  
+        <nav class="breadcrumb-static">
+            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+            <span class="sep">/</span>
+            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+            <span class="sep">/</span>
+            <span class="current-page translate-text" data-ar=" الرياض " data-en="Riyadh">Riyadh</span>
+        </nav>
+        <button onclick="window.history.back()" class="back-btn">
+            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+        </button>
+    </div>
+</div>
+
+    <section class="city-intro-section">
+    <div class="container">
+        <div class="city-grid">
+            <div class="city-description">
+                <h2 class="translate-text" data-ar="الرياض: عاصمة الطموح" data-en="Riyadh: The Capital of Ambition">الرياض: عاصمة الطموح</h2>
+                <p class="translate-text" 
+                   data-ar="الرياض هي قلب المملكة النابض، حيث يلتقي عبق الماضي التليد بتطلعات المستقبل المشرق. تتميز العاصمة بتنوعها الفريد الذي يجمع بين مراكز التسوق العالمية، الأحياء التاريخية العريقة، والوجهات الترفيهية التي لا تنام." 
+                   data-en="Riyadh is the beating heart of the Kingdom, where the fragrance of the ancient past meets the aspirations of a bright future. The capital is known for its unique diversity, blending world-class shopping malls, historic districts, and entertainment destinations that never sleep.">
+                   الرياض هي قلب المملكة النابض، حيث يلتقي عبق الماضي التليد بتطلعات المستقبل المشرق.
+                </p>
+            </div>
+            <div class="city-vision-box">
+                <h3 class="translate-text" data-ar="الرياض في رؤية 2030" data-en="Riyadh in Vision 2030">الرياض في رؤية 2030</h3>
+                <p class="translate-text" 
+                   data-ar="بحلول عام 2030، تهدف الرياض لتكون واحدة من أكبر عشر اقتصاديات مدن في العالم، مع مشاريع نوعية مثل حديقة الملك سلمان والمسار الرياضي التي تعزز جودة الحياة." 
+                   data-en="By 2030, Riyadh aims to be one of the top ten city economies in the world, with qualitative projects like King Salman Park and the Sports Boulevard enhancing the quality of life.">
+                   بحلول عام 2030، تهدف الرياض لتكون واحدة من أكبر عشر اقتصاديات مدن في العالم.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="city-landmarks">
+    <div class="container">
+        <h2 class="main-section-title translate-text" data-ar="أبرز معالم العاصمة" data-en="Top Landmarks of the Capital">أبرز معالم العاصمة</h2>
+        <div class="landmark-cards-wrapper">
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-fort-awesome"></i></div>
+                <h4 class="translate-text" data-ar="قصر المصمك" data-en="Al-Masmak Fortress">قصر المصمك</h4>
+                <p class="translate-text" data-ar="قلب الرياض التاريخي والشاهد الأول على قصة توحيد المملكة العربية السعودية." data-en="The historical heart of Riyadh and the first witness to the story of the unification of Saudi Arabia.">قلب الرياض التاريخي والشاهد الأول على قصة توحيد المملكة.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-monument"></i></div>
+                <h4 class="translate-text" data-ar="الدرعية التاريخية" data-en="Historic Diriyah">الدرعية التاريخية</h4>
+                <p class="translate-text" data-ar="جوهرة المملكة التاريخية ومقر الدولة السعودية الأولى، وتتميز بعمارتها النجدية الفريدة." data-en="The Kingdom's historical jewel and the seat of the first Saudi state, featuring unique Najdi architecture.">جوهرة المملكة التاريخية ومقر الدولة السعودية الأولى.</p>
+            </div>
+            <div class="generic-card">
+                <div class="card-icon"><i class="fas fa-city"></i></div>
+                <h4 class="translate-text" data-ar="مركز الملك عبد الله المالي" data-en="KAFD">مركز الملك عبد الله المالي</h4>
+                <p class="translate-text" data-ar="الوجهة المالية والاقتصادية الأكثر تطوراً، وأيقونة التصميم المعماري الحديث في المنطقة." data-en="The most advanced financial destination and an icon of modern architectural design in the region.">الوجهة المالية الأكثر تطوراً وأيقونة التصميم الحديث.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="filter-container">
         <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
         <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
         <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="مطاعم" data-en="Food" onclick="filterSelection('food')">Food</button>
         <button class="filter-btn translate-text" data-ar="صحراء" data-en="Desert" onclick="filterSelection('desert')">Desert</button>
         <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
         <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
@@ -25,7 +85,7 @@
     </div>
 
     <div class="riyadh-grid">
-        
+
         <div class="city-card filter-item culture">
             <div class="card-image"><img src="{% static 'images/Dariyah1.jpg' %}" alt="Diriyah"></div>
             <div class="card-content">
@@ -34,7 +94,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item desert">
+        <div class="city-card filter-item desert nature">
             <div class="card-image"><img src="{% static 'images/edge-of-world.jpg' %}" alt="Edge of the World"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar="حافة العالم" data-en="Edge of the World">Edge of the World</h3>
@@ -42,23 +102,23 @@
             </div>
         </div>
 
-        <div class="city-card filter-item shopping food">
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/boulevard-city.jpg' %}" alt="Boulevard"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar="بوليفارد سيتي" data-en="Boulevard City">Boulevard City</h3>
-                <p class="translate-text" data-ar="تسوق ومطاعم" data-en="Shopping & Food">Shopping & Food</p>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
             </div>
         </div>
 
-        <div class="city-card filter-item shopping food">
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/boulevard-world.jpg' %}" alt="Boulevard"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar="بوليفارد وورلد" data-en="Boulevard City">Boulevard World</h3>
-                <p class="translate-text" data-ar="تسوق ومطاعم" data-en="Shopping & Food">Shopping & Food</p>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
             </div>
         </div>
 
-        <div class="city-card filter-item desert">
+        <div class="city-card filter-item desert nature">
             <div class="card-image"><img src="{% static 'images/red-sand.jpg' %}" alt="Red Sands"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar="الرمال الحمراء" data-en="Red Sands">Red Sands</h3>
@@ -82,11 +142,11 @@
             </div>
         </div>
 
-        <div class="city-card filter-item shopping food">
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/theGroves.jpg' %}" alt="The Groves "></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" ذا جروفز " data-en=" The Groves "> The Groves</h3>
-                <p class="translate-text" data-ar="مطاعم فاخرة" data-en="Luxury Food"> Luxury Food </p>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
             </div>
         </div>
 
@@ -118,11 +178,11 @@
             <div class="card-image"><img src="{% static 'images/KAFD.jpg' %}" alt=" KAFD "></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" مدينة الملك عبدالله المالية " data-en=" KAFD "> KAFD </h3>
-                <p class="translate-text" data-ar= " تسوق " data-en=" Shopping "> Shopping </p>
+                <p class="translate-text" data-ar= " ترفية " data-en=" Entertaiment "> Entertaiment </p>
             </div>
         </div>
 
-        <div class="city-card filter-item desert">
+        <div class="city-card filter-item desert nature">
             <div class="card-image"><img src="{% static 'images/Thumamah.jpg' %}" alt=" Thumamah "></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" الثمامة " data-en=" KAFD "> Thumahah  </h3>
@@ -130,15 +190,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item shopping">
-            <div class="card-image"><img src="{% static 'images/Riyadh-Park-Mall.jpg' %}" alt=" Riyadh Park Mall "></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" الرياض بارك  " data-en=" Riyadh Park "> Riyadh Park </h3>
-                <p class="translate-text" data-ar= " تسوق " data-en=" Shopping "> Shopping </p>
-            </div>
-        </div>
-
-        <div class="city-card filter-item valley">
+        <div class="city-card filter-item valley nature">
             <div class="card-image"><img src="{% static 'images/Hanifah.jpg' %}" alt=" Hanifah "></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" وادي حنيفة " data-en=" Hanifah Valley"> Hanifah valley </h3>
@@ -146,7 +198,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item valley">
+        <div class="city-card filter-item valley nature">
             <div class="card-image"><img src="{% static 'images/Namar-Valley.jpg' %}" alt=" Namar "></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" وادي نمار " data-en=" Namar Valley"> Namar valley </h3>
