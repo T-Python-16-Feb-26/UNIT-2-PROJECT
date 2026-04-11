@@ -6177,3 +6177,190 @@ main {
 }
 
 /* ************************************************************ missile page end ************************************************************ */
+
+
+/* ************************************************************  hero page start********************************************************************** */
+.martyrs-section {
+    width: 100%;
+    background: #0f3d2e;
+    padding: 80px 20px;
+}
+
+.martyrs-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.martyrs-media {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.martyrs-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+}
+
+.martyrs-content {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    width: calc(100% - 80px);
+    max-width: 850px;
+    text-align: center;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.martyrs-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.14);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    color: #f2d98a;
+    font-size: 0.92rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.martyrs-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.martyrs-content p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #d9e5ee;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.martyrs-quote-box {
+    max-width: 950px;
+    margin: 45px auto 0;
+    padding: 35px 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.martyrs-quote {
+    color: #e7edf2;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+}
+
+.martyrs-quote::before,
+.martyrs-quote::after {
+    color: rgba(212, 175, 55, 0.65);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.martyrs-quote::before {
+    content: "“ ";
+}
+
+.martyrs-quote::after {
+    content: " ”";
+}
+
+/* responsive */
+@media (max-width: 992px) {
+    .martyrs-hero {
+        min-height: 460px;
+    }
+
+    .martyrs-media {
+        height: 460px;
+    }
+
+    .martyrs-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .martyrs-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .martyrs-section {
+        padding: 60px 16px;
+    }
+
+    .martyrs-hero {
+        min-height: 420px;
+        border-radius: 22px;
+    }
+
+    .martyrs-media {
+        height: 420px;
+    }
+
+    .martyrs-content {
+        width: calc(100% - 36px);
+        bottom: 35px;
+    }
+
+    .martyrs-content h2 {
+        font-size: 2rem;
+    }
+
+    .martyrs-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .martyrs-quote-box {
+        padding: 28px 15px 0;
+    }
+
+    .martyrs-quote {
+        font-size: 1.05rem;
+        line-height: 1.9;
+    }
+}
+
+@media (max-width: 480px) {
+    .martyrs-hero {
+        min-height: 380px;
+    }
+
+    .martyrs-media {
+        height: 380px;
+    }
+
+    .martyrs-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .martyrs-badge {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+
+    .martyrs-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ************************************************************  hero page end********************************************************************** */
