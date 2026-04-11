@@ -3,8 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'TheYearofTheCamel-Bold';
+    src: url('/static/font/TheYearofTheCamel-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
-    font-family: "Amiri", serif;
+    /* font-family: "Amiri", serif; */
+    font-family: 'TheYearofTheCamel-Bold', sans-serif;
     font-weight: 700;
     font-style: normal;
     /* background-color: rgb(6, 21, 4); */
@@ -137,8 +144,10 @@ body{
     
 }
 .slider-header .home-title {
-    font-size: 100px;
-    margin-bottom: 10px;
+    font-size: 70px;
+    font-weight: 800;
+    margin-top: 70px;
+    margin-bottom:40px;
     /* font-family: 'Amiri', sans-serif; */
 }
 .slider-header h1 {
@@ -245,32 +254,54 @@ body{
 /*  End home-content  */
 
 /* container my-5 */
+.card-wrapper {
+    /* padding: 2px; */
+    border-radius: 20px;
+    background: transparent;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+    transition: 0.3s;
+    height: 100%;
+}
+.card-wrapper:hover {
+    border-radius: 20px;
+        border: 4px solid transparent;
+    
+        background:
+            linear-gradient(white, white) padding-box,
+            linear-gradient(270deg, #0b5d3b, #22c55e, #a3e635, #0b5d3b) border-box;
+        background-size: 100% 100%, 400% 400%;
+        animation: borderMove 6s linear infinite;;
+}
 .card {
     height: 100%;
     border: none;
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
     display: flex;
+    background-color: white;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
     flex-direction: column;
-    transition: 0.3s ease;
+    /* transition: transform 0.3s ease , box-shadow 0.3s ease; */
 }
 
 .card-img-top {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
 }
 
 .card-body {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: 20px;
 }
 
 .card-title {
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 27px;
+    color: #0b5d3b;
+    font-weight: 700;
 }
 
 .card-text {
@@ -278,10 +309,29 @@ body{
     line-height: 1.5;
     font-size: 15px;
 }
-.card:hover {
+/* .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+} */
+@keyframes borderMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.btn-primary {
+    background-color: #0b5d3b;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
+.btn-primary:hover {
+    background-color: #09492f;
+}
 
 .btn-success {
     background-color: #0b5d3b;
@@ -343,6 +393,7 @@ body{
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: white;
 }
 
 /* النص */
