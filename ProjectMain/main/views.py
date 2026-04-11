@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render, redirect
 from django.http import Http404
 from . import data
@@ -14,10 +15,25 @@ def class_view(request, class_slug):
     if not animal_class:
         raise Http404("Animal class not found")
     species_list = [data.SPECIES[s] for s in animal_class['species'] if s in data.SPECIES]
+
+    # Build province → list of species (slug, name, scientific_name, slug) for map interaction
+    province_data = {}
+    for sp in species_list:
+        for prov in sp.get('provinces', []):
+            if prov not in province_data:
+                province_data[prov] = []
+            province_data[prov].append({
+                'slug': sp['slug'],
+                'name': sp['name'],
+                'scientific_name': sp['scientific_name'],
+                'image': sp.get('image'),
+            })
+
     return render(request, 'main/class.html', {
         'animal_class': animal_class,
         'species_list': species_list,
         'featured_slugs': data.FEATURED_SLUGS,
+        'province_data_json': json.dumps(province_data),
     })
 
 

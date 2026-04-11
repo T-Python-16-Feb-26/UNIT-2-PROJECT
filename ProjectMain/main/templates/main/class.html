@@ -1,5 +1,87 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block title %}{{ animal_class.name }} — Saudi Wildlife{% endblock %}
+
+{% block extra_head %}
+<style>
+  /* ── Map container ── */
+  #map-container {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    aspect-ratio: 360 / 310;
+    background: var(--surface-alt);
+    border-radius: .75rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ── SVG paths ── */
+  .sa-region {
+    fill: var(--accent-green-muted, #2d6a4f);
+    stroke: var(--surface, #111);
+    stroke-width: 0.5;
+    transition: fill 0.2s, opacity 0.25s;
+  }
+  .region-inactive { opacity: 0.18; cursor: default !important; }
+  .region-active   { opacity: 1; }
+  .region-active:hover { fill: var(--accent-gold); }
+  .region-selected { fill: var(--accent-gold) !important; opacity: 1 !important; }
+
+  /* ── SVG labels ── */
+  .region-label {
+    font-size: 5px;
+    fill: #fff;
+    font-family: inherit;
+    opacity: 0.85;
+    pointer-events: none;
+    text-shadow: 0 0 2px #000;
+  }
+
+  /* ── Region species panel ── */
+  #region-panel {
+    border: 1px solid var(--surface-alt);
+    border-radius: .75rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    margin-top: 1.5rem;
+  }
+
+  /* ── Species mini-cards in panel ── */
+  .region-species-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: .75rem;
+  }
+  .region-species-card {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: var(--surface-alt);
+    border-radius: .5rem;
+    padding: .4rem .7rem .4rem .4rem;
+    color: var(--text);
+    transition: background .2s;
+    min-width: 160px;
+    max-width: 220px;
+    flex: 1 1 160px;
+  }
+  .region-species-card:hover { background: var(--accent-green-muted, #2d6a4f); color: #fff; }
+  .region-species-img {
+    width: 42px;
+    height: 42px;
+    border-radius: .35rem;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .region-species-img--placeholder {
+    background: linear-gradient(135deg, var(--primary-green, #1d6d3b), #0c4e27);
+  }
+  .region-species-name { font-size: .85rem; font-weight: 600; line-height: 1.2; }
+  .region-species-sci  { font-size: .72rem; opacity: .7; font-style: italic; }
+</style>
+{% endblock %}
 
 {% block content %}
 <div class="container py-5">
@@ -13,12 +95,22 @@
     <p style="color: var(--text-muted);">{{ animal_class.description }}</p>
   </div>
 
-  {# Interactive province map placeholder #}
-  <div class="province-map-placeholder rounded-3 mb-5 p-4 text-center">
-    <p class="mb-0" style="color: var(--text-muted);">
-      🗺️ Interactive province map — coming soon
+  {# ── Interactive Province Map ── #}
+  <div class="mb-2">
+    <p class="small mb-2" style="color: var(--text-muted);">
+      Click a highlighted province to see {{ animal_class.name|lower }} found there.
+      Dimmed regions have no recorded {{ animal_class.name|lower }}.
     </p>
   </div>
+  <div id="map-container" class="mb-2"></div>
+
+  {# Region species panel (hidden until a region is clicked) #}
+  <div id="region-panel" hidden>
+    <h5 id="region-title" class="mb-0"></h5>
+    <div id="region-species" class="region-species-grid"></div>
+  </div>
+
+  <div class="mb-5"></div>
 
   {# Species count #}
   <p class="mb-3" style="color: var(--text-muted);">
@@ -65,4 +157,12 @@
   </div>
 
 </div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  window.PROVINCE_DATA = {{ province_data_json|safe }};
+  window.MAP_SVG_URL   = "{% static 'images/sa_map.svg' %}";
+</script>
+<script src="{% static 'js/map.js' %}"></script>
 {% endblock %}
