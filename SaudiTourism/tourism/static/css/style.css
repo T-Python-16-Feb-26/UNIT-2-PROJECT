@@ -24,7 +24,21 @@ body{
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
 }
-@keyframes body {
+body.dark-mode {
+    background: linear-gradient(135deg,#000000, #081c15, #000000, #000000, #000000);
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+}
+@keyframes body  {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes dark-mode {
     0% {
         transform: translateX(0);
     }

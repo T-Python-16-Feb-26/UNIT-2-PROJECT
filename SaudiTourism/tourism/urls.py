@@ -10,5 +10,6 @@ urlpatterns =[
     path('qassim/',views.qassim_view,name='qassim_view'),
     path('jeddah/',views.jeddah_view,name='jeddah_view'),
     path('alula/',views.alula_view,name='alula_view'),
+    path('mode/<mode>/',views.mode_view,name='mode_view'),
     
 ]
