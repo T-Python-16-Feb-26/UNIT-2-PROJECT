@@ -1,89 +1,106 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %}Al Qaseem{% endblock %}
+
+{% block title %}Al Qassim{% endblock %}
+
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar=" القصيم " 
-            data-en=" Al-Qassim City">
-            Al-Qassim City
+        <h1 class="translate-text" data-ar=" مدينة القصيم  " data-en=" Al Qassim City">
+            Al Qassim City
         </h1>
     </section>
 
     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar=" القصيم" data-en="Al Qassim"> Al Qassim</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
-        </button>
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" القصيم" data-en="Al Qassim"> Al Qassim</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                    Previous Page</span>
+            </button>
+        </div>
     </div>
-</div>
 
     <section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="القصيم: واحة النخيل والكرم" data-en="Qassim: The Oasis of Palm & Hospitality">القصيم: واحة النخيل والكرم</h2>
-                <p class="translate-text" 
-                   data-ar="تعتبر منطقة القصيم سلة غذاء المملكة وأكبر واحة للنخيل في العالم، حيث تشتهر بإنتاج أجود أنواع التمور عالمياً. تتميز المنطقة بروحها التجارية العريقة، وقراها التراثية الطينية التي تحكي قصص الكفاح والبناء، وتعد وجهة مثالية لمحبي السياحة الريفية والثقافية الأصيلة." 
-                   data-en="Qassim is considered the Kingdom's food basket and the world's largest palm oasis, famous for producing the finest dates globally. The region is known for its deep-rooted commercial spirit and heritage mud villages that tell stories of struggle and growth, making it an ideal destination for rural and cultural tourism.">
-                   القصيم هي عاصمة التمور وأكبر واحة للنخيل، حيث يلتقي التراث النجدي الأصيل بروح التجارة والكرم الحاتمي في قلب الجزيرة العربية.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="القصيم في رؤية 2030" data-en="Qassim in Vision 2030">القصيم في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="تركز رؤية 2030 على تعزيز مكانة القصيم كمركز عالمي للصناعات الغذائية والتمور، مع تطوير المواقع السياحية والتراثية مثل قرية 'الخبراء' و'عنيزة التاريخية'، ودعم المهرجانات السياحية التي تجذب الزوار من داخل وخارج المملكة." 
-                   data-en="Vision 2030 focuses on strengthening Qassim's position as a global center for food industries and dates, while developing heritage sites and supporting tourism festivals.">
-                   تهدف الرؤية لتحويل القصيم إلى مركز عالمي للصناعات الغذائية مع تطوير وجهات سياحية ريفية وتراثية عالمية المستوى.
-                </p>
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="القصيم: واحة النخيل والكرم"
+                        data-en="Qassim: The Oasis of Palm & Hospitality">القصيم: واحة النخيل والكرم</h2>
+                    <p class="translate-text"
+                        data-ar="تعتبر منطقة القصيم سلة غذاء المملكة وأكبر واحة للنخيل في العالم، حيث تشتهر بإنتاج أجود أنواع التمور عالمياً. تتميز المنطقة بروحها التجارية العريقة، وقراها التراثية الطينية التي تحكي قصص الكفاح والبناء، وتعد وجهة مثالية لمحبي السياحة الريفية والثقافية الأصيلة."
+                        data-en="Qassim is considered the Kingdom's food basket and the world's largest palm oasis, famous for producing the finest dates globally. The region is known for its deep-rooted commercial spirit and heritage mud villages that tell stories of struggle and growth, making it an ideal destination for rural and cultural tourism.">
+                        القصيم هي عاصمة التمور وأكبر واحة للنخيل، حيث يلتقي التراث النجدي الأصيل بروح التجارة والكرم
+                        الحاتمي في قلب الجزيرة العربية.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="القصيم في رؤية 2030" data-en="Qassim in Vision 2030">القصيم في
+                        رؤية 2030</h3>
+                    <p class="translate-text"
+                        data-ar="تركز رؤية 2030 على تعزيز مكانة القصيم كمركز عالمي للصناعات الغذائية والتمور، مع تطوير المواقع السياحية والتراثية مثل قرية 'الخبراء' و'عنيزة التاريخية'، ودعم المهرجانات السياحية التي تجذب الزوار من داخل وخارج المملكة."
+                        data-en="Vision 2030 focuses on strengthening Qassim's position as a global center for food industries and dates, while developing heritage sites and supporting tourism festivals.">
+                        تهدف الرؤية لتحويل القصيم إلى مركز عالمي للصناعات الغذائية مع تطوير وجهات سياحية ريفية وتراثية
+                        عالمية المستوى.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم القصيم" data-en="Top Landmarks of Qassim">أبرز معالم القصيم</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-leaf"></i></div>
-                <h4 class="translate-text" data-ar="مدينة التمور (بريدة)" data-en="Buraidah Dates City">مدينة التمور (بريدة)</h4>
-                <p class="translate-text" data-ar="تحتضن أكبر سوق للتمور في العالم، حيث يقام فيها مهرجان سنوي يجمع مئات الأنواع من أجود ما تنتجه النخيل." data-en="Home to the world's largest date market, hosting an annual festival that gathers hundreds of types of the finest dates.">أكبر سوق دولي للتمور في العالم، ومركز اقتصادي ضخم يجسد عراقة النخلة في الثقافة السعودية.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-store"></i></div>
-                <h4 class="translate-text" data-ar="سوق المسوكف (عنيزة)" data-en="Al-Musawkaf Market">سوق المسوكف (عنيزة)</h4>
-                <p class="translate-text" data-ar="سوق شعبي تراثي بُني على الطراز القديم، يضم متاحف ومحلات للحرف اليدوية ويعيد إحياء التراث النجدي الجميل." data-en="A traditional heritage market built in ancient style, featuring museums and handicraft shops that revive Najdi heritage.">سوق تراثي فخم يحاكي عمارة الماضي، ويعد ملتقى للحرفيين وهواة المقتنيات الأثرية الشعبية.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-home"></i></div>
-                <h4 class="translate-text" data-ar="قرية الخبراء التراثية" data-en="Al-Khubra Heritage Village">قرية الخبراء التراثية</h4>
-                <p class="translate-text" data-ar="قرية طينية تاريخية تعكس براعة التصميم المعماري القديم، وتعد من أهم القلاع التاريخية في المنطقة." data-en="A historical mud village reflecting ancient architectural brilliance and considered one of the most important forts in the area.">أيقونة معمارية طينية تجسد تاريخ المنطقة القديم، وتعتبر متحفاً مفتوحاً يروي قصص الأجداد.</p>
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم القصيم" data-en="Top Landmarks of Qassim">
+                أبرز معالم القصيم</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="مدينة التمور (بريدة)" data-en="Buraidah Dates City">مدينة التمور
+                        (بريدة)</h4>
+                    <p class="translate-text"
+                        data-ar="تحتضن أكبر سوق للتمور في العالم، حيث يقام فيها مهرجان سنوي يجمع مئات الأنواع من أجود ما تنتجه النخيل."
+                        data-en="Home to the world's largest date market, hosting an annual festival that gathers hundreds of types of the finest dates.">
+                        أكبر سوق دولي للتمور في العالم، ومركز اقتصادي ضخم يجسد عراقة النخلة في الثقافة السعودية.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="سوق المسوكف (عنيزة)" data-en="Al-Musawkaf Market">سوق المسوكف
+                        (عنيزة)</h4>
+                    <p class="translate-text"
+                        data-ar="سوق شعبي تراثي بُني على الطراز القديم، يضم متاحف ومحلات للحرف اليدوية ويعيد إحياء التراث النجدي الجميل."
+                        data-en="A traditional heritage market built in ancient style, featuring museums and handicraft shops that revive Najdi heritage.">
+                        سوق تراثي فخم يحاكي عمارة الماضي، ويعد ملتقى للحرفيين وهواة المقتنيات الأثرية الشعبية.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="قرية الخبراء التراثية" data-en="Al-Khubra Heritage Village">قرية
+                        الخبراء التراثية</h4>
+                    <p class="translate-text"
+                        data-ar="قرية طينية تاريخية تعكس براعة التصميم المعماري القديم، وتعد من أهم القلاع التاريخية في المنطقة."
+                        data-en="A historical mud village reflecting ancient architectural brilliance and considered one of the most important forts in the area.">
+                        أيقونة معمارية طينية تجسد تاريخ المنطقة القديم، وتعتبر متحفاً مفتوحاً يروي قصص الأجداد.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley"
+            onclick="filterSelection('valley')">Valley</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
     </div>
 
     <div class="riyadh-grid">
-    
-        <div class="city-card filter-item entertaiment nature">
+
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/Jumar.jpg' %}" alt="jumar"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جمار " data-en=" Jumar Fram "> Jumar Farm </h3>
@@ -91,7 +108,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item entertaiment nature">
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/nakhla.jpg' %}" alt="nakhla"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" نخلا " data-en=" nakhla "> nakhla </h3>
@@ -99,52 +116,65 @@
             </div>
         </div>
 
-        <div class="city-card filter-item entertaiment nature">
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/albustan-q.jpg' %}" alt="bustan"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" البستان " data-en=" Al-Bustan "> Al-Bustan </h3>
-                <p class="translate-text" data-ar=" ترفية " data-en=" entertaiment "> entertaiment </p>
+                <p class="translate-text" data-ar=" ترفية " data-en=" Entertaiment "> Entertaiment </p>
             </div>
         </div>
 
-        <div class="city-card filter-item entertaiment nature">
+        <div class="city-card filter-item entertaiment ">
             <div class="card-image"><img src="{% static 'images/SidraValley.jpg' %}" alt="Sidra"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" سدرة فالي " data-en=" Sidra Valley ">Sidra Valley</h3>
-                <p class="translate-text" data-ar=" ترفية " data-en=" entertaiment "> entertaiment </p>
+                <p class="translate-text" data-ar=" ترفية " data-en=" Entertaiment "> Entertaiment </p>
             </div>
         </div>
 
-        <div class="city-card filter-item entertaiment nature">
+        <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/nakheel.jpg' %}" alt="alnakheel"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جادة النخيل " data-en=" Alnakheel ">Alnakheel</h3>
-                <p class="translate-text" data-ar=" ترفية " data-en=" entertaiment "> entertaiment </p>
+                <p class="translate-text" data-ar=" ترفية " data-en=" Entertaiment "> Entertaiment </p>
             </div>
         </div>
 
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/dates.jpg' %}" alt="dates"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مهرجان التمور " data-en=" Dates Festival ">Dates Festival</h3>
+                <p class="translate-text" data-ar=" ترفية " data-en=" Entertaiment "> Entertaiment </p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item valley nature">
+            <div class="card-image"><img src="{% static 'images/wadi-alrumah.jpg' %}" alt="wadi-alrumah"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" وادي الرمة" data-en=" Al Rumah Valley"> Al Rumah Valley</h3>
+                <p class="translate-text" data-ar=" أودية " data-en=" Valley "> Valley </p>
+            </div>
+        </div>
 
     </div>
 </main>
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

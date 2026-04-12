@@ -1,85 +1,101 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
 {% block title %}Mecca{% endblock %}
+
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar=" مكة لمكرمة " 
-            data-en=" Mecca City">
+        <h1 class="translate-text" data-ar=" مكة لمكرمة " data-en=" Mecca City">
             Mecca City
         </h1>
     </section>
 
     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">المدن</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar="مكة المكرمة " data-en="Mecca">Mecca</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">العودة للصفحة السابقة</span>
-        </button>
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية"
+                    data-en="Home">الرئيسية</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">المدن</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar="مكة المكرمة " data-en="Mecca">Mecca</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">العودة
+                    للصفحة السابقة</span>
+            </button>
+        </div>
     </div>
-</div>
 
     <section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="مكة المكرمة: مهبط الوحي" data-en="Makkah: The Cradle of Revelation">مكة المكرمة: مهبط الوحي</h2>
-                <p class="translate-text" 
-                   data-ar="مكة المكرمة هي قبلة المسلمين وأطهر بقاع الأرض، تضم المسجد الحرام والكعبة المشرفة. تمزج المدينة بين الروحانية الطاغية والتطور المعماري الهائل، حيث تستقبل الملايين من الزوار سنوياً في رحلة إيمانية لا تُنسى، وتعتبر منارة ثقافية وتاريخية للعالم الإسلامي أجمع." 
-                   data-en="Makkah is the Qibla of Muslims and the purest place on earth, home to the Grand Mosque and the Holy Kaaba. The city blends profound spirituality with massive architectural development, welcoming millions of visitors annually on an unforgettable faith journey, serving as a cultural and historical beacon for the entire Islamic world.">
-                   مكة المكرمة هي قبلة المسلمين وأطهر بقاع الأرض، حيث تجتمع الروحانية الطاغية مع التطور المعماري الفريد لخدمة ضيوف الرحمن.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="مكة في رؤية 2030" data-en="Makkah in Vision 2030">مكة في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="تهدف رؤية 2030 من خلال برنامج 'خدمة ضيوف الرحمن' إلى إثراء تجربة الحاج والمعتمر، وتسهيل وصول 30 مليون معتمر سنوياً، مع تطوير البنية التحتية والوجهات الثقافية التاريخية في مكة المكرمة لتكون وجهة حضارية عالمية." 
-                   data-en="Vision 2030, through the 'Pilgrim Experience Program,' aims to enrich the journey of Hajj and Umrah pilgrims and facilitate the arrival of 30 million pilgrims annually, developing infrastructure and historical cultural destinations.">
-                   تهدف الرؤية لإثراء تجربة ضيوف الرحمن وتطوير مكة المكرمة لتكون وجهة حضارية عالمية تستوعب ملايين المعتمرين سنوياً.
-                </p>
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="مكة المكرمة: مهبط الوحي"
+                        data-en="Makkah: The Cradle of Revelation">مكة المكرمة: مهبط الوحي</h2>
+                    <p class="translate-text"
+                        data-ar="مكة المكرمة هي قبلة المسلمين وأطهر بقاع الأرض، تضم المسجد الحرام والكعبة المشرفة. تمزج المدينة بين الروحانية الطاغية والتطور المعماري الهائل، حيث تستقبل الملايين من الزوار سنوياً في رحلة إيمانية لا تُنسى، وتعتبر منارة ثقافية وتاريخية للعالم الإسلامي أجمع."
+                        data-en="Makkah is the Qibla of Muslims and the purest place on earth, home to the Grand Mosque and the Holy Kaaba. The city blends profound spirituality with massive architectural development, welcoming millions of visitors annually on an unforgettable faith journey, serving as a cultural and historical beacon for the entire Islamic world.">
+                        مكة المكرمة هي قبلة المسلمين وأطهر بقاع الأرض، حيث تجتمع الروحانية الطاغية مع التطور المعماري
+                        الفريد لخدمة ضيوف الرحمن.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="مكة في رؤية 2030" data-en="Makkah in Vision 2030">مكة في رؤية
+                        2030</h3>
+                    <p class="translate-text"
+                        data-ar="تهدف رؤية 2030 من خلال برنامج 'خدمة ضيوف الرحمن' إلى إثراء تجربة الحاج والمعتمر، وتسهيل وصول 30 مليون معتمر سنوياً، مع تطوير البنية التحتية والوجهات الثقافية التاريخية في مكة المكرمة لتكون وجهة حضارية عالمية."
+                        data-en="Vision 2030, through the 'Pilgrim Experience Program,' aims to enrich the journey of Hajj and Umrah pilgrims and facilitate the arrival of 30 million pilgrims annually, developing infrastructure and historical cultural destinations.">
+                        تهدف الرؤية لإثراء تجربة ضيوف الرحمن وتطوير مكة المكرمة لتكون وجهة حضارية عالمية تستوعب ملايين
+                        المعتمرين سنوياً.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم العاصمة المقدسة" data-en="Top Landmarks of the Holy City">أبرز معالم العاصمة المقدسة</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-kaaba"></i></div>
-                <h4 class="translate-text" data-ar="المسجد الحرام" data-en="The Grand Mosque">المسجد الحرام</h4>
-                <p class="translate-text" data-ar="أعظم مسجد في الإسلام، يتوسطه الكعبة المشرفة، ويشهد أكبر توسعات معمارية في التاريخ لخدمة المصلين." data-en="The greatest mosque in Islam, with the Holy Kaaba at its center, witnessing the largest architectural expansions in history.">أعظم مسجد في الإسلام، يتوسطه الكعبة المشرفة، ويعد قلب العالم الإسلامي النابض.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-pray"></i></div>
-                <h4 class="translate-text" data-ar="جبل النور (غار حراء)" data-en="Jabal al-Nour">جبل النور (غار حراء)</h4>
-                <p class="translate-text" data-ar="المكان الذي نزل فيه الوحي لأول مرة على النبي محمد ﷺ، ويعد مقصداً تاريخياً وإيمانياً هاماً." data-en="The place where the first revelation descended upon Prophet Muhammad (PBUH), a significant historical and spiritual site.">المكان الذي شهد نزول الوحي الأول، ويعد رمزاً تاريخياً وإيمانياً عظيماً.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-clock"></i></div>
-                <h4 class="translate-text" data-ar="أبراج البيت (برج الساعة)" data-en="Abraj Al Bait">أبراج البيت (برج الساعة)</h4>
-                <p class="translate-text" data-ar="أيقونة معمارية حديثة تضم أطول ساعة في العالم، وتوفر إطلالة مباشرة ومهيبة على الحرم المكي الشريف." data-en="A modern architectural icon housing the world's tallest clock, providing a majestic view of the Grand Mosque.">
-                أيقونة معمارية حديثة تضم أطول ساعة في العالم وتعد من معالم مكة العصرية البارزة.</p>
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم العاصمة المقدسة"
+                data-en="Top Landmarks of the Holy City">أبرز معالم العاصمة المقدسة</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="المسجد الحرام" data-en="The Grand Mosque">المسجد الحرام</h4>
+                    <p class="translate-text"
+                        data-ar="أعظم مسجد في الإسلام، يتوسطه الكعبة المشرفة، ويشهد أكبر توسعات معمارية في التاريخ لخدمة المصلين."
+                        data-en="The greatest mosque in Islam, with the Holy Kaaba at its center, witnessing the largest architectural expansions in history.">
+                        أعظم مسجد في الإسلام، يتوسطه الكعبة المشرفة، ويعد قلب العالم الإسلامي النابض.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="جبل النور (غار حراء)" data-en="Jabal al-Nour">جبل النور (غار
+                        حراء)</h4>
+                    <p class="translate-text"
+                        data-ar="المكان الذي نزل فيه الوحي لأول مرة على النبي محمد ﷺ، ويعد مقصداً تاريخياً وإيمانياً هاماً."
+                        data-en="The place where the first revelation descended upon Prophet Muhammad (PBUH), a significant historical and spiritual site.">
+                        المكان الذي شهد نزول الوحي الأول، ويعد رمزاً تاريخياً وإيمانياً عظيماً.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="أبراج البيت (برج الساعة)" data-en="Abraj Al Bait">أبراج البيت
+                        (برج الساعة)</h4>
+                    <p class="translate-text"
+                        data-ar="أيقونة معمارية حديثة تضم أطول ساعة في العالم، وتوفر إطلالة مباشرة ومهيبة على الحرم المكي الشريف."
+                        data-en="A modern architectural icon housing the world's tallest clock, providing a majestic view of the Grand Mosque.">
+                        أيقونة معمارية حديثة تضم أطول ساعة في العالم وتعد من معالم مكة العصرية البارزة.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+            onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
     </div>
 
 
@@ -87,20 +103,14 @@
         <div class="city-card filter-item entertaiment culture">
             <div class="card-image"><img src="{% static 'images/haraDistrict.jpg' %}" alt="haraDistrict"></div>
             <div class="card-content">
-                <h3 class="translate-text" data-ar=" حي حراء الثقافي" data-en=" Hara Cultural District ">Hara Cultural District</h3>
-                <p class="translate-text" data-ar=" ترفية وتاريخ " data-en=" Entertaiment & Cultural "> Entertaiment & Cultural</p>
+                <h3 class="translate-text" data-ar=" حي حراء الثقافي" data-en=" Hara Cultural District ">Hara Cultural
+                    District</h3>
+                <p class="translate-text" data-ar=" ترفية وتاريخ " data-en=" Entertaiment & Cultural "> Entertaiment &
+                    Cultural</p>
             </div>
         </div>
 
-        <div class="city-card filter-item shopping">
-            <div class="card-image"><img src="{% static 'images/makkahMall.jpg' %}" alt="makkahMall"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar="مكة مول" data-en=" Makkah Mall"> makkah Mall</h3>
-                <p class="translate-text" data-ar="تسوق" data-en=" Shopping"> Shopping</p>
-            </div>
-        </div>
-
-        <div class="city-card filter-item culture ">
+        <div class="city-card filter-item culture nature ">
             <div class="card-image"><img src="{% static 'images/Thor.jpg' %}" alt="Thor"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" غار ثور" data-en=" Thor's Cave "> Thor's Cave</h3>
@@ -108,7 +118,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item culture">
+        <div class="city-card filter-item culture nature">
             <div class="card-image"><img src="{% static 'images/Graa.jpg' %}" alt="Graa"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" غار حراء " data-en=" Graa's Cave "> Graa's Cave</h3>
@@ -116,7 +126,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item culture">
+        <div class="city-card filter-item culture nature">
             <div class="card-image"><img src="{% static 'images/noorMount.jpg' %}" alt="noorMount"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جبل النور " data-en=" Al Noor Mountain">Al Noor Mountain</h3>
@@ -127,7 +137,9 @@
         <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/confernce.jpg' %}" alt="confernce"></div>
             <div class="card-content">
-                <h3 class="translate-text" data-ar=" معرض عمارة الحرمين الشريفين " data-en=" Exhibition of the Architecture of the Two Holy Mosques "> Exhibition of the Architecture of the Two Holy Mosques </h3>
+                <h3 class="translate-text" data-ar=" معرض عمارة الحرمين الشريفين "
+                    data-en=" Exhibition of the Architecture of the Two Holy Mosques "> Exhibition of the Architecture
+                    of the Two Holy Mosques </h3>
                 <p class="translate-text" data-ar=" ترفية " data-en=" Entertaiment "> Entertaiment</p>
             </div>
         </div>
@@ -137,23 +149,21 @@
 </main>
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

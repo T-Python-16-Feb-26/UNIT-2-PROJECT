@@ -1,87 +1,101 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
 {% block title %}Al Ula{% endblock %}
+
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar=" العلا " 
-            data-en="Al Ula">
+        <h1 class="translate-text" data-ar=" مدينة العلا " data-en="Al Ula">
             Al Ula City
         </h1>
     </section>
 
     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar=" العلا" data-en="Al Ula"> Al Ula</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
-        </button>
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" العلا" data-en="Al Ula"> Al Ula</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                    Previous Page</span>
+            </button>
+        </div>
     </div>
-</div>
     <section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="العلا: تحفة العالم" data-en="AlUla: The World's Masterpiece">العلا: تحفة العالم</h2>
-                <p class="translate-text" 
-                   data-ar="تعتبر العلا واحدة من أقدم المدن في شبه الجزيرة العربية، وهي موطن لحضارات ضاربة في عمق التاريخ مثل الأنباط واللحيانيين. تتميز بطبيعتها الصحراوية الخلابة وتشكيلاتها الصخرية الفريدة، وتعد اليوم وجهة عالمية تجمع بين الفن المعاصر، الفخامة، والتراث الإنساني العظيم." 
-                   data-en="AlUla is one of the oldest cities in the Arabian Peninsula, home to civilizations rooted deep in history like the Nabataeans and Lihyanites. Known for its stunning desert nature and unique rock formations, it is now a global destination blending contemporary art, luxury, and great human heritage.">
-                   تعتبر العلا موطناً لحضارات ضاربة في عمق التاريخ، حيث تلتقي الفنون المعاصرة والفخامة العالمية مع التراث الإنساني العظيم في أكبر متحف مفتوح للعالم.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="العلا في رؤية 2030" data-en="AlUla in Vision 2030">العلا في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="من خلال مخطط 'رحلة عبر الزمن'، تهدف الرؤية لتحويل العلا إلى وجهة سياحية وثقافية عالمية رائدة، مع الحفاظ على توازن دقيق بين التطوير الحديث وحماية المواقع الأثرية والطبيعة الفريدة للمنطقة." 
-                   data-en="Through the 'Journey Through Time' masterplan, the Vision aims to transform AlUla into a leading global cultural and tourism destination, preserving a delicate balance between modern development and archaeological protection.">
-                   تهدف الرؤية من خلال مخطط "رحلة عبر الزمن" لتحويل العلا إلى وجهة سياحية وثقافية عالمية رائدة تحافظ على أصالة التاريخ وجمال الطبيعة.
-                </p>
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="العلا: تحفة العالم" data-en="AlUla: The World's Masterpiece">
+                        العلا: تحفة العالم</h2>
+                    <p class="translate-text"
+                        data-ar="تعتبر العلا واحدة من أقدم المدن في شبه الجزيرة العربية، وهي موطن لحضارات ضاربة في عمق التاريخ مثل الأنباط واللحيانيين. تتميز بطبيعتها الصحراوية الخلابة وتشكيلاتها الصخرية الفريدة، وتعد اليوم وجهة عالمية تجمع بين الفن المعاصر، الفخامة، والتراث الإنساني العظيم."
+                        data-en="AlUla is one of the oldest cities in the Arabian Peninsula, home to civilizations rooted deep in history like the Nabataeans and Lihyanites. Known for its stunning desert nature and unique rock formations, it is now a global destination blending contemporary art, luxury, and great human heritage.">
+                        تعتبر العلا موطناً لحضارات ضاربة في عمق التاريخ، حيث تلتقي الفنون المعاصرة والفخامة العالمية مع
+                        التراث الإنساني العظيم في أكبر متحف مفتوح للعالم.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="العلا في رؤية 2030" data-en="AlUla in Vision 2030">العلا في رؤية
+                        2030</h3>
+                    <p class="translate-text"
+                        data-ar="من خلال مخطط 'رحلة عبر الزمن'، تهدف الرؤية لتحويل العلا إلى وجهة سياحية وثقافية عالمية رائدة، مع الحفاظ على توازن دقيق بين التطوير الحديث وحماية المواقع الأثرية والطبيعة الفريدة للمنطقة."
+                        data-en="Through the 'Journey Through Time' masterplan, the Vision aims to transform AlUla into a leading global cultural and tourism destination, preserving a delicate balance between modern development and archaeological protection.">
+                        تهدف الرؤية من خلال مخطط "رحلة عبر الزمن" لتحويل العلا إلى وجهة سياحية وثقافية عالمية رائدة
+                        تحافظ على أصالة التاريخ وجمال الطبيعة.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم العلا" data-en="Top Landmarks of AlUla">أبرز معالم العلا</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-monument"></i></div>
-                <h4 class="translate-text" data-ar="الحِجر (مدائن صالح)" data-en="Hegra">الحِجر (مدائن صالح)</h4>
-                <p class="translate-text" data-ar="أول موقع سعودي يُدرج ضمن قائمة اليونسكو للتراث العالمي، ويضم مقابر نبطية منحوتة ببراعة في قلب الجبال." data-en="The first Saudi site to be listed as a UNESCO World Heritage site, featuring Nabataean tombs masterfully carved into the mountains.">أول موقع سعودي في اليونسكو، يضم مقابر نبطية مذهلة منحوتة في قلب الجبال الشاهقة.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-gem"></i></div>
-                <h4 class="translate-text" data-ar="جبل الفيل" data-en="Elephant Rock">جبل الفيل</h4>
-                <p class="translate-text" data-ar="أعجوبة جيولوجية طبيعية تشكلت بفعل عوامل النحت والتعرية لتتخذ شكل فيل ضخم وسط رمال الصحراء الذهبية." data-en="A natural geological wonder formed by erosion to take the shape of a massive elephant amidst the golden desert sands.">أعجوبة جيولوجية طبيعية تشبه الفيل الضخم، وتعد من أشهر الرموز الطبيعية في العلا.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-clone"></i></div>
-                <h4 class="translate-text" data-ar="قاعة مرايا" data-en="Maraya Hall">قاعة مرايا</h4>
-                <p class="translate-text" data-ar="أكبر مبنى عاكس في العالم، يدمج بين الفن المعماري الحديث وجمال الطبيعة المحيطة به بشكل ساحر." data-en="The largest mirrored building in the world, magically blending modern architecture with the surrounding natural beauty.">أكبر مبنى عاكس في العالم، يمزج بين العمارة الحديثة وانعكاسات الطبيعة الساحرة.</p>
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم العلا" data-en="Top Landmarks of AlUla">
+                أبرز معالم العلا</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="الحِجر (مدائن صالح)" data-en="Hegra">الحِجر (مدائن صالح)</h4>
+                    <p class="translate-text"
+                        data-ar="أول موقع سعودي يُدرج ضمن قائمة اليونسكو للتراث العالمي، ويضم مقابر نبطية منحوتة ببراعة في قلب الجبال."
+                        data-en="The first Saudi site to be listed as a UNESCO World Heritage site, featuring Nabataean tombs masterfully carved into the mountains.">
+                        أول موقع سعودي في اليونسكو، يضم مقابر نبطية مذهلة منحوتة في قلب الجبال الشاهقة.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="جبل الفيل" data-en="Elephant Rock">جبل الفيل</h4>
+                    <p class="translate-text"
+                        data-ar="أعجوبة جيولوجية طبيعية تشكلت بفعل عوامل النحت والتعرية لتتخذ شكل فيل ضخم وسط رمال الصحراء الذهبية."
+                        data-en="A natural geological wonder formed by erosion to take the shape of a massive elephant amidst the golden desert sands.">
+                        أعجوبة جيولوجية طبيعية تشبه الفيل الضخم، وتعد من أشهر الرموز الطبيعية في العلا.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="قاعة مرايا" data-en="Maraya Hall">قاعة مرايا</h4>
+                    <p class="translate-text"
+                        data-ar="أكبر مبنى عاكس في العالم، يدمج بين الفن المعماري الحديث وجمال الطبيعة المحيطة به بشكل ساحر."
+                        data-en="The largest mirrored building in the world, magically blending modern architecture with the surrounding natural beauty.">
+                        أكبر مبنى عاكس في العالم، يمزج بين العمارة الحديثة وانعكاسات الطبيعة الساحرة.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="صحراء" data-en="Desert" onclick="filterSelection('desert')">Desert</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+            onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
     </div>
 
     <div class="riyadh-grid">
-        
+
         <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/mirorr.jpg' %}" alt="Mirror"></div>
             <div class="card-content">
@@ -93,7 +107,8 @@
         <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/hot-air-ballon.jpg' %}" alt="Ballon"></div>
             <div class="card-content">
-                <h3 class="translate-text" data-ar=" منطاب الهواء الساخن " data-en=" Hot-Air Ballon ">Hot-Air Ballon</h3>
+                <h3 class="translate-text" data-ar=" منطاب الهواء الساخن " data-en=" Hot-Air Ballon ">Hot-Air Ballon
+                </h3>
                 <p class="translate-text" data-ar=" ترفية " data-en="entertaiment">entertaiment</p>
             </div>
         </div>
@@ -129,28 +144,34 @@
                 <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
             </div>
         </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/alulaview.jpg' %}" alt="alulaview"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مطل الحرة " data-en=" Alula View "> Alula View </h3>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
     </div>
 </main>
 
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

@@ -12,8 +12,8 @@ def riyadh_view(request):
 def jeddah_view(request):
     return render(request, 'main/jeddah.html')
 
-def eastern_view(request):
-    return render(request, 'main/eastern.html')
+def khobar_view(request):
+    return render(request, 'main/khobar.html')
 
 def medina_view(request):
     return render(request, 'main/medina.html')
@@ -24,8 +24,8 @@ def mecca_view(request):
 def jazan_view(request):
     return render(request, 'main/jazan.html')
 
-def aseer_view(request):
-    return render(request, 'main/aseer.html')
+def abha_view(request):
+    return render(request, 'main/abha.html')
 
 def aljouf_view(request):
     return render(request, 'main/aljouf.html')

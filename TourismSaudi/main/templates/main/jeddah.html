@@ -1,206 +1,216 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %}Jeddah{% endblock %}
+
+{% block title %} Jeddah {% endblock %}
+
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar=" جدة " 
-            data-en=" Jeddah City">
+        <h1 class="translate-text" data-ar=" مدينة جدة " data-en=" Jeddah City">
             Jeddah City
         </h1>
     </section>
 
     <div class="navigation-controls">
-     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar=" جدة " data-en="Jeddah">Jeddah</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
-        </button>
-    </div>
-</div>
-
-    <section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="جدة: عروس البحر الأحمر" data-en="Jeddah: Bride of the Red Sea">جدة: عروس البحر الأحمر</h2>
-                <p class="translate-text" 
-                   data-ar="تعد مدينة جدة بوابة الحرمين الشريفين وواحدة من أكثر المدن حيوية وانفتاحاً في المملكة. تتميز بروحها التاريخية في حي 'البلد' العتيق، وشواطئها العصرية الساحرة على كورنيش جدة، مما يجعلها وجهة سياحية عالمية تجمع بين الفن، الثقافة، والتسوق." 
-                   data-en="Jeddah is the gateway to the Two Holy Mosques and one of the most vibrant and open cities in the Kingdom. It is characterized by its historical spirit in the ancient 'Al-Balad' district and its charming modern beaches on the Jeddah Corniche, making it a global destination for art, culture, and shopping.">
-                   تعد جدة بوابة الحرمين الشريفين، حيث يلتقي تاريخ حي البلد العتيق مع حداثة الكورنيش والوجهات البحرية.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="جدة في رؤية 2030" data-en="Jeddah in Vision 2030">جدة في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="من خلال مشاريع كبرى مثل 'وسط جدة' وتطوير ميناء جدة الإسلامي، تهدف الرؤية لتعزيز مكانة جدة كمركز لوجستي وسياحي عالمي، مع تطوير وجهات ترفيهية تنافس أرقى مدن العالم الساحلية." 
-                   data-en="Through major projects like 'Jeddah Central' and the development of Jeddah Islamic Port, the Vision aims to enhance Jeddah's position as a global logistics and tourism hub.">
-                   تهدف الرؤية لتعزيز مكانة جدة كوجهة سياحية رائدة عبر مشاريع ضخمة مثل "وسط جدة" وتطوير الواجهات البحرية.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم جدة" data-en="Top Landmarks of Jeddah">أبرز معالم جدة</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-landmark"></i></div>
-                <h4 class="translate-text" data-ar="جدة التاريخية (البلد)" data-en="Historic Jeddah">جدة التاريخية (البلد)</h4>
-                <p class="translate-text" data-ar="موقع مسجل في اليونسكو، يتميز ببيوته الحجازية التقليدية ورواشينه الخشبية التي تحكي قصص الماضي." data-en="A UNESCO World Heritage site, famous for its traditional Hijazi houses and wooden Rawashins that tell stories of the past.">موقع مسجل في اليونسكو، يتميز ببيوته الحجازية ورواشينه الخشبية الفريدة.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-water"></i></div>
-                <h4 class="translate-text" data-ar="نافورة الملك فهد" data-en="King Fahd's Fountain">نافورة الملك فهد</h4>
-                <p class="translate-text" data-ar="أطول نافورة في العالم وأيقونة جدة الشهيرة التي تزين أفق المدينة بإطلالتها البحرية الخلابة." data-en="The tallest fountain in the world and Jeddah's famous icon, decorating the city's skyline with its stunning sea view.">أطول نافورة في العالم وأيقونة جدة الشهيرة التي تضيء سماء البحر الأحمر.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-umbrella-beach"></i></div>
-                <h4 class="translate-text" data-ar="واجهة جدة البحرية" data-en="Jeddah Waterfront">واجهة جدة البحرية</h4>
-                <p class="translate-text" data-ar="وجهة عصرية متكاملة تضم مسارات للمشي، مجسمات فنية، ومناطق ترفيهية تناسب جميع أفراد العائلة." data-en="A modern integrated destination featuring walking paths, art sculptures, and entertainment areas for all ages.">وجهة عصرية متكاملة تضم مسارات للمشي ومجسمات فنية عالمية على ساحل البحر.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
-    </div>
-
-    <div class="riyadh-grid">
-    
-        <div class="city-card filter-item entertaiment">
-            <div class="card-image"><img src="{% static 'images/corneshe.jpg' %}" alt="corneshe"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" كورنيش جدة " data-en="jeddah corneshe">Jeddah Corneshe</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+        <div class="navigation-controls">
+            <div class="container nav-flex-container">
+                <nav class="breadcrumb-static">
+                    <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية"
+                        data-en="Home">Home</a>
+                    <span class="sep">/</span>
+                    <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                    <span class="sep">/</span>
+                    <span class="current-page translate-text" data-ar=" جدة " data-en="Jeddah">Jeddah</span>
+                </nav>
+                <button onclick="window.history.back()" class="back-btn">
+                    <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                        Previous Page</span>
+                </button>
             </div>
         </div>
 
-        <div class="city-card filter-item nature sea entertaiment">
-            <div class="card-image"><img src="{% static 'images/jeddah_sea.jpg' %}" alt="Jeddah cornish"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" كورنيش " data-en=" Jeddah Cornish ">Jeddah Cornish</h3>
-                <p class="translate-text" data-ar="طبيعةو بحر" data-en="Nature & Sea">Nature & Sea</p>
+        <section class="city-intro-section">
+            <div class="container">
+                <div class="city-grid">
+                    <div class="city-description">
+                        <h2 class="translate-text" data-ar="جدة: عروس البحر الأحمر"
+                            data-en="Jeddah: Bride of the Red Sea">جدة: عروس البحر الأحمر</h2>
+                        <p class="translate-text"
+                            data-ar="تعد مدينة جدة بوابة الحرمين الشريفين وواحدة من أكثر المدن حيوية وانفتاحاً في المملكة. تتميز بروحها التاريخية في حي 'البلد' العتيق، وشواطئها العصرية الساحرة على كورنيش جدة، مما يجعلها وجهة سياحية عالمية تجمع بين الفن، الثقافة، والتسوق."
+                            data-en="Jeddah is the gateway to the Two Holy Mosques and one of the most vibrant and open cities in the Kingdom. It is characterized by its historical spirit in the ancient 'Al-Balad' district and its charming modern beaches on the Jeddah Corniche, making it a global destination for art, culture, and shopping.">
+                            تعد جدة بوابة الحرمين الشريفين، حيث يلتقي تاريخ حي البلد العتيق مع حداثة الكورنيش والوجهات
+                            البحرية.
+                        </p>
+                    </div>
+                    <div class="city-vision-box">
+                        <h3 class="translate-text" data-ar="جدة في رؤية 2030" data-en="Jeddah in Vision 2030">جدة في
+                            رؤية 2030</h3>
+                        <p class="translate-text"
+                            data-ar="من خلال مشاريع كبرى مثل 'وسط جدة' وتطوير ميناء جدة الإسلامي، تهدف الرؤية لتعزيز مكانة جدة كمركز لوجستي وسياحي عالمي، مع تطوير وجهات ترفيهية تنافس أرقى مدن العالم الساحلية."
+                            data-en="Through major projects like 'Jeddah Central' and the development of Jeddah Islamic Port, the Vision aims to enhance Jeddah's position as a global logistics and tourism hub.">
+                            تهدف الرؤية لتعزيز مكانة جدة كوجهة سياحية رائدة عبر مشاريع ضخمة مثل "وسط جدة" وتطوير
+                            الواجهات البحرية.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="city-landmarks">
+            <div class="container">
+                <h2 class="main-section-title translate-text" data-ar="أبرز معالم جدة"
+                    data-en="Top Landmarks of Jeddah">أبرز معالم جدة</h2>
+                <div class="landmark-cards-wrapper">
+                    <div class="generic-card">
+                        <h4 class="translate-text" data-ar="جدة التاريخية (البلد)" data-en="Historic Jeddah">جدة
+                            التاريخية (البلد)</h4>
+                        <p class="translate-text"
+                            data-ar="موقع مسجل في اليونسكو، يتميز ببيوته الحجازية التقليدية ورواشينه الخشبية التي تحكي قصص الماضي."
+                            data-en="A UNESCO World Heritage site, famous for its traditional Hijazi houses and wooden Rawashins that tell stories of the past.">
+                            موقع مسجل في اليونسكو، يتميز ببيوته الحجازية ورواشينه الخشبية الفريدة.</p>
+                    </div>
+                    <div class="generic-card">
+                        <h4 class="translate-text" data-ar="نافورة الملك فهد" data-en="King Fahd's Fountain">نافورة
+                            الملك فهد</h4>
+                        <p class="translate-text"
+                            data-ar="أطول نافورة في العالم وأيقونة جدة الشهيرة التي تزين أفق المدينة بإطلالتها البحرية الخلابة."
+                            data-en="The tallest fountain in the world and Jeddah's famous icon, decorating the city's skyline with its stunning sea view.">
+                            أطول نافورة في العالم وأيقونة جدة الشهيرة التي تضيء سماء البحر الأحمر.</p>
+                    </div>
+                    <div class="generic-card">
+                        <h4 class="translate-text" data-ar="واجهة جدة البحرية" data-en="Jeddah Waterfront">واجهة جدة
+                            البحرية</h4>
+                        <p class="translate-text"
+                            data-ar="وجهة عصرية متكاملة تضم مسارات للمشي، مجسمات فنية، ومناطق ترفيهية تناسب جميع أفراد العائلة."
+                            data-en="A modern integrated destination featuring walking paths, art sculptures, and entertainment areas for all ages.">
+                            وجهة عصرية متكاملة تضم مسارات للمشي ومجسمات فنية عالمية على ساحل البحر.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="filter-container">
+            <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+                onclick="filterSelection('all')">All</button>
+            <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+                onclick="filterSelection('nature')">Nature</button>
+            <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+                onclick="filterSelection('culture')">Culture & History</button>
+            <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+                onclick="filterSelection('entertaiment')">Entertaiment</button>
         </div>
 
-        <div class="city-card filter-item entertaiment">
-            <div class="card-image"><img src="{% static 'images/KingFahadFountain.jpg' %}" alt="KingFahadFountain"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" نافورةالملك فهد " data-en=" King Fahad Fountain ">King Fahad Fountain</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
-            </div>
-        </div>
+        <div class="riyadh-grid">
 
-        <div class="city-card filter-item entertaiment">
-            <div class="card-image"><img src="{% static 'images/aquarium.jpg' %}" alt="aquarium"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" اكواريوم فقية " data-en=" Aquarium Faqih">Aquarium Faqih</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/corneshe.jpg' %}" alt="walkway"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" ممشى جدة " data-en="Jeddah Walkway">Jeddah Walkway</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item culture">
-            <div class="card-image"><img src="{% static 'images/balad.jpg' %}" alt="Albalad"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" البلد " data-en="Albalad">Albalad</h3>
-                <p class="translate-text" data-ar="ثقافة وتاريخ " data-en="Cultre & History">Cultre & History</p>
+            <div class="city-card filter-item nature sea entertaiment">
+                <div class="card-image"><img src="{% static 'images/jeddah_sea.jpg' %}" alt="Jeddah cornish"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" كورنيش جدة" data-en=" Jeddah Cornish ">Jeddah Cornish</h3>
+                    <p class="translate-text" data-ar="طبيعةو ترفية" data-en="Nature & Entertaiment">Nature & Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item entertaiment">
-            <div class="card-image"><img src="{% static 'images/jedPark.jpg' %}" alt="Jeddah Park"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" حديقة الأمير ماجد " data-en="Prince Majed Park">Prince Majed Park</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/KingFahadFountain.jpg' %}" alt="KingFahadFountain">
+                </div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" نافورةالملك فهد " data-en=" King Fahad Fountain ">King Fahad
+                        Fountain</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item nature sea">
-            <div class="card-image"><img src="{% static 'images/jedIsland.jpg' %}" alt="jedIsland"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" جزيرة بياضه " data-en="Alhada Mountain">Alhada Mountain</h3>
-                <p class="translate-text" data-ar="طبيعة وبحر" data-en="Nature & Sea">Nature & Sea</p>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/aquarium.jpg' %}" alt="aquarium"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" اكواريوم فقية " data-en=" Aquarium Faqih">Aquarium Faqih</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item shopping">
-            <div class="card-image"><img src="{% static 'images/redseamall.jpg' %}" alt="Red Sea Mall"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" رد سي مول " data-en="Red Sea Mall">Red Sea Mall</h3>
-                <p class="translate-text" data-ar="تسوق " data-en="Shopping">Shopping</p>
+            <div class="city-card filter-item culture">
+                <div class="card-image"><img src="{% static 'images/balad.jpg' %}" alt="Albalad"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" البلد " data-en="Albalad">Albalad</h3>
+                    <p class="translate-text" data-ar="ثقافة وتاريخ " data-en="Cultre & History">Cultre & History</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item nature">
-            <div class="card-image"><img src="{% static 'images/mall-of-arab.jpg' %}" alt="Mall of Arab"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" مول العرب " data-en="Mall of Arab">Mall of Arab</h3>
-                <p class="translate-text" data-ar="تسوق " data-en="Shopping">Shopping</p>
+            <div class="city-card filter-item nature sea">
+                <div class="card-image"><img src="{% static 'images/jedIsland.jpg' %}" alt="jedIsland"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" جزيرة بياضه " data-en="Alhada Mountain">Alhada Mountain</h3>
+                    <p class="translate-text" data-ar="طبيعة وبحر" data-en="Nature & Sea">Nature & Sea</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item nature">
-            <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item nature">
-            <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/Jeddah-Art-Promenade.jpg' %}" alt="Jeddah Art Promenade"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" جدة ارت بروميناد  " data-en="Jeddah Art Promenade"> Jeddah Art Promenade</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-        <div class="city-card filter-item nature">
-            <div class="card-image"><img src="{% static 'images/Shalal.jpg' %}" alt="Shalal"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" العاب الشلال " data-en="Shalal Park"> Shalal Park</h3>
-                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/city-walk.jpg' %}" alt="city-walk"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" سيتي ووك " data-en="City Walk"> City Walk</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
             </div>
-        </div>
 
-    </div>
+            <div class="city-card filter-item entertaiment">
+                <div class="card-image"><img src="{% static 'images/yakhut.jpg' %}" alt="Yakhut"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" نادي اليخوت " data-en="Yakhut Club"> Yakhut Club</h3>
+                    <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+                </div>
+            </div>
+
+            <div class="city-card filter-item nature">
+                <div class="card-image"><img src="{% static 'images/sharaa.jpg' %}" alt="Sharaa"></div>
+                <div class="card-content">
+                    <h3 class="translate-text" data-ar=" جزيرة الشراع " data-en="Shalal Park"> Shalal Park</h3>
+                    <p class="translate-text" data-ar=" طبيعة " data-en="Nature">Nature</p>
+                </div>
+            </div>
+            
+        </div>
 </main>
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

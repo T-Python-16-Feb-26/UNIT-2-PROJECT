@@ -1,93 +1,109 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
 {% block title %}Tabuk{% endblock %}
+
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar="مدينة تبوك " 
-            data-en="Tabuk City">
+        <h1 class="translate-text" data-ar="مدينة تبوك " data-en="Tabuk City">
             Tabuk City
         </h1>
     </section>
 
- 
+
     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar=" تبوك " data-en="Tabuk">Tabuk</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
-        </button>
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" تبوك " data-en="Tabuk">Tabuk</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                    Previous Page</span>
+            </button>
+        </div>
     </div>
-</div>
 
     <section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="تبوك: بوابة الشمال" data-en="Tabuk: Gateway to the North">تبوك: بوابة الشمال</h2>
-                <p class="translate-text" 
-                   data-ar="تعتبر منطقة تبوك لوحة طبيعية وتاريخية مذهلة، حيث تلتقي الجبال الشاهقة التي تكسوها الثلوج شتاءً بالشواطئ الفيروزية الساحرة. تضم المنطقة آثاراً تعود لآلاف السنين، وتعد اليوم منطلقاً لمشاريع المستقبل العالمية، مما يجعلها وجهة فريدة تجمع بين أصالة الماضي وخيال المستقبل." 
-                   data-en="Tabuk is a stunning natural and historical masterpiece, where towering mountains covered in winter snow meet enchanting turquoise beaches. The region houses landmarks dating back thousands of years and serves as the launchpad for global future projects, blending ancient heritage with future vision.">
-                   تعتبر تبوك لوحة طبيعية تجمع بين الجبال المكسوة بالثلوج والشواطئ الفيروزية، وهي منطلق مشاريع المستقبل العالمية.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="تبوك في رؤية 2030" data-en="Tabuk in Vision 2030">تبوك في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="تمثل تبوك حجر الزاوية في طموحات رؤية 2030، حيث تحتضن مشروع 'نيوم' الحالم ومدينة 'ذا لاين' و'أوكساجون'، بالإضافة إلى مشروع البحر الأحمر وسيندالة، لتصبح المركز العالمي الجديد للابتكار والسياحة المستدامة." 
-                   data-en="Tabuk represents the cornerstone of Vision 2030 ambitions, hosting the visionary 'NEOM' project, 'The Line', and 'Oxagon', along with the Red Sea Project, to become a global hub for innovation and sustainable tourism.">
-                   تمثل تبوك قلب طموحات الرؤية باحتضانها لمشاريع عالمية مثل نيوم وذا لاين، لتكون الوجهة العالمية الجديدة للابتكار والسياحة.
-                </p>
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="تبوك: بوابة الشمال" data-en="Tabuk: Gateway to the North">تبوك:
+                        بوابة الشمال</h2>
+                    <p class="translate-text"
+                        data-ar="تعتبر منطقة تبوك لوحة طبيعية وتاريخية مذهلة، حيث تلتقي الجبال الشاهقة التي تكسوها الثلوج شتاءً بالشواطئ الفيروزية الساحرة. تضم المنطقة آثاراً تعود لآلاف السنين، وتعد اليوم منطلقاً لمشاريع المستقبل العالمية، مما يجعلها وجهة فريدة تجمع بين أصالة الماضي وخيال المستقبل."
+                        data-en="Tabuk is a stunning natural and historical masterpiece, where towering mountains covered in winter snow meet enchanting turquoise beaches. The region houses landmarks dating back thousands of years and serves as the launchpad for global future projects, blending ancient heritage with future vision.">
+                        تعتبر تبوك لوحة طبيعية تجمع بين الجبال المكسوة بالثلوج والشواطئ الفيروزية، وهي منطلق مشاريع
+                        المستقبل العالمية.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="تبوك في رؤية 2030" data-en="Tabuk in Vision 2030">تبوك في رؤية
+                        2030</h3>
+                    <p class="translate-text"
+                        data-ar="تمثل تبوك حجر الزاوية في طموحات رؤية 2030، حيث تحتضن مشروع 'نيوم' الحالم ومدينة 'ذا لاين' و'أوكساجون'، بالإضافة إلى مشروع البحر الأحمر وسيندالة، لتصبح المركز العالمي الجديد للابتكار والسياحة المستدامة."
+                        data-en="Tabuk represents the cornerstone of Vision 2030 ambitions, hosting the visionary 'NEOM' project, 'The Line', and 'Oxagon', along with the Red Sea Project, to become a global hub for innovation and sustainable tourism.">
+                        تمثل تبوك قلب طموحات الرؤية باحتضانها لمشاريع عالمية مثل نيوم وذا لاين، لتكون الوجهة العالمية
+                        الجديدة للابتكار والسياحة.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم تبوك" data-en="Top Landmarks of Tabuk">أبرز معالم تبوك</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-snowflake"></i></div>
-                <h4 class="translate-text" data-ar="جبل اللوز" data-en="Jabal al-Lawz">جبل اللوز</h4>
-                <p class="translate-text" data-ar="أشهر قمم الشمال التي تتزين بالرداء الأبيض في الشتاء، ويوفر تجربة سياحية جبلية فريدة ومناظر خلابة." data-en="The most famous northern peak that wears white in winter, providing a unique mountain tourism experience and breathtaking views.">أشهر قمم الشمال التي تتزين بالثلوج شتاءً، ويوفر إطلالات جبلية ساحرة لا تُنسى.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-seedling"></i></div>
-                <h4 class="translate-text" data-ar="وادي الديسة" data-en="Wadi Al-Disah">وادي الديسة</h4>
-                <p class="translate-text" data-ar="أحد أجمل الأودية في المملكة، يتميز بأعمدته الصخرية الشاهقة وعيون المياه الجارية وسط الخضرة الدائمة." data-en="One of the most beautiful valleys in the Kingdom, known for its towering rock pillars and flowing springs amidst permanent greenery.">وادي ساحر يتميز بأعمدته الصخرية الشاهقة وعيون المياه الجارية بين النخيل.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-vihara"></i></div>
-                <h4 class="translate-text" data-ar="قلعة تبوك التاريخية" data-en="Tabuk Castle">قلعة تبوك التاريخية</h4>
-                <p class="translate-text" data-ar="حصن أثري يعود للعهد العثماني، يروي تاريخ المنطقة العريق ويعد معلماً سياحياً يتوسط قلب المدينة." data-en="An archaeological fortress dating back to the Ottoman era, telling the region's ancient history in the heart of the city.">حصن أثري عريق يروي تاريخ المنطقة، ويعد معلماً بارزاً يتوسط قلب مدينة تبوك.</p>
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم تبوك" data-en="Top Landmarks of Tabuk">
+                أبرز معالم تبوك</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="جبل اللوز" data-en="Jabal al-Lawz">جبل اللوز</h4>
+                    <p class="translate-text"
+                        data-ar="أشهر قمم الشمال التي تتزين بالرداء الأبيض في الشتاء، ويوفر تجربة سياحية جبلية فريدة ومناظر خلابة."
+                        data-en="The most famous northern peak that wears white in winter, providing a unique mountain tourism experience and breathtaking views.">
+                        أشهر قمم الشمال التي تتزين بالثلوج شتاءً، ويوفر إطلالات جبلية ساحرة لا تُنسى.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="وادي الديسة" data-en="Wadi Al-Disah">وادي الديسة</h4>
+                    <p class="translate-text"
+                        data-ar="أحد أجمل الأودية في المملكة، يتميز بأعمدته الصخرية الشاهقة وعيون المياه الجارية وسط الخضرة الدائمة."
+                        data-en="One of the most beautiful valleys in the Kingdom, known for its towering rock pillars and flowing springs amidst permanent greenery.">
+                        وادي ساحر يتميز بأعمدته الصخرية الشاهقة وعيون المياه الجارية بين النخيل.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="قلعة تبوك التاريخية" data-en="Tabuk Castle">قلعة تبوك التاريخية
+                    </h4>
+                    <p class="translate-text"
+                        data-ar="حصن أثري يعود للعهد العثماني، يروي تاريخ المنطقة العريق ويعد معلماً سياحياً يتوسط قلب المدينة."
+                        data-en="An archaeological fortress dating back to the Ottoman era, telling the region's ancient history in the heart of the city.">
+                        حصن أثري عريق يروي تاريخ المنطقة، ويعد معلماً بارزاً يتوسط قلب مدينة تبوك.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="بحر" data-en="Sea" onclick="filterSelection('sea')">Sea</button>
-        <button class="filter-btn translate-text" data-ar="صحراء" data-en="Desert" onclick="filterSelection('desert')">Desert</button>
-        <button class="filter-btn translate-text" data-ar="ثلوج" data-en="Snow" onclick="filterSelection('snow')">Snow</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+            onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="بحر" data-en="Sea"
+            onclick="filterSelection('sea')">Sea</button>
+        <button class="filter-btn translate-text" data-ar="ثلوج" data-en="Snow"
+            onclick="filterSelection('snow')">Snow</button>
+        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley"
+            onclick="filterSelection('valley')">Valley</button>
     </div>
 
     <div class="riyadh-grid">
-        
-        <div class="city-card filter-item sea">
+
+        <div class="city-card filter-item sea nature">
             <div class="card-image"><img src="{% static 'images/n-shebara.jpg' %}" alt="Shebara"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جزيرة شيبارة " data-en="Shebara Island">Shebara Island</h3>
@@ -95,7 +111,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item sea">
+        <div class="city-card filter-item sea nature">
             <div class="card-image"><img src="{% static 'images/shura.jpg' %}" alt="Shura"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جزيرة شورى " data-en="Shura Island">Shura Island</h3>
@@ -103,7 +119,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item sea">
+        <div class="city-card filter-item sea nature">
             <div class="card-image"><img src="{% static 'images/Amhat.jpg' %}" alt="Shebara"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جزيرة أمهات " data-en="Amhat Island">Amhat Island</h3>
@@ -111,7 +127,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item snow">
+        <div class="city-card filter-item snow nature">
             <div class="card-image"><img src="{% static 'images/Trojena.jpg' %}" alt="Trojena"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" تروجينا " data-en="Trojena"> Trojena </h3>
@@ -119,7 +135,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item snow">
+        <div class="city-card filter-item snow nature">
             <div class="card-image"><img src="{% static 'images/AlLouz-mount.jpg' %}" alt="Al Louz Mountain"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جبل اللوز " data-en="Al Louz Mountain"> Al Louz Mountain</h3>
@@ -127,12 +143,12 @@
             </div>
         </div>
 
-        <div class="city-card filter-item nature">
+        <div class="city-card filter-item nature valley">
             <div class="card-image"><img src="{% static 'images/desah.jpg' %}" alt="Al Dessah"></div>
             <div class="card-content">
-                <h3 class="translate-text" data-ar=" الديسة " data-en="Al Dessah"> Al Dessah </h3>
+                <h3 class="translate-text" data-ar=" وادي الديسة " data-en="Al Dessah Valley"> Al Dessah Valley</h3>
                 <p class="translate-text" data-ar=" طبيعة " data-en="Nature">Nature</p>
-                </div>
+            </div>
         </div>
 
         <div class="city-card filter-item culture">
@@ -143,35 +159,25 @@
             </div>
         </div>
 
-        <div class="city-card filter-item shopping">
-            <div class="card-image"><img src="{% static 'images/tabukPark.jpg' %}" alt="Tabuk Park"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" تبوك بارك مول " data-en="Tabuk Park Mall"> Tabuk Park Mall </h3>
-                <p class="translate-text" data-ar=" تسوق " data-en="Shopping "> Shopping </p>
-            </div>
-        </div>
-
     </div>
 </main>
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

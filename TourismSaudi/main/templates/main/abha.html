@@ -1,0 +1,175 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Abha {% endblock %}
+
+{% block content %}
+<main>
+    <section class="city-detail-header">
+        <h1 class="translate-text" data-ar=" مدينة أبها " data-en="Abha City">
+            Abha City
+        </h1>
+    </section>
+
+    <div class="navigation-controls">
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" أبها" data-en="Abha"> Abha</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+            </button>
+        </div>
+    </div>
+
+    <section class="city-intro-section">
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="أبها: طبيعة وضباب" data-en="Abha: Nature and Mist">Abha: Nature
+                        and Mist</h2>
+                    <p class="translate-text"
+                        data-ar="تعتبر أبها وجهة السياحة الجبلية الأولى في المملكة، حيث يلتقي الضباب بقمم الجبال الخضراء. تتميز المنطقة بهوائها العليل، وقراها التراثية المعلقة، وكرم ضيافة أهلها، مما يجعلها ملاذاً ساحراً للباحثين عن الهدوء والجمال الطبيعي."
+                        data-en="Abha is the leading mountain tourism destination in the Kingdom, where mist meets green mountain peaks. The region is known for its cool breeze, hanging heritage villages, and the generous hospitality of its people, making it a charming haven for those seeking peace and natural beauty.">
+                       Abha is the leading mountain tourism destination in the Kingdom, where mist meets green mountain peaks. The region is known for its cool breeze, hanging heritage villages, and the generous hospitality of its people, making it a charming haven for those seeking peace and natural beauty.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="أبها في رؤية 2030" data-en="Abha in Vision 2030">Abha in Vision 2030</h3>
+                    <p class="translate-text"
+                        data-ar="من خلال استراتيجية 'قمم وشيم'، تهدف الرؤية لتحويل عسير إلى وجهة عالمية للسياحة الجبلية طوال العام، مع الحفاظ على هويتها الثقافية الفريدة وتطوير مشاريع سياحية كبرى مثل شركة السودة للتطوير."
+                        data-en="Through the 'Soudah Development' strategy, the Vision aims to transform Asir into a global year-round mountain tourism destination, preserving its unique cultural identity and developing major tourism projects.">
+                       Through the 'Soudah Development' strategy, the Vision aims to transform Asir into a global year-round mountain tourism destination, preserving its unique cultural identity and developing major tourism projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم الجنوب"
+                data-en="Top Landmarks of the South">أبرز معالم الجنوب</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="جبل السودة" data-en="Jabal Sawda">جبل السودة</h4>
+                    <p class="translate-text"
+                        data-ar="أعلى قمة في المملكة العربية السعودية، حيث تغطيها أشجار العرعر ويلامسها السحاب طوال العام."
+                        data-en="The highest peak in Saudi Arabia, covered with juniper trees and touched by clouds all year round.">
+                       The highest peak in Saudi Arabia, covered with juniper trees and touched by clouds all year round.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="رجال ألمع" data-en="Rijal Almaa">رجال ألمع</h4>
+                    <p class="translate-text"
+                        data-ar="قرية تراثية عالمية تتميز بقصورها الحجرية الملونة وتاريخها العريق الذي يمتد لمئات السنين."
+                        data-en="A global heritage village known for its colorful stone palaces and a long history stretching back hundreds of years.">
+                       A global heritage village known for its colorful stone palaces and a long history stretching back hundreds of years.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="منتزه الحبلة" data-en="Al-Habala Park">منتزه الحبلة</h4>
+                    <p class="translate-text"
+                        data-ar="منطقة سياحية خلابة تشتهر بقرية الحبلة التاريخية والمنحدرات الجبلية التي توفر إطلالات تخطف الأنفاس."
+                        data-en="A stunning tourist area famous for the historic Habala village and mountain cliffs that offer breathtaking views.">
+                       A stunning tourist area famous for the historic Habala village and mountain cliffs that offer breathtaking views.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="filter-container">
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley"
+            onclick="filterSelection('valley')">Valley</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
+    </div>
+
+    <div class="riyadh-grid">
+
+        <div class="city-card filter-item entertaiment nature">
+            <div class="card-image"><img src="{% static 'images/abha-tree.jpg' %}" alt="Art Street"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" شارع الفن " data-en="Art Street">Art Street</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment ">
+            <div class="card-image"><img src="{% static 'images/high-city.jpg' %}" alt="High City"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مطل المدينة العالية " data-en=" High City ">High City</h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment nature">
+            <div class="card-image"><img src="{% static 'images/sudah-mount.jpg' %}" alt="Sudah Mountain"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" جبل السودة " data-en=" Sudah Mountain "> Sudah Mountain </h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/Honey-Tower.jpg' %}" alt="Honey Tower"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" كوخ العسل " data-en=" Bees Tower Honey Refinery "> Bees Tower Honey
+                    Refinery </h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/Strawberry.jpg' %}" alt="Farm Aseer"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مزرعة السحاب للفراولة " data-en=" Strawberry Farm "> Strawberry
+                    Farm </h3>
+                <p class="translate-text" data-ar="ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature valley">
+            <div class="card-image"><img src="{% static 'images/DA-valley.jpg' %}" alt=" Dabuei Valley "></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" سد ضبوعي " data-en=" Dabuei Valley "> Dabuei Valley </h3>
+                <p class="translate-text" data-ar="طبيعة " data-en="Nature">Nature</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item nature ">
+            <div class="card-image"><img src="{% static 'images/rijal-alma.jpg' %}" alt=" Rijal Almaa "></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" رجال المع " data-en=" Rijal Almaa "> Rijal Almaa </h3>
+                <p class="translate-text" data-ar="طبيعة " data-en="Nature">Nature</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
+        }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
+    }
+</script>
+{% endblock %}

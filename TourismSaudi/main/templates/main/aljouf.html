@@ -1,90 +1,100 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
 {% block title %}Al Jouf{% endblock %}
 
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar=" الجوف " 
-            data-en=" Al-Jouf City">
+        <h1 class="translate-text" data-ar=" مدينة الجوف " data-en=" Al-Jouf City">
             Al-Jouf City
         </h1>
     </section>
 
     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar=" الجوف" data-en="Al Jouf"> Al Jouf</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
-        </button>
-    </div>
-</div>
-
-
-<section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="الجوف: سلة غذاء المملكة" data-en="Al-Jouf: The Kingdom's Food Basket">الجوف: سلة غذاء المملكة</h2>
-                <p class="translate-text" 
-                   data-ar="تعتبر منطقة الجوف واحدة من أقدم مناطق الاستيطان البشري في العالم، وهي اليوم العاصمة الزراعية للمملكة. تشتهر بملايين أشجار الزيتون التي تنتج أفخر أنواع الزيوت عالمياً، كما تضم كنوزاً أثرية تعود لآلاف السنين، مما يجعلها مزيجاً ساحراً بين التاريخ العريق والنهضة الزراعية الحديثة." 
-                   data-en="Al-Jouf is one of the oldest human settlement areas in the world and is today the agricultural capital of the Kingdom. Famous for millions of olive trees producing the finest oils globally, it also houses archaeological treasures dating back thousands of years, creating a magical blend of ancient history and modern agricultural revival.">
-                   تعتبر منطقة الجوف العاصمة الزراعية للمملكة وأرض الزيتون، وتضم كنوزاً أثرية تعود لآلاف السنين.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="الجوف في رؤية 2030" data-en="Al-Jouf in Vision 2030">الجوف في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="تلعب الجوف دوراً محورياً في تحقيق الأمن الغذائي للمملكة ضمن رؤية 2030، بالإضافة إلى كونها مركزاً عالمياً للطاقة المتجددة عبر مشاريع الطاقة الشمسية وطاقة الرياح في دومة الجندل وسكاكا، مما يضعها على خارطة المستقبل المستدام." 
-                   data-en="Al-Jouf plays a pivotal role in achieving the Kingdom's food security under Vision 2030, in addition to being a global hub for renewable energy through solar and wind projects in Dumat al-Jandal and Sakaka.">
-                   تلعب الجوف دوراً محورياً في الأمن الغذائي ومركزاً عالمياً للطاقة المتجددة ضمن رؤية 2030.
-                </p>
-            </div>
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" الجوف" data-en="Al Jouf"> Al Jouf</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
+            </button>
         </div>
     </div>
-</section>
 
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم الجوف" data-en="Top Landmarks of Al-Jouf">أبرز معالم الجوف</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-monument"></i></div>
-                <h4 class="translate-text" data-ar="قلعة مارد" data-en="Marid Castle">قلعة مارد</h4>
-                <p class="translate-text" data-ar="حصن تاريخي عريق في دومة الجندل يعود للقرن الأول الميلادي، ويعد رمزاً للصمود وعظمة العمارة القديمة." data-en="An ancient historic fortress in Dumat al-Jandal dating back to the 1st century AD, a symbol of resilience and ancient architectural greatness.">حصن تاريخي عريق في دومة الجندل يعود للقرن الأول الميلادي.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-columns"></i></div>
-                <h4 class="translate-text" data-ar="أعمدة الرجاجيل" data-en="Rajajil Columns">أعمدة الرجاجيل</h4>
-                <p class="translate-text" data-ar="موقع أثري يضم أعمدة حجرية غامضة تعود للعصر النحاسي، ويُلقب بـ 'ستونهنج العرب' لأهميته التاريخية." data-en="An archaeological site featuring mysterious stone columns from the Chalcolithic era, nicknamed 'Stonehenge of Arabia'.">موقع أثري يضم أعمدة حجرية غامضة تُلقب بـ "ستونهنج العرب".</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-tint"></i></div>
-                <h4 class="translate-text" data-ar="بحيرة دومة الجندل" data-en="Dumat al-Jandal Lake">بحيرة دومة الجندل</h4>
-                <p class="translate-text" data-ar="أكبر بحيرة صناعية في الجزيرة العربية، تقع وسط الصحراء وتعد وجهة مثالية للرياضات المائية والاستجمام." data-en="The largest artificial lake in the Arabian Peninsula, located in the middle of the desert, ideal for water sports and relaxation.">أكبر بحيرة صناعية في الجزيرة العربية ووجهة مثالية للرياضات المائية.</p>
+
+    <section class="city-intro-section">
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="الجوف: سلة غذاء المملكة"
+                        data-en="Al-Jouf: The Kingdom's Food Basket">الجوف: سلة غذاء المملكة</h2>
+                    <p class="translate-text"
+                        data-ar="تعتبر منطقة الجوف واحدة من أقدم مناطق الاستيطان البشري في العالم، وهي اليوم العاصمة الزراعية للمملكة. تشتهر بملايين أشجار الزيتون التي تنتج أفخر أنواع الزيوت عالمياً، كما تضم كنوزاً أثرية تعود لآلاف السنين، مما يجعلها مزيجاً ساحراً بين التاريخ العريق والنهضة الزراعية الحديثة."
+                        data-en="Al-Jouf is one of the oldest human settlement areas in the world and is today the agricultural capital of the Kingdom. Famous for millions of olive trees producing the finest oils globally, it also houses archaeological treasures dating back thousands of years, creating a magical blend of ancient history and modern agricultural revival.">
+                        تعتبر منطقة الجوف العاصمة الزراعية للمملكة وأرض الزيتون، وتضم كنوزاً أثرية تعود لآلاف السنين.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="الجوف في رؤية 2030" data-en="Al-Jouf in Vision 2030">الجوف في رؤية 2030</h3>
+                    <p class="translate-text"
+                        data-ar="تلعب الجوف دوراً محورياً في تحقيق الأمن الغذائي للمملكة ضمن رؤية 2030، بالإضافة إلى كونها مركزاً عالمياً للطاقة المتجددة عبر مشاريع الطاقة الشمسية وطاقة الرياح في دومة الجندل وسكاكا، مما يضعها على خارطة المستقبل المستدام."
+                        data-en="Al-Jouf plays a pivotal role in achieving the Kingdom's food security under Vision 2030, in addition to being a global hub for renewable energy through solar and wind projects in Dumat al-Jandal and Sakaka.">
+                        تلعب الجوف دوراً محورياً في الأمن الغذائي ومركزاً عالمياً للطاقة المتجددة ضمن رؤية 2030.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم الجوف" data-en="Top Landmarks of Al-Jouf"> Top Landmarks of Al-Jouf</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="قلعة مارد" data-en="Marid Castle">قلعة مارد</h4>
+                    <p class="translate-text"
+                        data-ar="حصن تاريخي عريق في دومة الجندل يعود للقرن الأول الميلادي، ويعد رمزاً للصمود وعظمة العمارة القديمة."
+                        data-en="An ancient historic fortress in Dumat al-Jandal dating back to the 1st century AD, a symbol of resilience and ancient architectural greatness.">
+                       An ancient historic fortress in Dumat al-Jandal dating back to the 1st century AD, a symbol of resilience and ancient architectural greatness.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="أعمدة الرجاجيل" data-en="Rajajil Columns">أعمدة الرجاجيل</h4>
+                    <p class="translate-text"
+                        data-ar="موقع أثري يضم أعمدة حجرية غامضة تعود للعصر النحاسي، ويُلقب بـ 'ستونهنج العرب' لأهميته التاريخية."
+                        data-en="An archaeological site featuring mysterious stone columns from the Chalcolithic era, nicknamed 'Stonehenge of Arabia'.">
+                       An archaeological site featuring mysterious stone columns from the Chalcolithic era, nicknamed 'Stonehenge of Arabia'.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="بحيرة دومة الجندل" data-en="Dumat al-Jandal Lake">بحيرة دومة الجندل</h4>
+                    <p class="translate-text"
+                        data-ar="أكبر بحيرة صناعية في الجزيرة العربية، تقع وسط الصحراء وتعد وجهة مثالية للرياضات المائية والاستجمام."
+                        data-en="The largest artificial lake in the Arabian Peninsula, located in the middle of the desert, ideal for water sports and relaxation.">
+                       The largest artificial lake in the Arabian Peninsula, located in the middle of the desert, ideal for water sports and relaxation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+            onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley"
+            onclick="filterSelection('valley')">Valley</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
     </div>
 
     <div class="riyadh-grid">
-    
+
         <div class="city-card filter-item culture">
             <div class="card-image"><img src="{% static 'images/zaabalCastle.jpg' %}" alt="Castle"></div>
             <div class="card-content">
@@ -93,11 +103,11 @@
             </div>
         </div>
 
-        <div class="city-card filter-item nature entertaiment">
+        <div class="city-card filter-item nature entertaiment valley">
             <div class="card-image"><img src="{% static 'images/dumataljundal.jpg' %}" alt="dumataljundal"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" بحيرة دومة الجندل " data-en=" Dumat Aljundal Lake "> Dumat Aljundal Lake </h3>
-                <p class="translate-text" data-ar=" ترفية وطبيعة " data-en=" entertaiment "> entertaiment </p>
+                <p class="translate-text" data-ar=" ترفية وطبيعة " data-en=" Entertaiment "> Entertaiment </p>
             </div>
         </div>
 
@@ -109,38 +119,56 @@
             </div>
         </div>
 
-        <div class="city-card filter-item ">
+        <div class="city-card filter-item entertaiment ">
             <div class="card-image"><img src="{% static 'images/horse.jpg' %}" alt="horse"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" منتجع الجواد العربي " data-en=" Arabian Horse Resort "> Arabian Horse Resort </h3>
-                <p class="translate-text" data-ar=" ترفية " data-en=" entertaiment "> entertaiment </p>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment "> Entertaiment </p>
             </div>
         </div>
 
-      
+        <div class="city-card filter-item culture ">
+            <div class="card-image"><img src="{% static 'images/marid-castle.jpg' %}" alt="marid castle"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" قلعة مارد " data-en=" Marid Castle "> Marid Castle </h3>
+                <p class="translate-text" data-ar=" ثقافةوتاريخ " data-en="Culture & History "> Entertaiment </p>
+            </div>
+        </div>
 
+        <div class="city-card filter-item nature ">
+            <div class="card-image"><img src="{% static 'images/olive.jpg' %}" alt="olive farms"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مزارع الزيتون " data-en=" Olives Frams "> Olives Fram </h3>
+                <p class="translate-text" data-ar=" طبيعة " data-en=" Nature "> Nature </p>
+            </div>
+        </div>
 
+        <div class="city-card filter-item nature ">
+            <div class="card-image"><img src="{% static 'images/lavendar.jpg' %}" alt="lavendar"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" موسم  ازهار الخزامى " data-en=" Lavendar Season "> Lavendar Season </h3>
+                <p class="translate-text" data-ar=" طبيعة " data-en=" Nature "> Nature </p>
+            </div>
+        </div>
     </div>
 </main>
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

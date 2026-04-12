@@ -26,56 +26,56 @@
 
  
     <div id="ai-bot-container">
-    <div id="bot-bubble" class="translate-text" 
-         data-ar="أهلاً بك! أنا سديم مساعدتك الذكية" 
-         data-en="Hi Welcome! I'm Sadeem, Your AI Assistant">
-         Hi Welcome! I'm Sadeem, Your AI Assistant
-    </div>
-
-    <div id="ai-bot-circle" onclick="toggleChat()">
-        <img src="{% static 'images/chatbot-avatar.png' %}" alt="Sadeem AI">
-    </div>
-
-    <div id="chat-window">
-        <div class="chat-header">
-            <span class="translate-text" data-ar="مساعدك الذكي" data-en="Virtual Travel Assistant">Virtual Travel Assistant</span>
-            <button onclick="toggleChat()">×</button>
+        <div id="bot-bubble" class="translate-text" 
+            data-ar="أهلاً بك! أنا سديم مساعدتك الذكية" 
+            data-en="Hi Welcome! I'm Sadeem, Your AI Assistant">
+            Hi Welcome! I'm Sadeem, Your AI Assistant
         </div>
-        <div id="chat-messages">
-            <div class="bot-msg translate-text" 
-                 data-ar="مرحباً! أنا سديم مرشدتك الذكية. كيف يمكنني مساعدتك اليوم؟" 
-                 data-en="Hello! I'm Sadeem, your smart tour guide. How can I assist you today?">
-                 Hello! I'm Sadeem, your smart tour guide. How can I assist you today?
+
+        <div id="ai-bot-circle" onclick="toggleChat()">
+            <img src="{% static 'images/chatbot-avatar.png' %}" alt="Sadeem AI">
+        </div>
+
+        <div id="chat-window">
+            <div class="chat-header">
+                <span class="translate-text" data-ar="مساعدك الذكي" data-en="Virtual Travel Assistant">Virtual Travel Assistant</span>
+                <button onclick="toggleChat()">×</button>
+            </div>
+            <div id="chat-messages">
+                <div class="bot-msg translate-text" 
+                    data-ar="مرحباً! أنا سديم مرشدتك الذكية. كيف يمكنني مساعدتك اليوم؟" 
+                    data-en="Hello! I'm Sadeem, your smart tour guide. How can I assist you today?">
+                    Hello! I'm Sadeem, your smart tour guide. How can I assist you today?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" class="translate-text" data-ar="اكتب هنا..." data-en="Start Typing..." placeholder="Start Typing...">
+                <button id="send-btn">➤</button>
             </div>
         </div>
-        <div class="chat-input-area">
-            <input type="text" id="user-input" class="translate-text" data-ar="اكتب هنا..." data-en="Start Typing..." placeholder="Start Typing...">
-            <button id="send-btn">➤</button>
-        </div>
     </div>
-</div>
 
     <section id="contact">
-    <div class="contact-container">
-        <div class="contact-box">
-            <h1 class="translate-text" data-ar="تواصل معي" data-en="Contact Me">Contact Me</h1>
-            <p class="translate-text" data-ar="دعنا نعمل معاً 👇" data-en="Let’s work together 👇">Let’s work together 👇</p>
-            
-            <form class="contact-form">
-                {% csrf_token %} <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="4" placeholder="Your Message" required></textarea>
+        <div class="contact-container">
+            <div class="contact-box">
+                <h1 class="translate-text" data-ar="تواصل معي" data-en="Contact Me">Contact Me</h1>
+                <p class="translate-text" data-ar="دعنا نعمل معاً 👇" data-en="Let’s work together 👇">Let’s work together 👇</p>
                 
-                <button type="submit" class="contact-submit translate-text" data-ar="إرسال" data-en="Send Message">Send Message</button>
-            </form>
+                <form class="contact-form">
+                    {% csrf_token %} <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="Your Message" required></textarea>
+                    
+                    <button type="submit" class="contact-submit translate-text" data-ar="إرسال" data-en="Send Message">Send Message</button>
+                </form>
 
-            <div class="contact-info">
-                <p>Email: <a href="mailto:sadeem@email.com">sadeem@email.com</a></p>
-                <p>GitHub: <a href="https://github.com/sadeem21alharbi" target="_blank">github.com/sadeem21alharbi</a></p>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:sadeem@email.com">sadeem@email.com</a></p>
+                    <p>GitHub: <a href="https://github.com/sadeem21alharbi" target="_blank">github.com/sadeem21alharbi</a></p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <br>
 <br>
 <br>
@@ -103,7 +103,16 @@
     </footer>
 
     <script>
-    // 1. وظائف الكوكيز (الأساس الذي تعتمد عليه كل الوظائف الأخرى)
+    function changeFontSize(action) {
+        const root = document.documentElement;
+        let currentSize = parseFloat(window.getComputedStyle(root).fontSize);
+        
+        if (action === 'increase') {
+            root.style.fontSize = (currentSize + 2) + "px";
+        } else if (action === 'decrease') {
+            root.style.fontSize = (currentSize - 2) + "px";
+        }
+    }
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -125,7 +134,6 @@
         return null;
     }
 
-    // 2. وظيفة تحويل اللغة
     function changeLanguage(lang) {
         const elements = document.querySelectorAll('.translate-text');
         elements.forEach(el => {
@@ -136,32 +144,49 @@
         setCookie('prefLang', lang, 7);
     }
 
-    // 3. وظيفة التحكم في حجم الخط
-    let currentFontSize = parseInt(getCookie('fontSize')) || 16;
-    function changeFontSize(action) {
-        if (action === 'increase' && currentFontSize < 24) currentFontSize += 2;
-        else if (action === 'decrease' && currentFontSize > 12) currentFontSize -= 2;
-        
-        document.body.style.fontSize = currentFontSize + "px";
-        setCookie('fontSize', currentFontSize, 7);
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
     }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-    // 4. وظائف الدارك مود (الثيم)
-    function toggleTheme() {
-        let theme = document.documentElement.getAttribute('data-theme') || 'light';
-        let newTheme = (theme === 'light') ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        setCookie('theme', newTheme, 7);
-        updateThemeIcon(newTheme);
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for(let i=0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
+    return null;
+}
 
-    function updateThemeIcon(theme) {
-        const icon = document.getElementById('theme-icon');
-        if (icon) {
-            icon.innerText = (theme === 'light') ? '🌙' : '☀️';
-        }
+function toggleTheme() {
+    let theme = document.documentElement.getAttribute('data-theme') || 'light';
+    let newTheme = (theme === 'light') ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    setCookie('theme', newTheme, 7); 
+    updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.getElementById('theme-icon');
+    if (icon) {
+        icon.innerText = (theme === 'light') ? '🌙' : '☀️';
     }
+}
+
+// 3. أخيراً كود التشغيل عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = getCookie('theme') || 'light'; // تستخدم دالة getCookie
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+});
 
     // 5. التشغيل التلقائي عند تحميل أي صفحة
     window.addEventListener('DOMContentLoaded', () => {

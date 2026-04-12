@@ -1,0 +1,202 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Khobar {% endblock %}
+
+{% block content %}
+<main>
+    <section class="city-detail-header">
+        <h1 class="translate-text" data-ar=" مدينة الخبر " data-en=" Khobar City">
+            Khobar City
+        </h1>
+    </section>
+
+    <div class="navigation-controls">
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" الشرقية" data-en="Eastern"> Eastern</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                    Previous Page</span>
+            </button>
+        </div>
+    </div>
+    <section class="city-intro-section">
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="المنطقة الشرقية: أرض الخير"
+                        data-en="Eastern Province: Land of Prosperity">المنطقة الشرقية: أرض الخير</h2>
+                    <p class="translate-text"
+                        data-ar="تعتبر المنطقة الشرقية أكبر مناطق المملكة مساحةً، وهي القلب الاقتصادي النابض بصناعة الطاقة عالمياً. تجمع المنطقة بين حداثة الخبر والدمام، وعراقة الأحساء التاريخية. تتميز بشواطئها الهادئة على الخليج العربي، وواحات النخيل الغناء، مما يجعلها مزيجاً فريداً بين الصناعة، السياحة، والتراث."
+                        data-en="The Eastern Province is the largest region in the Kingdom and the global beating economic heart of the energy industry. It blends the modernity of Khobar and Dammam with the ancient history of Al-Ahsa. Featuring calm shores on the Arabian Gulf and lush palm oases, it's a unique mix of industry, tourism, and heritage.">
+                        تعتبر المنطقة الشرقية القلب الاقتصادي للمملكة، حيث تلتقي شواطئ الخليج العربي مع واحات النخيل
+                        والتراث العريق.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="الشرقية في رؤية 2030" data-en="Eastern Province in Vision 2030">
+                        الشرقية في رؤية 2030</h3>
+                    <p class="translate-text"
+                        data-ar="تركز الرؤية على تطوير المنطقة الشرقية كمركز عالمي للطاقة والخدمات اللوجستية، بالإضافة إلى تحويل واجهاتها البحرية وواحة الأحساء إلى وجهات سياحية عالمية، مع تعزيز جودة الحياة عبر مشاريع ترفيهية وثقافية كبرى."
+                        data-en="Vision 2030 focuses on developing the Eastern Province as a global energy and logistics hub, while transforming its waterfronts and Al-Ahsa Oasis into world-class tourist destinations.">
+                        تهدف الرؤية لتعزيز مكانة المنطقة كمركز عالمي للطاقة وسياحة الواحات والوجهات البحرية المتطورة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم الشرقية"
+                data-en="Top Landmarks of the East">أبرز معالم الشرقية</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="مركز إثراء (الظهران)" data-en="Ithra Center">مركز إثراء
+                        (الظهران)</h4>
+                    <p class="translate-text"
+                        data-ar="تحفة معمارية عالمية ومركز ثقافي رائد يجمع بين الفن، العلم، والإبداع في مكان واحد."
+                        data-en="An international architectural masterpiece and a leading cultural center blending art, science, and creativity.">
+                        تحفة معمارية عالمية ومركز ثقافي رائد يجمع بين الفن والعلم والإبداع.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="واحة الأحساء" data-en="Al-Ahsa Oasis">واحة الأحساء</h4>
+                    <p class="translate-text"
+                        data-ar="أكبر واحة نخيل في العالم وموقع مسجل في اليونسكو، تتميز بعيونها المائية وتاريخها الضارب في القدم."
+                        data-en="The world's largest palm oasis and a UNESCO site, famous for its natural springs and deep-rooted history.">
+                        أكبر واحة نخيل في العالم وموقع مسجل في اليونسكو بجمالها الطبيعي الخلاب.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="شاطئ نصف القمر" data-en="Half Moon Bay">شاطئ نصف القمر</h4>
+                    <p class="translate-text"
+                        data-ar="أحد أشهر الوجهات الشاطئية في المنطقة، يتميز بهدوء مياهه وتوفيره لأنشطة بحرية متنوعة لجميع الأعمار."
+                        data-en="One of the most famous beach destinations, known for its calm waters and various maritime activities for all ages.">
+                        أشهر الوجهات البحرية، يتميز بهدوء مياهه وأنشطته الترفيهية الممتعة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="filter-container">
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+            onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
+    </div>
+
+    <div class="riyadh-grid">
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/ethraalibraray.jpg' %}" alt="ethraa"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مكتبة اثراء" data-en="Ethraa Library">Ethraa Library</h3>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item culture">
+            <div class="card-image"><img src="{% static 'images/old-museum.jpg' %}" alt="OLD"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" متحف الطيبين " data-en="Old Museum">Old Museum</h3>
+                <p class="translate-text" data-ar=" ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/princeSpace.jpg' %}" alt="Space"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" مركز سلطان بن عبدالعزيز للعلوم والتقنية - سايتك " data-en="SAITIC">
+                    SAITIC</h3>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/KHOBAR-CORNICE.jpg' %}" alt="Khobar Cornish"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" كورنيش الخبر " data-en="khobar Cornish">khobar Cornish</h3>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment nature">
+            <div class="card-image"><img src="{% static 'images/duck-lake.jpg' %}" alt="Duck"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" بحيرة البط " data-en="Duck Lake">Duck Lake</h3>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item entertaiment">
+            <div class="card-image"><img src="{% static 'images/globalCity.jpg' %}" alt="Global CITY"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" المدينة العالمية  " data-en="Global City">Global City</h3>
+                <p class="translate-text" data-ar=" ترفية " data-en="Entertaiment">Entertaiment</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item culture ">
+            <div class="card-image"><img src="{% static 'images/old-village.jpg' %}" alt="Village"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" القرية التراثية " data-en="Heritage Village">Heritage Village</h3>
+                <p class="translate-text" data-ar=" ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item culture nature">
+            <div class="card-image"><img src="{% static 'images/Qara.jpg' %}" alt="Qara"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" القارة " data-en="Qara">Qara</h3>
+                <p class="translate-text" data-ar=" ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item culture ">
+            <div class="card-image"><img src="{% static 'images/ibra.jpg' %}" alt="ibrahimVillage"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" قصر ابراهيم الاثري " data-en="Ibrahim Palace Archaeological Site">
+                    Ibrahim Palace Archaeological Site</h3>
+                <p class="translate-text" data-ar=" ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+        <div class="city-card filter-item culture ">
+            <div class="card-image"><img src="{% static 'images/tarotCastle.jpg' %}" alt="castle"></div>
+            <div class="card-content">
+                <h3 class="translate-text" data-ar=" قلعة تاروت " data-en="Tarout Castle">Tarout Castle</h3>
+                <p class="translate-text" data-ar=" ثقافة وتاريخ " data-en="Cultrue & History">Cultrue & History</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
+        }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
+    }
+</script>
+{% endblock %}

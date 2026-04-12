@@ -1,87 +1,102 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
 {% block title %}Medina{% endblock %}
+
 {% block content %}
 <main>
     <section class="city-detail-header">
-        <h1 class="translate-text" 
-            data-ar=" المدينة المنورة " 
-            data-en=" Medina City">
+        <h1 class="translate-text" data-ar=" المدينة المنورة " data-en=" Medina City">
             Medina City
         </h1>
     </section>
 
     <div class="navigation-controls">
-    <div class="container nav-flex-container">  
-        <nav class="breadcrumb-static">
-            <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
-            <span class="sep">/</span>
-            <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
-            <span class="sep">/</span>
-            <span class="current-page translate-text" data-ar=" المدينة المنورة" data-en="Medina">Medina</span>
-        </nav>
-        <button onclick="window.history.back()" class="back-btn">
-            <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to Previous Page</span>
-        </button>
+        <div class="container nav-flex-container">
+            <nav class="breadcrumb-static">
+                <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <span class="sep">/</span>
+                <span class="translate-text" data-ar="المدن" data-en="Cities">Cities</span>
+                <span class="sep">/</span>
+                <span class="current-page translate-text" data-ar=" المدينة المنورة" data-en="Medina">Medina</span>
+            </nav>
+            <button onclick="window.history.back()" class="back-btn">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                    Previous Page</span>
+            </button>
+        </div>
     </div>
-</div>
     <section class="city-intro-section">
-    <div class="container">
-        <div class="city-grid">
-            <div class="city-description">
-                <h2 class="translate-text" data-ar="المدينة المنورة: طيبة الطيبة" data-en="Madinah: The Enlightened City">المدينة المنورة: طيبة الطيبة</h2>
-                <p class="translate-text" 
-                   data-ar="المدينة المنورة هي أول عاصمة في الإسلام، والمدينة التي احتضنت النبي محمد ﷺ وصحابته الكرام. تتميز بهدوئها الروحي وسكينتها التي تميزها عن أي مدينة أخرى في العالم. تضم المسجد النبوي الشريف وتاريخاً إسلامياً حياً في كل زاوية من أزقتها، مما يجعلها وجهة القلوب والمؤمنين." 
-                   data-en="Madinah was the first capital in Islam and the city that embraced Prophet Muhammad (PBUH). It is characterized by a unique spiritual tranquility that sets it apart from any other city. Home to the Prophet's Mosque and a living Islamic history in every corner, it is the destination of hearts and believers.">
-                   المدينة المنورة هي أول عاصمة في الإسلام، تتميز بسكينتها الروحية الفريدة وتاريخها الإسلامي العريق الذي يحتضن المسجد النبوي الشريف.
-                </p>
-            </div>
-            <div class="city-vision-box">
-                <h3 class="translate-text" data-ar="المدينة في رؤية 2030" data-en="Madinah in Vision 2030">المدينة في رؤية 2030</h3>
-                <p class="translate-text" 
-                   data-ar="تركز الرؤية على تطوير المدينة المنورة لتكون وجهة ثقافية ومعرفية عالمية، مع توسعة المسجد النبوي وتطوير المواقع الأثرية مثل 'مساجد الفتح' و'جبل أحد'، بالإضافة إلى تحسين البنية التحتية لاستقبال ملايين الزوار بأفضل المعايير." 
-                   data-en="Vision 2030 focuses on developing Madinah as a global cultural and knowledge destination, expanding the Prophet's Mosque, and developing archaeological sites like the 'Conquest Mosques' and 'Mount Uhud'.">
-                   تهدف الرؤية لتطوير المدينة المنورة كوجهة ثقافية عالمية وإثراء تجربة الزوار من خلال تطوير المواقع التاريخية وتوسعة المرافق الحيوية.
-                </p>
+        <div class="container">
+            <div class="city-grid">
+                <div class="city-description">
+                    <h2 class="translate-text" data-ar="المدينة المنورة: طيبة الطيبة"
+                        data-en="Madinah: The Enlightened City">المدينة المنورة: طيبة الطيبة</h2>
+                    <p class="translate-text"
+                        data-ar="المدينة المنورة هي أول عاصمة في الإسلام، والمدينة التي احتضنت النبي محمد ﷺ وصحابته الكرام. تتميز بهدوئها الروحي وسكينتها التي تميزها عن أي مدينة أخرى في العالم. تضم المسجد النبوي الشريف وتاريخاً إسلامياً حياً في كل زاوية من أزقتها، مما يجعلها وجهة القلوب والمؤمنين."
+                        data-en="Madinah was the first capital in Islam and the city that embraced Prophet Muhammad (PBUH). It is characterized by a unique spiritual tranquility that sets it apart from any other city. Home to the Prophet's Mosque and a living Islamic history in every corner, it is the destination of hearts and believers.">
+                        المدينة المنورة هي أول عاصمة في الإسلام، تتميز بسكينتها الروحية الفريدة وتاريخها الإسلامي العريق
+                        الذي يحتضن المسجد النبوي الشريف.
+                    </p>
+                </div>
+                <div class="city-vision-box">
+                    <h3 class="translate-text" data-ar="المدينة في رؤية 2030" data-en="Madinah in Vision 2030">المدينة
+                        في رؤية 2030</h3>
+                    <p class="translate-text"
+                        data-ar="تركز الرؤية على تطوير المدينة المنورة لتكون وجهة ثقافية ومعرفية عالمية، مع توسعة المسجد النبوي وتطوير المواقع الأثرية مثل 'مساجد الفتح' و'جبل أحد'، بالإضافة إلى تحسين البنية التحتية لاستقبال ملايين الزوار بأفضل المعايير."
+                        data-en="Vision 2030 focuses on developing Madinah as a global cultural and knowledge destination, expanding the Prophet's Mosque, and developing archaeological sites like the 'Conquest Mosques' and 'Mount Uhud'.">
+                        تهدف الرؤية لتطوير المدينة المنورة كوجهة ثقافية عالمية وإثراء تجربة الزوار من خلال تطوير المواقع
+                        التاريخية وتوسعة المرافق الحيوية.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="city-landmarks">
-    <div class="container">
-        <h2 class="main-section-title translate-text" data-ar="أبرز معالم طيبة" data-en="Top Landmarks of Madinah">أبرز معالم طيبة</h2>
-        <div class="landmark-cards-wrapper">
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-mosque"></i></div>
-                <h4 class="translate-text" data-ar="المسجد النبوي الشريف" data-en="The Prophet's Mosque">المسجد النبوي الشريف</h4>
-                <p class="translate-text" data-ar="ثاني أقدس المساجد في الإسلام، ويضم الروضة الشريفة والقبة الخضراء، ويعد منارة للهدى والسلام." data-en="The second holiest mosque in Islam, housing the Rawdah and the Green Dome, a beacon of guidance and peace.">ثاني أقدس المساجد، يضم الروضة الشريفة والقبة الخضراء، وهو منبع السكينة والجمال المعماري.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-history"></i></div>
-                <h4 class="translate-text" data-ar="مسجد قباء" data-en="Quba Mosque">مسجد قباء</h4>
-                <p class="translate-text" data-ar="أول مسجد أُسس في الإسلام، ويتميز بعمارته البيضاء الجميلة ومكانته العظيمة في قلوب المسلمين." data-en="The first mosque ever built in Islam, known for its beautiful white architecture and its great place in Muslim hearts.">أول مسجد أُسس في الإسلام، ويتميز بعمارته البيضاء التي تعكس جمال التاريخ النبوي.</p>
-            </div>
-            <div class="generic-card">
-                <div class="card-icon"><i class="fas fa-mountain"></i></div>
-                <h4 class="translate-text" data-ar="جبل أحد" data-en="Mount Uhud">جبل أحد</h4>
-                <p class="translate-text" data-ar="جبل يحبنا ونحبه، شهد واحدة من أعظم المعارك في التاريخ الإسلامي، ويضم مقبرة الشهداء." data-en="A mountain that witnessed one of the greatest battles in Islamic history, housing the Cemetery of Martyrs.">شاهد تاريخي عظيم شهد ملاحم الفداء، ويضم مقبرة شهداء أحد الكرام.</p>
+    <section class="city-landmarks">
+        <div class="container">
+            <h2 class="main-section-title translate-text" data-ar="أبرز معالم طيبة" data-en="Top Landmarks of Madinah">
+                أبرز معالم طيبة</h2>
+            <div class="landmark-cards-wrapper">
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="المسجد النبوي الشريف" data-en="The Prophet's Mosque">المسجد
+                        النبوي الشريف</h4>
+                    <p class="translate-text"
+                        data-ar="ثاني أقدس المساجد في الإسلام، ويضم الروضة الشريفة والقبة الخضراء، ويعد منارة للهدى والسلام."
+                        data-en="The second holiest mosque in Islam, housing the Rawdah and the Green Dome, a beacon of guidance and peace.">
+                        ثاني أقدس المساجد، يضم الروضة الشريفة والقبة الخضراء، وهو منبع السكينة والجمال المعماري.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="مسجد قباء" data-en="Quba Mosque">مسجد قباء</h4>
+                    <p class="translate-text"
+                        data-ar="أول مسجد أُسس في الإسلام، ويتميز بعمارته البيضاء الجميلة ومكانته العظيمة في قلوب المسلمين."
+                        data-en="The first mosque ever built in Islam, known for its beautiful white architecture and its great place in Muslim hearts.">
+                        أول مسجد أُسس في الإسلام، ويتميز بعمارته البيضاء التي تعكس جمال التاريخ النبوي.</p>
+                </div>
+                <div class="generic-card">
+                    <h4 class="translate-text" data-ar="جبل أحد" data-en="Mount Uhud">جبل أحد</h4>
+                    <p class="translate-text"
+                        data-ar="جبل يحبنا ونحبه، شهد واحدة من أعظم المعارك في التاريخ الإسلامي، ويضم مقبرة الشهداء."
+                        data-en="A mountain that witnessed one of the greatest battles in Islamic history, housing the Cemetery of Martyrs.">
+                        شاهد تاريخي عظيم شهد ملاحم الفداء، ويضم مقبرة شهداء أحد الكرام.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <div class="filter-container">
-        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All" onclick="filterSelection('all')">All</button>
-        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature" onclick="filterSelection('nature')">Nature</button>
-        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History" onclick="filterSelection('culture')">Culture & History</button>
-        <button class="filter-btn translate-text" data-ar="تسوق" data-en="Shopping" onclick="filterSelection('shopping')">Shopping</button>
-        <button class="filter-btn translate-text" data-ar="أودية" data-en="Valley" onclick="filterSelection('valley')">Valley</button>
-        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment" onclick="filterSelection('entertaiment')">Entertaiment</button>
+        <button class="filter-btn active translate-text" data-ar="الكل" data-en="All"
+            onclick="filterSelection('all')">All</button>
+        <button class="filter-btn translate-text" data-ar="طبيعة" data-en="Nature"
+            onclick="filterSelection('nature')">Nature</button>
+        <button class="filter-btn translate-text" data-ar="ثقافة وتاريخ" data-en="Culture & History"
+            onclick="filterSelection('culture')">Culture & History</button>
+        <button class="filter-btn translate-text" data-ar="ترفية" data-en="Entertaiment"
+            onclick="filterSelection('entertaiment')">Entertaiment</button>
     </div>
 
     <div class="riyadh-grid">
-    
+
         <div class="city-card filter-item entertaiment">
             <div class="card-image"><img src="{% static 'images/milaf.jpg' %}" alt="milaf"></div>
             <div class="card-content">
@@ -98,7 +113,7 @@
             </div>
         </div>
 
-        <div class="city-card filter-item entertaiment">
+        <div class="city-card filter-item entertaiment culture">
             <div class="card-image"><img src="{% static 'images/airMount.jpg' %}" alt="Ayr Mount"></div>
             <div class="card-content">
                 <h3 class="translate-text" data-ar=" جبل عير " data-en="Ayr Jabal">Ayr Jabal</h3>
@@ -133,7 +148,8 @@
         <div class="city-card filter-item entertaiment culture">
             <div class="card-image"><img src="{% static 'images/MedMu.jpg' %}" alt="SafiahMuesuim"></div>
             <div class="card-content">
-                <h3 class="translate-text" data-ar=" متحف وبستان الصافية " data-en="Al Safiah Museuim and Garden">Al Safiah Museuim and Garden</h3>
+                <h3 class="translate-text" data-ar=" متحف وبستان الصافية " data-en="Al Safiah Museuim and Garden">Al
+                    Safiah Museuim and Garden</h3>
                 <p class="translate-text" data-ar="ثقافة و تاريخ" data-en="Culture & History">Culture & History</p>
             </div>
         </div>
@@ -170,35 +186,25 @@
             </div>
         </div>
 
-        <div class="city-card filter-item shopping">
-            <div class="card-image"><img src="{% static 'images/Noor-mall.jpg' %}" alt="noor mall"></div>
-            <div class="card-content">
-                <h3 class="translate-text" data-ar=" النور مول " data-en=" Noor Mall">Noor Mall</h3>
-                <p class="translate-text" data-ar=" تسوق " data-en="Shopping">Shopping</p>
-            </div>
-        </div>
-
     </div>
 </main>
 
 <script>
-// وظيفة التصفية (Filtering)
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filter-item");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        if (x[i].className.indexOf(c) > -1) {
-            x[i].style.display = "block";
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filter-item");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
         }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
     }
-    // تغيير شكل الزر النشط
-    var btns = document.getElementsByClassName("filter-btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
-    event.currentTarget.classList.add("active");
-}
 </script>
 {% endblock %}

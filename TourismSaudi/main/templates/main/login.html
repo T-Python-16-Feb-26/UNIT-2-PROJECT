@@ -1,69 +1,73 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block title %} Login {% endblock %}
+
 {% block content %}
 
-        
 <div class="auth-container">
     <div class="auth-box">
         <h2 id="auth-title" class="translate-text" data-ar="تسجيل الدخول" data-en="Login">Login</h2>
-        
+
         <form id="auth-form" method="POST" action="">
             {% csrf_token %} <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-            
+
             <div id="extra-fields" style="display: none;">
                 <input type="text" name="full_name" placeholder="Full Name">
             </div>
-            
+
             <button type="submit" class="auth-submit translate-text" data-ar="دخول" data-en="Login">Login</button>
+            <button onclick="window.history.back()" class="auth-submit">
+                <span class="translate-text" data-ar="العودة للصفحة السابقة" data-en="Back to Previous Page">Back to
+                    Previous Page</span>
+            </button>
         </form>
 
-        <p onclick="toggleAuth()" id="toggle-text" class="translate-text" 
-           data-ar="ليس لديك حساب؟ سجل الآن" data-en="Don't have an account? Sign Up">
-           Don't have an account? Sign Up
+        <p onclick="toggleAuth()" id="toggle-text" class="translate-text" data-ar="ليس لديك حساب؟ سجل الآن"
+            data-en="Don't have an account? Sign Up">
+            Don't have an account? Sign Up
         </p>
-         
-
     </div>
 </div>
-       
+
 <br>
 <br>
 <br>
 
 <script>
-function toggleAuth() {
-    const extraFields = document.getElementById('extra-fields');
-    const title = document.getElementById('auth-title');
-    const submitBtn = document.querySelector('.auth-submit');
-    const toggleText = document.getElementById('toggle-text');
+    function toggleAuth() {
+        const extraFields = document.getElementById('extra-fields');
+        const title = document.getElementById('auth-title');
+        const submitBtn = document.querySelector('.auth-submit');
+        const toggleText = document.getElementById('toggle-text');
 
-    if (extraFields.style.display === 'none') {
-        // التحويل لوضع "إنشاء حساب"
-        extraFields.style.display = 'block';
-        title.setAttribute('data-ar', 'إنشاء حساب جديد');
-        title.setAttribute('data-en', 'Create Account');
-        submitBtn.setAttribute('data-ar', 'تسجيل');
-        submitBtn.setAttribute('data-en', 'Sign Up');
-        toggleText.setAttribute('data-ar', 'لديك حساب بالفعل؟ سجل دخولك');
-        toggleText.setAttribute('data-en', 'Already have an account? Login');
-    } else {
-        // العودة لوضع "تسجيل الدخول"
-        extraFields.style.display = 'none';
-        title.setAttribute('data-ar', 'تسجيل الدخول');
-        title.setAttribute('data-en', 'Login');
-        submitBtn.setAttribute('data-ar', 'دخول');
-        submitBtn.setAttribute('data-en', 'Login');
-        toggleText.setAttribute('data-ar', 'ليس لديك حساب؟ سجل الآن');
-        toggleText.setAttribute('data-en', "Don't have an account? Sign Up");
+        if (extraFields.style.display === 'none') {
+
+            extraFields.style.display = 'block';
+            title.setAttribute('data-ar', 'إنشاء حساب جديد');
+            title.setAttribute('data-en', 'Create Account');
+            submitBtn.setAttribute('data-ar', 'تسجيل');
+            submitBtn.setAttribute('data-en', 'Sign Up');
+            toggleText.setAttribute('data-ar', 'لديك حساب بالفعل؟ سجل دخولك');
+            toggleText.setAttribute('data-en', 'Already have an account? Login');
+
+        } else {
+
+            extraFields.style.display = 'none';
+            title.setAttribute('data-ar', 'تسجيل الدخول');
+            title.setAttribute('data-en', 'Login');
+            submitBtn.setAttribute('data-ar', 'دخول');
+            submitBtn.setAttribute('data-en', 'Login');
+            toggleText.setAttribute('data-ar', 'ليس لديك حساب؟ سجل الآن');
+            toggleText.setAttribute('data-en', "Don't have an account? Sign Up");
+
+        }
+
+        if (typeof changeLanguage === "function") {
+            const currentLang = getCookie('prefLang') || 'en';
+            changeLanguage(currentLang);
+        }
     }
-    
-    // تشغيل دالة الترجمة فوراً لتحديث النصوص بعد التغيير
-    if (typeof changeLanguage === "function") {
-        const currentLang = getCookie('prefLang') || 'en';
-        changeLanguage(currentLang);
-    }
-}
 </script>
 {% endblock %}
