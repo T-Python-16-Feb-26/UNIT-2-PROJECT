@@ -54,7 +54,11 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 <span class="material-symbols-outlined">
-                                    light_mode
+                                    {% if request.COOKIES.mode == 'dark' %}
+                                         dark_mode
+                                    {% else %}
+                                         light_mode
+                                    {% endif %}
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
@@ -64,11 +68,9 @@
                                 <li><a class="dropdown-item" href="{% url 'tourism:mode_view' 'dark' %}?next={{request.path}}"><span class="material-symbols-outlined"{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}{% endif %}>
                                     dark_mode
                                 </span></a></li>
-                                
                             </ul>
                         </li>
         
-                        <!-- Add more navigation links as needed -->
                     </ul>
                 </div>
             </div>
