@@ -1,0 +1,252 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-hero">
+    <video autoplay muted loop playsinline class="page-hero-video">
+        <source src="{% static 'videos/City.mp4' %}" type="video/mp4">
+    </video>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content text-center">
+        <h1>
+            <i class="bi bi-patch-check-fill"></i>
+            زراعة الجوف.. سلة الغذاء وعاصمة الزيتون
+        </h1>
+        <p>
+            <i class="bi bi-geo-alt-fill"></i>
+            من بساتين دومة الجندل إلى مشاريع بسيطا.. حكاية وفرة غذائية تغذي الوطن
+        </p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6 animate__animated animate__fadeInRight">
+                <div class="page-video-box shadow-lg rounded-4 overflow-hidden border border-warning border-opacity-10">
+                    <iframe src="https://www.youtube.com/embed/XXXXXXX" title="الزراعة في منطقة الجوف"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        style="width:100%; height:400px; display:block;">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-md-6 animate__animated animate__fadeInLeft">
+                <h2 class="display-5 fw-bold mb-3">
+                    <i class="bi bi-info-circle text-success"></i>
+                    الجوف.. بيئة خصبة وإنتاج مليوني
+                </h2>
+
+                <div class="page-separator mb-4"></div>
+
+                <p class="lead fw-normal text-dark mb-4">
+                    تعتبر منطقة الجوف الرائدة عالمياً في زراعة <strong>الزيتون</strong>، حيث تضم أكبر مزارع الزيتون المكثف في العالم، بالإضافة إلى تميزها في إنتاج <strong>التمور (حلوة الجوف)</strong> والفاكهة والحبوب بفضل وفرة مياهها الجوفية وعذوبتها.
+                </p>
+
+                <div class="p-3 bg-light border-start border-success border-4 rounded-3 shadow-sm">
+                    <p class="mb-0 italic">
+                        تمزج الجوف بين التاريخ الزراعي العريق في واحاتها القديمة وبين أحدث التقنيات العالمية في المشاريع الزراعية الكبرى، مما جعلها رقماً صعباً في تحقيق الأمن الغذائي للمملكة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="bi bi-clock-history text-success"></i> محطات في مسيرة النماء
+        </h2>
+
+        <div class="page-timeline">
+            <div class="page-timeline-item left">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-calendar-event"></i>
+                </div>
+                <div class="page-timeline-content border-start border-success border-5">
+                    <h4 class="fw-bold text-success">إرث الواحات</h4>
+                    <span class="badge bg-success mb-2">تاريخ عريق</span>
+                    <p class="mb-0 text-muted">عرفت الجوف الزراعة منذ آلاف السنين، حيث اعتمدت "دومة الجندل" و"سكاكا" على الآبار اليدوية لسقي بساتين النخيل والفاكهة.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item right">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="page-timeline-content border-start border-warning border-5">
+                    <h4 class="fw-bold text-warning">ثورة الزيتون</h4>
+                    <span class="badge bg-warning text-dark mb-2">ريادة عالمية</span>
+                    <p class="mb-0 text-muted">انطلقت رحلة زراعة الزيتون في الثمانينات لتتحول المنطقة اليوم إلى موطن لأكثر من 30 مليون شجرة زيتون تنتج أجود الزيوت عالمياً.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item left">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-award"></i>
+                </div>
+                <div class="page-timeline-content border-start border-primary border-5">
+                    <h4 class="fw-bold text-primary">المشاريع الكبرى</h4>
+                    <span class="badge bg-primary mb-2">أمن غذائي</span>
+                    <p class="mb-0 text-muted">تحتضن بسيطا الجوف أضخم المشاريع الزراعية المتكاملة التي تنتج الحبوب والأعلاف والفاكهة باستخدام أنظمة ري ذكية ومستدامة.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item right">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="page-timeline-content border-start border-info border-5">
+                    <h4 class="fw-bold text-info">صناعات تحويلية</h4>
+                    <span class="badge bg-info text-dark mb-2">رؤية 2030</span>
+                    <p class="mb-0 text-muted">التوسع في إنشاء معاصر الزيتون الحديثة ومصانع تعليب التمور، مما رفع القيمة المضافة للمحاصيل المحلية وعزز الصادرات السعودية.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold page-festivals-title">
+                <i class="bi bi-calendar-event text-danger"></i> مهرجانات الفرح والأصالة
+                <div class="page-separator-v2"></div>
+            </h2>
+            <p class="text-muted mt-3">فعاليات تحتفي بجودة ومذاق إنتاج الشمال</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/jouf_olive_fest.jpg' %}" class="card-img-top" alt="مهرجان الزيتون"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold text-warning">مهرجان الزيتون الدولي</h5>
+                        <p class="card-text text-muted small flex-grow-1">أكبر تجمع لمنتجي الزيتون في الخليج، يضم معرضاً دولياً ومسابقات لجودة الزيت والزيتون.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-warning btn-sm rounded-pill mt-3">التفاصيل <i
+                                class="bi bi-arrow-left-short"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/jouf_dates_fest.jpg' %}" class="card-img-top" alt="مهرجان التمور"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold text-success">مهرجان تمور الجوف</h5>
+                        <p class="card-text text-muted small flex-grow-1">يحتفي بـ "حلوة الجوف" الشهيرة، ويعد منصة تسويقية كبرى لمنتجي التمور في المنطقة.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-success btn-sm rounded-pill mt-3">التفاصيل <i
+                                class="bi bi-arrow-left-short"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/jouf_fruit_fest.jpg' %}" class="card-img-top" alt="مهرجان الفاكهة"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold" style="color: #2e7d32;">مهرجان الفاكهة بطبرجل</h5>
+                        <p class="card-text text-muted small flex-grow-1">يسلط الضوء على تنوع إنتاج المنطقة من الخوخ والمشمش والعنب الذي يغزو الأسواق المحلية.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill mt-3"
+                            style="border-color: #2e7d32; color: #2e7d32;">
+                            التفاصيل <i class="bi bi-arrow-left-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="jouf-products py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="bi bi-basket-fill text-success"></i> سلة خيرات الجوف
+        </h2>
+
+        <div id="joufCarousel" class="carousel slide custom-carousel shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#joufCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#joufCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#joufCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#joufCarousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner rounded-4 overflow-hidden">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/jouf_olive_oil.jpg' %}" class="d-block w-100" alt="زيت الزيتون">
+                    <div class="carousel-caption d-none d-md-block border-warning">
+                        <i class="bi bi-droplet-half fs-2"></i>
+                        <h3>زيت الزيتون البكر</h3>
+                        <p>عصرة أولى على البارد؛ يمثل ذهب الجوف السائل والحاصل على شهادات جودة عالمية.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/jouf_dates.jpg' %}" class="d-block w-100" alt="حلوة الجوف">
+                    <div class="carousel-caption d-none d-md-block border-success">
+                        <i class="bi bi-palm-tree-fill fs-2"></i>
+                        <h3>حلوة الجوف</h3>
+                        <p>أشهر تمور المنطقة، تمتاز بلونها ومذاقها الفريد وقيمتها الغذائية العالية.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/jouf_fruits.jpg' %}" class="d-block w-100" alt="الفاكهة">
+                    <div class="carousel-caption d-none d-md-block border-primary">
+                        <i class="bi bi-flower1 fs-2"></i>
+                        <h3>الفاكهة واللوزيات</h3>
+                        <p>تنتج الجوف ملايين الأطنان من الخوخ والمشمش والبرقوق بجودة تنافسية.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/jouf_wheat.jpg' %}" class="d-block w-100" alt="القمح">
+                    <div class="carousel-caption d-none d-md-block" style="border-color: #fbc02d;">
+                        <i class="bi bi-sun fs-2"></i>
+                        <h3>القمح والحبوب</h3>
+                        <p>تعد الجوف من أهم المناطق المنتجة للقمح الصلب والذرة في المشاريع المحورية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#joufCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">السابق</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#joufCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">التالي</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2 class="mb-5 text-warning">الجوف الزراعية في أرقام</h2>
+        <div class="row text-center">
+            <div class="col-md-4 border-end border-secondary">
+                <h3 class="display-6 fw-bold">+30M</h3>
+                <p>شجرة زيتون في المنطقة</p>
+            </div>
+            <div class="col-md-4 border-end border-secondary">
+                <h3 class="display-6 fw-bold">+1M</h3>
+                <p>نخلة منتجة لحلوة الجوف</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="display-6 fw-bold">#1</h3>
+                <p>أكبر مزرعة زيتون بالعالم (غينيس)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
