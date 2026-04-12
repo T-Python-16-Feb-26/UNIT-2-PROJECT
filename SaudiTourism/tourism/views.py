@@ -25,7 +25,6 @@ def alula_view(request:HttpRequest,):
     return render (request, 'tourism/alula_page.html')
 
 def mode_view(request:HttpRequest ,mode):
-
     response = redirect(request.GET.get('next','/'))
     if mode == 'dark':
         response.set_cookie('mode','dark',max_age=60*60*24)
