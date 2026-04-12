@@ -72,7 +72,7 @@ SPECIES = {
         "class": "mammals",
         "short_description": (
             "The rarest of all leopard subspecies, critically endangered and clinging "
-            "to survival in the rugged mountains of Asir and Hejaz."
+        "to survival in the rugged mountains of Asir and Hejaz."
         ),
         "habits_lifestyle": "Arabian leopards are mainly nocturnal but may occasionally be active during daylight hours. They are solitary animals that maintain home ranges which overlap with those of neighbouring individuals; a single male's territory often covers the ranges of several females. Leopards hunt primarily on the ground, relying on acute hearing and vision to stalk prey before closing to within about 5 metres and delivering a swift suffocating bite. They prefer well-vegetated mountainous and hilly terrain that is difficult for humans to access, rarely venturing onto open plains, desert, or coastal lowlands. Females continue to associate with and share kills with their offspring even after weaning.",
         "wikipedia_url": "https://en.wikipedia.org/wiki/Arabian_leopard",
