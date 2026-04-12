@@ -1,0 +1,208 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+
+    <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <!-- المحتوى -->
+        <div class="carousel-inner">
+
+            <!-- الشريحة 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide slide-1">
+                    <div class="hero-overlay"></div>
+
+                    <div class="hero-content text-center">
+                        <h1>مختبرك الزراعي الرقمي في متناول يدك</h1>
+                        <p>
+                            استخدم ذكاء غراس الاصطناعي وتقنيات الواقع المعزز
+                            لتعيش تجربة زراعية لم تعرفها من قبل
+                        </p>
+                        <a href="#tools" class="hero-btn">جرب الأدوات الذكية</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- الشريحة 2 -->
+            <div class="carousel-item">
+                <div class="hero-slide slide-2">
+                    <div class="hero-overlay"></div>
+
+                    <div class="hero-content text-center">
+                        <h1>كن مستكشفاً لكنوز المملكة الخضراء</h1>
+                        <p>
+                            انطلق في رحلة تفاعلية عبر الخريطة
+                        </p>
+                        <a href="#map" class="hero-btn">ابدأ الاستكشاف الآن</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- الشريحة 3 -->
+            <div class="carousel-item">
+                <div class="hero-slide slide-3">
+                    <div class="hero-overlay"></div>
+
+                    <div class="hero-content text-center">
+                        <h1>للأرض حكايات.. ولنا رواية</h1>
+                        <a href="/culture/" class="hero-btn">تصفح زوايا التثقف</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- الأسهم -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+</section>
+
+<section id="tools" class="tools-modern">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+            أدوات المستكشف الذكية
+        </h2>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+                <div class="premium-tool-card shadow-sm border-0 p-4 text-center rounded-4">
+                    <div class="icon-box mb-3"><i class="bi bi-robot fs-1 text-success"></i></div>
+                    <h4>خبير غراس (AI)</h4>
+                    <p class="text-muted small">إجابات فورية على كل أسئلتك الزراعية</p>
+                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-4">ابدأ الدردشة</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-tool-card shadow-sm border-0 p-4 text-center rounded-4">
+                    <div class="icon-box mb-3"><i class="bi bi-phone fs-1 text-success"></i></div>
+                    <h4>عين النماء (AR)</h4>
+                    <p class="text-muted small">شاهد المحاصيل في بيئتك مباشرة</p>
+                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-4">تفعيل الكاميرا</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-tool-card shadow-sm border-0 p-4 text-center rounded-4">
+                    <div class="icon-box mb-3"><i class="bi bi-trophy fs-1 text-success"></i></div>
+                    <h4>مستودع البذور</h4>
+                    <p class="text-muted small">اجمع البذور واكسب الأوسمة</p>
+                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-4">لوحة الأبطال</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+</section>
+
+<section class="map-hero">
+
+
+    <div class="container text-center">
+
+        <h1 class="map-title">
+            خريطة الكنوز الخضراء
+        </h1>
+
+        <p class="map-sub">
+            اضغط على أي منطقة وابدأ رحلتك الزراعية
+        </p>
+
+        <!-- الكارد -->
+        <div class="map-card">
+
+            <div class="map-container">
+                <img src="{% static 'images/ksa-map.svg' %}" class="map-img">
+
+                <a href="/qassim/" class="region qassim"></a>
+            </div>
+
+            <div class="map-actions">
+
+                <span><i class="bi bi-cursor-fill"></i> حدد منطقة</span>
+                <span><i class="bi bi-info-circle-fill"></i> استكشف المحصول</span>
+                <span><i class="bi bi-star-fill"></i> اجمع البذور</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- التثقف -->
+<section class="culture-section py-5">
+    <div class="container text-center">
+        <h2 class="mb-3 fw-bold">
+            <i class="bi bi-sprout"></i> زوايا التثقف
+        </h2>
+
+        <p class="mb-5 text-muted">
+            تعمّق في تاريخ وثقافة الزراعة السعودية عبر محتوى غني وتفاعلي
+        </p>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <a href="{% url 'education' %}" class="culture-link">
+                    <div class="culture-tile">
+                        <i class="bi bi-journal-richtext"></i>
+                        <h6>روايات تاريخية</h6>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a href="{% url 'education' %}" class="culture-link">
+                    <div class="culture-tile">
+                        <i class="bi bi-film"></i>
+                        <h6>أفلام وثائقية</h6>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a href="{% url 'education' %}" class="culture-link">
+                    <div class="culture-tile">
+                        <i class="bi bi-diagram-3"></i>
+                        <h6>خرائط ذهنية</h6>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a href="{% url 'education' %}" class="culture-link">
+                    <div class="culture-tile">
+                        <i class="bi bi-search"></i>
+                        <h6>أبحاث ومقالات</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="{% url 'education' %}" class="culture-btn mt-5 d-inline-block">
+            استكشف قسم التثقف
+        </a>
+    </div>
+</section>
+{% endblock %}
