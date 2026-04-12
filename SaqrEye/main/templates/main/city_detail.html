@@ -1,0 +1,284 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+  {% if lang == 'ar' %}{{ city.name_ar }}{% else %}{{ city.name_en }}{% endif %} | SaqrEye
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+{% static 'images/cities/' as cities_url %}
+<section class="saqr-hero"
+  style="background-image: url('{{ cities_url }}{{ city.image|slice:'7:' }}');">
+
+  <div class="saqr-hero-overlay"></div>
+
+  <div class="container saqr-hero-content">
+    <div class="col-12 col-lg-8">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb saqr-breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'home_view' %}">
+              {% if lang == 'ar' %}الرئيسية{% else %}Home{% endif %}
+            </a>
+          </li>
+          <li class="breadcrumb-item active">
+            {% if lang == 'ar' %}{{ city.name_ar }}{% else %}{{ city.name_en }}{% endif %}
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Badge -->
+      <span class="saqr-badge {% if persona == 'tourist' %}saqr-badge-tourist{% else %}saqr-badge-investor{% endif %} mb-3">
+        {% if persona == 'tourist' %}
+          {% if lang == 'ar' %}🧳 سياحة{% else %}🧳 Tourism{% endif %}
+        {% else %}
+          {% if lang == 'ar' %}💼 استثمار{% else %}💼 Investment{% endif %}
+        {% endif %}
+      </span>
+
+      <!-- City Name -->
+      <h1 class="saqr-hero-title">
+        {% if lang == 'ar' %}{{ city.name_ar }}{% else %}{{ city.name_en }}{% endif %}
+      </h1>
+
+      <div class="saqr-gold-line"></div>
+
+      <!-- City Desc -->
+      <p class="saqr-hero-subtitle mt-3">
+        {% if lang == 'ar' %}{{ city.desc_ar }}{% else %}{{ city.desc_en }}{% endif %}
+      </p>
+
+      <!-- Count -->
+      <div class="mt-3">
+        <span class="saqr-badge saqr-badge-gold">
+          {% if persona == 'tourist' %}
+            {{ city.places_count }}
+            {% if lang == 'ar' %}وجهة سياحية{% else %}Tourist Destinations{% endif %}
+          {% else %}
+            {{ city.projects_count }}
+            {% if lang == 'ar' %}مشروع استثماري{% else %}Investment Projects{% endif %}
+          {% endif %}
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════════ END HERO -->
+
+
+<!-- ═══════════════════════════════════════════════════════ ITEMS -->
+<section class="py-5">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="mb-5">
+      <h2 class="saqr-section-title">
+        {% if persona == 'tourist' %}
+          {% if lang == 'ar' %}<span>الوجهات</span> السياحية{% else %}Tourist <span>Destinations</span>{% endif %}
+        {% else %}
+          {% if lang == 'ar' %}<span>المشاريع</span> الاستثمارية{% else %}Investment <span>Projects</span>{% endif %}
+        {% endif %}
+      </h2>
+      <div class="saqr-gold-line mt-2"></div>
+    </div>
+
+    <!-- ─── TOURIST MODE ─── -->
+    {% if persona == 'tourist' %}
+    <div class="row gy-4">
+      {% for place in items %}
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="{% url 'item_detail_view' city.slug 'place' place.id %}" class="text-decoration-none">
+          <div class="saqr-card h-100">
+
+            <!-- Image -->
+            <div style="overflow:hidden; height:210px;">
+              <img
+                src="{% static 'images/places/' %}{{ place.image|slice:'7:' }}"
+                alt="{% if lang == 'ar' %}{{ place.name_ar }}{% else %}{{ place.name_en }}{% endif %}"
+                style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;"
+                onerror="this.src='https://placehold.co/400x210/1a1a1a/C8972B?text=Place'"
+              >
+            </div>
+
+            <div class="saqr-card-body">
+
+              <!-- Type Badge -->
+              <span class="saqr-badge saqr-badge-tourist mb-2">
+                {% if lang == 'ar' %}{{ place.type_ar }}{% else %}{{ place.type_en }}{% endif %}
+              </span>
+
+              <!-- Name -->
+              <h3 class="saqr-card-title mt-1">
+                {% if lang == 'ar' %}{{ place.name_ar }}{% else %}{{ place.name_en }}{% endif %}
+              </h3>
+
+              <!-- Desc -->
+              <p class="saqr-card-meta mt-1" style="font-size:0.83rem; line-height:1.5;">
+                {% if lang == 'ar' %}
+                  {{ place.desc_ar|truncatechars:90 }}
+                {% else %}
+                  {{ place.desc_en|truncatechars:90 }}
+                {% endif %}
+              </p>
+
+              <!-- Recommend Months -->
+              <div class="d-flex align-items-center justify-content-between mt-3">
+                <span style="font-size:0.78rem; color:var(--text-muted);">
+                  <i class="bi bi-calendar3 me-1"></i>
+                  {% if lang == 'ar' %}{{ place.recommend_months_ar }}{% else %}{{ place.recommend_months_en }}{% endif %}
+                </span>
+                <span class="text-gold" style="font-size:0.85rem; font-weight:600;">
+                  {% if lang == 'ar' %}تفاصيل ←{% else %}→ Details{% endif %}
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- ─── INVESTOR MODE ─── -->
+    {% else %}
+    <div class="row gy-4">
+      {% for project in items %}
+      <div class="col-12 col-lg-6">
+        <a href="{% url 'item_detail_view' city.slug 'project' project.id %}" class="text-decoration-none">
+          <div class="saqr-card saqr-project-card h-100">
+            <div class="saqr-card-body p-4">
+
+              <!-- Header -->
+              <div class="d-flex align-items-start justify-content-between gap-3 mb-3">
+                <div>
+                  <h3 class="saqr-card-title mb-1">
+                    {% if lang == 'ar' %}{{ project.name_ar }}{% else %}{{ project.name_en }}{% endif %}
+                  </h3>
+                  <span style="font-size:0.82rem; color:var(--text-muted);">
+                    <i class="bi bi-building me-1"></i>
+                    {% if lang == 'ar' %}{{ project.company_ar }}{% else %}{{ project.company_en }}{% endif %}
+                  </span>
+                </div>
+                <!-- Completion Circle -->
+                <div class="saqr-completion-circle flex-shrink-0">
+                  <span>{{ project.completion }}%</span>
+                </div>
+              </div>
+
+              <!-- Desc -->
+              <p class="saqr-card-meta" style="font-size:0.85rem; line-height:1.6;">
+                {% if lang == 'ar' %}
+                  {{ project.desc_ar|truncatechars:100 }}
+                {% else %}
+                  {{ project.desc_en|truncatechars:100 }}
+                {% endif %}
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mt-3 mb-2">
+                <div class="d-flex justify-content-between mb-1">
+                  <span style="font-size:0.78rem; color:var(--text-muted);">
+                    {% if lang == 'ar' %}نسبة الاكتمال{% else %}Completion{% endif %}
+                  </span>
+                  <span style="font-size:0.78rem; color:var(--accent-gold); font-weight:600;">
+                    {{ project.completion }}%</span>
+                </div>
+                <div class="saqr-progress">
+                  <div class="saqr-progress-bar" style="width: {{ project.completion }}%;"></div>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="d-flex align-items-center justify-content-between mt-3">
+                <span style="font-size:0.78rem; color:var(--text-muted);">
+                  <i class="bi bi-calendar-check me-1"></i>
+                  {% if lang == 'ar' %}متوقع{% else %}Expected{% endif %}
+                  {{ project.expected_date_ar }}
+
+                  </span>
+                <span style="font-size:0.78rem; color:var(--text-muted);">
+                  <i class="bi bi-geo-alt me-1"></i>
+                  {% if lang == 'ar' %}{{ project.location_ar }}{% else %}{{ project.location_en }}{% endif %}
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════════ END ITEMS -->
+
+{% endblock %}
+
+
+{% block extra_css %}
+<style>
+  /* ── Breadcrumb ── */
+  .saqr-breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .saqr-breadcrumb .breadcrumb-item a {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .saqr-breadcrumb .breadcrumb-item a:hover {
+    color: var(--accent-gold);
+  }
+
+  .saqr-breadcrumb .breadcrumb-item.active {
+    color: rgba(255,255,255,0.95);
+    font-size: 0.85rem;
+  }
+
+  .saqr-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── Project Card ── */
+  .saqr-project-card {
+    border-radius: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .saqr-project-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(200,151,43,0.15);
+  }
+
+  /* ── Completion Circle ── */
+  .saqr-completion-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-gold-light);
+  }
+
+  .saqr-completion-circle span {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 800;
+    font-size: 0.82rem;
+    color: var(--accent-gold);
+  }
+</style>
+{% endblock %}
