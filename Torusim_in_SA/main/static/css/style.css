@@ -61,10 +61,18 @@ html.large-font{
 }
 
 .mic-container {
+    position: absolute;
+    right: 4rem !important;   /* change this to move mic left/right */
+    top: 50%;        /* change this to move mic up/down */
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 5;
-    transition: all 0.3s ease;
-    user-select: none;
+    color: var(--page-text);
 }
 
 .mic-container.listening {
@@ -181,6 +189,78 @@ body {
     color: var(--page-accent-text);
 }
 
+/* footer settings */
+.footer-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-setting-group {
+    padding: 0.9rem 1rem;
+    background-color: color-mix(in srgb, var(--page-text) 4%, var(--page-surface));
+    border: 1px solid var(--page-border);
+    border-radius: 16px;
+}
+
+.footer-setting-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--page-text);
+}
+
+.footer-font-group {
+    display: inline-flex;
+    gap: 0.35rem;
+}
+
+.footer-control-btn {
+    border-radius: 12px !important;
+    min-width: 44px;
+    font-weight: 600;
+}
+
+.footer-theme-btn {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid var(--page-border);
+    border-radius: 14px;
+    padding: 0.7rem 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background-color: transparent;
+    color: var(--page-text);
+    transition: all 0.3s ease;
+}
+
+.footer-theme-btn:hover {
+    color: var(--page-accent-text);
+    border-color: var(--page-accent-text);
+    background-color: color-mix(in srgb, var(--page-accent-text) 8%, transparent);
+}
+
+.footer-theme-btn .material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+.footer-theme-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+@media (max-width: 767.98px) {
+    .footer-setting-group {
+        padding: 0.85rem 0.9rem;
+    }
+
+    .footer-theme-btn {
+        justify-content: flex-start;
+    }
+}
 /* end footer */
 
 .hero h1 {
@@ -504,6 +584,7 @@ body {
 .city-caption h1 {
     font-size: clamp(2rem, 4vw, 4.5rem);
     margin-bottom: 1rem;
+    color: white;
 }
 
 .city-caption p {

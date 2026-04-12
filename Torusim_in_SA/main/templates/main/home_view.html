@@ -51,7 +51,6 @@
                     <div class="home-destination-body">
                         <h5 class="fw-bold mb-2">Riyadh</h5>
                         <p class="text-muted mb-3">A modern capital with culture, entertainment, and iconic landmarks.</p>
-                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">Discover Riyadh</a>
                     </div>
                 </article>
             </div>
@@ -65,7 +64,6 @@
                     <div class="home-destination-body">
                         <h5 class="fw-bold mb-2">Jeddah</h5>
                         <p class="text-muted mb-3">A coastal city known for its waterfront, history, and vibrant atmosphere.</p>
-                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">Explore Jeddah</a>
                     </div>
                 </article>
             </div>
@@ -79,7 +77,6 @@
                     <div class="home-destination-body">
                         <h5 class="fw-bold mb-2">AlUla</h5>
                         <p class="text-muted mb-3">A breathtaking destination filled with heritage, nature, and adventure.</p>
-                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">Visit AlUla</a>
                     </div>
                 </article>
             </div>
@@ -93,8 +90,6 @@
                     <div class="home-destination-body">
                         <h5 class="fw-bold mb-2">Abha</h5>
                         <p class="text-muted mb-3">A mountain escape with cool weather, greenery, and scenic views.</p>
-                        <br>
-                        <a href="{% url 'main:destinations_view' %}" class="home-card-link">See Abha</a>
                     </div>
                 </article>
             </div>
@@ -140,6 +135,66 @@
                             </article>
                         </div>
                         {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="top-experiences home-section py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+                <span class="section-badge">Top Tours</span>
+                <h2 class="fw-bold mt-3 mb-1">Featured Experiences</h2>
+                <p class="text-muted mb-0">Discover guided tours and unique experiences across Saudi Arabia.</p>
+            </div>
+            <div class="mt-2 mt-md-0">
+                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#homeExperiencesCarousel" data-bs-slide="prev">
+                    Prev
+                </button>
+                <button class="btn btn-success" type="button" data-bs-target="#homeExperiencesCarousel" data-bs-slide="next">
+                    Next
+                </button>
+            </div>
+        </div>
+
+        <div id="homeExperiencesCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                {% for slide in experience_slides %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="row g-4">
+                        {% for experience in slide %}
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card experience-card h-100 border-0 shadow-sm rounded-4">
+                                {% if experience.image %}
+                                <img src="{% static experience.image %}" class="card-img-top" alt="{{ experience.title }}">
+                                {% endif %}
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <span class="badge bg-success mb-3 align-self-start">{{ experience.category }}</span>
+                                    <h5 class="fw-bold mb-2">{{ experience.title }}</h5>
+                                    <p class="text-muted small mb-2">{{ experience.duration }}</p>
+                                    <p class="mb-3 text-muted">{{ experience.description }}</p>
+
+                                    <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center gap-3">
+                                        <small class="text-success fw-semibold mb-0">{{ experience.location }}</small>
+                                        <a href="{% url 'main:experience_detail' experience.slug %}" class="btn btn-success btn-sm px-3 rounded-pill explore-btn">
+                                            Explore
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% empty %}
+                <div class="carousel-item active">
+                    <div class="text-center py-5">
+                        <h5 class="fw-bold mb-2">No experiences available right now</h5>
+                        <p class="text-muted mb-0">Please check back later for upcoming tours and experiences.</p>
                     </div>
                 </div>
                 {% endfor %}

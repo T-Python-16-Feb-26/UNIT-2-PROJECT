@@ -25,11 +25,15 @@ def home_view(request:HttpRequest):
     events = load_events()
     event_slides = chunk_list(events, 3)
 
+    experience = load_experiences()
+    experience_slides = chunk_list(experience, 3)
 
     context = {
-        "event_slides": event_slides
+        "event_slides": event_slides,
+        "experience_slides": experience_slides
     }
-    return render(request, 'main/home_view.html',context)
+
+    return render(request, 'main/home_view.html', context )
 
 
 def destinations_view(request:HttpRequest):
@@ -114,6 +118,30 @@ def alula_view(request: HttpRequest):
         "alula_experience_slides": alula_experience_slides,
     }
     return render(request, 'main/alula.html', context)
+
+def abha_view(request: HttpRequest):
+    events = load_events()
+    experiences = load_experiences()
+
+    abha_events = [
+        event for event in events
+        if event.get("city", "").strip().lower() == "abha"
+    ]
+    abha_experiences = [
+        exp for exp in experiences
+        if exp.get("city", "").strip().lower() == "abha"
+    ]
+
+    abha_event_slides = chunk_list(abha_events, 3)
+    abha_experience_slides = chunk_list(abha_experiences, 3)
+
+    context = {
+        "abha_events": abha_events,
+        "abha_event_slides": abha_event_slides,
+        "abha_experiences": abha_experiences,
+        "abha_experience_slides": abha_experience_slides,
+    }
+    return render(request, 'main/abha.html', context)
 
 def experience_detail(request: HttpRequest, slug: str):
     json_path = Path(__file__).resolve().parent / "data" / "experiences.json"

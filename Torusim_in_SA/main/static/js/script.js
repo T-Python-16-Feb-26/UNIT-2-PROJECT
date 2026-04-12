@@ -50,3 +50,67 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     })();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const micBtn = document.getElementById("micBtn");
+    const searchInput = document.getElementById("searchInput");
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+        console.log("Speech recognition is not supported in this browser");
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    let isListening = false;
+
+    micBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (isListening) return;
+
+        try {
+            recognition.start();
+        } catch (error) {
+            console.error("Start error:", error);
+        }
+    });
+
+    recognition.onstart = function () {
+        isListening = true;
+        micBtn.classList.add("listening");
+        console.log("Recognition started");
+    };
+
+    recognition.onresult = function (event) {
+        const text = event.results[0][0].transcript;
+        searchInput.value = text;
+        console.log("Input updated:", text);
+    };
+
+    recognition.onerror = function (event) {
+        console.error("Speech recognition error:", event.error);
+
+        if (event.error === "not-allowed") {
+            alert("Microphone permission was denied or blocked.");
+        } else if (event.error === "no-speech") {
+            alert("No speech detected. Try again.");
+        } else if (event.error === "network") {
+            alert("Network issue during speech recognition.");
+        } else {
+            alert("Speech error: " + event.error);
+        }
+    };
+
+    recognition.onend = function () {
+        isListening = false;
+        micBtn.classList.remove("listening");
+        console.log("Recognition ended");
+    };
+});

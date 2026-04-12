@@ -30,8 +30,7 @@
                 {% url 'main:home_view' as home_url %}
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == home_url %}active{% endif %}"
-                       {% if request.path == home_url %}aria-current="page"{% endif %}
-                       href="{{ home_url }}">
+                       href="{% url 'main:home_view' %}">
                         Home
                     </a>
                 </li>
@@ -39,57 +38,42 @@
                 {% url 'main:destinations_view' as destinations_url %}
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == destinations_url %}active{% endif %}"
-                       {% if request.path == destinations_url %}aria-current="page"{% endif %}
-                       href="{{ destinations_url }}">
+                       href="{% url 'main:destinations_view' %}">
                         Destinations
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/about/' %}active{% endif %}"
-                       {% if request.path == '/about/' %}aria-current="page"{% endif %}
-                       href="/about/">
+                       href="">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
-                       {% if request.path == '/contact/' %}aria-current="page"{% endif %}
-                       href="/contact/">
+                       href="">
                         Contact
                     </a>
                 </li>
-
-<li class="nav-item">
+<li class="nav-item ms-lg-0">
     <div class="position-relative d-flex search-wrapper" id="searchWrapper">
         <form method="get" action="{% url 'main:search_view' %}" role="search" id="searchForm" class="d-flex w-100">
             <input class="form-control form-control-sm pe-5"
-                   type="search" 
-                   name="q" 
-                   id="searchInput"
-                   placeholder="Search or speak..." 
-                   aria-label="Search" 
-                   value="{{ request.GET.q }}">
-            <span class="mic-container position-absolute top-50 end-0 translate-middle-y me-2" 
-                  id="micContainer"
-                  aria-label="Voice search">
+                type="search" 
+                name="q" 
+                id="searchInput"
+                placeholder="Search or speak..." 
+                aria-label="Search" 
+                value="{{ request.GET.q }}">
+            <button type="button" class="mic-container position-absolute top-50 end-0 translate-middle-y me-2" 
+                id="micBtn"
+                aria-label="Voice search">
                 <span class="material-symbols-outlined fs-6 mic-icon" id="micIcon">mic</span>
-            </span>
+            </button>
         </form>
         <button class="btn btn-outline-success btn-sm ms-1" form="searchForm" type="submit">Search</button>
     </div>
 </li>
-                <li class="nav-item">
-                    <div class="btn-group btn-group-sm font-size-switcher" role="group" aria-label="Font size controls">
-                        <a href="{% url 'main:small_font' %}?next={{request.path}}" class="btn btn-outline-success" role="button" aria-label="Small font size">A-</a>
-                        <a href="{% url 'main:large_font' %}?next={{request.path}}" class="btn btn-outline-success" role="button" aria-label="Small font size">A+</a>
-                </li>
-
-                <li>
-                    <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
-                        <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
-                    </button>
-                </li>
             </ul>
         </div>
     </div>
@@ -104,23 +88,12 @@
     <footer class="footer pt-5 pb-3 mt-5">
     <div class="container">
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h5 class="fw-bold">Torusim in SA</h5>
                 <p class="mb-0">
                     Discover the beauty, culture, and unforgettable destinations across Saudi Arabia.
                 </p>
             </div>
-
-            <div class="col-md-2">
-                <h6 class="fw-bold">Quick Links</h6>
-                <ul class="list-unstyled">
-                    <li><a href="/" class="footer-link">Home</a></li>
-                    <li><a href="#" class="footer-link">Destinations</a></li>
-                    <li><a href="#" class="footer-link">Packages</a></li>
-                    <li><a href="#" class="footer-link">About</a></li>
-                </ul>
-            </div>
-
             <div class="col-md-3">
                 <h6 class="fw-bold">Support</h6>
                 <ul class="list-unstyled">
@@ -136,6 +109,38 @@
                 <p class="mb-1">Riyadh, Saudi Arabia</p>
                 <p class="mb-1">info@torusimsa.com</p>
                 <p class="mb-0">+966 5X XXX XXXX</p>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold mb-3">Display Settings</h6>
+                <div class="footer-settings">
+                    <div class="footer-setting-group" aria-label="Font size controls">
+                        <span class="footer-setting-label">Text size</span>
+                        <div class="btn-group btn-group-sm footer-font-group" role="group">
+                            <a href="{% url 'main:small_font' %}?next={{ request.path }}"
+                            class="btn btn-outline-success footer-control-btn"
+                            role="button"
+                            aria-label="Decrease font size">
+                                A-
+                            </a>
+                            <a href="{% url 'main:large_font' %}?next={{ request.path }}"
+                            class="btn btn-outline-success footer-control-btn"
+                            role="button"
+                            aria-label="Increase font size">
+                                A+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-setting-group" aria-label="Theme controls">
+                        <span class="footer-setting-label">Theme</span>
+                        <button class="theme-toggle-btn footer-theme-btn"
+                                id="themeToggle"
+                                type="button"
+                                aria-label="Toggle dark mode">
+                            <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 

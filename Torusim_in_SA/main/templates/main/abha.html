@@ -1,0 +1,631 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Abha | Torusim in SA{% endblock title %}
+
+{% block content %}
+
+<section class="city-slider-section">
+    <div id="cityCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#cityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/Abha/Sarawat_Mountains.jpg' %}" class="d-block w-100 city-slider-img" alt="Abha skyline">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Abha</span>
+                    <h1 class="fw-bold">The Bride of the Sarawat Mountains</h1>
+                    <p>Discover a city where heritage streets, mountain views, and modern attractions come together.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/Abha/rijal-almaa-heritage-village.jpg' %}" class="d-block w-100 city-slider-img" alt="Rijal Alma in Abha">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Heritage</span>
+                    <h1 class="fw-bold">Rijal Almaa</h1>
+                    <p>Walk through Abha’s historic district with colorful painted stone houses, traditional markets, and old city charm.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'images/Abha/Green_Mountains.jpg' %}" class="d-block w-100 city-slider-img" alt="Abha Green Mountain">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Coastal Escape</span>
+                    <h1 class="fw-bold">Abha Green Mountain</h1>
+                    <p>Enjoy mountain views, walking paths, public art, and a relaxed Sarawat Mountains atmosphere along the coast.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/Abha/tree_season.jpg' %}" class="d-block w-100 city-slider-img" alt="Purple jacaranda trees in Abha">
+                <div class="carousel-caption city-caption">
+                    <span class="city-caption-tag">Jacaranda Season</span>
+                    <h1 class="fw-bold">Abha’s Purple Bloom</h1>
+                    <p>Experience Abha’s beautiful jacaranda season, when the city’s streets and parks glow with purple blossoms in spring.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-arrow" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#cityCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-arrow" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<section class="city-tabs-wrapper py-4">
+    <div class="container-fluid px-4 px-lg-5">
+        <ul class="nav city-tabs flex-nowrap overflow-auto" id="cityTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="guide-tab" data-bs-toggle="tab" data-bs-target="#guide-pane" type="button" role="tab">
+                    Complete Guide
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="landmarks-tab" data-bs-toggle="tab" data-bs-target="#landmarks-pane" type="button" role="tab">
+                    Top Landmarks
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="experiences-tab" data-bs-toggle="tab" data-bs-target="#experiences-pane" type="button" role="tab">
+                    Tours & Experiences
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events-pane" type="button" role="tab">
+                    Current Events
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips-pane" type="button" role="tab">
+                    Travel Tips
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content city-tab-content pt-4" id="cityTabContent">
+
+            <div class="tab-pane fade show active" id="guide-pane" role="tabpanel" aria-labelledby="guide-tab">
+                <section class="guide-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Complete Guide</span>
+                            <h2 class="fw-bold mt-3 mb-3">Discover Abha</h2>
+                            <p class="text-muted mx-auto guide-intro">
+                                Abha combines UNESCO-listed heritage, Sarawat Mountains views, lively mountain ridge spaces,
+                                historic markets, and a modern urban lifestyle in one of Saudi Arabia’s most distinctive cities.
+                            </p>
+                        </div>
+
+                        <div class="guide-main-card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="guide-main-image-wrap">
+                                        <img src="{% static 'images/Abha/Abha_city.jpg' %}" alt="Abha skyline" class="guide-main-image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="guide-main-content">
+                                        <span class="guide-label">Sarawat Mountains City</span>
+                                        <h3 class="fw-bold mb-3">A Blend of Heritage and Coastal Life</h3>
+                                        <p class="text-muted mb-4">
+                                            From Rijal Alma and traditional souqs to the Green Mountain, mountain ridge views,
+                                            and iconic city landmarks, Abha offers a balanced mix of history,
+                                            culture, leisure, and mountain atmosphere.
+                                        </p>
+
+                                        <div class="guide-tags">
+                                            <span>Historic districts</span>
+                                            <span>Sarawat Mountains coast</span>
+                                            <span>Waterfront leisure</span>
+                                            <span>Food & shopping</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-1">
+                            <div class="col-md-6 col-xl-4">
+                                <div class="guide-feature-card h-100">
+                                    <div class="guide-feature-icon">
+                                        <span class="material-symbols-outlined">history_edu</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Heritage & History</h4>
+                                    <p class="text-muted mb-0">
+                                        Visit Rijal Alma, traditional markets, and heritage buildings to explore the city’s old urban character.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="guide-feature-card h-100">
+                                    <div class="guide-feature-icon">
+                                        <span class="material-symbols-outlined">beach_access</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Coastal Experience</h4>
+                                    <p class="text-muted mb-0">
+                                        Enjoy the Green Mountain, public art, mountain views, and sunset walks along Abha’s Sarawat Mountains mountain ridge.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="guide-feature-card h-100">
+                                    <div class="guide-feature-icon">
+                                        <span class="material-symbols-outlined">restaurant</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Dining & Lifestyle</h4>
+                                    <p class="text-muted mb-0">
+                                        Discover local seafood, cafés, shopping districts, and lively evening spots across the city.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-info-card mt-5">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <h3 class="fw-bold mb-4">Abha at a glance</h3>
+
+                                    <div class="guide-facts-grid">
+                                        <div class="guide-mini-box">
+                                            <small>Best time</small>
+                                            <strong>Mar - May, Oct - Nov</strong>
+                                        </div>
+                                        <div class="guide-mini-box">
+                                            <small>Top attraction</small>
+                                            <strong>Rijal Alma</strong>
+                                        </div>
+                                        <div class="guide-mini-box">
+                                            <small>Must-do</small>
+                                            <strong>Green Mountain sunset walk</strong>
+                                        </div>
+                                        <div class="guide-mini-box">
+                                            <small>Travel style</small>
+                                            <strong>Heritage + Coast</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="guide-side-box">
+                                        <h4 class="fw-bold mb-3">What makes Abha special</h4>
+                                        <p class="text-muted mb-3">
+                                            Abha stands out for its historic old town, Sarawat Mountains setting,
+                                            walkable mountain ridge, and the way heritage and modern city life
+                                            come together in one destination.
+                                        </p>
+
+                                        <div class="guide-side-points">
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">UNESCO-listed Rijal Alma with hundreds of historic buildings.</p>
+                                            </div>
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">A popular Green Mountain known for mountain views and family-friendly spaces.</p>
+                                            </div>
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">Iconic landmarks like Jabal Sawda Peak along the mountain ridge.</p>
+                                            </div>
+                                            <div class="guide-point-item">
+                                                <span class="guide-point-check">✓</span>
+                                                <p class="mb-0">A strong mix of heritage, leisure, shopping, and dining.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="landmarks-pane" role="tabpanel" aria-labelledby="landmarks-tab">
+                <section class="landmarks-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Top Landmarks</span>
+                            <h2 class="fw-bold mt-3 mb-3">Abha’s Most Iconic Places</h2>
+                            <p class="text-muted mx-auto landmarks-intro">
+                                From the UNESCO-listed Rijal Alma to the Green Mountain and Sarawat Mountains attractions, Abha offers a unique blend of heritage, mountainous scenery, and modern city life.
+                            </p>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-12 col-xl-6">
+                                <div class="landmark-feature-card h-100">
+                                    <div class="landmark-feature-image-wrap">
+                                        <img src="{% static 'images/Abha/Al-balad.webp' %}" alt="Rijal Alma in Abha" class="landmark-feature-image">
+                                    </div>
+                                    <div class="landmark-feature-content">
+                                        <span class="landmark-tag">UNESCO Heritage</span>
+                                        <h3 class="fw-bold mb-3">Rijal Alma</h3>
+                                        <p class="text-muted mb-4">
+                                            Abha’s historic district is known for its colorful painted stone houses, winding lanes, and traditional markets.
+                                        </p>
+                                        <div class="landmark-facts">
+                                            <div class="fact-box">
+                                                <small>Known for</small>
+                                                <strong>Historic streets & souqs</strong>
+                                            </div>
+                                            <div class="fact-box">
+                                                <small>Best for</small>
+                                                <strong>Heritage & culture</strong>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-success mt-4 px-4">Explore Rijal Alma</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xl-6">
+                                <div class="landmark-feature-card h-100">
+                                    <div class="landmark-feature-image-wrap">
+                                        <img src="{% static 'images/Abha/Abha_Green Mountain.jpg' %}" alt="Abha Green Mountain" class="landmark-feature-image">
+                                    </div>
+                                    <div class="landmark-feature-content">
+                                        <span class="landmark-tag">Coastal Escape</span>
+                                        <h3 class="fw-bold mb-3">Abha Green Mountain</h3>
+                                        <p class="text-muted mb-4">
+                                            A lively mountain ridge destination with mountain views, art installations, parks, and sunset walks.
+                                        </p>
+                                        <div class="landmark-facts">
+                                            <div class="fact-box">
+                                                <small>Known for</small>
+                                                <strong>Sea views & promenade</strong>
+                                            </div>
+                                            <div class="fact-box">
+                                                <small>Best for</small>
+                                                <strong>Relaxing evenings</strong>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-success mt-4 px-4">Explore Green Mountain</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Abha/redsea-new.jpg' %}" alt="Sarawat Mountains in Abha" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Sarawat Mountains</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Sarawat Mountains Views</h4>
+                                        <p class="text-muted mb-3">
+                                            Enjoy the mountainous atmosphere, mountain ridge leisure, and the city’s signature mountain energy.
+                                        </p>
+                                        <div class="mini-info">Waterfront • Scenic views</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Abha/Nassif_House.jpg' %}" alt="Nassif House" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Historic House</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Nassif House</h4>
+                                        <p class="text-muted mb-3">
+                                            One of Abha’s best-known heritage homes, giving visitors a deeper look at the city’s old quarter.
+                                        </p>
+                                        <div class="mini-info">Museum • Old Abha</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-4">
+                                <div class="landmark-card h-100">
+                                    <div class="landmark-card-img-wrap">
+                                        <img src="{% static 'images/Abha/King-Fahd-Fountain-Saudi.jpg' %}" alt="Jabal Sawda Peak" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Iconic Landmark</span>
+                                    </div>
+                                    <div class="landmark-card-body">
+                                        <h4 class="fw-bold mb-2">Jabal Sawda Peak</h4>
+                                        <p class="text-muted mb-3">
+                                            A famous Abha landmark that lights up the mountain ridge and adds to the city’s night skyline.
+                                        </p>
+                                        <div class="mini-info">Night views • City icon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="experiences-pane" role="tabpanel" aria-labelledby="experiences-tab">
+                <section class="experiences-section py-4">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                            <div>
+                                <span class="section-badge">Tours & Experiences</span>
+                                <h2 class="fw-bold mt-3 mb-1">Tours in Abha</h2>
+                                <p class="text-muted mb-0">
+                                    Discover Sarawat Mountains trips, heritage walks, food experiences, and guided city highlights in Abha.
+                                </p>
+                            </div>
+
+                            {% if jeddah_experience_slides|length > 1 %}
+                            <div class="mt-3 mt-md-0">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#jeddahExperiencesCarousel" data-bs-slide="prev">
+                                    Prev
+                                </button>
+                                <button class="btn btn-success" type="button" data-bs-target="#jeddahExperiencesCarousel" data-bs-slide="next">
+                                    Next
+                                </button>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div id="jeddahExperiencesCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                {% for slide in jeddah_experience_slides %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <div class="row g-4">
+                                        {% for experience in slide %}
+                                        <div class="col-md-6 col-xl-4">
+                                            <div class="card experience-card h-100 border-0 shadow-sm rounded-4">
+                                                {% if experience.image %}
+                                                <img src="{% static experience.image %}" class="card-img-top" alt="{{ experience.title }}">
+                                                {% endif %}
+                                                <div class="card-body p-4 d-flex flex-column">
+                                                    <span class="badge bg-success mb-3 align-self-start">{{ experience.category }}</span>
+                                                    <h5 class="fw-bold mb-2">{{ experience.title }}</h5>
+                                                    <p class="text-muted small mb-2">{{ experience.duration }}</p>
+                                                    <p class="mb-3 text-muted">{{ experience.description }}</p>
+
+                                                    <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center gap-3">
+                                                        <small class="text-success fw-semibold mb-0">{{ experience.location }}</small>
+                                                        <a href="{% url 'main:experience_detail' experience.slug %}" class="btn btn-success btn-sm px-3 rounded-pill explore-btn">
+                                                            Explore
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% empty %}
+                                <div class="carousel-item active">
+                                    <div class="text-center py-5">
+                                        <h5 class="fw-bold mb-2">No Abha experiences available right now</h5>
+                                        <p class="text-muted mb-0">
+                                            Please check back later for upcoming sea trips, heritage walks, and city experiences.
+                                        </p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
+                <section class="events-section py-4">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                            <div>
+                                <span class="section-badge">Current Events</span>
+                                <h2 class="fw-bold mt-3 mb-1">Events in Abha</h2>
+                                <p class="text-muted mb-0">
+                                    Stay updated with seasonal activities, festivals, and cultural events happening in Abha.
+                                </p>
+                            </div>
+
+                            {% if jeddah_event_slides|length > 1 %}
+                            <div class="mt-3 mt-md-0">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#jeddahEventsCarousel" data-bs-slide="prev">
+                                    Prev
+                                </button>
+                                <button class="btn btn-success" type="button" data-bs-target="#jeddahEventsCarousel" data-bs-slide="next">
+                                    Next
+                                </button>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div id="jeddahEventsCarousel" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                {% for slide in jeddah_event_slides %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <div class="row g-4">
+                                        {% for event in slide %}
+                                        <div class="col-md-6 col-xl-4">
+                                            <div class="card event-card h-100 border-0 shadow-sm rounded-4">
+                                                {% if event.image %}
+                                                <img src="{% static event.image %}" class="card-img-top" alt="{{ event.title }}">
+                                                {% endif %}
+                                                <div class="card-body p-4">
+                                                    <span class="badge bg-success mb-3">{{ event.category }}</span>
+                                                    <h5 class="fw-bold">{{ event.title }}</h5>
+                                                    <p class="text-muted mb-2">{{ event.date }}</p>
+                                                    <p class="mb-2">{{ event.description }}</p>
+                                                    <small class="text-success fw-semibold">{{ event.location }}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% empty %}
+                                <div class="carousel-item active">
+                                    <div class="text-center py-5">
+                                        <h5 class="fw-bold mb-2">No Abha events available right now</h5>
+                                        <p class="text-muted mb-0">Please check back later for upcoming seasonal activities and city events.</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="tips-pane" role="tabpanel" aria-labelledby="tips-tab">
+                <section class="travel-tips-section py-4">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span class="section-badge">Travel Tips</span>
+                            <h2 class="fw-bold mt-3 mb-3">Plan Your Abha Visit Better</h2>
+                            <p class="text-muted mx-auto travel-tips-intro">
+                                Make the most of your time in Abha with practical tips on weather, transport, timing, and how to enjoy the city comfortably.
+                            </p>
+                        </div>
+
+                        <div class="travel-tips-hero">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="travel-tips-image-wrap">
+                                        <img src="{% static 'images/Abha/Abha_city.jpg' %}" alt="Travel tips for Abha" class="travel-tips-image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="travel-tips-hero-content">
+                                        <span class="travel-tip-label">Before You Go</span>
+                                        <h3 class="fw-bold mb-3">Useful Tips for First-Time Visitors</h3>
+                                        <p class="text-muted mb-4">
+                                            Abha is easiest to enjoy when you plan around the weather, choose the right transport, and balance heritage visits with mountain relaxation.
+                                        </p>
+                                        <div class="travel-tip-tags">
+                                            <span>Best season</span>
+                                            <span>Getting around</span>
+                                            <span>Daily planning</span>
+                                            <span>Coastal comfort</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-1">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">wb_sunny</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Best Time to Visit</h4>
+                                    <p class="text-muted mb-0">
+                                        The most comfortable months for exploring Abha are usually from November to March, when the weather is cooler and better for walking outdoors.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">directions_car</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Getting Around</h4>
+                                    <p class="text-muted mb-0">
+                                        Taxis and ride-hailing apps are practical for city travel, especially when moving between the Green Mountain, Rijal Alma, and malls.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">schedule</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Plan Your Day</h4>
+                                    <p class="text-muted mb-0">
+                                        Heritage visits are great in the morning, while the Green Mountain and mountain ridge areas are ideal later in the day and at sunset.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="travel-tip-card h-100">
+                                    <div class="travel-tip-icon">
+                                        <span class="material-symbols-outlined">travel</span>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Travel Comfort</h4>
+                                    <p class="text-muted mb-0">
+                                        Wear comfortable shoes, carry water, and plan some indoor breaks for midday, especially in warmer months.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tips-checklist-card mt-5">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <h3 class="fw-bold mb-4">Quick visitor tips</h3>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Choose cooler months for walking around Rijal Alma and the Green Mountain.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Use ride-hailing or taxis to move easily between major attractions.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Plan heritage spots in the morning and mountain spots around sunset.</p>
+                                    </div>
+
+                                    <div class="tip-list-item">
+                                        <span class="tip-check">✓</span>
+                                        <p class="mb-0">Keep indoor attractions in mind for hot midday hours.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="tips-side-box">
+                                        <h4 class="fw-bold mb-3">Ideal Abha rhythm</h4>
+                                        <p class="text-muted mb-3">
+                                            A balanced Abha day often starts with heritage in Rijal Alma, continues with lunch or a museum stop,
+                                            and ends with a sunset walk on the Green Mountain or a relaxed evening by the sea.
+                                        </p>
+
+                                        <div class="tips-mini-grid">
+                                            <div class="mini-tip-box">
+                                                <small>Outdoor exploring</small>
+                                                <strong>Morning / Sunset</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Indoor attractions</small>
+                                                <strong>Midday</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Dining & leisure</small>
+                                                <strong>Evening</strong>
+                                            </div>
+                                            <div class="mini-tip-box">
+                                                <small>Recommended stay</small>
+                                                <strong>2 to 4 days</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
