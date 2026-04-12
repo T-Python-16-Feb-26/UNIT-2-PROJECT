@@ -1,0 +1,539 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'main/css/baseline.css' %}">
+{% endblock %}
+
+{% block title %}خط الأساس — برنامج خدمة ضيوف الرحمن{% endblock %}
+
+{% block content %}
+
+<!-- 
+     HERO
+ -->
+<section class="bl-hero">
+
+  <div class="bl-hero-overlay"></div>
+
+  <!-- Decorative shapes -->
+  <div class="bl-hero-shapes" aria-hidden="true">
+    <span class="bl-shape bl-shape-1"></span>
+    <span class="bl-shape bl-shape-2"></span>
+    <span class="bl-shape bl-shape-3"></span>
+    <span class="bl-shape bl-shape-4"></span>
+  </div>
+
+  <div class="bl-hero-content">
+    <div class="container">
+
+
+      <h1 class="bl-hero-title">
+        الوضع الراهن<br>
+        <span class="bl-hero-title-accent">والتحديات والجهود</span>
+      </h1>
+
+      <div class="bl-hero-divider"></div>
+
+      <p class="bl-hero-sub">
+        دراسة الوضع الحالي من جانبي التحديات الأساسية والجهود الحالية<br>
+        لتحقيق أهداف البرنامج
+      </p>
+
+    </div>
+  </div>
+
+  <a href="#bl-summary" class="about-hero-scroll" aria-label="انتقل إلى القسم التالي">
+    <div class="about-hero-scroll-line"></div>
+    <span class="about-hero-scroll-label">المزيد</span>
+  </a>
+
+</section>
+
+<!-- 
+     SUMMARY BANNER
+ -->
+<section class="bl-summary-section" id="bl-summary">
+  <div class="container">
+
+    <div class="bl-summary-header">
+      <span class="section-eyebrow">ملخص خط الأساس</span>
+      <h2 class="section-title">قبل رسم الاستراتيجية</h2>
+      <div class="about-ornament about-ornament--centered" aria-hidden="true">
+        <span class="about-ornament-line"></span>
+        <span class="about-ornament-diamond"></span>
+        <span class="about-ornament-line about-ornament-line--rev"></span>
+      </div>
+      <p class="bl-summary-intro">
+        تمت دراسة خط الأساس وتحليل الوضع الحالي من جانبين أساسيين
+      </p>
+    </div>
+
+    <!-- Two pillars -->
+    <div class="bl-pillars">
+
+      <div class="bl-pillar bl-pillar--challenge js-reveal" style="--i:0">
+        <div class="bl-pillar-icon" aria-hidden="true">⚠️</div>
+        <div class="bl-pillar-label">الأول</div>
+        <h3 class="bl-pillar-title">التحديات</h3>
+        <p class="bl-pillar-desc">التحديات الأساسية الحالية للأهداف الاستراتيجية للبرنامج جميعها</p>
+        <div class="bl-pillar-accent"></div>
+      </div>
+
+      <div class="bl-pillars-divider" aria-hidden="true">
+        <span class="bl-pillars-divider-line"></span>
+        <span class="bl-pillars-divider-diamond"></span>
+        <span class="bl-pillars-divider-line"></span>
+      </div>
+
+      <div class="bl-pillar bl-pillar--effort js-reveal" style="--i:1">
+        <div class="bl-pillar-icon" aria-hidden="true">✅</div>
+        <div class="bl-pillar-label">الثاني</div>
+        <h3 class="bl-pillar-title">الجهود</h3>
+        <p class="bl-pillar-desc">جهود التحول الحالية التي تدخل ضمن إطار البرنامج وتتسق مع طموحاته</p>
+        <div class="bl-pillar-accent"></div>
+      </div>
+
+    </div>
+
+    <!-- Stats row -->
+    <div class="bl-stats js-reveal" style="--i:2">
+      <div class="bl-stat">
+        <div class="bl-stat-num">12م</div>
+        <div class="bl-stat-label">معتمر راغب من خارج المملكة يواجه عقبات مختلفة</div>
+        <div class="bl-stat-tag">الطلب الكامن المقدر</div>
+      </div>
+      <div class="bl-stat-sep" aria-hidden="true"></div>
+      <div class="bl-stat">
+        <div class="bl-stat-num">8.5م</div>
+        <div class="bl-stat-label">معتمر 2019</div>
+        <div class="bl-stat-tag">المستوى المرجعي</div>
+      </div>
+      <div class="bl-stat-sep" aria-hidden="true"></div>
+      <div class="bl-stat">
+        <div class="bl-stat-num bl-stat-num--gold">77%</div>
+        <div class="bl-stat-label">نسبة النمو المستهدفة</div>
+        <div class="bl-stat-tag">الهدف</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 
+     GOAL 1
+ -->
+<section class="bl-goal-section bl-goal-section--dark">
+
+  <div class="bl-goal-shapes" aria-hidden="true">
+    <span class="about-axes-shape about-axes-shape-1"></span>
+    <span class="about-axes-shape about-axes-shape-2"></span>
+  </div>
+
+  <div class="container">
+
+    <!-- Goal header -->
+    <div class="bl-goal-header">
+      <div class="bl-goal-badge js-reveal" style="--i:0">الهدف الأول</div>
+      <h2 class="bl-goal-title section-title--light js-reveal" style="--i:1">
+        تيسير استضافة المعتمرين
+      </h2>
+      <p class="bl-goal-sub js-reveal" style="--i:2">التحديات والجهود</p>
+    </div>
+
+    <div class="bl-goal-grid">
+
+      <!-- Challenges -->
+      <div class="bl-col bl-col--challenge js-reveal" style="--i:3">
+        <div class="bl-col-header">
+          <span class="bl-col-dot bl-col-dot--red"></span>
+          <span class="bl-col-heading">التحديات</span>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--red"></div>
+          <h4 class="bl-card-title">أثر جائحة كورونا في المنظومة</h4>
+          <p class="bl-card-body">
+            كان لجائحة كورونا أثر على اقتصاديات منظومة الحج والعمرة، تمثّل في انخفاض أعداد
+            المعتمرين بما يقدر بخمسة ملايين معتمر، وتأثير قطاعات الإيواء والتجزئة والنقل
+            والطيران. ونتج عنها تحديات طويلة الأمد.
+          </p>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--red"></div>
+          <h4 class="bl-card-title">عدم توفر الطاقة الاستيعابية في رحلات الطيران</h4>
+          <p class="bl-card-body">
+            تمثّل الطاقة الاستيعابية لرحلات الطيران تحدياً كبيراً، حيث إن النمو السنوي في عدد
+            الرحلات الجوية غير كافٍ لتلبية الطلب المتوقع، ويُضاف غياب الرحلات المباشرة لبعض
+            المدن ذات المجتمعات الإسلامية.
+          </p>
+        </div>
+      </div>
+
+      <!-- Efforts -->
+      <div class="bl-col bl-col--effort js-reveal" style="--i:4">
+        <div class="bl-col-header">
+          <span class="bl-col-dot bl-col-dot--green"></span>
+          <span class="bl-col-heading">الجهود الحالية</span>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title">قرارات تحفيزية لتخفيف آثار الجائحة</h4>
+          <p class="bl-card-body">
+            صدرت موافقة كريمة على قرارات تحفيزية متعددة للمنشآت العاملة في منظومة الحج والعمرة،
+            تشمل إعفاء مرافق الإيواء من الرسوم، وتأجيل تحصيل الرسوم الجمركية، وتمديد تراخيص
+            وزارة السياحة.
+          </p>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title">استحداث حلول خاصة للتأشيرات</h4>
+          <p class="bl-card-body">
+            عمل فريق البرنامج على دراسة أنواع التأشيرات واستحداث حلول متعددة، منها: تأشيرة
+            الزيارة بغرض أداء العمرة، تأشيرة المرور لأداء العمرة، وتسهيل إصدار التأشيرات
+            إلكترونياً.
+          </p>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title">تسهيل إجراءات القدوم لأداء العمرة</h4>
+          <p class="bl-card-body">
+            تشمل السماح بدخول المعتمرين عبر جميع المنافذ، تمديد موسم العمرة لـ10 أشهر، تفعيل
+            خدمة إصدار التأشيرات إلكترونياً (من 14 يوم إلى 5 دقائق)، ومبادرة طريق مكة.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 
+     GOAL 2
+ -->
+<section class="bl-goal-section bl-goal-section--light">
+  <div class="container">
+
+    <div class="bl-goal-header">
+      <div class="bl-goal-badge bl-goal-badge--gold js-reveal" style="--i:0">الهدف الثاني</div>
+      <h2 class="bl-goal-title js-reveal" style="--i:1">
+        تقديم خدمات ذات جودة
+      </h2>
+      <p class="bl-goal-sub bl-goal-sub--dark js-reveal" style="--i:2">التحديات والجهود</p>
+    </div>
+
+    <div class="bl-goal-grid">
+
+      <div class="bl-col bl-col--challenge js-reveal" style="--i:3">
+        <div class="bl-col-header">
+          <span class="bl-col-dot bl-col-dot--red"></span>
+          <span class="bl-col-heading bl-col-heading--dark">التحديات</span>
+        </div>
+
+        <div class="bl-card bl-card--light">
+          <div class="bl-card-stripe bl-card-stripe--red"></div>
+          <h4 class="bl-card-title bl-card-title--dark">قلة الخيارات والبدائل التي تُسهم في تقديم تجربة مميزة</h4>
+          <p class="bl-card-body bl-card-body--dark">
+            تتسم الخيارات الحالية للخدمات بعدم مناسبتها لفئات مختلفة. نسبة الفنادق ذات التقييم
+            الأقل من ثلاث نجوم في مكة تعادل 81% من الإجمالي، مع قلة المطاعم ذات الجودة،
+            ومحدودية تجربة التسوق وتنوع المنتجات.
+          </p>
+          <!-- inline stat chip -->
+          <div class="bl-inline-stat">
+            <span class="bl-inline-stat-num">81%</span>
+            <span class="bl-inline-stat-label">فنادق أقل من 3 نجوم في مكة</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bl-col bl-col--effort js-reveal" style="--i:4">
+        <div class="bl-col-header">
+          <span class="bl-col-dot bl-col-dot--green"></span>
+          <span class="bl-col-heading bl-col-heading--dark">الجهود الحالية</span>
+        </div>
+
+        <div class="bl-card bl-card--light">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title bl-card-title--dark">تحسين الخدمات العامة في رحلة ضيوف الرحمن</h4>
+          <p class="bl-card-body bl-card-body--dark">
+            مبادرة حج بلا حقيبة (استفاد منها 500 ألف حاج)، مبادرة إياب لإنهاء إجراءات
+            المغادرة، تدشين البطاقة الذكية لخدمة ضيوف الرحمن (استفاد منها 125 ألف حاج).
+          </p>
+         
+        </div>
+
+        <div class="bl-card bl-card--light">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title bl-card-title--dark">توحيد معايير الإيواء</h4>
+          <p class="bl-card-body bl-card-body--dark">
+            توحيد معايير قطاع الإيواء في مكة المكرمة مع باقي مدن المملكة لضمان الجودة
+            والارتقاء بالخدمات، وإطلاق شركة "كدانة للتنمية والتطوير".
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 
+     GOAL 3
+ -->
+<section class="bl-goal-section bl-goal-section--dark">
+
+  <div class="bl-goal-shapes" aria-hidden="true">
+    <span class="about-axes-shape about-axes-shape-1"></span>
+    <span class="about-axes-shape about-axes-shape-2"></span>
+  </div>
+
+  <div class="container">
+
+    <div class="bl-goal-header">
+      <div class="bl-goal-badge js-reveal" style="--i:0">الهدف الثالث</div>
+      <h2 class="bl-goal-title section-title--light js-reveal" style="--i:1">
+        إثراء التجربة الدينية والثقافية
+      </h2>
+      <p class="bl-goal-sub js-reveal" style="--i:2">التحديات والجهود</p>
+    </div>
+
+    <div class="bl-goal-grid">
+
+      <div class="bl-col bl-col--challenge js-reveal" style="--i:3">
+        <div class="bl-col-header">
+          <span class="bl-col-dot bl-col-dot--red"></span>
+          <span class="bl-col-heading">التحديات</span>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--red"></div>
+          <h4 class="bl-card-title">قلة الخيارات التي تسهم في تقديم تجربة إثرائية</h4>
+          <p class="bl-card-body">
+            تفتقر مدينتا مكة والمدينة إلى المواسم والفعاليات الثقافية، وعدم تأهيل المواقع
+            التاريخية وصعوبة الوصول إليها.
+          </p>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--red"></div>
+          <h4 class="bl-card-title">ضعف مشاركة القطاع الخاص</h4>
+          <p class="bl-card-body">
+            صعوبة إصدار التصاريح بتعقيد إجراءاتها كأحد أبرز التحديات، إضافة إلى شُح البيانات
+            والمعلومات المتكاملة حول منظومة خدمة ضيوف الرحمن.
+          </p>
+        </div>
+      </div>
+
+      <div class="bl-col bl-col--effort js-reveal" style="--i:4">
+        <div class="bl-col-header">
+          <span class="bl-col-dot bl-col-dot--green"></span>
+          <span class="bl-col-heading">الجهود الحالية</span>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title">تطوير حوكمة مبدئية للمواقع التاريخية</h4>
+          <p class="bl-card-body">
+            تأسيس لجنة المواقع التاريخية الإسلامية برئاسة وزارة الثقافة لوضع رؤية واستراتيجية
+            وسياسات مواقع التاريخ الإسلامي ذات الأولوية.
+          </p>
+        </div>
+
+        <div class="bl-card">
+          <div class="bl-card-stripe bl-card-stripe--green"></div>
+          <h4 class="bl-card-title">بدء تطوير المواقع التاريخية</h4>
+          <p class="bl-card-body">
+            أُزيلت التشوهات والرسومات في جبلَي النور والثور، وبدأت أعمال التطوير في جبل النور
+            (غار حراء)، وتم تركيب لوحات تعريفية في أكثر من 10 مواقع تاريخية.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sites Classification -->
+    <div class="bl-sites-section js-reveal" style="--i:5">
+
+      <div class="bl-sites-header">
+        <span class="section-eyebrow section-eyebrow--light">تصنيف المواقع التاريخية</span>
+        <div class="about-ornament about-ornament--centered" aria-hidden="true">
+          <span class="about-ornament-line"></span>
+          <span class="about-ornament-diamond"></span>
+          <span class="about-ornament-line about-ornament-line--rev"></span>
+        </div>
+      </div>
+
+      <div class="bl-sites-grid">
+
+        <div class="bl-site-card js-reveal" style="--i:6">
+          <div class="bl-site-card-top bl-site-card-top--gold"></div>
+          <div class="bl-site-icon bl-site-icon--gold" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6 L28 16 L38 16 L30 23 L33 34 L24 28 L15 34 L18 23 L10 16 L20 16 Z"
+                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1"
+                      stroke-dasharray="3 3" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="bl-site-title">مشاريع الريادة</h3>
+          <p class="bl-site-sub">ريادة الجذب السياحي</p>
+          <p class="bl-site-desc">
+            تطوير تجارب حديثة وعصرية — ريادة الجذب السياحي، التحول الرقمي، التجارب التفاعلية
+          </p>
+        </div>
+
+        <div class="bl-site-card js-reveal" style="--i:7">
+          <div class="bl-site-card-top bl-site-card-top--green"></div>
+          <div class="bl-site-icon bl-site-icon--green" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 38 C24 38 8 28 8 18 C8 13 12 9 17 9 C20 9 23 11 24 13
+                       C25 11 28 9 31 9 C36 9 40 13 40 18 C40 28 24 38 24 38Z"
+                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="bl-site-title">مشاريع الحماية</h3>
+          <p class="bl-site-sub">حماية التراث الإسلامي الفريد</p>
+          <p class="bl-site-desc">
+            حماية التراث الإسلامي الفريد — المواقع المهددة بالخطر، الهياكل الفريدة والأصلية
+          </p>
+        </div>
+
+        <div class="bl-site-card js-reveal" style="--i:8">
+          <div class="bl-site-card-top bl-site-card-top--blue"></div>
+          <div class="bl-site-icon bl-site-icon--blue" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6"  y="28" width="10" height="14" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="19" y="18" width="10" height="24" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="32" y="8"  width="10" height="34" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M11 26 L24 16 L37 6" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-dasharray="3 2.5" opacity="0.45"/>
+            </svg>
+          </div>
+          <h3 class="bl-site-title">مشاريع التحسين</h3>
+          <p class="bl-site-sub">التحسينات الأساسية</p>
+          <p class="bl-site-desc">
+            إجراء التحسينات والتطويرات الأساسية للمواقع ذات الكثافة العالية
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 
+     ACHIEVEMENTS
+ -->
+<section class="bl-achievements-section">
+  <div class="container">
+
+    <div class="bl-achievements-heading">
+      <span class="section-eyebrow">إنجازات مبدئية</span>
+      <h2 class="section-title">ما تم إنجازه حتى الآن</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="bl-achievements-grid">
+
+      <div class="bl-achievement js-reveal" style="--i:0">
+        <div class="bl-achievement-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <p class="bl-achievement-text">إزالة التشوهات في جبلَي النور والثور</p>
+      </div>
+
+      <div class="bl-achievement js-reveal" style="--i:1">
+        <div class="bl-achievement-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <p class="bl-achievement-text">بدء أعمال التطوير في جبل النور (غار حراء) وجبل ثور</p>
+      </div>
+
+      <div class="bl-achievement js-reveal" style="--i:2">
+        <div class="bl-achievement-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <p class="bl-achievement-text">البدء في تطوير أعمال المحتوى لجميع المواقع</p>
+      </div>
+
+      <div class="bl-achievement js-reveal" style="--i:3">
+        <div class="bl-achievement-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <p class="bl-achievement-text">تركيب لوحات تعريفية في أكثر من 10 مواقع تاريخية</p>
+      </div>
+
+      <div class="bl-achievement js-reveal" style="--i:4">
+        <div class="bl-achievement-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <p class="bl-achievement-text">إقامة معرض القرآن الكريم للتوعية</p>
+      </div>
+
+      <div class="bl-achievement js-reveal" style="--i:5">
+        <div class="bl-achievement-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <p class="bl-achievement-text">ترميم بئر غرس وتطوير وتأهيل مسجد بني أنيف</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  (function () {
+    'use strict';
+
+    /* Smooth scroll for hero arrow */
+    var heroScroll = document.querySelector('.about-hero-scroll');
+    if (heroScroll) {
+      heroScroll.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    }
+
+    /* Intersection observer for .js-reveal */
+    var revealEls = document.querySelectorAll('.js-reveal');
+    if (!revealEls.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+{% endblock %}
