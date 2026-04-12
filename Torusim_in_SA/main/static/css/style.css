@@ -261,6 +261,7 @@ body {
         justify-content: flex-start;
     }
 }
+
 /* end footer */
 
 .hero h1 {
@@ -1776,3 +1777,297 @@ html, body {
 [data-bs-theme="dark"] .custom-arrow {
     background-color: rgba(255, 255, 255, 0.14);
 }
+
+/* contact_us */
+
+/* contact page */
+.contact-section {
+    background: linear-gradient(180deg, var(--page-bg) 0%, var(--page-surface) 100%);
+}
+
+.contact-intro {
+    max-width: 720px;
+    font-size: 1.02rem;
+}
+
+.contact-info-card,
+.contact-form-card {
+    background: var(--page-surface);
+    border: 1px solid var(--page-border);
+    border-radius: 1.5rem;
+    box-shadow: var(--page-shadow);
+    padding: 2rem;
+    height: 100%;
+}
+
+.contact-info-card {
+    background:
+        radial-gradient(circle at top right, var(--page-accent-bg), transparent 35%),
+        var(--page-surface);
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--page-border);
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--page-accent-bg);
+    color: var(--page-accent-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon .material-symbols-outlined {
+    font-size: 1.4rem;
+}
+
+.contact-side-box {
+    background: var(--page-surface-2);
+    border: 1px solid var(--page-border);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+}
+
+.contact-input {
+    background-color: var(--page-surface);
+    color: var(--page-text);
+    border: 1px solid var(--page-border);
+    border-radius: 1rem;
+    padding: 0.85rem 1rem;
+    box-shadow: none;
+}
+
+.contact-input:focus {
+    background-color: var(--page-surface);
+    color: var(--page-text);
+    border-color: var(--page-accent-text);
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.12);
+}
+
+.contact-form-card .form-label {
+    color: var(--page-text);
+}
+
+.contact-form-card textarea.contact-input {
+    resize: vertical;
+    min-height: 160px;
+}
+
+@media (max-width: 991.98px) {
+    .contact-info-card,
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-info-card,
+    .contact-form-card,
+    .contact-side-box {
+        padding: 1.25rem;
+    }
+}
+
+/* end contact */
+
+/* about page */
+.about-section {
+    background: linear-gradient(180deg, var(--page-bg) 0%, var(--page-surface) 100%);
+}
+
+.about-intro {
+    max-width: 720px;
+    font-size: 1.02rem;
+}
+
+.about-hero-card,
+.about-main-card,
+.about-side-card,
+.about-feature-card {
+    background: var(--page-surface);
+    border: 1px solid var(--page-border);
+    box-shadow: var(--page-shadow);
+    border-radius: 1.5rem;
+    color: var(--page-text);
+}
+
+.about-hero-card {
+    overflow: hidden;
+}
+
+.about-hero-image-wrap {
+    height: 100%;
+    overflow: hidden;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+}
+
+.about-hero-content {
+    padding: 2rem;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at top right, var(--page-accent-bg), transparent 35%),
+        var(--page-surface);
+}
+
+.about-label {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--page-accent-bg-2);
+    color: var(--page-accent-text);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-feature-card {
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--page-shadow-strong);
+}
+
+.about-feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--page-accent-bg);
+    color: var(--page-accent-text);
+    margin-bottom: 1rem;
+}
+
+.about-feature-icon .material-symbols-outlined {
+    font-size: 1.8rem;
+}
+
+.about-main-card,
+.about-side-card {
+    padding: 2rem;
+}
+
+.about-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--page-border);
+}
+
+.about-point-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.about-check {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--page-accent-bg);
+    color: var(--page-accent-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.about-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.about-mini-box {
+    background: var(--page-surface-2);
+    border: 1px solid var(--page-border);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.about-mini-box small {
+    display: block;
+    color: var(--page-text-muted);
+    margin-bottom: 0.35rem;
+    font-size: 0.82rem;
+}
+
+.about-mini-box strong {
+    color: var(--page-text);
+    font-size: 0.95rem;
+}
+
+.about-quote-box {
+    background: var(--page-surface-soft);
+    border: 1px solid var(--page-border);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+    .about-hero-content,
+    .about-main-card,
+    .about-side-card {
+        padding: 1.5rem;
+    }
+
+    .about-hero-image {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-feature-card,
+    .about-main-card,
+    .about-side-card,
+    .about-quote-box {
+        padding: 1.25rem;
+    }
+
+    .about-mini-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* about end */

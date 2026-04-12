@@ -1,0 +1,150 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block content %}
+<section class="about-section py-5 mt-5">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="section-badge">About Us</span>
+            <h1 class="fw-bold mt-3 mb-3">Discover Saudi Arabia with confidence</h1>
+            <p class="text-muted mx-auto about-intro">
+                Torusim in SA is a travel platform created to help visitors explore Saudi Arabia through inspiring destinations,
+                unique city experiences, practical travel tips, and unforgettable journeys.
+            </p>
+        </div>
+
+        <div class="about-hero-card mb-5">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-hero-image-wrap">
+                        <img src="{% static 'images/Saudi_Arabia.jpg' %}" alt="Saudi Arabia travel" class="about-hero-image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-hero-content">
+                        <span class="about-label">Our Story</span>
+                        <h2 class="fw-bold mb-3">A modern guide to travel across the Kingdom</h2>
+                        <p class="text-muted mb-3">
+                            We designed this platform to make discovering Saudi Arabia easier, clearer, and more enjoyable for every traveler.
+                            From major cities to cultural landmarks and local experiences, our goal is to bring everything together in one simple place.
+                        </p>
+                        <p class="text-muted mb-0">
+                            Whether someone is visiting Riyadh, Jeddah, AlUla, or planning a full trip across the country,
+                            we want to help them explore with better information and a smoother experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="about-feature-card h-100">
+                    <div class="about-feature-icon">
+                        <span class="material-symbols-outlined">travel_explore</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">Inspiring destinations</h5>
+                    <p class="text-muted mb-0">
+                        We highlight remarkable places across Saudi Arabia, from vibrant cities to heritage treasures and natural escapes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="about-feature-card h-100">
+                    <div class="about-feature-icon">
+                        <span class="material-symbols-outlined">map</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">Practical travel guidance</h5>
+                    <p class="text-muted mb-0">
+                        Our content is meant to help travelers understand where to go, what to do, and how to plan with confidence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="about-feature-card h-100">
+                    <div class="about-feature-icon">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">Memorable experiences</h5>
+                    <p class="text-muted mb-0">
+                        We focus on experiences that create lasting memories, from cultural tours to food, desert, and city adventures.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-7">
+                <div class="about-main-card h-100">
+                    <span class="about-label">Our Mission</span>
+                    <h3 class="fw-bold mb-3">Making tourism in Saudi Arabia easier to explore online</h3>
+                    <p class="text-muted mb-4">
+                        Our mission is to provide a user-friendly travel platform that introduces the beauty, culture, and variety of Saudi Arabia
+                        in a way that feels welcoming, modern, and useful.
+                    </p>
+
+                    <div class="about-points">
+                        <div class="about-point-item">
+                            <div class="about-check">✓</div>
+                            <div>
+                                <strong class="d-block mb-1">Clear destination discovery</strong>
+                                <span class="text-muted">Help users browse cities, attractions, and experiences quickly.</span>
+                            </div>
+                        </div>
+
+                        <div class="about-point-item">
+                            <div class="about-check">✓</div>
+                            <div>
+                                <strong class="d-block mb-1">Better travel planning</strong>
+                                <span class="text-muted">Offer useful travel information in a clean and easy-to-use format.</span>
+                            </div>
+                        </div>
+
+                        <div class="about-point-item">
+                            <div class="about-check">✓</div>
+                            <div>
+                                <strong class="d-block mb-1">Promote local tourism</strong>
+                                <span class="text-muted">Showcase the richness of Saudi culture, landmarks, and local experiences.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="about-side-card h-100">
+                    <h4 class="fw-bold mb-3">What we offer</h4>
+                    <div class="about-mini-grid">
+                        <div class="about-mini-box">
+                            <small>Destinations</small>
+                            <strong>City guides and highlights</strong>
+                        </div>
+                        <div class="about-mini-box">
+                            <small>Experiences</small>
+                            <strong>Tours and activities</strong>
+                        </div>
+                        <div class="about-mini-box">
+                            <small>Travel tips</small>
+                            <strong>Useful planning advice</strong>
+                        </div>
+                        <div class="about-mini-box">
+                            <small>Support</small>
+                            <strong>Easy contact and guidance</strong>
+                        </div>
+                    </div>
+
+                    <div class="about-quote-box mt-4">
+                        <p class="mb-0 text-muted">
+                            “We believe discovering Saudi Arabia should feel inspiring, simple, and accessible for everyone.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

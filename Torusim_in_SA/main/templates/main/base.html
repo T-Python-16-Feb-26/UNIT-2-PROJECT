@@ -44,14 +44,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/about/' %}active{% endif %}"
-                       href="">
+                       href="{% url 'main:contact_view' %}">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
-                       href="">
+                       href="{% url 'main:about_view' %}">
                         Contact
                     </a>
                 </li>
@@ -97,10 +97,8 @@
             <div class="col-md-3">
                 <h6 class="fw-bold">Support</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="footer-link">Contact Us</a></li>
-                    <li><a href="#" class="footer-link">FAQs</a></li>
-                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                    <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                    <li><a href="{% url 'main:contact_view' %}" class="footer-link">Contact Us</a></li>
+                    <li><a href="{% url 'main:terms_view' %}" class="footer-link">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -108,7 +106,7 @@
                 <h6 class="fw-bold">Contact</h6>
                 <p class="mb-1">Riyadh, Saudi Arabia</p>
                 <p class="mb-1">info@torusimsa.com</p>
-                <p class="mb-0">+966 5X XXX XXXX</p>
+                <p class="mb-0">+966 53 677 8009</p>
             </div>
             <div class="col-md-3">
                 <h6 class="fw-bold mb-3">Display Settings</h6>

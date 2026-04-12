@@ -156,6 +156,18 @@ def experience_detail(request: HttpRequest, slug: str):
 
     return render(request, "main/experience_detail.html", {"experience": experience})
 
+def contact_view(request:HttpRequest):
+
+    return render(request, 'main/contact_us.html')
+
+def about_view(request:HttpRequest):
+
+    return render(request, 'main/about_us.html')
+
+def terms_view(request:HttpRequest):
+
+    return render(request, 'main/terms.html')
+
 
 def large_font(request: HttpRequest):
 
@@ -175,7 +187,16 @@ def search_view(request: HttpRequest):
     query = request.GET.get('q', '').strip()
     results = []
 
-    items = load_experiences()
+    experiences = load_experiences()
+    events = load_events()
+
+    for item in experiences:
+        item["content_type"] = "experience"
+
+    for item in events:
+        item["content_type"] = "event"
+
+    items = experiences + events
 
     if query:
         query_lower = query.lower()
@@ -187,6 +208,7 @@ def search_view(request: HttpRequest):
             or query_lower in item.get('location', '').lower()
             or query_lower in item.get('description', '').lower()
             or query_lower in item.get('slug', '').lower()
+            or query_lower in item.get('date', '').lower()
         ]
 
     return render(request, 'main/search.html', {

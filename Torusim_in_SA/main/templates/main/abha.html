@@ -112,7 +112,7 @@
                             <div class="row g-0 align-items-center">
                                 <div class="col-lg-6">
                                     <div class="guide-main-image-wrap">
-                                        <img src="{% static 'images/Abha/Abha_city.jpg' %}" alt="Abha skyline" class="guide-main-image">
+                                        <img src="{% static 'images/Abha/abha_skyline.jpg' %}" alt="Abha skyline" class="guide-main-image">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -248,7 +248,7 @@
                             <div class="col-12 col-xl-6">
                                 <div class="landmark-feature-card h-100">
                                     <div class="landmark-feature-image-wrap">
-                                        <img src="{% static 'images/Abha/Al-balad.webp' %}" alt="Rijal Alma in Abha" class="landmark-feature-image">
+                                        <img src="{% static 'images/Abha/rijal-almaa-heritage-village.jpg' %}" alt="Rijal Alma in Abha" class="landmark-feature-image">
                                     </div>
                                     <div class="landmark-feature-content">
                                         <span class="landmark-tag">UNESCO Heritage</span>
@@ -266,7 +266,6 @@
                                                 <strong>Heritage & culture</strong>
                                             </div>
                                         </div>
-                                        <a href="#" class="btn btn-success mt-4 px-4">Explore Rijal Alma</a>
                                     </div>
                                 </div>
                             </div>
@@ -274,7 +273,7 @@
                             <div class="col-12 col-xl-6">
                                 <div class="landmark-feature-card h-100">
                                     <div class="landmark-feature-image-wrap">
-                                        <img src="{% static 'images/Abha/Abha_Green Mountain.jpg' %}" alt="Abha Green Mountain" class="landmark-feature-image">
+                                        <img src="{% static 'images/Abha/Green_Mountains.jpg' %}" alt="Abha Green Mountain" class="landmark-feature-image">
                                     </div>
                                     <div class="landmark-feature-content">
                                         <span class="landmark-tag">Coastal Escape</span>
@@ -292,7 +291,6 @@
                                                 <strong>Relaxing evenings</strong>
                                             </div>
                                         </div>
-                                        <a href="#" class="btn btn-success mt-4 px-4">Explore Green Mountain</a>
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +298,7 @@
                             <div class="col-md-6 col-xl-4">
                                 <div class="landmark-card h-100">
                                     <div class="landmark-card-img-wrap">
-                                        <img src="{% static 'images/Abha/redsea-new.jpg' %}" alt="Sarawat Mountains in Abha" class="landmark-card-img">
+                                        <img src="{% static 'images/Abha/Sarawat_Mountains.jpg' %}" alt="Sarawat Mountains in Abha" class="landmark-card-img">
                                         <span class="landmark-card-badge">Sarawat Mountains</span>
                                     </div>
                                     <div class="landmark-card-body">
@@ -316,15 +314,15 @@
                             <div class="col-md-6 col-xl-4">
                                 <div class="landmark-card h-100">
                                     <div class="landmark-card-img-wrap">
-                                        <img src="{% static 'images/Abha/Nassif_House.jpg' %}" alt="Nassif House" class="landmark-card-img">
-                                        <span class="landmark-card-badge">Historic House</span>
+                                        <img src="{% static 'images/Abha/shada-archaeological-palace.jpg' %}" alt="Shada Archaeological Palace in Abha" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Archaeological Palace</span>
                                     </div>
                                     <div class="landmark-card-body">
-                                        <h4 class="fw-bold mb-2">Nassif House</h4>
+                                        <h4 class="fw-bold mb-2">Shada Archaeological Palace</h4>
                                         <p class="text-muted mb-3">
-                                            One of Abha’s best-known heritage homes, giving visitors a deeper look at the city’s old quarter.
+                                            Built in the 1820s as a royal residence, this historic palace now serves as a museum displaying ancient artifacts, traditional Asiri architecture, and Jurassic-era relics from Abha's rich past.
                                         </p>
-                                        <div class="mini-info">Museum • Old Abha</div>
+                                        <div class="mini-info">Museum • Asir Heritage</div>
                                     </div>
                                 </div>
                             </div>
@@ -332,15 +330,15 @@
                             <div class="col-md-6 col-xl-4">
                                 <div class="landmark-card h-100">
                                     <div class="landmark-card-img-wrap">
-                                        <img src="{% static 'images/Abha/King-Fahd-Fountain-Saudi.jpg' %}" alt="Jabal Sawda Peak" class="landmark-card-img">
-                                        <span class="landmark-card-badge">Iconic Landmark</span>
+                                        <img src="{% static 'images/Abha/jacaranda.jpg' %}" alt="Jacaranda trees in full bloom lining Abha streets" class="landmark-card-img">
+                                        <span class="landmark-card-badge">Seasonal Spectacle</span>
                                     </div>
                                     <div class="landmark-card-body">
-                                        <h4 class="fw-bold mb-2">Jabal Sawda Peak</h4>
+                                        <h4 class="fw-bold mb-2">Jacaranda Season</h4>
                                         <p class="text-muted mb-3">
-                                            A famous Abha landmark that lights up the mountain ridge and adds to the city’s night skyline.
+                                            Every spring (April-May), Abha explodes in purple as jacaranda trees line streets and parks with vibrant blossoms, creating Abha's most photographed natural display.
                                         </p>
-                                        <div class="mini-info">Night views • City icon</div>
+                                        <div class="mini-info">April-May • Floral Festival</div>
                                     </div>
                                 </div>
                             </div>
@@ -361,21 +359,21 @@
                                 </p>
                             </div>
 
-                            {% if jeddah_experience_slides|length > 1 %}
+                            {% if abha_experience_slides|length > 1 %}
                             <div class="mt-3 mt-md-0">
-                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#jeddahExperiencesCarousel" data-bs-slide="prev">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#abhaExperiencesCarousel" data-bs-slide="prev">
                                     Prev
                                 </button>
-                                <button class="btn btn-success" type="button" data-bs-target="#jeddahExperiencesCarousel" data-bs-slide="next">
+                                <button class="btn btn-success" type="button" data-bs-target="#abhaExperiencesCarousel" data-bs-slide="next">
                                     Next
                                 </button>
                             </div>
                             {% endif %}
                         </div>
 
-                        <div id="jeddahExperiencesCarousel" class="carousel slide" data-bs-ride="false">
+                        <div id="abhaExperiencesCarousel" class="carousel slide" data-bs-ride="false">
                             <div class="carousel-inner">
-                                {% for slide in jeddah_experience_slides %}
+                                {% for slide in abha_experience_slides %}
                                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                     <div class="row g-4">
                                         {% for experience in slide %}
@@ -407,7 +405,7 @@
                                     <div class="text-center py-5">
                                         <h5 class="fw-bold mb-2">No Abha experiences available right now</h5>
                                         <p class="text-muted mb-0">
-                                            Please check back later for upcoming sea trips, heritage walks, and city experiences.
+                                            Please check back later for upcoming mountain hikes, heritage walks, and city experiences.
                                         </p>
                                     </div>
                                 </div>
@@ -416,8 +414,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
-            <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
+            </div>            <div class="tab-pane fade" id="events-pane" role="tabpanel" aria-labelledby="events-tab">
                 <section class="events-section py-4">
                     <div class="container">
                         <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
@@ -429,21 +426,21 @@
                                 </p>
                             </div>
 
-                            {% if jeddah_event_slides|length > 1 %}
+                            {% if abha_event_slides|length > 1 %}
                             <div class="mt-3 mt-md-0">
-                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#jeddahEventsCarousel" data-bs-slide="prev">
+                                <button class="btn btn-outline-success me-2" type="button" data-bs-target="#abhaEventsCarousel" data-bs-slide="prev">
                                     Prev
                                 </button>
-                                <button class="btn btn-success" type="button" data-bs-target="#jeddahEventsCarousel" data-bs-slide="next">
+                                <button class="btn btn-success" type="button" data-bs-target="#abhaEventsCarousel" data-bs-slide="next">
                                     Next
                                 </button>
                             </div>
                             {% endif %}
                         </div>
 
-                        <div id="jeddahEventsCarousel" class="carousel slide" data-bs-ride="false">
+                        <div id="abhaEventsCarousel" class="carousel slide" data-bs-ride="false">
                             <div class="carousel-inner">
-                                {% for slide in jeddah_event_slides %}
+                                {% for slide in abha_event_slides %}
                                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                     <div class="row g-4">
                                         {% for event in slide %}

@@ -48,10 +48,14 @@
                                 {{ item.location }}
                             </small>
 
-                            {% if item.slug %}
+                            {% if item.content_type == "experience" and item.slug %}
                             <a href="{% url 'main:experience_detail' item.slug %}" class="btn btn-success btn-sm px-3 rounded-pill explore-btn">
                                 Explore
                             </a>
+                            {% elif item.content_type == "event" %}
+                            <span class="btn btn-outline-success btn-sm px-3 rounded-pill disabled">
+                                Event
+                            </span>
                             {% endif %}
                         </div>
                     </div>

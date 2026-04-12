@@ -48,5 +48,15 @@
     "location": "Jeddah Waterfront",
     "image": "images/events/jeddah-season-highlight.webp",
     "description": "Enjoy city events, entertainment, and family-friendly experiences along the coast."
-  }
+  },
+  {
+  "id": 6,
+  "title": "Jacaranda Season",
+  "city": "Abha",
+  "category": "Nature Festival",
+  "date": "Mid Apr - Late May",
+  "location": "Abha",
+  "image": "images/events/event_jacaranda.webp",
+  "description": "A seasonal celebration of Abha’s jacaranda bloom, when streets and parks turn purple with spring flowers."
+}
 ]

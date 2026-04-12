@@ -1,0 +1,126 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+<section class="contact-section py-5 mt-5">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="section-badge">Contact Us</span>
+            <h1 class="fw-bold mt-3 mb-3">We’re here to help you plan your next trip</h1>
+            <p class="text-muted mx-auto contact-intro">
+                Have a question about destinations, packages, or travel experiences in Saudi Arabia?
+                Send us a message and our team will get back to you as soon as possible.
+            </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+                <div class="contact-info-card h-100">
+                    <h3 class="fw-bold mb-3">Get in touch</h3>
+                    <p class="text-muted mb-4">
+                        Whether you need travel guidance, booking help, or general support, we’d love to hear from you.
+                    </p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Office</small>
+                                <strong>Riyadh, Saudi Arabia</strong>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Email</small>
+                                <strong>info@torusimsa.com</strong>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Phone</small>
+                                <strong>+966 53 677 8009</strong>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Working hours</small>
+                                <strong>Sunday - Thursday, 9:00 AM - 6:00 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-side-box mt-4">
+                        <h6 class="fw-bold mb-2">Why contact us?</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">- Ask about destinations and experiences</li>
+                            <li class="mb-2">- Get help choosing the right package</li>
+                            <li class="mb-2">- Request support for bookings</li>
+                            <li class="mb-0">- Share feedback or partnership ideas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="contact-form-card h-100">
+                    <h3 class="fw-bold mb-3">Send a message</h3>
+                    <p class="text-muted mb-4">
+                        Fill out the form below and we will respond as soon as possible.
+                    </p>
+
+                    <form method="get">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label fw-semibold">Full Name</label>
+                                <input type="text" class="form-control contact-input" id="fullName" name="full_name" placeholder="Enter your full name">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="emailAddress" class="form-label fw-semibold">Email Address</label>
+                                <input type="email" class="form-control contact-input" id="emailAddress" name="email" placeholder="Enter your email">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="phoneNumber" class="form-label fw-semibold">Phone Number</label>
+                                <input type="text" class="form-control contact-input" id="phoneNumber" name="phone" placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="subject" class="form-label fw-semibold">Subject</label>
+                                <input type="text" class="form-control contact-input" id="subject" name="subject" placeholder="Enter message subject">
+                            </div>
+
+                            <div class="col-12">
+                                <label for="message" class="form-label fw-semibold">Message</label>
+                                <textarea class="form-control contact-input" id="message" name="message" rows="6" placeholder="Write your message here"></textarea>
+                            </div>
+
+                            <div class="col-12 pt-2">
+                                <button type="submit" class="btn btn-success px-4 py-2 rounded-pill">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
