@@ -44,31 +44,40 @@
         </div>
     </div>
 </section>
-        <section id="king7-physical" class="center-section">
-            <h2 class="pg-titl">الصفات الشكلية</h2>
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{% static 'images/king7/king7,2.webp' %}" class="d-block w-100" alt="الملك سلمان">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static 'images/king7/king7,3.png' %}" class="d-block w-100" alt="الملك سلمان">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">السابق</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">التالي</span>
-                </button>
+<section id="king-salman-physical" class="center-section">
+    <h2 class="pg-titl">الصفات الشكلية</h2>
+
+    <div class="physical-container">
+        <input type="checkbox" id="toggle-king-salman" class="toggle-checkbox">
+        
+        <label for="toggle-king-salman" class="king-card-wrapper">
+            
+            <div class="king-image-holder">
+                <img src="{% static 'images/king7/king7_3-removebg-preview.png' %}" alt="الملك سلمان بن عبدالعزيز" class="king-png">
+                <div class="gold-glow"></div>
             </div>
-        </section>
+
+            <p class="click-instruction">اضغط على الصورة لعرض الصفات الشكلية</p>
+
+            <div class="description-overlay">
+                <h3 class="gold-text">أبرز الصفات الشكلية والقيادية</h3>
+                
+                <div class="physical-details-list">
+                    <p><strong>الملامح والهيبة:</strong> يتميز بملامح وجه وقورة وحازمة، تمثل مزيجاً فريداً من الهيبة التاريخية واللين في موضعه.</p>
+                    
+                    <p><strong>الحضور والفراسة:</strong> يمتلك حضوراً ذهنياً لافتاً وفراسة نادرة، مع قوة شخصية تنعكس في نظراته الثاقبة.</p>
+                    
+                    <p><strong>سمات قيادية:</strong> عُرف بالحزم والعزم في اتخاذ القرار، مع عمق تاريخي وثقافي يظهر في حديثه وجلسته الملكية.</p>
+                    
+                    <p><strong>القائد الإنسان:</strong> يتسم بالتواضع الجم والقرب من المواطنين، حيث تعكس ملامحه روح "الأب القائد" الذي يجمع بين الوقار والمحبة.</p>
+                </div>
+
+                <span class="close-hint">انقر للإغلاق</span>
+            </div>
+            
+        </label>
+    </div>
+</section>
 
         <section id="achievements" class="center-section">
             <h2 class="pg-titl">أبرز إنجازات الملك سلمان</h2>

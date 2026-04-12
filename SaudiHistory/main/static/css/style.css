@@ -1658,3 +1658,130 @@ input[type="radio"] {
  transform: scale(0.97);
  box-shadow: 7px 5px 56px -10px var(--color-accent-gold);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   قسم الصفات الشكلية - النسخة المعتمدة (شغالة 100%)
+   ============================================================ */
+
+#king6-physical {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.king-physical-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+}
+
+/* إخفاء الـ Checkbox تماماً */
+.toggle-checkbox {
+    display: none;
+}
+
+.physical-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.king-card-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: flex; /* غيرتها لـ flex لضمان توسيط النص والصورة */
+    flex-direction: column;
+    align-items: center;
+}
+
+.king-png {
+    width: 300px;
+    transition: 0.5s ease;
+    z-index: 5;
+}
+
+.gold-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(226, 193, 101, 0.3), transparent);
+    z-index: -1;
+}
+
+/* --- تنسيق نص الإرشاد الجديد --- */
+.click-instruction {
+    color: #E2C165;
+    margin-top: 20px;
+    font-family: 'Amiri', serif;
+    font-size: 1.1rem;
+    animation: hintPulse 2s infinite ease-in-out;
+    transition: 0.3s ease;
+}
+
+@keyframes hintPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* تنسيق الكرت المخفي */
+.description-overlay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 380px;
+    background: rgba(20, 10, 30, 0.95);
+    border: 1px solid #E2C165;
+    padding: 25px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
+    text-align: center;
+}
+
+.description-overlay p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   أوامر العرض بـ CSS عند النقر (Checked)
+   ============================================================ */
+
+.toggle-checkbox:checked + .king-card-wrapper .description-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.toggle-checkbox:checked + .king-card-wrapper .king-png {
+    filter: blur(15px) brightness(0.3);
+    transform: scale(0.9);
+}
+
+/* إخفاء نص الإرشاد عند النقر */
+.toggle-checkbox:checked + .king-card-wrapper .click-instruction {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* حركة الـ Glow */
+.king-card-wrapper:hover .gold-glow {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.8;
+}
