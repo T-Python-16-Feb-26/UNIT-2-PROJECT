@@ -1,0 +1,263 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-hero">
+    <video autoplay muted loop playsinline class="page-hero-video">
+        <source src="{% static 'videos/City.mp4' %}" type="video/mp4">
+    </video>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content text-center">
+        <h1>
+            <i class="bi bi-patch-check-fill"></i>
+            زراعة حائل.. سلة غذاء المملكة وعروس الشمال
+        </h1>
+        <p>
+            <i class="bi bi-geo-alt-fill"></i>
+            من قلب النفود الكبير إلى سفوح أجا وسلمى.. حكاية كرم الأرض وعطاء المزارع
+        </p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6 animate__animated animate__fadeInRight">
+                <div class="page-video-box shadow-lg rounded-4 overflow-hidden border border-warning border-opacity-10">
+                    <iframe src="https://www.youtube.com/embed/0-80Lv2xytM" title="الزراعة في منطقة حائل"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        style="width:100%; height:400px; display:block;">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-md-6 animate__animated animate__fadeInLeft">
+                <h2 class="display-5 fw-bold mb-3">
+                    <i class="bi bi-info-circle text-success"></i>
+                    حائل.. وفرة مائية وتربة خصبة
+                </h2>
+
+                <div class="page-separator mb-4"></div>
+
+                <p class="lead fw-normal text-dark mb-4">
+                    تعتبر منطقة حائل واحدة من أهم الركائز الزراعية في المملكة؛ حيث تمتاز بتربة بركانية ورملية خصبة
+                    مكنتها من تصدر إنتاج <strong>نبتة السمح والبطاطس والبصل </strong>، بالإضافة إلى ريادتها في زراعة
+                    الحبوب والأعلاف بجودة عالمية.
+                </p>
+
+                <div class="p-3 bg-light border-start border-success border-4 rounded-3 shadow-sm">
+                    <p class="mb-0 italic">
+                        تجمع حائل بين الزراعة التقليدية في النخيل والفاكهة، وبين أضخم المشاريع الزراعية المحورية التي
+                        تدعم الأمن الغذائي السعودي بتقنيات ري ذكية ومستدامة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="bi bi-clock-history text-success"></i> محطات في مسيرة النماء
+        </h2>
+
+        <div class="page-timeline">
+            <div class="page-timeline-item left">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-calendar-event"></i>
+                </div>
+                <div class="page-timeline-content border-start border-success border-5">
+                    <h4 class="fw-bold text-success">حقبة "القمح" الذهبية</h4>
+                    <span class="badge bg-success mb-2">تاريخ زراعي</span>
+                    <p class="mb-0 text-muted">كانت حائل تاريخياً من أوائل المناطق التي حققت أرقاماً قياسية في إنتاج
+                        القمح، مما جعلها حجر زاوية في الأمن الغذائي الوطني.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item right">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="page-timeline-content border-start border-warning border-5">
+                    <h4 class="fw-bold text-warning">الزراعة المحورية</h4>
+                    <span class="badge bg-warning text-dark mb-2">تطور تقني</span>
+                    <p class="mb-0 text-muted">إدخال أنظمة الري المحوري في سهول حائل الواسعة، مما ضاعف إنتاج المحاصيل
+                        الخضرية والحبوب بشكل غير مسبوق.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item left">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-award"></i>
+                </div>
+                <div class="page-timeline-content border-start border-primary border-5">
+                    <h4 class="fw-bold text-primary">تمور "حلوة حائل"</h4>
+                    <span class="badge bg-primary mb-2">منتج هوية</span>
+                    <p class="mb-0 text-muted">اشتهرت المنطقة بـ "حلوة حائل"، وهي من أطيب أنواع التمور التي ارتبطت بكرم
+                        أهل المنطقة وضيافتهم الأصيلة.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item right">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="page-timeline-content border-start border-info border-5">
+                    <h4 class="fw-bold text-info">الاستدامة والتقنية</h4>
+                    <span class="badge bg-info text-dark mb-2">رؤية 2030</span>
+                    <p class="mb-0 text-muted">التوجه نحو البيوت المحمية المتقدمة لتقليل استهلاك المياه مع رفع كفاءة
+                        إنتاج الخضروات الورقية والفاكهة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold page-festivals-title">
+                <i class="bi bi-calendar-event text-danger"></i> مهرجانات الفرح والأصالة
+                <div class="page-separator-v2"></div>
+            </h2>
+            <p class="text-muted mt-3">فعاليات سنوية تحتفي بجودة محاصيل الشمال</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/hail_dates_fest.jpg' %}" class="card-img-top" alt="مهرجان التمور"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold text-warning">مهرجان تمور حائل</h5>
+                        <p class="card-text text-muted small flex-grow-1">يحتفي بتنوع التمور في المنطقة وعلى رأسها
+                            "الحلوة"، ويعد منصة اقتصادية كبرى للمزارعين.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-warning btn-sm rounded-pill mt-3">التفاصيل <i
+                                class="bi bi-arrow-left-short"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/citrus_hail.jpg' %}" class="card-img-top" alt="مهرجان الحمضيات"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold text-success">مهرجان الحمضيات</h5>
+                        <p class="card-text text-muted small flex-grow-1">يستعرض منتجات مزارع حائل من البرتقال واليوسفي
+                            والليمون التي تضاهي بجودتها المنتجات العالمية.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-success btn-sm rounded-pill mt-3">التفاصيل <i
+                                class="bi bi-arrow-left-short"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/fruit_hail.jpg' %}" class="card-img-top" alt="مهرجان الفاكهة"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold" style="color: #b71c1c;">مهرجان الفاكهة الموسمية</h5>
+                        <p class="card-text text-muted small flex-grow-1">يحتفي بإنتاج العنب والرمان والسمح، ويسلط الضوء
+                            على المحاصيل الفريدة التي تنبت في تربة حائل الخصبة.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-danger btn-sm rounded-pill mt-3"
+                            style="border-color: #b71c1c; color: #b71c1c;">
+                            التفاصيل <i class="bi bi-arrow-left-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hail-products py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="bi bi-basket-fill text-success"></i> سلة خيرات حائل
+        </h2>
+
+        <div id="hailCarousel" class="carousel slide custom-carousel shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#hailCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#hailCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#hailCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#hailCarousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner rounded-4 overflow-hidden">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/hail_potatoes.jpg' %}" class="d-block w-100" alt="البطاطس">
+                    <div class="carousel-caption d-none d-md-block border-warning">
+                        <i class="bi bi-egg-fill fs-2"></i>
+                        <h3>بطاطس حائل</h3>
+                        <p>تعتبر حائل المنتج الأول للبطاطس في المملكة بفضل جودة التربة والبيئة المناسبة.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/halwa_hail.jpg' %}" class="d-block w-100" alt="حلوة حائل">
+                    <div class="carousel-caption d-none d-md-block border-success">
+                        <i class="bi bi-tree-fill fs-2"></i>
+                        <h3>حلوة حائل</h3>
+                        <p>أشهر تمور الشمال، تمتاز بحجمها ولونها ومذاقها الفريد الذي لا يغيب عن مجالس الكرم.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/hail_onions.jpg' %}" class="d-block w-100" alt="بصل حائل">
+                    <div class="carousel-caption d-none d-md-block border-primary">
+                        <i class="bi bi-patch-check-fill fs-2"></i>
+                        <h3>البصل والحبوب</h3>
+                        <p>تغطي حائل نسبة كبيرة من احتياج المملكة للبصل والذرة والحبوب المختلفة بإنتاج عالي الجودة.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/samh_hail.jpg' %}" class="d-block w-100" alt="نبتة السمح">
+                    <div class="carousel-caption d-none d-md-block" style="border-color: #6a1b9a;">
+                        <i class="bi bi-stars fs-2"></i>
+                        <h3>نبتة السمح</h3>
+                        <p>نبتة برية نادرة تشتهر بها المنطقة، ويستخرج منها دقيق السمح الذي يستخدم في الأكلات الشعبية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#hailCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">السابق</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hailCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">التالي</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2 class="mb-5 text-warning">حائل الزراعية في أرقام</h2>
+        <div class="row text-center">
+            <div class="col-md-4 border-end border-secondary">
+                <h3 class="display-6 fw-bold">+5M</h3>
+                <p>نخلة في عموم المنطقة</p>
+            </div>
+            <div class="col-md-4 border-end border-secondary">
+                <h3 class="display-6 fw-bold">#1</h3>
+                <p>في إنتاج البطاطس محلياً</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="display-6 fw-bold">150k</h3>
+                <p>هكتار من الأراضي المستصلحة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
