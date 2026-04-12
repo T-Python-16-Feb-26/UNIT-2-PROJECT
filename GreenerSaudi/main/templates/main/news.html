@@ -1,12 +1,12 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %}News{% endblock %}
-{% block hero_image %}{% static 'img/news_bg.png' %}{% endblock %}
-{% block hero_title %}Latest Updates{% endblock %}
+{% block title %}Latest News{% endblock %}
+{% block hero_image %}{% static 'img/news-hero-bg.png' %}{% endblock %}
+{% block hero_title %}Latest News{% endblock %}
 {% block content %}
 <div class="accent-section">
     <div class="container section-shell">
-        <h5>Latest news on Saudi Arabia's green initiative from Google News search</h5>
+        <h5>Latest news on Saudi Arabia's green initiative from Google News</h5>
         <br><br>
         <div class="row g-4 row-cols-1 row-cols-lg-2">
             {% for item in news %}

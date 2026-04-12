@@ -13,15 +13,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"
-    />
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'fonts/fontawesome-all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/embed/animation/aos.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/embed/animation/animate.min.css' %}" />
     {% block extra_head %}{% endblock %}
     <title>{% block title %}Greener Saudi{% endblock %}</title>
   </head>
@@ -38,41 +32,40 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span> Menu </span><i class="fas fa-bars"></i>
+          <span> Menu </span><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.5 3.5a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11z"/></svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive" style="font-size: 13px;">
+        <div class="collapse navbar-collapse main-nav-collapse" id="navbarResponsive">
+          {% with current=request.resolver_match.url_name %}
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:home_view' %}">Home</a>
+              <a class="nav-link{% if current == 'home_view' %} active{% endif %}" href="{% url 'main:home_view' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:about_view' %}">About</a>
+              <a class="nav-link{% if current == 'about_view' %} active{% endif %}" href="{% url 'main:about_view' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:impact_view' %}">Impact</a>
+              <a class="nav-link{% if current == 'impact_view' %} active{% endif %}" href="{% url 'main:impact_view' %}">Impact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:progress_view' %}">Progress</a>
+              <a class="nav-link{% if current == 'progress_view' %} active{% endif %}" href="{% url 'main:progress_view' %}">Progress</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:goal_view' %}">Goal</a>
+              <a class="nav-link{% if current == 'goal_view' %} active{% endif %}" href="{% url 'main:goal_view' %}">Goal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:get_involved_view' %}">Get Involved</a>
+              <a class="nav-link{% if current == 'get_involved_view' %} active{% endif %}" href="{% url 'main:get_involved_view' %}">Get Involved</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:news_view' %}">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'main:contact_view' %}">Contact</a>
+              <a class="nav-link{% if current == 'news_view' %} active{% endif %}" href="{% url 'main:news_view' %}">Latest News</a>
             </li>
           </ul>
+          {% endwith %}
         </div>
       </div>
     </nav>
     <header
       class="masthead{% block hero_class %}{% endblock %}"
-      style="--masthead-image: url('{% block hero_image %}{% static 'img/pr-cover-image.jpg' %}{% endblock %}');">
+      style="--masthead-image: url('{% block hero_image %}{% static 'img/hero-home-goal-default.jpg' %}{% endblock %}');">
       {% block hero_media %}{% endblock %}
       <div
         class="container d-flex h-100 justify-content-center align-items-center px-4 px-lg-5"
@@ -98,10 +91,10 @@
             </div>
             <div class="col">
               <ul class="list-inline my-2">
-                <li class="list-inline-item me-4 list-inline-item">
+                <li class="list-inline-item me-4">
                   <a
                     class="bs-icon-circle bs-icon-primary text-bg-dark bs-icon"
-                    href="#"
+                    href="https://github.com/Mohammed-FQ"
                     ><svg
                       class="bi bi-github"
                       xmlns="http://www.w3.org/2000/svg"
@@ -115,10 +108,10 @@
                       ></path></svg
                   ></a>
                 </li>
-                <li class="list-inline-item me-4 list-inline-item">
+                <li class="list-inline-item me-4">
                   <a
                     class="bs-icon-circle bs-icon-primary text-bg-dark bs-icon"
-                    href="#"
+                    href="https://sa.linkedin.com/company/sgisaudi"
                     ><svg
                       class="bi bi-linkedin"
                       xmlns="http://www.w3.org/2000/svg"
@@ -132,10 +125,10 @@
                       ></path></svg
                   ></a>
                 </li>
-                <li class="list-inline-item me-4 list-inline-item">
+                <li class="list-inline-item me-4">
                   <a
                     class="bs-icon-circle bs-icon-primary text-bg-dark bs-icon"
-                    href="#"
+                    href="https://x.com/gi_saudi"
                     ><svg
                       class="bi bi-twitter-x"
                       xmlns="http://www.w3.org/2000/svg"
@@ -149,10 +142,10 @@
                       ></path></svg
                   ></a>
                 </li>
-                <li class="list-inline-item list-inline-item">
+                <li class="list-inline-item">
                   <a
                     class="bs-icon-circle bs-icon-primary text-bg-dark bs-icon"
-                    href="#"
+                    href="https://www.instagram.com/gi_saudi"
                     ><svg
                       class="bi bi-instagram"
                       xmlns="http://www.w3.org/2000/svg"

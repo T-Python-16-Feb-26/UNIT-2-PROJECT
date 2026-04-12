@@ -12,6 +12,5 @@ urlpatterns = [
     path('goal/', views.goal_view, name='goal_view'),
     path('get-involved/', views.get_involved_view, name='get_involved_view'),
     path('news/', views.news_view, name='news_view'),
-    path('contact/', views.contact_view, name='contact_view'),
 ]
 
