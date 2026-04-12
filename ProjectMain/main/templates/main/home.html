@@ -27,7 +27,7 @@
 {# ── 1. Hero ── #}
 <section class="hero-section">
   <div class="hero-video-wrap">
-    <video autoplay muted loop playsinline class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video" poster="{% static 'background/minimal-natural-green-leaves-background-design.png' %}">
       <source src="https://www.ncw.gov.sa/assets/media/videos/ncw-media.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -86,9 +86,19 @@
         </a>
       </div>
       <div class="col-md-6">
+        {% if animal_class.preview_images %}
+        <div class="spotlight-collage rounded-4">
+          {% for img in animal_class.preview_images %}
+          <img src="{{ img }}" alt="{{ animal_class.name }}"
+               class="collage-img"
+               style="animation-delay: calc({{ forloop.counter0 }} * 3s)">
+          {% endfor %}
+        </div>
+        {% else %}
         <div class="spotlight-img-placeholder rounded-4 d-flex align-items-center justify-content-center">
           <span style="font-size: 5rem;">{{ animal_class.icon }}</span>
         </div>
+        {% endif %}
       </div>
     </div>
   </div>

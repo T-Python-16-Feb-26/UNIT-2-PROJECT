@@ -220,6 +220,32 @@ main { position: relative; z-index: 1; }
   color: white;
 }
 
+/* ── Spotlight Collage (auto-cycling 3-image crossfade) ── */
+.spotlight-collage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--surface-alt);
+}
+
+.spotlight-collage .collage-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: collage-fade 9s linear infinite;
+}
+
+@keyframes collage-fade {
+  0%      { opacity: 0; }
+  5.56%   { opacity: 1; }
+  27.78%  { opacity: 1; }
+  33.33%  { opacity: 0; }
+  100%    { opacity: 0; }
+}
+
 .section-heading {
   color: var(--text);
   font-weight: 700;

@@ -59,6 +59,25 @@ def set_preference(request, key, value):
     response.set_cookie(key, value, max_age=60 * 60 * 24 * 365, samesite='Lax')
     return response
 
+# ============= featured non dynamic views =============
+def caracal_view(request):
+    species = {
+       "slug": "caracal",
+        "name": "Caracal",
+        "scientific_name": "Caracal caracal",
+        "class": "mammals",
+        "short_description": (
+            "A medium-sized wild cat famed for its distinctive tufted ears and "
+            "extraordinary leaping ability when hunting birds mid-flight."
+        ),
+        "habits_lifestyle": "Caracals are solitary animals except during mating and the rearing of young, with both sexes being territorial. They are typically nocturnal and highly secretive, making them difficult to observe in the wild. Their most remarkable hunting feat is their ability to leap up to 3 metres into the air to snatch birds in flight, sometimes catching as many as 12 in a single bound. Fast and powerful, they can tackle prey up to three times their own size. Their ears are controlled by around 20 muscles, giving them exceptional directional hearing for locating prey, and the distinctive tufts on their ear tips are thought to aid in this further.",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Caracal",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Caracal_on_the_road%2C_early_morning_in_Kgalagadi_%2836173878220%29_%28cropped%29.jpg/500px-Caracal_on_the_road%2C_early_morning_in_Kgalagadi_%2836173878220%29_%28cropped%29.jpg",
+        "provinces": ["asir", "makkah", "riyadh"],
+    }
+    return render(request, "main/species_detail.html", {"species": species})
+
+
 
 def custom_404_view(request, exception):
     return render(request, 'main/404.html', status=404)
