@@ -3,45 +3,44 @@
 
 {% block content %}
 <main>
-    <section id="king4"> 
-        <section id="info" class="center-section">
-            <div class="container d-flex justify-content-center my-5">
-                <div class="card mb-3 king-card">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/king4/king4,1.jpg' %}" 
-                                 class="img-fluid rounded-start king-img" 
-                                 alt="جلالة الملك خالد">
-                        </div>
-                        <div class="col-md-8">
-                            <h2 class="pg-titl">السيرة الرسمية</h2>
-                            <div class="card-body text-end">
-                                <h5 class="card-title">الاسم الكامل:</h5>
-                                <p class="card-text">
-                                    خالد بن عبد العزيز بن عبد الرحمن آل سعود
-                                </p>
-                                <h5 class="card-title">تاريخ الميلاد:</h5>
-                                <p class="card-text">
-                                    ٦ ربيع الأول ١٣٣١ هـ / ١٣ فبراير ١٩١٣ م.
-                                </p>
-                                <h5 class="card-title">مكان الميلاد:</h5>
-                                <p class="card-text">
-                                    مدينة الرياض
-                                </p>
-                                <h5 class="card-title">النشأة:</h5>
-                                <p class="card-text">
-                                    نشأ في كنف والده الملك عبدالعزيز، وتلقى تعليمه على يد كبار العلماء. شارك في مهام سياسية وعسكرية عديدة، وعُرف بالتواضع والقرب من الشعب، بويع ملكاً في عام ١٣٩٥ هـ.
-                                </p>
-                                <p class="card-text">
-                                    <small class="date-label">تولي الحكم: ١٣٩٥ هـ</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+   <section id="king-khalid" class="king-hero-template">
+    
+    <div class="king-visual-container">
+        <img src="{% static 'images/king4/king4,1,1.jpg' %}" class="king-main-img" alt="جلالة الملك خالد">
+        <div class="king-gradient-overlay"></div>
+    </div>
+
+    <div class="king-content-area">
+        <div class="king-text-wrapper">
+            <span class="king-subtitle gold-text">السيرة الرسمية</span>
+            <h1 class="king-name-title">الملك خالد بن عبدالعزيز</h1>
+            
+            <div class="king-details-grid">
+                <div class="detail-box">
+                    <span class="detail-label">الاسم الكامل</span>
+                    <p class="detail-value">خالد بن عبد العزيز بن عبد الرحمن آل سعود</p>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-label">تاريخ الميلاد ومكانه</span>
+                    <p class="detail-value">٦ ربيع الأول ١٣٣١ هـ - مدينة الرياض</p>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-label">النشأة</span>
+                    <p class="detail-value">
+                        نشأ في كنف والده الملك عبدالعزيز، وتلقى تعليمه على يد كبار العلماء. شارك في مهام سياسية وعسكرية عديدة، وعُرف بالتواضع والقرب من الشعب، بويع ملكاً في عام ١٣٩٥ هـ.
+                    </p>
                 </div>
             </div>
-        </section>
 
+            <div class="king-badge">
+                <i class="fas fa-crown"></i>
+                تولي الحكم: ١٣٩٥ هـ
+            </div>
+        </div>
+    </div>
+</section>
         <section id="king4-physical" class="center-section">
             <h2 class="pg-titl">الصفات الشكلية</h2>
             <div id="carouselExampleIndicators" class="carousel slide">

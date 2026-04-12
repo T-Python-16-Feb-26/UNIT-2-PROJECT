@@ -4,57 +4,47 @@
 
 {% block content %}
 <main>
-    <section id="king1" >
-
-        <section id="info" class="center-section">
-            <div class="container d-flex justify-content-center my-5">
-    <div class="card mb-3 king-card">
-        <div class="row g-0 align-items-center">
-
-            
-
-            <div class="col-md-4">
-                <img src="{% static 'images/king1/king1,1.jpg' %}" 
-                     class="img-fluid rounded-start king-img" 
-                     alt="جلالة الملك">
-            </div>
-            
-
-            <div class="col-md-8">
-                <h2 class="pg-titl">السيرة الرسمية</h2>
-                <div class="card-body text-end">
-                    <h5 class="card-title ">الاسم الكامل:</h5>
-                    <p class="card-text ">
-                       عبد العزيز بن عبد الرحمن بن فيصل آل سعود
-                    </p>
-                    <h5 class="card-title"> تاريخ الميلاد:</h5>
-                    <p class="card-text">
-                     19 ذو الحجة 1292هـ / 15 يناير 1876م.
-
-                    </p>
-
-                    <h5 class="card-title"> مكان الميلاد:</h5>
-                    <p class="card-text">
-                       الرياض - نجد
-                    </p>
-
-                    <h5 class="card-title"> النشأة:</h5>
-                    <p class="card-text">
-                       تلقى تعليمه الأول في الرياض، وعُرف عنه منذ صغره الذكاء المتقد والشجاعة، 
-            انتقل مع أسرته إلى الكويت في سن العاشرة، وهناك صقل مهاراته السياسية والعسكرية.
+    <section id="king-abdulaziz" class="king-hero-template">
     
-                    </p>
-                    <p class="card-text">
-                        <small class="text-body-secondary date-label">تاريخ التأسيس: ١٣٥١ هـ</small>
+    <div class="king-visual-container">
+        <img src="{% static 'images/king1/king1,1.jpg' %}" class="king-main-img" alt="الملك">
+        <div class="king-gradient-overlay"></div>
+    </div>
+
+    <div class="king-content-area">
+        <div class="king-text-wrapper">
+            <span class="king-subtitle gold-text">السيرة الرسمية</span>
+            <h1 class="king-name-title">الملك عبدالعزيز بن عبدالرحمن</h1>
+            
+            <div class="king-details-grid">
+                <div class="detail-box">
+                    <span class="detail-label">الاسم الكامل</span>
+                    <p class="detail-value">عبد العزيز بن عبد الرحمن بن فيصل آل سعود</p>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-label">تاريخ الميلاد ومكانه</span>
+                    <p class="detail-value">١٩ ذو الحجة ١٢٩٢هـ - الرياض</p>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-label">النشأة والكفاح</span>
+                    <p class="detail-value">
+                        تلقى تعليمه في الرياض وصقل مهاراته في الكويت، ليقود بعدها مسيرة توحيد 
+                        وبناء المملكة العربية السعودية بذكاء وشجاعة.
                     </p>
                 </div>
             </div>
 
+            <div class="king-badge">
+                <i class="fas fa-crown"></i>
+                تاريخ التأسيس: ١٣٥١ هـ
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-        </section>
+        
 
 
         <section id="king1-physical" class="center-section">

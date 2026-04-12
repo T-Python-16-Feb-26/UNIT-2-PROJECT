@@ -3,44 +3,44 @@
 
 {% block content %}
 <main>
-    <section id="king3"> 
-        <section id="info" class="center-section">
-            <div class="container d-flex justify-content-center my-5">
-                <div class="card mb-3 king-card">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-md-4">
-                            <img src="{% static 'images/king3/king3,1.jpg' %}" 
-                                 class="img-fluid rounded-start king-img" 
-                                 alt="جلالة الملك فيصل">
-                        </div>
-                        <div class="col-md-8">
-                            <h2 class="pg-titl">السيرة الرسمية</h2>
-                            <div class="card-body text-end">
-                                <h5 class="card-title">الاسم الكامل:</h5>
-                                <p class="card-text">
-                                    فيصل بن عبد العزيز بن عبد الرحمن آل سعود
-                                </p>
-                                <h5 class="card-title">تاريخ الميلاد:</h5>
-                                <p class="card-text">
-                                    ١٤ صفر ١٣٢٤ هـ / ١٤ أبريل ١٩٠٦ م.
-                                </p>
-                                <h5 class="card-title">مكان الميلاد:</h5>
-                                <p class="card-text">
-                                    مدينة الرياض (قصر الديرة)
-                                </p>
-                                <h5 class="card-title">النشأة:</h5>
-                                <p class="card-text">
-                                    نشأ في بيت جده لأمه الشيخ عبدالله بن عبداللطيف آل الشيخ، حيث تعلم القرآن والفروسية. عُرف بحنكته السياسية المبكرة وقيادته للوفود الدولية، بويع ملكاً في عام ١٣٨٤ هـ.
-                                </p>
-                                <p class="card-text">
-                                    <small class="date-label">تولي الحكم: ١٣٨٤ هـ</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <section id="king-faisal" class="king-hero-template">
+    
+    <div class="king-visual-container">
+        <img src="{% static 'images/king3/king3,1.jpg' %}" class="king-main-img" alt="جلالة الملك فيصل">
+        <div class="king-gradient-overlay"></div>
+    </div>
+
+    <div class="king-content-area">
+        <div class="king-text-wrapper">
+            <span class="king-subtitle gold-text">السيرة الرسمية</span>
+            <h1 class="king-name-title">الملك فيصل بن عبدالعزيز</h1>
+            
+            <div class="king-details-grid">
+                <div class="detail-box">
+                    <span class="detail-label">الاسم الكامل</span>
+                    <p class="detail-value">فيصل بن عبد العزيز بن عبد الرحمن آل سعود</p>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-label">تاريخ الميلاد ومكانه</span>
+                    <p class="detail-value">١٤ صفر ١٣٢٤ هـ - مدينة الرياض</p>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-label">النشأة</span>
+                    <p class="detail-value">
+                        نشأ في بيت جده لأمه، حيث تعلم القرآن والفروسية. عُرف بحنكته السياسية المبكرة وقيادته للوفود الدولية، بويع ملكاً في عام ١٣٨٤ هـ.
+                    </p>
                 </div>
             </div>
-        </section>
+
+            <div class="king-badge">
+                <i class="fas fa-crown"></i>
+                تولي الحكم: ١٣٨٤ هـ
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="king3-physical" class="center-section">
             <h2 class="pg-titl">الصفات الشكلية</h2>

@@ -12,9 +12,14 @@
             <div class="home-txt"> <h2 class="top-title"> تاريخ المملكة العربية السعودية </h2>
                 <p class="description">
                     هنا نسرد تفاصيل المجد ونقتفي أثر القادة 
-                    بين طيات هذه الصفحات قصة وطنٍ توحد وتاريخٍ نُقش <span class="gold-text">بذهب</span>.
+                    بين طيات هذه الصفحات قصة وطنٍ توحد وتاريخٍ نُقش <span class="gold-text">بذهب</span>
+        
                 </p>
+                 <button class="btn-home"><i class="animation"></i><a href="{% url 'main:home_view' %}#overview">ابدا رحلتك</a><i class="animation"></i></button>
+
+
             </div>
+            
 
             <img src="{% static 'images/moon2.png' %}" alt="moon" id="moon2">
             <img src="{% static 'images/mountains3.png' %}" alt="mountains" id="mountains3">
@@ -23,7 +28,9 @@
             <img src="{% static 'images/horse6.png' %}" alt="horse" id="horse6">
             <img src="{% static 'images/falcon7.webp' %}" alt="falcon" id="falcon7">
             <img src="{% static 'images/mountains9.png' %}" alt="mountains" id="mountains9">
+                
         </section>
+
     </section>
     <section id="overview" class="history-section">
         <div class="container">
@@ -80,7 +87,7 @@
                         <p class="card-text">
                             فجر الوحدة الذي انبثق من الدرعية عام ١١٣٩ هـ، حين وضع الإمام محمد بن سعود حجر الأساس لدولةٍ قامت على العدل والوحدة.
                         </p>
-                        <a href="{% url 'main:state1_view' %}" class="btn btn-gold mt-auto">اعرف أكثر</a>
+                        <button><a href="{% url 'main:state1_view' %}">قصة التأسيس</a></button>
                     </div>
                 </div>
             </div>
@@ -93,7 +100,7 @@
                         <p class="card-text">
                             حقبة الصمود والوفاء، حين أعاد الإمام تركي بن عبدالله بناء الكيان السعودي عام ١٢٤٠ هـ، مستعيداً الأمجاد في قلب الجزيرة العربية.
                         </p>
-                        <a href="{% url 'main:state2_view' %}" class="btn btn-gold mt-auto">قصة الصمود</a>
+                        <button><a href="{% url 'main:state2_view' %}">قصة الصمود</a></button>
                     </div>
                 </div>
             </div>
@@ -106,7 +113,8 @@
                         <p class="card-text">
                             عهد التوحيد والرخاء، ملحمة الملك عبدالعزيز -طيب الله ثراه- التي جمعت الشتات عام ١٣٥١ هـ، لتبدأ مسيرة النهضة الشاملة.
                         </p>
-                        <a href="{% url 'main:state3_view' %}" class="btn btn-gold mt-auto">عصر الوحدة</a>
+                        <button><a href="{% url 'main:state3_view' %}">عصر الوحدة</a></button>
+                        
                     </div>
                 </div>
             </div>
@@ -123,7 +131,7 @@
                 <h1> الملك عبدالعزيز آل سعود</h1>
                 <h5>مؤسس المملكة العربية السعودية</h5>
                 <small>١٩٠٢ م - ١٩٥٣ م</small>
-                <p> هو عبد العزيز بن عبد الرحمن؛ قائدٌ سار بقلبٍ يملأه اليقين، وهيبةٍ تطوعُ المستحيل. قاد ثُلّةً من الفرسان ليستردَّ ملك آبائه، ساعياً في توحيد هذه البلاد وجمع شتات قلوبها، ليصنعَ من رمال الصحراء وطناً يطاولُ الثريا.</p>
+                <p> هو عبد العزيز بن عبد الرحمن قائدٌ سار بقلبٍ يملأه اليقين وهيبةٍ تطوعُ المستحيل. قاد ثُلّةً من الفرسان ليستردَّ ملك آبائه ساعياً في توحيد هذه البلاد وجمع شتات قلوبها، ليصنعَ من رمال الصحراء وطناً يطاولُ الثريا.</p>
                 <button><a href="{% url 'main:king1_view' %}"> أبحر في فصول المجد </a></button>
             </div>
         </div>
@@ -135,7 +143,7 @@
                 <h5>ملكُ النهضةِ الأولى ومؤسسُ المؤسسات</h5>
                 <small>١٩٥٣ م - ١٩٦٤ م</small>
                 <p> هو الملك سعود بن عبدالعزيز؛ صاحبُ اليدِ السخيّة والقلبِ الذي اتسعَ للجميع. شهد عهدُه أولى خطواتِ الدولةِ نحو الحداثة، فأسسَ الوزاراتِ والجامعاتِ ووسّعَ مآذنَ الحرمين الشريفين، ليرسّخَ دعائمَ البناءِ في وطنٍ بدأَ يخطُّ مسارَه نحو القمة.</p>
-                <button><a href="{% url 'main:king2_view' %}"> ابحر اكثر</a></button>
+                <button><a href="{% url 'main:king2_view' %}"> أبحر في فصول المجد </a></button>
             </div>
         </div>
 
