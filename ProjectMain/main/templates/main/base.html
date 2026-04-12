@@ -26,6 +26,24 @@
           <li class="nav-item"><a class="nav-link" href="{% url 'main:class' 'reptiles' %}">Reptiles</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'main:class' 'marine' %}">Marine</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'main:class' 'insects' %}">Insects</a></li>
+            <li class="nav-item dropdown">
+
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+      Browse featured animals
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="{% url 'main:featured_caracal' %}">🐱 Caracal</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_arabian_oryx' %}">🦌 Arabian Oryx</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_sand_cat' %}">🐈 Sand Cat</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_arabian_leopard' %}">🐆 Arabian Leopard</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_nubian_ibex' %}">🐐 Nubian Ibex</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_golden_eagle' %}">🦅 Golden Eagle</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_saker_falcon' %}">🦆 Saker Falcon</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_spinner_dolphin' %}">🐬 Spinner Dolphin</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_hamadryas_baboon' %}">🐒 Hamadryas Baboon</a></li>
+      <li><a class="dropdown-item" href="{% url 'main:featured_arabian_sand_boa' %}">🐍 Arabian Sand Boa</a></li>
+    </ul>  
+  </li>
         </ul>
         {% endblock %}
         <div class="d-flex align-items-center gap-2 ms-2">

@@ -75,8 +75,165 @@ def caracal_view(request):
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Caracal_on_the_road%2C_early_morning_in_Kgalagadi_%2836173878220%29_%28cropped%29.jpg/500px-Caracal_on_the_road%2C_early_morning_in_Kgalagadi_%2836173878220%29_%28cropped%29.jpg",
         "provinces": ["asir", "makkah", "riyadh"],
     }
-    return render(request, "main/species_detail.html", {"species": species})
+    return render(request, "main/caracal.html", {"species": species})
 
+
+
+def arabian_oryx_view(request):
+    species = {
+        "slug": "arabian-oryx",
+        "name": "Arabian Oryx",
+        "scientific_name": "Oryx leucoryx",
+        "class": "mammals",
+        "short_description": (
+            "A majestic white antelope and the national animal of Saudi Arabia, once extinct in the wild "
+            "and brought back through one of conservation's greatest success stories. "
+            "Its almost luminous white coat reflects the sun's rays, a vital adaptation to desert life."
+        ),
+        "habits_lifestyle": (
+            "Arabian oryx are gregarious animals and typically form herds of 5 to 30. They are active mostly "
+            "in the early morning and late evening, resting in groups in the shade during the searing midday heat. "
+            "Oryx dig depressions in the ground with their front hooves to lie in cooler sand, providing protection "
+            "against fierce desert winds. These animals seem able to detect rainfall a great distance away and live "
+            "an almost nomadic life, traveling vast areas in search of new growth after intermittent rains. "
+            "Their remarkable desert adaptations include reducing urine volume and resting metabolic rate by at least 50%."
+        ),
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Arabian_oryx",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Arabian_oryx_%28oryx_leucoryx%29.jpg/500px-Arabian_oryx_%28oryx_leucoryx%29.jpg",
+        "provinces": ["riyadh", "eastern", "najran"],
+    }
+    return render(request, "main/arabian_oryx.html", {"species": species})
+
+
+def sand_cat_view(request):
+    species = {
+        "slug": "sand-cat",
+        "name": "Sand Cat",
+        "scientific_name": "Felis margarita",
+        "class": "mammals",
+        "short_description": (
+            "The only wild cat living primarily in true desert, perfectly adapted "
+            "to extreme heat, cold nights, and scarce water. With thickly furred paws "
+            "and enormous ears, the sand cat is built for survival in some of Earth's harshest landscapes."
+        ),
+        "habits_lifestyle": (
+            "The sand cat is solitary except during mating and kitten-rearing, resting in underground dens "
+            "during the day and hunting at night, traveling an average of 5.4 km nightly. It hunts small rodents, "
+            "birds, and even venomous snakes with a sprint capability of 30–40 km/hour. Their large ears allow them "
+            "to detect the faint vibrations of prey moving underground. Thickly furred paws protect them from "
+            "scorching sand surfaces and enable near-silent movement while hunting. Females bear 2–3 kittens "
+            "after a 59–66 day gestation, with young growing to near full size within just five months."
+        ),
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Sand_cat",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Persian_sand_CAT.jpg/500px-Persian_sand_CAT.jpg",
+        "provinces": ["riyadh", "eastern", "northern borders"],
+    }
+    return render(request, "main/sand_cat.html", {"species": species})
+
+
+def arabian_leopard_view(request):
+    species = {
+        "slug": "arabian-leopard",
+        "name": "Arabian Leopard",
+        "scientific_name": "Panthera pardus nimr",
+        "class": "mammals",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Arabian_leopard",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/arabian_leopard.html", {"species": species})
+
+
+def nubian_ibex_view(request):
+    species = {
+        "slug": "nubian-ibex",
+        "name": "Nubian Ibex",
+        "scientific_name": "Capra nubiana",
+        "class": "mammals",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Nubian_ibex",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/nubian_ibex.html", {"species": species})
+
+
+def golden_eagle_view(request):
+    species = {
+        "slug": "golden-eagle",
+        "name": "Golden Eagle",
+        "scientific_name": "Aquila chrysaetos",
+        "class": "birds",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Golden_eagle",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/golden_eagle.html", {"species": species})
+
+
+def saker_falcon_view(request):
+    species = {
+        "slug": "saker-falcon",
+        "name": "Saker Falcon",
+        "scientific_name": "Falco cherrug",
+        "class": "birds",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Saker_falcon",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/saker_falcon.html", {"species": species})
+
+
+def spinner_dolphin_view(request):
+    species = {
+        "slug": "spinner-dolphin",
+        "name": "Spinner Dolphin",
+        "scientific_name": "Stenella longirostris",
+        "class": "marine",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Spinner_dolphin",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/spinner_dolphin.html", {"species": species})
+
+
+def hamadryas_baboon_view(request):
+    species = {
+        "slug": "hamadryas-baboon",
+        "name": "Hamadryas Baboon",
+        "scientific_name": "Papio hamadryas",
+        "class": "mammals",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Hamadryas_baboon",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/hamadryas_baboon.html", {"species": species})
+
+
+def arabian_sand_boa_view(request):
+    species = {
+        "slug": "arabian-sand-boa",
+        "name": "Arabian Sand Boa",
+        "scientific_name": "Eryx jayakari",
+        "class": "reptiles",
+        "short_description": "",
+        "habits_lifestyle": "",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Jayakar%27s_sand_boa",
+        "image": "",
+        "provinces": [],
+    }
+    return render(request, "main/arabian_sand_boa.html", {"species": species})
 
 
 def custom_404_view(request, exception):

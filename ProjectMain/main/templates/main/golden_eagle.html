@@ -1,0 +1,79 @@
+{% extends "main/base.html" %}
+{% block title %}{{ species.name }} — Saudi Wildlife{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <a href="{% url 'main:class' species.class %}" class="btn btn-sm btn-outline-secondary mb-4">
+    ← Back to {{ species.class|title }}
+  </a>
+
+  <div class="row g-5 align-items-start">
+
+    {# Image column #}
+    <div class="col-md-4">
+      {% if species.image %}
+        <img src="{{ species.image }}" alt="{{ species.name }}"
+             class="img-fluid rounded-4 w-100">
+      {% else %}
+        <div class="species-detail-img-placeholder rounded-4"></div>
+      {% endif %}
+    </div>
+
+    {# Info column #}
+    <div class="col-md-8">
+      <span class="badge bg-gold mb-2">⭐ Featured Species</span>
+      <h1 class="mb-0">{{ species.name }}</h1>
+      <p class="fst-italic mb-4" style="color: var(--text-muted);">{{ species.scientific_name }}</p>
+      <p class="mb-4">{{ species.short_description }}</p>
+
+      {# Province tags #}
+      {% if species.provinces %}
+      <div class="mb-4">
+        <span class="small me-2" style="color: var(--text-muted);">Found in:</span>
+        {% for province in species.provinces %}
+          <span class="badge me-1" style="background-color: var(--surface-alt); color: var(--text);">
+            {{ province|title }}
+          </span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <a href="{{ species.wikipedia_url }}" target="_blank" rel="noopener"
+         class="btn btn-outline-gold">
+        View on Wikipedia ↗
+      </a>
+    </div>
+  </div>
+
+  {% if species.habits_lifestyle %}
+  <div class="row mt-5">
+    <div class="col-12">
+      <h4 class="mb-3">Habits &amp; Lifestyle</h4>
+      <p>{{ species.habits_lifestyle }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  {# Section 1: image on top, paragraph below #}
+  <div class="row mt-5">
+    <div class="col-12">
+      <img src="" alt="{{ species.name }}"
+           class="img-fluid rounded-4 w-100 mb-4">
+      <p></p>
+    </div>
+  </div>
+
+  {# Section 2: image and paragraph side by side #}
+  <div class="row mt-5 g-4 align-items-center">
+    <div class="col-md-6">
+      <img src="" alt="{{ species.name }}"
+           class="img-fluid rounded-4 w-100">
+    </div>
+    <div class="col-md-6">
+      <p></p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
