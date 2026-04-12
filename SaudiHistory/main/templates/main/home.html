@@ -3,226 +3,197 @@
 
 
 {% block content %}
+
 <main>
-    <!-- start home-->
-<section id="home">
-     <section id="home-images">
-    <img src="{% static 'images/stars1.png' %}" alt="Stars" id="Stars">
+    <section id="home">
+        <section id="home-images">
+            <img src="{% static 'images/stars1.png' %}" alt="Stars" id="Stars">
 
-    <div class="home-txt">
-        <h2 class="top-title"> تاريخ المملكة العربية السعودية </h2>
-        <p class="description">
-            هنا نسرد تفاصيل المجد ونقتفي أثر القادة 
-          بين طيات هذه الصفحات قصة وطنٍ توحد وتاريخٍ نُقش <span class="gold-text">بذهب</span>.
-        </p>
-    </div>
-
-    <img src="{% static 'images\moon2.png' %}" alt="moon" id="moon2">
-    <img src="{% static 'images\mountains3.png' %}" alt="mountains" id="mountains3">
-    <img src="{% static 'images\mountains4.png' %}" alt="mountains" id="mountains4">
-    <img src="{% static 'images\land5.png' %}" alt="land" id="land5">
-    <img src="{% static 'images\horse6.png' %}" alt="horse" id="horse6">
-    <img src="{% static 'images\falcon7.webp' %}" alt="falcon" id="falcon7">
-    <img src="{% static 'images\mountains9.png' %}" alt="mountains" id="mountains9">
-   
-    </section>
-
-</section>
-   
-    <!-- end home-->
-
-
-
-<!--start overview-->
-<section id="overview" class="history-section">
-    <div class="container">
-        <h2 class="pg-titl">بداية الرحلة..</h2>
-        
-        <div class="overview-content text-center">
-            <div class="intro-book-wrap">
-                <p class="description intro-text">
-                    بين دفتي هذا الموقع، نفتح لك فصلاً من فصول المجد؛ قصة وطنٍ لم يرضَ بغير النجوم مستقراً. 
-                    <br>
-                    سنبحر معك من <strong>قلب الدرعية</strong>، حيث وُضع حجر الأساس، مروراً بملحمة الصمود، ووصولاً إلى فجر التوحيد الذي جمع الشتات وصنع المعجزات.
+            <div class="home-txt"> <h2 class="top-title"> تاريخ المملكة العربية السعودية </h2>
+                <p class="description">
+                    هنا نسرد تفاصيل المجد ونقتفي أثر القادة 
+                    بين طيات هذه الصفحات قصة وطنٍ توحد وتاريخٍ نُقش <span class="gold-text">بذهب</span>.
                 </p>
-                
-                <div class="reader-guide mt-5">
-                    <h4 class="gold-text mb-4">ماذا ستكتشف في رحلتك؟</h4>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="feature-item">
-                                <i class="bi bi-book"></i>
-                                <h5>ثلاث دول</h5>
-                                <p class="small">تسلسل تاريخي يربط الماضي بالحاضر.</p>
+            </div>
+
+            <img src="{% static 'images/moon2.png' %}" alt="moon" id="moon2">
+            <img src="{% static 'images/mountains3.png' %}" alt="mountains" id="mountains3">
+            <img src="{% static 'images/mountains4.png' %}" alt="mountains" id="mountains4">
+            <img src="{% static 'images/land5.png' %}" alt="land" id="land5">
+            <img src="{% static 'images/horse6.png' %}" alt="horse" id="horse6">
+            <img src="{% static 'images/falcon7.webp' %}" alt="falcon" id="falcon7">
+            <img src="{% static 'images/mountains9.png' %}" alt="mountains" id="mountains9">
+        </section>
+    </section>
+    <section id="overview" class="history-section">
+        <div class="container">
+            <h2 class="pg-titl reveal">بداية الرحلة..</h2>
+            
+            <div class="overview-content text-center reveal"> <div class="intro-book-wrap">
+                    <p class="description intro-text">
+                        بين دفتي هذا الموقع، نفتح لك فصلاً من فصول المجد؛ قصة وطنٍ لم يرضَ بغير النجوم مستقراً. 
+                        <br>
+                        سنبحر معك من <strong>قلب الدرعية</strong>، حيث وُضع حجر الأساس، مروراً بملحمة الصمود، ووصولاً إلى فجر التوحيد الذي جمع الشتات وصنع المعجزات.
+                    </p>
+                    
+                    <div class="reader-guide mt-5">
+                        <h4 class="gold-text mb-4 reveal">ماذا ستكتشف في رحلتك؟</h4>
+                        <div class="row g-4">
+                            <div class="col-md-4 reveal">
+                                <div class="feature-item">
+                                    <i class="bi bi-book"></i>
+                                    <h5>ثلاث دول</h5>
+                                    <p class="small">تسلسل تاريخي يربط الماضي بالحاضر.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-item">
-                                <i class="bi bi-person-check"></i>
-                                <h5>ملوك وأبطال</h5>
-                                <p class="small">تعرف على سير الأئمة والملوك الذين صنعوا الفارق.</p>
+                            <div class="col-md-4 reveal">
+                                <div class="feature-item">
+                                    <i class="bi bi-person-check"></i>
+                                    <h5>ملوك وأبطال</h5>
+                                    <p class="small">تعرف على سير الأئمة والملوك الذين صنعوا الفارق.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-item">
-                                <i class="bi bi-rocket-takeoff"></i>
-                                <h5>رؤية المستقبل</h5>
-                                <p class="small">كيف تتحول الأحلام اليوم إلى واقع في ٢٠٣٠.</p>
+                            <div class="col-md-4 reveal">
+                                <div class="feature-item">
+                                    <i class="bi bi-rocket-takeoff"></i>
+                                    <h5>رؤية المستقبل</h5>
+                                    <p class="small">كيف تتحول الأحلام اليوم إلى واقع في ٢٠٣٠.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--end overview-->
+    </section>
+    <section id="foundation" class="center-section">
+        <div class="reveal">
+            <h2 class="pg-titl">تاريخ الدولة السعودية: من التأسيس إلى الوحدة</h2>
+        </div>
 
-<!-- start foundation -->
-<section id="foundation" class="center-section">
-    <div>
-        <h2 class="pg-titl">تاريخ الدولة السعودية: من التأسيس إلى الوحدة</h2>
-    </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col reveal">
+                <div class="card h-100 shadow-sm">
+                    <img src="{% static 'images/foundation/saudi-state-1.png' %}" class="card-img-top" alt="الدولة السعودية الأولى">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">الدولة السعودية الأولى</h5>
+                        <p class="card-text">
+                            فجر الوحدة الذي انبثق من الدرعية عام ١١٣٩ هـ، حين وضع الإمام محمد بن سعود حجر الأساس لدولةٍ قامت على العدل والوحدة.
+                        </p>
+                        <a href="{% url 'main:state1_view' %}" class="btn btn-gold mt-auto">اعرف أكثر</a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="{% static 'images/foundation/saudi-state-1.png' %}" class="card-img-top" alt="الدولة السعودية الأولى">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">الدولة السعودية الأولى</h5>
-                    <p class="card-text">
-                        فجر الوحدة الذي انبثق من الدرعية عام ١١٣٩هـ، حين وضع الإمام محمد بن سعود حجر الأساس لدولةٍ قامت على العدل والوحدة.
-                    </p>
-                    <a href="{% url 'main:state1_view' %}" class="btn btn-gold mt-auto">اعرف أكثر</a>
+            <div class="col reveal">
+                <div class="card h-100 shadow-sm">
+                    <img src="{% static 'images/foundation/saudi-state-2.png' %}" class="card-img-top" alt="الدولة السعودية الثانية">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">الدولة السعودية الثانية</h5>
+                        <p class="card-text">
+                            حقبة الصمود والوفاء، حين أعاد الإمام تركي بن عبدالله بناء الكيان السعودي عام ١٢٤٠ هـ، مستعيداً الأمجاد في قلب الجزيرة العربية.
+                        </p>
+                        <a href="{% url 'main:state2_view' %}" class="btn btn-gold mt-auto">قصة الصمود</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col reveal">
+                <div class="card h-100 shadow-sm">
+                    <img src="{% static 'images/foundation/saudi-state-3.png' %}" class="card-img-top" alt="المملكة العربية السعودية">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">المملكة العربية السعودية</h5>
+                        <p class="card-text">
+                            عهد التوحيد والرخاء، ملحمة الملك عبدالعزيز -طيب الله ثراه- التي جمعت الشتات عام ١٣٥١ هـ، لتبدأ مسيرة النهضة الشاملة.
+                        </p>
+                        <a href="{% url 'main:state3_view' %}" class="btn btn-gold mt-auto">عصر الوحدة</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div id="rulers">
+        <h2 class="pg-titl reveal">ملوك المملكة العربية السعودية</h2>
+    </div>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="{% static 'images/foundation/saudi-state-2.png' %}" class="card-img-top" alt="الدولة السعودية الثانية">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">الدولة السعودية الثانية</h5>
-                    <p class="card-text">
-                        حقبة الصمود والوفاء، حين أعاد الإمام تركي بن عبدالله بناء الكيان السعودي عام ١٢٤٠هـ، مستعيداً الأمجاد في قلب الجزيرة العربية.
-                    </p>
-                    <a href="{% url 'main:state2_view' %}" class="btn btn-gold mt-auto">قصة الصمود</a>
-                </div>
+    <section class="timeline">
+        <div class="container1 lfte-container reveal">
+            <img src="{% static 'images/king1.jpg' %}" alt="">
+            <div class="text-box">
+                <h1> الملك عبدالعزيز آل سعود</h1>
+                <h5>مؤسس المملكة العربية السعودية</h5>
+                <small>١٩٠٢ م - ١٩٥٣ م</small>
+                <p> هو عبد العزيز بن عبد الرحمن؛ قائدٌ سار بقلبٍ يملأه اليقين، وهيبةٍ تطوعُ المستحيل. قاد ثُلّةً من الفرسان ليستردَّ ملك آبائه، ساعياً في توحيد هذه البلاد وجمع شتات قلوبها، ليصنعَ من رمال الصحراء وطناً يطاولُ الثريا.</p>
+                <button><a href="{% url 'main:king1_view' %}"> أبحر في فصول المجد </a></button>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="{% static 'images/foundation/saudi-state-3.png' %}" class="card-img-top" alt="المملكة العربية السعودية">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">المملكة العربية السعودية</h5>
-                    <p class="card-text">
-                        عهد التوحيد والرخاء، ملحمة الملك عبدالعزيز -طيب الله ثراه- التي جمعت الشتات عام ١٣٥١هـ، لتبدأ مسيرة النهضة الشاملة.
-                    </p>
-                    <a href="{% url 'main:state3_view' %}" class="btn btn-gold mt-auto">عصر الوحدة</a>
-                </div>
+        <div class="container1 right-container reveal">
+            <img src="{% static 'images/king2.jpg' %}" alt="">
+            <div class="text-box">
+                <h1> الملك سعود بن عبدالعزيز</h1>
+                <h5>ملكُ النهضةِ الأولى ومؤسسُ المؤسسات</h5>
+                <small>١٩٥٣ م - ١٩٦٤ م</small>
+                <p> هو الملك سعود بن عبدالعزيز؛ صاحبُ اليدِ السخيّة والقلبِ الذي اتسعَ للجميع. شهد عهدُه أولى خطواتِ الدولةِ نحو الحداثة، فأسسَ الوزاراتِ والجامعاتِ ووسّعَ مآذنَ الحرمين الشريفين، ليرسّخَ دعائمَ البناءِ في وطنٍ بدأَ يخطُّ مسارَه نحو القمة.</p>
+                <button><a href="{% url 'main:king2_view' %}"> ابحر اكثر</a></button>
             </div>
         </div>
 
-    </div>
-</section>
-<!-- end foundation -->
-
-<!-- start rulers -->
-
-  <div id="rulers">
-        <h2 class="pg-titl">ملوك المملكة العربية السعودية</h2>
-    </div>
-
- <section  class="timeline" >
-   
-    <div class="container1 lfte-container">
-        <img src="{% static 'images/king1.jpg'%}" alt="">
-        <div class="text-box">
-            <h1> الملك عبدالعزيز ال سعودي</h1>
-            <h5>مؤسس المملكة العربية السعودية</h5>
-            <small>1902م-1953م</small>
-            <p> هو عبد العزيز بن عبد الرحمن؛ قائدٌ سار بقلبٍ يملأه اليقين، وهيبةٍ تطوعُ المستحيل. قاد ثُلّةً من الفرسان ليستردَّ ملك آبائه، ساعياً في توحيد هذه البلاد وجمع شتات قلوبها، ليصنعَ من رمال الصحراء وطناً يطاولُ الثريا."</p>
-            <button><a href="{% url 'main:king1_view' %}"> أبحر في فصول المجد </a></button>
+        <div class="container1 lfte-container reveal">
+            <img src="{% static 'images/king3.jpg' %}" alt="الملك فيصل">
+            <div class="text-box">
+                <h1>الملك فيصل بن عبدالعزيز</h1>
+                <h5>رائد التضامن الإسلامي وصوت الحكمة</h5>
+                <small>١٩٦٤ م - ١٩٧٥ م</small>
+                <p>هو الملك فيصل بن عبدالعزيز؛ مهندسُ السياسةِ المحنّك ورائدُ النهضةِ التعليمية الكبرى. رجلٌ وقفَ في وجهِ التحدياتِ بعزمٍ لا يلين، وسخّر حياته لخدمةِ قضايا الأمةِ الإسلامية، ليجعلَ من المملكةِ رقماً صعباً في المعادلةِ الدولية.</p>
+                <button><a href="{% url 'main:king3_view' %}"> أبحر في فصول المجد </a></button>
+            </div>
         </div>
-    </div>
 
-    <div class="container1 right-container">
-        <img src="{% static 'images/king2.jpg'%}" alt="">
-        <div class="text-box">
-            <h1> الملك عبدالعزيز ال سعودي</h1>
-            <h5>ملكُ النهضةِ الأولى ومؤسسُ المؤسسات</h5>
-            <small>١٩٥٣م - ١٩٦٤م</small>
-            <p> هو الملك سعود بن عبدالعزيز؛ صاحبُ اليدِ السخيّة والقلبِ الذي اتسعَ للجميع. شهد عهدُه أولى خطواتِ الدولةِ نحو الحداثة، فأسسَ الوزاراتِ والجامعاتِ ووسّعَ مآذنَ الحرمين الشريفين، ليرسّخَ دعائمَ البناءِ في وطنٍ بدأَ يخطُّ مسارَه نحو القمة</p>
-            <button><a href="{% url 'main:king2_view' %}"> ابحر اكثر</a></button>
+        <div class="container1 right-container reveal">
+            <img src="{% static 'images/king7.jpg' %}" alt="الملك خالد">
+            <div class="text-box">
+                <h1>الملك خالد بن عبدالعزيز</h1>
+                <h5>ملكُ الخيرِ والرخاء وباني الإنسان</h5>
+                <small>١٩٧٥ م - ١٩٨٢ م</small>
+                <p>هو الملك خالد بن عبدالعزيز؛ صاحبُ العهدِ الذي ازدهرَ فيه الرخاء، ونعمتْ البلادُ بفيضٍ من الخيرات. عُرفَ بقلبِهِ القريبِ من الناس، ورؤيتِهِ التي شيّدت المدن الصناعية الكبرى، ليضعَ بذورَ التنميةِ في كل شبرٍ من أرض الوطن.</p>
+                <button><a href="{% url 'main:king4_view' %}"> أبحر في فصول المجد </a></button>
+            </div>
         </div>
-    </div>
 
-    <div class="container1 lfte-container">
-        <img src="{% static 'images/king3.jpg' %}" alt="الملك فيصل">
-        <div class="text-box">
-            <h1>الملك فيصل بن عبدالعزيز</h1>
-            <h5>رائد التضامن الإسلامي وصوت الحكمة</h5>
-            <small>١٩٦٤م - ١٩٧٥م</small>
-            <p>هو الملك فيصل بن عبدالعزيز؛ مهندسُ السياسةِ المحنّك ورائدُ النهضةِ التعليمية الكبرى. رجلٌ وقفَ في وجهِ التحدياتِ بعزمٍ لا يلين، وسخّر حياته لخدمةِ قضايا الأمةِ الإسلامية، ليجعلَ من المملكةِ رقماً صعباً في المعادلةِ الدولية.</p>
-            <button><a href="{% url 'main:king3_view' %}"> أبحر في فصول المجد </a></button>
+        <div class="container1 lfte-container reveal">
+            <img src="{% static 'images/king4.jpg' %}" alt="الملك فهد">
+            <div class="text-box">
+                <h1>الملك فهد بن عبدالعزيز</h1>
+                <h5>خادم الحرمين الشريفين ورائد التحديث</h5>
+                <small>١٩٨٢ م - ٢٠٠٥ م</small>
+                <p>هو الملك فهد بن عبدالعزيز؛ أولُ من نادى بلقبِ خادم الحرمين الشريفين. قادَ المملكةَ في مراحلَ مفصلية، فحدّثَ الأنظمة وشيّد أضخمَ التوسعاتِ التاريخية للمقدسات، ليبقى عهدُه شاهداً على التطويرِ الشاملِ والثباتِ السياسي.</p>
+                <button><a href="{% url 'main:king5_view' %}"> أبحر في فصول المجد </a></button>
+            </div>
         </div>
-    </div>
 
-    <div class="container1 right-container">
-        <img src="{% static 'images/king7.jpg' %}" alt="الملك خالد">
-        <div class="text-box">
-            <h1>الملك خالد بن عبدالعزيز</h1>
-            <h5>ملكُ الخيرِ والرخاء وباني الإنسان</h5>
-            <small>١٩٧٥م - ١٩٨٢م</small>
-            <p>هو الملك خالد بن عبدالعزيز؛ صاحبُ العهدِ الذي ازدهرَ فيه الرخاء، ونعمتْ البلادُ بفيضٍ من الخيرات. عُرفَ بقلبِهِ القريبِ من الناس، ورؤيتِهِ التي شيّدت المدن الصناعية الكبرى، ليضعَ بذورَ التنميةِ في كل شبرٍ من أرض الوطن.</p>
-            <button><a href="{% url 'main:king4_view' %}"> أبحر في فصول المجد </a></button>
+        <div class="container1 right-container reveal">
+            <img src="{% static 'images/king5.jpg' %}" alt="الملك عبدالله">
+            <div class="text-box">
+                <h1>الملك عبدالله بن عبدالعزيز</h1>
+                <h5>ملكُ الإنسانيةِ وباني مناراتِ العلم</h5>
+                <small>٢٠٠٥ م - ٢٠١٥ م</small>
+                <p>هو الملك عبدالله بن عبدالعزيز؛ الذي مَلَكَ القلوبَ بصدقهِ وعفويتِه. أطلقَ جسورَ العلمِ نحو العالم عبر أكبرِ برنامجٍ للابتعاث، وفتحَ آفاقَ الحوارِ والتنمية، مؤمناً بأنّ الاستثمارَ الحقيقي يكمنُ في عقولِ أبنائه وبناته.</p>
+                <button><a href="{% url 'main:king6_view' %}"> أبحر في فصول المجد </a></button>
+            </div>
         </div>
-    </div>
 
-    <div class="container1 lfte-container">
-        <img src="{% static 'images/king4.jpg' %}" alt="الملك فهد">
-        <div class="text-box">
-            <h1>الملك فهد بن عبدالعزيز</h1>
-            <h5>خادم الحرمين الشريفين ورائد التحديث</h5>
-            <small>١٩٨٢م - ٢٠٠٥م</small>
-            <p>هو الملك فهد بن عبدالعزيز؛ أولُ من نادى بلقبِ خادم الحرمين الشريفين. قادَ المملكةَ في مراحلَ مفصلية، فحدّثَ الأنظمة وشيّد أضخمَ التوسعاتِ التاريخية للمقدسات، ليبقى عهدُه شاهداً على التطويرِ الشاملِ والثباتِ السياسي.</p>
-            <button><a href="{% url 'main:king5_view' %}"> أبحر في فصول المجد </a></button>
+        <div class="container1 lfte-container reveal">
+            <img src="{% static 'images/king6.jpg' %}" alt="الملك سلمان">
+            <div class="text-box">
+                <h1>الملك سلمان بن عبدالعزيز</h1>
+                <h5>ملكُ الحزمِ والعزمِ وراعي الرؤية</h5>
+                <small>٢٠١٥ م - الآن</small>
+                <p>هو الملك سلمان بن عبدالعزيز؛ رمزُ القوةِ ومرجعُ التاريخ. في عهدِه ولدتْ "رؤية ٢٠٣٠" لترسمَ خارطةً لمستقبلٍ لا يرضى بغيرِ الصدارة، حيثُ الحزمُ في القرار، والعزمُ في البناء، والتحولُ الذي يذهلُ العالم كل يوم.</p>
+                <button><a href="{% url 'main:king7_view' %}"> أبحر في فصول المجد </a></button>
+            </div>
         </div>
-    </div>
-
-    <div class="container1 right-container">
-        <img src="{% static 'images/king5.jpg' %}" alt="الملك عبدالله">
-        <div class="text-box">
-            <h1>الملك عبدالله بن عبدالعزيز</h1>
-            <h5>ملكُ الإنسانيةِ وباني مناراتِ العلم</h5>
-            <small>٢٠٠٥م - ٢٠١٥م</small>
-            <p>هو الملك عبدالله بن عبدالعزيز؛ الذي مَلَكَ القلوبَ بصدقهِ وعفويتِه. أطلقَ جسورَ العلمِ نحو العالم عبر أكبرِ برنامجٍ للابتعاث، وفتحَ آفاقَ الحوارِ والتنمية، مؤمناً بأنّ الاستثمارَ الحقيقي يكمنُ في عقولِ أبنائه وبناته.</p>
-            <button><a href="{% url 'main:king6_view' %}"> أبحر في فصول المجد </a></button>
-        </div>
-    </div>
-
-    <div class="container1 lfte-container">
-        <img src="{% static 'images/king6.jpg' %}" alt="الملك سلمان">
-        <div class="text-box">
-            <h1>الملك سلمان بن عبدالعزيز</h1>
-            <h5>ملكُ الحزمِ والعزمِ وراعي الرؤية</h5>
-            <small>٢٠١٥م - الآن</small>
-            <p>هو الملك سلمان بن عبدالعزيز؛ رمزُ القوةِ ومرجعُ التاريخ. في عهدِه ولدتْ "رؤية ٢٠٣٠" لترسمَ خارطةً لمستقبلٍ لا يرضى بغيرِ الصدارة، حيثُ الحزمُ في القرار، والعزمُ في البناء، والتحولُ الذي يذهلُ العالم كل يوم.</p>
-            <button><a href="{% url 'main:king7_view' %}"> أبحر في فصول المجد </a></button>
-        </div>
-    </div>
-
-
- </section>
-
-
-<!-- end rulers -->
-
-
-
-
+    </section>
 </main>
 
 {% endblock %}

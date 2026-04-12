@@ -333,7 +333,7 @@ a{
     top: 50%;
     transform: translateY(-50%); 
     width: 100%;            
-    z-index: 10;          
+    z-index: 1000;          
     display: block;
     
     /* استخدام متغيراتكِ المعتمدة */
@@ -1056,4 +1056,21 @@ input[type="radio"] {
 .filter-list li button:hover {
     color: var(--color-accent-gold);
     background: rgba(226, 193, 101, 0.05);
+}
+
+
+
+/* القاعدة العامة للعناصر المخفية */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); /* يبدأ العنصر من أسفل مكانه بـ ٥٠ بكسل */
+    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67); /* حركة انسيابية فخمة */
+    visibility: hidden;
+}
+
+/* الحالة عند الوصول للعنصر (الظهور) */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* يعود لمكانه الأصلي */
+    visibility: visible;
 }

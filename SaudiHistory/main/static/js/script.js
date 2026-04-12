@@ -112,3 +112,24 @@ function filterStories(category) {
     });
 }
 
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            // إضافة الكلاس عند النزول
+            reveals[i].classList.add("active");
+        } else {
+            // حذف الكلاس عند الصعود للأعلى لتكرار الحركة
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
