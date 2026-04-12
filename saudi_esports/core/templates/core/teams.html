@@ -1,0 +1,230 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="teams-hero">
+ <div class="hero-bg">
+    <img src="{% static 'core/images/teams_hero.jpeg' %}" alt="">
+  </div>
+  <div class="teams-hero-overlay"></div>
+  <div class="teams-hero-content">
+     
+    <span class="teams-hero-tag">
+      SAUDI ESPORTS ORGANIZATIONS
+    </span>
+
+    <h1>
+      Meet the <span>Champions</span>
+    </h1>
+
+    <p>
+      The elite organizations driving Saudi Arabia to the top of global esports
+    </p>
+
+    <!-- STATS -->
+    <div class="teams-hero-stats">
+
+      <div class="teams-stat">
+        <img src="{% static 'core/icons/team.png' %}">
+        <strong>150+</strong>
+        <span>Pro Teams</span>
+      </div>
+
+      <div class="teams-stat">
+        <img src="{% static 'core/icons/trophy.png' %}">
+        <strong>$5M+</strong>
+        <span>Prize Earned</span>
+      </div>
+
+      <div class="teams-stat">
+        <img src="{% static 'core/icons/rank.png' %}">
+        <strong>Top 10</strong>
+        <span>World Ranking</span>
+      </div>
+
+      <div class="teams-stat">
+        <img src="{% static 'core/icons/player.png' %}">
+        <strong>500+</strong>
+        <span>Players</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teams-section">
+  <div class="teams-grid">
+
+    <!-- TEAM 1-->
+    <div class="teams-card g">
+  <div class="teams-card-image">
+    <img src="{% static 'core/images/falcons.jpg' %}" alt="">
+    <span class="teams-tier">S-TIER</span>
+  </div>
+
+  <div class="teams-card-body">
+    <h3>Team Falcons</h3>
+    <p class="teams-meta">Riyadh • Est. 2017</p>
+
+    <p class="teams-desc">
+      Leading Saudi esports organization competing at the highest global level.
+    </p>
+
+    <div class="teams-games">
+      <span>Valorant</span>
+      <span>PUBG</span>
+      <span>Dota 2</span>
+    </div>
+
+    <div class="teams-stats">
+      <div><strong>20</strong><span>Titles</span></div>
+      <div><strong>#1</strong><span>Rank</span></div>
+      <div><strong>40</strong><span>Players</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM 2-->
+    <div class="teams-card a">
+  <div class="teams-card-image">
+    <img src="{% static 'core/images/twisted.webp' %}" alt="">
+    <span class="teams-tier">S-TIER</span>
+  </div>
+
+  <div class="teams-card-body">
+    <h3>Twisted Minds</h3>
+    <p class="teams-meta">Riyadh • Est. 2021</p>
+
+    <p class="teams-desc">
+      Elite Saudi team known for dominating battle royale and FPS tournaments.
+    </p>
+
+    <div class="teams-games">
+      <span>PUBG</span>
+      <span>Warzone</span>
+      <span>Valorant</span>
+    </div>
+
+    <div class="teams-stats">
+      <div><strong>15</strong><span>Titles</span></div>
+      <div><strong>#3</strong><span>Rank</span></div>
+      <div><strong>30</strong><span>Players</span></div>
+    </div>
+  </div>
+</div>
+    <!-- TEAM 3 -->
+   
+<div class="teams-card s">
+  <div class="teams-card-image">
+    <img src="{% static 'core/images/r8.png' %}" alt="">
+    <span class="teams-tier">A-TIER</span>
+  </div>
+
+  <div class="teams-card-body">
+    <h3>R8 Esports</h3>
+    <p class="teams-meta">Riyadh • Est. 2019</p>
+
+    <p class="teams-desc">
+      Competitive Saudi team active in regional leagues and rising globally.
+    </p>
+
+    <div class="teams-games">
+      <span>Valorant</span>
+      <span>Rocket League</span>
+    </div>
+
+    <div class="teams-stats">
+      <div><strong>8</strong><span>Titles</span></div>
+      <div><strong>#10</strong><span>Rank</span></div>
+      <div><strong>22</strong><span>Players</span></div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- TEAM 4-->
+    <div class="teams-card p">
+  <div class="teams-card-image">
+    <img src="{% static 'core/images/twelve.png' %}" alt="">
+    <span class="teams-tier">A-TIER</span>
+  </div>
+
+  <div class="teams-card-body">
+    <h3>Twelve ESPORT</h3>
+    <p class="teams-meta">Riyadh • Est. 2025</p>
+
+    <p class="teams-desc">
+      Rising Saudi esports team gaining recognition in competitive FPS and battle royale scenes.
+    </p>
+
+    <div class="teams-games">
+      <span>Apex Legends</span>
+      <span>Valorant</span>
+    </div>
+
+    <div class="teams-stats">
+      <div><strong>4</strong><span>Titles</span></div>
+      <div><strong>#15</strong><span>Rank</span></div>
+      <div><strong>16</strong><span>Players</span></div>
+    </div>
+  </div>
+</div>
+
+   <!-- TEAM 5-->
+    <div class="teams-card a">
+  <div class="teams-card-image">
+    <img src="{% static 'core/images/vision.jpg' %}" alt="">
+    <span class="teams-tier">B-TIER</span>
+  </div>
+
+  <div class="teams-card-body">
+    <h3>Vision Esports</h3>
+    <p class="teams-meta">Riyadh • Est. 2022</p>
+
+    <p class="teams-desc">
+      Emerging Saudi esports team focused on developing new talent.
+    </p>
+
+    <div class="teams-games">
+      <span>Valorant</span>
+      <span>FIFA</span>
+    </div>
+
+    <div class="teams-stats">
+      <div><strong>3</strong><span>Titles</span></div>
+      <div><strong>#20</strong><span>Rank</span></div>
+      <div><strong>15</strong><span>Players</span></div>
+    </div>
+  </div>
+</div>
+    <!-- TEAM 5-->
+   <div class="teams-card b">
+  <div class="teams-card-image">
+    <img src="{% static 'core/images/geekay.webp' %}" alt="">
+    <span class="teams-tier">B-TIER</span>
+  </div>
+
+  <div class="teams-card-body">
+    <h3>Geekay Esports</h3>
+    <p class="teams-meta">Jeddah • Est. 2016</p>
+
+    <p class="teams-desc">
+      Regional esports organization with Saudi presence competing in multiple titles.
+    </p>
+
+    <div class="teams-games">
+      <span>Valorant</span>
+      <span>Fortnite</span>
+      <span>FIFA</span>
+    </div>
+
+    <div class="teams-stats">
+      <div><strong>5</strong><span>Titles</span></div>
+      <div><strong>#18</strong><span>Rank</span></div>
+      <div><strong>20</strong><span>Players</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+{% endblock %}
