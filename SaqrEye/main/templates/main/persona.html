@@ -1,0 +1,407 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="{% if lang == 'ar' %}rtl{% else %}ltr{% endif %}" lang="{{ lang }}" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if lang == 'ar' %}عين الصقر — اختر شخصيتك{% else %}SaqrEye — Choose Your Role{% endif %}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/images/favicon-32x32.png' %}">
+  <link rel="apple-touch-icon"                    href="{% static 'main/images/apple-touch-icon.png' %}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap RTL / LTR -->
+  {% if lang == 'ar' %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  {% else %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  {% endif %}
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+  <style>
+    /* ── Persona Page Specific ── */
+    .persona-page {
+      min-height: 100vh;
+      background: var(--bg-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background decorative circles */
+    .persona-page::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      right: -200px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,151,43,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .persona-page::after {
+      content: '';
+      position: fixed;
+      bottom: -200px;
+      left: -200px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,151,43,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Logo ── */
+    .persona-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .persona-logo img {
+      width: 72px;
+      height: 72px;
+      filter: drop-shadow(0 0 16px rgba(200,151,43,0.5));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    .persona-logo-name {
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--text-primary);
+      letter-spacing: 1px;
+    }
+
+    /* ── Heading ── */
+    .persona-heading {
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      color: var(--text-primary);
+      text-align: center;
+      margin-bottom: 0.4rem;
+      animation: fadeInUp 0.6s 0.1s ease both;
+    }
+
+    .persona-subheading {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.6s 0.2s ease both;
+    }
+
+    /* ── Cards Row ── */
+    .persona-cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.6s 0.3s ease both;
+    }
+
+    /* ── Persona Card ── */
+    .persona-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: 20px;
+      width: 280px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .persona-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(200,151,43,0.2);
+      border-color: var(--accent-gold);
+    }
+
+    .persona-card:hover .persona-card-btn {
+      background-color: var(--accent-gold);
+      color: #fff;
+    }
+
+    .persona-card:hover .persona-card-overlay {
+      opacity: 1;
+    }
+
+    /* Gold corner accent */
+    .persona-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+      border-radius: 0 20px 0 0;
+    }
+
+    .persona-card:hover::before {
+      opacity: 0.4;
+    }
+
+    /* Image container */
+    .persona-card-img-wrap {
+      height: 200px;
+      overflow: hidden;
+      background: var(--bg-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .persona-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .persona-card:hover .persona-card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    /* Card body */
+    .persona-card-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .persona-card-title {
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .persona-card-title-en {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .persona-card-desc {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .persona-card-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: 2px solid var(--accent-gold);
+      background: transparent;
+      color: var(--accent-gold);
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    /* ── Theme & Lang Controls ── */
+    .persona-controls {
+      position: fixed;
+      top: 1.25rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+      animation: fadeInUp 0.4s ease both;
+    }
+
+    /* RTL: controls on left / LTR: controls on right */
+    [dir="rtl"] .persona-controls { left: 1.25rem; }
+    [dir="ltr"] .persona-controls { right: 1.25rem; }
+
+    /* ── Gold divider ── */
+    .persona-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--accent-gold);
+      border-radius: 2px;
+      margin: 0.75rem auto 0;
+    }
+
+    /* ── Footer note ── */
+    .persona-footer-note {
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-align: center;
+      animation: fadeInUp 0.6s 0.5s ease both;
+    }
+  </style>
+</head>
+
+<body>
+<div class="persona-page">
+
+  <!-- ── Top Controls (Theme + Language) ── -->
+  <div class="persona-controls">
+    {% if lang == 'ar' %}
+    <a href="{% url 'set_language_view' %}?lang=en&next=/" class="btn btn-sm saqr-btn-outline">EN</a>
+    {% else %}
+    <a href="{% url 'set_language_view' %}?lang=ar&next=/" class="btn btn-sm saqr-btn-outline">عر</a>
+    {% endif %}
+    <button class="btn btn-sm saqr-btn-outline" onclick="toggleTheme()">
+      <i class="bi bi-moon-fill" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <!-- ── Logo ── -->
+  <div class="persona-logo">
+    <img src="{% static 'main/images/android-chrome-192x192.png' %}" alt="SaqrEye">
+    <span class="persona-logo-name">
+      {% if lang == 'ar' %}عين الصقر{% else %}SaqrEye{% endif %}
+    </span>
+    <div class="persona-divider"></div>
+  </div>
+
+  <!-- ── Heading ── -->
+  <h1 class="persona-heading">
+    {% if lang == 'ar' %}اختر شخصيتك{% else %}Choose Your Role{% endif %}
+  </h1>
+  <p class="persona-subheading">
+    {% if lang == 'ar' %}
+      سنخصص تجربتك بناءً على اختيارك
+    {% else %}
+      We'll personalize your experience based on your choice
+    {% endif %}
+  </p>
+
+  <!-- ── Cards ── -->
+  <div class="persona-cards">
+
+    <!-- Tourist Card -->
+    <form method="POST" action="{% url 'persona_view' %}">
+      {% csrf_token %}
+      <input type="hidden" name="persona" value="tourist">
+      <div class="persona-card" onclick="this.closest('form').submit()">
+        <div class="persona-card-img-wrap">
+          <img src="{% static 'main/images/tourist.jpg' %}" alt="Tourist">
+        </div>
+        <div class="persona-card-body">
+          <div class="persona-card-title">
+            {% if lang == 'ar' %}سائح{% else %}Tourist{% endif %}
+          </div>
+          <span class="persona-card-title-en">
+            {% if lang == 'ar' %}Tourist{% else %}سائح{% endif %}
+          </span>
+          <p class="persona-card-desc">
+            {% if lang == 'ar' %}
+              اكتشف أجمل الوجهات السياحية والأماكن الترفيهية في المملكة
+            {% else %}
+              Discover the most beautiful tourist destinations and attractions in Saudi Arabia
+            {% endif %}
+          </p>
+          <button type="submit" class="persona-card-btn">
+            {% if lang == 'ar' %}ابدأ الاستكشاف{% else %}Start Exploring{% endif %}
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Investor Card -->
+    <form method="POST" action="{% url 'persona_view' %}">
+      {% csrf_token %}
+      <input type="hidden" name="persona" value="investor">
+      <div class="persona-card" onclick="this.closest('form').submit()">
+        <div class="persona-card-img-wrap">
+          <img src="{% static 'main/images/investor.jpg' %}" alt="Investor">
+        </div>
+        <div class="persona-card-body">
+          <div class="persona-card-title">
+            {% if lang == 'ar' %}مستثمر{% else %}Investor{% endif %}
+          </div>
+          <span class="persona-card-title-en">
+            {% if lang == 'ar' %}Investor{% else %}مستثمر{% endif %}
+          </span>
+          <p class="persona-card-desc">
+            {% if lang == 'ar' %}
+              استكشف أبرز مشاريع رؤية 2030 والفرص الاستثمارية الواعدة في المملكة
+            {% else %}
+              Explore Vision 2030's top projects and promising investment opportunities in Saudi Arabia
+            {% endif %}
+          </p>
+          <button type="submit" class="persona-card-btn">
+            {% if lang == 'ar' %}استكشف الفرص{% else %}Explore Opportunities{% endif %}
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- ── Footer Note ── -->
+  <p class="persona-footer-note">
+    {% if lang == 'ar' %}
+      🇸🇦 رؤية 2030 — نحو مستقبل أفضل
+    {% else %}
+      🇸🇦 Vision 2030 — Towards a Better Future
+    {% endif %}
+  </p>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Load theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcon(next);
+  }
+  function updateThemeIcon(theme) {
+    const icon = document.getElementById('themeIcon');
+    if (!icon) return;
+    icon.className = theme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+  }
+</script>
+
+</body>
+</html>
