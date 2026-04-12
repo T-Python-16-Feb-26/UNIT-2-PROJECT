@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, Http404
 import json
 from pathlib import Path
@@ -127,3 +127,42 @@ def experience_detail(request: HttpRequest, slug: str):
         raise Http404("Experience not found")
 
     return render(request, "main/experience_detail.html", {"experience": experience})
+
+
+def large_font(request: HttpRequest):
+
+    response = redirect(request.GET.get("next"))
+    response.set_cookie('font','large', max_age=60*60*24)
+
+    return response
+
+def small_font(request: HttpRequest):
+
+    response = redirect(request.GET.get("next"))
+    response.set_cookie('font','small', max_age=-3600)
+
+    return response
+
+def search_view(request: HttpRequest):
+    query = request.GET.get('q', '').strip()
+    results = []
+
+    items = load_experiences()
+
+    if query:
+        query_lower = query.lower()
+        results = [
+            item for item in items
+            if query_lower in item.get('title', '').lower()
+            or query_lower in item.get('city', '').lower()
+            or query_lower in item.get('category', '').lower()
+            or query_lower in item.get('location', '').lower()
+            or query_lower in item.get('description', '').lower()
+            or query_lower in item.get('slug', '').lower()
+        ]
+
+    return render(request, 'main/search.html', {
+        'query': query,
+        'results': results,
+    })
+

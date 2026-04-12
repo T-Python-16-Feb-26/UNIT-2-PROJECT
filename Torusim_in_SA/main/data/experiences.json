@@ -7,7 +7,7 @@
     "category": "Private Tour",
     "duration": "4–5 hours",
     "location": "Al Balad, Jeddah",
-    "image": "images/Jeddah/al_balad.jpg",
+    "image": "images/experiences/Al-bald.jpg",
     "description": "Explore UNESCO-listed Al Balad's historic streets, coral architecture, and cultural landmarks with a local expert guide."
   },
   {
@@ -18,7 +18,7 @@
     "category": "Heritage Tour",
     "duration": "4 hours",
     "location": "Old Riyadh",
-    "image": "images/Riyadh/al_masmak.jpg",
+    "image": "images/experiences/Al Masmak Fortress.jpg",
     "description": "Discover Riyadh's historic heart with guided visits to Al Masmak Fortress, traditional markets, and cultural landmarks."
   },
   {
@@ -29,7 +29,7 @@
     "category": "Heritage Adventure",
     "duration": "Full day",
     "location": "Hegra, AlUla",
-    "image": "images/Alula/hegra.jpg",
+    "image": "images/experiences/alula-rock.jpg",
     "description": "Visit UNESCO Hegra tombs and the dramatic Elephant Rock for sunset views in ancient AlUla."
   },
   {
@@ -51,18 +51,18 @@
     "category": "Seaside Escape",
     "duration": "Full day",
     "location": "Jeddah Corniche",
-    "image": "images/Jeddah/corniche.jpg",
+    "image": "images/experiences/Jeddah.webp",
     "description": "Enjoy Jeddah's 30km Corniche with sea views, Floating Mosque, cafés, and relaxed waterfront time."
   },
   {
-    "id": 6,
-    "title": "Riyadh Food & Coffee Experience: Interactive Saudi Cuisine Tour",
-    "slug": "riyadh-food-coffee-experience-saudi-cuisine-tour",
-    "city": "Riyadh",
-    "category": "Food Experience",
-    "duration": "3 hours",
-    "location": "Souq Al Zal",
-    "image": "images/Riyadh/food_cuisine.jpg",
-    "description": "Learn Saudi cooking traditions, blend spices, and enjoy a Nadj feast with cultural activities."
-  }
+  "id": 6,
+  "title": "Esports World Cup 2026 in Riyadh: Weekly All-Access Pass & 6 Nights Accommodation",
+  "slug": "esports-world-cup-2026-riyadh-weekly-all-access-pass",
+  "city": "Riyadh",
+  "category": "Esports & Entertainment",
+  "duration": "1 week",
+  "location": "Boulevard City, Riyadh",
+  "image": "images/experiences/Esport.jpg",
+  "description": "Experience the global Esports World Cup 2026 in Riyadh with a Weekly All‑Access Pass and 6‑night stay package, designed for fans who want unlimited esports action, fan‑zone activities, and a comfortable base in the city all week."
+}
 ]

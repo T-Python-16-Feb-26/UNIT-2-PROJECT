@@ -14,19 +14,14 @@
         <div class="hero-content">
             <div class="container">
                 <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-8 mx-auto text-center">
+                    <div class="col-12 col-lg-8 mx-auto text-center px-3 px-lg-0">
                         <div class="hero-reveal">
                             <span class="hero-tag">Explore Saudi Arabia</span>
                             <h1 class="display-2 fw-bold mt-3 mb-4">
                                 Discover unforgettable places across the Kingdom
                             </h1>
-                            <p class="lead hero-text mb-4">
-                                From modern city attractions to historical landmarks and natural beauty,
-                                start your next journey with us.
-                            </p>
                             <div class="d-flex justify-content-center flex-wrap gap-3">
                                 <a href="{% url 'main:destinations_view' %}" class="btn btn-success btn-lg px-4 py-3">Start Exploring</a>
-                                <a href="#" class="btn btn-outline-light btn-lg px-4 py-3">View Packages</a>
                             </div>
                         </div>
                     </div>
@@ -78,7 +73,7 @@
             <div class="col-md-6 col-xl-3">
                 <article class="home-destination-card h-100">
                     <div class="home-destination-image-wrap">
-                        <img src="{% static 'images/Alula.jpg' %}" class="home-destination-image" alt="AlUla landscape">
+                        <img src="{% static 'images/Alula/Alula_sky.webp' %}" class="home-destination-image" alt="AlUla landscape">
                         <span class="home-card-badge">Heritage</span>
                     </div>
                     <div class="home-destination-body">
@@ -98,6 +93,7 @@
                     <div class="home-destination-body">
                         <h5 class="fw-bold mb-2">Abha</h5>
                         <p class="text-muted mb-3">A mountain escape with cool weather, greenery, and scenic views.</p>
+                        <br>
                         <a href="{% url 'main:destinations_view' %}" class="home-card-link">See Abha</a>
                     </div>
                 </article>

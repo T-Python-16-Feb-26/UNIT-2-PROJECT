@@ -1,0 +1,73 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Search Results{% endblock title %}
+
+{% block content %}
+<section class="experiences-section py-5 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+            <div>
+                <span class="section-badge">Search</span>
+                <h2 class="fw-bold mt-3 mb-1">Search Results</h2>
+                {% if query %}
+                    <p class="text-muted mb-0">
+                        Results for "<strong>{{ query }}</strong>"
+                    </p>
+                {% else %}
+                    <p class="text-muted mb-0">
+                        Find experiences, destinations, and tourism highlights across Saudi Arabia.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for item in results %}
+            <div class="col-md-6 col-xl-4">
+                <div class="card experience-card h-100 border-0 shadow-sm rounded-4">
+                    {% if item.image %}
+                    <img src="{% static item.image %}" class="card-img-top" alt="{{ item.title }}">
+                    {% endif %}
+
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge bg-success mb-3 align-self-start">
+                            {{ item.category }}
+                        </span>
+
+                        <h5 class="fw-bold mb-2">{{ item.title }}</h5>
+
+                        {% if item.duration %}
+                        <p class="text-muted small mb-2">{{ item.duration }}</p>
+                        {% endif %}
+
+                        <p class="mb-3 text-muted">{{ item.description }}</p>
+
+                        <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center gap-3">
+                            <small class="text-success fw-semibold mb-0">
+                                {{ item.location }}
+                            </small>
+
+                            {% if item.slug %}
+                            <a href="{% url 'main:experience_detail' item.slug %}" class="btn btn-success btn-sm px-3 rounded-pill explore-btn">
+                                Explore
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="text-center py-5">
+                    <h5 class="fw-bold mb-2">No results found</h5>
+                    <p class="text-muted mb-0">
+                        Try searching for a city, category, landmark, or experience name.
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

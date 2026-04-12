@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="light" {% if 'font' in request.COOKIES %} class="large-font" {% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,15 +44,6 @@
                         Destinations
                     </a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/packages/' %}active{% endif %}"
-                       {% if request.path == '/packages/' %}aria-current="page"{% endif %}
-                       href="/packages/">
-                        Packages
-                    </a>
-                </li>
-
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/about/' %}active{% endif %}"
                        {% if request.path == '/about/' %}aria-current="page"{% endif %}
@@ -69,10 +60,29 @@
                     </a>
                 </li>
 
+<li class="nav-item">
+    <div class="position-relative d-flex search-wrapper" id="searchWrapper">
+        <form method="get" action="{% url 'main:search_view' %}" role="search" id="searchForm" class="d-flex w-100">
+            <input class="form-control form-control-sm pe-5"
+                   type="search" 
+                   name="q" 
+                   id="searchInput"
+                   placeholder="Search or speak..." 
+                   aria-label="Search" 
+                   value="{{ request.GET.q }}">
+            <span class="mic-container position-absolute top-50 end-0 translate-middle-y me-2" 
+                  id="micContainer"
+                  aria-label="Voice search">
+                <span class="material-symbols-outlined fs-6 mic-icon" id="micIcon">mic</span>
+            </span>
+        </form>
+        <button class="btn btn-outline-success btn-sm ms-1" form="searchForm" type="submit">Search</button>
+    </div>
+</li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" aria-label="Search">
-                        <span class="material-symbols-outlined">search</span>
-                    </a>
+                    <div class="btn-group btn-group-sm font-size-switcher" role="group" aria-label="Font size controls">
+                        <a href="{% url 'main:small_font' %}?next={{request.path}}" class="btn btn-outline-success" role="button" aria-label="Small font size">A-</a>
+                        <a href="{% url 'main:large_font' %}?next={{request.path}}" class="btn btn-outline-success" role="button" aria-label="Small font size">A+</a>
                 </li>
 
                 <li>

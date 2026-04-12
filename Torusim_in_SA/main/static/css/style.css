@@ -36,7 +36,56 @@
     --page-tab-border: rgba(255, 255, 255, 0.08);
 }
 
+
+
+html.large-font{
+    font-size: 20px;
+}
 /* navbar */
+.search-wrapper {
+    width: 250px;  /* Adjust for your navbar space */
+    max-width: 100%;
+}
+
+#searchInput {
+    background-color: transparent;  /* Matches Google clean look */
+    border-radius: 24px !important;  /* Rounded like Google */
+    border: 1.5px solid #dfe1e5 !important;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #4285f4 !important;
+    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+    outline: none;
+}
+
+.mic-container {
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.mic-container.listening {
+    color: #ea4335 !important;
+}
+
+.mic-container.listening .mic-icon {
+    animation: googleMicPulse 1.4s infinite;
+}
+
+@keyframes googleMicPulse {
+    0%, 100% { transform: scale(1) rotate(-2deg); }
+    50% { transform: scale(1.1) rotate(2deg); }
+}
+
+/* Dark mode adjustments if using your theme toggle */
+[data-bs-theme="dark"] #searchInput {
+    background-color: #303134;
+    border-color: #5f6368;
+    color: white;
+}
 body {
     background-color: var(--page-bg);
     color: var(--page-text);
@@ -1149,6 +1198,9 @@ body {
 
 .experience-hero-section {
     background: linear-gradient(180deg, var(--page-bg) 0%, var(--page-surface) 100%);
+}
+.pad-top{
+    padding-top: 2rem;
 }
 
 .experience-hero-text {

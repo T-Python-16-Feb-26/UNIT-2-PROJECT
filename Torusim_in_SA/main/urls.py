@@ -10,5 +10,7 @@ urlpatterns = [
     path('destinations/jeddah/', views.jeddah_view, name="jeddah_view"),
     path('destinations/alula/', views.alula_view, name="alula_view"),
     path('experience/<slug:slug>/', views.experience_detail, name='experience_detail'),
-
+    path('large/font/', views.large_font, name='large_font'),
+    path('small/font/', views.small_font, name="small_font"),
+    path('search/', views.search_view, name='search_view'),
 ]
