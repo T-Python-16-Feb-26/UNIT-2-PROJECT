@@ -9,11 +9,11 @@
 
 
 .food-card{
-  background: white;
+  background: #6e5034;
   border-radius: 20px;
   overflow: hidden;
   transition: 0.3s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 5px rgb(172, 134, 107);
 }
 
 .food-card img{
@@ -26,12 +26,17 @@
 }
 
 .food-content h2{
-  font-size: 18px;
+  font-weight: bold;
+  color: #E1D9BC;
+  font-size: 16px;
 }
 
 .food-content p{
+  margin-top: 0.2rem;
+  color: #FFFDEB;
   font-size: 12px;
 }
 .food-card:hover{
-  transform: translateY(-5px);
+  transform: translateY(-20px);
 }
+

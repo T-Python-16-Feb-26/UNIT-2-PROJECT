@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="icon" href="{%static 'images/logo.png'%}">
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
     {% block css %}{%endblock%}
     <title>{% block title %}{% endblock %}</title>
 </head>
-<body>
+<body {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="dark" {% endif %}>
     <div class="hero">
   
         <nav class="nav-bar">
@@ -20,8 +21,8 @@
             <li><a href="{% url 'main:clothing_view' %}" class="links-nav">Traditional Clothing</a></li>
             <li><a href="{% url 'main:game_view' %}" class="links-nav">Traditional Games</a></li>
             <li><a href="{% url 'main:handicrafts_view' %}" class="links-nav">Handicrafts</a></li>
-            <li><a href="{% url 'main:folk_arts_view' %}" class="links-nav">Folk Arts</a></li>
-            <li><a href="" class="links-nav">Customs & Traditions </a></li>
+            <li><a href="{% url 'main:folk_arts_view' %}" class="links-nav">Performing Arts</a></li>
+            <li><a href="{% url 'main:traditions_view' %}" class="links-nav">Customs & Traditions </a></li>
         </ul>
     </nav>
     {% block header%}
@@ -50,7 +51,10 @@
             </div>
             <div class="footer-center">
                 <h5>Settings</h5>
-                <a href="?theme=dark">🌙 Dark Mode</a>
+                <div class="toggle">
+                    <a href="" class="active"><span class="material-symbols-outlined">light_mode</span></a>
+                    <a href="" class=""><span class="material-symbols-outlined">dark_mode</span></a>
+                </div>
                 <a href="?lang=ar">🌐 العربية</a>
             </div>
 
@@ -60,14 +64,14 @@
                     <a href="{% url 'main:home_view' %}">Home</a>
                     <a href="{% url 'main:foods_view' %}">Traditional Food</a>
                     <a href="{% url 'main:clothing_view' %}">Traditional Clothing</a>
-                    <a href="">Traditional Games</a>
+                    <a href="{% url 'main:game_view' %}">Traditional Games</a>
                 </div>
 
                 <div class="footer-link">
                     <h5>Culture</h5>
-                    <a href="">Handicrafts</a>
-                    <a href="">Folk Arts</a>
-                    <a href="">Customs & Traditions</a>
+                    <a href="{% url 'main:handicrafts_view' %}">Handicrafts</a>
+                    <a href="{% url 'main:folk_arts_view' %}">Performing Arts</a>
+                    <a href="{% url 'main:traditions_view' %}">Customs & Traditions</a>
                 </div>
             </div>
 

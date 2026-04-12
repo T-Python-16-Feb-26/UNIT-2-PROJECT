@@ -9,5 +9,7 @@ urlpatterns = [
     path('traditional-foods/',views.foods_view, name="foods_view"),
     path('traditional-games/',views.game_view, name="game_view"),
     path('Handicrafts/', views.handicrafts_view, name="handicrafts_view"),
-    path('folk-arts/', views.folk_arts_view, name="folk_arts_view")
+    path('performing-arts/', views.folk_arts_view, name="folk_arts_view"),
+    path('traditions/', views.traditions_view, name="traditions_view"),
+    path("mode/<mode>/", views.mode_view, name="mode_view"),
 ]

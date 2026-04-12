@@ -28,7 +28,6 @@
     width: 280px;
     height: 360px;
     padding: 2rem 1rem;
-    background: #fff;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -40,6 +39,7 @@
 }
 
 .clothes-card::before{
+
     content: "";
     position: absolute;
     top: 0;
@@ -69,7 +69,7 @@
 .clothes-card .card-data-clothes{
     position: relative;
     z-index: 3;
-    color: #fff;
+    color: black;
     opacity: 0;
     transform: translateY(30px);
     transition: 0.5s all;
@@ -78,4 +78,27 @@
 .clothes-card:hover .card-data-clothes{
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Responsive */
+
+@media (max-width: 768px){
+    .clothes{
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+    }
+
+    .clothes-card{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .section-title{
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .section-title::after{
+        margin: 0 auto;
+    }
 }

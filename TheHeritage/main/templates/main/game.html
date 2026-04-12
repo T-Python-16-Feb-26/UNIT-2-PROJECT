@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css%}
-<link rel="stylesheet" href="{%static 'css/style-games-page.css'%}">
+<link rel="stylesheet" href="{%static 'css/style-pages.css'%}">
 {%endblock%}
 
 {% block title %}Traditional Games{%endblock%}
@@ -31,144 +31,503 @@
   </div>
   </section>
 
-  <div class="games-container">
+  <!-- Indoor Games -->
+<div class="heritage">
+  <h3 id="indoor">Indoor Games</h3>
 
-    <div class="game-card">
-    <img src="{% static 'images/games/Taq-Taq-Taqiyah.jpg' %}" alt="Taq-Taq-Taqiyah">
+  <div class="images-scroll">
 
-    <div class="game-content">
-      <h2>Taq Taq Taqiyah</h2>
-      <p>A group game where children sit in a circle and pass a cap quickly</p>
+   
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Taq-Taq-Taqiyah.jpg' %}">
+      <div class="card-content">
+        <h2>Taq Taq Taqiyah</h2>
+        <p>A group game where children sit in a circle and pass a cap quickly</p>
+        <a href="#popup-taq" class="open-btn"> How to Play</a>
+
+        <div id="popup-taq" class="overlay">
+          <div class="popup">
+
+            <a href="#indoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Taq Taq Taqiyah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A fun and fast-paced traditional game that relies on attention and quick reaction. Children sit in a circle while one player walks around them holding a “taqiyah” (or any small cloth). 
+              The player secretly drops it behind someone. If the chosen player notices it, they must quickly stand up and chase the first player before they take their spot.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              5 to 15 players (the more, the more fun)
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Um-Al-Tisa.jpg' %}" alt="Um-Al-Tisa">
+    <!-- Hadarijah -->
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Hadarijah.jpg' %}">
+      <div class="card-content">
+        <h2>Hadarijah</h2>
+        <p>A group game where children place their hands and one counts</p>
+        <a href="#popup-Hadarijah" class="open-btn"> How to Play</a>
 
-    <div class="game-content">
-      <h2>Um Al-Tisa (Nine Men's Morris)</h2>
-      <p>A strategy game where players form lines to win</p>
+        <div id="popup-Hadarijah" class="overlay">
+          <div class="popup">
+
+            <a href="#indoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Hadarijah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A traditional Saudi children's game based on rhythm and chanting. Players place their hands on the ground while one player moves their finger across them, reciting a chant.
+              The game is fun and helps develop language and interaction skills.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              3 or more players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-<div class="game-card">
-    <img src="{% static 'images/games/Tire Rolling Game.jpg' %}" alt="Tire Rolling Game">
 
-   <div class="game-content">
-      <h2>Al-Danana (Tire Rolling Game)</h2>
-      <p>A game of rolling a tire while running and controlling it</p>
+    <!-- Madud -->
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Madud.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Madud</h2>
+        <p>A girls' game using simple handmade dolls</p>
+        <a href="#popup-Al-Madud" class="open-btn"> How to Play</a>
+
+        <div id="popup-Al-Madud" class="overlay">
+          <div class="popup">
+
+            <a href="#indoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Madud</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A traditional Saudi girls' game where players create handmade dolls using simple materials like fabric, beads,
+              and sticks. The dolls are used to act out social and family roles, encouraging imagination and role-playing.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              1 or more players (can be played individually or in groups)
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for girls (especially ages 12 and under)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-<div class="game-card">
-    <img src="{% static 'images/games/Al-Masaqeel.jpg' %}" alt="Al-Masaqeel">
+    <!-- Zagtah -->
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Zagtah.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Zagtah</h2>
+        <p>A five-stone skill game</p>
+        <a href="#popup-Al-Zagtah" class="open-btn"> How to Play</a>
 
-  <div class="game-content">
-      <h2>Al-Masaqeel </h2>
-      <p>A marble game where players use skill to hit and win others' marbles</p>
+        <div id="popup-Al-Zagtah" class="overlay">
+          <div class="popup">
+
+            <a href="#indoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Zagtah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A traditional game played with five small smooth stones. The player throws one stone into the air and quickly picks up the others from the
+              ground before catching the falling stone. It requires focus, speed, and coordination.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              1 or more players (can be played individually or in groups)
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Hopscotch.jpg' %}" alt="Hopscotch">
+    <!-- Masaqeel -->
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Masaqeel.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Masaqeel</h2>
+        <p>A marble game based on skill</p>
+        <a href="#popup-Al-Masaqeel" class="open-btn"> How to Play</a>
 
-  <div class="game-content">
-      <h2>Al-Hajlah (Hopscotch)</h2>
-      <p>Jumping on one foot across drawn squares on the ground</p>
+        <div id="popup-Al-Masaqeel" class="overlay">
+          <div class="popup">
+
+            <a href="#indoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Masaqeel</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A traditional game played with small colorful glass marbles. Players compete by aiming and hitting their opponent's
+              marbles to win them, making the game all about accuracy and skill.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 or more players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Zagtah.jpg' %}" alt="Al-Zagtah">
 
-  <div class="game-content">
-      <h2>Al-Zagtah </h2>
-      <p>A five-stone game where a player tosses one and quickly picks up the others</p>
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Kabush.png' %}">
+      <div class="card-content">
+        <h2>Al-Kabush</h2>
+        <p>Throwing a stone to win marbles</p>
+        <a href="#popup-Al-Kabush" class="open-btn"> How to Play</a>
+
+        <div id="popup-Al-Kabush" class="overlay">
+          <div class="popup">
+
+            <a href="#indoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Kabush</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A traditional game popular in western Saudi Arabia, especially in Makkah. Players place small marbles inside a drawn circle, then take turns throwing a smooth stone from a distance to knock the marbles
+              outside the circle and win them. The game requires accuracy and focus.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 or more players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
+</div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Hide-and-Seek.jpg' %}" alt="Hide and Seek">
 
-  <div class="game-content">
-      <h2>Al-Ghumaydah (Hide and Seek)</h2>
-      <p>A hide-and-seek game where one player searches for others</p>
+<!-- Outdoor Games -->
+<div class="heritage">
+  <h3 id="outdoor">Outdoor Games</h3>
+
+  <div class="images-scroll">
+
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Tire Rolling Game.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Danana</h2>
+        <p>Rolling a tire while running</p>
+        <a href="#popup-Al-Danana" class="open-btn"> How to Play</a>
+
+        <div id="popup-Al-Danana" class="overlay">
+          <div class="popup">
+
+            <a href="#outdoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Danana</h2>
+            <h3>Game Description:</h3>
+            <p>
+             A traditional outdoor game where players roll a tire using a stick and try to keep it moving
+            without falling. The game focuses on balance, control, and coordination.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              1 or more players (can be played individually or in groups)
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-   <div class="game-card">
-    <img src="{% static 'images/games/Hadarijah.jpg' %}" alt="Hadarijah">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Hopscotch.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Hajlah</h2>
+        <p>Jumping across squares</p>
+        <a href="#popup-Al-Hajlah" class="open-btn"> How to Play</a>
 
-  <div class="game-content">
-      <h2>Hadarijah</h2>
-      <p>A group game where children place their hands and one counts until a hand is chosen</p>
+        <div id="popup-Al-Hajlah" class="overlay">
+          <div class="popup">
+
+            <a href="#outdoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Hajlah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A game where players jump between squares drawn on the ground using one foot, following a
+              specific pattern without losing balance.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              1 or more players (can be played individually or in groups)
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Damah.jpg' %}" alt="Al-Damah">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Hide-and-Seek.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Ghumaydah</h2>
+        <p>Hide and seek game</p>
+        <a href="#popup-Al-Ghumaydah" class="open-btn"> How to Play</a>
 
-  <div class="game-content">
-      <h2>Al-Damah</h2>
-      <p>A board game focused on trapping the opponent’s pieces using strategy</p>
+        <div id="popup-Al-Ghumaydah" class="overlay">
+          <div class="popup">
+
+            <a href="#outdoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Ghumaydah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A game where one player searches for others who are hiding. It's fun, exciting, and encourages movement and strategy.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              3 or more players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Kiram.jpg' %}" alt="Al-Kiram">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Baiyah.png' %}">
+      <div class="card-content">
+        <h2>Al-Ba'iyah</h2>
+        <p>Team-based chasing game</p>
+        <a href="#popup-Al-Ba'iyah" class="open-btn"> How to Play</a>
 
-  <div class="game-content">
-      <h2>Al-Kiram</h2>
-      <p>A board game where players strike discs into corner pockets</p>
+        <div id="popup-Al-Ba'iyah" class="overlay">
+          <div class="popup">
+
+            <a href="#outdoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Ba'iyah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A team-based game played with two equal groups, each having a base called “Al-Mawrid.” Players try to enter the opponent's area and return safely while avoiding being tagged. If a player is touched, they must freeze in
+               place until a teammate comes to rescue them. The game involves strategy, speed, and teamwork.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              10 players (divided into two equal teams)
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Madud.jpg' %}" alt="Al-Madūdr">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Dibaq.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Dibaq</h2>
+        <p>Throwing a piece into a hole</p>
+        <a href="#popup-Al-Dibaq" class="open-btn"> How to Play</a>
 
-  <div class="game-content">
-      <h2>Al-Madud</h2>
-      <p>A girls' game where simple dolls are made and used for role-playing</p>
+        <div id="popup-Al-Dibaq" class="overlay">
+          <div class="popup">
+
+            <a href="#outdoor" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Dibaq</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A simple two-player game where each player tries to toss a small piece into a hole in the ground from
+              a short distance. The game focuses on accuracy and control.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
+</div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Kabush.png' %}" alt="Al-Kabush">
 
-   <div class="game-content">
-      <h2>Al-Kabush</h2>
-      <p>A game where players throw a stone to knock marbles out of a circle and win them.</p>
+<!-- Table Games -->
+<div class="heritage">
+  <h3 id="table">Table Games</h3>
+
+  <div class="images-scroll">
+
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Um-Al-Tisa.jpg' %}">
+      <div class="card-content">
+        <h2>Um Al-Tisa</h2>
+        <p>A strategic board game</p>
+        <a href="#popup-Um-Al-Tisa" class="open-btn"> How to Play</a>
+
+        <div id="popup-Um-Al-Tisa" class="overlay">
+          <div class="popup">
+
+            <a href="#table" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Um Al-Tisa</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A strategy board game where players place and move pieces to form straight lines and capture their opponent's pieces.
+              The goal is to outplay the opponent through planning and tactics.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Baiyah.png' %}" alt="Al-Baiyah">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Damah.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Damah</h2>
+        <p>Strategy game using pieces</p>
+        <a href="#popup-Al-Damah" class="open-btn"> How to Play</a>
 
-   <div class="game-content">
-      <h2>Al-Ba'iyah</h2>
-      <p>A team game where a player enters the opponentطs side and returns;
-         if tagged, they must wait until a teammate frees them.</p>
+        <div id="popup-Al-Damah" class="overlay">
+          <div class="popup">
+
+            <a href="#table" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Damah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A classic strategy board game played on a divided board with pieces. Players aim to capture and trap the opponent's pieces by moving diagonally,
+              using planning and simple tactics similar to chess.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Sijah.jpg' %}" alt="Al-Sijah">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Kiram.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Kiram</h2>
+        <p>Disc striking board game</p>
+        <a href="#popup-Al-Kiram" class="open-btn"> How to Play</a>
 
-   <div class="game-content">
-      <h2>Al-Sijah</h2>
-      <p>An ancient stone game based on strategy and trapping the opponent, similar to chess</p>
+        <div id="popup-Al-Kiram" class="overlay">
+          <div class="popup">
+
+            <a href="#table" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Kiram</h2>
+            <h3>Game Description:</h3>
+            <p>
+              A board game where players use a striker to hit discs and aim to pocket them into the corners.
+              The game requires precision, control, and strategy.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 or 4 players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="game-card">
-    <img src="{% static 'images/games/Al-Dibaq.jpg' %}" alt="Al-Dibaq">
+    <div class="heritage-card">
+      <img src="{% static 'images/games/Al-Sijah.jpg' %}">
+      <div class="card-content">
+        <h2>Al-Sijah</h2>
+        <p>Ancient strategy game</p>
+        <a href="#popup-Al-Sijah" class="open-btn"> How to Play</a>
 
-   <div class="game-content">
-      <h2>Al-Dibaq</h2>
-      <p>A two-player game where each tries to toss a small piece into a hole from a distance.</p>
+        <div id="popup-Al-Sijah" class="overlay">
+          <div class="popup">
+
+            <a href="#table" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> How to Play Al-Sijah</h2>
+            <h3>Game Description:</h3>
+            <p>
+              An ancient stone-based game played on a drawn grid using small stones. Players use strategy to trap their opponent's pieces,
+              similar to chess but with simpler rules. It is especially popular in northern Saudi Arabia.
+            </p>
+            <h3>Number of Players:</h3>
+            <p>
+              2 players
+            </p>
+            <h3>Category:</h3>
+            <p>
+              Suitable for everyone (boys and girls)
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
-
-
 </div>
 
   {%endblock%}

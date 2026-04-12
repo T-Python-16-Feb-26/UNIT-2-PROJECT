@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css%}
-<link rel="stylesheet" href="{%static 'css/style-clothes-page.css'%}">
+<link rel="stylesheet" href="{%static 'css/style-pages.css'%}">
 {%endblock%}
 
 {% block title %}Traditional Clothing{%endblock%}
@@ -31,102 +31,77 @@
   </div>
   </section>
 
+<div class="heritage">
 
-<section class="clothes-section">
+  <!-- Women -->
+  <h2 class="section-title">Women Traditional Clothing</h2>
 
-    <h2 class="section-title">Women Traditional Clothing</h2>
-    <section class="clothes">
-        
-        <!-- Women -->
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/west-clothe-women.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>West Clothes</h1>
-                <p>Light fabrics with vibrant embroidery.</p>
-            </div>
+  <!-- Southern Region -->
+  <h3>Southern Region</h3>
+  <p>
+    Southern women's clothing is known for its rich colors, heavy embroidery,
+    and strong cultural identity.
+  </p>
+
+  <div class="images-scroll">
+    <img src="{%static 'images/clothes/south-women1.jpg'%}">
+    <img src="{%static 'images/clothes/south-women2.jpg'%}">
+    <img src="{%static 'images/clothes/south-women3.jpg'%}">
+    <img src="{%static 'images/clothes/south-women4.jpg'%}">
+    <img src="{%static 'images/clothes/south-women5.jpg'%}">
+  </div>
+
+  <a href="#south-women" class="open-btn">View Details</a>
+
+        <div id="south-women" class="overlay">
+          <div class="popup">
+
+            <a href="#table" class="close"><span class="material-symbols-outlined">close</span></a>
+
+            <h2> Southern Region (Women)</h2>
+            
+            <p>
+            Women's traditional clothing in the southern region is characterized by bold colors and rich embroidery. Black garments are often decorated with colorful geometric patterns, especially on the chest and sleeves, along with traditional silver belts and accessories that enhance the cultural look.
+            Some outfits also feature wide sleeves and flowing designs, combined with head coverings and traditional hats, reflecting the rich cultural identity and diversity of the southern region
+            </p>
+            
+          </div>
         </div>
-
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/east-clothe-women.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>East Clothes</h1>
-                <p>Colorful designs inspired by coastal life.</p>
-            </div>
-        </div>
-
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/north-clothe-women.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>North Clothes</h1>
-                <p>Warm garments with traditional details.</p>
-            </div>
-        </div>
-
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/south-clothe-women.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>South Clothes</h1>
-                <p>Rich patterns and bold cultural identity.</p>
-            </div>
-        </div>
-
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/central-clothe-women.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>Central Clothes</h1>
-                <p>Simple and classic traditional wear.</p>
-            </div>
-        </div>
-
-    </section>
+  
 
 
-    <h2 class="section-title">Men Traditional Clothing</h2>
-    <section class="clothes">
+  <!-- Najd Region -->
+  <h3>Najd Region</h3>
+  <p>
+    Najdi clothing is simple and elegant, often featuring dark colors
+    with subtle embroidery.
+  </p>
 
-        <!-- Men -->
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/west-clothe-men.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>West Clothes</h1>
-                <p>Elegant styles with cultural details.</p>
-            </div>
-        </div>
+  <div class="images-scroll">
+    <img src="{%static 'images/clothes/najd1.jpg'%}">
+    <img src="{%static 'images/clothes/najd2.jpg'%}">
+  </div>
 
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/east-clothe-men.webp'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>East Clothes</h1>
-                <p>Traditional outfits with unique patterns.</p>
-            </div>
-        </div>
+  <a href="#najd-women" class="open-btn">View Details</a>
 
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/north-clothe-men.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>North Clothes</h1>
-                <p>Warm and practical traditional wear.</p>
-            </div>
-        </div>
 
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/south-clothe-men.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>South Clothes</h1>
-                <p>Bold designs reflecting heritage.</p>
-            </div>
-        </div>
+  <!-- Men -->
+  <h2 class="section-title">Men Traditional Clothing</h2>
 
-        <div class="clothes-card">
-            <img src="{%static 'images/clothes/central-clothe-men.jpg'%}" alt="">
-            <div class="card-data-clothes">
-                <h1>Central Clothes</h1>
-                <p>Classic and timeless traditional style.</p>
-            </div>
-        </div>
+  <!-- Southern Region -->
+  <h3>Southern Region</h3>
+  <p>
+    Southern men's clothing reflects strength and tradition, often including
+    decorative belts and unique regional elements.
+  </p>
 
-    </section>
+  <div class="images-scroll">
+    <img src="{%static 'images/clothes/south-men1.jpg'%}">
+    <img src="{%static 'images/clothes/south-men2.jpg'%}">
+  </div>
 
-</section>
+  <a href="#south-men" class="open-btn">View Details</a>
+
+</div>
 
 {% endblock %}

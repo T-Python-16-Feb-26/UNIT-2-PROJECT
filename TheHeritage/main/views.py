@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpRequest,HttpResponse
 
 # Create your views here.
@@ -28,3 +28,21 @@ def handicrafts_view(request:HttpRequest):
 def folk_arts_view(request: HttpRequest):
 
     return render(request, 'main/folkarts.html')
+
+def traditions_view(request: HttpRequest):
+
+    return render(request, 'main/traditions.html')
+
+
+def mode_view(request:HttpRequest,mode):
+
+    response = redirect(request.GET.get("next", "/"))
+
+    if mode == "light":
+        response.set_cookie("mode", "light", max_age=60*60*24*7)
+
+    elif mode == "dark":
+        response.set_cookie("mode", "dark", max_age=60*60*24*7)
+
+
+    return response

@@ -7,12 +7,13 @@
 }
 
 .game-card{
-    background: #f5f5f0;
-    border: 2px solid #2F6B3F;
+    background: #6e5034;
     border-radius: 20px;
     overflow: hidden;
     transition: 0.3s;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgb(172, 134, 107);
+
 }
 
 .game-card img{
@@ -27,27 +28,24 @@
 }
 
 .game-content h2{
+    color: #E1D9BC;
   font-size: 15px;
 }
 
 .game-content p{
     margin-top: 0.5rem;
   font-size: 12px;
-  color: #666666;
+  color: #FFFDEB;
 }
 
 
 .game-card:hover{
-  transform: scale(1.08) rotate(-1deg);
+  transform: scale(1.09) rotate(-1deg);
 }
 
 @media (max-width: 750px) {
 
-    .games-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 1rem;
-    }
+ 
 
     .game-content h2 {
         font-size: 14px;
