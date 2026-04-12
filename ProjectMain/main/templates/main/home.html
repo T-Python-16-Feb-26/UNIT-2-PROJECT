@@ -36,8 +36,8 @@
     <h1 class="display-3 fw-bold mb-2">101 Wildlife Species</h1>
     <p class="lead mb-4">of the Kingdom of Saudi Arabia</p>
     <div class="d-flex gap-3 justify-content-center flex-wrap">
-      <a href="{% url 'main:class' 'mammals' %}" class="btn btn-gold btn-lg px-4">Explore Mammals</a>
-      <a href="{% url 'main:class' 'birds' %}" class="btn btn-outline-light btn-lg px-4">Explore Birds</a>
+      <a href="#mammals" class="btn btn-gold btn-lg px-4 scroll-to-section">Explore Mammals</a>
+      <a href="#birds" class="btn btn-outline-light btn-lg px-4 scroll-to-section">Explore Birds</a>
     </div>
   </div>
 </section>
@@ -46,6 +46,11 @@
 <section id="about" class="about-section py-5">
   <div class="container py-3">
     <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <div class="about-img-placeholder d-flex align-items-center justify-content-center">
+          <span style="font-size: 5rem;">🦅</span>
+        </div>
+      </div>
       <div class="col-md-6">
         <p class="text-uppercase fw-bold small mb-1" style="color: var(--accent-gold); letter-spacing: .1em;">The Wild Kingdom</p>
         <h2 class="section-heading mb-3">Saudi Arabia's Remarkable Biodiversity</h2>
@@ -61,18 +66,14 @@
         </p>
         <a href="{% url 'main:class' 'mammals' %}" class="btn btn-primary-green px-4">Start Exploring</a>
       </div>
-      <div class="col-md-6">
-        <div class="about-img-placeholder d-flex align-items-center justify-content-center">
-          <span style="font-size: 5rem;">🦅</span>
-        </div>
-      </div>
+      
     </div>
   </div>
 </section>
 
 {# ── 3. Class Spotlights (first 3 classes) ── #}
-{% for animal_class in classes_list|slice:":3" %}
-<section class="spotlight-section py-5 {% if forloop.counter|divisibleby:2 %}bg-surface-alt{% endif %}">
+{% for animal_class in classes_list|slice:":4" %}
+<section id="{{ animal_class.slug }}" class="spotlight-section py-5 {% if forloop.counter|divisibleby:2 %}bg-surface-alt{% endif %}">
   <div class="container py-2">
     <div class="row align-items-center g-5 {% if forloop.counter|divisibleby:2 %}flex-md-row-reverse{% endif %}">
       <div class="col-md-6">
@@ -93,5 +94,17 @@
   </div>
 </section>
 {% endfor %}
+
+<script>
+  document.querySelectorAll('a.scroll-to-section').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 
 {% endblock %}
