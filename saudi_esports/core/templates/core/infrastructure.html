@@ -1,0 +1,279 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="infra-hero">
+  <canvas id="infraCanvas"></canvas>
+  <img src="{% static 'core/images/infrastructure_hero.webp' %}" class="infra-bg">
+
+  <div class="infra-overlay"></div>
+
+  <div class="infra-content">
+
+    <span class="infra-badge">SAUDI INFRASTRUCTURE</span>
+
+    <h1>
+      Building the Future of <br>
+      <span>Esports Infrastructure</span>
+    </h1>
+
+    <p>
+      From smart arenas to next-generation networks, Saudi Arabia is creating the world’s most advanced gaming ecosystem.
+    </p>
+
+    <!-- STATS -->
+    <div class="infra-stats">
+
+      <div>
+        <strong>20+</strong>
+        <span>Gaming Venues</span>
+      </div>
+
+      <div>
+        <strong>$38B</strong>
+        <span>Investment</span>
+      </div>
+
+      <div>
+        <strong>5G+</strong>
+        <span>Coverage</span>
+      </div>
+
+      <div>
+        <strong>Global</strong>
+        <span>Infrastructure</span>
+      </div>
+    </div>
+
+   <div class="infra-actions">
+    <a href="#simulator" class="infra-btn primary">Try Simulator</a>
+    <a href="#networks" class="infra-btn outline">Compare Networks</a>
+  </div>
+
+
+</section>
+
+
+
+<section class="infra-core">
+
+
+  <!-- ======= WHAT MATTER SECTION ======-->
+  
+<section class="infra-core">
+
+  <!-- HEADER -->
+  <div class="infra-core-header">
+    <span class="infra-badge">CORE CONCEPTS</span>
+    <h2>What Actually <span>Matters</span></h2>
+    <p>
+      Three metrics that separate casual players from champions. Understanding them is
+       the first step to optimizing your setup.
+    </p>
+  </div>
+
+  <!-- 1: IMAGE LEFT -->
+  <div class="infra-card">
+
+    <div class="infra-image">
+      <img src="{% static 'core/images/ping.jpg' %}">
+    </div>
+
+    <div class="infra-info">
+      <h3>Ping</h3>
+      <span class="infra-sub green">ROUND-TRIP TIME</span>
+
+      <p>Ping measures the round-trip time...</p>
+
+      <div class="infra-levels">
+
+  <div class="level">
+    <span class="badge green">Pro Level</span>
+    <strong> < 20ms</strong>
+  </div>
+
+  <div class="level">
+    <span class="badge orange">Playable</span>
+    <strong>20–60ms</strong>
+  </div>
+
+  <div class="level">
+    <span class="badge red">Unplayable</span>
+    <strong>> 60ms</strong>
+  </div>
+
+</div>
+
+      <div class="infra-impact green">
+        Gaming Impact: High ping causes delayed reactions.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- 2: IMAGE RIGHT -->
+  <div class="infra-card reverse">
+
+    <div class="infra-image">
+      <img src="{% static 'core/images/latency.jpg' %}">
+    </div>
+
+    <div class="infra-info">
+      <h3>Latency</h3>
+      <span class="infra-sub orange">INPUT-TO-ACTION DELAY</span>
+
+      <p>Latency is the total delay...</p>
+
+      <div class="infra-levels">
+
+  <div class="level">
+    <span class="badge green">Pro Level</span>
+    <strong> < 30ms</strong>
+  </div>
+
+  <div class="level">
+    <span class="badge orange">Playable</span>
+    <strong>30–80ms</strong>
+  </div>
+
+  <div class="level">
+    <span class="badge red">Unplayable</span>
+    <strong>> 80ms</strong>
+  </div>
+
+</div>
+
+      <div class="infra-impact orange">
+        Gaming Impact: High latency makes gameplay sluggish.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- 3: IMAGE LEFT -->
+  <div class="infra-card">
+
+    <div class="infra-image">
+      <img src="{% static 'core/images/stability.webp' %}">
+    </div>
+
+    <div class="infra-info">
+      <h3>Stability</h3>
+      <span class="infra-sub purple">PACKET LOSS & JITTER</span>
+
+      <p>Stability refers to connection consistency...</p>
+
+      <div class="infra-levels">
+
+  <div class="level">
+    <span class="badge green">Pro Level</span>
+    <strong> < 20ms</strong>
+  </div>
+
+  <div class="level">
+    <span class="badge orange">Playable</span>
+    <strong>80–95%</strong>
+  </div>
+
+  <div class="level">
+    <span class="badge red">Unplayable</span>
+    <strong>> 80%</strong>
+  </div>
+</div>
+
+</section>
+    <section class="infra-compare">
+
+  <div class="infra-compare-header">
+
+    <!-- TAG -->
+    <span class="infra-compare-tag">
+      <i class="fas fa-scale-balanced"></i>
+      NETWORK COMPARISON
+    </span>
+
+    <!-- TITLE -->
+    <h2 class="infra-compare-title">
+      4G vs 5G vs <span>Fiber</span>
+    </h2>
+
+    <!-- DESC -->
+    <p class="infra-compare-desc">
+      Not all connections are created equal. See exactly how each network type performs
+      under competitive gaming conditions.
+    </p>
+
+  </div>
+  </div>
+
+</section>  
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const canvas = document.getElementById("infraCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+/* CREATE DOTS */
+for (let i = 0; i < 80; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2,
+    speedX: (Math.random() - 0.5) * 0.5,
+    speedY: (Math.random() - 0.5) * 0.5
+  });
+}
+
+/* ANIMATION */
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+
+    p.x += p.speedX;
+    p.y += p.speedY;
+
+    /* DOT DRAWING*/
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(0,150,255,0.7)";
+    ctx.fill();
+
+    /* TO RETURN TO SECREEN */
+    if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+/* resize */
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+</script>
+
+
+{% endblock %}
