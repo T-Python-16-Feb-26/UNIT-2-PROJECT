@@ -1,0 +1,320 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+  {% if lang == 'ar' %}عين الصقر — الرئيسية{% else %}SaqrEye — Home{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+<section class="saqr-hero"
+{% if persona == "tourist" %}
+    {% static 'images/hero/hero-tourist.jpg' as hero_url %}
+{% else %}
+    {% static 'images/hero/hero-investor.jpg' as hero_url %}
+{% endif %}
+
+<section class="saqr-hero" style="background-image: url('{{ hero_url }}');">
+
+  <div class="saqr-hero-overlay"></div>
+
+  <div class="container saqr-hero-content">
+    <div class="row">
+      <div class="col-12 col-lg-7">
+
+        <!-- Badge -->
+        <span class="saqr-badge {% if persona == 'tourist' %}saqr-badge-tourist{% else %}saqr-badge-investor{% endif %} mb-3 fade-in-up">
+          {% if persona == 'tourist' %}
+            {% if lang == 'ar' %}🧳 وضع السائح{% else %}🧳 Tourist Mode{% endif %}
+          {% else %}
+            {% if lang == 'ar' %}  وضع المستثمر{% else %}💼 Investor Mode{% endif %}
+          {% endif %}
+        </span>
+
+        <!-- Title -->
+        <h1 class="saqr-hero-title fade-in-up-delay-1">
+          {% if persona == 'tourist' %}
+            {% if lang == 'ar' %}اكتشف جمال المملكة{% else %}Discover Saudi Arabia's Beauty{% endif %}
+          {% else %}
+            {% if lang == 'ar' %}استثمر في مستقبل المملكة{% else %}Invest in Saudi Arabia's Future{% endif %}
+          {% endif %}
+        </h1>
+
+        <!-- Gold Line -->
+        <div class="saqr-gold-line fade-in-up-delay-2"></div>
+
+        <!-- Subtitle -->
+        <p class="saqr-hero-subtitle fade-in-up-delay-2 mt-3">
+          {% if persona == 'tourist' %}
+            {% if lang == 'ar' %}
+              من جبال عسير إلى آثار العُلا — تجارب لا تُنسى تنتظرك
+            {% else %}
+              From Asir Mountains to AlUla's ancient ruins — unforgettable experiences await you
+            {% endif %}
+          {% else %}
+            {% if lang == 'ar' %}
+              رؤية 2030 تفتح آفاقاً استثمارية غير مسبوقة في قلب العالم
+            {% else %}
+              Vision 2030 opens unprecedented investment horizons in the heart of the world
+            {% endif %}
+          {% endif %}
+        </p>
+
+        <!-- CTA Button -->
+        <a href="#cities-section" class="btn saqr-btn-gold saqr-btn-lg fade-in-up-delay-3 mt-2">
+          {% if persona == 'tourist' %}
+            {% if lang == 'ar' %}استكشف المدن{% else %}Explore Cities{% endif %}
+          {% else %}
+            {% if lang == 'ar' %}اكتشف الفرص{% else %}Discover Opportunities{% endif %}
+          {% endif %}
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════════ END HERO -->
+
+
+<!-- ═══════════════════════════════════════════════════════ STATS BAR -->
+<section class="saqr-stats-bar py-4">
+  <div class="container">
+    <div class="row text-center gy-3">
+      {% if persona == 'tourist' %}
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">4</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}مدن{% else %}Cities{% endif %}</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">20+</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}وجهة سياحية{% else %}Destinations{% endif %}</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">3</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}مواقع يونسكو{% else %}UNESCO Sites{% endif %}</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">100M+</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}زائر سنوياً{% else %}Visitors/Year{% endif %}</span>
+        </div>
+      </div>
+      {% else %}
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">5</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}مدن{% else %}Cities{% endif %}</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">13+</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}مشروع عملاق{% else %}Mega Projects{% endif %}</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">$1T+</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}حجم الاستثمار{% else %}Investment Volume{% endif %}</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="saqr-stat-item">
+          <span class="saqr-stat-number">2030</span>
+          <span class="saqr-stat-label">{% if lang == 'ar' %}رؤية المملكة{% else %}Vision Target{% endif %}</span>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════════ END STATS BAR -->
+
+
+<!-- ═══════════════════════════════════════════════════════ CITIES -->
+<section class="py-5" id="cities-section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="saqr-section-title">
+        {% if persona == 'tourist' %}
+          {% if lang == 'ar' %}<span>اكتشف</span> المدن{% else %}Explore <span>Cities</span>{% endif %}
+        {% else %}
+          {% if lang == 'ar' %}<span>فرص</span> الاستثمار{% else %}Investment <span>Opportunities</span>{% endif %}
+        {% endif %}
+      </h2>
+      <p class="saqr-section-subtitle mx-auto mt-2">
+        {% if persona == 'tourist' %}
+          {% if lang == 'ar' %}
+            اختر مدينتك واكتشف أبرز الوجهات والأماكن السياحية
+          {% else %}
+            Choose your city and discover the top tourist destinations and attractions
+          {% endif %}
+        {% else %}
+          {% if lang == 'ar' %}
+            استعرض أبرز مشاريع رؤية 2030 عبر مدن المملكة
+          {% else %}
+            Browse the top Vision 2030 projects across Saudi Arabia's cities
+          {% endif %}
+        {% endif %}
+      </p>
+      <div class="saqr-gold-line mx-auto mt-3"></div>
+    </div>
+
+    <!-- Cities Grid -->
+    <div class="row gy-4">
+      {% for city in cities %}
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <a href="{% url 'city_detail_view' city.slug %}" class="text-decoration-none">
+          <div class="saqr-card h-100">
+
+            <!-- City Image -->
+            <div style="overflow:hidden; height:200px;">
+              <img
+                src="{% static 'images/cities/' %}{{ city.image|slice:'7:' }}"
+                alt="{{ city.name_ar }}"
+                style="width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease;"
+                onerror="this.src='https://placehold.co/400x200/1a1a1a/C8972B?text={{ city.name_en }}'"
+              >
+            </div>
+
+            <!-- Card Body -->
+            <div class="saqr-card-body">
+
+              <!-- City Name -->
+              <h3 class="saqr-card-title">
+                {% if lang == 'ar' %}{{ city.name_ar }}{% else %}{{ city.name_en }}{% endif %}
+              </h3>
+
+              <!-- City Desc -->
+              <p class="saqr-card-meta mt-1" style="font-size:0.83rem; line-height:1.5;">
+                {% if lang == 'ar' %}
+                  {{ city.desc_ar|truncatechars:80 }}
+                {% else %}
+                  {{ city.desc_en|truncatechars:80 }}
+                {% endif %}
+              </p>
+              <!-- Count Badge -->
+              <div class="d-flex align-items-center justify-content-between mt-3">
+                <span class="saqr-badge {% if persona == 'tourist' %}saqr-badge-tourist{% else %}saqr-badge-investor{% endif %}">
+                  {% if persona == 'tourist' %}
+                    {{ city.places_count }}
+                    {% if lang == 'ar' %}وجهة{% else %}Places{% endif %}
+                  {% else %}
+                    {{ city.projects_count }}
+                    {% if lang == 'ar' %}مشروع{% else %}Projects{% endif %}
+                  {% endif %}
+                </span>
+                <span class="text-gold" style="font-size:0.85rem; font-weight:600;">
+                  {% if lang == 'ar' %}استكشف ←{% else %}→ Explore{% endif %}
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════════ END CITIES -->
+
+
+<!-- ═══════════════════════════════════════════════════════ VISION BANNER -->
+<section class="saqr-vision-banner py-5 mt-2">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      <div class="col-12 col-md-8">
+        <h3 class="saqr-vision-banner-title">
+          {% if lang == 'ar' %}
+            🇸🇦 رؤية المملكة <span>2030</span>
+          {% else %}
+            🇸🇦 Saudi Arabia's Vision <span>2030</span>
+          {% endif %}
+        </h3>
+        <p class="saqr-vision-banner-text mt-2">
+          {% if lang == 'ar' %}
+            مبادرة طموحة تهدف إلى تنويع الاقتصاد وتطوير قطاعات السياحة والترفيه والاستثمار في المملكة العربية السعودية.
+          {% else %}
+            An ambitious initiative aimed at diversifying the economy and developing tourism, entertainment, and investment sectors in Saudi Arabia.
+          {% endif %}
+        </p>
+      </div>
+      <div class="col-12 col-md-4 text-md-end">
+        <a href="{% url 'about_view' %}" class="btn saqr-btn-gold saqr-btn-lg">
+          {% if lang == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════════ END VISION BANNER -->
+
+{% endblock %}
+
+
+{% block extra_css %}
+<style>
+  /* ── Stats Bar ── */
+  .saqr-stats-bar {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .saqr-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .saqr-stat-number {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 900;
+    font-size: 1.75rem;
+    color: var(--accent-gold);
+    line-height: 1;
+  }
+
+  .saqr-stat-label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ── Vision Banner ── */
+  .saqr-vision-banner {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .saqr-vision-banner-title {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .saqr-vision-banner-title span {
+    color: var(--accent-gold);
+  }
+
+  .saqr-vision-banner-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 550px;
+  }
+</style>
+{% endblock %}

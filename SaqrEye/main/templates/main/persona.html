@@ -7,8 +7,8 @@
   <title>{% if lang == 'ar' %}عين الصقر — اختر شخصيتك{% else %}SaqrEye — Choose Your Role{% endif %}</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/images/favicon-32x32.png' %}">
-  <link rel="apple-touch-icon"                    href="{% static 'main/images/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+  <link rel="apple-touch-icon"                    href="{% static 'favicon/apple-touch-icon.png' %}">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
   <style>
     /* ── Persona Page Specific ── */
@@ -278,7 +278,7 @@
     {% if lang == 'ar' %}
     <a href="{% url 'set_language_view' %}?lang=en&next=/" class="btn btn-sm saqr-btn-outline">EN</a>
     {% else %}
-    <a href="{% url 'set_language_view' %}?lang=ar&next=/" class="btn btn-sm saqr-btn-outline">عر</a>
+    <a href="{% url 'set_language_view' %}?lang=ar&next=/" class="btn btn-sm saqr-btn-outline">AR</a>
     {% endif %}
     <button class="btn btn-sm saqr-btn-outline" onclick="toggleTheme()">
       <i class="bi bi-moon-fill" id="themeIcon"></i>
@@ -287,7 +287,7 @@
 
   <!-- ── Logo ── -->
   <div class="persona-logo">
-    <img src="{% static 'main/images/android-chrome-192x192.png' %}" alt="SaqrEye">
+    <img src="{% static 'favicon/android-chrome-192x192.png' %}" alt="SaqrEye">
     <span class="persona-logo-name">
       {% if lang == 'ar' %}عين الصقر{% else %}SaqrEye{% endif %}
     </span>
@@ -315,7 +315,7 @@
       <input type="hidden" name="persona" value="tourist">
       <div class="persona-card" onclick="this.closest('form').submit()">
         <div class="persona-card-img-wrap">
-          <img src="{% static 'main/images/tourist.jpg' %}" alt="Tourist">
+          <img src="{% static 'images/tourist.jpg' %}" alt="Tourist">
         </div>
         <div class="persona-card-body">
           <div class="persona-card-title">
@@ -344,7 +344,7 @@
       <input type="hidden" name="persona" value="investor">
       <div class="persona-card" onclick="this.closest('form').submit()">
         <div class="persona-card-img-wrap">
-          <img src="{% static 'main/images/investor.jpg' %}" alt="Investor">
+          <img src="{% static 'images/investor.jpg' %}" alt="Investor">
         </div>
         <div class="persona-card-body">
           <div class="persona-card-title">
