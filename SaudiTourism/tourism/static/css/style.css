@@ -70,7 +70,7 @@ body.dark-mode {
 .navbar-toggler-icon {
     filter: invert(1);
 }
-
+ /* End nav  */
 /* home slider */
 .slider {
     position: relative;
