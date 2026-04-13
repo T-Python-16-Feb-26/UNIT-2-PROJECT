@@ -7,11 +7,14 @@ from django.http import HttpRequest, HttpResponse
 def home_view(request):
     return render(request, 'main/home.html')
 
+def regions_view(request):
+    return render(request, 'main/regions.html')
+
 def crops_view(request):
     return render(request, 'main/crops.html')
 
-def regions_view(request):
-    return render(request, 'main/regions.html')
+def dates_view(request):
+    return render(request, 'main/dates.html')
 
 def initiatives_view(request):
     return render(request, 'main/initiatives.html')
@@ -22,11 +25,8 @@ def technology_view(request):
 def records_view(request):
     return render(request, 'main/records.html')
 
-def facts_view(request):
-    return render(request, 'main/facts.html')
+def festivals_view(request):
+    return render(request, 'main/festivals.html')
 
 def quiz_view(request):
     return render(request, 'main/quiz.html')
-
-def festivals_view(request):
-    return render(request, 'main/festivals.html')

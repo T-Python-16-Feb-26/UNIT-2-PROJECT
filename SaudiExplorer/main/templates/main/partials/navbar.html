@@ -9,14 +9,15 @@
     <!-- Links -->
     <div class="nav-links">
       <a href="{% url 'main:home_view' %}">Home</a>
-      <a href="{% url 'main:crops_view' %}">Crops</a>
       <a href="{% url 'main:regions_view' %}">Regions</a>
-      <a href="{% url 'main:technology_view' %}">Technology</a>
-      <a href="{% url 'main:facts_view' %}">Facts</a>
-      <a href="{% url 'main:records_view' %}">Records</a>
-      <a href="{% url 'main:quiz_view' %}">Quiz</a>
+      <a href="{% url 'main:crops_view' %}">Crops</a>
       <a href="{% url 'main:initiatives_view' %}">Initiatives</a>
+      <a href="{% url 'main:technology_view' %}">Technology</a>
+      <a href="{% url 'main:records_view' %}">Records</a>
       <a href="{% url 'main:festivals_view' %}">Festivals</a>
+      <a href="{% url 'main:quiz_view' %}">Quiz</a>
+      
+      
 
       <!-- Theme button -->
       <button class="theme-toggle" id="themeToggle">
@@ -33,11 +34,13 @@
 
   <!-- Mobile menu -->
   <div class="nav-mobile" id="mobileNav">
-    <a href="{% url 'main:home_view' %}">🏠 Home</a>
-    <a href="{% url 'main:crops_view' %}">🌾 Crops</a>
-    <a href="{% url 'main:regions_view' %}">📍 Regions</a>
-    <a href="{% url 'main:technology_view' %}">⚙️ Technology</a>
-    <a href="{% url 'main:facts_view' %}">📊 Facts</a>
-    <a href="{% url 'main:quiz_view' %}">🧠 Quiz</a>
+    <a href="{% url 'main:home_view' %}">Home</a>
+    <a href="{% url 'main:regions_view' %}">Regions</a>
+    <a href="{% url 'main:crops_view' %}">Crops</a>
+    <a href="{% url 'main:initiatives_view' %}">Initiatives</a>
+    <a href="{% url 'main:technology_view' %}">Technology</a>
+    <a href="{% url 'main:records_view' %}">Records</a>
+    <a href="{% url 'main:festivals_view' %}">Festivals</a>
+    <a href="{% url 'main:quiz_view' %}">Quiz</a>
   </div>
 </nav>

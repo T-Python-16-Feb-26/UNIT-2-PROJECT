@@ -1,0 +1,154 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Dates — Ghosn{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <span class="page-hero-icon">🌴</span>
+  <h1 class="page-hero-title">Saudi <span>Dates</span></h1>
+  <p class="page-hero-subtitle">
+    Saudi Arabia produces more than 300 varieties of dates — a symbol of hospitality, heritage, and nutrition.
+  </p>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <span class="stat-icon">🌴</span>
+      <h3 class="stat-number">300+</h3>
+      <p class="stat-label">Date Varieties</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon">🇸🇦</span>
+      <h3 class="stat-number">#1</h3>
+      <p class="stat-label">Global Producer</p>
+    </div>
+
+    <div class="stat-card">
+      <span class="stat-icon">📦</span>
+      <h3 class="stat-number">1M+</h3>
+      <p class="stat-label">Tons Exported</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CARDS -->
+<section class="cards-section">
+  <div class="cards-grid">
+
+    <!-- Sukkari -->
+    <div class="card featured-card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/sukkari.webp' %}" class="card-img" alt="Sukkari Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🌟 Most Popular</span>
+        <h3 class="card-title">Sukkari</h3>
+        <p class="card-desc">
+          Grown mainly in Al-Qassim, Sukkari dates are golden, soft, and extremely sweet. They are among the most demanded dates in Saudi Arabia and the Gulf.
+        </p>
+      </div>
+      <div class="card-footer">📍 Al-Qassim</div>
+    </div>
+
+    <!-- Khلاص -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/Khalas.webp' %}" class="card-img" alt="Khalas Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Hospitality</span>
+        <h3 class="card-title">Khalas</h3>
+        <p class="card-desc">
+          Famous in Al-Ahsa, Khalas dates have a golden color and rich aroma, and are the first choice for serving with Arabic coffee.
+        </p>
+      </div>
+      <div class="card-footer">📍 Al-Ahsa</div>
+    </div>
+
+    <!-- Ajwa -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/Ajwa.webp' %}" class="card-img" alt="Ajwa Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Medina Heritage</span>
+        <h3 class="card-title">Ajwa</h3>
+        <p class="card-desc">
+          Dark, soft, and highly nutritious, Ajwa dates are among the most sacred and historically significant varieties in the world.
+        </p>
+      </div>
+      <div class="card-footer">📍 Al-Madinah</div>
+    </div>
+
+    <!-- Segai -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/segai.jpg' %}" class="card-img" alt="Segai Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Premium</span>
+        <h3 class="card-title">Segai</h3>
+        <p class="card-desc">
+          Known for its two-tone appearance and soft-crunch texture, Segai dates are widely appreciated across central Saudi Arabia.
+        </p>
+      </div>
+      <div class="card-footer">📍 Najd Region</div>
+    </div>
+
+    <!-- Medjool -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/medjool.jpg' %}" class="card-img" alt="Medjool Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Luxury</span>
+        <h3 class="card-title">Medjool</h3>
+        <p class="card-desc">
+          Large, rich, and considered one of the finest dates globally, Medjool dates are often called the “king of dates”.
+        </p>
+      </div>
+      <div class="card-footer">📍 Cultivated in multiple regions</div>
+    </div>
+
+    <!-- Barhi -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/barhi.jpg' %}" class="card-img" alt="Barhi Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Fresh Stage</span>
+        <h3 class="card-title">Barhi</h3>
+        <p class="card-desc">
+          Known for its yellow color and crunchy texture when fresh, Barhi dates are unique for being eaten at the “khalal” stage.
+        </p>
+      </div>
+      <div class="card-footer">📍 Southern regions</div>
+    </div>
+
+    <!-- Safri -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/Safri.webp' %}" class="card-img" alt="Safri Dates">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Traditional</span>
+        <h3 class="card-title">Safri</h3>
+        <p class="card-desc">
+          Common in Bisha, Safri dates are soft, light brown, and widely consumed locally for their balanced sweetness.
+        </p>
+      </div>
+      <div class="card-footer">📍 Bisha</div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

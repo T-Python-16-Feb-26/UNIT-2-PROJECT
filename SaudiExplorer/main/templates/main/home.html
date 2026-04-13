@@ -10,10 +10,10 @@
   <div class="hero-pattern"></div>
   <div class="hero-badge">🌱 Saudi Arabia's Green Heart</div>
   <h1 class="hero-title">
-    Growing the<br><span>Future of</span><br>Agriculture
+    Shaping the Future of <br><span>Agriculture</span><br>
   </h1>
   <p class="hero-subtitle">
-    Ghosn — Arabic for "branch" — explores the rich tapestry of agriculture across the Kingdom of Saudi Arabia.
+    Ghosn — meaning “branch” in Arabic — journeys through the rich agricultural heritage of the Kingdom of Saudi Arabia.
   </p>
 
   <div class="hero-cta">
@@ -35,8 +35,8 @@
       <div class="stat-label">Major Crop Types</div>
     </div>
     <div class="stat-item">
-      <div class="stat-value">Vision<br>2030</div>
-      <div class="stat-label">Sustainability Goal</div>
+      <div class="stat-value">2030</div>
+      <div class="stat-label">Sustainability Vision Goal</div>
     </div>
   </div>
 </section>
@@ -54,44 +54,96 @@
 </section>
 
 <!-- NAV CARDS -->
-    <section class="nav-cards-section">
-      <div class="section-header">
-        <span class="section-tag">Explore Ghosn</span>
-        <h2 class="section-title">What Would You Like to Discover?</h2>
-        <p class="section-desc">Dive into the world of Saudi agriculture through our curated sections.</p>
+<section class="nav-cards-section">
+  <div class="section-header">
+    <span class="section-tag">Explore Ghosn</span>
+    <h2 class="section-title">What Would You Like to Discover?</h2>
+    <p class="section-desc">Explore Saudi Arabia’s agricultural landscape through regions, crops, innovation, and culture.</p>
+  </div>
+
+  <div class="nav-cards-grid">
+
+    <!-- Regions -->
+    <a href="{% url 'main:regions_view' %}" class="nav-card">
+      <div class="nav-card-icon">📍</div>
+      <div class="nav-card-title">Regions</div>
+      <div class="nav-card-desc">
+        Journey across Saudi Arabia’s diverse agricultural regions — from fertile valleys to tropical south — each with unique climates and crops.
       </div>
-      <div class="nav-cards-grid">
-        <a href="crops.html" class="nav-card">
-          <div class="nav-card-icon">🌾</div>
-          <div class="nav-card-title">Crops</div>
-          <div class="nav-card-desc">Explore major crops grown in Saudi Arabia: dates, wheat, vegetables, fruits & herbs.</div>
-          <div class="nav-card-arrow">→</div>
-        </a>
-        <a href="regions.html" class="nav-card">
-          <div class="nav-card-icon">📍</div>
-          <div class="nav-card-title">Regions</div>
-          <div class="nav-card-desc">Discover the agricultural heartlands — Al-Qassim, Al-Jouf, Tabuk, Taif & Jazan.</div>
-          <div class="nav-card-arrow">→</div>
-        </a>
-        <a href="technology.html" class="nav-card">
-          <div class="nav-card-icon">⚙️</div>
-          <div class="nav-card-title">Technology</div>
-          <div class="nav-card-desc">Learn about drip irrigation, hydroponics, smart farming, and AI in agriculture.</div>
-          <div class="nav-card-arrow">→</div>
-        </a>
-        <a href="facts.html" class="nav-card">
-          <div class="nav-card-icon">📊</div>
-          <div class="nav-card-title">Facts</div>
-          <div class="nav-card-desc">Fascinating statistics and surprising facts about the Kingdom's farming legacy.</div>
-          <div class="nav-card-arrow">→</div>
-        </a>
-        <a href="quiz.html" class="nav-card">
-          <div class="nav-card-icon">🧠</div>
-          <div class="nav-card-title">Quiz</div>
-          <div class="nav-card-desc">Test your knowledge of Saudi agriculture with our interactive quiz.</div>
-          <div class="nav-card-arrow">→</div>
-        </a>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Crops -->
+    <a href="{% url 'main:crops_view' %}" class="nav-card">
+      <div class="nav-card-icon">🌾</div>
+      <div class="nav-card-title">Crops</div>
+      <div class="nav-card-desc">
+        Discover the Kingdom’s key crops, from iconic date palms to wheat, fruits, vegetables, and aromatic herbs grown across the kingdom.
       </div>
-    </section>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Dates -->
+    <a href="{% url 'main:dates_view' %}" class="nav-card">
+      <div class="nav-card-icon">🌴</div>
+      <div class="nav-card-title">Dates</div>
+      <div class="nav-card-desc">
+        Discover Saudi Arabia’s most iconic crop — explore varieties, regions, and cultural significance of dates.
+      </div>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Initiatives -->
+    <a href="{% url 'main:initiatives_view' %}" class="nav-card">
+      <div class="nav-card-icon">🌱</div>
+      <div class="nav-card-title">Initiatives</div>
+      <div class="nav-card-desc">
+        Explore national programs driving sustainability, food security, and environmental transformation under Saudi Vision 2030.
+      </div>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Technology -->
+    <a href="{% url 'main:technology_view' %}" class="nav-card">
+      <div class="nav-card-icon">⚙️</div>
+      <div class="nav-card-title">Technology</div>
+      <div class="nav-card-desc">
+        See how innovation is reshaping agriculture — from smart farming and AI to hydroponics and water-saving technologies.
+      </div>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Records -->
+    <a href="{% url 'main:records_view' %}" class="nav-card">
+      <div class="nav-card-icon">🏆</div>
+      <div class="nav-card-title">Records</div>
+      <div class="nav-card-desc">
+        Explore world-class achievements in Saudi agriculture, including record-breaking production, mega farms, and pioneering innovations.
+      </div>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Festivals -->
+    <a href="{% url 'main:festivals_view' %}" class="nav-card">
+      <div class="nav-card-icon">🎉</div>
+      <div class="nav-card-title">Festivals</div>
+      <div class="nav-card-desc">
+        Experience seasonal agricultural festivals that celebrate local harvests, traditions, and the richness of Saudi farming culture.
+      </div>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <!-- Quiz -->
+    <a href="{% url 'main:quiz_view' %}" class="nav-card">
+      <div class="nav-card-icon">🧠</div>
+      <div class="nav-card-title">Quiz</div>
+      <div class="nav-card-desc">
+        Challenge yourself with an interactive quiz and test how much you know about agriculture in Saudi Arabia.
+      </div>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+  </div>
+</section>
 
 {% endblock %}

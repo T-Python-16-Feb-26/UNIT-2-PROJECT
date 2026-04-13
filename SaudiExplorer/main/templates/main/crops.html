@@ -14,22 +14,27 @@
     <section class="cards-section">
       <div class="cards-grid">
 
-        <!-- Dates -->
-        <div class="card">
-        <div class="card-img-wrap">
-            <img src="{% static 'images/Dates2.jpg' %}" alt="Dates" class="card-img">
-        </div>
-        <div class="card-body">
-            <span class="card-tag">Fruit</span>
-            <h3 class="card-title">Dates</h3>
-            <p class="card-desc">
-            Saudi Arabia is among the world's top producers of dates, with over 3 million date palms cultivated across the Kingdom. Varieties like Medjool, Ajwa, and Sukkari are prized globally. Dates hold deep cultural and religious significance, especially during Ramadan.
-            </p>
-        </div>
-        <div class="card-footer">
-            <span>📍</span> Al-Qassim, Al-Madinah, Al-Jouf
-        </div>
-        </div>
+<!-- Dates -->
+<div class="card">
+  <div class="card-img-wrap">
+    <img src="{% static 'images/Dates2.jpg' %}" alt="Dates" class="card-img">
+  </div>
+
+  <div class="card-body">
+    <span class="card-tag">📍 Al-Qassim, Al-Madinah, Al-Jouf</span>
+    <h3 class="card-title">Dates</h3>
+
+    <p class="card-desc">
+      Saudi Arabia is among the world's top producers of dates, with over 3 million date palms cultivated across the Kingdom. Varieties like Medjool, Ajwa, and Sukkari are prized globally. Dates hold deep cultural and religious significance, especially during Ramadan.
+    </p>
+
+    <!-- Read More -->
+    <a href="{% url 'main:dates_view' %}" class="card-link">
+      Read More → 
+    </a>
+
+  </div>
+</div>
 
         <!-- Wheat -->
         <div class="card">
@@ -37,12 +42,11 @@
             <img src="{% static 'images/Wheat.jpg' %}" alt="Wheat" class="card-img">
           </div>
           <div class="card-body">
-            <span class="card-tag">Grain</span>
+            <span class="card-tag">📍 Tabuk, Ha'il, Al-Jouf</span>
             <h3 class="card-title">Wheat</h3>
             <p class="card-desc">Saudi Arabia once aimed for wheat self-sufficiency in the 1980s–90s, producing millions of tons annually using center-pivot irrigation in the desert. Today, production is managed sustainably to conserve water, with imports supplementing domestic supply under Vision 2030 strategies.</p>
-          </div>
-          <div class="card-footer">
-            <span>📍</span> Tabuk, Ha'il, Al-Jouf
+            <br>
+            <br>
           </div>
         </div>
 
@@ -52,12 +56,9 @@
             <img src="{% static 'images/Vegetables.jpg' %}" alt="Vegetables" class="card-img">
           </div>
           <div class="card-body">
-            <span class="card-tag">Vegetable</span>
+            <span class="card-tag">📍 Al-Qassim, Tabuk, Jazan</span>
             <h3 class="card-title">Vegetables </h3>
             <p class="card-desc">Tomatoes, cucumbers, potatoes, onions, and watermelons are widely grown in Saudi Arabia. Modern greenhouse technology allows year-round production. The Kingdom exports significant quantities of vegetables to neighboring Gulf states, reducing dependence on foreign imports.</p>
-          </div>
-          <div class="card-footer">
-            <span>📍</span> Al-Qassim, Tabuk, Jazan
           </div>
         </div>
 
@@ -67,12 +68,10 @@
              <img src="{% static 'images/Fruits.jpg' %}" alt="Fruits" class="card-img">
           </div>
           <div class="card-body">
-            <span class="card-tag">Fruit</span>
+            <span class="card-tag">📍 Taif, Jazan, Al-Baha</span>
             <h3 class="card-title">Fruits</h3>
             <p class="card-desc">Beyond dates, Saudi Arabia grows a rich variety of fruits. The Taif region is renowned for its fragrant grapes and roses, while Jazan produces mangoes, papayas, and citrus fruits thanks to its tropical climate. Al-Baha and Asir regions yield pomegranates and apricots.</p>
-          </div>
-          <div class="card-footer">
-            <span>📍</span> Taif, Jazan, Al-Baha
+            <br>
           </div>
         </div>
 
@@ -82,12 +81,10 @@
               <img src="{% static 'images/Herbs.jpg' %}" alt="Herbs" class="card-img">
           </div>
           <div class="card-body">
-            <span class="card-tag">Herb</span>
+            <span class="card-tag">📍 Asir, Taif, Najran</span>
             <h3 class="card-title">Herbs & Spices</h3>
             <p class="card-desc">Saudi Arabia cultivates aromatic herbs including parsley, coriander, mint, fenugreek, and black seed (Nigella sativa — Habbatus Sauda), widely used in traditional medicine and cooking. The highland regions of Asir and Taif are known for their medicinal plant diversity.</p>
-          </div>
-          <div class="card-footer">
-            <span>📍</span> Asir, Taif, Najran
+            <br>
           </div>
         </div>
 
@@ -97,12 +94,10 @@
               <img src="{% static 'images/Olives.jpg' %}" alt="Olives" class="card-img">
           </div>
           <div class="card-body">
-            <span class="card-tag">Fruit</span>
+            <span class="card-tag">📍 Al-Jouf, Tabuk</span>
             <h3 class="card-title">Olives</h3>
             <p class="card-desc">Al-Jouf region has emerged as Saudi Arabia's olive capital, home to one of the world's largest olive farms. Millions of olive trees have been planted, producing premium olive oil for local consumption and export. The region's Mediterranean-like climate is ideal for olive cultivation.</p>
-          </div>
-          <div class="card-footer">
-            <span>📍</span> Al-Jouf, Tabuk
+            <br>
           </div>
         </div>
 
