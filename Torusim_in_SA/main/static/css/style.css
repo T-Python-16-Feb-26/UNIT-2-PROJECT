@@ -2071,3 +2071,47 @@ html, body {
 }
 
 /* about end */
+
+
+/* Fix card shadow clipping inside all city carousels */
+.events-section .carousel,
+.experiences-section .carousel {
+    padding-bottom: 14px;
+}
+
+.events-section .carousel-inner,
+.events-section .carousel-item,
+.experiences-section .carousel-inner,
+.experiences-section .carousel-item {
+    overflow: visible;
+}
+
+.events-section .row,
+.experiences-section .row {
+    padding-bottom: 10px;
+}
+
+.event-card,
+.experience-card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    border-radius: 1rem;
+}
+
+.footer-control-btn.btn-success,
+.footer-control-btn.active {
+    background-color: #198754;
+    border-color: #198754;
+    color: #fff !important;
+    font-weight: 700;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.guide-main-card {
+    background:
+        radial-gradient(circle at top right, rgba(25, 135, 84, 0.16), transparent 30%),
+        var(--page-surface) !important;
+}
+
+.guide-main-content {
+    background: transparent !important;
+}

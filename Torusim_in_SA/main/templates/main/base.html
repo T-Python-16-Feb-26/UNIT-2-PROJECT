@@ -44,14 +44,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/about/' %}active{% endif %}"
-                       href="{% url 'main:contact_view' %}">
+                       href="{% url 'main:about_view' %}">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
-                       href="{% url 'main:about_view' %}">
+                       href="{% url 'main:contact_view' %}">
                         Contact
                     </a>
                 </li>
@@ -115,13 +115,13 @@
                         <span class="footer-setting-label">Text size</span>
                         <div class="btn-group btn-group-sm footer-font-group" role="group">
                             <a href="{% url 'main:small_font' %}?next={{ request.path }}"
-                            class="btn btn-outline-success footer-control-btn"
+                            class="btn btn-outline-success footer-control-btn {% if 'font' not in request.COOKIES %} btn-success {% endif %}"
                             role="button"
                             aria-label="Decrease font size">
                                 A-
                             </a>
                             <a href="{% url 'main:large_font' %}?next={{ request.path }}"
-                            class="btn btn-outline-success footer-control-btn"
+                            class="btn btn-outline-success footer-control-btn  {% if 'font' in request.COOKIES %} btn-success {% endif %}"
                             role="button"
                             aria-label="Increase font size">
                                 A+
