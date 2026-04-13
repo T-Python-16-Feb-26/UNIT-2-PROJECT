@@ -10,7 +10,6 @@ let falcon7 =document.getElementById('falcon7')
 window.onscroll = function(){
     let value = window.scrollY;
 
-    // "إذا كان المستخدم لا يزال يرى أول شاشة، حرك الصور بالسرعة العالية"
     if (value <= window.innerHeight) {
         stars.style.left = value + 'px';
         moon2.style.top = value * 4 + 'px';
@@ -24,11 +23,7 @@ window.onscroll = function(){
 
 
 
-/* ============================================================
-    QUIZ LOGIC (Filtering & Scoring)
-   ============================================================ */
 
-// 1. Filter Questions by Category
 function filterCategory(category) {
     const cards = document.querySelectorAll('.question-card');
     
@@ -41,7 +36,6 @@ function filterCategory(category) {
     });
 }
 
-// 2. Calculate Final Score
 function checkAnswers() {
     const form = document.getElementById('quiz-form');
     const formData = new FormData(form);
@@ -58,7 +52,6 @@ function checkAnswers() {
         }
     }
 
-    // Update UI with results
     const resultBox = document.getElementById('result-display');
     const correctEl = document.getElementById('correct-count');
     const wrongEl = document.getElementById('wrong-count');
@@ -68,34 +61,26 @@ function checkAnswers() {
     
     resultBox.style.display = 'block';
 
-    // Auto-scroll to result
     resultBox.scrollIntoView({ behavior: 'smooth' });
 }
 
-/* ============================================================
-    FIXED FILTER LOGIC
-   ============================================================ */
+
 
 function filterCategory(cat) {
-    // 1. تحديد جميع العناصر (الكروت والعناوين)
     const allItems = document.querySelectorAll('.question-card, .category-header');
     
     allItems.forEach(item => {
-        // 2. إذا اختار المستخدم "الكل"
         if (cat === 'all') {
             item.style.display = 'block';
         } 
-        // 3. إذا اختار قسم معين، نظهر فقط ما يطابق الـ data-category
         else if (item.getAttribute('data-category') === cat) {
             item.style.display = 'block';
         } 
-        // 4. إخفاء أي عنصر لا يطابق الاختيار
         else {
             item.style.display = 'none';
         }
     });
 
-    // لمسة إضافية: العودة لأعلى الصفحة بسلاسة عند تغيير الفلتر
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -122,10 +107,8 @@ function reveal() {
         var elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
-            // إضافة الكلاس عند النزول
             reveals[i].classList.add("active");
         } else {
-            // حذف الكلاس عند الصعود للأعلى لتكرار الحركة
             reveals[i].classList.remove("active");
         }
     }

@@ -293,9 +293,9 @@ a{
 }
 
 .home-button {
-    margin-top:1rem;   /* مسافة بين الوصف والزر */
+    margin-top:1rem;   
     display: flex;
-    justify-content: center; /* توسيط الزر داخل الحاوية */
+    justify-content: center; 
 }
 
 #home-images img
@@ -498,7 +498,6 @@ a{
     position: absolute;
     width: 6px;
     height: 100%;
-    /* --- تعديل لون الخط الفاصل للذهبي --- */
     background: var(--color-divider); 
     top: 0;
     left: 50%;
@@ -569,30 +568,22 @@ a{
    
 }
 #king1-physical .carousel {
-    /* إضافة مارجن (هوامش خارجية) من اليمين واليسار وتحت */
     margin-left: 50px; 
     margin-right: 50px;
     margin-bottom: 40px;
     
-    /* تأكد من أن الكاروسيل لا يأخذ عرضاً كاملاً إذا أردت إبراز المارجن */
     width: auto; 
     
-    /* لمسة جمالية: انحناء الزوايا ليناسب التصميم الفخم */
     border-radius: 20px;
     overflow: hidden;
 }
 
 .carousel-inner img {
-    /* توحيد الارتفاع لضمان عدم القفز بين الصور الطولية والعرضية */
     height: 60vh; 
     object-fit: cover; 
     object-position: top;
-    
-    /* إضافة مسافة (Padding) داخلية إذا كنت تريد ابتعاد الصورة عن حدود الكاروسيل نفسه */
-    /* padding: 0 10px; */ 
 }
 
-/* تحسين المظهر للشاشات الصغيرة */
 @media (max-width: 768px) {
     #king1-physical .carousel {
         margin-left: 20px;
@@ -605,37 +596,34 @@ a{
 
 
 .card-title {
-    color: var(--title-color1) !important; /* اللون الأبيض الصريح الخاص بك */
+    color: var(--title-color1) !important; 
     font-family: var(--font-body);
-    opacity: 1 !important; /* يضمن عدم وجود أي بهتان أو تمويه */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* يعطي حدة وبروز للكلام */
+    opacity: 1 !important; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .card-text {
-    color: var(--title-color1) !important; /* توحيد لون الشرح أيضاً للأبيض */
+    color: var(--title-color1) !important; 
     opacity: 1 !important;
     line-height: 1.6;
 }
 
 .card-footer small {
-    color: var(--title-color1) !important; /* لون التاريخ */
+    color: var(--title-color1) !important; 
     font-weight: 500;
 }
 
 #departure .card {
-    /* مارجن من فوق وتحت (50px) ومن اليمين واليسار (10%) */
     margin: 50px 10% 50px 10%; 
     
-    /* تأكيد الإعدادات السابقة لضمان تناسق الألوان */
     background-color: var(--box-color);
     border: 1px solid rgba(192, 192, 192, 0.4);
     box-shadow: 0 0 15px rgba(192, 192, 192, 0.2), 
                 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    overflow: hidden; /* لضمان انحناء زوايا الصورة في الأسفل */
+    overflow: hidden; 
 }
 
-/* لتحسين المظهر في الجوال */
 @media (max-width: 768px) {
     #departure .card {
         margin: 30px 5% 30px 5%;
@@ -643,30 +631,25 @@ a{
 }
 
 
-
-
 /* king page styling end */
 
 /* start foundation */
 
-/* تنسيق نصوص الكاروسيل لتكون واضحة فوق الصور الفاتحة */
 .carousel-caption h5 {
-    color: #1a1a1a; /* أسود فحمي غامق */
+    color: #1a1a1a; 
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 10px;
-    /* ظل خفيف جداً أبيض ليبرز النص إذا كانت الصورة رمادية */
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .carousel-caption p {
-    color: #333333; /* رمادي غامق جداً مريح للعين */
+    color: #333333; 
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
-/* تنسيق الأزرار داخل الكاروسيل لتبرز فوق البياض */
 .carousel-caption button {
     margin-top: 15px;
     border: 1px solid #1a1a1a;
@@ -683,8 +666,7 @@ a{
 /* end foundation */
 
 
-
-/* --- العنوان الرئيسي مع أنيميشن هادئ --- */
+/* card styling start */
 .pg-titl {
     font-family: var(--font-body);
     color: var(--color-accent-gold);
@@ -695,20 +677,19 @@ a{
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* --- تنسيق الـ Card الموحد --- */
 .card {
     background: var(--bg-textbox) !important;
     border: 1px solid var(--border-textbox) !important;
     box-shadow: var(--shadow-textbox);
     border-radius: 15px !important;
-    backdrop-filter: blur(10px); /* تأثير زجاجي فخم */
+    backdrop-filter: blur(10px); 
     transition: transform var(--transition-speed), border-color var(--transition-speed);
     margin-bottom: 25px;
     overflow: hidden;
 }
 
 .card:hover {
-    transform: scale(1.03); /* تكبير بسيط */
+    transform: scale(1.03); 
     border-color: var(--color-accent-gold) !important;
 }
 
@@ -721,13 +702,11 @@ a{
     font-weight: 700;
 }
 
-/* --- تنسيق الصور بداخل البطاقات --- */
 .img-fluid {
     transition: transform var(--transition-speed);
     filter: brightness(0.8);
 }
 
-/* --- الأقسام والفواصل --- */
 .center-section {
     padding: 40px 15px;
     max-width: 900px;
@@ -739,7 +718,6 @@ a{
     border-bottom: none;
 }
 
-/* --- الروابط والمصادر --- */
 .card-link {
     color: var(--color-accent-gold) !important;
     text-decoration: none;
@@ -752,13 +730,11 @@ a{
     border-bottom-color: var(--color-accent-gold);
 }
 
-/* --- تأثيرات الظهور (Keyframes) --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* الأرقام والتواريخ */
 small, .date-text {
     color: var(--color-text-main);
     opacity: 0.7;
@@ -767,11 +743,10 @@ small, .date-text {
 }
 
 
-/* تنسيق زر عصر الوحدة (والأزرار المشابهة) */
 .btn-gold {
     background-color: transparent;
-    color: var(--color-accent-gold) !important; /* اللون الذهبي للنص */
-    border: 1px solid var(--color-accent-gold) !important; /* حدود ذهبية */
+    color: var(--color-accent-gold) !important; 
+    border: 1px solid var(--color-accent-gold) !important; 
     font-family: 'Amiri', serif;
     font-weight: bold;
     padding: 10px 25px;
@@ -781,12 +756,11 @@ small, .date-text {
     display: inline-block;
 }
 
-/* تأثير مرور الماوس (Hover) */
 .btn-gold:hover {
-    background-color: var(--color-accent-gold) !important; /* يمتلئ بالذهبي */
-    color: #301934 !important; /* يتغير النص للأرجواني الغامق للتباين */
-    transform: translateY(-3px); /* رفعة بسيطة */
-    box-shadow: 0 5px 15px rgba(226, 193, 101, 0.4); /* توهج ذهبي */
+    background-color: var(--color-accent-gold) !important; 
+    color: #301934 !important; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(226, 193, 101, 0.4); 
 }
 
 
@@ -795,8 +769,8 @@ small, .date-text {
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.03); /* شفافية خفيفة جداً */
-    border-right: 3px solid var(--color-accent-gold); /* خيط ذهبي كأنه فاصل كتاب */
+    background: rgba(255, 255, 255, 0.03); 
+    border-right: 3px solid var(--color-accent-gold); 
     border-radius: 0 15px 15px 0;
 }
 
@@ -804,13 +778,13 @@ small, .date-text {
     font-size: 1.4rem;
     line-height: 2.2;
     color: var(--color-text-main);
-    font-family: 'Amiri', serif; /* يعطي طابع القصص والتاريخ */
+    font-family: 'Amiri', serif;
 }
 
 .feature-item p.small {
-    color: var(--color-text-main) !important; /* استخدام الأبيض المعتمد في مشروعك */
-    opacity: 0.85; /* شفافية بسيطة ليعطي عمقاً دون أن يختفي النص */
-    font-size: 0.95rem; /* كبرت الحجم قليلاً ليكون مريحاً للعين */
+    color: var(--color-text-main) !important; 
+    opacity: 0.85; 
+    font-size: 0.95rem; 
     line-height: 1.6;
 }
 
@@ -837,16 +811,14 @@ small, .date-text {
     font-family: 'Amiri', serif;
     font-weight: bold;
     font-size: 1.8rem;
-    /* إضافة ظل خفيف جداً خلف النص ليعطيه عمقاً فوق الخلفية الأرجوانية */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     position: relative;
     display: inline-block;
 }
 
 
-/* ============================================================
-    8. FOOTER STYLING
-   ============================================================ */
+/*  FOOTER STYLING */
+
 .site-footer {
     padding: 40px 0;
     margin-top: 50px;
@@ -871,7 +843,7 @@ small, .date-text {
 
 .f-link {
     
-    color: var(--color-accent-gold); /* Gold hover effect */
+    color: var(--color-accent-gold); 
     font-family: 'Amiri', serif;
     font-size: 1.1rem;
     transition: color 0.3s ease;
@@ -918,25 +890,19 @@ html.light_mode main
       background:linear-gradient( #10001f, #376281) !important;
 }
 
-/* ============================================================
-    تجاوب الفوتر مع الأجهزة (Footer Responsive Fix)
-   ============================================================ */
 
-/* التنسيق الخاص بالشاشات المتوسطة والصغيرة (الجوال) */
+
 @media (max-width: 992px) {
     .footer-content {
-        flex-direction: column; /* تحويل الترتيب ليكون عمودي */
+        flex-direction: column; 
         gap: 30px;
         text-align: center;
     }
 
-    .footer-logo {
-        width: 180px; /* تصغير اللوجو قليلاً ليناسب الجوال */
-        order: 1; 
-    }
+   
 
     .footer-links {
-        flex-direction: column; /* الروابط تحت بعض في الجوال لسهولة الضغط */
+        flex-direction: column; 
         gap: 15px;
         order: 2;
     }
@@ -946,7 +912,6 @@ html.light_mode main
     }
 }
 
-/* لمسة إضافية لضمان استقامة النص مع الصورة تماماً */
 .f-link {
     display: inline-block;
     line-height: 1;
@@ -967,7 +932,7 @@ html.light_mode main
     background: rgba(255, 255, 255, 0.08) !important;
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
     backdrop-filter: blur(15px);
-    color: #ffffff !important;
+    color:var(--color-text-main) !important;
 }
 
 /* Timeline Divider in Light Mode */
@@ -986,16 +951,14 @@ html.light_mode main
 
 /* Navigation Links in Light Mode */
 .light_mode .nav-links a {
-    color: #ffffff !important;
+    color: var(--color-text-main) !important;
 }
 
 /* light_mode styling end*/
 
 
 
-/* ============================================================
-    QUIZ PAGE STYLING (Dark Luxury)
-   ============================================================ */
+/*QUIZ PAGE STYLING */
 
 .quiz-container {
     max-width: 800px;
@@ -1044,30 +1007,27 @@ input[type="radio"] {
     animation: fadeIn 0.8s ease-in-out;
 }
 
-/* الحاوية الكبرى */
 .hakawati-wrapper {
     display: flex;
-    flex-direction: row; /* اليمين قصص واليسار قائمة */
+    flex-direction: row; 
     gap: 30px;
     max-width: 1200px;
     margin: 100px auto;
     padding: 0 20px;
 }
 
-/* الجهة اليمين: القصص */
 .stories-feed {
-    flex: 3; /* تأخذ مساحة 75% من العرض */
+    flex: 3;
 }
 
-/* الجهة اليسار: القائمة */
 .sidebar-left {
-    flex: 1; /* تأخذ مساحة 25% من العرض */
+    flex: 1; 
 }
 
 .sticky-menu {
     position: sticky;
-    top: 120px; /* المسافة من أعلى الشاشة عند السكرول */
-    background: var(--bg-textbox); /* استخدمي متغيراتك الداكنة */
+    top: 120px; 
+    background: var(--bg-textbox); 
     border: 1px solid var(--color-accent-gold);
     border-radius: 15px;
     padding: 20px;
@@ -1082,7 +1042,7 @@ input[type="radio"] {
 .filter-list li button {
     background: transparent;
     border: none;
-    color: #fff;
+    color:var(--color-text-main);
     width: 100%;
     text-align: right;
     padding: 12px;
@@ -1098,18 +1058,16 @@ input[type="radio"] {
 
 
 
-/* القاعدة العامة للعناصر المخفية */
 .reveal {
     opacity: 0;
-    transform: translateY(50px); /* يبدأ العنصر من أسفل مكانه بـ ٥٠ بكسل */
-    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67); /* حركة انسيابية فخمة */
+    transform: translateY(50px); 
+    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
     visibility: hidden;
 }
 
-/* الحالة عند الوصول للعنصر (الظهور) */
 .reveal.active {
     opacity: 1;
-    transform: translateY(0); /* يعود لمكانه الأصلي */
+    transform: translateY(0); 
     visibility: visible;
 }
 
@@ -1118,23 +1076,19 @@ input[type="radio"] {
 .stories-feed{
     background: var(--bg-textbox);
     min-width: 50%;
-    /* تحديد ارتفاع ثابت ضروري لظهور السكرول */
     max-height: 400px; 
-    overflow-y: auto; /* يظهر السكرول عمودياً فقط عند الحاجة */
+    overflow-y: auto; 
     overflow-x: hidden;
     padding: 20px;
     border-radius: 15px;
 }
 
-/* --- تخصيص شكل السكرول (للـ Chrome, Edge, Safari) --- */
 
-/* 1. عرض السكرول بار */
 #quiz-form,
 .stories-feed::-webkit-scrollbar {
-    width: 6px; /* سكرول نحيف وأنيق */
+    width: 6px; 
 }
 
-/* 2. خلفية المسار */
 
 .stories-feed::-webkit-scrollbar-track,
 #quiz-form::-webkit-scrollbar {
@@ -1142,11 +1096,10 @@ input[type="radio"] {
     border-radius: 10px;
 }
 
-/* 3. المقبض (الجزء المتحرك) */
 
 .stories-feed::-webkit-scrollbar-thumb,
 #quiz-form::-webkit-scrollbar-track{
-    background: var(--gold-color, #d4af37); /* استخدمي لون الذهب أو الجلو الخاص بكِ */
+    background: var(--gold-color, #d4af37); 
     border-radius: 10px;
 }
 
@@ -1154,9 +1107,8 @@ input[type="radio"] {
 #quiz-form {
     background: var(--bg-textbox);
     min-width: 100%;
-    /* تحديد ارتفاع ثابت ضروري لظهور السكرول */
     max-height: 400px; 
-    overflow-y: auto; /* يظهر السكرول عمودياً فقط عند الحاجة */
+    overflow-y: auto; 
     overflow-x: hidden;
     padding: 20px;
     margin-bottom: 20px;
@@ -1216,7 +1168,8 @@ input[type="radio"] {
   }
 }
 
-/* --- قالب الملوك العربي (نص يمين - صورة يسار) --- */
+
+/* --- Kings Template --- */
 
 .king-hero-template {
     position: relative;
@@ -1224,16 +1177,15 @@ input[type="radio"] {
     display: flex;
     align-items: center; 
     background-color: #000;
-    direction: rtl; /* تأكيد اتجاه القراءة من اليمين */
+    direction: rtl; 
     overflow: hidden;
     padding: 80px 0;
 }
 
-/* حاوية الصورة: الآن في جهة اليسار */
 .king-visual-container {
     position: absolute;
     top: 0;
-    left: 0; /* نقلنا الصورة لليسار */
+    left: 0; 
     width: 65%; 
     height: 100%;
     z-index: 1;
@@ -1246,22 +1198,19 @@ input[type="radio"] {
     object-position: center top;
 }
 
-/* التدرج: يبدأ من اليمين (أسود خلف النص) ويتلاشى باتجاه اليسار (الصورة) */
 .king-gradient-overlay {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    /* التدرج يبدأ من اليمين لتوضيح النص العربي */
     background: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 70%);
     z-index: 2;
 }
 
-/* منطقة النصوص: محاذاة لليمين */
 .king-text-wrapper {
     max-width: 650px;
-    text-align: right; /* النص يبدأ من اليمين */
+    text-align: right; 
     margin-right:15%;
     position: relative;
     z-index: 3;
@@ -1271,7 +1220,7 @@ input[type="radio"] {
     display: block;
     font-size: 3rem;
     color: var(--color-accent-gold);
-    letter-spacing: 0; /* العربي لا يحتاج مسافات بين الحروف */
+    letter-spacing: 0; 
     margin-bottom: 10px;
     font-weight: 500;
     font-family: var(--font-title);
@@ -1298,13 +1247,12 @@ input[type="radio"] {
 
 .detail-value {
     font-size: 1.6rem;
-    color: #fff;
+    color:var(--color-text-main);
     margin-bottom: 25px;
     font-weight: 500;
      font-family: var(--font-body);
 }
 
-/* الشارة بستايل يميني */
 .king-badge {
     margin-top: 50px;
     display: inline-flex;
@@ -1313,13 +1261,12 @@ input[type="radio"] {
     padding: 12px 25px;
     background: rgba(212, 175, 55, 0.05);
     border-right: 4px solid var(--gold-color); 
-    color: #fff;
+    color:var(--color-text-main);
     font-size: 1rem;
     font-family: var(--font-body);
 }
 
 
-/* استجابة الجوال */
 @media (max-width: 991px) {
     .king-visual-container {
         width: 100%;
@@ -1335,11 +1282,11 @@ input[type="radio"] {
 }
 
 
-/* --- ستايل الخلفية الكاملة للدولة السعودية --- */
+/* --- Full background style of the Kingdom of Saudi Arabia --- */
 
 .history-hero-style {
     position: relative;
-    min-height: 100vh; /* يغطي كامل الشاشة مثل الملوك */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1362,10 +1309,9 @@ input[type="radio"] {
     object-fit: cover;
     object-position: center;
     filter: brightness(40%);
-    opacity: 0.8; /* تعتيم بسيط لإبراز النص الذهبي */
+    opacity: 0.8; 
 }
 
-/* التدرج الذي يدمج الصورة مع السواد من الأعلى والأسفل */
 .history-gradient-overlay {
     position: absolute;
     top: 0;
@@ -1380,25 +1326,24 @@ input[type="radio"] {
     z-index: 2;
 }
 
-/* منطقة النصوص الخاصة بكِ */
 .history-content-area {
     position: relative;
-    z-index: 3; /* لضمان ظهور النص فوق كل الطبقات */
+    z-index: 3; 
     text-align: center;
 }
 
 
 .history-info-section {
     padding: 100px 0;
-    background-color: #000; /* خلفية سوداء فخمة */
-    color: #fff;
+    background-color: #000; 
+    color:var(--color-text-main);
 }
 
 .history-flex-container {
     display: flex;
     align-items: center;
-    gap: 60px; /* مسافة كبيرة بين الصورة والنص لراحة العين */
-    flex-wrap: wrap; /* لضمان التجاوب مع الجوال */
+    gap: 60px; 
+    flex-wrap: wrap; 
 }
 
 .history-image-box {
@@ -1410,8 +1355,8 @@ input[type="radio"] {
 .fluid-img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2)); /* ظل ذهبي خفيف جداً */
-    border-radius: 15px; /* حواف ناعمة جداً وليست حادة */
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2)); 
+    border-radius: 15px; 
 }
 
 .history-text-box {
@@ -1435,7 +1380,6 @@ input[type="radio"] {
     text-align: justify;
 }
 
-/* للجوال: الصورة تصبح فوق النص */
 @media (max-width: 768px) {
     .history-flex-container {
         flex-direction: column;
@@ -1448,10 +1392,8 @@ input[type="radio"] {
 
 
 
-/* تنسيق القسم الجديد للدولة الثالثة */
 .state-modern-section {
     padding: 80px 0;
-    /* يعتمد على خلفيتك الأصلية في center-section */
 }
 
 .state-flex-wrapper {
@@ -1459,10 +1401,9 @@ input[type="radio"] {
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    flex-wrap: wrap; /* للتجاوب مع الشاشات الصغيرة */
+    flex-wrap: wrap; 
 }
 
-/* تنسيق الصورة (علم الدولة) */
 .state-image-container {
     flex: 1;
     min-width: 350px;
@@ -1472,7 +1413,6 @@ input[type="radio"] {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    /* تأثير إبداعي لرفع جودة الصورة وإبرازها */
     filter: saturate(1.1) brightness(1.1);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease;
@@ -1482,28 +1422,25 @@ input[type="radio"] {
     transform: scale(1.03);
 }
 
-/* تنسيق النصوص */
 .state-text-container {
     flex: 1.5;
     min-width: 300px;
     text-align: right;
 }
 
-/* تعزيز الكلاس الموحد pg-titl بلمسة إضافية لهذا القسم فقط */
 .state-text-container .pg-titl {
     margin-bottom: 30px;
     display: block;
 }
 
 .description-text {
-    font-size: 1.3rem; /* تكبير الخط ليكون مريحاً للقراءة */
+    font-size: 1.3rem; 
     line-height: 1.9;
     color: var(--color-text-main);
     font-family: var(--font-body);
     text-align: justify;
 }
 
-/* تحسين العرض على الجوال */
 @media (max-width: 768px) {
     .state-flex-wrapper {
         flex-direction: column;
@@ -1518,13 +1455,12 @@ input[type="radio"] {
 
 
 
-/* تنسيق القسم الموحد */
+
 .fixed-split-layout {
     padding: 60px 0;
-    direction: rtl; /* تأكيد اليمين لليسار */
+    direction: rtl;
 }
 
-/* توحيد حجم الصور في كل الأقسام */
 .fixed-img-container {
     display: flex;
     justify-content: center;
@@ -1532,19 +1468,17 @@ input[type="radio"] {
 }
 
 .standard-history-img {
-    /* المقاسات الموحدة التي طلبتِها */
     width: 100%;
-    max-width: 400px; /* العرض الموحد للصورة */
-    height:auto;    /* الارتفاع الموحد للصورة */
+    max-width: 400px; 
+    height:auto;    
     
-    object-fit: cover; /* لضمان عدم تمطط الصورة داخل المقاس الموحد */
-    border-radius: 15px; /* حواف ناعمة */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* ظل بسيط للفخامة */
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
   
 }
 
 
-/* تنسيق النص الموحد */
 .text-content-area {
     padding-right: 20px;
 }
@@ -1556,14 +1490,13 @@ input[type="radio"] {
 .text-content-area .description-text {
     font-size: 1.25rem;
     line-height: 1.8;
-    color: var(--color-text-main); /* سيعتمد على خلفيتك الأصلية */
+    color: var(--color-text-main); 
     text-align: justify;
 }
 
-/* التجاوب مع الجوال */
 @media (max-width: 768px) {
     .fixed-split-layout .row {
-        flex-direction: column-reverse; /* الصورة فوق والنص تحت في الجوال */
+        flex-direction: column-reverse; 
     }
     .text-content-area {
         padding-right: 0;
@@ -1574,12 +1507,12 @@ input[type="radio"] {
 
 
 
-/* كلاس توحيد طول الكروت */
+
 .vision-card {
-    background: rgba(255, 255, 255, 0.03); /* خلفية شفافة جداً وفخمة */
+    background:var(--bg-textbox); 
     border: 1px solid var(--border-textbox);
     border-radius: 20px;
-    height: 100%; /* هذا سيجعل الكرتين بنفس الطول بفضل نظام الـ Row */
+    height: 100%; 
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1592,34 +1525,33 @@ input[type="radio"] {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* تنسيق المحتوى ليكون في المنتصف */
+
 .vision-card-body {
-    text-align: center; /* توسيط العناوين */
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center; /* توسيط العناصر أفقياً */
+    align-items: center; 
     height: 100%;
 }
 
-/* تنسيق القائمة */
+
 .vision-list {
-    list-style: none; /* إزالة النقاط التقليدية */
+    list-style: none; 
     padding: 0;
     margin: 0;
-    text-align: right; /* بقاء النص يمين للقراءة العربية ولكن القائمة نفسها متمركزة */
+    text-align: right; 
     width: 100%;
 }
 
 .vision-list li {
-    color: #e0e0e0;
+    color: var(--color-text-main);
     font-size: 1rem;
     margin-bottom: 15px;
     padding-right: 20px;
     position: relative;
 }
 
-/* إضافة نقطة ذهبية مخصصة بدلاً من التقليدية */
 .vision-list li::before {
     content: "✦";
     color: var(--color-accent-gold);
@@ -1628,7 +1560,6 @@ input[type="radio"] {
     top: 0;
 }
 
-/* تأكيد لون العنوان الذهبي */
 .gold-text {
     color: var(--color-accent-gold) !important;
     font-weight: bold;
@@ -1671,9 +1602,7 @@ input[type="radio"] {
 
 
 
-/* ============================================================
-   قسم الصفات الشكلية - النسخة المعتمدة (شغالة 100%)
-   ============================================================ */
+/* king physical styling */
 
 #king6-physical {
     padding: 100px 0;
@@ -1688,7 +1617,6 @@ input[type="radio"] {
     position: relative;
 }
 
-/* إخفاء الـ Checkbox تماماً */
 .toggle-checkbox {
     display: none;
 }
@@ -1702,7 +1630,7 @@ input[type="radio"] {
 .king-card-wrapper {
     position: relative;
     cursor: pointer;
-    display: flex; /* غيرتها لـ flex لضمان توسيط النص والصورة */
+    display: flex; 
     flex-direction: column;
     align-items: center;
 }
@@ -1722,7 +1650,6 @@ input[type="radio"] {
     z-index: -1;
 }
 
-/* --- تنسيق نص الإرشاد الجديد --- */
 .click-instruction {
     color: #E2C165;
     margin-top: 20px;
@@ -1737,13 +1664,12 @@ input[type="radio"] {
     50% { opacity: 1; transform: scale(1.05); }
 }
 
-/* تنسيق الكرت المخفي */
 .description-overlay {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     width: 380px;
-    background: rgba(20, 10, 30, 0.95);
+    background: var(--bg-textbox);
     border: 1px solid #E2C165;
     padding: 25px;
     border-radius: 20px;
@@ -1755,13 +1681,14 @@ input[type="radio"] {
 }
 
 .description-overlay p {
-    color: #fff;
+    color: var(--color-text-main);
     line-height: 1.6;
 }
 
-/* ============================================================
-   أوامر العرض بـ CSS عند النقر (Checked)
-   ============================================================ */
+.close-hint
+{
+    color: var(--color-accent-gold);
+}
 
 .toggle-checkbox:checked + .king-card-wrapper .description-overlay {
     opacity: 1;
@@ -1774,13 +1701,11 @@ input[type="radio"] {
     transform: scale(0.9);
 }
 
-/* إخفاء نص الإرشاد عند النقر */
 .toggle-checkbox:checked + .king-card-wrapper .click-instruction {
     opacity: 0;
     visibility: hidden;
 }
 
-/* حركة الـ Glow */
 .king-card-wrapper:hover .gold-glow {
     transform: translate(-50%, -50%) scale(1.3);
     opacity: 0.8;
