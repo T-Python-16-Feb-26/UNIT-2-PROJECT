@@ -12,54 +12,35 @@
 }
 
 body {
-    /* font-family: "Amiri", serif; */
     font-family: 'TheYearofTheCamel-Bold', sans-serif;
     font-weight: 700;
     font-style: normal;
-    /* background-color: rgb(6, 21, 4); */
-    /* background-image: url('/static/images/Riyadh.png');
-    background-size: cover;
-    background-repeat: no-repeat; */
-    /* background: linear-gradient(-45deg, #0b5d3b, #0f2f22, #145a32, #081c15); */
-    /* background: linear-gradient(135deg, #0b3d2e 0%, #145a32 25%, #1f7a4c 50%, #d4af37 75%, #f4e4a6 100%); */
     background: linear-gradient(135deg, #faf8f2, #f1f8f4, #e6f4ec, #f3ead2, #fffaf0);
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
 }
 
 body.dark-mode {
-    /* background: linear-gradient(135deg,#000000, #081c15, #000000, #000000, #000000); */
-    background: linear-gradient(135deg,
-            #020d09,
-            #041a14,
-            #06251d,
-            #0b3d2e,
-            #020d09);
+    background: linear-gradient(135deg, #020d09, #041a14, #06251d, #0b3d2e, #020d09);
     background-size: 400% 400%;
     animation: bgMove 10s ease infinite;
 }
 
-@keyframes body {
+@keyframes bgMove {
     0% {
-        transform: translateX(0);
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
     }
 
     100% {
-        transform: translateX(-50%);
+        background-position: 0% 50%;
     }
 }
 
-@keyframes dark-mode {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* nav  */
+/* nav */
 .custom-navbar {
     background: rgba(2, 13, 9, 0.78);
     backdrop-filter: blur(12px);
@@ -90,21 +71,12 @@ body.dark-mode {
     filter: invert(1);
 }
 
-.navbar-toggler-icon {
-    filter: invert(1);
-}
-
-/* End nav  */
-
-/* home page slider */
-/* slider */
+/* home slider */
 .slider {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 0 0 20px 0;
-    /* background: linear-gradient(-45deg, #0b5d3b, #0f2f22, #145a32, #081c15); */
-    /* background: linear-gradient(-45deg, #063220, #000000, #1c3326, #081c15); */
+    padding: 0 0 20px;
     background: linear-gradient(-45deg,
             #020d09 0%,
             #041a14 20%,
@@ -128,16 +100,14 @@ body.dark-mode {
     animation: bgMove 10s ease infinite;
 }
 
-/* end slider  */
 .home_page_title {
     text-align: center;
     font-size: 40px;
     margin-top: 0;
-    /* margin: 40px auto 20px; */
     color: #0b5d3b;
 }
 
-/* ball-icon  */
+/* ball icons */
 .balls-icon {
     position: absolute;
     top: 20px;
@@ -148,7 +118,6 @@ body.dark-mode {
     width: max-content;
     opacity: 0.1;
     animation: moveBalls 25s linear infinite;
-    /* opacity: 0.08; */
     z-index: 0;
 }
 
@@ -157,7 +126,6 @@ body.dark-mode {
     height: 18px;
     border-radius: 50%;
     flex-shrink: 0;
-    /* opacity: 0.2; */
 }
 
 .white {
@@ -166,7 +134,6 @@ body.dark-mode {
 
 .green {
     background-color: #0b5d3b;
-    /* background-color: #22c55e; */
 }
 
 .ball:nth-child(2n) {
@@ -190,8 +157,7 @@ body.dark-mode {
     }
 }
 
-/* End ball-icon   */
-/* slider-header  */
+/* slider header */
 @keyframes glowText {
     0% {
         opacity: 0.6;
@@ -221,7 +187,6 @@ body.dark-mode {
     animation: glowText 3.5s ease-in-out infinite;
     font-weight: 800;
     letter-spacing: 1px;
-
 }
 
 .slider-header .home-title {
@@ -229,16 +194,12 @@ body.dark-mode {
     font-weight: 800;
     margin-top: 70px;
     margin-bottom: 40px;
-    /* font-family: 'Amiri', sans-serif; */
 }
 
 .slider-header h1 {
     font-size: 60px;
     margin-bottom: 10px;
-    /* font-family: 'Amiri', sans-serif; */
 }
-
-/* End slider-header  */
 
 /* slides */
 .slides {
@@ -246,10 +207,8 @@ body.dark-mode {
     z-index: 1;
     display: flex;
     width: max-content;
-    animation: slide 25s linear infinite;
     gap: 28px;
-
-
+    animation: slide 25s linear infinite;
 }
 
 .slide {
@@ -272,17 +231,17 @@ body.dark-mode {
     display: block;
     margin-bottom: 5px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: translateY(-5px);
 }
 
 .slide h3 {
     margin: 0;
     font-size: 15px;
-    color: rgb(255, 255, 255);
-}
-
-.slide img:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+    color: #fff;
 }
 
 @keyframes slide {
@@ -295,23 +254,7 @@ body.dark-mode {
     }
 }
 
-@keyframes bgMove {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* End slides   */
-
-/* home-content  */
+/* home content */
 .home-content {
     display: flex;
     flex-direction: column;
@@ -321,7 +264,7 @@ body.dark-mode {
     margin: 40px auto;
 }
 
-.home-content img {
+.home-content video {
     width: 80%;
     height: 40vh;
     object-fit: cover;
@@ -342,9 +285,8 @@ body.dark-mode {
 .intro-saudi {
     width: 80%;
     text-align: center;
-    /* margin: 20px auto; */
-    color: rgb(0, 0, 0);
-    background-color: white;
+    color: #000;
+    background-color: #fff;
     padding: 20px 35px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     font-size: 16px;
@@ -355,36 +297,26 @@ body.dark-mode {
     text-align: center;
     font-size: 25px;
     margin-bottom: 15px;
-    color: black;
+    color: #000;
 }
 
-/*  End home-content  */
-
-/* container my-5 */
-.card-wrapper {
-    /* padding: 2px; */
+/* cards */
+.card-wrapper,
+.card-wrapper2 {
     border-radius: 20px;
-    background: transparent;
-    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
     transition: 0.3s;
     height: 100%;
+}
+
+.card-wrapper {
+    background: transparent;
 }
 
 .card-wrapper2 {
-    /* padding: 2px; */
-    border-radius: 20px;
-    background: transparent;
-    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
     border: 2px solid transparent;
     background:
         linear-gradient(#ffffff, #ffffff) padding-box,
-        linear-gradient(270deg,
-            #0b5d3b,
-            #22c55e,
-            #c6a437,
-            #0b5d3b) border-box;
-    transition: 0.3s;
-    height: 100%;
+        linear-gradient(270deg, #0b5d3b, #22c55e, #c6a437, #0b5d3b) border-box;
     background-size: 100% 100%, 400% 400%;
     animation: borderMove 6s linear infinite;
 }
@@ -392,41 +324,24 @@ body.dark-mode {
 .dark-mode .card-wrapper2 {
     background:
         linear-gradient(#041a14, #041a14) padding-box,
-        linear-gradient(270deg,
-            #1b5a43,
-            #22c55e,
-            #c6a437,
-            #1b5a43) border-box;
+        linear-gradient(270deg, #1b5a43, #22c55e, #c6a437, #1b5a43) border-box;
     background-size: 100% 100%, 400% 400%;
     animation: borderMove 6s linear infinite;
 }
 
 .card-wrapper:hover {
-    border-radius: 20px;
     border: 4px solid transparent;
-
     background:
         linear-gradient(#ffffff, #ffffff) padding-box,
-        linear-gradient(270deg,
-            #0b5d3b,
-            #22c55e,
-            #c6a437,
-            #0b5d3b) border-box;
+        linear-gradient(270deg, #0b5d3b, #22c55e, #c6a437, #0b5d3b) border-box;
     background-size: 100% 100%, 400% 400%;
     animation: borderMove 6s linear infinite;
 }
 
 .dark-mode .card-wrapper:hover {
-    border-radius: 20px;
-    border: 4px solid transparent;
-
     background:
         linear-gradient(#041a14, #041a14) padding-box,
-        linear-gradient(270deg,
-            #1b5a43,
-            #22c55e,
-            #86efac,
-            #1b5a43) border-box;
+        linear-gradient(270deg, #1b5a43, #22c55e, #86efac, #1b5a43) border-box;
     background-size: 100% 100%, 400% 400%;
     animation: borderMove 6s linear infinite;
 }
@@ -434,13 +349,11 @@ body.dark-mode {
 .card {
     height: 100%;
     border: none;
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
-    background-color: white;
-    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
     flex-direction: column;
-    /* transition: transform 0.3s ease , box-shadow 0.3s ease; */
+    background-color: white;
 }
 
 .dark-mode .card {
@@ -452,6 +365,7 @@ body.dark-mode {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    display: block;
 }
 
 .card-body {
@@ -478,10 +392,6 @@ body.dark-mode {
     font-size: 15px;
 }
 
-/* .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
-} */
 @keyframes borderMove {
     0% {
         background-position: 0% 50%;
@@ -499,7 +409,6 @@ body.dark-mode {
     font-weight: 600;
 }
 
-
 .btn-primary:hover {
     background-color: #09492f;
 }
@@ -512,21 +421,17 @@ body.dark-mode {
 .container h2 {
     font-size: 36px;
     font-weight: 700;
-    color: #a7f3d0;
-    margin-bottom: 20px;
+    color: #0b5d3b;
     border-right: 4px solid #22c55e;
     padding-right: 10px;
     margin-bottom: 30px;
-    color: #0b5d3b;
 }
 
 .dark-mode .container h2 {
     color: white;
 }
 
-/* End container my-5 */
-
-/* file riyadh-page  */
+/* hero card */
 .card.text-bg-dark {
     position: relative;
     border: none;
@@ -538,7 +443,6 @@ body.dark-mode {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* الصورة */
 .card.text-bg-dark .card-img {
     width: 100%;
     height: 100%;
@@ -546,18 +450,14 @@ body.dark-mode {
     filter: brightness(0.75);
 }
 
-/* طبقة شفافة فوق الصورة */
 .card.text-bg-dark::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.65));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
     z-index: 1;
 }
 
-/* محتوى النص */
 .card.text-bg-dark .card-img-overlay {
     position: absolute;
     inset: 0;
@@ -570,7 +470,6 @@ body.dark-mode {
     color: white;
 }
 
-/* العنوان */
 .card.text-bg-dark .card-title {
     font-size: 42px;
     font-weight: bold;
@@ -578,7 +477,6 @@ body.dark-mode {
     color: white;
 }
 
-/* النص */
 .card.text-bg-dark .card-text {
     font-size: 20px;
     line-height: 2;
@@ -586,7 +484,6 @@ body.dark-mode {
     margin: 0 auto;
 }
 
-/* phone */
 @media (max-width: 768px) {
     .card.text-bg-dark {
         height: auto;
@@ -618,16 +515,148 @@ footer {
     object-fit: cover;
 }
 
-.card {
+.dark-mode .card-footer small {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* page animations */
+.page-enter {
+    animation: pageFadeUp 1s ease forwards;
+}
+
+@keyframes pageFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    transition: all 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+/* swiper */
+.swiper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 75px;
+}
+
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto !important;
+}
+
+.swiper .card-wrapper {
+    height: 100%;
+}
+
+.swiper .card {
+    height: 100%;
+}
+
+.swiper .card-img-top {
+    height: 230px;
+}
+
+.swiper .card-body {
+    height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border: 1px solid #0b5d3b;
+    border-radius: 50%;
+    color: #0b5d3b !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    top: auto !important;
+    bottom: 0 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.swiper-button-prev {
+    left: 65px !important;
+    right: auto !important;
+}
+
+.swiper-button-next {
+    left: 10px !important;
+    right: auto !important;
+}
+
+.swiper-pagination {
+    top: auto !important;
+    bottom: 20px !important;
+    left: 130px !important;
+    width: calc(100% - 150px) !important;
+}
+
+.swiper-pagination-progressbar {
+    background: #ddd !important;
+    height: 4px !important;
     border-radius: 20px;
     overflow: hidden;
 }
 
-.card-body {
-    flex: 1;
-}
-
-.dark-mode .card-footer small {
-    color: #ffffff !important;
-    font-weight: 500;
+.swiper-pagination-progressbar-fill {
+    background: #0b5d3b !important;
+    border-radius: 20px;
 }

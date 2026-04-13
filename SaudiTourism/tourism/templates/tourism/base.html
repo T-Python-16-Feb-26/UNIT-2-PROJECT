@@ -12,12 +12,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"rel="stylesheet">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         
     </head>
-    
-            
-            
+     
     <!-- body  -->
     <body {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} class="dark-mode" {% endif %}">
         <nav class="navbar navbar-expand-lg custom-navbar">
@@ -70,7 +69,6 @@
                                 </span></a></li>
                             </ul>
                         </li>
-        
                     </ul>
                 </div>
             </div>
@@ -81,9 +79,58 @@
         {% endblock %}
 
         <footer>
-            <!-- <p> Saudi Tourism © 2026</p> -->
             <p>السياحة السعودية © 2026</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function revealOnScroll() {
+                const elements = document.querySelectorAll('.reveal, .reveal-right, .reveal-left');
+
+                elements.forEach((el) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = el.getBoundingClientRect().top;
+                    const elementBottom = el.getBoundingClientRect().bottom;
+
+                    const visiblePoint = 100;
+
+                    if (elementTop < windowHeight - visiblePoint && elementBottom > 0) {
+                        el.classList.add('active');
+                    }
+                    else {
+                        el.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', revealOnScroll);
+            window.addEventListener('load', revealOnScroll);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+        <script>
+            const swiper = new Swiper(".swiper", {
+                spaceBetween: 24,
+                grabCursor: true,
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2
+                    },
+                    992: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
