@@ -1,0 +1,195 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Crops — Ghosn{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+      <span class="page-hero-icon">🧠</span>
+      <h1 class="page-hero-title">Test Your <span>Knowledge</span></h1>
+      <p class="page-hero-subtitle">How well do you know Saudi Arabian agriculture? Take our interactive quiz and find out!</p>
+    </section>
+
+    <div class="quiz-wrapper">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="progressFill" style="width: 0%"></div>
+      </div>
+
+      <div class="quiz-card" id="quizCard">
+        <!-- Quiz content injected by JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "Which Saudi region is most famous for date palm cultivation?",
+        options: ["Tabuk", "Al-Qassim", "Jazan", "Asir"],
+        answer: 1,
+        explanation: "Al-Qassim is known as the 'Garden of Saudi Arabia' and is the heartland of date palm cultivation, home to millions of palms."
+      },
+      {
+        q: "Which crop is Al-Jouf region particularly famous for?",
+        options: ["Mangoes", "Wheat", "Olives", "Taif Roses"],
+        answer: 2,
+        explanation: "Al-Jouf is Saudi Arabia's olive capital, home to one of the world's largest olive farms with millions of trees."
+      },
+      {
+        q: "What percentage of Saudi Arabia's land is desert?",
+        options: ["50%", "70%", "85%", "95%"],
+        answer: 3,
+        explanation: "Despite being approximately 95% desert, Saudi Arabia has developed a sophisticated agricultural sector through technology and innovation."
+      },
+      {
+        q: "The famous Taif Rose is used mainly for producing:",
+        options: ["Food coloring", "Perfume and rose water", "Medicine tablets", "Fabric dye"],
+        answer: 1,
+        explanation: "Taif Rose oil and rose water are among the world's most expensive floral products, used extensively in luxury perfumes and attar."
+      },
+      {
+        q: "Which region is known for producing mangoes and coffee in Saudi Arabia?",
+        options: ["Al-Qassim", "Tabuk", "Jazan", "Ha'il"],
+        answer: 2,
+        explanation: "Jazan (Jizan) in the south has a tropical climate that supports mangoes, coffee, bananas, and other warm-weather crops."
+      },
+      {
+        q: "What agricultural technology delivers water directly to plant roots?",
+        options: ["Flood irrigation", "Sprinkler systems", "Drip irrigation", "Rainwater harvesting"],
+        answer: 2,
+        explanation: "Drip irrigation delivers water directly to plant roots through tubes and emitters, reducing water use by 30–50% compared to flood irrigation."
+      },
+      {
+        q: "Saudi Arabia's Vision 2030 agricultural goal aims for what level of food self-sufficiency in strategic crops?",
+        options: ["30%", "45%", "60%", "80%"],
+        answer: 2,
+        explanation: "Vision 2030 targets 60% food self-sufficiency in strategic crops, alongside developing 450,000 hectares of new farmland."
+      },
+      {
+        q: "Which farming method grows crops in nutrient-rich water without soil?",
+        options: ["Aeroponics", "Hydroponics", "Aquaponics", "Permaculture"],
+        answer: 1,
+        explanation: "Hydroponics grows plants in nutrient-rich water solutions, using up to 95% less water than soil farming — ideal for Saudi Arabia's water-scarce environment."
+      },
+      {
+        q: "The famous Sidr honey from Saudi Arabia can sell for up to:",
+        options: ["$20 per kg", "$50 per kg", "$100 per kg", "$200 per kg"],
+        answer: 3,
+        explanation: "Sidr honey, produced from bees feeding on Sidr (Ziziphus) trees in southwestern Saudi Arabia, is among the world's most expensive honeys at up to $200/kg."
+      },
+      {
+        q: "Saudi Arabia is the world's largest producer of which type of water?",
+        options: ["Mineral water", "Spring water", "Desalinated water", "Glacial water"],
+        answer: 2,
+        explanation: "Saudi Arabia has the world's largest desalinated water production capacity, and innovative projects are now using desalinated and recycled water for agriculture."
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answered = false;
+
+    function renderQuestion() {
+      const q = questions[current];
+      const progress = ((current) / questions.length) * 100;
+      document.getElementById('progressFill').style.width = progress + '%';
+
+      const letters = ['A', 'B', 'C', 'D'];
+      const optionsHTML = q.options.map((opt, i) => `
+        <button class="quiz-option" onclick="selectAnswer(${i})" id="opt-${i}">
+          <span class="opt-letter">${letters[i]}</span>
+          ${opt}
+        </button>
+      `).join('');
+
+      document.getElementById('quizCard').innerHTML = `
+        <div class="quiz-meta">
+          <span class="quiz-num">Question ${current + 1} of ${questions.length}</span>
+          <span class="quiz-score-badge">⭐ ${score} / ${current}</span>
+        </div>
+        <p class="quiz-question">${q.q}</p>
+        <div class="quiz-options">${optionsHTML}</div>
+        <div class="quiz-feedback" id="feedback"></div>
+        <div class="quiz-nav">
+          <span style="font-size:0.85rem;color:var(--text-muted)">Select an answer to continue</span>
+          <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" style="display:none">
+            ${current === questions.length - 1 ? '🏁 See Results' : 'Next →'}
+          </button>
+        </div>
+      `;
+      answered = false;
+    }
+
+    function selectAnswer(idx) {
+      if (answered) return;
+      answered = true;
+
+      const q = questions[current];
+      const correct = q.answer;
+      const feedback = document.getElementById('feedback');
+
+      // Style options
+      document.querySelectorAll('.quiz-option').forEach((btn, i) => {
+        if (i === correct) btn.classList.add('correct');
+        if (i === idx && idx !== correct) btn.classList.add('wrong');
+        if (i === idx) btn.classList.add('selected');
+      });
+
+      if (idx === correct) {
+        score++;
+        feedback.textContent = '✅ Correct! ' + q.explanation;
+        feedback.className = 'quiz-feedback show correct';
+      } else {
+        feedback.textContent = '❌ Not quite. ' + q.explanation;
+        feedback.className = 'quiz-feedback show wrong';
+      }
+
+      document.getElementById('nextBtn').style.display = 'inline-flex';
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current >= questions.length) {
+        showResults();
+      } else {
+        renderQuestion();
+      }
+    }
+
+    function showResults() {
+      document.getElementById('progressFill').style.width = '100%';
+      const pct = Math.round((score / questions.length) * 100);
+      let emoji, msg;
+      if (pct >= 90) { emoji = '🏆'; msg = 'Outstanding! You\'re a Saudi agriculture expert!'; }
+      else if (pct >= 70) { emoji = '🌟'; msg = 'Great job! You know your Saudi agriculture well.'; }
+      else if (pct >= 50) { emoji = '🌱'; msg = 'Good effort! Explore more to sharpen your knowledge.'; }
+      else { emoji = '📖'; msg = 'Time to explore more! Check out the other pages and try again.'; }
+
+      document.getElementById('quizCard').innerHTML = `
+        <div class="quiz-result">
+          <div class="quiz-result-icon">${emoji}</div>
+          <h2>${msg}</h2>
+          <div class="quiz-result-score">${score}/${questions.length}</div>
+          <p style="margin-bottom:0.5rem">You answered <strong>${score}</strong> out of <strong>${questions.length}</strong> questions correctly (<strong>${pct}%</strong>).</p>
+          <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;">
+            <button class="btn btn-primary" onclick="restartQuiz()">🔄 Try Again</button>
+            <a href="facts.html" class="btn btn-secondary">📊 Explore Facts</a>
+          </div>
+        </div>
+      `;
+    }
+
+    function restartQuiz() {
+      current = 0;
+      score = 0;
+      answered = false;
+      renderQuestion();
+    }
+
+    // Start quiz
+    renderQuestion();
+  </script>
+
+{% endblock %}

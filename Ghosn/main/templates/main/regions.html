@@ -1,0 +1,128 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Crops — Ghosn{% endblock %}
+
+{% block content %}
+
+    <section class="page-hero">
+    <span class="page-hero-icon">🌱</span>
+      <h1 class="page-hero-title">Agricultural <span>Regions</span></h1>
+      <p class="page-hero-subtitle">Explore the diverse farming heartlands that make Saudi Arabia's agriculture unique — each region with its own climate, soil, and specialty crops.</p>
+    </section>
+
+    <section class="cards-section">
+      <div class="regions-grid">
+
+        <!-- Al-Qassim -->
+        <div class="region-card">
+          <div class="region-banner" style="background: linear-gradient(135deg, #c4883e22, #c4883e08);">
+            🌴
+          </div>
+          <div class="region-body">
+            <div class="card-tag">Central Region</div>
+            <h3 class="region-name">Al-Qassim (القصيم)</h3>
+            <p class="region-desc">Known as the "Garden of Saudi Arabia," Al-Qassim is the heart of date palm cultivation in the Kingdom. The region's fertile valleys, particularly Wadi Al-Rummah, have supported agriculture for millennia. Al-Qassim also produces significant quantities of grapes, pomegranates, and citrus, and is a hub for agricultural research and innovation.</p>
+            <div class="region-crops">
+              <span class="crop-pill">🌴 Dates</span>
+              <span class="crop-pill">🍇 Grapes</span>
+              <span class="crop-pill">🍊 Citrus</span>
+              <span class="crop-pill">🍎 Pomegranates</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Al-Jouf -->
+        <div class="region-card">
+          <div class="region-banner" style="background: linear-gradient(135deg, #7a9e7e22, #7a9e7e08);">
+            🫒
+          </div>
+          <div class="region-body">
+            <div class="card-tag">Northern Region</div>
+            <h3 class="region-name">Al-Jouf (الجوف)</h3>
+            <p class="region-desc">Al-Jouf is Saudi Arabia's olive capital and home to one of the world's largest olive farms with millions of trees. The region's cooler northern climate, reminiscent of the Mediterranean, allows it to grow high-quality olives, dates, wheat, and fruits. Al-Jouf olive oil has gained international recognition for its premium quality.</p>
+            <div class="region-crops">
+              <span class="crop-pill">🫒 Olives</span>
+              <span class="crop-pill">🌴 Dates</span>
+              <span class="crop-pill">🌾 Wheat</span>
+              <span class="crop-pill">🍅 Tomatoes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabuk -->
+        <div class="region-card">
+          <div class="region-banner" style="background: linear-gradient(135deg, #3a7d4422, #3a7d4408);">
+            🌾
+          </div>
+          <div class="region-body">
+            <div class="card-tag">Northwestern Region</div>
+            <h3 class="region-name">Tabuk (تبوك)</h3>
+            <p class="region-desc">Tabuk is famous for its vast wheat fields irrigated by center-pivot systems, creating the iconic circular green patterns visible from satellites. The region has ideal conditions for potato cultivation, making it the Kingdom's leading potato producer. Tabuk also grows excellent grapes, carrots, and onions in its fertile valleys.</p>
+            <div class="region-crops">
+              <span class="crop-pill">🌾 Wheat</span>
+              <span class="crop-pill">🥔 Potatoes</span>
+              <span class="crop-pill">🍇 Grapes</span>
+              <span class="crop-pill">🧅 Onions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Taif -->
+        <div class="region-card">
+          <div class="region-banner" style="background: linear-gradient(135deg, #c4443a22, #c4443a08);">
+            🌹
+          </div>
+          <div class="region-body">
+            <div class="card-tag">Western Highlands</div>
+            <h3 class="region-name">Taif (الطائف)</h3>
+            <p class="region-desc">Perched at 1,800 meters above sea level, Taif enjoys a pleasantly cool climate unlike most of Arabia. It is world-famous for its Taif rose (Rosa damascena), used in some of the world's most expensive rose water and oud perfumes. Taif is also a premier grape-growing region and produces honey, pomegranates, and peaches of exceptional quality.</p>
+            <div class="region-crops">
+              <span class="crop-pill">🌹 Taif Roses</span>
+              <span class="crop-pill">🍇 Grapes</span>
+              <span class="crop-pill">🍯 Honey</span>
+              <span class="crop-pill">🍎 Pomegranates</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jazan -->
+        <div class="region-card">
+          <div class="region-banner" style="background: linear-gradient(135deg, #d4984e22, #d4984e08);">
+            🥭
+          </div>
+          <div class="region-body">
+            <div class="card-tag">Southern Region</div>
+            <h3 class="region-name">Jazan (جازان)</h3>
+            <p class="region-desc">Jazan (Jizan) is Saudi Arabia's tropical agricultural jewel. Its warm, humid climate fed by monsoon rains supports crops rarely seen elsewhere in the Kingdom. The region produces mangoes, papayas, bananas, coffee, and sorghum. Jazan is also developing significant fisheries and aquaculture. Its coffee from the Faifa mountains is especially prized.</p>
+            <div class="region-crops">
+              <span class="crop-pill">🥭 Mangoes</span>
+              <span class="crop-pill">☕ Coffee</span>
+              <span class="crop-pill">🍌 Bananas</span>
+              <span class="crop-pill">🌽 Sorghum</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Asir -->
+        <div class="region-card">
+          <div class="region-banner" style="background: linear-gradient(135deg, #5aa66122, #5aa66108);">
+            🏔️
+          </div>
+          <div class="region-body">
+            <div class="card-tag">Southwestern Highlands</div>
+            <h3 class="region-name">Asir (عسير)</h3>
+            <p class="region-desc">The Asir highlands receive the highest rainfall in Saudi Arabia, enabling a rich variety of crops on terraced mountain farms. Sorghum, millet, and coffee have been cultivated here for centuries using ancient terracing techniques. Asir produces aromatic herbs, medicinal plants, and cool-season vegetables unavailable in lower elevations.</p>
+            <div class="region-crops">
+              <span class="crop-pill">☕ Coffee</span>
+              <span class="crop-pill">🌿 Herbs</span>
+              <span class="crop-pill">🌽 Sorghum</span>
+              <span class="crop-pill">🥦 Vegetables</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+{% endblock %}
