@@ -1,70 +1,84 @@
+// nav
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            menuToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    }
+
+    if (window.innerWidth <= 768 && dropdown && dropdownLink) {
+        dropdownLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            dropdown.classList.toggle("active");
+        });
+    }
+});
+
+// home video slider
 let currentSlide = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.getElementById("slides");
+    const videos = document.querySelectorAll(".slide video");
     const dots = document.querySelectorAll(".dot");
-    const slideItems = document.querySelectorAll(".slide");
-    const cards = document.querySelectorAll(".reveal-card");
 
-    const totalSlides = slideItems.length;
+    if (!slides || videos.length === 0) return;
 
-    function updateSlider() {
-        if (!slides) return;
+    const totalSlides = videos.length;
 
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        dots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === currentSlide);
+    function updateDots(index) {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
         });
     }
 
-    window.moveSlide = function (direction) {
-        if (totalSlides === 0) return;
+    function showSlide(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
 
-        currentSlide += direction;
-
-        if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
-        } else if (currentSlide >= totalSlides) {
-            currentSlide = 0;
-        }
-
-        updateSlider();
-    };
-
-    window.goToSlide = function (index) {
-        if (totalSlides === 0) return;
-
-        currentSlide = index;
-        updateSlider();
-    };
-
-    window.scrollToTop = function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-
-    updateSlider();
-
-    if (cards.length > 0) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.35
+        videos.forEach((video, i) => {
+            video.pause();
+            video.currentTime = 0;
+            video.muted = true;
         });
 
-        cards.forEach((card) => observer.observe(card));
+        updateDots(index);
+        videos[index].play().catch(() => {});
     }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    videos.forEach((video) => {
+        video.addEventListener("ended", nextSlide);
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", function () {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    showSlide(currentSlide);
 });
 
-// 
+// scroll to top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// reveal sections
 document.addEventListener("DOMContentLoaded", function () {
     const revealSections = document.querySelectorAll(".reveal-section");
 
@@ -82,9 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
-// 
+
+// reveal items
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".reveal-up, .reveal-drop, .reveal-rise");
+    const items = document.querySelectorAll(".reveal-up, .reveal-drop, .reveal-rise, .reveal-card");
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
@@ -101,8 +116,3 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(item);
     });
 });
-
-document.querySelector('.learn-more').addEventListener('click', function() {
-    alert('Redirecting to more details...');
-});
-

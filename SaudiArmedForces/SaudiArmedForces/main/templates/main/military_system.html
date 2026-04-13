@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<div class="main">
+<div class="military">
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -14,11 +14,10 @@
             <p class="hero-text">
                 Protecting the nation through strength, unity, and advanced defense systems.
             </p>
-            <a href="#about" class="hero-btn">Explore More</a>
+            <a href="#about" class="explore-btn">Explore More</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="section-title">
             <span>Overview</span>
@@ -49,7 +48,6 @@
         </div>
     </section>
 
-    <!-- Ministry Section -->
     <section class="ministry-section">
         <div class="container">
             <div class="text-box">
@@ -84,7 +82,6 @@
         </div>
     </section>
 
-    <!-- Importance Section -->
     <section class="importance-section">
         <div class="section-title light">
             <span>Protection & Stability</span>
@@ -119,11 +116,9 @@
         </div>
     </section>
 
-    <!--  -->
-    <!-- ************************cards************************ -->
     <section class="forces-overview">
         <div class="forces-container">
-            <h2 class="forces-title">Main Components of the Military System</h2>
+            <h2 class="forces-title" id="forces">Main Components of the Military System</h2>
 
             <p class="forces-subtitle">
                 The Saudi military system consists of several main branches that work together
@@ -136,7 +131,7 @@
                         <div class="feature-content">
                             <h3>Royal Saudi Land Forces</h3>
                             <p> represent the first line of defense for the Kingdom, combining advanced military strength with constant readiness to safeguard national security and stability. </p>
-                        </div> <a href="#" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:land_forces_view' %}" class="feature-link"> View More </a>
                     </div>
                 </div>
             </section>
@@ -150,7 +145,7 @@
                         <div class="feature-content">
                             <h3>Royal Saudi Air Force</h3>
                             <p> Responsible for protecting the Kingdom’s airspace and supporting operations with advanced aircraft and high readiness. </p>
-                        </div> <a href="#" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:air_forces_view' %}" class="feature-link"> View More </a>
                     </div>
                 </div>
             </section>
@@ -163,7 +158,7 @@
                         <div class="feature-content">
                             <h3>Royal Saudi Naval Forces</h3>
                             <p> The Royal Saudi Naval Forces protect the Kingdom’s seas and support maritime security. </p>
-                        </div> <a href="#" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:naval_forces_view' %}" class="feature-link"> View More </a>
                     </div>
                 </div>
             </section>
@@ -176,7 +171,7 @@
                         <div class="feature-content">
                             <h3>Royal Saudi Air Defense Forces</h3>
                             <p> protect the Kingdom from aerial threats using advanced missile and radar systems. </p>
-                        </div> <a href="#" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:air_defense_forces_view' %}" class="feature-link"> View More </a>
                     </div>
                 </div>
             </section>
@@ -189,7 +184,7 @@
                         <div class="feature-content">
                             <h3>Royal Saudi Strategic Missile Force</h3>
                             <p> provides strategic deterrence and enhances the Kingdom’s defense capabilities. </p>
-                        </div> <a href="#" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:strategic_missile_force_view' %}" class="feature-link"> View More </a>
                     </div>
                 </div>
             </section>

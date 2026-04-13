@@ -4,440 +4,498 @@
 {% block title %} Saudi Military System {% endblock %}
 
 {% block content %}
+<div class="air">
+    <!-- header Section start  -->
+    <header class="air-hero">
+        <video autoplay muted loop playsinline class="air-hero-video">
+            <source src="{% static 'videos/air-video.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-<!-- header Section start  -->
-<header class="air-hero">
-    <video autoplay muted loop playsinline class="air-hero-video">
-        <source src="{% static 'videos/air-video.mp4' %}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="air-hero-content">
-        <span class="section-badge">Air Power</span>
-        <h1>Royal Saudi Air Force</h1>
-        <p>
-            The Royal Saudi Air Force stands as a symbol of strength and precision,
-            safeguarding the Kingdom’s skies and supporting national defense with
-            advanced aviation capabilities and highly trained personnel.
-        </p>
-        <a href="#mission" class="hero-btn">Explore More</a>
-    </div>
-</header>
-<!-- header Section end  -->
-
-
-<!-- overview section start-->
-<section class="overview-section">
-
-    <div class="overview-container">
-
-        <div class="overview-header">
-            <span class="section-badge">Overview</span>
-            <h2>Royal Saudi Air Force</h2>
-        </div>
-
-        <p class="overview-text">
-            The Royal Saudi Air Force (RSAF) is one of the main branches of the Saudi Armed Forces,
-            responsible for protecting the Kingdom’s airspace and ensuring national security.
-            Since its establishment, the Air Force has evolved into a highly advanced and capable
-            military organization equipped with modern aircraft, sophisticated defense systems,
-            and highly trained personnel.
-        </p>
-
-        <p class="overview-text">
-            The RSAF plays a critical role in maintaining air superiority, conducting surveillance
-            and reconnaissance missions, and supporting joint military operations across all branches
-            of the armed forces. It operates a wide range of advanced fighter jets, support aircraft,
-            and radar systems to ensure effective control of the Kingdom’s airspace.
-        </p>
-
-        <p class="overview-text">
-            In addition to its defensive role, the Air Force contributes to regional stability and
-            participates in strategic operations when required. Continuous development, training,
-            and modernization efforts ensure that the RSAF remains prepared to face current and
-            future challenges.
-        </p>
-        <div class="overview-image">
-            <img src="{% static 'images/air2.jpg' %}" alt="air force">
-        </div>
-    </div>
-
-</section>
-<!-- overview section end-->
-
-
-<!-- mission Section start-->
-<section class="air-section" id="mission">
-    <div class="air-container">
-        <div class="air-text">
-            <span class="section-badge">Mission</span>
-            <h2>Mission & Responsibilities</h2>
+        <div class="air-hero-content">
+            <span class="section-badge">Air Power</span>
+            <h1>Royal Saudi Air Force</h1>
             <p>
-                The Royal Saudi Air Force is committed to protecting the Kingdom’s
-                airspace and ensuring national security through strategic aerial
-                operations and continuous readiness.
+                The Royal Saudi Air Force stands as a symbol of strength and precision,
+                safeguarding the Kingdom’s skies and supporting national defense with
+                advanced aviation capabilities and highly trained personnel.
             </p>
+            <a href="#over" class="hero-btn">Explore More</a>
         </div>
+    </header>
+    <!-- header Section end  -->
 
-        <div class="air-cards">
-            <div class="air-card">
-                <h3>Airspace Protection</h3>
-                <p>Defending the Kingdom against aerial threats.</p>
+
+    <!-- overview section start-->
+    <section class="overview-section" id="over">
+
+        <div class="overview-container">
+
+            <div class="overview-header">
+                <span class="section-badge">Overview</span>
+                <h2>Royal Saudi Air Force</h2>
             </div>
 
-            <div class="air-card">
-                <h3>Surveillance</h3>
-                <p>Monitoring airspace using advanced radar systems.</p>
-            </div>
-
-            <div class="air-card">
-                <h3>Combat Operations</h3>
-                <p>Executing air missions to support national defense.</p>
-            </div>
-
-            <div class="air-card">
-                <h3>Support Missions</h3>
-                <p>Providing logistics and support to other military branches.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- mission Section end-->
-
-
-
-<!-- structure section start -->
-<section class="structure-section">
-    <div class="structure-container">
-
-        <div class="structure-intro">
-            <span class="structure-badge">Organization & Structure</span>
-            <h2>Air Force Structure</h2>
-            <p>
-                The Royal Saudi Air Force is built on an organized system of operational units,
-                strategic bases, and support services that work together to maintain readiness
-                and mission effectiveness.
+            <p class="overview-text">
+                The Royal Saudi Air Force (RSAF) is one of the main branches of the Saudi Armed Forces,
+                responsible for protecting the Kingdom’s airspace and ensuring national security.
+                Since its establishment, the Air Force has evolved into a highly advanced and capable
+                military organization equipped with modern aircraft, sophisticated defense systems,
+                and highly trained personnel.
             </p>
+
+            <p class="overview-text">
+                The RSAF plays a critical role in maintaining air superiority, conducting surveillance
+                and reconnaissance missions, and supporting joint military operations across all branches
+                of the armed forces. It operates a wide range of advanced fighter jets, support aircraft,
+                and radar systems to ensure effective control of the Kingdom’s airspace.
+            </p>
+
+            <p class="overview-text">
+                In addition to its defensive role, the Air Force contributes to regional stability and
+                participates in strategic operations when required. Continuous development, training,
+                and modernization efforts ensure that the RSAF remains prepared to face current and
+                future challenges.
+            </p>
+            <div class="overview-image">
+                <img src="{% static 'images/air2.jpg' %}" alt="air force">
+            </div>
         </div>
 
-        <div class="structure-layout">
+    </section>
+    <!-- overview section end-->
 
-            <div class="structure-line"></div>
+    <!-- leader -->
+    <section class="content-section">
+        <div class="content-container">
 
-            <div class="structure-item">
-                <h3>Air Bases</h3>
+            <div class="content-header">
+                <span class="section-badge">Leadership</span>
+                <h2>Military Leadership</h2>
+            </div>
+
+            <div class="leadership-wrapper">
+
+                <div class="content-text">
+                    <ul>
+                        <li>
+                            <strong>Lieutenant General Turki bin Bandar bin Abdulaziz</strong>
+                            <span class="leader-bio">
+                                currently serves as the Commander of the Royal Saudi Air Force. He holds a Bachelor's degree in Aeronautical Sciences from King Faisal Air Academy in Riyadh, and a Master's degree in Command and Staff with honors from the United States Marine Corps Command and Staff College in Quantico.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="leader-image">
+                    <img src="{% static 'images/air-leader.jpg' %}" alt="Commander">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- mission Section start-->
+    <section class="air-section">
+        <div class="air-container">
+            <div class="air-text">
+                <span class="section-badge">Mission</span>
+                <h2>Mission & Responsibilities</h2>
                 <p>
-                    Strategic air bases across the Kingdom support rapid deployment and wide
-                    operational coverage.
+                    The Royal Saudi Air Force is committed to protecting the Kingdom’s
+                    airspace and ensuring national security through strategic aerial
+                    operations and continuous readiness.
                 </p>
             </div>
 
-            <div class="structure-item">
-                <h3>Combat Units</h3>
+            <div class="air-cards">
+                <div class="air-card">
+                    <h3>Airspace Protection</h3>
+                    <p>Defending the Kingdom against aerial threats.</p>
+                </div>
+
+                <div class="air-card">
+                    <h3>Surveillance</h3>
+                    <p>Monitoring airspace using advanced radar systems.</p>
+                </div>
+
+                <div class="air-card">
+                    <h3>Combat Operations</h3>
+                    <p>Executing air missions to support national defense.</p>
+                </div>
+
+                <div class="air-card">
+                    <h3>Support Missions</h3>
+                    <p>Providing logistics and support to other military branches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- mission Section end-->
+
+
+
+    <!-- structure section start -->
+    <section class="structure-section">
+        <div class="structure-container">
+
+            <div class="structure-intro">
+                <span class="structure-badge">Organization & Structure</span>
+                <h2>Air Force Structure</h2>
                 <p>
-                    Fighter squadrons and mission units carry out defense, patrol, and tactical operations.
+                    The Royal Saudi Air Force is built on an organized system of operational units,
+                    strategic bases, and support services that work together to maintain readiness
+                    and mission effectiveness.
                 </p>
             </div>
 
-            <div class="structure-item">
-                <h3>Support & Logistics</h3>
+            <div class="structure-layout">
+
+                <div class="structure-line"></div>
+
+                <div class="structure-item">
+                    <h3>Air Bases</h3>
+                    <p>
+                        Strategic air bases across the Kingdom support rapid deployment and wide
+                        operational coverage.
+                    </p>
+                </div>
+
+                <div class="structure-item">
+                    <h3>Combat Units</h3>
+                    <p>
+                        Fighter squadrons and mission units carry out defense, patrol, and tactical operations.
+                    </p>
+                </div>
+
+                <div class="structure-item">
+                    <h3>Support & Logistics</h3>
+                    <p>
+                        Maintenance, supply, and coordination systems ensure continuous readiness and efficiency.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- structure section end -->
+
+
+    <!-- aircraft Section start-->
+    <section class="air-section aircraft-section" id="aircraft">
+        <div class="air-container">
+            <div class="air-text center-text">
+                <span class="section-badge">Aircraft</span>
+                <h2>Aircraft & Capabilities</h2>
                 <p>
-                    Maintenance, supply, and coordination systems ensure continuous readiness and efficiency.
+                    The Air Force operates a wide range of advanced aircraft designed
+                    to achieve air superiority, conduct missions with precision, and
+                    support national defense strategies.
                 </p>
             </div>
 
+            <div class="equipment-grid">
+
+                <!-- Card 1 -->
+                <article class="equipment-card reveal">
+                    <div class="equipment-image">
+                        <img src="{% static 'images/F-15SA.jpg' %}" alt=" F-15SA">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>F-15SA</h3>
+                        <p>
+                            One of the most prominent multi-role fighter jets, known for its high power
+                            and ability to perform both air superiority and ground attack missions.
+                        </p>
+                        <span class="equipment-tag">Multi-role Fighter</span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="equipment-card reveal">
+                    <div class="equipment-image">
+                        <img src="{% static 'images/eurofighter-typhoon.jpg' %}" alt="Eurofighter Typhoon">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Eurofighter Typhoon</h3>
+                        <p>
+                            A modern, fast, and highly agile combat aircraft with air-to-air and air-to-ground capabilities,
+                            considered one of the key aircraft in the Saudi fleet.
+                        </p>
+                        <span class="equipment-tag">Air Superiority & Ground Attack</span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="equipment-card reveal">
+                    <div class="equipment-image">
+                        <img src="{% static 'images/Tornado.jpg' %}" alt="Tornado">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Tornado</h3>
+                        <p>
+                            Used in air strike and operational support missions,
+                            known for its ability to perform combat operations in various conditions.
+                        </p>
+                        <span class="equipment-tag">Tactical Strike</span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="equipment-card reveal">
+                    <div class="equipment-image">
+                        <img src="{% static 'images/E-3A AWACS.jpg' %}" alt="E-3A AWACS">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>E-3A AWACS</h3>
+                        <p>
+                            An airborne early warning and control aircraft that helps detect threats
+                            and efficiently manage and control air operations.
+                        </p>
+                        <span class="equipment-tag">Early Warning & Control</span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="equipment-card reveal">
+                    <div class="equipment-image">
+                        <img src="{% static 'images/A330-MRTT.jpg' %}" alt="A330 MRTT">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>A330 MRTT</h3>
+                        <p>
+                            An aerial refueling and strategic transport aircraft
+                            that supports fighter jets and other aircraft during long missions.
+                        </p>
+                        <span class="equipment-tag">Refueling & Transport</span>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="equipment-card reveal">
+                    <div class="equipment-image">
+                        <img src="{% static 'images/c130.jpg' %}" alt="C-130">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>C-130</h3>
+                        <p>
+                            A multi-purpose military transport aircraft used to carry personnel,
+                            equipment, and supplies in logistical and humanitarian missions.
+                        </p>
+                        <span class="equipment-tag">Military Transport</span>
+                    </div>
+                </article>
+
+            </div>
         </div>
-
-    </div>
-</section>
-<!-- structure section end -->
+    </section>
+    <!-- aircraft Section start-->
 
 
-<!-- aircraft Section start-->
-<section class="air-section aircraft-section" id="aircraft">
-    <div class="air-container">
-        <div class="air-text center-text">
-            <span class="section-badge">Aircraft</span>
-            <h2>Aircraft & Capabilities</h2>
-            <p>
-                The Air Force operates a wide range of advanced aircraft designed
-                to achieve air superiority, conduct missions with precision, and
-                support national defense strategies.
-            </p>
-        </div>
+    <!-- script -->
+    <script>const reveals = document.querySelectorAll(".reveal");
 
-        <div class="equipment-grid">
+        function revealOnScroll() {
+            const triggerBottom = window.innerHeight * 0.85;
 
-            <!-- Card 1 -->
-            <article class="equipment-card reveal">
-                <div class="equipment-image">
-                    <img src="{% static 'images/F-15SA.jpg' %}" alt=" F-15SA">
-                </div>
-                <div class="equipment-content">
-                    <h3>F-15SA</h3>
-                    <p>
-                        One of the most prominent multi-role fighter jets, known for its high power
-                        and ability to perform both air superiority and ground attack missions.
-                    </p>
-                    <span class="equipment-tag">Multi-role Fighter</span>
-                </div>
-            </article>
+            reveals.forEach((item) => {
+                const itemTop = item.getBoundingClientRect().top;
 
-            <!-- Card 2 -->
-            <article class="equipment-card reveal">
-                <div class="equipment-image">
-                    <img src="{% static 'images/eurofighter-typhoon.jpg' %}" alt="Eurofighter Typhoon">
-                </div>
-                <div class="equipment-content">
-                    <h3>Eurofighter Typhoon</h3>
-                    <p>
-                        A modern, fast, and highly agile combat aircraft with air-to-air and air-to-ground capabilities,
-                        considered one of the key aircraft in the Saudi fleet.
-                    </p>
-                    <span class="equipment-tag">Air Superiority & Ground Attack</span>
-                </div>
-            </article>
+                if (itemTop < triggerBottom) {
+                    item.classList.add("active");
+                }
+            });
+        }
 
-            <!-- Card 3 -->
-            <article class="equipment-card reveal">
-                <div class="equipment-image">
-                    <img src="{% static 'images/Tornado.jpg' %}" alt="Tornado">
-                </div>
-                <div class="equipment-content">
-                    <h3>Tornado</h3>
-                    <p>
-                        Used in air strike and operational support missions,
-                        known for its ability to perform combat operations in various conditions.
-                    </p>
-                    <span class="equipment-tag">Tactical Strike</span>
-                </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="equipment-card reveal">
-                <div class="equipment-image">
-                    <img src="{% static 'images/E-3A AWACS.jpg' %}" alt="E-3A AWACS">
-                </div>
-                <div class="equipment-content">
-                    <h3>E-3A AWACS</h3>
-                    <p>
-                        An airborne early warning and control aircraft that helps detect threats
-                        and efficiently manage and control air operations.
-                    </p>
-                    <span class="equipment-tag">Early Warning & Control</span>
-                </div>
-            </article>
-
-            <!-- Card 5 -->
-            <article class="equipment-card reveal">
-                <div class="equipment-image">
-                    <img src="{% static 'images/A330-MRTT.jpg' %}" alt="A330 MRTT">
-                </div>
-                <div class="equipment-content">
-                    <h3>A330 MRTT</h3>
-                    <p>
-                    <p>
-                        An aerial refueling and strategic transport aircraft
-                        that supports fighter jets and other aircraft during long missions.
-                    </p>
-                    <span class="equipment-tag">Refueling & Transport</span>
-                </div>
-            </article>
-
-            <!-- Card 6 -->
-            <article class="equipment-card reveal">
-                <div class="equipment-image">
-                    <img src="{% static 'images/c130.jpg' %}" alt="C-130">
-                </div>
-                <div class="equipment-content">
-                    <h3>C-130</h3>
-                    <p>
-                        A multi-purpose military transport aircraft used to carry personnel,
-                        equipment, and supplies in logistical and humanitarian missions.
-                    </p>
-                    <span class="equipment-tag">Military Transport</span>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-<!-- aircraft Section start-->
+        window.addEventListener("scroll", revealOnScroll);
+        window.addEventListener("load", revealOnScroll);</script>
+    <!-- script -->
 
 
-<!-- script -->
-<script>const reveals = document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-        const triggerBottom = window.innerHeight * 0.85;
-
-        reveals.forEach((item) => {
-            const itemTop = item.getBoundingClientRect().top;
-
-            if (itemTop < triggerBottom) {
-                item.classList.add("active");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);</script>
-<!-- script -->
-
-
-<!-- history section start-->
-<section class="history-section">
-    <div class="history-container">
-        <div class="history-header">
-            <span class="history-badge">Military History</span>
-            <h2>History of the Royal Saudi Air Force</h2>
-        </div>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <span class="timeline-year">1930s</span>
-                    <h3>The Beginning</h3>
-                    <p>
-                        The RSAF was established with limited aircraft and resources,
-                        focusing on basic defense and training operations.
-                    </p>
-                </div>
+    <!-- history section start-->
+    <section class="history-section">
+        <div class="history-container">
+            <div class="history-header">
+                <span class="history-badge">Military History</span>
+                <h2>History of the Royal Saudi Air Force</h2>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <span class="timeline-year">1960s</span>
-                    <h3>Expansion</h3>
-                    <p>
-                        With the acquisition of more advanced aircraft, the RSAF expanded
-                        its infrastructure, readiness, and operational capabilities.
-                    </p>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">1930s</span>
+                        <h3>The Beginning</h3>
+                        <p>
+                            The RSAF was established with limited aircraft and resources,
+                            focusing on basic defense and training operations.
+                        </p>
+                    </div>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">1960s</span>
+                        <h3>Expansion</h3>
+                        <p>
+                            With the acquisition of more advanced aircraft, the RSAF expanded
+                            its infrastructure, readiness, and operational capabilities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2000s</span>
+                        <h3>Modernization</h3>
+                        <p>
+                            Integration of cutting-edge technology, including advanced fighter jets,
+                            surveillance systems, and modern training programs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">Now</span>
+                        <h3>Current Strength</h3>
+                        <p>
+                            Today, the RSAF stands as one of the region’s most advanced air forces,
+                            ensuring the Kingdom’s airspace safety and security.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- history section end-->
+
+
+    <!-- vision Section start-->
+    <section class="vision-section">
+        <div class="vision-container">
+            <div class="vision-header">
+                <span class="vision-badge">Development & Vision 2030</span>
+                <h2>Growth and Future Readiness</h2>
+                <p>
+                    The Royal Saudi Air Force continues to develop under Saudi Vision 2030 by enhancing
+                    operational readiness, adopting advanced technologies, and strengthening local defense capabilities.
+                </p>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <span class="timeline-year">2000s</span>
+            <div class="vision-cards">
+                <div class="vision-card">
                     <h3>Modernization</h3>
                     <p>
-                        Integration of cutting-edge technology, including advanced fighter jets,
-                        surveillance systems, and modern training programs.
+                        Expanding the use of advanced aircraft, smart systems, and modern defense technologies.
                     </p>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <span class="timeline-year">Now</span>
-                    <h3>Current Strength</h3>
+                <div class="vision-card">
+                    <h3>Training & Skills</h3>
                     <p>
-                        Today, the RSAF stands as one of the region’s most advanced air forces,
-                        ensuring the Kingdom’s airspace safety and security.
+                        Investing in highly qualified personnel through specialized training and continuous development.
+                    </p>
+                </div>
+
+                <div class="vision-card">
+                    <h3>Local Capability</h3>
+                    <p>
+                        Supporting local industries and increasing national defense capabilities in line with Vision 2030.
                     </p>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
-<!-- history section end-->
+    </section>
+    <!-- vision Section end-->
 
 
-<!-- vision Section start-->
-<section class="vision-section">
-    <div class="vision-container">
-        <div class="vision-header">
-            <span class="vision-badge">Development & Vision 2030</span>
-            <h2>Growth and Future Readiness</h2>
-            <p>
-                The Royal Saudi Air Force continues to develop under Saudi Vision 2030 by enhancing
-                operational readiness, adopting advanced technologies, and strengthening local defense capabilities.
-            </p>
-        </div>
+    <!-- achievements section start-->
+    <section class="achievements-section">
 
-        <div class="vision-cards">
-            <div class="vision-card">
-                <h3>Modernization</h3>
+        <div class="achievements-container">
+
+            <div class="achievements-header">
+                <span class="achievements-badge">Major Achievements</span>
+                <h2>Key Milestones & Achievements</h2>
                 <p>
-                    Expanding the use of advanced aircraft, smart systems, and modern defense technologies.
+                    The Royal Saudi Air Force has achieved significant milestones through modernization,
+                    advanced operations, and continuous development.
                 </p>
             </div>
 
-            <div class="vision-card">
-                <h3>Training & Skills</h3>
-                <p>
-                    Investing in highly qualified personnel through specialized training and continuous development.
-                </p>
-            </div>
+            <div class="achievements-cards">
 
-            <div class="vision-card">
-                <h3>Local Capability</h3>
-                <p>
-                    Supporting local industries and increasing national defense capabilities in line with Vision 2030.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- vision Section end-->
+                <div class="achievement-card">
+                    <h3>Air Superiority</h3>
+                    <p>
+                        Successfully maintaining control of national airspace using advanced fighter aircraft and defense systems.
+                    </p>
+                </div>
 
+                <div class="achievement-card">
+                    <h3>Modern Fleet</h3>
+                    <p>
+                        Operating one of the most advanced air fleets in the region, including modern fighter jets and support aircraft.
+                    </p>
+                </div>
 
-<!-- achievements section start-->
-<section class="achievements-section">
+                <div class="achievement-card">
+                    <h3>Advanced Training</h3>
+                    <p>
+                        Developing highly skilled pilots and personnel through continuous training programs and international cooperation.
+                    </p>
+                </div>
 
-    <div class="achievements-container">
+                <div class="achievement-card">
+                    <h3>Technology Integration</h3>
+                    <p>
+                        Integrating cutting-edge technologies such as radar systems, drones, and cybersecurity solutions.
+                    </p>
+                </div>
 
-        <div class="achievements-header">
-            <span class="achievements-badge">Major Achievements</span>
-            <h2>Key Milestones & Achievements</h2>
-            <p>
-                The Royal Saudi Air Force has achieved significant milestones through modernization,
-                advanced operations, and continuous development.
-            </p>
-        </div>
-
-        <div class="achievements-cards">
-
-            <div class="achievement-card">
-                <h3>Air Superiority</h3>
-                <p>
-                    Successfully maintaining control of national airspace using advanced fighter aircraft and defense systems.
-                </p>
-            </div>
-
-            <div class="achievement-card">
-                <h3>Modern Fleet</h3>
-                <p>
-                    Operating one of the most advanced air fleets in the region, including modern fighter jets and support aircraft.
-                </p>
-            </div>
-
-            <div class="achievement-card">
-                <h3>Advanced Training</h3>
-                <p>
-                    Developing highly skilled pilots and personnel through continuous training programs and international cooperation.
-                </p>
-            </div>
-
-            <div class="achievement-card">
-                <h3>Technology Integration</h3>
-                <p>
-                    Integrating cutting-edge technologies such as radar systems, drones, and cybersecurity solutions.
-                </p>
             </div>
 
         </div>
 
-    </div>
-
-</section>
-<!-- achievements section end-->
+    </section>
+    <!-- achievements section end-->
 
 
+
+    <!-- <section class="content-section">
+            <div class="content-container">
+
+                <div class="content-header">
+                    <span class="section-badge">Challenges</span>
+                    <h2>Geographical & Strategic Challenges</h2>
+                </div>
+
+                <div class="content-text">
+                    <p>
+                        The Royal Saudi Air Force operates across a vast and strategically important
+                        airspace, requiring constant readiness to address geographical and regional challenges.
+                    </p>
+
+                    <ul class="content-list">
+                        <li>Monitoring and securing a large airspace that spans diverse terrains including deserts, mountains, and coastlines.</li>
+                        <li>Responding rapidly to potential aerial threats across long distances.</li>
+                        <li>Protecting critical infrastructure such as oil facilities and key economic zones.</li>
+                        <li>Ensuring airspace security in a region with dynamic geopolitical conditions.</li>
+                        <li>Operating efficiently under extreme weather conditions such as heat and sandstorms.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section> -->
+
+</div>
 {% endblock %}

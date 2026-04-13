@@ -13,4 +13,6 @@ urlpatterns = [
     path("military/system/", views.military_system_view, name="military_system_view"),
     path("heroes/", views.heroes_view, name="heroes_view"),
     path("technology/", views.technology_view, name="technology_view"),
+    path("mode/<mode>/", views.mode_view,name="mode_view"),
+
 ]

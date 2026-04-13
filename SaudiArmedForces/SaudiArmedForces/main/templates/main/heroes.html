@@ -2,29 +2,85 @@
 {% load static %}
 {% block title %} Royal Saudi Land Forces {% endblock %}
 {% block content %}
+
 <section class="martyrs-section">
 
     <div class="martyrs-hero">
-        <!-- Video  -->
+
+        <!-- Video -->
         <video autoplay muted loop playsinline class="martyrs-media">
             <source src="{% static 'videos/heroes.mp4' %}" type="video/mp4">
         </video>
 
+        <!-- Overlay -->
         <div class="martyrs-overlay"></div>
+
+        <!-- Content -->
         <div class="martyrs-content">
             <span class="martyrs-badge">In Memory</span>
+
             <h2>Martyrs of Honor</h2>
+
             <p>
-                We honor the brave martyrs who sacrificed their lives in defense of the Kingdom.
-                Their courage, loyalty, and devotion remain a lasting symbol of national pride and remembrance.
+                We honor the martyrs who gave their lives in defense of the Kingdom.
+
             </p>
         </div>
+
     </div>
-    <!-- quote -->
+
+    <!-- Quote -->
     <div class="martyrs-quote-box">
         <p class="martyrs-quote">
-            “Their sacrifice will forever remain a light of honor, loyalty, and courage in the memory of the nation.”
+            Their sacrifice will forever remain a light of honor, loyalty,
+            and courage in the memory of the nation.
         </p>
     </div>
+
 </section>
+
+<!-- ===== Martyrs Extra Sections ===== -->
+
+<section class="families-v2">
+    <div class="families-container">
+        <div class="families-line"></div>
+
+        <div class="families-content">
+            <span class="tag">Support</span>
+            <h2>Support for Families</h2>
+
+            <p class="intro-text">
+                The Kingdom places great importance on supporting the families of martyrs,
+                recognizing their sacrifice as a shared national responsibility.
+            </p>
+
+            <ul class="families-list">
+                <li>Providing continuous social and emotional support for martyrs’ families</li>
+                <li>Offering financial assistance to ensure long-term stability</li>
+                <li>Providing educational opportunities for their children</li>
+                <li>Ensuring access to healthcare and essential services</li>
+                <li>Honoring martyrs through official ceremonies and national recognition</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 2. National Recognition -->
+<section class="recognition-section">
+    <div class="glass-box">
+
+        <span class="small-badge">Recognition</span>
+
+        <h2>National Recognition</h2>
+
+        <p>
+            Martyrs are honored through official recognition, national ceremonies,
+            and remembrance initiatives that preserve their legacy. Their sacrifice
+            remains a symbol of pride, dignity, and service to the Kingdom.
+        </p>
+
+    </div>
+</section>
+
+
 {% endblock %}
