@@ -16,7 +16,9 @@ body {
 main {
     flex: 1;
 }
-
+section:last-of-type {
+    margin-bottom: -40px;
+}
 .container {
     width: 90%;
     max-width: 1100px;
@@ -942,7 +944,7 @@ body.simple-mode {
 /* Footer Section */
 .main-footer {
     background: linear-gradient(135deg, #102016, #09130c);
-    color: #e0e0e0;
+    color: #f7eded;
     padding: 60px 0 30px;
     margin-top: 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -964,7 +966,7 @@ body.simple-mode {
 }
 
 .footer-links a {
-    color: #e8f5e9;
+    color: #ffffff;
     text-decoration: none;
     transition: 0.3s;
 }
