@@ -1,12 +1,11 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block css%}
 <link rel="stylesheet" href="{%static 'css/style-pages.css'%}">
 {%endblock%}
-{% block title %}Traditional Foods{%endblock%}
-
-
+{% block title %}{% trans "Traditional Foods" %}{%endblock%}
 
 {% block header %}
 
@@ -14,330 +13,318 @@
     <img src="{% static 'images/header-food.jpg' %}" class="back-img">
 
     <div class="title-header">
-        <h1>Traditional Food</h1>
-        <p>Discover the flavors of Saudi Arabia</p>
+        <h1>{% trans "Traditional Food" %}</h1>
+        <p>{% trans "Discover the flavors of Saudi Arabia" %}</p>
     </div>
 </div>
 
 {% endblock %}
 
-
-
-
 {% block content%}
 
 <section class="box-intro">
   <div class="intro">
-    <h2>Saudi Traditional Food</h2>
+    <h2>{% trans "Saudi Traditional Food" %}</h2>
     <p>
-      Saudi traditional food reflects the richness of the Kingdom's heritage and culture, featuring distinctive
-      flavors and simple ingredients that have been passed down through generations.
+      {% trans "Saudi traditional food reflects the richness of the Kingdom's heritage and culture, featuring distinctive flavors and simple ingredients that have been passed down through generations." %}
    </p>
   </div>
 </section>
 
-
-  <!--  Main Dishes -->
-  <div class="heritage">
-    <h3>Main Dishes</h3>
+<div class="heritage">
+    <h3>{% trans "Main Dishes" %}</h3>
 
     <div class="images-scroll">
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Kabsa.jpg'%}">
         <div class="card-content">
-          <h2>Kabsa</h2>
-          <p>Rice dish cooked with meat and aromatic spices.</p>
+          <h2>{% trans "Kabsa" %}</h2>
+          <p>{% trans "Rice dish cooked with meat and aromatic spices." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/jarish.jpg'%}">
         <div class="card-content">
-          <h2>Jareesh</h2>
-          <p>Crushed wheat cooked with meat and spices.</p>
+          <h2>{% trans "Jareesh" %}</h2>
+          <p>{% trans "Crushed wheat cooked with meat and spices." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/qursan.jpg'%}">
         <div class="card-content">
-          <h2>Qursan</h2>
-          <p>Thin bread layered with vegetables and meat stew.</p>
+          <h2>{% trans "Qursan" %}</h2>
+          <p>{% trans "Thin bread layered with vegetables and meat stew." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Mataziz.jpg'%}">
         <div class="card-content">
-          <h2>Mataziz</h2>
-          <p>Small dough pieces cooked in a rich meat broth.</p>
+          <h2>{% trans "Mataziz" %}</h2>
+          <p>{% trans "Small dough pieces cooked in a rich meat broth." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/margaouq.jpg'%}">
         <div class="card-content">
-          <h2>Margaouq</h2>
-          <p>Thin dough cooked with vegetables and meat.</p>
+          <h2>{% trans "Margaouq" %}</h2>
+          <p>{% trans "Thin dough cooked with vegetables and meat." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Manto.jpg'%}">
         <div class="card-content">
-          <h2>Manto</h2>
-          <p>Steamed dumplings filled with spiced meat.</p>
+          <h2>{% trans "Manto" %}</h2>
+          <p>{% trans "Steamed dumplings filled with spiced meat." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/alharis.webp'%}">
         <div class="card-content">
-          <h2>Harees</h2>
-          <p>Wheat and meat cooked until soft and creamy.</p>
+          <h2>{% trans "Harees" %}</h2>
+          <p>{% trans "Wheat and meat cooked until soft and creamy." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/almaghsh.webp'%}">
         <div class="card-content">
-          <h2>Maghsh</h2>
-          <p>Meat and vegetables cooked in a traditional stone pot.</p>
+          <h2>{% trans "Maghsh" %}</h2>
+          <p>{% trans "Meat and vegetables cooked in a traditional stone pot." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Saleeq.avif'%}">
         <div class="card-content">
-          <h2>Saleeq</h2>
-          <p>Rice cooked with milk and served with chicken or meat.</p>
+          <h2>{% trans "Saleeq" %}</h2>
+          <p>{% trans "Rice cooked with milk and served with chicken or meat." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Haneeth.avif'%}">
         <div class="card-content">
-          <h2>Haneeth</h2>
-          <p>Slow-cooked meat in an underground oven.</p>
+          <h2>{% trans "Haneeth" %}</h2>
+          <p>{% trans "Slow-cooked meat in an underground oven." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/sayiadiah.avif'%}">
         <div class="card-content">
-          <h2>Sayiadiah</h2>
-          <p>Rice cooked with fish and spices, known for its rich flavor and brown color.</p>
+          <h2>{% trans "Sayiadiah" %}</h2>
+          <p>{% trans "Rice cooked with fish and spices, known for its rich flavor and brown color." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/kubaibet-hail.avif'%}">
         <div class="card-content">
-          <h2>kubaibet-hail</h2>
-          <p>Meat and bulgur balls, seasoned or stuffed, fried or cooked as a traditional dish.</p>
+          <h2>{% trans "kubaibet-hail" %}</h2>
+          <p>{% trans "Meat and bulgur balls, seasoned or stuffed, fried or cooked as a traditional dish." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Madini-Rice.avif'%}">
         <div class="card-content">
-          <h2>Madini-Rice</h2>
-          <p>Rice cooked with chicken and mild spices, known for its light flavor and soft texture.</p>
+          <h2>{% trans "Madini-Rice" %}</h2>
+          <p>{% trans "Rice cooked with chicken and mild spices, known for its light flavor and soft texture." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Hassawi-Rice.avif'%}">
         <div class="card-content">
-          <h2>Hassawi-Rice</h2>
-          <p>Red rice cooked with spices and meat or chicken, known for its rich flavor and unique texture.</p>
+          <h2>{% trans "Hassawi-Rice" %}</h2>
+          <p>{% trans "Red rice cooked with spices and meat or chicken, known for its rich flavor and unique texture." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/alful-alhijaziu.jpg'%}">
         <div class="card-content">
-          <h2>Ful Hijazi</h2>
-          <p>Cooked fava beans served with olive oil and lemon.</p>
+          <h2>{% trans "Ful Hijazi" %}</h2>
+          <p>{% trans "Cooked fava beans served with olive oil and lemon." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/almaesub.jpg'%}">
         <div class="card-content">
-          <h2>Ma'soob</h2>
-          <p>Mashed banana mixed with bread, honey, and cream.</p>
+          <h2>{% trans "Ma'soob" %}</h2>
+          <p>{% trans "Mashed banana mixed with bread, honey, and cream." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/alasiduh.webp'%}">
         <div class="card-content">
-          <h2>Aseedah</h2>
-          <p>Thick dough served with broth or honey.</p>
+          <h2>{% trans "Aseedah" %}</h2>
+          <p>{% trans "Thick dough served with broth or honey." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Al-Yaghmash.jpg'%}">
         <div class="card-content">
-          <h2>Yaghmash</h2>
-          <p>Baked dough filled with minced meat.</p>
+          <h2>{% trans "Yaghmash" %}</h2>
+          <p>{% trans "Baked dough filled with minced meat." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/almalihia.avif'%}">
         <div class="card-content">
-          <h2>Mulyhiya</h2>
-          <p>Traditional dish made with flour and broth.</p>
+          <h2>{% trans "Mulyhiya" %}</h2>
+          <p>{% trans "Traditional dish made with flour and broth." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/almujalaluh.jpg'%}">
         <div class="card-content">
-          <h2>Al-Mujalalah</h2>
-          <p>Simple dough-based dish with local ingredients.</p>
+          <h2>{% trans "Al-Mujalalah" %}</h2>
+          <p>{% trans "Simple dough-based dish with local ingredients." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/almurasah.jpg'%}">
         <div class="card-content">
-          <h2>Mursa</h2>
-          <p>Mashed bread mixed with broth and meat.</p>
+          <h2>{% trans "Mursa" %}</h2>
+          <p>{% trans "Mashed bread mixed with broth and meat." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/altharid.jpg'%}">
         <div class="card-content">
-          <h2>Thareed</h2>
-          <p>Bread soaked in rich meat broth.</p>
+          <h2>{% trans "Thareed" %}</h2>
+          <p>{% trans "Bread soaked in rich meat broth." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Ruqsh.avif'%}">
         <div class="card-content">
-          <h2>Ruqsh</h2>
-          <p>Bread mixed with meat and vegetable broth, served as a traditional hearty dish.</p>
+          <h2>{% trans "Ruqsh" %}</h2>
+          <p>{% trans "Bread mixed with meat and vegetable broth, served as a traditional hearty dish." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/alearikah.jpg'%}">
         <div class="card-content">
-          <h2>Areekah</h2>
-          <p>Dough mixed with dates and honey.</p>
+          <h2>{% trans "Areekah" %}</h2>
+          <p>{% trans "Dough mixed with dates and honey." %}</p>
         </div>
       </div>
 
     </div>
-  </div>
+</div>
 
-
-  <!-- Bread -->
-  <div class="heritage">
-    <h3>Bread</h3>
+<div class="heritage">
+    <h3>{% trans "Bread" %}</h3>
 
     <div class="images-scroll">
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/altamis.jpg'%}">
         <div class="card-content">
-          <h2>Tamees</h2>
-          <p>Traditional oven-baked flatbread.</p>
+          <h2>{% trans "Tamees" %}</h2>
+          <p>{% trans "Traditional oven-baked flatbread." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/alkhamir.jpg'%}">
         <div class="card-content">
-          <h2>Khamir</h2>
-          <p>Thick bread cooked on a hot surface.</p>
+          <h2>{% trans "Khamir" %}</h2>
+          <p>{% trans "Thick bread cooked on a hot surface." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Maqshush.avif'%}">
         <div class="card-content">
-          <h2>Maqshush</h2>
-          <p>Small traditional flatbread cooked on a griddle, usually served with honey or butter.</p>
+          <h2>{% trans "Maqshush" %}</h2>
+          <p>{% trans "Small traditional flatbread cooked on a griddle, usually served with honey or butter." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/muqana-bread.avif'%}">
         <div class="card-content">
-          <h2>Muqana-bread</h2>
-          <p>Traditional bread made from flour and baked to be light and crispy.</p>
+          <h2>{% trans "Muqana-bread" %}</h2>
+          <p>{% trans "Traditional bread made from flour and baked to be light and crispy." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/alsharik.jpg'%}">
         <div class="card-content">
-          <h2>Sharik</h2>
-          <p>Soft sweet bread flavored with spices.</p>
+          <h2>{% trans "Sharik" %}</h2>
+          <p>{% trans "Soft sweet bread flavored with spices." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/mifa.webp'%}">
         <div class="card-content">
-          <h2>Mifa</h2>
-          <p>Bread baked in a clay oven.</p>
+          <h2>{% trans "Mifa" %}</h2>
+          <p>{% trans "Bread baked in a clay oven." %}</p>
         </div>
       </div>
 
     </div>
-  </div>
+</div>
 
-
-  <!--Desserts -->
-  <div class="heritage">
-    <h3>Desserts</h3>
+<div class="heritage">
+    <h3>{% trans "Desserts" %}</h3>
 
     <div class="images-scroll">
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/hunini.jpg'%}">
         <div class="card-content">
-          <h2>Hunini</h2>
-          <p>Sweet dish made with dates, bread, and butter.</p>
+          <h2>{% trans "Hunini" %}</h2>
+          <p>{% trans "Sweet dish made with dates, bread, and butter." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/klejeh.jpg'%}">
         <div class="card-content">
-          <h2>Klejeh</h2>
-          <p>Traditional sweet pastry filled with dates.</p>
+          <h2>{% trans "Klejeh" %}</h2>
+          <p>{% trans "Traditional sweet pastry filled with dates." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Dabiyaza.jpg'%}">
         <div class="card-content">
-          <h2>Dabiyaza</h2>
-          <p>Sweet dish made with dried fruits and nuts.</p>
+          <h2>{% trans "Dabiyaza" %}</h2>
+          <p>{% trans "Sweet dish made with dried fruits and nuts." %}</p>
         </div>
       </div>
 
       <div class="heritage-card">
         <img src="{% static 'images/Foods/Luqaimat.jpg'%}">
         <div class="card-content">
-          <h2>Luqaimat</h2>
-          <p>Crispy fried dough balls served with date syrup or honey.</p>
+          <h2>{% trans "Luqaimat" %}</h2>
+          <p>{% trans "Crispy fried dough balls served with date syrup or honey." %}</p>
         </div>
       </div>
 
     </div>
-  </div>
-
-
+</div>
 
 {% endblock %}

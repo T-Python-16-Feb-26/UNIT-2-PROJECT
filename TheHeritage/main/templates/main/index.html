@@ -1,103 +1,118 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block css%}
-    <link rel="stylesheet" href="{%static 'css/style-home-page.css'%}">
+<link rel="stylesheet" href="{%static 'css/style-home-page.css'%}">
 {%endblock%}
-{% block title %}Heritage Home page{%endblock%}
 
+{% block title %}{% trans "Heritage Home page" %}{% endblock %}
 
 {%block header%}
-   <video autoplay loop muted plays-inline class="back-video">
-      <source src="{% static 'video/video-header.mp4'%}" type="video/mp4">
-    </video>
-    <div class="title-header">
-        <h1>Heritage Of Saudi Arabia </h1>
-        <p>
-            <i>"A heritage we are proud of… and a culture we deeply cherish"</i>
-        </p>
-        <a href="#main-page" class="btn">Learn More</a>
-    </div>
+<video autoplay loop muted plays-inline class="back-video">
+    <source src="{% static 'video/video-header.mp4'%}" type="video/mp4">
+</video>
+
+<div class="title-header">
+    <h1>{% trans "Heritage Of Saudi Arabia" %}</h1>
+    <p>
+        <i>{% trans "A heritage we are proud of… and a culture we deeply cherish" %}</i>
+    </p>
+    <a href="#main-page" class="btn">{% trans "Learn More" %}</a>
+</div>
 {%endblock%}
 
 {% block content%}
-    
-        <section class="box-intro">
-            <div class="intro">
-                <h2>About Saudi Heritage</h2>
-                <p>
-                    Saudi heritage reflects the rich traditions, customs, and values that have shaped the Kingdom over generations. 
-                    From traditional clothing and local cuisine to crafts and social practices, it represents a unique identity 
-                    that continues to be preserved and celebrated today.
-                </p>
-            </div>
-        </section>
-        <div class="content">
-            <div class="card-main">
-                <article class="card-article">
-                    <img src="{% static 'images/food-card.jpg'%}" alt="" class="card-img">
-                    <div class="card-data">
-                        <h2 class="card-title">Traditional Food</h2>
-                        <span class="card-desc">Saudi cuisine is distinguished by its variety of dishes and unique flavors that reflect the depth of heritage and authenticity of culture.</span>
-                        <a href="{% url 'main:foods_view' %}" class="card-button">Explore</a>
-                    </div>
 
-                </article>
-            </div>
-                    <div class="card-main">
-                <article class="card-article">
-                    <img src="{% static 'images/clothing-card.jpg'%}" alt="" class="card-img">
-                    <div class="card-data">
-                        <h2 class="card-title">Traditional Clothing</h2>
-                        <span class="card-desc">Traditional clothing reflects the identity of Saudi society, with unique styles that vary across different regions.</span>
-                        <a href="{% url 'main:clothing_view' %}" class="card-button">Explore</a>
-                    </div>
-
-                </article>
-            </div>
-               <div class="card-main">
-                <article class="card-article">
-                    <img src="{% static 'images/game-card.jpg'%}" alt="" class="card-img">
-                    <div class="card-data">
-                        <h2 class="card-title">Traditional Games</h2>
-                        <span class="card-desc">Traditional games reflect the simplicity of the past and were a source of fun and social connection.</span>
-                        <a href="{% url 'main:game_view' %}" class="card-button">Explore</a>
-                    </div>
-
-                </article>
-            </div>
-                           <div class="card-main">
-                <article class="card-article">
-                    <img src="{% static 'images/art-card.jpg'%}" alt="" class="card-img">
-                    <div class="card-data">
-                        <h2 class="card-title">Handicrafts</h2>
-                        <span class="card-desc">Handicrafts represent traditional skills such as weaving and pottery, showcasing creativity and heritage.</span>
-                        <a href="{% url 'main:handicrafts_view' %}" class="card-button">Explore</a>
-                    </div>
-
-                </article>
-            </div>
-                           <div class="card-main">
-                <article class="card-article">
-                    <img src="{% static 'images/play-card.jpg'%}" alt="" class="card-img">
-                    <div class="card-data">
-                        <h2 class="card-title">Folk Arts</h2>
-                        <span class="card-desc">Folk arts include traditional dances and performances that express the spirit of Saudi culture.</span>
-                        <a href="{% url 'main:folk_arts_view' %}" class="card-button">Explore</a>
-                    </div>
-
-                </article>
-            </div>
-                           <div class="card-main">
-                <article class="card-article">
-                    <img src="{% static 'images/tradtional-card.jpg'%}" alt="" class="card-img">
-                    <div class="card-data">
-                        <h2 class="card-title">Customs & Traditions</h2>
-                        <span class="card-desc">Customs and traditions show the values and social practices that have been passed down through generations.</span>
-                        <a href="" class="card-button">Explore</a>
-                    </div>
-
-                </article>
-            </div>
+<section class="box-intro">
+    <div class="intro">
+        <h2>{% trans "About Saudi Heritage" %}</h2>
+        <p>
+            {% trans "Saudi heritage reflects the rich traditions, customs, and values that have shaped the Kingdom over generations. From traditional clothing and local cuisine to crafts and social practices, it represents a unique identity that continues to be preserved and celebrated today." %}
+        </p>
     </div>
+</section>
+
+<div class="content">
+
+    <div class="card-main">
+        <article class="card-article">
+            <img src="{% static 'images/food-card.jpg'%}" class="card-img">
+            <div class="card-data">
+                <h2 class="card-title">{% trans "Traditional Food" %}</h2>
+                <span class="card-desc">
+                    {% trans "Saudi cuisine is distinguished by its variety of dishes and unique flavors that reflect the depth of heritage and authenticity of culture." %}
+                </span>
+                <a href="{% url 'main:foods_view' %}" class="card-button">{% trans "Explore" %}</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="card-main">
+        <article class="card-article">
+            <img src="{% static 'images/clothing-card.jpg'%}" class="card-img">
+            <div class="card-data">
+                <h2 class="card-title">{% trans "Traditional Clothing" %}</h2>
+                <span class="card-desc">
+                    {% trans "Traditional clothing reflects the identity of Saudi society, showcasing elegance and cultural pride." %}
+                </span>
+                <a href="{% url 'main:clothing_view' %}" class="card-button">{% trans "Explore" %}</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="card-main">
+        <article class="card-article">
+            <img src="{% static 'images/game-card.jpg'%}" class="card-img">
+            <div class="card-data">
+                <h2 class="card-title">{% trans "Traditional Games" %}</h2>
+                <span class="card-desc">
+                    {% trans "Traditional games reflect the simplicity of the past and were a source of fun and social connection." %}
+                </span>
+                <a href="{% url 'main:game_view' %}" class="card-button">{% trans "Explore" %}</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="card-main">
+        <article class="card-article">
+            <img src="{% static 'images/art-card.jpg'%}" class="card-img">
+            <div class="card-data">
+                <h2 class="card-title">{% trans "Handicrafts" %}</h2>
+                <span class="card-desc">
+                    {% trans "Handicrafts represent traditional skills such as weaving and pottery, showcasing creativity and heritage." %}
+                </span>
+                <a href="{% url 'main:handicrafts_view' %}" class="card-button">{% trans "Explore" %}</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="card-main">
+        <article class="card-article">
+            <img src="{% static 'images/play-card.jpg'%}" class="card-img">
+            <div class="card-data">
+                <h2 class="card-title">{% trans "Performing Arts" %}</h2>
+                <span class="card-desc">
+                    {% trans "Performing Arts include traditional dances and performances that express the spirit of Saudi culture." %}
+                </span>
+                <a href="{% url 'main:folk_arts_view' %}" class="card-button">{% trans "Explore" %}</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="card-main">
+        <article class="card-article">
+            <img src="{% static 'images/tradtional-card.jpg'%}" class="card-img">
+            <div class="card-data">
+                <h2 class="card-title">{% trans "Customs & Traditions" %}</h2>
+                <span class="card-desc">
+                    {% trans "Customs and traditions reflect the values and social practices passed down through generations." %}
+                </span>
+                <a href="" class="card-button">{% trans "Explore" %}</a>
+            </div>
+        </article>
+    </div>
+
+</div>
+
 {% endblock %}

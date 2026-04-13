@@ -13,14 +13,14 @@
     text-decoration: none;
     padding: 1rem 2rem;
     border-radius: 50px;
-    border: 0;
-    color: #3fa37c;
-    background-color: white;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 15px;
-    transition: all 0.5s ease;
-    margin-left:20rem ;
+        border: 0;
+        color: #3fa37c;
+        background-color: white;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all 0.5s ease;
+        margin-left:20rem ;
  }
 
  .btn:hover{
@@ -113,6 +113,53 @@
 /* end of card in main page*/
 
 
+/*Dark mode*/
+
+
+body.dark .btn{
+    background-color: #2A2A2A;
+    color: #D6B98C;
+}
+
+body.dark .btn:hover{
+    background-color: #c19a6b;
+    color: #1E1E1E;
+    box-shadow: #c19a6b 0 0.4rem 1rem 0;
+}
+
+
+body.dark .title-header button{
+    background: #D6B98C;
+    color: #1E1E1E;
+}
+
+
+body.dark .card-data{
+    background-color: #2A2A2A;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+
+body.dark .card-title{
+    color: #E6C79C;
+}
+
+body.dark .card-desc{
+    color: #CFC7B8;
+}
+
+body.dark .card-button{
+    color: #D6B98C;
+}
+
+body.dark .card-button:hover{
+    color: #E6C79C;
+}
+
+
+body.dark .back-video{
+    filter: brightness(0.7);
+}
 
 /* Responsive */
 
@@ -164,3 +211,4 @@
     }
 
 }
+

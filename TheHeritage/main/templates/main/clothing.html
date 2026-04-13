@@ -1,11 +1,12 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block css%}
 <link rel="stylesheet" href="{%static 'css/style-pages.css'%}">
 {%endblock%}
 
-{% block title %}Traditional Clothing{%endblock%}
+{% block title %}{% trans "Traditional Clothing" %}{%endblock %}
 
 {%block header%}
 
@@ -13,95 +14,242 @@
     <img src="{% static 'images/header-clothes.jpg' %}" class="back-img">
 
     <div class="title-header">
-        <h1>Traditional Clothing</h1>
-        <p>Discover the elegance of Saudi traditional attire</p>
+        <h1>{% trans "Traditional Clothing" %}</h1>
+        <p>{% trans "Discover the elegance of Saudi traditional attire" %}</p>
     </div>
 </div>
 
 {%endblock%}
 
 {% block content%}
+
 <section class="box-intro">
   <div class="intro">
-    <h2>Saudi Traditional Clothing</h2>
-    <p>  
-        Saudi traditional clothing reflects the rich cultural heritage and regional diversity of the Kingdom. Each garment carries unique designs,
-        fabrics, and details that have been passed down through generations, representing identity, tradition, and elegance.
-   </p>
+    <h2>{% trans "Saudi Traditional Clothing" %}</h2>
+    <p>{% trans "Saudi traditional clothing reflects the rich cultural heritage and regional diversity." %}</p>
   </div>
-  </section>
+</section>
 
 <div class="heritage">
 
-  <!-- Women -->
-  <h2 class="section-title">Women Traditional Clothing</h2>
-
-  <!-- Southern Region -->
-  <h3>Southern Region</h3>
-  <p>
-    Southern women's clothing is known for its rich colors, heavy embroidery,
-    and strong cultural identity.
-  </p>
+  <!-- ================= WOMEN ================= -->
+  <h3 id="clothes-women">{% trans "Women Traditional Clothing" %}</h3>
 
   <div class="images-scroll">
-    <img src="{%static 'images/clothes/south-women1.jpg'%}">
-    <img src="{%static 'images/clothes/south-women2.jpg'%}">
-    <img src="{%static 'images/clothes/south-women3.jpg'%}">
-    <img src="{%static 'images/clothes/south-women4.jpg'%}">
-    <img src="{%static 'images/clothes/south-women5.jpg'%}">
-  </div>
 
-  <a href="#south-women" class="open-btn">View Details</a>
+    <!-- South -->
+    <div class="heritage-card">
+      <img src="{% static 'images/clothes/south-women.jpg' %}">
+      <div class="card-content">
+        <h2>{% trans "Southern Region" %}</h2>
+        <p>{% trans "Rich colors and detailed embroidery" %}</p>
+        <a href="#popup-south-women" class="open-btn">{% trans "View Details" %}</a>
 
-        <div id="south-women" class="overlay">
+        <div id="popup-south-women" class="overlay">
           <div class="popup">
-
-            <a href="#table" class="close"><span class="material-symbols-outlined">close</span></a>
-
-            <h2> Southern Region (Women)</h2>
-            
-            <p>
-            Women's traditional clothing in the southern region is characterized by bold colors and rich embroidery. Black garments are often decorated with colorful geometric patterns, especially on the chest and sleeves, along with traditional silver belts and accessories that enhance the cultural look.
-            Some outfits also feature wide sleeves and flowing designs, combined with head coverings and traditional hats, reflecting the rich cultural identity and diversity of the southern region
-            </p>
-            
+            <a href="#clothes-women" class="close"><span class="material-symbols-outlined">close</span></a>
+            <h2>{% trans "Southern Region (Women)" %}</h2>
+            <p class="clothes-p">{% trans "Women's traditional clothing in the southern region of Saudi Arabia is known for its bold colors and rich embroidery. The garments are usually based on black fabric and decorated with vibrant patterns such as red, yellow, and green. The embroidery often appears on the chest, sleeves, and edges of the dress, featuring geometric and nature-inspired designs. The outfits are typically loose and comfortable, sometimes with wide sleeves. Accessories play an important role, including silver belts, traditional jewelry, and head coverings, all of which reflect the strong cultural identity of the region." %}</p>
           </div>
         </div>
-  
+      </div>
+    </div>
 
+    <!-- West -->
+    <div class="heritage-card">
+      <img src="{% static 'images/clothes/west-women.jpg' %}">
+      <div class="card-content">
+        <h2>{% trans "Western Region" %}</h2>
+        <p>{% trans "Elegant and lightweight flowing designs" %}</p>
+        <a href="#popup-west-women" class="open-btn">{% trans "View Details" %}</a>
 
-  <!-- Najd Region -->
-  <h3>Najd Region</h3>
-  <p>
-    Najdi clothing is simple and elegant, often featuring dark colors
-    with subtle embroidery.
-  </p>
+        <div id="popup-west-women" class="overlay">
+          <div class="popup">
+            <a href="#clothes-women" class="close"><span class="material-symbols-outlined">close</span></a>
+            <h2>{% trans "Western Region (Women)" %}</h2>
+            <p class="clothes-p">{% trans "Women's traditional clothing in the western region of Saudi Arabia is known for its elegance and soft, flowing designs. The garments often feature light fabrics suitable for the warm coastal climate. They are usually decorated with delicate embroidery and may include bright or warm colors. Compared to other regions, the designs tend to be lighter and more refined, reflecting the urban and coastal lifestyle of the west. Accessories such as jewelry and head coverings complete the look, adding a graceful and traditional touch." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="images-scroll">
-    <img src="{%static 'images/clothes/najd1.jpg'%}">
-    <img src="{%static 'images/clothes/najd2.jpg'%}">
+    <!-- North -->
+    <div class="heritage-card">
+      <img src="{% static 'images/clothes/north-women.jpg' %}">
+      <div class="card-content">
+        <h2>{% trans "Northern Region" %}</h2>
+        <p>{% trans "Warm fabrics with bold traditional patterns" %}</p>
+        <a href="#popup-north-women" class="open-btn">{% trans "View Details" %}</a>
+
+        <div id="popup-north-women" class="overlay">
+          <div class="popup">
+            <a href="#clothes-women" class="close"><span class="material-symbols-outlined">close</span></a>
+            <h2>{% trans "Northern Region (Women)" %}</h2>
+            <p class="clothes-p">{% trans "Women's traditional clothing in the northern region of Saudi Arabia is designed to suit the colder climate. The garments are often made from thicker fabrics that provide warmth and comfort. The designs usually include darker tones with bold patterns and simple embroidery. Compared to other regions, the clothing focuses more on practicality while still maintaining a traditional and elegant appearance. Accessories such as scarves and layered pieces are commonly used, adding both warmth and a cultural touch to the overall look." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- East -->
+    <div class="heritage-card">
+      <img src="{% static 'images/clothes/east-women.jpg' %}">
+      <div class="card-content">
+        <h2>{% trans "Eastern Region" %}</h2>
+        <p>{% trans "Vibrant fabrics with elegant decorative details" %}</p>
+        <a href="#popup-east-women" class="open-btn">{% trans "View Details" %}</a>
+
+        <div id="popup-east-women" class="overlay">
+          <div class="popup">
+            <a href="#clothes-women" class="close"><span class="material-symbols-outlined">close</span></a>
+            <h2>{% trans "Eastern Region (Women)" %}</h2>
+            <p class="clothes-p">{% trans "Women's traditional clothing in the eastern region of Saudi Arabia is known for its vibrant colors and rich decorative details. The garments often feature soft fabrics suitable for the coastal climate. The designs usually include bright colors and elegant embroidery, sometimes influenced by trade and cultural exchange in the region. Compared to other regions, eastern clothing combines simplicity with decorative beauty, creating a balanced and graceful appearance. Accessories such as jewelry and head coverings add a refined traditional touch to the overall look." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Central -->
+    <div class="heritage-card">
+      <img src="{% static 'images/clothes/central-women.jpg' %}">
+      <div class="card-content">
+        <h2>{% trans "Central Region" %}</h2>
+        <p>{% trans "Simple dark garments with bold traditional embroidery" %}</p>
+        <a href="#popup-central-women" class="open-btn">{% trans "View Details" %}</a>
+
+        <div id="popup-central-women" class="overlay">
+          <div class="popup">
+            <a href="#clothes-women" class="close"><span class="material-symbols-outlined">close</span></a>
+            <h2>{% trans "Central Region (Women)" %}</h2>
+            <p class="clothes-p">{% trans "Women's traditional clothing in the central region of Saudi Arabia is known for its simplicity and strong traditional identity. The garments are usually based on dark colors, especially black, with bold embroidery in colors like red or gold. The designs are modest and loose, with detailed patterns appearing on the sleeves, edges, or front of the dress. Compared to other regions, central clothing focuses more on simplicity while still maintaining elegance and cultural value. Accessories such as traditional jewelry and head coverings complete the look, giving it a balanced and authentic appearance." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <a href="#najd-women" class="open-btn">View Details</a>
 
 
-  <!-- Men -->
-  <h2 class="section-title">Men Traditional Clothing</h2>
+<h3 id="clothes-men">{% trans "Men Traditional Clothing" %}</h3>
 
-  <!-- Southern Region -->
-  <h3>Southern Region</h3>
-  <p>
-    Southern men's clothing reflects strength and tradition, often including
-    decorative belts and unique regional elements.
-  </p>
+<div class="images-scroll">
 
-  <div class="images-scroll">
-    <img src="{%static 'images/clothes/south-men1.jpg'%}">
-    <img src="{%static 'images/clothes/south-men2.jpg'%}">
+<div class="heritage-card">
+  <img src="{% static 'images/clothes/south-men.jpg' %}">
+  <div class="card-content">
+    <h2>{% trans "Southern Region" %}</h2>
+    <p>{% trans "Strong traditional attire with belts and cultural details" %}</p>
+
+    <a href="#popup-south-men" class="open-btn">{% trans "View Details" %}</a>
+
+    <div id="popup-south-men" class="overlay">
+      <div class="popup">
+        <a href="#clothes-men" class="close">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+
+        <h2>{% trans "Southern Region (Men)" %}</h2>
+        <p class="clothes-p">
+          {% trans "Men's traditional clothing in the southern region of Saudi Arabia reflects strength and deep cultural heritage. It usually consists of a simple garment worn with an outer layer that may include decorative or warm materials. One of the most distinctive elements is the wide belt worn around the waist, which holds the traditional dagger (jambiya), a symbol of pride and courage. Additional details such as decorative belts and colorful fabric elements enhance the traditional identity of the outfit. The look is completed with a traditional head covering, creating a strong and authentic appearance rooted in tribal heritage." %}
+        </p>
+      </div>
+    </div>
   </div>
+</div>
 
-  <a href="#south-men" class="open-btn">View Details</a>
+<div class="heritage-card">
+  <img src="{% static 'images/clothes/west-men.jpg' %}">
+  <div class="card-content">
+    <h2>{% trans "Western Region" %}</h2>
+    <p>{% trans "Elegant attire with bisht and refined details" %}</p>
+
+    <a href="#popup-west-men" class="open-btn">{% trans "View Details" %}</a>
+
+    <div id="popup-west-men" class="overlay">
+      <div class="popup">
+        <a href="#clothes-men" class="close">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+
+        <h2>{% trans "Western Region (Men)" %}</h2>
+        <p class="clothes-p">
+          {% trans "Men's traditional clothing in the western region of Saudi Arabia is known for its elegance and simplicity. It typically consists of a white thobe worn with a bisht, often in calm colors such as brown or black with decorative edges. The shemagh or ghutra is worn on the head with an agal, giving a neat and refined appearance. The bisht is commonly worn during formal occasions and celebrations, symbolizing prestige and social status. Overall, the outfit reflects sophistication, simplicity, and attention to elegant details." %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="heritage-card">
+  <img src="{% static 'images/clothes/north-men.jpg' %}">
+  <div class="card-content">
+    <h2>{% trans "Northern Region" %}</h2>
+    <p>{% trans "Warm layered attire with simple traditional patterns" %}</p>
+
+    <a href="#popup-north-men" class="open-btn">{% trans "View Details" %}</a>
+
+    <div id="popup-north-men" class="overlay">
+      <div class="popup">
+        <a href="#clothes-men" class="close">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+
+        <h2>{% trans "Northern Region (Men)" %}</h2>
+        <p class="clothes-p">
+          {% trans "Men's traditional clothing in the northern region of Saudi Arabia is designed for colder weather. It often includes layered garments, such as wearing a thobe with a cloak or fur for warmth. The clothing features calm colors like brown and beige, with simple patterns that reflect the desert environment. A traditional head covering with an agal is commonly worn, giving a structured and elegant look. Overall, the outfit combines practicality and elegance, providing warmth while preserving cultural identity." %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="heritage-card">
+  <img src="{% static 'images/clothes/east-men1.jpg' %}">
+  <div class="card-content">
+    <h2>{% trans "Eastern Region" %}</h2>
+    <p>{% trans "Light fabrics with elegant decorative patterns" %}</p>
+
+    <a href="#popup-east-men" class="open-btn">{% trans "View Details" %}</a>
+
+    <div id="popup-east-men" class="overlay">
+      <div class="popup">
+        <a href="#clothes-men" class="close">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+
+        <h2>{% trans "Eastern Region (Men)" %}</h2>
+        <p class="clothes-p">
+          {% trans "Men's traditional clothing in the eastern region of Saudi Arabia combines elegance with simplicity. It often includes a thobe worn with a light bisht or cloak, sometimes featuring subtle decorative patterns. The fabrics are comfortable and suitable for the coastal climate, with colors ranging from light to warm tones. A traditional head covering with an agal is commonly worn, creating a balanced and refined look. Overall, the outfit reflects a blend of simplicity, elegance, and cultural influence shaped by the region’s history of trade." %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="heritage-card">
+  <img src="{% static 'images/clothes/central-men.jpg' %}">
+  <div class="card-content">
+    <h2>{% trans "Central Region" %}</h2>
+    <p>{% trans "Formal attire with bisht and traditional accessories" %}</p>
+
+    <a href="#popup-central-men" class="open-btn">{% trans "View Details" %}</a>
+
+    <div id="popup-central-men" class="overlay">
+      <div class="popup">
+        <a href="#clothes-men" class="close">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+
+        <h2>{% trans "Central Region (Men)" %}</h2>
+        <p class="clothes-p">
+          {% trans "Men's traditional clothing in the central region of Saudi Arabia is known for its formal and prestigious appearance. It typically consists of a white thobe worn with a dark bisht decorated with golden edges, especially during formal occasions. The shemagh or ghutra is worn with an agal, and sometimes a traditional belt and dagger are added to reflect cultural pride. Overall, the outfit represents elegance, simplicity, and strong cultural identity." %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 
-{% endblock %}
+{%endblock%}

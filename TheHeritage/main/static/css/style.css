@@ -254,40 +254,63 @@ footer{
 /*End of The Footer desigen*/
 
 /*Dark mode*/
-.toggle {
+.toggle{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background: #6E5034;
+    border-radius: 50px;
     display: flex;
-    background: rgb(190, 190, 190);
-    border-radius: 20px;
-    padding: 2px;
+    align-items: center;
+    padding: 5px;
 }
 
-.toggle a {
-    padding: 5px 12px;
+.toggle .mode{
+    width: 50%;
+    text-align: center;
+    z-index: 2;
     text-decoration: none;
-    color: black;
-    border-radius: 20px;
-    font-size: 10px;
+    font-size: 16px;
 }
 
-.toggle a.active {
 
-    background: black;
-    color: white;
+.toggle .slider{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #CFAB8D;
+    border-radius: 50%;
+    left: 5px;
+    transition: 0.3s;
 }
 
-/* ====== DARK MODE ====== */
+
+.toggle .dark.active ~ .slider{
+    left: 40px;
+    background: #c19a6b;
+}
+
+
+.toggle .light.active ~ .slider{
+    left: 5px;
+}
+
+body.dark .toggle{
+    background: #333;
+}
+
+
 
 body.dark{
     background-color: #1E1E1E;
     color: #EDE6DB;
 }
 
-/* Hero */
 body.dark .hero::after{
     background: rgba(0,0,0,0.6);
 }
 
-/* Navbar */
+
 body.dark .nav-bar{
     background-color: #2A2A2A;
 }
@@ -296,13 +319,13 @@ body.dark .links-nav{
     color: #D6B98C;
 }
 
-/* Main box */
 body.dark .main-page{
     background-color: #2A2A2A;
     border: 1px solid #333;
 }
 
-/* Intro */
+
+
 body.dark .box-intro h2{
     color: #E6C79C;
 }
@@ -311,7 +334,7 @@ body.dark .box-intro p{
     color: #CFC7B8;
 }
 
-/* Footer */
+
 body.dark footer{
     background-color: #2A2A2A;
 }
@@ -325,37 +348,38 @@ body.dark .footer-center a{
     color: #D6B98C;
 }
 
-/* Toggle */
-body.dark .toggle{
-    background: #444;
-}
 
-body.dark .toggle a{
-    color: #eee;
-}
 
-body.dark .toggle a.active{
-    background: #D6B98C;
-    color: #1E1E1E;
-}
 
-/* Text general */
 body.dark h1,
 body.dark h2,
-body.dark h3{
+body.dark h3,
+body.dark h5{
     color: #F5E9D8;
 }
 
 body.dark p{
     color: #CFC7B8;
 }
+.lang-switch button {
+    background: #6E5034;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-switch button:hover {
+    background: #41644A;
+    transform: translateY(-2px);
+}
 
 
-/*card in food page*/
 
 
-
-/*end of card in food page*/
 
 
 
@@ -448,3 +472,92 @@ body.dark p{
 
 
 
+/*arabic language*/
+
+html[lang="ar"] body {
+    font-family: 'Cairo', sans-serif;
+}
+
+html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+
+html[dir="rtl"] .nav-bar {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-list {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-bar .nav-list li {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+
+html[dir="rtl"] .title-header {
+    text-align: right;
+}
+
+
+html[dir="rtl"] .btn {
+    margin-left: 0;
+    margin-right: 20rem;
+}
+
+
+html[dir="rtl"] .intro {
+    margin-left: 0;
+    margin-right: 5rem;
+    text-align: right;
+}
+
+html[dir="rtl"] .card-data,
+html[dir="rtl"] .card-desc,
+html[dir="rtl"] .card-title {
+    text-align: right;
+}
+
+
+html[dir="rtl"] .images-scroll {
+    flex-direction: row-reverse;
+}
+
+
+html[dir="rtl"] .popup h3,
+html[dir="rtl"] .popup p {
+    text-align: right;
+}
+
+html[dir="rtl"] .close {
+    right: auto;
+    left: 15px;
+}
+
+
+html[dir="rtl"] .footer-container {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-links {
+    flex-direction: row-reverse;
+}
+
+
+html[dir="rtl"] .toggle .slider {
+    left: auto;
+    right: 5px;
+}
+
+html[dir="rtl"] .toggle .dark.active ~ .slider {
+    right: 40px;
+    left: auto;
+}
+
+html[dir="rtl"] .toggle .light.active ~ .slider {
+    right: 5px;
+    left: auto;
+}

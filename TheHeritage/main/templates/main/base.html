@@ -1,37 +1,40 @@
-{%load static%}
+{% load static %}
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="{%static 'images/logo.png'%}">
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
     {% block css %}{%endblock%}
     <title>{% block title %}{% endblock %}</title>
 </head>
+
 <body {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="dark" {% endif %}>
     <div class="hero">
   
         <nav class="nav-bar">
         <a href="{% url 'main:home_view' %}"><img src="{%static 'images/logo.png'%}" alt="" class="logo"></a>
         <ul class="nav-list">
-            <li><a href="{% url 'main:home_view' %}" class="links-nav">Home</a></li>
-            <li><a href="{% url 'main:foods_view' %}" class="links-nav">Traditional Food</a></li>
-            <li><a href="{% url 'main:clothing_view' %}" class="links-nav">Traditional Clothing</a></li>
-            <li><a href="{% url 'main:game_view' %}" class="links-nav">Traditional Games</a></li>
-            <li><a href="{% url 'main:handicrafts_view' %}" class="links-nav">Handicrafts</a></li>
-            <li><a href="{% url 'main:folk_arts_view' %}" class="links-nav">Performing Arts</a></li>
-            <li><a href="{% url 'main:traditions_view' %}" class="links-nav">Customs & Traditions </a></li>
+            <li><a href="{% url 'main:home_view' %}" class="links-nav">{% trans "Home" %}</a></li>
+            <li><a href="{% url 'main:foods_view' %}" class="links-nav">{% trans "Traditional Food" %}</a></li>
+            <li><a href="{% url 'main:clothing_view' %}" class="links-nav">{% trans "Traditional Clothing" %}</a></li>
+            <li><a href="{% url 'main:game_view' %}" class="links-nav">{% trans "Traditional Games" %}</a></li>
+            <li><a href="{% url 'main:handicrafts_view' %}" class="links-nav">{% trans "Handicrafts" %}</a></li>
+            <li><a href="{% url 'main:folk_arts_view' %}" class="links-nav">{% trans "Performing Arts" %}</a></li>
+            <li><a href="{% url 'main:traditions_view' %}" class="links-nav">{% trans "Customs & Traditions" %}</a></li>
         </ul>
     </nav>
-    {% block header%}
 
-    {%endblock%}
+    {% block header %}
+    {% endblock %}
     </div>
+
     <main>
         <div class="main-page" id="main-page">
-
         {% block content %}
         {% endblock %}
     </div>
@@ -43,35 +46,54 @@
             <div class="footer-about">
                 <div class="footer-logo">
                     <img src="{% static 'images/logo.png' %}" alt="">
-                    <h4>The Heritage Of Saudi Arabia</h4>
+                    <h4>{% trans "The Heritage Of Saudi Arabia" %}</h4>
                 </div>
                 <p>
-                    A website exploring Saudi culture through food, clothing, games, handicrafts, folk arts, and traditions.
+                    {% trans "A website exploring Saudi culture through food, clothing, games, handicrafts, folk arts, and traditions." %}
                 </p>
             </div>
+
             <div class="footer-center">
-                <h5>Settings</h5>
+                <h5>{% trans "Settings" %}</h5>
                 <div class="toggle">
-                    <a href="" class="active"><span class="material-symbols-outlined">light_mode</span></a>
-                    <a href="" class=""><span class="material-symbols-outlined">dark_mode</span></a>
+                    <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}" class="mode light {% if request.COOKIES.mode != 'dark' %}active{% endif %}">
+                        <span class="material-symbols-outlined">light_mode</span>
+                    </a>
+                    <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}" class="mode dark {% if request.COOKIES.mode == 'dark' %}active{% endif %}">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </a>
+                    <span class="slider"></span>
                 </div>
-                <a href="?lang=ar">🌐 العربية</a>
+
+                <form action="{% url 'set_language' %}" method="post" class="lang-switch">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+
+                    {% get_current_language as LANGUAGE_CODE %}
+
+                    {% if LANGUAGE_CODE == 'ar' %}
+                        <button type="submit" name="language" value="en">English</button>
+                    {% else %}
+                        <button type="submit" name="language" value="ar"> العربية</button>
+                    {% endif %}
+                </form>
+
             </div>
 
             <div class="footer-links">
                 <div class="footer-link">
-                    <h5>Explore</h5>
-                    <a href="{% url 'main:home_view' %}">Home</a>
-                    <a href="{% url 'main:foods_view' %}">Traditional Food</a>
-                    <a href="{% url 'main:clothing_view' %}">Traditional Clothing</a>
-                    <a href="{% url 'main:game_view' %}">Traditional Games</a>
+                    <h5>{% trans "Explore" %}</h5>
+                    <a href="{% url 'main:home_view' %}">{% trans "Home" %}</a>
+                    <a href="{% url 'main:foods_view' %}">{% trans "Traditional Food" %}</a>
+                    <a href="{% url 'main:clothing_view' %}">{% trans "Traditional Clothing" %}</a>
+                    <a href="{% url 'main:game_view' %}">{% trans "Traditional Games" %}</a>
                 </div>
 
                 <div class="footer-link">
-                    <h5>Culture</h5>
-                    <a href="{% url 'main:handicrafts_view' %}">Handicrafts</a>
-                    <a href="{% url 'main:folk_arts_view' %}">Performing Arts</a>
-                    <a href="{% url 'main:traditions_view' %}">Customs & Traditions</a>
+                    <h5>{% trans "Culture" %}</h5>
+                    <a href="{% url 'main:handicrafts_view' %}">{% trans "Handicrafts" %}</a>
+                    <a href="{% url 'main:folk_arts_view' %}">{% trans "Performing Arts" %}</a>
+                    <a href="{% url 'main:traditions_view' %}">{% trans "Customs & Traditions" %}</a>
                 </div>
             </div>
 

@@ -1,12 +1,12 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block css%}
 <link rel="stylesheet" href="{%static 'css/style-pages.css'%}">
 {%endblock%}
-{% block title %}Saudi Customs & Traditions{%endblock%}
 
-
+{% block title %}{% trans "Handicrafts" %}{%endblock%}
 
 {% block header %}
 
@@ -14,127 +14,104 @@
     <img src="{% static 'images/header-handicrafts.jpg' %}" class="back-img">
 
     <div class="title-header">
-        <h1>Handicrafts</h1>
-        <p>Discover the flavors of Saudi Arabia</p>
+        <h1>{% trans "Handicrafts" %}</h1>
+        <p>{% trans "Discover the handicrafts of Saudi Arabia" %}</p>
     </div>
 </div>
 
 {% endblock %}
 
-
-
-
 {% block content%}
 
 <section class="box-intro">
   <div class="intro">
-    <h2>Handicrafts</h2>
+    <h2>{% trans "Handicrafts" %}</h2>
     <p>
-      Saudi traditional food reflects the richness of the Kingdom's heritage and culture, featuring distinctive
-      flavors and simple ingredients that have been passed down through generations.
+      {% trans "Saudi handicrafts reflect the richness of the Kingdom's heritage and culture, showcasing traditional skills and craftsmanship passed down through generations." %}
    </p>
   </div>
-  </section>
+</section>
 
+<div class="heritage">
 
- 
- 
-  <div class="heritage">
-    <h3>Al-Sadu (Weaving)</h3>
-    <p>
-      Al-Sadu is a traditional Bedouin weaving craft known for its geometric patterns and vibrant colors.
-    </p>
-
-    <div class="images-scroll">
-      <img src="{% static 'images/Handicrafts/sadu1.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/sadu2.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/sadu3.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/sadu4.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/sadu5.jpg' %}" alt="">
-    </div>
-
-    <h3>Palm Handicrafts</h3>
-  
-    <p>
-        Palm handicrafts are made from palm fronds and are widely used in Saudi heritage 
-        to create baskets, mats, and other useful items.
-    </p>
-
-    <div class="images-scroll">
-      <img src="{% static 'images/Handicrafts/palm1.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/palm2.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/palm3.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/palm4.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/palm5.jpg' %}" alt="">
-    </div>
-
-    <h3>Pottery</h3>
-  
+  <h3>{% trans "Al-Sadu (Weaving)" %}</h3>
   <p>
-    Pottery is one of the oldest traditional crafts, where clay is shaped and fired 
-    to create pots, jars, and decorative items used in daily life.
+    {% trans "Al-Sadu is a traditional Bedouin weaving craft known for its geometric patterns and vibrant colors." %}
   </p>
 
-
-    <div class="images-scroll">
-      <img src="{% static 'images/Handicrafts/pottery1.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/pottery2.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/pottery3.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/pottery4.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/pottery5.jpg' %}" alt="">
-    </div>
-
-    <h3>Embroidery</h3>
-  
-  <p>
-    Embroidery is a traditional craft that involves decorating fabric using colorful threads. 
-    It reflects cultural identity and is often seen in traditional clothing.
-  </p>
-
-
-    <div class="images-scroll">
-      <img src="{% static 'images/Handicrafts/Embroidery1.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Embroidery2.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Embroidery3.png' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Embroidery4.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Embroidery5.jpg' %}" alt="">
-    </div>
-
-    <h3>Jewelry</h3>
-  
-  <p>
-    Traditional jewelry reflects cultural identity and is often made from gold or silver, 
-    featuring unique designs inspired by heritage.
-  </p>
-
-
-    <div class="images-scroll">
-      <img src="{% static 'images/Handicrafts/Jewelry1.png' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Jewelry2.png' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Jewelry3.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Jewelry4.png' %}" alt="">
-      <img src="{% static 'images/Handicrafts/Jewelry5.jpg' %}" alt="">
-    </div>
-
-  <h3>Wood Crafts</h3>
-  
-  <p>
-    Wood crafts involve carving and shaping wood into decorative and functional items, 
-    reflecting traditional artistic skills in Saudi heritage.
-  </p>
-
-
-    <div class="images-scroll">
-      <img src="{% static 'images/Handicrafts/wood1.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/wood2.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/wood3.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/wood4.jpg' %}" alt="">
-      <img src="{% static 'images/Handicrafts/wood5.jpg' %}" alt="">
-    </div>
-
-
+  <div class="images-scroll">
+    <img src="{% static 'images/Handicrafts/sadu1.jpg' %}">
+    <img src="{% static 'images/Handicrafts/sadu2.jpg' %}">
+    <img src="{% static 'images/Handicrafts/sadu3.jpg' %}">
+    <img src="{% static 'images/Handicrafts/sadu4.jpg' %}">
+    <img src="{% static 'images/Handicrafts/sadu5.jpg' %}">
   </div>
 
+  <h3>{% trans "Palm Handicrafts" %}</h3>
+  <p>
+    {% trans "Palm handicrafts are made from palm fronds and are widely used in Saudi heritage to create baskets, mats, and other useful items." %}
+  </p>
 
+  <div class="images-scroll">
+    <img src="{% static 'images/Handicrafts/palm1.jpg' %}">
+    <img src="{% static 'images/Handicrafts/palm2.jpg' %}">
+    <img src="{% static 'images/Handicrafts/palm3.jpg' %}">
+    <img src="{% static 'images/Handicrafts/palm4.jpg' %}">
+    <img src="{% static 'images/Handicrafts/palm5.jpg' %}">
+  </div>
+
+  <h3>{% trans "Pottery" %}</h3>
+  <p>
+    {% trans "Pottery is one of the oldest traditional crafts, where clay is shaped and fired to create pots, jars, and decorative items used in daily life." %}
+  </p>
+
+  <div class="images-scroll">
+    <img src="{% static 'images/Handicrafts/pottery1.jpg' %}">
+    <img src="{% static 'images/Handicrafts/pottery2.jpg' %}">
+    <img src="{% static 'images/Handicrafts/pottery3.jpg' %}">
+    <img src="{% static 'images/Handicrafts/pottery4.jpg' %}">
+    <img src="{% static 'images/Handicrafts/pottery5.jpg' %}">
+  </div>
+
+  <h3>{% trans "Embroidery" %}</h3>
+  <p>
+    {% trans "Embroidery is a traditional craft that involves decorating fabric using colorful threads. It reflects cultural identity and is often seen in traditional clothing." %}
+  </p>
+
+  <div class="images-scroll">
+    <img src="{% static 'images/Handicrafts/Embroidery1.jpg' %}">
+    <img src="{% static 'images/Handicrafts/Embroidery2.jpg' %}">
+    <img src="{% static 'images/Handicrafts/Embroidery3.png' %}">
+    <img src="{% static 'images/Handicrafts/Embroidery4.jpg' %}">
+    <img src="{% static 'images/Handicrafts/Embroidery5.jpg' %}">
+  </div>
+
+  <h3>{% trans "Jewelry" %}</h3>
+  <p>
+    {% trans "Traditional jewelry reflects cultural identity and is often made from gold or silver, featuring unique designs inspired by heritage." %}
+  </p>
+
+  <div class="images-scroll">
+    <img src="{% static 'images/Handicrafts/Jewelry1.png' %}">
+    <img src="{% static 'images/Handicrafts/Jewelry2.png' %}">
+    <img src="{% static 'images/Handicrafts/Jewelry3.jpg' %}">
+    <img src="{% static 'images/Handicrafts/Jewelry4.png' %}">
+    <img src="{% static 'images/Handicrafts/Jewelry5.jpg' %}">
+  </div>
+
+  <h3>{% trans "Wood Crafts" %}</h3>
+  <p>
+    {% trans "Wood crafts involve carving and shaping wood into decorative and functional items, reflecting traditional artistic skills in Saudi heritage." %}
+  </p>
+
+  <div class="images-scroll">
+    <img src="{% static 'images/Handicrafts/wood1.jpg' %}">
+    <img src="{% static 'images/Handicrafts/wood2.jpg' %}">
+    <img src="{% static 'images/Handicrafts/wood3.jpg' %}">
+    <img src="{% static 'images/Handicrafts/wood4.jpg' %}">
+    <img src="{% static 'images/Handicrafts/wood5.jpg' %}">
+  </div>
+
+</div>
 
 {% endblock %}

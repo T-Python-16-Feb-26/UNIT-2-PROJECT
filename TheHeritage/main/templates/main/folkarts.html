@@ -1,12 +1,12 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block css%}
 <link rel="stylesheet" href="{%static 'css/style-pages.css'%}">
 {%endblock%}
-{% block title %}Handicrafts{%endblock%}
 
-
+{% block title %}{% trans "Handicrafts" %}{%endblock%}
 
 {% block header %}
 
@@ -14,34 +14,29 @@
     <img src="{% static 'images/header-performance.jpg' %}" class="back-img">
 
     <div class="title-header">
-        <h1>Saudi Performing Arts</h1>
-        <p>Explore traditional music, dances, and cultural performances</p>
+        <h1>{% trans "Saudi Performing Arts" %}</h1>
+        <p>{% trans "Explore traditional music, dances, and cultural performances" %}</p>
     </div>
 </div>
 
 {% endblock %}
 
-
-
-
 {% block content%}
 
 <section class="box-intro">
   <div class="intro">
-    <h2>Saudi Performing Arts</h2>
+    <h2>{% trans "Saudi Performing Arts" %}</h2>
     <p>
-      Saudi performing arts reflect the richness of the Kingdom's cultural heritage, combining music, poetry, and movement. This page highlights some of
-      the most well-known traditional performances that continue to play an important role in celebrations and social life.
+      {% trans "Saudi performing arts reflect the richness of the Kingdom's cultural heritage, combining music, poetry, and movement. This page highlights some of the most well-known traditional performances that continue to play an important role in celebrations and social life." %}
    </p>
   </div>
 </section>
 
 <div class="heritage">
 
-  <h3>Al-Ardah</h3>
+  <h3>{% trans "Al-Ardah" %}</h3>
   <p>
-    A traditional Saudi performance known as Najdi Ardah, performed during national events and celebrations.
-    It symbolizes strength and unity and is recognized by UNESCO as intangible cultural heritage.
+    {% trans "A traditional Saudi performance known as Najdi Ardah, performed during national events and celebrations. It symbolizes strength and unity and is recognized by UNESCO as intangible cultural heritage." %}
   </p>
 
   <div class="images-scroll">
@@ -52,11 +47,9 @@
     <img src="{% static 'images/performance/Al-Ardah5.jpg' %}">
   </div>
 
-
-  <h3>Al-Samri</h3>
+  <h3>{% trans "Al-Samri" %}</h3>
   <p>
-    A popular folk music performance that originated in Al-Qassim and spread to different regions.
-    It combines singing, poetry, and rhythmic movement.
+    {% trans "A popular folk music performance that originated in Al-Qassim and spread to different regions. It combines singing, poetry, and rhythmic movement." %}
   </p>
 
   <div class="images-scroll">
@@ -67,11 +60,9 @@
     <img src="{% static 'images/performance/Al-Samri5.jpg' %}">
   </div>
 
-
-  <h3>Yanbuawi Art</h3>
+  <h3>{% trans "Yanbuawi Art" %}</h3>
   <p>
-    A coastal musical art from Yanbu, characterized by fast rhythms.
-    It is part of traditional sea songs performed by sailors.
+    {% trans "A coastal musical art from Yanbu, characterized by fast rhythms. It is part of traditional sea songs performed by sailors." %}
   </p>
 
   <div class="images-scroll">
@@ -82,11 +73,9 @@
     <img src="{% static 'images/performance/Yanbuawi-Art5.jpg' %}">
   </div>
 
-
-  <h3>Southern Ardah</h3>
+  <h3>{% trans "Southern Ardah" %}</h3>
   <p>
-    A traditional dance from southern Saudi Arabia, performed during 
-    celebrations and weddings, expressing bravery and pride.
+    {% trans "A traditional dance from southern Saudi Arabia, performed during celebrations and weddings, expressing bravery and pride." %}
   </p>
 
   <div class="images-scroll">
@@ -97,10 +86,9 @@
     <img src="{% static 'images/performance/Southern-Ardah5.jpg' %}">
   </div>
 
-   <h3>Al-Majroor</h3>
+  <h3>{% trans "Al-Majroor" %}</h3>
   <p>
-    A folkloric dance popular in western Saudi Arabia, especially in Taif,
-    known for its rhythmic drumming and group performance.
+    {% trans "A folkloric dance popular in western Saudi Arabia, especially in Taif, known for its rhythmic drumming and group performance." %}
   </p>
 
   <div class="images-scroll">
@@ -111,10 +99,9 @@
     <img src="{% static 'images/performance/Al-Majroor5.jpg' %}">
   </div>
 
-  <h3>Al-Zamil</h3>
+  <h3>{% trans "Al-Zamil" %}</h3>
   <p>
-    A group performance from Asir and Najran where participants stand in rows
-    and chant poetry together during special occasions.
+    {% trans "A group performance from Asir and Najran where participants stand in rows and chant poetry together during special occasions." %}
   </p>
 
   <div class="images-scroll">
@@ -125,12 +112,9 @@
     <img src="{% static 'images/performance/Al-Zamil5.jpeg' %}">
   </div>
 
-
-
-  <h3>Al-Dahha</h3>
+  <h3>{% trans "Al-Dahha" %}</h3>
   <p>
-    A northern war dance performed by men, featuring chanting and strong rhythmic
-    movements that reflect courage and unity.
+    {% trans "A northern folk dance with a strong, energetic character, performed by men in groups with chanting and rhythmic movements. It expresses courage, unity, and is commonly performed during celebrations and social occasions." %}
   </p>
 
   <div class="images-scroll">
@@ -141,12 +125,9 @@
     <img src="{% static 'images/performance/Al-Dahha5.jpg' %}">
   </div>
 
-
-
-  <h3>Qasimi Dance</h3>
+  <h3>{% trans "Qasimi Dance" %}</h3>
   <p>
-    A traditional singing dance performed in western regions, known for its
-    unique Hijazi rhythm and musical style.
+    {% trans "A traditional singing dance performed in western regions, known for its unique Hijazi rhythm and musical style." %}
   </p>
 
   <div class="images-scroll">
@@ -155,4 +136,5 @@
   </div>
 
 </div>
+
 {%endblock%}

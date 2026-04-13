@@ -1,0 +1,1504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-13 04:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\TheHeritage\settings.py:119
+msgid "English"
+msgstr ""
+
+#: .\TheHeritage\settings.py:120
+msgid "Arabic"
+msgstr ""
+
+#: .\main\templates\main\base.html:22 .\main\templates\main\base.html:86
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\main\templates\main\base.html:23 .\main\templates\main\base.html:87
+#: .\main\templates\main\foods.html:16 .\main\templates\main\index.html:42
+msgid "Traditional Food"
+msgstr "الأطعمة التقليدية"
+
+#: .\main\templates\main\base.html:24 .\main\templates\main\base.html:88
+#: .\main\templates\main\clothing.html:9 .\main\templates\main\clothing.html:17
+#: .\main\templates\main\index.html:55
+msgid "Traditional Clothing"
+msgstr "الملابس التقليدية"
+
+#: .\main\templates\main\base.html:25 .\main\templates\main\base.html:89
+#: .\main\templates\main\game.html:9 .\main\templates\main\game.html:17
+#: .\main\templates\main\index.html:68
+msgid "Traditional Games"
+msgstr "الألعاب التقليدية"
+
+#: .\main\templates\main\base.html:26 .\main\templates\main\base.html:94
+#: .\main\templates\main\folkarts.html:9
+#: .\main\templates\main\handicrafts.html:9
+#: .\main\templates\main\handicrafts.html:17
+#: .\main\templates\main\handicrafts.html:28
+#: .\main\templates\main\index.html:81
+msgid "Handicrafts"
+msgstr "الحرف اليدوية"
+
+#: .\main\templates\main\base.html:27 .\main\templates\main\base.html:95
+#: .\main\templates\main\index.html:94
+msgid "Performing Arts"
+msgstr "الفنون الشعبية"
+
+#: .\main\templates\main\base.html:28 .\main\templates\main\base.html:96
+#: .\main\templates\main\index.html:107 .\main\templates\main\traditions.html:9
+#: .\main\templates\main\traditions.html:17
+msgid "Customs & Traditions"
+msgstr "العادات والتقاليد"
+
+#: .\main\templates\main\base.html:49
+msgid "The Heritage Of Saudi Arabia"
+msgstr "التراث السعودي"
+
+#: .\main\templates\main\base.html:52
+msgid ""
+"A website exploring Saudi culture through food, clothing, games, "
+"handicrafts, folk arts, and traditions."
+msgstr ""
+"موقع يستكشف الثقافة السعودية من خلال الطعام، والملابس، والألعاب، والحرف "
+"اليدوية، والفنون الشعبية، والعادات والتقاليد."
+
+#: .\main\templates\main\base.html:57
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: .\main\templates\main\base.html:85 .\main\templates\main\index.html:46
+#: .\main\templates\main\index.html:59 .\main\templates\main\index.html:72
+#: .\main\templates\main\index.html:85 .\main\templates\main\index.html:98
+#: .\main\templates\main\index.html:111
+msgid "Explore"
+msgstr "استكشاف"
+
+#: .\main\templates\main\base.html:93
+msgid "Culture"
+msgstr "الثقافة"
+
+#: .\main\templates\main\clothing.html:18
+msgid "Discover the elegance of Saudi traditional attire"
+msgstr "اكتشف أناقة الأزياء التقليدية السعودية"
+
+#: .\main\templates\main\clothing.html:28
+msgid "Saudi Traditional Clothing"
+msgstr "الملابس التقليدية السعودية"
+
+#: .\main\templates\main\clothing.html:29
+msgid ""
+"Saudi traditional clothing reflects the rich cultural heritage and regional "
+"diversity."
+msgstr "تعكس الملابس التقليدية السعودية غنى التراث الثقافي والتنوّع الإقليمي."
+
+#: .\main\templates\main\clothing.html:36
+msgid "Women Traditional Clothing"
+msgstr "الملابس التقليدية النسائية"
+
+#: .\main\templates\main\clothing.html:44
+#: .\main\templates\main\clothing.html:141
+msgid "Southern Region"
+msgstr " المنطقة الجنوبية"
+
+#: .\main\templates\main\clothing.html:45
+msgid "Rich colors and detailed embroidery"
+msgstr "ألوان غنية وتطريزات دقيقة"
+
+#: .\main\templates\main\clothing.html:46
+#: .\main\templates\main\clothing.html:64
+#: .\main\templates\main\clothing.html:82
+#: .\main\templates\main\clothing.html:100
+#: .\main\templates\main\clothing.html:118
+#: .\main\templates\main\clothing.html:144
+#: .\main\templates\main\clothing.html:167
+#: .\main\templates\main\clothing.html:190
+#: .\main\templates\main\clothing.html:213
+#: .\main\templates\main\clothing.html:236
+msgid "View Details"
+msgstr "عرض التفاصيل"
+
+#: .\main\templates\main\clothing.html:51
+msgid "Southern Region (Women)"
+msgstr "المنطقة الجنوبية (نساء)"
+
+#: .\main\templates\main\clothing.html:52
+msgid ""
+"Women's traditional clothing in the southern region of Saudi Arabia is known "
+"for its bold colors and rich embroidery. The garments are usually based on "
+"black fabric and decorated with vibrant patterns such as red, yellow, and "
+"green. The embroidery often appears on the chest, sleeves, and edges of the "
+"dress, featuring geometric and nature-inspired designs. The outfits are "
+"typically loose and comfortable, sometimes with wide sleeves. Accessories "
+"play an important role, including silver belts, traditional jewelry, and "
+"head coverings, all of which reflect the strong cultural identity of the "
+"region."
+msgstr "تُعرف الملابس التقليدية النسائية في المنطقة الجنوبية من المملكة العربية السعودية بألوانها الجريئة وتطريزاتها الغنية. تعتمد هذه الملابس غالبًا على القماش الأسود وتُزيَّن بنقوش زاهية مثل الأحمر والأصفر والأخضر. يظهر التطريز عادةً على الصدر والأكمام وحواف الثوب، ويتضمن تصاميم هندسية ونقوشًا مستوحاة من الطبيعة. وتكون هذه الأزياء غالبًا واسعة ومريحة، وأحيانًا بأكمام عريضة. كما تلعب الإكسسوارات دورًا مهمًا، مثل الأحزمة الفضية، والمجوهرات التقليدية، وأغطية الرأس، والتي تعكس جميعها الهوية الثقافية القوية للمنطقة."
+
+#: .\main\templates\main\clothing.html:62
+#: .\main\templates\main\clothing.html:164
+msgid "Western Region"
+msgstr "المنطقة الغربية"
+
+#: .\main\templates\main\clothing.html:63
+msgid "Elegant and lightweight flowing designs"
+msgstr "تصاميم أنيقة وخفيفة وانسيابية"
+
+#: .\main\templates\main\clothing.html:69
+msgid "Western Region (Women)"
+msgstr "المنطقة الغربية (للنساء)"
+
+#: .\main\templates\main\clothing.html:70
+msgid ""
+"Women's traditional clothing in the western region of Saudi Arabia is known "
+"for its elegance and soft, flowing designs. The garments often feature light "
+"fabrics suitable for the warm coastal climate. They are usually decorated "
+"with delicate embroidery and may include bright or warm colors. Compared to "
+"other regions, the designs tend to be lighter and more refined, reflecting "
+"the urban and coastal lifestyle of the west. Accessories such as jewelry and "
+"head coverings complete the look, adding a graceful and traditional touch."
+msgstr "عرف الملابس التقليدية النسائية في المنطقة الغربية من المملكة العربية السعودية بأناقتها وتصاميمها الناعمة والانسيابية. وغالبًا ما تُصنع من أقمشة خفيفة تناسب المناخ الساحلي الدافئ. وتُزيَّن عادةً بتطريزات دقيقة، وقد تتضمن ألوانًا زاهية أو دافئة. وبالمقارنة مع مناطق أخرى، تميل التصاميم إلى أن تكون أخف وأكثر رقيًا، مما يعكس الطابع الحضري والساحلي للمنطقة الغربية. وتُكمل الإكسسوارات مثل المجوهرات وأغطية الرأس الإطلالة، لتضيف لمسة أنيقة وتقليدية."
+
+#: .\main\templates\main\clothing.html:80
+#: .\main\templates\main\clothing.html:187
+msgid "Northern Region"
+msgstr "المنطقة الشمالية"
+
+#: .\main\templates\main\clothing.html:81
+msgid "Warm fabrics with bold traditional patterns"
+msgstr "أقمشة دافئة بنقوش تقليدية جريئة"
+
+#: .\main\templates\main\clothing.html:87
+msgid "Northern Region (Women)"
+msgstr "المنطقة الشمالية (للنساء)"
+
+#: .\main\templates\main\clothing.html:88
+msgid ""
+"Women's traditional clothing in the northern region of Saudi Arabia is "
+"designed to suit the colder climate. The garments are often made from "
+"thicker fabrics that provide warmth and comfort. The designs usually include "
+"darker tones with bold patterns and simple embroidery. Compared to other "
+"regions, the clothing focuses more on practicality while still maintaining a "
+"traditional and elegant appearance. Accessories such as scarves and layered "
+"pieces are commonly used, adding both warmth and a cultural touch to the "
+"overall look."
+msgstr "تُصمَّم الملابس التقليدية النسائية في المنطقة الشمالية من المملكة العربية السعودية لتناسب الأجواء الباردة. وغالبًا ما تُصنع من أقمشة أكثر سماكة توفر الدفء والراحة. وتميل التصاميم إلى الألوان الداكنة مع نقوش جريئة وتطريز بسيط. وبالمقارنة مع مناطق أخرى، تركّز هذه الملابس بشكل أكبر على العملية مع الحفاظ على المظهر التقليدي والأنيق. وتُستخدم الإكسسوارات مثل الأوشحة والطبقات المتعددة بشكل شائع، مما يضيف الدفء ولمسة ثقافية إلى الإطلالة العامة."
+
+#: .\main\templates\main\clothing.html:98
+#: .\main\templates\main\clothing.html:210
+msgid "Eastern Region"
+msgstr "المنطقة الشرقية"
+
+#: .\main\templates\main\clothing.html:99
+msgid "Vibrant fabrics with elegant decorative details"
+msgstr "أقمشة زاهية بتفاصيل زخرفية أنيقة"
+
+#: .\main\templates\main\clothing.html:105
+msgid "Eastern Region (Women)"
+msgstr "المنطقة الشرقية (للنساء)"
+
+#: .\main\templates\main\clothing.html:106
+msgid ""
+"Women's traditional clothing in the eastern region of Saudi Arabia is known "
+"for its vibrant colors and rich decorative details. The garments often "
+"feature soft fabrics suitable for the coastal climate. The designs usually "
+"include bright colors and elegant embroidery, sometimes influenced by trade "
+"and cultural exchange in the region. Compared to other regions, eastern "
+"clothing combines simplicity with decorative beauty, creating a balanced and "
+"graceful appearance. Accessories such as jewelry and head coverings add a "
+"refined traditional touch to the overall look."
+msgstr "تُعرف الملابس التقليدية النسائية في المنطقة الشرقية من المملكة العربية السعودية بألوانها الزاهية وتفاصيلها الزخرفية الغنية. وغالبًا ما تُصنع من أقمشة ناعمة تناسب المناخ الساحلي. وتتضمن التصاميم عادةً ألوانًا مشرقة وتطريزات أنيقة، وقد تتأثر بالتجارة والتبادل الثقافي في المنطقة. وبالمقارنة مع مناطق أخرى، تجمع ملابس المنطقة الشرقية بين البساطة والجمال الزخرفي، مما يمنحها مظهرًا متوازنًا وأنيقًا. وتضيف الإكسسوارات مثل المجوهرات وأغطية الرأس لمسة تقليدية راقية إلى الإطلالة العامة."
+
+#: .\main\templates\main\clothing.html:116
+#: .\main\templates\main\clothing.html:233
+msgid "Central Region"
+msgstr "المنطقة الوسطى"
+
+#: .\main\templates\main\clothing.html:117
+msgid "Simple dark garments with bold traditional embroidery"
+msgstr "ملابس داكنة بسيطة بتطريز تقليدي جريء"
+
+#: .\main\templates\main\clothing.html:123
+msgid "Central Region (Women)"
+msgstr "ملابس داكنة بسيطة بتطريز تقليدي جريء"
+
+#: .\main\templates\main\clothing.html:124
+msgid ""
+"Women's traditional clothing in the central region of Saudi Arabia is known "
+"for its simplicity and strong traditional identity. The garments are usually "
+"based on dark colors, especially black, with bold embroidery in colors like "
+"red or gold. The designs are modest and loose, with detailed patterns "
+"appearing on the sleeves, edges, or front of the dress. Compared to other "
+"regions, central clothing focuses more on simplicity while still maintaining "
+"elegance and cultural value. Accessories such as traditional jewelry and "
+"head coverings complete the look, giving it a balanced and authentic "
+"appearance."
+msgstr "تُعرف الملابس التقليدية النسائية في المنطقة الوسطى من المملكة العربية السعودية ببساطتها وهويتها التقليدية القوية. وتعتمد غالبًا على الألوان الداكنة، خاصة الأسود، مع تطريزات بارزة بألوان مثل الأحمر أو الذهبي. وتتميّز التصاميم بالاحتشام والاتساع، مع ظهور نقوش تفصيلية على الأكمام أو الحواف أو مقدمة الثوب. وبالمقارنة مع مناطق أخرى، تركّز ملابس المنطقة الوسطى على البساطة مع الحفاظ على الأناقة والقيمة الثقافية. وتُكمل الإكسسوارات مثل المجوهرات التقليدية وأغطية الرأس الإطلالة، لتمنحها مظهرًا متوازنًا وأصيلًا."
+
+#: .\main\templates\main\clothing.html:134
+msgid "Men Traditional Clothing"
+msgstr "الملابس التقليدية الرجالية "
+
+#: .\main\templates\main\clothing.html:142
+msgid "Strong traditional attire with belts and cultural details"
+msgstr "ملابس تقليدية قوية بأحزمة وتفاصيل ثقافية"
+
+#: .\main\templates\main\clothing.html:152
+msgid "Southern Region (Men)"
+msgstr "المنطقة الجنوبية (للرجال)"
+
+#: .\main\templates\main\clothing.html:154
+msgid ""
+"Men's traditional clothing in the southern region of Saudi Arabia reflects "
+"strength and deep cultural heritage. It usually consists of a simple garment "
+"worn with an outer layer that may include decorative or warm materials. One "
+"of the most distinctive elements is the wide belt worn around the waist, "
+"which holds the traditional dagger (jambiya), a symbol of pride and courage. "
+"Additional details such as decorative belts and colorful fabric elements "
+"enhance the traditional identity of the outfit. The look is completed with a "
+"traditional head covering, creating a strong and authentic appearance rooted "
+"in tribal heritage."
+msgstr "تعكس الملابس التقليدية الرجالية في المنطقة الجنوبية من المملكة العربية السعودية القوة وعمق التراث الثقافي. وتتكوّن عادةً من زي بسيط يُرتدى مع طبقة خارجية قد تكون مزخرفة أو دافئة. ومن أبرز العناصر الحزام العريض حول الخصر، والذي يُثبت فيه الخنجر التقليدي (الجنبيّة)، وهو رمز للفخر والشجاعة. كما تضيف التفاصيل مثل الأحزمة المزخرفة وعناصر القماش الملوّنة طابعًا تقليديًا مميزًا. وتُستكمل الإطلالة بغطاء الرأس التقليدي، مما يمنحها مظهرًا قويًا وأصيلًا يعكس التراث القبلي."
+
+#: .\main\templates\main\clothing.html:165
+msgid "Elegant attire with bisht and refined details"
+msgstr "ملابس أنيقة مع البشت وتفاصيل راقية"
+
+#: .\main\templates\main\clothing.html:175
+msgid "Western Region (Men)"
+msgstr "المنطقة الغربية (للرجال)"
+
+#: .\main\templates\main\clothing.html:177
+msgid ""
+"Men's traditional clothing in the western region of Saudi Arabia is known "
+"for its elegance and simplicity. It typically consists of a white thobe worn "
+"with a bisht, often in calm colors such as brown or black with decorative "
+"edges. The shemagh or ghutra is worn on the head with an agal, giving a neat "
+"and refined appearance. The bisht is commonly worn during formal occasions "
+"and celebrations, symbolizing prestige and social status. Overall, the "
+"outfit reflects sophistication, simplicity, and attention to elegant details."
+msgstr "تتميّز الملابس التقليدية الرجالية في المنطقة الغربية بالأناقة والبساطة. وتتكوّن عادةً من ثوب أبيض يُرتدى مع بشت، غالبًا بألوان هادئة مثل البني أو الأسود مع حواف مزخرفة. ويُرتدى الشماغ أو الغترة على الرأس مع العقال، مما يمنح مظهرًا مرتبًا وأنيقًا. ويُلبس البشت غالبًا في المناسبات الرسمية والاحتفالات، حيث يرمز إلى المكانة والهيبة. وبشكل عام، تعكس هذه الإطلالة الرقي والبساطة والاهتمام بالتفاصيل الأنيقة."
+
+#: .\main\templates\main\clothing.html:188
+msgid "Warm layered attire with simple traditional patterns"
+msgstr "ملابس دافئة متعددة الطبقات بنقوش تقليدية بسيطة"
+
+#: .\main\templates\main\clothing.html:198
+msgid "Northern Region (Men)"
+msgstr "المنطقة الشمالية (للرجال)"
+
+#: .\main\templates\main\clothing.html:200
+msgid ""
+"Men's traditional clothing in the northern region of Saudi Arabia is "
+"designed for colder weather. It often includes layered garments, such as "
+"wearing a thobe with a cloak or fur for warmth. The clothing features calm "
+"colors like brown and beige, with simple patterns that reflect the desert "
+"environment. A traditional head covering with an agal is commonly worn, "
+"giving a structured and elegant look. Overall, the outfit combines "
+"practicality and elegance, providing warmth while preserving cultural "
+"identity."
+msgstr "تُصمَّم الملابس التقليدية الرجالية في المنطقة الشمالية لتناسب الأجواء الباردة، حيث تشمل غالبًا طبقات متعددة مثل ارتداء الثوب مع عباءة أو فرو للتدفئة. وتتميّز بألوان هادئة مثل البني والبيج، مع نقوش بسيطة تعكس البيئة الصحراوية. ويُرتدى غطاء الرأس التقليدي مع العقال، مما يمنح مظهرًا متناسقًا وأنيقًا. وبشكل عام، تجمع هذه الملابس بين العملية والأناقة، حيث توفر الدفء مع الحفاظ على الهوية الثقافية."
+
+#: .\main\templates\main\clothing.html:211
+msgid "Light fabrics with elegant decorative patterns"
+msgstr "أقمشة خفيفة بنقوش زخرفية أنيقة"
+
+#: .\main\templates\main\clothing.html:221
+msgid "Eastern Region (Men)"
+msgstr "المنطقة الشرقية (للرجال)"
+
+#: .\main\templates\main\clothing.html:223
+msgid ""
+"Men's traditional clothing in the eastern region of Saudi Arabia combines "
+"elegance with simplicity. It often includes a thobe worn with a light bisht "
+"or cloak, sometimes featuring subtle decorative patterns. The fabrics are "
+"comfortable and suitable for the coastal climate, with colors ranging from "
+"light to warm tones. A traditional head covering with an agal is commonly "
+"worn, creating a balanced and refined look. Overall, the outfit reflects a "
+"blend of simplicity, elegance, and cultural influence shaped by the region’s "
+"history of trade."
+msgstr "تجمع الملابس التقليدية الرجالية في المنطقة الشرقية بين الأناقة والبساطة، حيث تتكوّن غالبًا من ثوب يُرتدى مع بشت خفيف أو عباءة، وقد تتضمن نقوشًا زخرفية بسيطة. وتكون الأقمشة مريحة ومناسبة للمناخ الساحلي، بألوان تتراوح بين الفاتحة والدافئة. ويُرتدى غطاء الرأس التقليدي مع العقال، مما يمنح مظهرًا متوازنًا وأنيقًا. وتعكس هذه الإطلالة مزيجًا من البساطة والأناقة والتأثيرات الثقافية الناتجة عن تاريخ المنطقة التجاري."
+
+#: .\main\templates\main\clothing.html:234
+msgid "Formal attire with bisht and traditional accessories"
+msgstr "ملابس رسمية مع البشت وإكسسوارات تقليدية"
+
+#: .\main\templates\main\clothing.html:244
+msgid "Central Region (Men)"
+msgstr "المنطقة الوسطى (للرجال)"
+
+#: .\main\templates\main\clothing.html:246
+msgid ""
+"Men's traditional clothing in the central region of Saudi Arabia is known "
+"for its formal and prestigious appearance. It typically consists of a white "
+"thobe worn with a dark bisht decorated with golden edges, especially during "
+"formal occasions. The shemagh or ghutra is worn with an agal, and sometimes "
+"a traditional belt and dagger are added to reflect cultural pride. Overall, "
+"the outfit represents elegance, simplicity, and strong cultural identity."
+msgstr "تُعرف الملابس التقليدية الرجالية في المنطقة الوسطى بمظهرها الرسمي والمهيب، حيث تتكوّن عادةً من ثوب أبيض يُرتدى مع بشت داكن مزخرف بحواف ذهبية، خاصة في المناسبات الرسمية. ويُرتدى الشماغ أو الغترة مع العقال، وقد يُضاف أحيانًا حزام وخنجر تقليدي يعكس الفخر الثقافي. وبشكل عام، تعبّر هذه الإطلالة عن الأناقة والبساطة والهوية الثقافية القوية."
+
+#: .\main\templates\main\folkarts.html:17
+#: .\main\templates\main\folkarts.html:28
+msgid "Saudi Performing Arts"
+msgstr " الفنون الشعبية السعودية"
+
+#: .\main\templates\main\folkarts.html:18
+msgid "Explore traditional music, dances, and cultural performances"
+msgstr "استكشف الموسيقى التقليدية والرقصات والعروض الثقافية"
+
+#: .\main\templates\main\folkarts.html:30
+msgid ""
+"Saudi performing arts reflect the richness of the Kingdom's cultural "
+"heritage, combining music, poetry, and movement. This page highlights some "
+"of the most well-known traditional performances that continue to play an "
+"important role in celebrations and social life."
+msgstr ""
+"تعكس الفنون الشعبية السعودية غنى التراث الثقافي للمملكة، حيث تجمع بين "
+"الموسيقى والشعر والحركة. تسلط هذه الصفحة الضوء على بعض أشهر العروض التقليدية "
+"التي لا تزال تؤدي دورًا مهمًا في الاحتفالات والحياة الاجتماعية."
+
+#: .\main\templates\main\folkarts.html:37
+msgid "Al-Ardah"
+msgstr "العرضة السعودية"
+
+#: .\main\templates\main\folkarts.html:39
+msgid ""
+"A traditional Saudi performance known as Najdi Ardah, performed during "
+"national events and celebrations. It symbolizes strength and unity and is "
+"recognized by UNESCO as intangible cultural heritage."
+msgstr ""
+"عرضٌ سعودي تقليدي يُعرف بالعرضة النجدية، يُؤدّى في المناسبات الوطنية "
+"والاحتفالات. ويرمز إلى القوة والوحدة، وقد أُدرج ضمن التراث الثقافي غير المادي "
+"لدى منظمة اليونسكو"
+
+#: .\main\templates\main\folkarts.html:50
+msgid "Al-Samri"
+msgstr "السامري"
+
+#: .\main\templates\main\folkarts.html:52
+msgid ""
+"A popular folk music performance that originated in Al-Qassim and spread to "
+"different regions. It combines singing, poetry, and rhythmic movement."
+msgstr ""
+"عرضٌ موسيقي شعبي اشتهر في منطقة القصيم وانتشر إلى مختلف المناطق، ويجمع بين "
+"الغناء والشعر والحركات الإيقاعية."
+
+#: .\main\templates\main\folkarts.html:63
+msgid "Yanbuawi Art"
+msgstr "الفن الينبعاوي"
+
+#: .\main\templates\main\folkarts.html:65
+msgid ""
+"A coastal musical art from Yanbu, characterized by fast rhythms. It is part "
+"of traditional sea songs performed by sailors."
+msgstr ""
+"فنّ موسيقي ساحلي من ينبع يتميّز بإيقاعاته السريعة، ويُعد جزءًا من الأغاني "
+"البحرية التقليدية التي كان يؤديها البحّارة."
+
+#: .\main\templates\main\folkarts.html:76
+msgid "Southern Ardah"
+msgstr "العرضة الجنوبية"
+
+#: .\main\templates\main\folkarts.html:78
+msgid ""
+"A traditional dance from southern Saudi Arabia, performed during "
+"celebrations and weddings, expressing bravery and pride."
+msgstr ""
+"رقصة تقليدية من جنوب المملكة العربية السعودية، تُؤدّى في المناسبات والاحتفالات "
+"والأعراس، وتعبّر عن الشجاعة والفخر."
+
+#: .\main\templates\main\folkarts.html:89
+msgid "Al-Majroor"
+msgstr "المجرور"
+
+#: .\main\templates\main\folkarts.html:91
+msgid ""
+"A folkloric dance popular in western Saudi Arabia, especially in Taif, known "
+"for its rhythmic drumming and group performance."
+msgstr ""
+"رقصة شعبية مشهورة في غرب المملكة العربية السعودية، خاصة في الطائف، وتتميّز "
+"بإيقاعات الطبول والأداء الجماعي."
+
+#: .\main\templates\main\folkarts.html:102
+msgid "Al-Zamil"
+msgstr "الزامل"
+
+#: .\main\templates\main\folkarts.html:104
+msgid ""
+"A group performance from Asir and Najran where participants stand in rows "
+"and chant poetry together during special occasions."
+msgstr ""
+"أداء جماعي من عسير ونجران، يقف فيه المشاركون في صفوف ويردّدون الأشعار معًا في "
+"المناسبات الخاصة."
+
+#: .\main\templates\main\folkarts.html:115
+msgid "Al-Dahha"
+msgstr "الدحة"
+
+#: .\main\templates\main\folkarts.html:117
+msgid ""
+"A northern folk dance with a strong, energetic character, performed by men "
+"in groups with chanting and rhythmic movements. It expresses courage, unity, "
+"and is commonly performed during celebrations and social occasions."
+msgstr ""
+"رقصة شعبية شمالية ذات طابع قوي وحماسي، يؤديها الرجال بشكل جماعي مع الهتافات "
+"والحركات الإيقاعية. وتعبّر عن الشجاعة والوحدة، وتُؤدّى غالبًا في المناسبات "
+"والاحتفالات الاجتماعية."
+
+#: .\main\templates\main\folkarts.html:128
+msgid "Qasimi Dance"
+msgstr "رقصة القصيمي"
+
+#: .\main\templates\main\folkarts.html:130
+msgid ""
+"A traditional singing dance performed in western regions, known for its "
+"unique Hijazi rhythm and musical style."
+msgstr ""
+"رقصة غنائية تقليدية تُؤدّى في بعض مناطق المملكة، وتتميّز بإيقاعها الخاص "
+"وأسلوبها الموسيقي الفريد."
+
+#: .\main\templates\main\foods.html:8
+msgid "Traditional Foods"
+msgstr "الأطعمة التقليدية"
+
+#: .\main\templates\main\foods.html:17
+msgid "Discover the flavors of Saudi Arabia"
+msgstr "اكتشف نكهات المملكة العربية السعودية"
+
+#: .\main\templates\main\foods.html:27
+msgid "Saudi Traditional Food"
+msgstr "الأطعمة التقليدية السعودية"
+
+#: .\main\templates\main\foods.html:29
+msgid ""
+"Saudi traditional food reflects the richness of the Kingdom's heritage and "
+"culture, featuring distinctive flavors and simple ingredients that have been "
+"passed down through generations."
+msgstr ""
+"تعكس الأطعمة التقليدية السعودية غنى تراث المملكة وثقافتها، حيث تتميّز بنكهات "
+"فريدة ومكوّنات بسيطة توارثتها الأجيال."
+
+#: .\main\templates\main\foods.html:35
+msgid "Main Dishes"
+msgstr "الأطباق الرئيسية"
+
+#: .\main\templates\main\foods.html:42
+msgid "Kabsa"
+msgstr "الكبسة"
+
+#: .\main\templates\main\foods.html:43
+msgid "Rice dish cooked with meat and aromatic spices."
+msgstr "طبق أرز يُطهى مع اللحم والتوابل العطرية."
+
+#: .\main\templates\main\foods.html:50
+msgid "Jareesh"
+msgstr "الجريش"
+
+#: .\main\templates\main\foods.html:51
+msgid "Crushed wheat cooked with meat and spices."
+msgstr "قمح مجروش يُطهى مع اللحم والتوابل."
+
+#: .\main\templates\main\foods.html:58
+msgid "Qursan"
+msgstr "القرصان"
+
+#: .\main\templates\main\foods.html:59
+msgid "Thin bread layered with vegetables and meat stew."
+msgstr "خبز رقيق يُقدَّم مع خضار ومرق اللحم."
+
+#: .\main\templates\main\foods.html:66
+msgid "Mataziz"
+msgstr "المطازيز"
+
+#: .\main\templates\main\foods.html:67
+msgid "Small dough pieces cooked in a rich meat broth."
+msgstr "قطع صغيرة من العجين تُطهى في مرق لحم غني."
+
+#: .\main\templates\main\foods.html:74
+msgid "Margaouq"
+msgstr "المرقوق"
+
+#: .\main\templates\main\foods.html:75
+msgid "Thin dough cooked with vegetables and meat."
+msgstr "عجين رقيق يُطهى مع الخضار واللحم."
+
+#: .\main\templates\main\foods.html:82
+msgid "Manto"
+msgstr "المنتو"
+
+#: .\main\templates\main\foods.html:83
+msgid "Steamed dumplings filled with spiced meat."
+msgstr "عجائن محشوة باللحم المتبّل تُطهى على البخار."
+
+#: .\main\templates\main\foods.html:90
+msgid "Harees"
+msgstr "الهريس"
+
+#: .\main\templates\main\foods.html:91
+msgid "Wheat and meat cooked until soft and creamy."
+msgstr "قمح يُطهى مع اللحم حتى يصبح طريًا وكريمي القوام."
+
+#: .\main\templates\main\foods.html:98
+msgid "Maghsh"
+msgstr "المغش"
+
+#: .\main\templates\main\foods.html:99
+msgid "Meat and vegetables cooked in a traditional stone pot."
+msgstr "لحم وخضار تُطهى في قدر حجري تقليدي."
+
+#: .\main\templates\main\foods.html:106
+msgid "Saleeq"
+msgstr "السليق"
+
+#: .\main\templates\main\foods.html:107
+msgid "Rice cooked with milk and served with chicken or meat."
+msgstr "أرز يُطهى بالحليب ويُقدَّم مع الدجاج أو اللحم."
+
+#: .\main\templates\main\foods.html:114
+msgid "Haneeth"
+msgstr "الحنيذ"
+
+#: .\main\templates\main\foods.html:115
+msgid "Slow-cooked meat in an underground oven."
+msgstr "لحم يُطهى ببطء في فرن تحت الأرض."
+
+#: .\main\templates\main\foods.html:122
+msgid "Sayiadiah"
+msgstr "الصيادية"
+
+#: .\main\templates\main\foods.html:123
+msgid ""
+"Rice cooked with fish and spices, known for its rich flavor and brown color."
+msgstr "أرز يُطهى مع السمك والتوابل، ويُعرف بنكهته الغنية ولونه البني."
+
+#: .\main\templates\main\foods.html:130
+msgid "kubaibet-hail"
+msgstr "كبيبة حائل"
+
+#: .\main\templates\main\foods.html:131
+msgid ""
+"Meat and bulgur balls, seasoned or stuffed, fried or cooked as a traditional "
+"dish."
+msgstr "كرات من اللحم والبرغل، متبّلة أو محشوة، تُقلى أو تُطهى كطبق تقليدي."
+
+#: .\main\templates\main\foods.html:138
+msgid "Madini-Rice"
+msgstr "الأرز المدني"
+
+#: .\main\templates\main\foods.html:139
+msgid ""
+"Rice cooked with chicken and mild spices, known for its light flavor and "
+"soft texture."
+msgstr "أرز يُطهى مع الدجاج وتوابل خفيفة، ويتميّز بنكهته اللطيفة وقوامه الناعم."
+
+#: .\main\templates\main\foods.html:146
+msgid "Hassawi-Rice"
+msgstr "الأرز الحساوي"
+
+#: .\main\templates\main\foods.html:147
+msgid ""
+"Red rice cooked with spices and meat or chicken, known for its rich flavor "
+"and unique texture."
+msgstr ""
+"أرز أحمر يُطهى مع التوابل واللحم أو الدجاج، ويتميّز بنكهته الغنية وقوامه "
+"الفريد."
+
+#: .\main\templates\main\foods.html:154
+msgid "Ful Hijazi"
+msgstr "الفول الحجازي"
+
+#: .\main\templates\main\foods.html:155
+msgid "Cooked fava beans served with olive oil and lemon."
+msgstr "فول مطبوخ يُقدَّم مع زيت الزيتون والليمون."
+
+#: .\main\templates\main\foods.html:162
+msgid "Ma'soob"
+msgstr "المعصوب"
+
+#: .\main\templates\main\foods.html:163
+msgid "Mashed banana mixed with bread, honey, and cream."
+msgstr "موز مهروس يُخلط مع الخبز والعسل والقشطة."
+
+#: .\main\templates\main\foods.html:170
+msgid "Aseedah"
+msgstr "العصيدة"
+
+#: .\main\templates\main\foods.html:171
+msgid "Thick dough served with broth or honey."
+msgstr "عجين كثيف يُقدَّم مع المرق أو العسل."
+
+#: .\main\templates\main\foods.html:178
+msgid "Yaghmash"
+msgstr "اليغمش"
+
+#: .\main\templates\main\foods.html:179
+msgid "Baked dough filled with minced meat."
+msgstr "عجين مخبوز محشو باللحم المفروم."
+
+#: .\main\templates\main\foods.html:186
+msgid "Mulyhiya"
+msgstr "المليحيه "
+
+#: .\main\templates\main\foods.html:187
+msgid "Traditional dish made with flour and broth."
+msgstr "طبق تقليدي يُحضّر من الدقيق والمرق."
+
+#: .\main\templates\main\foods.html:194
+msgid "Al-Mujalalah"
+msgstr "المجللة"
+
+#: .\main\templates\main\foods.html:195
+msgid "Simple dough-based dish with local ingredients."
+msgstr "طبق بسيط يعتمد على العجين ومكوّنات محلية."
+
+#: .\main\templates\main\foods.html:202
+msgid "Mursa"
+msgstr "المرسة"
+
+#: .\main\templates\main\foods.html:203
+msgid "Mashed bread mixed with broth and meat."
+msgstr "خبز مهروس يُخلط مع المرق واللحم."
+
+#: .\main\templates\main\foods.html:210
+msgid "Thareed"
+msgstr "الثريد"
+
+#: .\main\templates\main\foods.html:211
+msgid "Bread soaked in rich meat broth."
+msgstr "خبز مُشرّب بمرق اللحم الغني."
+
+#: .\main\templates\main\foods.html:218
+msgid "Ruqsh"
+msgstr "الرقش"
+
+#: .\main\templates\main\foods.html:219
+msgid ""
+"Bread mixed with meat and vegetable broth, served as a traditional hearty "
+"dish."
+msgstr "خبز يُخلط مع مرق اللحم والخضار، ويُقدَّم كطبق تقليدي مشبع."
+
+#: .\main\templates\main\foods.html:226
+msgid "Areekah"
+msgstr "العريكة"
+
+#: .\main\templates\main\foods.html:227
+msgid "Dough mixed with dates and honey."
+msgstr "عجين يُخلط مع التمر والعسل."
+
+#: .\main\templates\main\foods.html:235
+msgid "Bread"
+msgstr "الخبز"
+
+#: .\main\templates\main\foods.html:242
+msgid "Tamees"
+msgstr "التميس"
+
+#: .\main\templates\main\foods.html:243
+msgid "Traditional oven-baked flatbread."
+msgstr "خبز مسطّح تقليدي يُخبز في الفرن."
+
+#: .\main\templates\main\foods.html:250
+msgid "Khamir"
+msgstr "الخمير"
+
+#: .\main\templates\main\foods.html:251
+msgid "Thick bread cooked on a hot surface."
+msgstr "خبز سميك يُطهى على سطح ساخن."
+
+#: .\main\templates\main\foods.html:258
+msgid "Maqshush"
+msgstr "المقشوش"
+
+#: .\main\templates\main\foods.html:259
+msgid ""
+"Small traditional flatbread cooked on a griddle, usually served with honey "
+"or butter."
+msgstr "خبز تقليدي صغير يُطهى على صاج، ويُقدَّم عادةً مع العسل أو الزبدة."
+
+#: .\main\templates\main\foods.html:266
+msgid "Muqana-bread"
+msgstr "خبز المقناة"
+
+#: .\main\templates\main\foods.html:267
+msgid "Traditional bread made from flour and baked to be light and crispy."
+msgstr "خبز تقليدي يُصنع من الدقيق ويُخبز ليكون خفيفًا ومقرمشًا."
+
+#: .\main\templates\main\foods.html:274
+msgid "Sharik"
+msgstr "الشريك"
+
+#: .\main\templates\main\foods.html:275
+msgid "Soft sweet bread flavored with spices."
+msgstr "خبز طري حلو مُنكّه بالتوابل."
+
+#: .\main\templates\main\foods.html:282
+msgid "Mifa"
+msgstr "الميفا"
+
+#: .\main\templates\main\foods.html:283
+msgid "Bread baked in a clay oven."
+msgstr "خبز يُخبز في فرن طيني تقليدي."
+
+#: .\main\templates\main\foods.html:291
+msgid "Desserts"
+msgstr "الحلويات"
+
+#: .\main\templates\main\foods.html:298
+msgid "Hunini"
+msgstr "الحُنيني"
+
+#: .\main\templates\main\foods.html:299
+msgid "Sweet dish made with dates, bread, and butter."
+msgstr "طبق حلو يُصنع من التمر والخبز والزبدة."
+
+#: .\main\templates\main\foods.html:306
+msgid "Klejeh"
+msgstr "الكليجة"
+
+#: .\main\templates\main\foods.html:307
+msgid "Traditional sweet pastry filled with dates."
+msgstr "معجنات تقليدية حلوة محشوة بالتمر."
+
+#: .\main\templates\main\foods.html:314
+msgid "Dabiyaza"
+msgstr "الدبيازة"
+
+#: .\main\templates\main\foods.html:315
+msgid "Sweet dish made with dried fruits and nuts."
+msgstr "طبق حلو يُحضّر من الفواكه المجففة والمكسرات."
+
+#: .\main\templates\main\foods.html:322
+msgid "Luqaimat"
+msgstr "اللقيمات"
+
+#: .\main\templates\main\foods.html:323
+msgid "Crispy fried dough balls served with date syrup or honey."
+msgstr "كرات عجين مقلية ومقرمشة تُقدَّم مع دبس التمر أو العسل."
+
+#: .\main\templates\main\game.html:18
+msgid "Discover the fun and heritage of Saudi traditional games"
+msgstr "اكتشف الألعاب التقليدية في المملكة العربية السعودية "
+
+#: .\main\templates\main\game.html:27
+msgid "Saudi Traditional Games"
+msgstr "الألعاب التقليدية السعودية"
+
+#: .\main\templates\main\game.html:29
+msgid ""
+"Traditional games in Saudi Arabia show how people enjoyed simple and "
+"meaningful moments together. These games were not only for fun, but also "
+"helped build friendships and strong social bonds."
+msgstr ""
+"تعكس الألعاب التقليدية في المملكة العربية السعودية كيف كان الناس يستمتعون "
+"بلحظات بسيطة ومليئة بالمعنى معًا. ولم تكن هذه الألعاب للترفيه فقط، بل ساهمت "
+"أيضًا في بناء الصداقات وتعزيز الروابط الاجتماعية القوية."
+
+#: .\main\templates\main\game.html:35
+msgid "Indoor Games"
+msgstr "الألعاب المنزلية"
+
+#: .\main\templates\main\game.html:42
+msgid "Taq Taq Taqiyah"
+msgstr "طاق طاق طاقية"
+
+#: .\main\templates\main\game.html:43
+msgid "A group game where children sit in a circle and pass a cap quickly"
+msgstr "لعبة جماعية يجلس فيها الأطفال في دائرة ويتناقلون قبعة بسرعة."
+
+#: .\main\templates\main\game.html:44 .\main\templates\main\game.html:74
+#: .\main\templates\main\game.html:104 .\main\templates\main\game.html:134
+#: .\main\templates\main\game.html:164 .\main\templates\main\game.html:194
+#: .\main\templates\main\game.html:233 .\main\templates\main\game.html:263
+#: .\main\templates\main\game.html:293 .\main\templates\main\game.html:323
+#: .\main\templates\main\game.html:353 .\main\templates\main\game.html:392
+#: .\main\templates\main\game.html:422 .\main\templates\main\game.html:452
+#: .\main\templates\main\game.html:482
+msgid "How to Play"
+msgstr "طريقة اللعب"
+
+#: .\main\templates\main\game.html:51
+msgid "How to Play Taq Taq Taqiyah"
+msgstr "طريقة لعب طاق طاق طاقية"
+
+#: .\main\templates\main\game.html:52 .\main\templates\main\game.html:82
+#: .\main\templates\main\game.html:112 .\main\templates\main\game.html:142
+#: .\main\templates\main\game.html:172 .\main\templates\main\game.html:202
+#: .\main\templates\main\game.html:241 .\main\templates\main\game.html:271
+#: .\main\templates\main\game.html:301 .\main\templates\main\game.html:331
+#: .\main\templates\main\game.html:361 .\main\templates\main\game.html:400
+#: .\main\templates\main\game.html:430 .\main\templates\main\game.html:460
+#: .\main\templates\main\game.html:490
+msgid "Game Description:"
+msgstr "وصف اللعبة:"
+
+#: .\main\templates\main\game.html:54
+msgid ""
+"A fun and fast-paced traditional game that relies on attention and quick "
+"reaction. Children sit in a circle while one player walks around them "
+"holding a “taqiyah” (or any small cloth). The player secretly drops it "
+"behind someone. If the chosen player notices it, they must quickly stand up "
+"and chase the first player before they take their spot."
+msgstr ""
+"لعبة تقليدية ممتعة وسريعة الإيقاع تعتمد على الانتباه وسرعة ردّة الفعل. يجلس "
+"الأطفال في دائرة بينما يدور أحد اللاعبين حولهم وهو يحمل \"طاقية\" (أو قطعة "
+"قماش صغيرة). يقوم اللاعب بإسقاطها سرًا خلف أحدهم، وإذا انتبه اللاعب المختار "
+"لذلك، يجب أن ينهض بسرعة ويلاحق اللاعب الأول قبل أن يأخذ مكانه."
+
+#: .\main\templates\main\game.html:56 .\main\templates\main\game.html:86
+#: .\main\templates\main\game.html:116 .\main\templates\main\game.html:146
+#: .\main\templates\main\game.html:176 .\main\templates\main\game.html:206
+#: .\main\templates\main\game.html:245 .\main\templates\main\game.html:275
+#: .\main\templates\main\game.html:305 .\main\templates\main\game.html:335
+#: .\main\templates\main\game.html:365 .\main\templates\main\game.html:404
+#: .\main\templates\main\game.html:434 .\main\templates\main\game.html:464
+#: .\main\templates\main\game.html:494
+msgid "Number of Players:"
+msgstr "عدد اللاعبين:"
+
+#: .\main\templates\main\game.html:58
+msgid "5 to 15 players (the more, the more fun)"
+msgstr "من 5 إلى 15 لاعبًا (كلما زاد العدد زادت المتعة)"
+
+#: .\main\templates\main\game.html:60 .\main\templates\main\game.html:90
+#: .\main\templates\main\game.html:120 .\main\templates\main\game.html:150
+#: .\main\templates\main\game.html:180 .\main\templates\main\game.html:210
+#: .\main\templates\main\game.html:249 .\main\templates\main\game.html:279
+#: .\main\templates\main\game.html:309 .\main\templates\main\game.html:339
+#: .\main\templates\main\game.html:369 .\main\templates\main\game.html:408
+#: .\main\templates\main\game.html:438 .\main\templates\main\game.html:468
+#: .\main\templates\main\game.html:498
+msgid "Category:"
+msgstr "التصنيف:"
+
+#: .\main\templates\main\game.html:62 .\main\templates\main\game.html:92
+#: .\main\templates\main\game.html:152 .\main\templates\main\game.html:182
+#: .\main\templates\main\game.html:212 .\main\templates\main\game.html:251
+#: .\main\templates\main\game.html:281 .\main\templates\main\game.html:311
+#: .\main\templates\main\game.html:341 .\main\templates\main\game.html:371
+#: .\main\templates\main\game.html:410 .\main\templates\main\game.html:440
+#: .\main\templates\main\game.html:470 .\main\templates\main\game.html:500
+msgid "Suitable for everyone (boys and girls)"
+msgstr "مناسبة للجميع (بنين وبنات)"
+
+#: .\main\templates\main\game.html:72
+msgid "Hadarijah"
+msgstr "حدارجا"
+
+#: .\main\templates\main\game.html:73
+msgid "A group game where children place their hands and one counts"
+msgstr "لعبة جماعية يضع فيها الأطفال أيديهم معًا ويقوم أحدهم بالعدّ."
+
+#: .\main\templates\main\game.html:81
+msgid "How to Play Hadarijah"
+msgstr "طريقة لعب الحدارجا"
+
+#: .\main\templates\main\game.html:84
+msgid ""
+"A traditional Saudi children's game based on rhythm and chanting. Players "
+"place their hands on the ground while one player moves their finger across "
+"them, reciting a chant. The game is fun and helps develop language and "
+"interaction skills."
+msgstr ""
+"لعبة أطفال سعودية تقليدية تعتمد على الإيقاع وترديد الأهازيج. يضع اللاعبون "
+"أيديهم على الأرض بينما يمرّ أحدهم بإصبعه فوقها وهو يردد أهزوجة. تُعد اللعبة "
+"ممتعة وتساعد على تنمية المهارات اللغوية والتفاعل الاجتماعي."
+
+#: .\main\templates\main\game.html:88 .\main\templates\main\game.html:307
+msgid "3 or more players"
+msgstr "3 لاعبين أو أكثر"
+
+#: .\main\templates\main\game.html:102
+msgid "Al-Madud"
+msgstr "المدود"
+
+#: .\main\templates\main\game.html:103
+msgid "A girls' game using simple handmade dolls"
+msgstr "لعبة للبنات تُستخدم فيها دمى بسيطة مصنوعة يدويًا"
+
+#: .\main\templates\main\game.html:111
+msgid "How to Play Al-Madud"
+msgstr "طريقة لعب المدود"
+
+#: .\main\templates\main\game.html:114
+msgid ""
+"A traditional Saudi girls' game where players create handmade dolls using "
+"simple materials like fabric, beads, and sticks. The dolls are used to act "
+"out social and family roles, encouraging imagination and role-playing."
+msgstr ""
+"لعبة سعودية تقليدية للبنات، حيث تصنع اللاعبات دمى يدوية باستخدام مواد بسيطة "
+"مثل القماش والخرز والعيدان. وتُستخدم هذه الدمى لتمثيل الأدوار الاجتماعية "
+"والعائلية، مما يعزّز الخيال ولعب الأدوار."
+
+#: .\main\templates\main\game.html:118 .\main\templates\main\game.html:148
+#: .\main\templates\main\game.html:247 .\main\templates\main\game.html:277
+msgid "1 or more players (can be played individually or in groups)"
+msgstr "لاعبة واحد أو أكثر (يمكن لعبها بشكل فردي أو جماعي)"
+
+#: .\main\templates\main\game.html:122
+msgid "Suitable for girls (especially ages 12 and under)"
+msgstr "مناسبة للبنات (خصوصًا بعمر 12 سنة فما دون)"
+
+#: .\main\templates\main\game.html:132
+msgid "Al-Zagtah"
+msgstr "الزقطة"
+
+#: .\main\templates\main\game.html:133
+msgid "A five-stone skill game"
+msgstr "لعبة مهارية باستخدام خمس حصيات"
+
+#: .\main\templates\main\game.html:141
+msgid "How to Play Al-Zagtah"
+msgstr "طريقة لعب الزقطة"
+
+#: .\main\templates\main\game.html:144
+msgid ""
+"A traditional game played with five small smooth stones. The player throws "
+"one stone into the air and quickly picks up the others from the ground "
+"before catching the falling stone. It requires focus, speed, and "
+"coordination."
+msgstr ""
+"لعبة تقليدية تُلعب باستخدام خمس حصيات صغيرة ملساء. يقوم اللاعب برمي إحدى "
+"الحصيات في الهواء، ثم يلتقط بسرعة الحصيات الأخرى من الأرض قبل أن يمسك "
+"بالحصاة الساقطة. تتطلب تركيزًا وسرعة وتناسقًا."
+
+#: .\main\templates\main\game.html:162
+msgid "Al-Masaqeel"
+msgstr "المصاقيل"
+
+#: .\main\templates\main\game.html:163
+msgid "A marble game based on skill"
+msgstr "لعبة كرات زجاجية تعتمد على المهارة"
+
+#: .\main\templates\main\game.html:171
+msgid "How to Play Al-Masaqeel"
+msgstr "طريقة لعب المصاقيل"
+
+#: .\main\templates\main\game.html:174
+msgid ""
+"A traditional game played with small colorful glass marbles. Players compete "
+"by aiming and hitting their opponent's marbles to win them, making the game "
+"all about accuracy and skill."
+msgstr ""
+"لعبة تقليدية تُلعب بكرات زجاجية صغيرة ملوّنة، حيث يتنافس اللاعبون على إصابة "
+"كرات خصومهم لكسبها، مما يجعل اللعبة تعتمد على الدقة والمهارة."
+
+#: .\main\templates\main\game.html:178 .\main\templates\main\game.html:208
+msgid "2 or more players"
+msgstr "لاعبان أو أكثر"
+
+#: .\main\templates\main\game.html:192
+msgid "Al-Kabush"
+msgstr "الكبوش"
+
+#: .\main\templates\main\game.html:193
+msgid "Throwing a stone to win marbles"
+msgstr "رمي حجر للفوز بالكرات"
+
+#: .\main\templates\main\game.html:201
+msgid "How to Play Al-Kabush"
+msgstr "طريقة لعب الكبوش"
+
+#: .\main\templates\main\game.html:204
+msgid ""
+"A traditional game popular in western Saudi Arabia, especially in Makkah. "
+"Players place small marbles inside a drawn circle, then take turns throwing "
+"a smooth stone from a distance to knock the marbles outside the circle and "
+"win them. The game requires accuracy and focus."
+msgstr ""
+"لعبة تقليدية مشهورة في غرب المملكة العربية السعودية، خاصة في مكة. يضع "
+"اللاعبون كرات صغيرة داخل دائرة مرسومة، ثم يتناوبون على رمي حجر أملس من مسافة "
+"لإخراج الكرات خارج الدائرة والفوز بها. تتطلب اللعبة دقة وتركيزًا."
+
+#: .\main\templates\main\game.html:224
+msgid "Outdoor Games"
+msgstr "الألعاب الخارجية"
+
+#: .\main\templates\main\game.html:231
+msgid "Al-Danana"
+msgstr "الدنانة"
+
+#: .\main\templates\main\game.html:232
+msgid "Rolling a tire while running"
+msgstr "دحرجة إطار أثناء الجري"
+
+#: .\main\templates\main\game.html:240
+msgid "How to Play Al-Danana"
+msgstr "طريقة لعب الدنانة"
+
+#: .\main\templates\main\game.html:243
+msgid ""
+"A traditional outdoor game where players roll a tire using a stick and try "
+"to keep it moving without falling. The game focuses on balance, control, and "
+"coordination."
+msgstr ""
+"لعبة تقليدية تُمارس في الهواء الطلق، حيث يقوم اللاعبون بدحرجة إطار باستخدام "
+"عصا ويحاولون إبقاءه متحركًا دون أن يسقط. تركز اللعبة على التوازن والتحكّم "
+"والتنسيق."
+
+#: .\main\templates\main\game.html:261
+msgid "Al-Hajlah"
+msgstr "الحجلة"
+
+#: .\main\templates\main\game.html:262
+msgid "Jumping across squares"
+msgstr "القفز بين المربعات"
+
+#: .\main\templates\main\game.html:270
+msgid "How to Play Al-Hajlah"
+msgstr "طريقة لعب الحجلة"
+
+#: .\main\templates\main\game.html:273
+msgid ""
+"A game where players jump between squares drawn on the ground using one "
+"foot, following a specific pattern without losing balance."
+msgstr ""
+"لعبة يقفز فيها اللاعبون بين مربعات مرسومة على الأرض باستخدام قدم واحدة، وفق "
+"نمط معيّن دون فقدان التوازن."
+
+#: .\main\templates\main\game.html:291
+msgid "Al-Ghumaydah"
+msgstr "الغميضة"
+
+#: .\main\templates\main\game.html:292
+msgid "Hide and seek game"
+msgstr "لعبة الاختباء والبحث"
+
+#: .\main\templates\main\game.html:300
+msgid "How to Play Al-Ghumaydah"
+msgstr "طريقة لعب الغميضة"
+
+#: .\main\templates\main\game.html:303
+msgid ""
+"A game where one player searches for others who are hiding. It's fun, "
+"exciting, and encourages movement and strategy."
+msgstr ""
+"لعبة يبحث فيها أحد اللاعبين عن الآخرين المختبئين. تُعد ممتعة ومليئة بالحماس، "
+"وتشجّع على الحركة والتخطيط."
+
+#: .\main\templates\main\game.html:321
+msgid "Al-Ba'iyah"
+msgstr "البعية"
+
+#: .\main\templates\main\game.html:322
+msgid "Team-based chasing game"
+msgstr "لعبة مطاردة جماعية"
+
+#: .\main\templates\main\game.html:330
+msgid "How to Play Al-Ba'iyah"
+msgstr "طريقة لعب البعية"
+
+#: .\main\templates\main\game.html:333
+msgid ""
+"A team-based game played with two equal groups, each having a base called "
+"“Al-Mawrid.” Players try to enter the opponent's area and return safely "
+"while avoiding being tagged. If a player is touched, they must freeze in "
+"place until a teammate comes to rescue them. The game involves strategy, "
+"speed, and teamwork."
+msgstr ""
+"لعبة جماعية تُلعب بفريقين متساويين، لكل فريق منطقة تُسمّى \"المورد\". يحاول "
+"اللاعبون الدخول إلى منطقة الفريق الآخر والعودة بأمان دون أن يتم لمسهم. وإذا "
+"تم لمس أحد اللاعبين، يجب أن يتجمّد في مكانه حتى يأتي أحد زملائه لإنقاذه. "
+"تعتمد اللعبة على الاستراتيجية والسرعة والعمل الجماعي."
+
+#: .\main\templates\main\game.html:337
+msgid "10 players (divided into two equal teams)"
+msgstr "10 لاعبين (مقسّمين إلى فريقين متساويين)"
+
+#: .\main\templates\main\game.html:351
+msgid "Al-Dibaq"
+msgstr "الدبق"
+
+#: .\main\templates\main\game.html:352
+msgid "Throwing a piece into a hole"
+msgstr "رمي قطعة داخل حفرة"
+
+#: .\main\templates\main\game.html:360
+msgid "How to Play Al-Dibaq"
+msgstr "طريقة لعب الدبق"
+
+#: .\main\templates\main\game.html:363
+msgid ""
+"A simple two-player game where each player tries to toss a small piece into "
+"a hole in the ground from a short distance. The game focuses on accuracy and "
+"control."
+msgstr ""
+"لعبة بسيطة بين لاعبين، يحاول فيها كل لاعب رمي قطعة صغيرة داخل حفرة في الأرض "
+"من مسافة قصيرة. تركز اللعبة على الدقة والتحكّم."
+
+#: .\main\templates\main\game.html:367 .\main\templates\main\game.html:406
+#: .\main\templates\main\game.html:436 .\main\templates\main\game.html:496
+msgid "2 players"
+msgstr "لاعبان"
+
+#: .\main\templates\main\game.html:383
+msgid "Table Games"
+msgstr "العاب الطاولة"
+
+#: .\main\templates\main\game.html:390
+msgid "Um Al-Tisa"
+msgstr "أم التسع"
+
+#: .\main\templates\main\game.html:391
+msgid "A strategic board game"
+msgstr "لعبة لوحية استراتيجية"
+
+#: .\main\templates\main\game.html:399
+msgid "How to Play Um Al-Tisa"
+msgstr "طريقة لعب أم التسع"
+
+#: .\main\templates\main\game.html:402
+msgid ""
+"A strategy board game where players place and move pieces to form straight "
+"lines and capture their opponent's pieces. The goal is to outplay the "
+"opponent through planning and tactics."
+msgstr ""
+"لعبة لوحية تعتمد على الاستراتيجية، حيث يقوم اللاعبون بوضع وتحريك القطع "
+"لتكوين خطوط مستقيمة وأسر قطع الخصم. الهدف هو التفوق على الخصم من خلال "
+"التخطيط والتكتيك."
+
+#: .\main\templates\main\game.html:420
+msgid "Al-Damah"
+msgstr "الدامة"
+
+#: .\main\templates\main\game.html:421
+msgid "Strategy game using pieces"
+msgstr "لعبة استراتيجية باستخدام قطع"
+
+#: .\main\templates\main\game.html:429
+msgid "How to Play Al-Damah"
+msgstr "طريقة لعب الدامة"
+
+#: .\main\templates\main\game.html:432
+msgid ""
+"A classic strategy board game played on a divided board with pieces. Players "
+"aim to capture and trap the opponent's pieces by moving diagonally, using "
+"planning and simple tactics similar to chess."
+msgstr ""
+"لعبة لوحية كلاسيكية تعتمد على الاستراتيجية، تُلعب على لوحة مقسّمة باستخدام "
+"قطع. يهدف اللاعبون إلى أسر قطع الخصم ومحاصرتها من خلال التحرك بشكل قطري، "
+"باستخدام التخطيط وتكتيكات بسيطة تشبه لعبة الشطرنج."
+
+#: .\main\templates\main\game.html:450
+msgid "Al-Kiram"
+msgstr "الكيرم"
+
+#: .\main\templates\main\game.html:451
+msgid "Disc striking board game"
+msgstr "لعبة لوحية بضرب الأقراص"
+
+#: .\main\templates\main\game.html:459
+msgid "How to Play Al-Kiram"
+msgstr "طريقة لعب الكيرم"
+
+#: .\main\templates\main\game.html:462
+msgid ""
+"A board game where players use a striker to hit discs and aim to pocket them "
+"into the corners. The game requires precision, control, and strategy."
+msgstr ""
+"لعبة لوحية يستخدم فيها اللاعبون قطعة ضاربة لضرب الأقراص بهدف إدخالها في "
+"الزوايا. تتطلب اللعبة دقة وتحكّمًا واستراتيجية."
+
+#: .\main\templates\main\game.html:466
+msgid "2 or 4 players"
+msgstr "لاعبان أو أربعة لاعبين"
+
+#: .\main\templates\main\game.html:480
+msgid "Al-Sijah"
+msgstr "السيجا"
+
+#: .\main\templates\main\game.html:481
+msgid "Ancient strategy game"
+msgstr "لعبة استراتيجية قديمة"
+
+#: .\main\templates\main\game.html:489
+msgid "How to Play Al-Sijah"
+msgstr "طريقة لعب السيجا"
+
+#: .\main\templates\main\game.html:492
+msgid ""
+"An ancient stone-based game played on a drawn grid using small stones. "
+"Players use strategy to trap their opponent's pieces, similar to chess but "
+"with simpler rules. It is especially popular in northern Saudi Arabia."
+msgstr ""
+"لعبة قديمة تُلعب باستخدام الحصى على شبكة مرسومة، حيث يستخدم اللاعبون "
+"استراتيجيات لمحاصرة قطع الخصم. تشبه الشطرنج ولكن بقواعد أبسط، وهي منتشرة "
+"بشكل خاص في شمال المملكة العربية السعودية."
+
+#: .\main\templates\main\handicrafts.html:18
+msgid "Discover the handicrafts of Saudi Arabia"
+msgstr "اكتشف الحرف اليدوية في المملكة العربية السعودية"
+
+#: .\main\templates\main\handicrafts.html:30
+msgid ""
+"Saudi handicrafts reflect the richness of the Kingdom's heritage and "
+"culture, showcasing traditional skills and craftsmanship passed down through "
+"generations."
+msgstr ""
+"تعكس الحرف اليدوية السعودية غنى تراث المملكة وثقافتها، وتُبرز المهارات "
+"والصناعات التقليدية المتوارثة عبر الأجيال."
+
+#: .\main\templates\main\handicrafts.html:37
+msgid "Al-Sadu (Weaving)"
+msgstr "السدو (النسيج)"
+
+#: .\main\templates\main\handicrafts.html:39
+msgid ""
+"Al-Sadu is a traditional Bedouin weaving craft known for its geometric "
+"patterns and vibrant colors."
+msgstr "السدو حرفة نسيج بدوية تقليدية تُعرف بنقوشها الهندسية وألوانها الزاهية."
+
+#: .\main\templates\main\handicrafts.html:50
+msgid "Palm Handicrafts"
+msgstr "حرف النخيل"
+
+#: .\main\templates\main\handicrafts.html:52
+msgid ""
+"Palm handicrafts are made from palm fronds and are widely used in Saudi "
+"heritage to create baskets, mats, and other useful items."
+msgstr ""
+"تُصنع حرف النخيل من سعف النخيل، وتُستخدم على نطاق واسع في التراث السعودي "
+"لصناعة السلال والحصير وغيرها من الأدوات المفيدة."
+
+#: .\main\templates\main\handicrafts.html:63
+msgid "Pottery"
+msgstr "الفخار"
+
+#: .\main\templates\main\handicrafts.html:65
+msgid ""
+"Pottery is one of the oldest traditional crafts, where clay is shaped and "
+"fired to create pots, jars, and decorative items used in daily life."
+msgstr ""
+"يُعد الفخار من أقدم الحرف التقليدية، حيث يُشكَّل الطين ويُحرق لصناعة الأواني "
+"والجرار والقطع الزخرفية المستخدمة في الحياة اليومية."
+
+#: .\main\templates\main\handicrafts.html:76
+msgid "Embroidery"
+msgstr "التطريز"
+
+#: .\main\templates\main\handicrafts.html:78
+msgid ""
+"Embroidery is a traditional craft that involves decorating fabric using "
+"colorful threads. It reflects cultural identity and is often seen in "
+"traditional clothing."
+msgstr ""
+"التطريز حرفة تقليدية تعتمد على تزيين الأقمشة باستخدام خيوط ملوّنة، ويعكس "
+"الهوية الثقافية، ويظهر غالبًا في الملابس التقليدية."
+
+#: .\main\templates\main\handicrafts.html:89
+msgid "Jewelry"
+msgstr "المجوهرات"
+
+#: .\main\templates\main\handicrafts.html:91
+msgid ""
+"Traditional jewelry reflects cultural identity and is often made from gold "
+"or silver, featuring unique designs inspired by heritage."
+msgstr ""
+"تعكس المجوهرات التقليدية الهوية الثقافية، وغالبًا ما تُصنع من الذهب أو الفضة، "
+"وتتميّز بتصاميم فريدة مستوحاة من التراث."
+
+#: .\main\templates\main\handicrafts.html:102
+msgid "Wood Crafts"
+msgstr "الحرف الخشبية"
+
+#: .\main\templates\main\handicrafts.html:104
+msgid ""
+"Wood crafts involve carving and shaping wood into decorative and functional "
+"items, reflecting traditional artistic skills in Saudi heritage."
+msgstr ""
+"تشمل الحرف الخشبية نحت وتشكيل الخشب لإنتاج قطع زخرفية ووظيفية، وتعكس "
+"المهارات الفنية التقليدية في التراث السعودي."
+
+#: .\main\templates\main\index.html:9
+msgid "Heritage Home page"
+msgstr "الصفحة الرئيسية للتراث السعودي"
+
+#: .\main\templates\main\index.html:17
+msgid "Heritage Of Saudi Arabia"
+msgstr "التراث السعودي"
+
+#: .\main\templates\main\index.html:19
+msgid "A heritage we are proud of… and a culture we deeply cherish"
+msgstr "إرثٌ نفتخر به… وثقافة نعتز بها بعمق"
+
+#: .\main\templates\main\index.html:21
+msgid "Learn More"
+msgstr "اكتشف المزيد"
+
+#: .\main\templates\main\index.html:29
+msgid "About Saudi Heritage"
+msgstr "عن التراث السعودي"
+
+#: .\main\templates\main\index.html:31
+msgid ""
+"Saudi heritage reflects the rich traditions, customs, and values that have "
+"shaped the Kingdom over generations. From traditional clothing and local "
+"cuisine to crafts and social practices, it represents a unique identity that "
+"continues to be preserved and celebrated today."
+msgstr ""
+"يعكس التراث السعودي التقاليد والعادات والقيم الغنية التي شكّلت المملكة عبر "
+"الأجيال. فمن الملابس التقليدية والمأكولات المحلية إلى الحرف والممارسات "
+"الاجتماعية، يمثل هوية فريدة لا تزال محفوظة ويُحتفى بها حتى اليوم."
+
+#: .\main\templates\main\index.html:44
+msgid ""
+"Saudi cuisine is distinguished by its variety of dishes and unique flavors "
+"that reflect the depth of heritage and authenticity of culture."
+msgstr ""
+"يتميّز المطبخ السعودي بتنوّع أطباقه ونكهاته الفريدة التي تعكس عمق التراث "
+"وأصالة الثقافة."
+
+#: .\main\templates\main\index.html:57
+msgid ""
+"Traditional clothing reflects the identity of Saudi society, showcasing "
+"elegance and cultural pride."
+msgstr ""
+"تعكس الملابس التقليدية هوية المجتمع السعودي، وتُبرز الأناقة والاعتزاز "
+"بالثقافة."
+
+#: .\main\templates\main\index.html:70
+msgid ""
+"Traditional games reflect the simplicity of the past and were a source of "
+"fun and social connection."
+msgstr ""
+"تعكس الألعاب التقليدية بساطة الماضي، وكانت مصدرًا للمتعة والتواصل الاجتماعي."
+
+#: .\main\templates\main\index.html:83
+msgid ""
+"Handicrafts represent traditional skills such as weaving and pottery, "
+"showcasing creativity and heritage."
+msgstr ""
+"تمثّل الحرف اليدوية مهارات تقليدية مثل النسيج والفخار، وتُبرز الإبداع والتراث."
+
+#: .\main\templates\main\index.html:96
+msgid ""
+"Performing Arts include traditional dances and performances that express the "
+"spirit of Saudi culture."
+msgstr ""
+"تشمل الفنون الشعبية الرقصات والعروض التقليدية التي تعبّر عن روح الثقافة "
+"السعودية."
+
+#: .\main\templates\main\index.html:109
+msgid ""
+"Customs and traditions reflect the values and social practices passed down "
+"through generations."
+msgstr ""
+"تعكس العادات والتقاليد القيم والممارسات الاجتماعية التي توارثتها الأجيال."
+
+#: .\main\templates\main\traditions.html:18
+msgid "Explore the rich customs and traditions of Saudi Arabia"
+msgstr "استكشف العادات والتقاليد الغنية في المملكة العربية السعودية"
+
+#: .\main\templates\main\traditions.html:27
+msgid "Saudi Customs & Traditions"
+msgstr "العادات والتقاليد السعودية"
+
+#: .\main\templates\main\traditions.html:29
+msgid ""
+"Customs and traditions in Saudi Arabia reflect the cultural and social "
+"values of the society. Although some details vary between regions, there are "
+"common traditions shared across the Kingdom, forming an important part of "
+"daily life, such as hospitality, family relationships, greetings, and "
+"celebrations."
+msgstr ""
+"تعكس العادات والتقاليد في المملكة العربية السعودية القيم الثقافية "
+"والاجتماعية للمجتمع. وعلى الرغم من اختلاف بعض التفاصيل بين المناطق، إلا أن "
+"هناك تقاليد مشتركة في جميع أنحاء المملكة تشكّل جزءًا مهمًا من الحياة اليومية، "
+"مثل الكرم، والعلاقات الأسرية، والتحيات، والاحتفالات."
+
+#: .\main\templates\main\traditions.html:35
+msgid "Religious Values"
+msgstr "القيم الدينية"
+
+#: .\main\templates\main\traditions.html:37
+msgid ""
+"Religious values are a fundamental part of life in Saudi society, "
+"influencing daily behavior and relationships. This is reflected in practices "
+"such as prayer, fasting during Ramadan, and maintaining good morals like "
+"honesty, cooperation, and respect for others."
+msgstr ""
+"تُعد القيم الدينية جزءًا أساسيًا من الحياة في المجتمع السعودي، حيث تؤثر في "
+"السلوك اليومي والعلاقات. ويتجلّى ذلك في ممارسات مثل الصلاة، والصيام في رمضان، "
+"والتحلّي بالأخلاق الحسنة كالصدق، والتعاون، واحترام الآخرين."
+
+#: .\main\templates\main\traditions.html:48
+msgid "Family Values"
+msgstr "القيم الأسرية"
+
+#: .\main\templates\main\traditions.html:50
+msgid ""
+"Family is the foundation of Saudi society, built on love, respect, and "
+"cooperation among its members. People value maintaining family ties and "
+"regularly visiting relatives, especially during occasions and holidays."
+msgstr ""
+"تُعد الأسرة أساس المجتمع السعودي، حيث تقوم على المحبة والاحترام والتعاون بين "
+"أفرادها. ويحرص الناس على صلة الرحم وزيارة الأقارب باستمرار، خاصة في "
+"المناسبات والأعياد."
+
+#: .\main\templates\main\traditions.html:61
+msgid "Hospitality"
+msgstr "الضيافة"
+
+#: .\main\templates\main\traditions.html:63
+msgid ""
+"Hospitality is one of the most prominent traditions in Saudi society, where "
+"guests are warmly welcomed. This is reflected in serving Arabic coffee and "
+"dates as a symbol of authenticity and respect."
+msgstr ""
+"تُعد الضيافة من أبرز العادات في المجتمع السعودي، حيث يُستقبل الضيوف بحفاوة "
+"وترحيب. ويتجلّى ذلك في تقديم القهوة العربية والتمر كرمز للأصالة والاحترام."
+
+#: .\main\templates\main\traditions.html:72
+msgid "Greetings"
+msgstr "التحيات"
+
+#: .\main\templates\main\traditions.html:74
+msgid ""
+"Greetings are an essential part of Saudi culture, where people exchange kind "
+"words that reflect respect. Handshakes and gestures like greeting elders "
+"show appreciation and social values."
+msgstr ""
+"تُعد التحيات جزءًا أساسيًا من الثقافة السعودية، حيث يتبادل الناس كلمات طيبة "
+"تعبّر عن الاحترام. كما تعكس المصافحة وإلقاء التحية على الكبار التقدير والقيم "
+"الاجتماعية."
+
+#: .\main\templates\main\traditions.html:84
+msgid "Saudi Coffee"
+msgstr "القهوة السعودية"
+
+#: .\main\templates\main\traditions.html:86
+msgid ""
+"Saudi coffee is one of the most important symbols of hospitality, served "
+"with the right hand and reflecting traditions passed down through "
+"generations across regions."
+msgstr ""
+"تُعد القهوة السعودية من أهم رموز الضيافة، حيث تُقدَّم باليد اليمنى، وتعكس تقاليد "
+"متوارثة عبر الأجيال في مختلف مناطق المملكة."
+
+#: .\main\templates\main\traditions.html:97
+msgid "Celebrations"
+msgstr "الاحتفالات"
+
+#: .\main\templates\main\traditions.html:99
+msgid ""
+"Celebrations are an important part of social life, including Eid and "
+"weddings, where people gather, wear traditional clothing, and share joyful "
+"moments."
+msgstr ""
+"تُعد الاحتفالات جزءًا مهمًا من الحياة الاجتماعية، وتشمل الأعياد والأعراس، حيث "
+"يجتمع الناس، ويرتدون الملابس التقليدية، ويتشاركون اللحظات السعيدة."
