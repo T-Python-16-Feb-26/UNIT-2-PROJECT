@@ -50,6 +50,11 @@
      About
   </a>
 
+  <a href="{% url 'core:timeline_view' %}"
+     class="{% if request.path == '/timeline/' %}active{% endif %}">
+     Timeline
+  </a>
+
   <a href="{% url 'core:games_view' %}"
      class="{% if request.path == '/games/' %}active{% endif %}">
      Games
@@ -60,20 +65,18 @@
      Teams
   </a>
 
+ <a href="{% url 'core:infrastructure_view' %}"
+     class="{% if request.path == '/infrastructure/' %}active{% endif %}">
+     Infrastructure
+  </a>
+
+
   <a href="{% url 'core:events_view' %}"
      class="{% if request.path == '/events/' %}active{% endif %}">
      Events
   </a>
 
-  <a href="{% url 'core:timeline_view' %}"
-     class="{% if request.path == '/timeline/' %}active{% endif %}">
-     Timeline
-  </a>
-
-  <a href="{% url 'core:infrastructure_view' %}"
-     class="{% if request.path == '/infrastructure/' %}active{% endif %}">
-     Infrastructure
-  </a>
+ 
 
 </div>
 
