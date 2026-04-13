@@ -2115,3 +2115,31 @@ html, body {
 .guide-main-content {
     background: transparent !important;
 }
+
+.travel-tips-hero {
+    background:
+        radial-gradient(circle at top right, rgba(25, 135, 84, 0.16), transparent 30%),
+        var(--page-surface) !important;
+}
+
+.travel-tips-hero-content {
+    background: transparent !important;
+}
+
+#homeExperiencesCarousel {
+    padding-bottom: 14px;
+}
+
+#homeExperiencesCarousel .carousel-inner,
+#homeExperiencesCarousel .carousel-item {
+    overflow: visible;
+}
+
+#homeExperiencesCarousel .row {
+    padding-bottom: 10px;
+}
+
+#homeExperiencesCarousel .experience-card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    border-radius: 1rem;
+}
