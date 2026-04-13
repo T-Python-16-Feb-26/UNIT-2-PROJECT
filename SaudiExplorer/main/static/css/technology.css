@@ -1,0 +1,42 @@
+
+    .tech-hero-visual {
+      background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-sage) 50%, var(--accent-earth) 100%);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .tech-hero-visual::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.1), transparent 60%);
+    }
+    .tech-hero-visual h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    .tech-hero-visual p { opacity: 0.9; font-size: 0.95rem; position: relative; max-width: 500px; margin: 0 auto; }
+    .tech-icons-row {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+      position: relative;
+    }
+    .tech-icons-row span {
+      display: inline-block;
+      animation: techFloat 3s ease-in-out infinite;
+    }
+    .tech-icons-row span:nth-child(2) { animation-delay: 0.5s; }
+    .tech-icons-row span:nth-child(3) { animation-delay: 1s; }
+    .tech-icons-row span:nth-child(4) { animation-delay: 1.5s; }
+    @keyframes techFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }

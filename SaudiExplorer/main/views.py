@@ -27,3 +27,6 @@ def facts_view(request):
 
 def quiz_view(request):
     return render(request, 'main/quiz.html')
+
+def festivals_view(request):
+    return render(request, 'main/festivals.html')

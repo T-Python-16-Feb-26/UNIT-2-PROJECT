@@ -1,0 +1,116 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Festivals — Ghosn{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <span class="page-hero-icon">🎉</span>
+  <h1 class="page-hero-title">Saudi <span>Agricultural Festivals</span></h1>
+  <p class="page-hero-subtitle">
+    Celebrating seasonal harvests, local produce, and rural tourism across the Kingdom of Saudi Arabia.
+  </p>
+</section>
+
+<!-- INTRO -->
+<section class="cards-section">
+  <div style="max-width:900px;margin:0 auto 3rem;text-align:center;">
+    <p style="color:var(--text-secondary);line-height:1.8;font-size:1.05rem;">
+      Saudi Arabia hosts a wide range of seasonal agricultural festivals that highlight its rich agricultural diversity.
+      These events promote local products, support farmers, and strengthen agricultural tourism in line with Vision 2030.
+    </p>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- Dates Festivals -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/dates-fes.jpg'%}" class="card-img">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Dates</span>
+        <h3 class="card-title">Date Festivals</h3>
+        <p class="card-desc">
+          Held in Al-Ahsa, Al-Qassim, and Madinah, these festivals celebrate one of Saudi Arabia’s most important crops.
+          They include exhibitions, auctions, and cultural events.
+        </p>
+      </div>
+    </div>
+
+    <!-- Honey Festivals -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/honey.jpg' %}" class="card-img">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Honey</span>
+        <h3 class="card-title">Honey Festivals</h3>
+        <p class="card-desc">
+          Famous in Al-Baha and Harimla, showcasing premium Sidr honey and other natural honey varieties produced by local beekeepers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Taif Rose Festival -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/taif-rose.jpeg' %}" class="card-img">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Flowers</span>
+        <h3 class="card-title">Taif Rose Festival</h3>
+        <p class="card-desc">
+          An annual festival in Taif celebrating the world-famous Taif rose, used in perfumes and rose water production.
+        </p>
+      </div>
+    </div>
+
+    <!-- Al-Jouf Olive Festival -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/Al-Jouf Olive Festival2.webp' %}" class="card-img">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Olives</span>
+        <h3 class="card-title">Al-Jouf Olive Festival</h3>
+        <p class="card-desc">
+          One of the largest olive festivals in the region, highlighting Saudi Arabia’s leading olive production industry.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pomegranate Festival -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/Al-Baha Pomegranate Festival2.jpg' %}" class="card-img">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Fruits</span>
+        <h3 class="card-title">Al-Baha Pomegranate Festival</h3>
+        <p class="card-desc">
+          Celebrates the high-quality pomegranates grown in the mountain regions of Al-Baha.
+        </p>
+      </div>
+    </div>
+
+    <!-- Jazan Coffee & Mango -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <img src="{% static 'images/Jazan Coffee Festival .avif' %}" class="card-img">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Tropical</span>
+        <h3 class="card-title">Jazan Coffee & Mango Festival</h3>
+        <p class="card-desc">
+          Showcases Saudi Arabia’s tropical agriculture including coffee, mangoes, bananas, and papayas.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
