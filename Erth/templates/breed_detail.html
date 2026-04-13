@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="page-hero simple-hero">
+    <div class="page-hero-inner">
+        <h1>{{ breed.name }}</h1>
+        <p>ملف تفصيلي عن السلالة</p>
+    </div>
+</section>
+
+<section class="breed-detail-section">
+    <div class="breed-detail-grid">
+        <div class="breed-detail-image">
+            <img src="{% static breed.image %}" alt="{{ breed.name }}">
+        </div>
+
+        <div class="breed-detail-content">
+            <p class="lead">{{ breed.intro }}</p>
+
+            <h3>الأنواع</h3>
+            <ul>{% for item in breed.types %}<li>{{ item }}</li>{% endfor %}</ul>
+
+            <h3>أماكن التواجد</h3>
+            <ul>{% for item in breed.regions %}<li>{{ item }}</li>{% endfor %}</ul>
+
+            <h3>نطاق الأسعار</h3>
+            <p>{{ breed.price }}</p>
+
+            <h3>الاستخدامات</h3>
+            <ul>{% for item in breed.uses %}<li>{{ item }}</li>{% endfor %}</ul>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

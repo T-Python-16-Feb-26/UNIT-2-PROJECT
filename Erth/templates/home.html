@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/hero.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+
+    <div class="hero-content">
+        <h1 class="hero-title">إرث</h1>
+        <p class="hero-quote">
+            نحتفي بالإبل باعتبارها قيمة ثقافية بالغة الأهمية، وركيزة رئيسة من ركائز هويتنا الوطنية الأصيلة.
+        </p>
+        <p class="hero-author">— الأمير بدر بن عبدالله بن فرحان</p>
+        <p class="hero-tagline">من عراقة الماضي إلى ريادة المستقبل.. الإبل إرثنا وهويتنا.</p>
+    </div>
+</section>
+
+<section class="timeline-section">
+    <div class="timeline-inner">
+        <div class="section-head">
+            <h2>التوثيق التاريخي للإرث</h2>
+        </div>
+
+        <div class="timeline">
+            {% for item in timeline %}
+            <article class="timeline-item {% cycle 'right' 'left' %}">
+                <div class="timeline-card">
+                    <span class="timeline-year">{{ item.year }}</span>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/mapp.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="section-overlay"></div>
+
+    <div class="center-content">
+        <h2 class="section-title">خارطة الأصالة</h2>
+        <p class="section-subtitle">مواطن السلالات وميادين الاحتفاء</p>
+        <a href="/map/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/camel.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+    <div class="center-content">
+        <h2 class="section-title">موسوعة سلالات الإبل</h2>
+        <p class="section-subtitle">المجاهيم، المغاتير، الأصايل</p>
+        <a href="/breeds/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/new.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+    <div class="center-content">
+        <h2 class="section-title">الإبل والهوية السعودية</h2>
+        <p class="section-subtitle">البعد السيادي والثقافي والاقتصادي والتقني</p>
+        <a href="/impact/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/world.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+    <div class="center-content">
+        <h2 class="section-title">المهرجانات والفعاليات</h2>
+        <p class="section-subtitle">أبرز مواسم الإبل في المملكة</p>
+        <a href="/festivals/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/stories.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+    <div class="center-content">
+        <h2 class="section-title">الإبل في عهد الملوك</h2>
+        <p class="section-subtitle">إرث القيادة والهوية</p>
+        <a href="/stories/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/king.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+    <div class="center-content">
+        <h2 class="section-title">الإعجاز العلمي</h2>
+        <p class="section-subtitle">خصائص مدهشة من عالم الإبل</p>
+        <a href="/science/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+<section class="full-screen-section">
+    <video class="section-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/future.mp4' %}" type="video/mp4">
+    </video>
+    <div class="section-overlay"></div>
+    <div class="center-content">
+        <h2 class="section-title">دعم رؤية 2030 لمستقبل الإبل</h2>
+        <p class="section-subtitle">من الموروث الشعبي إلى القطاع المستدام</p>
+        <a href="/future/" class="primary-btn">استكشاف</a>
+    </div>
+</section>
+
+{% endblock %}

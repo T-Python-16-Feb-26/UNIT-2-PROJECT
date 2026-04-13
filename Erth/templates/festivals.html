@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="page-hero simple-hero">
+    <div class="page-hero-inner">
+        <h1>المهرجانات والفعاليات</h1>
+        <p>تعرف على أبرز مهرجانات الإبل في المملكة العربية السعودية</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="video-grid">
+
+        <!-- مهرجان الملك عبدالعزيز -->
+        <div class="video-card">
+            <h3>مهرجان الملك عبدالعزيز للإبل</h3>
+            <p>
+                يُعد أكبر مهرجان للإبل في العالم، ويقام سنوياً في الصياهد،
+                ويجمع بين مسابقات المزاين والأنشطة الثقافية.
+            </p>
+
+            <div class="video-thumb" onclick="openVideo('j7CmWWdFi1M')">
+                <img src="https://img.youtube.com/vi/j7CmWWdFi1M/hqdefault.jpg">
+                <span>▶</span>
+            </div>
+        </div>
+
+        <!-- ولي العهد -->
+        <div class="video-card">
+            <h3>مهرجان ولي العهد للهجن</h3>
+            <p>
+                من أهم سباقات الهجن في المملكة ويعكس التطور الحديث
+                في هذه الرياضة التراثية.
+            </p>
+
+            <div class="video-thumb" onclick="openVideo('8Ug7gi4hrFU')">
+                <img src="https://img.youtube.com/vi/8Ug7gi4hrFU/hqdefault.jpg">
+                <span>▶</span>
+            </div>
+        </div>
+
+        <!-- العلا -->
+        <div class="video-card">
+            <h3>كأس العلا للهجن</h3>
+            <p>
+                حدث يجمع بين التراث والسياحة ويعكس العلاقة
+                بين الإبل والتاريخ.
+            </p>
+
+            <div class="video-thumb" onclick="openVideo('m05CZXhC0SM')">
+                <img src="https://img.youtube.com/vi/m05CZXhC0SM/hqdefault.jpg">
+                <span>▶</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- POPUP -->
+<div id="videoModal" class="video-modal">
+    <div class="video-box">
+        <span onclick="closeVideo()">✕</span>
+        <iframe id="videoFrame" allowfullscreen></iframe>
+    </div>
+</div>
+
+{% endblock %}
