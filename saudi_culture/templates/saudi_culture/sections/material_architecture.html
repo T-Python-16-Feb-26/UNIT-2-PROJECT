@@ -1,0 +1,51 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+{% block title %}Architecture — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--material">
+    <img src="{% static 'saudi_culture/images/material/architecture-saudi.jpg' %}" alt="Saudi Architecture" class="hero-bg">
+    <div class="hero-content">
+        <h1>Architecture</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Building Between Desert and Sky</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='material-culture' %}" class="back-link">← Material Culture</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Saudi architecture tells the story of adaptation and ambition. The traditional Najdi style — with its
+            thick mud-brick walls, geometric parapets, and narrow winding streets — was built to withstand the
+            desert heat. Homes in Jeddah's Al-Balad district feature ornate wooden Rawasheen (bay windows) that
+            catch the coastal breeze. The Asir region in the southwest is strikingly different: multi-storey stone
+            houses decorated with white gypsum bands and painted interiors. Today, Saudi Arabia's skyline is being
+            redefined by mega-projects like NEOM and the Murabba, blending futuristic vision with deep cultural symbolism.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <img src="{% static 'saudi_culture/images/material/najd-archit.jpg' %}" alt="Najdi Architecture">
+                <small>Traditional Najdi Fort</small>
+            </div>
+            <div class="media-img-ph">
+                <img src="{% static 'saudi_culture/images/material/hijazi.jpg' %}" alt="Hijazi Rawasheen Balconies">
+                <small>Hijazi Rawasheen Balconies</small>
+            </div>
+            <div class="media-img-ph">
+                <img src="{% static 'saudi_culture/images/material/skyrocket.webp' %}" alt="Modern Riyadh Skyline">
+                <small>Modern Riyadh Skyline</small>
+            </div>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='material-culture' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Material Culture</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

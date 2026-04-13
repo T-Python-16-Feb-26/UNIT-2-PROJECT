@@ -1,0 +1,75 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}The Majlis — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--social">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>The Majlis</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Where Community Speaks</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='social-life' %}" class="back-link">← Social Life</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            The Majlis (meaning "a place of sitting") is the heart of Saudi social and political life. Traditionally
+            a room near the entrance of the home, it is where men gather to discuss community matters, resolve disputes,
+            conduct business, and share poetry and stories. Cushions line the walls, coffee flows continuously, and incense
+            (Bukhoor) perfumes the air. The Majlis is democratic in spirit — anyone from the community may attend and speak.
+            Even today, government leaders hold open Majlis sessions to hear citizens' concerns.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Majlis Interior</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Bukhoor Incense Ritual</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Community Gathering</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — The Majlis</p>
+        </div>
+
+        <div class="audio-placeholder">
+            <h4>🎵 Audio Samples</h4>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>The Majlis — Sample 1</strong>
+                    <span>Traditional recording • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>The Majlis — Sample 2</strong>
+                    <span>Field recording • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='social-life' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Social Life</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

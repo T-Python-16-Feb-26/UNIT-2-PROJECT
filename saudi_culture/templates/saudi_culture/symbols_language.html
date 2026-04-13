@@ -1,0 +1,109 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+{% block title %}Symbols & Language — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--symbols">
+    <img src="{% static 'saudi_culture/images/symbols/hero-symbols.jpg' %}" alt="Saudi Symbols" class="hero-bg">
+    <div class="hero-content">
+        <h1>Symbols & Language</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"Every word, every symbol, carries the weight of faith, tribe, and desert."</p>
+        <p class="hero-desc">The Voice and Emblem of a Kingdom</p>
+    </div>
+</section>
+
+<div class="page-body">
+
+    <!-- National Symbols -->
+    <article class="section-card animate-in" id="symbols">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>National Symbols</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/symbols/national-symbols.jpg' %}" alt="Saudi Flag" class="section-image">
+        <p class="section-text">
+            The Saudi flag is unique among nations — it is never flown at half-mast and never used on merchandise, because it bears the Shahada (Islamic declaration of faith) and a sword symbolizing justice. The national emblem features two crossed swords beneath a date palm, representing the kingdom's twin pillars: strength and prosperity rooted in the land. The date palm itself is a survival symbol — providing food, shade, and building material in the harshest desert. The falcon, a prized companion of Bedouin hunters, symbolizes courage and noble heritage.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Flag</strong>
+                <span>Green field with the Shahada in white Thuluth calligraphy and a sword beneath it.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Crossed Swords & Palm</strong>
+                <span>The national emblem: two swords for the unification, a palm for growth and vitality.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Falcon</strong>
+                <span>Symbol of Bedouin nobility — falconry is a living tradition and a UNESCO-recognized heritage.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Linguistic Heritage -->
+    <article class="section-card animate-in" id="language">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Linguistic Heritage</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/symbols/linguistic-pic.jpg' %}" alt="Linguistic Heritage" class="section-image">
+        <p class="section-text">
+            Arabic — the language of the Quran — originated in the Arabian Peninsula, making Saudi Arabia the cradle of one of the world's most spoken languages. Within the kingdom, distinct dialects reflect regional identity: Najdi Arabic (central) is known for its crisp consonants, Hijazi Arabic (western) has a melodic, cosmopolitan tone, and the southern dialects carry unique vocabulary from ancient trade routes. Religious phrases permeate daily speech: "Inshallah" (God willing), "Alhamdulillah" (praise be to God), and "Bismillah" (in the name of God) begin and end countless conversations.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Najdi Dialect</strong>
+                <span>The dialect of central Arabia — sharp, proud, and closely linked to classical Arabic.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Hijazi Dialect</strong>
+                <span>Spoken in Makkah and Jeddah — softer, influenced by centuries of pilgrims from across the world.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Religious Phrases</strong>
+                <span>"Inshallah," "Mashallah," "Alhamdulillah" — faith woven into every conversation.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Non-Verbal Communication -->
+    <article class="section-card animate-in" id="nonverbal">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Non-Verbal Communication</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/symbols/non-verbal.jpg' %}" alt="Saudi Non-Verbal Communication" class="section-image">
+        <p class="section-text">
+            In Saudi culture, what is unsaid carries as much weight as what is spoken. Greetings between men involve a handshake, often followed by touching the heart — a gesture meaning "I greet you sincerely." Close friends and relatives greet each other with a nose-to-nose touch. Eye contact between equals signals respect and attentiveness, but prolonged eye contact with elders or those of higher status may be seen as challenging. Physical space is closer than in Western cultures — standing at arm's length during conversation is normal and reflects warmth, not intrusion.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Hand to Heart</strong>
+                <span>Placing the right hand on the chest after a handshake — a sign of sincere warmth.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Nose Touch (Khashm)</strong>
+                <span>A traditional greeting between close friends and relatives — a mark of deep affection.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Right Hand Etiquette</strong>
+                <span>The right hand is used for eating, greeting, and giving — the left is considered impolite.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='social-life' %}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Social Life</span>
+        </a>
+        <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}" class="next-link">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Traditions & Celebrations</span>
+        </a>
+    </nav>
+
+</div>
+{% endblock %}

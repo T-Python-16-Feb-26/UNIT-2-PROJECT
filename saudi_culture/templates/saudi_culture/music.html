@@ -1,0 +1,79 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+{% block title %}Music & Performing Arts — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--music">
+    <img src="{% static 'saudi_culture/images/traditions/music.jpg' %}" alt="Saudi Music" class="hero-bg">
+    <div class="hero-content">
+        <h1>Music & Performing Arts</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">The Rhythm of the Arabian Soul</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}" class="back-link">← Traditions & Celebrations</a>
+
+    <!-- Traditional Instruments -->
+    <article class="section-card animate-in" id="instruments">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Traditional Instruments</h2>
+        </div>
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <img src="{% static 'saudi_culture/images/traditions/oud-music.webp' %}" alt="The Oud — King of Arabic Instruments">
+                <small>The Oud — King of Arabic Instruments</small>
+            </div>
+            <div class="media-img-ph">
+                <img src="{% static 'saudi_culture/images/traditions/rebab.jpg' %}" alt="The Rebaba — Desert Fiddle">
+                <small>The Rebaba — Desert Fiddle</small>
+            </div>
+            <div class="media-img-ph">
+                <img src="{% static 'saudi_culture/images/traditions/duff.jpg' %}" alt="The Duff — Frame Drum">
+                <small>The Duff — Frame Drum</small>
+            </div>
+        </div>
+        <p class="section-text">
+            The Oud (عود) is the soul of Arabian music — a pear-shaped lute with 11 or 13 strings and no frets,
+            allowing the infinite microtones that define the Arabic maqam system. The Rebaba, a single-stringed bowed
+            instrument, carries the haunting melodies of Bedouin poetry. Percussion is central: the Tabl (war drum),
+            Duff (frame drum), and Darbuka (goblet drum) drive the rhythmic pulse of every celebration. The Mizmar
+            (double-reed pipe) provides sharp, penetrating melodic lines in folk ensembles.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Oud</strong>
+                <span>The grandfather of the European lute — Arab traders carried it to Andalusia, changing Western music forever.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Rebaba</strong>
+                <span>A single-string fiddle played by Bedouin poets — its mournful tone is said to mimic the desert wind.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Duff</strong>
+                <span>A shallow frame drum used in celebrations and Sufi rituals — its beat is the heartbeat of Saudi folk music.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Saudi Melody -->
+    <article class="section-card animate-in" id="melody">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Saudi Melodies</h2>
+        </div>
+        <video class="section-video" controls>
+            <source src="{% static 'saudi_culture/videos/music-vid.mp4' %}" type="video/mp4">
+        </video>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Traditions & Celebrations</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

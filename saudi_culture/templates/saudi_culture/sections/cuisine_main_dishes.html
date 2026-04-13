@@ -1,0 +1,55 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Signature Dishes — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--cuisine">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Signature Dishes</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">The Flavors That Define a Nation</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}" class="back-link">← Saudi Cuisine</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Saudi main dishes are built for sharing. Kabsa — the undisputed national dish — layers basmati rice with
+            slow-braised meat, seasoned with Baharat (cardamom, cinnamon, black lime, cloves). Mandi involves smoking
+            meat in a tandoor-like pit. Each region adds its own twist: the south favors spicier preparations,
+            while the central plateau keeps flavors earthy and warm. These dishes are not just food — they are
+            expressions of generosity, identity, and community.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Kabsa on the Platter</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Mandi Pit Preparation</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Traditional Feast</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Signature Dishes</p>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Saudi Cuisine</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

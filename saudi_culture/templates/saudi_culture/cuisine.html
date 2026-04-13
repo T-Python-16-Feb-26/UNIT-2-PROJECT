@@ -1,0 +1,109 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+{% block title %}Saudi Cuisine — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--cuisine">
+    <img src="{% static 'saudi_culture/images/cuisine/food-hero.jpg' %}" alt="Saudi Cuisine" class="hero-bg">
+    <div class="hero-content">
+        <h1>Saudi Cuisine</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"In every grain of rice, the spice of cardamom, and the sweetness of a date — a story of the desert."</p>
+        <p class="hero-desc">A Feast for the Soul</p>
+    </div>
+</section>
+
+<div class="page-body">
+
+    <!-- Signature Dishes -->
+    <article class="section-card animate-in" id="main-dishes">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Signature Dishes</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/cuisine/main-dish.jpg' %}" alt="Saudi Waleemah" class="section-image"    >
+        <p class="section-text">
+            Saudi main dishes are built for sharing. Kabsa — the undisputed national dish — layers basmati rice with slow-braised meat, seasoned with a blend called Baharat (cardamom, cinnamon, black lime, cloves). Mandi, originating from Hadhramaut, involves smoking meat in a tandoor-like pit (Taboon). Mathloota combines rice, meat, and vegetables into a rich one-pot meal. Each region adds its own twist: the south favors spicier preparations, while the central plateau keeps flavors earthy and warm.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Kabsa</strong>
+                <span>Spiced rice with meat — the heart of every Saudi table. Often garnished with fried raisins and almonds.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Mandi</strong>
+                <span>Pit-smoked meat on rice — tender, smoky, and originally from the southern regions.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Harees</strong>
+                <span>Wheat and meat slow-cooked into a smooth porridge — comfort food served during Ramadan.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- The Coffee Ritual -->
+    <article class="section-card animate-in" id="coffee-ritual">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>The Coffee Ritual</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/cuisine/saudi-coffee.png' %}" alt="The Coffee Ritual" class="section-image"  >
+        <p class="section-text">
+            Saudi coffee (Gahwa Saudiya) is far more than a drink — it is a language of respect. The beans are lightly roasted to a golden color (unlike the dark roasts of the West), ground with cardamom and sometimes saffron or cloves, then brewed in a Dallah (a long-spouted brass pot). The host pours with the left hand into small cups (Finjan) held in the right. The guest is served first, always from the right side. You accept with your right hand, drink in small sips, and shake the cup when finished. It is customary to drink at least one cup — refusing is an insult.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Dallah</strong>
+                <span>The iconic brass coffee pot — its curved shape is a symbol of Saudi heritage worldwide.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Cardamom Forward</strong>
+                <span>Saudi coffee is defined by cardamom — green, aromatic, and added generously during brewing.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Dates Pairing</strong>
+                <span>Always served alongside dates — Ajwa, Sukkari, or Khudri varieties are the most prized.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Sweets & Breads -->
+    <article class="section-card animate-in" id="sweets">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Sweets & Breads</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/cuisine/sweets.jpg' %}" alt="Saudi Sweets" class="section-image"  >
+        <p class="section-text">
+            Saudi sweets balance richness with simplicity. Luqaimat — golden fried dough balls drizzled with date syrup or honey — are a Ramadan staple. Basbousa (semolina cake soaked in syrup) is served at every celebration. Keliga, a spiced date-filled cookie scented with cardamom and rose water, is one of the most beloved traditional sweets of the Arabian Peninsula. Traditional breads include Markook (paper-thin flatbread cooked on a dome) and Tamees (soft tandoor bread from the Eastern Province). Every region has its own sweet specialty.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Luqaimat</strong>
+                <span>Crispy, syrup-drenched dough balls — the taste of Ramadan evenings across the kingdom.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Ma'amoul</strong>
+                <span>Shortbread cookies pressed into wooden molds and filled with dates or nuts.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Keliga</strong>
+                <span>A traditional date-filled cookie spiced with cardamom and rose water — a staple of Saudi celebrations.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Traditions & Celebrations</span>
+        </a>
+        <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}" class="next-link">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Heritage Gallery</span>
+        </a>
+    </nav>
+
+</div>
+{% endblock %}

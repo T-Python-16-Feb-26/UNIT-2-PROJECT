@@ -1,0 +1,55 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Pottery & Ceramics — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--heritage">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Pottery & Ceramics</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Clay Shaped by Millennia</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}" class="back-link">← Heritage Gallery</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Pottery has been produced in the Arabian Peninsula for over 5,000 years. Archaeological sites across
+            Saudi Arabia — from Tayma in the north to Najran in the south — have yielded painted vessels and incense
+            burners that trace trade connections to Mesopotamia, Egypt, and the Indus Valley. Traditional Saudi pottery
+            uses local clays fired in open kilns, producing unglazed, earth-toned vessels. Today, Saudi potters blend
+            ancestral techniques with contemporary design, creating pieces that honor tradition while speaking to modern aesthetics.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Ancient Pottery from Tayma</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Traditional Dallah Ceramics</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Contemporary Saudi Pottery</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Pottery & Ceramics</p>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Heritage Gallery</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

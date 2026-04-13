@@ -1,0 +1,111 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+
+{% block title %}Social Life — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--social">
+    <img src="{% static 'saudi_culture/images/social/hero-social.jpg' %}" alt="Saudi Social Life" class="hero-bg">
+    <div class="hero-content">
+        <h1>Social Life</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"In Saudi culture, the guest is king, the neighbor is family, and honor is everything."</p>
+        <p class="hero-desc">The Bonds That Shape a Nation</p>
+    </div>
+</section>
+
+<div class="page-body">
+
+    <!-- Hospitality -->
+    <article class="section-card animate-in" id="hospitality">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Hospitality — Karam</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/social/karam.jpg' %}" alt="Saudi Hospitality" class="section-image">
+        <p class="section-text">
+            Hospitality (Karam) is the bedrock of Saudi social life — not just a courtesy, but a deeply held duty. When a guest arrives, they are greeted with Arabic coffee and dates before any conversation begins. Meals are lavish, often featuring an entire lamb on a bed of rice. A host would never ask a guest how long they intend to stay; tradition holds that a guest may stay for three days without being questioned. Refusing food or drink is considered impolite, and the host always serves the guest before themselves.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Three-Day Rule</strong>
+                <span>An ancient Bedouin code: a traveler is welcomed and fed for three full days, no questions asked.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Coffee Etiquette</strong>
+                <span>The host pours; the guest shakes the cup side to side when finished. Always accept at least one cup.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Communal Platter</strong>
+                <span>Eating from a shared dish symbolizes trust, equality, and togetherness.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Honor & Privacy -->
+    <article class="section-card animate-in" id="honor">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Honor & Privacy</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/social/honor.jpg' %}" alt="Saudi Privacy" class="section-image">
+        <p class="section-text">
+            Saudi social life is built on a strong sense of honor (Sharaf) and modesty (Haya). Privacy is deeply respected — homes are designed with high walls and separate entrances for guests and family. Personal questions about family, especially about female relatives, are avoided in conversation. The concept of "face" (Wajh) means that public embarrassment is a serious offense. People go to great lengths to preserve the dignity of others, offering gentle refusals and indirect communication rather than blunt rejection.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Haya (Modesty)</strong>
+                <span>A guiding principle in dress, speech, and behavior — valued as a sign of inner strength.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Private & Public Life</strong>
+                <span>A clear boundary exists: family life is fiercely protected from outside scrutiny.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Saving Face</strong>
+                <span>Criticism is delivered privately and gently; public shaming is a deep cultural taboo.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- The Majlis -->
+    <article class="section-card animate-in" id="majlis">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>The Majlis</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/social/majlis2.jpg' %}" alt="Saudi Majlis" class="section-image">
+        <p class="section-text">
+            The Majlis (meaning "a place of sitting") is the heart of Saudi social and political life. Traditionally a room near the entrance of the home, it is where men gather to discuss community matters, resolve disputes, conduct business, and share poetry and stories. Cushions line the walls, coffee flows continuously, and incense (Bukhoor) perfumes the air. The Majlis is democratic in spirit — anyone from the community may attend and speak. Even today, government leaders hold open Majlis sessions to hear citizens' concerns.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Open-Door Tradition</strong>
+                <span>Any community member can attend a Majlis — it is a space of equality and open dialogue.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Bukhoor & Oud</strong>
+                <span>Burning incense wood is a key ritual — it signals welcome and purifies the gathering space.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Modern Majlis</strong>
+                <span>Still central today: from family homes to royal courts, the Majlis tradition endures.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:section_detail' slug='social-life' section='majlis' %}" class="card-explore">Explore in depth →</a>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='material-culture' %}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Material Culture</span>
+        </a>
+        <a href="{% url 'saudi_culture:culture_page' slug='symbols-language' %}" class="next-link">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Symbols & Language</span>
+        </a>
+    </nav>
+
+</div>
+{% endblock %}

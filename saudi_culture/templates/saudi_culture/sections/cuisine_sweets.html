@@ -1,0 +1,55 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Sweets & Breads — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--cuisine">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Sweets & Breads</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">The Sweetness of Arabian Hospitality</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}" class="back-link">← Saudi Cuisine</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Saudi sweets balance richness with simplicity. Luqaimat — golden fried dough balls drizzled with date
+            syrup or honey — are a Ramadan staple. Basbousa (semolina cake) is served at every celebration.
+            Mutabbaq, a stuffed pastry that can be sweet or savory, is beloved street food. Traditional breads
+            include Markook (paper-thin flatbread cooked on a dome) and Tamees (soft tandoor bread).
+            Every region has its own sweet specialty tied to specific seasons and celebrations.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Luqaimat with Syrup</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Ma'amoul Cookies</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Markook Flatbread</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Sweets & Breads</p>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Saudi Cuisine</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

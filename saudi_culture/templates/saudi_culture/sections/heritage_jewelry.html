@@ -1,0 +1,55 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Traditional Jewelry — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--heritage">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Traditional Jewelry</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Silver Stories of Identity</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}" class="back-link">← Heritage Gallery</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Bedouin jewelry served as wearable wealth — entire family fortunes were carried as silver necklaces,
+            bangles, and headpieces. Each piece encoded tribal identity: specific patterns, stones, and techniques
+            identified the wearer's clan, region, and marital status. The Hirz (amulet necklace) contained miniature
+            Quran cases for spiritual protection. Coral from the Red Sea, turquoise from trade routes, and amber
+            from the Baltics adorned the most prestigious pieces. Contemporary Saudi jewelers reimagine these traditions with modern materials.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Bedouin Silver Necklace</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>The Hirz Amulet</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Traditional Headpiece</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Traditional Jewelry</p>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Heritage Gallery</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

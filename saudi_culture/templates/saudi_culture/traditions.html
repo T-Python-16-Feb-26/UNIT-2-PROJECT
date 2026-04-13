@@ -1,0 +1,136 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+{% block title %}Traditions & Celebrations — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--traditions">
+    <img src="{% static 'saudi_culture/images/traditions/traditions-hero.jpg' %}" alt="Saudi Traditions" class="hero-bg">
+    <div class="hero-content">
+        <h1>Traditions & Celebrations</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"From the crescent moon of Eid to the fireworks of National Day, Saudi Arabia celebrates with the heart."</p>
+        <p class="hero-desc">The Sacred Rhythms of Life</p>
+    </div>
+</section>
+
+<div class="page-body">
+
+    <!-- Eid Celebrations -->
+    <article class="section-card animate-in" id="eid">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Eid Celebrations</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/traditions/eid.jpg' %}" alt="Eid Celebrations" class="section-image">
+        <p class="section-text">
+            The two Eids are the most joyous occasions in Saudi life. Eid al-Fitr marks the end of Ramadan's month of fasting — families dress in new clothes, children receive Eidiyah (gifts of money), and homes overflow with sweets like Ma'amoul (date-filled cookies) and Kleicha. Eid al-Adha, the greater Eid, commemorates Ibrahim's willingness to sacrifice his son — families perform Udhiyah (animal sacrifice) and distribute the meat equally among family, friends, and the poor. Both Eids begin with a congregational morning prayer and are followed by days of visiting relatives and feasting.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Eidiyah</strong>
+                <span>Children receive crisp banknotes in decorated envelopes — the highlight of every young Saudi's Eid.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Ma'amoul</strong>
+                <span>Butter cookies filled with dates, pistachios, or walnuts — handmade in every household before Eid.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Udhiyah</strong>
+                <span>The Eid al-Adha sacrifice: one-third to family, one-third to neighbors, one-third to the poor.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- National Day & Founding Day -->
+    <article class="section-card animate-in" id="national-day">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Saudi National Day & Founding Day</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/traditions/national-day.jpg' %}" alt="Saudi National Day" class="section-image">
+        <p class="section-text">
+            September 23rd — Saudi National Day — celebrates the unification of the kingdom in 1932 by King Abdulaziz. The entire country erupts in green: buildings are lit in the national color, cars fly flags, and massive firework shows light up every city. Since 2022, Saudi Arabia also celebrates Founding Day on February 22nd, honoring the establishment of the first Saudi state in 1727 by Imam Muhammad ibn Saud. Founding Day focuses on heritage — citizens wear traditional regional attire and historical reenactments fill the streets.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>September 23rd</strong>
+                <span>National Day: parades, airshows, concerts, and the entire kingdom draped in green.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>February 22nd</strong>
+                <span>Founding Day: a newer celebration of the 1727 first Saudi state — heritage-focused and deeply cultural.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Ardah Dance</strong>
+                <span>The traditional sword dance performed at national celebrations — a symbol of valor and unity.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Weddings & Rites of Passage -->
+    <article class="section-card animate-in" id="weddings">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Weddings & Rites of Passage</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/traditions/ardah.jpg' %}" alt="Saudi Wedding" class="section-image">
+        <p class="section-text">
+            Saudi weddings are grand, multi-day celebrations. The process begins with the Khotbah (formal proposal) where the groom's family visits the bride's family. The Milkah (marriage contract) is signed separately, often weeks before the wedding party. The wedding celebration itself (Zawaj) features separate events for men and women. The bride's celebration includes the Zaffa (bridal procession) with music and ululation. Men celebrate with the Ardah sword dance, poetry, and feasting. Traditional weddings can host hundreds of guests, with Kabsa and whole roasted lamb served on massive platters.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Zaffa</strong>
+                <span>The bridal entrance procession — accompanied by drums, songs, and showers of rose petals.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Ardah at Weddings</strong>
+                <span>Men perform the sword dance in two rows, chanting poetry — a celebration of tribal pride.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Aqeeqah</strong>
+                <span>A birth celebration: an animal is sacrificed on the 7th day, the baby's head is shaved, and the name is announced.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Music & Performing Arts -->
+    <article class="section-card animate-in" id="music">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Music & Performing Arts</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/traditions/music.jpg' %}" alt="Saudi Music" class="section-image">
+        <p class="section-text">
+            Saudi Arabia has a rich tradition of music and performing arts rooted in Bedouin culture, Islamic heritage, and regional diversity. From the haunting melodies of the Oud to the rhythmic beat of the Tabl (drum), music has always been central to Saudi life. The Ardah — a traditional sword dance accompanied by poetry and drumming — is the most iconic performing art in the kingdom, recognized by UNESCO in 2015.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Oud</strong>
+                <span>The king of Arabian instruments — a fretless lute that forms the soul of every musical gathering.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Ardah</strong>
+                <span>UNESCO-recognized sword dance performed at weddings, Eid, and national celebrations.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Regional Traditions</strong>
+                <span>From the Samri of Najd to the Leiwah of the Eastern Province — each region sings its own story.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:culture_page' slug='music' %}" class="card-explore">Explore Music & Performing Arts →</a>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='symbols-language' %}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Symbols & Language</span>
+        </a>
+        <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}" class="next-link">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Saudi Cuisine</span>
+        </a>
+    </nav>
+
+</div>
+{% endblock %}

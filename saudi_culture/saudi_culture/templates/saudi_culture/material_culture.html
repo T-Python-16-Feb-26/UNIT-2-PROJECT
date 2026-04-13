@@ -1,0 +1,109 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+
+{% block title %}Material Culture — Saudi Culture{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero hero-small hero--material">
+    <img src="{% static 'saudi_culture/images/material/materials-art.jpg' %}" alt="Saudi Material Culture" class="hero-bg">
+    <div class="hero-content">
+        <h1>Material Culture</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"From the mud-brick towers of Najd to the soaring glass of Riyadh, Saudi craftsmanship spans millennia."</p>
+        <p class="hero-desc">The Living Artifacts of a Timeless Civilization</p>
+    </div>
+</section>
+
+<div class="page-body">
+
+    <!-- Architecture -->
+    <article class="section-card animate-in" id="architecture">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Architecture</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/material/architecture-saudi.jpg' %}" alt="Saudi Architecture in Jeddah" class="section-image">
+        <p class="section-text">
+            Saudi architecture tells the story of adaptation and ambition. The traditional Najdi style — with its thick mud-brick walls, geometric parapets, and narrow winding streets — was built to withstand the desert heat. Homes in Jeddah's Al-Balad district feature ornate wooden Rawasheen (bay windows) that catch the coastal breeze. Today, Saudi Arabia's skyline is being redefined by mega-projects like NEOM and the Murabba, blending futuristic vision with deep cultural symbolism.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Najdi Architecture</strong>
+                <span>Mud-brick fortresses with triangular crenellations, found in Diriyah and Ushaiger.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Hijazi Rawasheen</strong>
+                <span>Carved wooden lattice balconies in old Jeddah, designed for ventilation and privacy.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Modern Vision</strong>
+                <span>The Line in NEOM — a 170km mirrored city with zero cars and zero carbon emissions.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:section_detail' slug='material-culture' section='architecture' %}" class="card-explore">Explore in depth →</a>
+    </article>
+
+    <!-- Clothing -->
+    <article class="section-card animate-in" id="clothing">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Traditional Clothing</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/material/shoes.webp' %}" alt="Traditional Saudi Shoes" class="section-image">
+        <p class="section-text">
+            Saudi traditional dress reflects identity, climate, and status. The Thobe — a long white garment — is the everyday attire for men, often paired with a Shemagh (red-and-white headscarf) or Ghutra (plain white). For formal occasions, men don the Bisht, a flowing gold-trimmed cloak. Women wear the Abaya as an outer garment, with regional variations in embroidery and color. Beneath these, traditional dresses like the Thob Nashal feature vivid embroidery specific to each region.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Bisht</strong>
+                <span>A cloak of prestige, traditionally worn by leaders and grooms, often trimmed with gold thread.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Regional Abayas</strong>
+                <span>Styles vary from Asir's colorful embroidery to the sleek modern designs of Riyadh.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Shemagh & Igal</strong>
+                <span>The red-checked headscarf held by a black cord — an iconic symbol of Arabian identity.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Arts & Crafts -->
+    <article class="section-card animate-in" id="arts">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Arts & Crafts</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/material/dress-making.jpg' %}" alt="Janobi Dress Weaving" class="section-image">
+        <p class="section-text">
+            Saudi Arabia's artistic heritage runs deep. Sadu weaving — practiced by Bedouin women — produces vibrant geometric textiles used for tents, rugs, and camel saddles, and is recognized by UNESCO. Arabic calligraphy transforms Quranic verses and poetry into visual art, with styles ranging from angular Kufic to flowing Naskh. Traditional silver jewelry, adorned with turquoise and amber, served as portable wealth for nomadic tribes.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Sadu Weaving</strong>
+                <span>UNESCO-recognized Bedouin craft using bold geometric patterns in red, black, orange, and white.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Arabic Calligraphy</strong>
+                <span>The art of beautiful writing — from ancient Kufic inscriptions to contemporary street murals.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Bedouin Jewelry</strong>
+                <span>Silver necklaces, anklets, and headpieces that encoded tribal identity and family wealth.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="page-nav">
+        <span></span>
+        <a href="{% url 'saudi_culture:culture_page' slug='social-life' %}" class="next-link">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Social Life</span>
+        </a>
+    </nav>
+
+</div>
+{% endblock %}

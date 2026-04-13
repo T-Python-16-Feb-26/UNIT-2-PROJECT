@@ -1,0 +1,55 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Arabic Calligraphy — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--heritage">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Arabic Calligraphy</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Where Words Become Art</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}" class="back-link">← Heritage Gallery</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Arabic calligraphy is considered the highest form of visual art in the Islamic world. In Saudi Arabia,
+            it adorns mosques, palaces, coins, and everyday objects. Major styles include Kufic (angular, monumental),
+            Naskh (flowing, readable, the basis of modern print), and Thuluth (ornate, used on the Saudi flag).
+            Today, Saudi artists push calligraphy into contemporary art — merging traditional scripts with digital
+            media, street art, and architectural installations.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Kufic Stone Inscription</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Thuluth on the Saudi Flag</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Contemporary Calligraffiti</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Arabic Calligraphy</p>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Heritage Gallery</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

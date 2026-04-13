@@ -1,0 +1,103 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+
+{% block title %}Saudi Culture – Discover the Heart of Arabia{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <video class="hero-bg" autoplay muted loop playsinline>
+        <source src="{% static 'saudi_culture/videos/background_video.mp4' %}" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Discover Saudi Culture</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"The desert taught us patience, faith taught us purpose, and hospitality made us a nation."</p>
+        <p class="hero-desc">
+            Explore the living traditions, ancient crafts, and deep values that have shaped the Kingdom of Saudi Arabia
+            across millennia — from Bedouin tents to modern skylines.   
+        </p>
+        <a href="#explore" class="btn-gold">Explore ↓</a>
+    </div>
+</section>
+
+<!-- Culture Cards -->
+<section class="page-body" id="explore">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 2rem;">The Pillars of Saudi Heritage</h2>
+        <hr class="gold-divider">
+        <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.05rem;">
+            Six explorations into the culture, customs, and craftsmanship of the Arabian Peninsula.
+        </p>
+    </div>
+
+    <div class="culture-grid">
+
+        <!-- Material Culture -->
+        <a href="{% url 'saudi_culture:culture_page' slug='material-culture' %}" class="culture-card animate-in">
+            <img src="{% static 'saudi_culture/images/home/elphan-rock.jpg' %}" alt="Material Culture" class="card-visual">
+            <div class="card-body">
+                <h3>Material Culture</h3>
+                <p class="card-subtitle">The Living Artifacts of a Timeless Civilization</p>
+                <span class="card-meta">4 sections</span>
+                <span class="card-link">Explore →</span>
+            </div>
+        </a>
+
+        <!-- Social Life -->
+        <a href="{% url 'saudi_culture:culture_page' slug='social-life' %}" class="culture-card animate-in">
+            <img src="{% static 'saudi_culture/images/home/saudi-majlis.jpg' %}" alt="Social Life" class="card-visual">
+            <div class="card-body">
+                <h3>Social Life</h3>
+                <p class="card-subtitle">The Bonds That Shape a Nation</p>
+                <span class="card-meta">3 sections</span>
+                <span class="card-link">Explore →</span>
+            </div>
+        </a>
+
+        <!-- Symbols & Language -->
+        <a href="{% url 'saudi_culture:culture_page' slug='symbols-language' %}" class="culture-card animate-in">
+            <img src="{% static 'saudi_culture/images/home/symbol.webp' %}" alt="Symbols & Language" class="card-visual">
+            <div class="card-body">
+                <h3>Symbols & Language</h3>
+                <p class="card-subtitle">The Voice and Emblem of a Kingdom</p>
+                <span class="card-meta">3 sections</span>
+                <span class="card-link">Explore →</span>
+            </div>
+        </a>
+
+        <!-- Traditions -->
+        <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}" class="culture-card animate-in">
+            <img src="{% static 'saudi_culture/images/home/saudi-celebration.jpeg' %}" alt="Traditions & Celebrations" class="card-visual">
+            <div class="card-body">
+                <h3>Traditions & Celebrations</h3>
+                <p class="card-subtitle">The Sacred Rhythms of Life</p>
+                <span class="card-meta">3 sections</span>
+                <span class="card-link">Explore →</span>
+            </div>
+        </a>
+
+        <!-- Cuisine -->
+        <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}" class="culture-card animate-in">
+            <img src="{% static 'saudi_culture/images/home/saudi-cuisine.jpg' %}" alt="Saudi Cuisine" class="card-visual">
+            <div class="card-body">
+                <h3>Saudi Cuisine</h3>
+                <p class="card-subtitle">A Feast for the Soul</p>
+                <span class="card-meta">4 sections</span>
+                <span class="card-link">Explore →</span>
+            </div>
+        </a>
+
+        <!-- Heritage Gallery -->
+        <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}" class="culture-card animate-in">
+            <img src="{% static 'saudi_culture/images/home/saudi-art.jpg' %}" alt="Heritage Gallery" class="card-visual">
+            <div class="card-body">
+                <h3>Heritage Gallery</h3>
+                <p class="card-subtitle">Preserving the Beauty of Generations</p>
+                <span class="card-meta">4 sections</span>
+                <span class="card-link">Explore →</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}The Coffee Ritual — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--cuisine">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>The Coffee Ritual</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Gahwa — A Language of Respect</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}" class="back-link">← Saudi Cuisine</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Saudi coffee (Gahwa Saudiya) is far more than a drink — it is a language of respect. The beans are
+            lightly roasted to a golden color, ground with cardamom and sometimes saffron or cloves, then brewed
+            in a Dallah (a long-spouted brass pot). The host pours with the left hand into small cups (Finjan).
+            The guest accepts with the right hand, drinks in small sips, and shakes the cup when finished.
+            Refusing is considered an insult. Gahwa is always accompanied by dates.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>The Dallah Pot</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Coffee Pouring Ceremony</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Dates & Coffee Pairing</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — The Coffee Ritual</p>
+        </div>
+
+        <div class="audio-placeholder">
+            <h4>🎵 Audio Samples</h4>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>The Coffee Ritual — Sample 1</strong>
+                    <span>Traditional recording • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>The Coffee Ritual — Sample 2</strong>
+                    <span>Field recording • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Saudi Cuisine</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

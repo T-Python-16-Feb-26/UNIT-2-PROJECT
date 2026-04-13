@@ -1,0 +1,55 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Sadu Weaving — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--heritage">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Sadu Weaving</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">Patterns Woven into Heritage</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}" class="back-link">← Heritage Gallery</a>
+
+    <article class="section-card animate-in">
+        <p class="section-text">
+            Sadu is the traditional Bedouin weaving art practiced by women of the Arabian Peninsula. Using a ground
+            loom, weavers create bold geometric patterns in striking colors — black, red, orange, and white — each
+            motif carrying symbolic meaning. Triangles represent tents or mountains; diamonds symbolize eyes or water
+            wells. In 2020, UNESCO inscribed Sadu weaving on the Representative List of Intangible Cultural Heritage.
+            Today, Saudi women are reviving this ancient craft through workshops, exhibitions, and contemporary design.
+        </p>
+
+        <div class="media-grid">
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Sadu Ground Loom</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Close-up of Geometric Patterns</small>
+            </div>
+            <div class="media-img-ph">
+                <span>📷</span>
+                <small>Finished Sadu Textile</small>
+            </div>
+        </div>
+
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Sadu Weaving</p>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Heritage Gallery</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

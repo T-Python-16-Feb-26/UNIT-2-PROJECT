@@ -1,0 +1,180 @@
+{% extends 'saudi_culture/base.html' %}
+
+{% block title %}Music & Performing Arts — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--music">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>Music & Performing Arts</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">The Rhythm of the Arabian Soul</p>
+    </div>
+</section>
+
+<div class="page-body">
+    <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}" class="back-link">← Traditions & Celebrations</a>
+
+    <!-- Traditional Instruments -->
+    <article class="section-card animate-in" id="instruments">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Traditional Instruments</h2>
+        </div>
+        <div class="media-grid">
+            <div class="media-img-ph"><span>📷</span><small>The Oud — King of Arabic Instruments</small></div>
+            <div class="media-img-ph"><span>📷</span><small>The Rebaba — Desert Fiddle</small></div>
+            <div class="media-img-ph"><span>📷</span><small>The Tabl — War Drum</small></div>
+        </div>
+        <p class="section-text">
+            The Oud (عود) is the soul of Arabian music — a pear-shaped lute with 11 or 13 strings and no frets,
+            allowing the infinite microtones that define the Arabic maqam system. The Rebaba, a single-stringed bowed
+            instrument, carries the haunting melodies of Bedouin poetry. Percussion is central: the Tabl (war drum),
+            Duff (frame drum), and Darbuka (goblet drum) drive the rhythmic pulse of every celebration. The Mizmar
+            (double-reed pipe) provides sharp, penetrating melodic lines in folk ensembles.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Oud</strong>
+                <span>The grandfather of the European lute — Arab traders carried it to Andalusia, changing Western music forever.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Rebaba</strong>
+                <span>A single-string fiddle played by Bedouin poets — its mournful tone is said to mimic the desert wind.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Duff</strong>
+                <span>A shallow frame drum used in celebrations and Sufi rituals — its beat is the heartbeat of Saudi folk music.</span>
+            </div>
+        </div>
+        <div class="audio-placeholder">
+            <h4>🎵 Instrument Samples</h4>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>Oud Taqsim — Solo Improvisation</strong>
+                    <span>Classical Arabic maqam • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>Rebaba — Bedouin Melody</strong>
+                    <span>Traditional Najdi folk • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>Tabl & Duff Ensemble</strong>
+                    <span>Ceremonial percussion • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- The Ardah -->
+    <article class="section-card animate-in" id="ardah">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>The Ardah — Sword Dance</h2>
+        </div>
+        <div class="video-placeholder">
+            <span>▶</span>
+            <p>Video Placeholder — Ardah Sword Dance Performance</p>
+        </div>
+        <p class="section-text">
+            The Ardah (العرضة) is Saudi Arabia's most iconic performing art — a traditional sword dance performed
+            by two rows of men facing each other, moving in synchronized steps to the beat of drums and the chant
+            of a poet. Originally performed before battle, today it marks every major celebration: Eid, weddings,
+            National Day, and royal ceremonies. The poet (Shair) improvises verses of valor and pride, while men
+            brandish swords or rifles overhead. In 2015, UNESCO inscribed the Ardah on the Intangible Cultural Heritage list.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>UNESCO Heritage (2015)</strong>
+                <span>The Ardah is globally recognized as an intangible cultural treasure of Saudi Arabia.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Shair (Poet)</strong>
+                <span>The poet improvises verses during the Ardah — his words set the mood and honor the occasion.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Tabl & Bas Drum</strong>
+                <span>Two large drums drive the Ardah's rhythm — their beat can be heard across an entire village.</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Regional Music Traditions -->
+    <article class="section-card animate-in" id="regional-music">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Regional Music Traditions</h2>
+        </div>
+        <div class="media-grid">
+            <div class="media-img-ph"><span>📷</span><small>Hijazi Samri Performance</small></div>
+            <div class="media-img-ph"><span>📷</span><small>Southern Leiwah Ceremony</small></div>
+            <div class="media-img-ph"><span>📷</span><small>Eastern Gulf Music</small></div>
+        </div>
+        <p class="section-text">
+            Saudi Arabia's musical landscape is as diverse as its geography. The Samri — a poetic musical tradition
+            from Najd and Hijaz — features call-and-response singing accompanied by clapping and the Rebaba. The
+            southern Asir region has distinctive Mizmar folk ensembles with double-reed pipes played in piercing
+            unison. The Eastern Province features the Leiwah — music with African roots brought by coastal traders.
+            The Hijaz, shaped by centuries of pilgrimage, absorbed musical influences from Turkey, Persia, and Africa.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Samri</strong>
+                <span>A poetic tradition from central Arabia — verses are sung, then answered by a chorus, around a fire.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Leiwah</strong>
+                <span>East Coast music with deep African roots — rhythms and ceremonies brought by coastal traders.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Mizmar Folk</strong>
+                <span>Southern Saudi pipe music — loud, driving, performed at outdoor weddings and harvest celebrations.</span>
+            </div>
+        </div>
+        <div class="audio-placeholder">
+            <h4>🎵 Regional Sounds</h4>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>Samri — Najdi Poetry Song</strong>
+                    <span>Central Arabia • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>Leiwah — Eastern Province</strong>
+                    <span>Gulf coast tradition • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+            <div class="audio-track">
+                <div class="audio-play-btn">▶</div>
+                <div class="audio-track-info">
+                    <strong>Mizmar Ensemble — Asir</strong>
+                    <span>Southern folk music • placeholder</span>
+                </div>
+                <span class="audio-duration">0:00</span>
+            </div>
+        </div>
+    </article>
+
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='traditions' %}">
+            <span class="nav-label">← Back to</span>
+            <span class="nav-title">Traditions & Celebrations</span>
+        </a>
+    </nav>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ request.COOKIES.theme|default:'light' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Saudi Culture{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'saudi_culture/css/style.css' %}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="{% url 'saudi_culture:home' %}" class="nav-brand"> Saudi Culture </a>
+
+        <!-- CSS-only hamburger: checkbox must precede nav-links in DOM -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+        <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle menu">☰</label>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'saudi_culture:home' %}">Home</a></li>
+            <li><a href="{% url 'saudi_culture:culture_page' slug='material-culture' %}">Material</a></li>
+            <li><a href="{% url 'saudi_culture:culture_page' slug='social-life' %}">Social</a></li>
+            <li><a href="{% url 'saudi_culture:culture_page' slug='symbols-language' %}">Symbols</a></li>
+            <li><a href="{% url 'saudi_culture:culture_page' slug='traditions' %}">Traditions</a></li>
+            <li><a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}">Cuisine</a></li>
+            <li><a href="{% url 'saudi_culture:culture_page' slug='heritage-gallery' %}">Heritage</a></li>
+        </ul>
+
+        <form method="post" action="{% url 'saudi_culture:toggle_theme' %}" class="theme-toggle-form">
+            {% csrf_token %}
+            <button type="submit" class="theme-toggle" aria-label="Toggle dark mode">
+                {% if request.COOKIES.theme == 'dark' %}☀{% else %}☽{% endif %}
+            </button>
+        </form>
+
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <div id="chat-widget">
+        <button onclick="toggleChat()" class="chat-btn" aria-label="Open Cultural Assistant">🕌</button>
+
+        <div id="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-title">
+                    <span class="chat-header-arabic">مساعد ثقافي</span>
+                    <span class="chat-header-sub">Cultural Assistant</span>
+                </div>
+                <button class="chat-close" onclick="toggleChat()" aria-label="Close">✕</button>
+            </div>
+
+            <div id="chat-history">
+                <div class="chat-msg bot-msg">
+                    <span class="bot-avatar">☽</span>
+                    <div class="msg-bubble">يا هلا ومرحبا ! اسألني عن الثقافة السعودية <hr>Ask me about Saudi culture.</div>
+                </div>
+            </div>
+
+            <form id="chat-form">
+                {% csrf_token %}
+                <input type="text" id="user-input" placeholder="اسألني عن السعودية Ask me About Saudi" autocomplete="off">
+                <button type="submit" aria-label="Send">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+<script>
+function toggleChat() {
+    document.getElementById('chat-window').classList.toggle('active');
+}
+document.getElementById('chat-form').onsubmit = async (e) => {
+    e.preventDefault();
+    const input   = document.getElementById('user-input');
+    const history = document.getElementById('chat-history');
+    const message = input.value.trim();
+    if (!message) return;
+
+    history.innerHTML += `<div class="chat-msg user-msg"><div class="msg-bubble">${message}</div></div>`;
+    input.value = '';
+    history.scrollTop = history.scrollHeight;
+
+    const response = await fetch("{% url 'saudi_culture:chatbot_api' %}", {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `message=${encodeURIComponent(message)}`
+    });
+
+    const data = await response.json();
+    history.innerHTML += `<div class="chat-msg bot-msg"><span class="bot-avatar">☽</span><div class="msg-bubble">${data.reply}</div></div>`;
+    history.scrollTop = history.scrollHeight;
+};
+</script>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-brand">Saudi Culture</div>
+        <p>Celebrating the rich heritage and living traditions of the Kingdom of Saudi Arabia.</p>
+        <p style="margin-top: 0.5rem;">ِApril 2026</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+{% extends 'saudi_culture/base.html' %}
+{% load static %}
+{% block title %}Heritage Gallery — Saudi Culture{% endblock %}
+
+{% block content %}
+<section class="hero hero-small hero--heritage">
+    <img src="{% static 'saudi_culture/images/heritage/hero-heritage.jpg' %}" alt="Saudi Heritage" class="hero-bg">
+    <div class="hero-content">
+        <h1>Heritage Gallery</h1>
+        <hr class="gold-divider">
+        <p class="hero-tagline">"Every thread woven, every letter drawn, every jewel crafted — a testament to the soul of Arabia."</p>
+        <p class="hero-desc">Preserving the Beauty of Generations</p>
+    </div>
+</section>
+
+<div class="page-body">
+
+    <!-- Sadu Weaving -->
+    <article class="section-card animate-in" id="sadu">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Sadu Weaving</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/heritage/sadu-weaving.jpg' %}" alt="Sadu Weaving" class="section-image">
+        <p class="section-text">
+            Sadu is the traditional Bedouin weaving art practiced by women of the Arabian Peninsula. Using a ground loom, weavers create bold geometric patterns in striking colors — black, red, orange, and white — each motif carrying symbolic meaning. Triangles may represent tents or mountains, while diamond shapes symbolize eyes or water wells. Sadu textiles were essential to nomadic life: used for tent dividers, camel saddle bags, cushions, and rugs. In 2020, UNESCO inscribed Sadu weaving on the Representative List of the Intangible Cultural Heritage of Humanity.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>UNESCO Recognition</strong>
+                <span>Inscribed in 2020 as an Intangible Cultural Heritage — a global acknowledgment of Bedouin artistry.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Symbolic Patterns</strong>
+                <span>Each geometric motif has meaning: camels, tents, trees, and desert landscapes encoded in thread.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>The Ground Loom</strong>
+                <span>A portable loom staked into the sand — perfectly adapted to the nomadic Bedouin lifestyle.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:section_detail' slug='heritage-gallery' section='sadu' %}" class="card-explore">Explore in depth →</a>
+    </article>
+
+    <!-- Arabic Calligraphy -->
+    <article class="section-card animate-in" id="calligraphy">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Arabic Calligraphy</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/heritage/arabic-calligraphy.jpg' %}" alt="Arabic Calligraphy" class="section-image">
+        <p class="section-text">
+            Arabic calligraphy is considered the highest form of visual art in the Islamic world. In Saudi Arabia, it adorns mosques, palaces, coins, and everyday objects. The earliest Arabic inscriptions — found in the kingdom's northwest — date back to the 4th century CE. Major styles include Kufic (angular, monumental, used in early Qurans), Naskh (flowing, readable, the basis of modern print), and Thuluth (ornate, used on the Saudi flag). Today, Saudi artists push calligraphy into contemporary art, merging traditional scripts with digital media and street art.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>Kufic Script</strong>
+                <span>The oldest calligraphic form — angular and geometric, carved into stone and early Quran manuscripts.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Thuluth on the Flag</strong>
+                <span>The Shahada on the Saudi flag is written in Thuluth script — majestic and ceremonial.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Modern Calligraffiti</strong>
+                <span>Contemporary artists merge traditional calligraphy with street art and digital media.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:section_detail' slug='heritage-gallery' section='calligraphy' %}" class="card-explore">Explore in depth →</a>
+    </article>
+
+    <!-- Pottery & Ceramics -->
+    <article class="section-card animate-in" id="pottery">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Pottery & Ceramics</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/heritage/pottery.jpg' %}" alt="Saudi Pottery" class="section-image">
+        <p class="section-text">
+            Pottery has been produced in the Arabian Peninsula for over 5,000 years. Archaeological sites across Saudi Arabia — from Tayma in the north to Najran in the south — have yielded painted vessels, storage jars, and incense burners that trace trade connections to Mesopotamia, Egypt, and the Indus Valley. Traditional Saudi pottery uses local clays fired in open kilns, producing unglazed, earth-toned vessels. The Midhan (large mortar) and Dallah (coffee pot) are iconic functional ceramics. Today, Saudi potters blend ancestral techniques with contemporary design.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>5,000 Years of Craft</strong>
+                <span>Pottery fragments from Tayma and Al-Ula link Saudi Arabia to the earliest civilizations.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Incense Burners</strong>
+                <span>Mabkhara — ornate ceramic burners for Oud and Bukhoor, found in every Saudi home.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Contemporary Revival</strong>
+                <span>Saudi artists are reviving pottery traditions through workshops, galleries, and cultural festivals.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:section_detail' slug='heritage-gallery' section='pottery' %}" class="card-explore">Explore in depth →</a>
+    </article>
+
+    <!-- Traditional Jewelry -->
+    <article class="section-card animate-in" id="jewelry">
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h2>Traditional Jewelry</h2>
+        </div>
+        <img src="{% static 'saudi_culture/images/heritage/jewelry.jpg' %}" alt="Saudi Traditional Jewelry" class="section-image"   >
+        <p class="section-text">
+            Bedouin jewelry served as wearable wealth — entire family fortunes were carried as silver necklaces, bangles, and headpieces. Each piece encoded tribal identity: specific patterns, stones, and techniques identified the wearer's clan, region, and marital status. The Hirz (amulet necklace) contained miniature Quran cases for spiritual protection. Maria Theresa thalers (silver coins) were melted and reformed into elaborate necklaces. Coral from the Red Sea, turquoise from trade routes, and amber from the Baltics adorned the most prestigious pieces.
+        </p>
+        <div class="highlights">
+            <div class="highlight-item">
+                <strong>The Hirz Necklace</strong>
+                <span>An amulet containing Quranic verses — worn for protection and deeply personal to the wearer.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Tribal Identity</strong>
+                <span>Jewelry patterns identified clan, region, and status — a visual language of belonging.</span>
+            </div>
+            <div class="highlight-item">
+                <strong>Maria Theresa Thalers</strong>
+                <span>Austrian silver coins, beloved for their purity, melted and reborn as Bedouin adornments.</span>
+            </div>
+        </div>
+        <a href="{% url 'saudi_culture:section_detail' slug='heritage-gallery' section='jewelry' %}" class="card-explore">Explore in depth →</a>
+    </article>
+
+    <!-- Prev / Next -->
+    <nav class="page-nav">
+        <a href="{% url 'saudi_culture:culture_page' slug='cuisine' %}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Saudi Cuisine</span>
+        </a>
+        <span></span>
+    </nav>
+
+</div>
+{% endblock %}
