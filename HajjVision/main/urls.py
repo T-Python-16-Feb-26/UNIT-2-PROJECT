@@ -5,6 +5,7 @@ app_name = "main"
 
 urlpatterns = [
 
+    path("set-theme/", views.set_theme, name="set_theme"),
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('goals/', views.goals, name='goals'),
