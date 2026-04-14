@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 
 
@@ -75,3 +76,40 @@ def contact(request):
 
 def login_page(request):
     return render(request, 'login.html')
+def breed_detail(request, name):
+
+    data = {
+        "majaheem": {
+            "name": "المجاهيم",
+            "image": "images/majaheem.jpg",
+            "intro": "سلالة قوية تُعرف بالذهب الأسود، وتتميز بإنتاج الحليب والتحمل.",
+            "types": ["مجاهيم سوداء", "مجاهيم محسنّة"],
+            "regions": ["المنطقة الشرقية", "الربع الخالي"],
+            "price": "50 ألف إلى 10 مليون ريال",
+            "uses": ["الحليب", "المزاين"]
+        },
+
+        "maghatir": {
+            "name": "المغاتير",
+            "image": "images/maghatir.jpg",
+            "intro": "إبل الجمال والأناقة، تتصدر مسابقات المزاين.",
+            "types": ["وضح", "صفر", "شعل"],
+            "regions": ["نجد"],
+            "price": "100 ألف إلى 80 مليون ريال",
+            "uses": ["المزاين", "الاستثمار"]
+        },
+
+        "asil": {
+            "name": "الأصايل",
+            "image": "images/asil.jpg",
+            "intro": "سلالة مخصصة للسباقات، سريعة وخفيفة.",
+            "types": ["هجن سباق"],
+            "regions": ["الطائف", "تبوك"],
+            "price": "200 ألف إلى 15 مليون ريال",
+            "uses": ["السباقات"]
+        }
+    }
+
+    breed = data.get(name)
+
+    return render(request, 'breed_detail.html', {"breed": breed})

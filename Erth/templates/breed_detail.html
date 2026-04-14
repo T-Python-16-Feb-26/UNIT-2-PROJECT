@@ -2,6 +2,8 @@
 {% load static %}
 {% block content %}
 
+{% if breed %}
+
 <section class="page-hero simple-hero">
     <div class="page-hero-inner">
         <h1>{{ breed.name }}</h1>
@@ -11,26 +13,61 @@
 
 <section class="breed-detail-section">
     <div class="breed-detail-grid">
+
         <div class="breed-detail-image">
-            <img src="{% static breed.image %}" alt="{{ breed.name }}">
+            <img src="{% static '' %}{{ breed.image }}" alt="{{ breed.name }}">
         </div>
 
         <div class="breed-detail-content">
-            <p class="lead">{{ breed.intro }}</p>
+            <div class="breed-intro">
+    <p>{{ breed.intro }}</p>
+</div>
 
-            <h3>الأنواع</h3>
-            <ul>{% for item in breed.types %}<li>{{ item }}</li>{% endfor %}</ul>
+            <div class="detail-box">
+                <h3>الأنواع</h3>
+                <ul>
+                    {% for item in breed.types %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-            <h3>أماكن التواجد</h3>
-            <ul>{% for item in breed.regions %}<li>{{ item }}</li>{% endfor %}</ul>
+            <div class="detail-box">
+                <h3>أماكن التواجد</h3>
+                <ul>
+                    {% for item in breed.regions %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-            <h3>نطاق الأسعار</h3>
-            <p>{{ breed.price }}</p>
+            <div class="detail-box">
+                <h3>نطاق الأسعار</h3>
+                <p>{{ breed.price }}</p>
+            </div>
 
-            <h3>الاستخدامات</h3>
-            <ul>{% for item in breed.uses %}<li>{{ item }}</li>{% endfor %}</ul>
+            <div class="detail-box">
+                <h3>الاستخدامات</h3>
+                <ul>
+                    {% for item in breed.uses %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
+
     </div>
 </section>
+
+{% else %}
+
+<section class="page-hero simple-hero">
+    <div class="page-hero-inner">
+        <h1>السلالة غير موجودة</h1>
+        <p>الرجاء العودة واختيار سلالة صحيحة</p>
+    </div>
+</section>
+
+{% endif %}
 
 {% endblock %}
