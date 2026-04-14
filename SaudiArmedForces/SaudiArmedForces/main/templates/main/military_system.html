@@ -23,7 +23,6 @@
             <span>Overview</span>
             <h2>What is the Saudi Military System?</h2>
         </div>
-
         <div class="about-grid">
             <div class="about-card">
                 <h3>Definition</h3>
@@ -36,7 +35,6 @@
                     which focuses on strengthening defense capabilities, localizing military industries, and enhancing the operational readiness of the armed forces.
                 </p>
             </div>
-
             <div class="about-card">
                 <h3>Main Purpose</h3>
                 <p>
@@ -64,7 +62,6 @@
                     efficiency.
                 </p>
             </div>
-
             <div class="info-box">
                 <div class="info-item">
                     <h4>Leadership</h4>
@@ -87,7 +84,6 @@
             <span>Protection & Stability</span>
             <h2>Why Military Organization Matters</h2>
         </div>
-
         <div class="importance-cards">
             <div class="importance-card">
                 <div class="number">01</div>
@@ -97,7 +93,6 @@
                     against threats.
                 </p>
             </div>
-
             <div class="importance-card">
                 <div class="number">02</div>
                 <h3>Maintaining Security</h3>
@@ -105,7 +100,6 @@
                     Organized military coordination strengthens national security and supports long-term stability.
                 </p>
             </div>
-
             <div class="importance-card">
                 <div class="number">03</div>
                 <h3>Improving Readiness</h3>
@@ -119,105 +113,91 @@
     <section class="forces-overview">
         <div class="forces-container">
             <h2 class="forces-title" id="forces">Main Components of the Military System</h2>
-
             <p class="forces-subtitle">
                 The Saudi military system consists of several main branches that work together
                 to ensure national defense and security. </p>
-            <!-- land card -->
-            <section class="feature-section">
-                <div class="feature-card reveal-card">
-                    <div class="feature-circle"> <img src="{% static 'images/land-logo.jpg' %}" alt="land logo"> </div>
-                    <div class="feature-bar">
-                        <div class="feature-content">
+            <section class="Components-section">
+                <div class="Components-card reveal-card">
+                    <div class="Components-circle"> <img src="{% static 'images/land-logo.jpg' %}" alt="land logo"> </div>
+                    <div class="Components-bar">
+                        <div class="Components-content">
                             <h3>Royal Saudi Land Forces</h3>
                             <p> represent the first line of defense for the Kingdom, combining advanced military strength with constant readiness to safeguard national security and stability. </p>
-                        </div> <a href="{% url 'main:land_forces_view' %}" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:land_forces_view' %}" class="Components-link"> View More </a>
                     </div>
                 </div>
             </section>
 
-            <!-- air card -->
-
-            <section class="feature-section">
-                <div class="feature-card reveal-card">
-                    <div class="feature-circle"> <img src="{% static 'images/air-logo.jpg' %}" alt="air logo"> </div>
-                    <div class="feature-bar">
-                        <div class="feature-content">
+            <section class="Components-section">
+                <div class="Components-card reveal-card">
+                    <div class="Components-circle"> <img src="{% static 'images/air-logo.jpg' %}" alt="air logo"> </div>
+                    <div class="Components-bar">
+                        <div class="Components-content">
                             <h3>Royal Saudi Air Force</h3>
                             <p> Responsible for protecting the Kingdom’s airspace and supporting operations with advanced aircraft and high readiness. </p>
-                        </div> <a href="{% url 'main:air_forces_view' %}" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:air_forces_view' %}" class="Components-link"> View More </a>
                     </div>
                 </div>
             </section>
 
-            <!-- naval card -->
-            <section class="feature-section">
-                <div class="feature-card reveal-card">
-                    <div class="feature-circle"> <img src="{% static 'images/naval-logo.png' %}" alt="naval logo"> </div>
-                    <div class="feature-bar">
-                        <div class="feature-content">
+            <section class="Components-section">
+                <div class="Components-card reveal-card">
+                    <div class="Components-circle"> <img src="{% static 'images/naval-logo.png' %}" alt="naval logo"> </div>
+                    <div class="Components-bar">
+                        <div class="Components-content">
                             <h3>Royal Saudi Naval Forces</h3>
                             <p> The Royal Saudi Naval Forces protect the Kingdom’s seas and support maritime security. </p>
-                        </div> <a href="{% url 'main:naval_forces_view' %}" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:naval_forces_view' %}" class="Components-link"> View More </a>
                     </div>
                 </div>
             </section>
 
-            <!-- air defemce card -->
-            <section class="feature-section">
-                <div class="feature-card reveal-card">
-                    <div class="feature-circle"> <img src="{% static 'images/air-defense-logo.png' %}" alt="القوات البرية"> </div>
-                    <div class="feature-bar">
-                        <div class="feature-content">
+            <section class="Components-section">
+                <div class="Components-card reveal-card">
+                    <div class="Components-circle"> <img src="{% static 'images/air-defense-logo.png' %}" alt="القوات البرية"> </div>
+                    <div class="Components-bar">
+                        <div class="Components-content">
                             <h3>Royal Saudi Air Defense Forces</h3>
                             <p> protect the Kingdom from aerial threats using advanced missile and radar systems. </p>
-                        </div> <a href="{% url 'main:air_defense_forces_view' %}" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:air_defense_forces_view' %}" class="Components-link"> View More </a>
                     </div>
                 </div>
             </section>
 
-            <!-- strategic missile card-->
-            <section class="feature-section">
-                <div class="feature-card reveal-card">
-                    <div class="feature-circle"> <img src="{% static 'images/strategic-missile-logo.jpg' %}" alt="strategic missile logo"> </div>
-                    <div class="feature-bar">
-                        <div class="feature-content">
+            <section class="Components-section">
+                <div class="Components-card reveal-card">
+                    <div class="Components-circle"> <img src="{% static 'images/strategic-missile-logo.jpg' %}" alt="strategic missile logo"> </div>
+                    <div class="Components-bar">
+                        <div class="Components-content">
                             <h3>Royal Saudi Strategic Missile Force</h3>
                             <p> provides strategic deterrence and enhances the Kingdom’s defense capabilities. </p>
-                        </div> <a href="{% url 'main:strategic_missile_force_view' %}" class="feature-link"> View More </a>
+                        </div> <a href="{% url 'main:strategic_missile_force_view' %}" class="Components-link"> View More </a>
                     </div>
                 </div>
             </section>
-
     </section>
 </div>
 
-<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
 <section class="objectives-section">
     <div class="objectives-wrap">
         <h2 class="objectives-title">Key Objectives</h2>
-
         <div class="objectives-grid">
             <div class="objective-box">
                 <h3>Border Protection</h3>
                 <p>Protect the Kingdom’s borders and preserve its sovereignty.</p>
             </div>
-
             <div class="objective-box">
                 <h3>National Security</h3>
                 <p>Maintain national security and support long-term stability.</p>
             </div>
-
             <div class="objective-box">
                 <h3>Military Readiness</h3>
                 <p>Enhance readiness, coordination, and rapid response capabilities.</p>
             </div>
-
             <div class="objective-box">
                 <h3>Regional Support</h3>
                 <p>Support regional and international security efforts when needed.</p>
             </div>
-
             <div class="objective-box">
                 <h3>Defense Development</h3>
                 <p>Develop advanced defense capabilities and modern military systems.</p>
@@ -226,14 +206,12 @@
     </div>
 </section>
 
-
 <section class="operate-section">
     <div class="operate-wrap">
         <div class="operate-side">
             <span class="operate-label">Structure</span>
             <h2 class="operate-title">How the Military System Operates</h2>
         </div>
-
         <div class="operate-box">
             <p>
                 The Saudi military system operates through a unified command structure that ensures
@@ -245,25 +223,20 @@
 </section>
 
 <section class="vision-section">
-
     <div class="vision-wrap">
         <div class="vision-content">
-
             <span class="vision-badge">Vision 2030</span>
             <h2 class="vision-title">Modern Development and Vision 2030</h2>
-
             <p class="vision-text">
                 As part of Saudi Vision 2030, the military system is undergoing continuous development
                 through modernization, advanced technologies, and the localization of military industries.
                 These efforts aim to strengthen defense capabilities and increase self-sufficiency.
             </p>
         </div>
-
         <div class="vision-image">
             <img src="{% static 'images/vision.jpg' %}" alt="Vision 2030">
         </div>
     </div>
-
 </section>
 
 
@@ -273,7 +246,6 @@
         <p class="role-intro">
             The Saudi Armed Forces also contribute to wider humanitarian and international efforts.
         </p>
-
         <div class="role-grid">
             <div class="role-card">
                 <h3>Humanitarian Missions</h3>
@@ -293,16 +265,6 @@
     </div>
 </section>
 
-
-
-
-
-<!-- --------------------------- -->
-
-
-
-
-<!-- Closing Section -->
 <section class="closing-section">
     <div class="closing-content">
         <h2>A Unified System for National Defense</h2>
@@ -313,14 +275,5 @@
         </p>
     </div>
 </section>
-
-
 </div>
-<script>window.onload = () => {
-        const bar = document.querySelector('.info-bar');
-        // تأخير بسيط ليعطي شعور بالاحترافية
-        setTimeout(() => {
-            bar.classList.add('show');
-        }, 500);
-    };</script>
 {% endblock %}

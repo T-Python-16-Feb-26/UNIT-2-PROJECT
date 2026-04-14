@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    if (window.innerWidth <= 768 && dropdown && dropdownLink) {
+    if (dropdown && dropdownLink) {
         dropdownLink.addEventListener("click", function (e) {
-            e.preventDefault();
-            dropdown.classList.toggle("active");
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle("active");
+            }
         });
     }
 });
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function showSlide(index) {
         slides.style.transform = `translateX(-${index * 100}%)`;
 
-        videos.forEach((video, i) => {
+        videos.forEach((video) => {
             video.pause();
             video.currentTime = 0;
             video.muted = true;
@@ -55,6 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
         currentSlide = (currentSlide + 1) % totalSlides;
         showSlide(currentSlide);
     }
+
+    window.goToSlide = function (index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+    };
+
+    window.moveSlide = function (direction) {
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        showSlide(currentSlide);
+    };
 
     videos.forEach((video) => {
         video.addEventListener("ended", nextSlide);
@@ -99,17 +118,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // reveal items
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".reveal-up, .reveal-drop, .reveal-rise, .reveal-card");
+    const items = document.querySelectorAll(
+        ".reveal, .naval-reveal, .missile-reveal, .reveal-up, .reveal-drop, .reveal-rise, .reveal-card, .reveal-left, .reveal-right"
+    );
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
+                if (
+                    entry.target.classList.contains("reveal") ||
+                    entry.target.classList.contains("naval-reveal") ||
+                    entry.target.classList.contains("missile-reveal")
+                ) {
+                    entry.target.classList.add("active");
+                } else {
+                    entry.target.classList.add("is-visible");
+                }
+
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.2
+        threshold: 0.15
     });
 
     items.forEach((item) => {

@@ -1,17 +1,15 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %} Saudi Military System {% endblock %}
+{% block title %} Royal Saudi Air Forces {% endblock %}
 
 {% block content %}
 <div class="air">
-    <!-- header Section start  -->
     <header class="air-hero">
         <video autoplay muted loop playsinline class="air-hero-video">
             <source src="{% static 'videos/air-video.mp4' %}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
         <div class="air-hero-content">
             <span class="section-badge">Air Power</span>
             <h1>Royal Saudi Air Force</h1>
@@ -23,19 +21,13 @@
             <a href="#over" class="hero-btn">Explore More</a>
         </div>
     </header>
-    <!-- header Section end  -->
 
-
-    <!-- overview section start-->
     <section class="overview-section" id="over">
-
         <div class="overview-container">
-
             <div class="overview-header">
                 <span class="section-badge">Overview</span>
                 <h2>Royal Saudi Air Force</h2>
             </div>
-
             <p class="overview-text">
                 The Royal Saudi Air Force (RSAF) is one of the main branches of the Saudi Armed Forces,
                 responsible for protecting the Kingdom’s airspace and ensuring national security.
@@ -43,14 +35,12 @@
                 military organization equipped with modern aircraft, sophisticated defense systems,
                 and highly trained personnel.
             </p>
-
             <p class="overview-text">
                 The RSAF plays a critical role in maintaining air superiority, conducting surveillance
                 and reconnaissance missions, and supporting joint military operations across all branches
                 of the armed forces. It operates a wide range of advanced fighter jets, support aircraft,
                 and radar systems to ensure effective control of the Kingdom’s airspace.
             </p>
-
             <p class="overview-text">
                 In addition to its defensive role, the Air Force contributes to regional stability and
                 participates in strategic operations when required. Continuous development, training,
@@ -61,22 +51,16 @@
                 <img src="{% static 'images/air2.jpg' %}" alt="air force">
             </div>
         </div>
-
     </section>
-    <!-- overview section end-->
 
-    <!-- leader -->
-    <section class="content-section">
-        <div class="content-container">
-
-            <div class="content-header">
-                <span class="section-badge">Leadership</span>
+    <section class="air-content-section">
+        <div class="air-content-container">
+            <div class="air-content-header">
+                <span class="air-section-badge">Leadership</span>
                 <h2>Military Leadership</h2>
             </div>
-
-            <div class="leadership-wrapper">
-
-                <div class="content-text">
+            <div class="air-leadership-wrapper">
+                <div class="air-content-text">
                     <ul>
                         <li>
                             <strong>Lieutenant General Turki bin Bandar bin Abdulaziz</strong>
@@ -86,18 +70,13 @@
                         </li>
                     </ul>
                 </div>
-
-                <div class="leader-image">
+                <div class="air-leader-image">
                     <img src="{% static 'images/air-leader.jpg' %}" alt="Commander">
                 </div>
-
             </div>
-
         </div>
     </section>
 
-
-    <!-- mission Section start-->
     <section class="air-section">
         <div class="air-container">
             <div class="air-text">
@@ -109,23 +88,19 @@
                     operations and continuous readiness.
                 </p>
             </div>
-
             <div class="air-cards">
                 <div class="air-card">
                     <h3>Airspace Protection</h3>
                     <p>Defending the Kingdom against aerial threats.</p>
                 </div>
-
                 <div class="air-card">
                     <h3>Surveillance</h3>
                     <p>Monitoring airspace using advanced radar systems.</p>
                 </div>
-
                 <div class="air-card">
                     <h3>Combat Operations</h3>
                     <p>Executing air missions to support national defense.</p>
                 </div>
-
                 <div class="air-card">
                     <h3>Support Missions</h3>
                     <p>Providing logistics and support to other military branches.</p>
@@ -133,14 +108,9 @@
             </div>
         </div>
     </section>
-    <!-- mission Section end-->
 
-
-
-    <!-- structure section start -->
     <section class="structure-section">
         <div class="structure-container">
-
             <div class="structure-intro">
                 <span class="structure-badge">Organization & Structure</span>
                 <h2>Air Force Structure</h2>
@@ -150,11 +120,8 @@
                     and mission effectiveness.
                 </p>
             </div>
-
             <div class="structure-layout">
-
                 <div class="structure-line"></div>
-
                 <div class="structure-item">
                     <h3>Air Bases</h3>
                     <p>
@@ -162,29 +129,22 @@
                         operational coverage.
                     </p>
                 </div>
-
                 <div class="structure-item">
                     <h3>Combat Units</h3>
                     <p>
                         Fighter squadrons and mission units carry out defense, patrol, and tactical operations.
                     </p>
                 </div>
-
                 <div class="structure-item">
                     <h3>Support & Logistics</h3>
                     <p>
                         Maintenance, supply, and coordination systems ensure continuous readiness and efficiency.
                     </p>
                 </div>
-
             </div>
-
         </div>
     </section>
-    <!-- structure section end -->
 
-
-    <!-- aircraft Section start-->
     <section class="air-section aircraft-section" id="aircraft">
         <div class="air-container">
             <div class="air-text center-text">
@@ -196,10 +156,7 @@
                     support national defense strategies.
                 </p>
             </div>
-
             <div class="equipment-grid">
-
-                <!-- Card 1 -->
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
                         <img src="{% static 'images/F-15SA.jpg' %}" alt=" F-15SA">
@@ -213,8 +170,6 @@
                         <span class="equipment-tag">Multi-role Fighter</span>
                     </div>
                 </article>
-
-                <!-- Card 2 -->
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
                         <img src="{% static 'images/eurofighter-typhoon.jpg' %}" alt="Eurofighter Typhoon">
@@ -228,8 +183,6 @@
                         <span class="equipment-tag">Air Superiority & Ground Attack</span>
                     </div>
                 </article>
-
-                <!-- Card 3 -->
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
                         <img src="{% static 'images/Tornado.jpg' %}" alt="Tornado">
@@ -243,8 +196,6 @@
                         <span class="equipment-tag">Tactical Strike</span>
                     </div>
                 </article>
-
-                <!-- Card 4 -->
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
                         <img src="{% static 'images/E-3A AWACS.jpg' %}" alt="E-3A AWACS">
@@ -258,8 +209,6 @@
                         <span class="equipment-tag">Early Warning & Control</span>
                     </div>
                 </article>
-
-                <!-- Card 5 -->
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
                         <img src="{% static 'images/A330-MRTT.jpg' %}" alt="A330 MRTT">
@@ -273,8 +222,6 @@
                         <span class="equipment-tag">Refueling & Transport</span>
                     </div>
                 </article>
-
-                <!-- Card 6 -->
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
                         <img src="{% static 'images/c130.jpg' %}" alt="C-130">
@@ -288,43 +235,17 @@
                         <span class="equipment-tag">Military Transport</span>
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
-    <!-- aircraft Section start-->
 
-
-    <!-- script -->
-    <script>const reveals = document.querySelectorAll(".reveal");
-
-        function revealOnScroll() {
-            const triggerBottom = window.innerHeight * 0.85;
-
-            reveals.forEach((item) => {
-                const itemTop = item.getBoundingClientRect().top;
-
-                if (itemTop < triggerBottom) {
-                    item.classList.add("active");
-                }
-            });
-        }
-
-        window.addEventListener("scroll", revealOnScroll);
-        window.addEventListener("load", revealOnScroll);</script>
-    <!-- script -->
-
-
-    <!-- history section start-->
     <section class="history-section">
         <div class="history-container">
             <div class="history-header">
                 <span class="history-badge">Military History</span>
                 <h2>History of the Royal Saudi Air Force</h2>
             </div>
-
             <div class="timeline">
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -336,7 +257,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -348,7 +268,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -360,7 +279,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -372,14 +290,10 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- history section end-->
 
-
-    <!-- vision Section start-->
     <section class="vision-section">
         <div class="vision-container">
             <div class="vision-header">
@@ -390,7 +304,6 @@
                     operational readiness, adopting advanced technologies, and strengthening local defense capabilities.
                 </p>
             </div>
-
             <div class="vision-cards">
                 <div class="vision-card">
                     <h3>Modernization</h3>
@@ -398,14 +311,12 @@
                         Expanding the use of advanced aircraft, smart systems, and modern defense technologies.
                     </p>
                 </div>
-
                 <div class="vision-card">
                     <h3>Training & Skills</h3>
                     <p>
                         Investing in highly qualified personnel through specialized training and continuous development.
                     </p>
                 </div>
-
                 <div class="vision-card">
                     <h3>Local Capability</h3>
                     <p>
@@ -415,14 +326,9 @@
             </div>
         </div>
     </section>
-    <!-- vision Section end-->
 
-
-    <!-- achievements section start-->
     <section class="achievements-section">
-
         <div class="achievements-container">
-
             <div class="achievements-header">
                 <span class="achievements-badge">Major Achievements</span>
                 <h2>Key Milestones & Achievements</h2>
@@ -431,71 +337,57 @@
                     advanced operations, and continuous development.
                 </p>
             </div>
-
             <div class="achievements-cards">
-
                 <div class="achievement-card">
                     <h3>Air Superiority</h3>
                     <p>
                         Successfully maintaining control of national airspace using advanced fighter aircraft and defense systems.
                     </p>
                 </div>
-
                 <div class="achievement-card">
                     <h3>Modern Fleet</h3>
                     <p>
                         Operating one of the most advanced air fleets in the region, including modern fighter jets and support aircraft.
                     </p>
                 </div>
-
                 <div class="achievement-card">
                     <h3>Advanced Training</h3>
                     <p>
                         Developing highly skilled pilots and personnel through continuous training programs and international cooperation.
                     </p>
                 </div>
-
                 <div class="achievement-card">
                     <h3>Technology Integration</h3>
                     <p>
                         Integrating cutting-edge technologies such as radar systems, drones, and cybersecurity solutions.
                     </p>
                 </div>
-
             </div>
-
         </div>
-
     </section>
-    <!-- achievements section end-->
 
-
-
-    <!-- <section class="content-section">
-            <div class="content-container">
-
-                <div class="content-header">
-                    <span class="section-badge">Challenges</span>
-                    <h2>Geographical & Strategic Challenges</h2>
-                </div>
-
-                <div class="content-text">
-                    <p>
-                        The Royal Saudi Air Force operates across a vast and strategically important
-                        airspace, requiring constant readiness to address geographical and regional challenges.
-                    </p>
-
-                    <ul class="content-list">
-                        <li>Monitoring and securing a large airspace that spans diverse terrains including deserts, mountains, and coastlines.</li>
-                        <li>Responding rapidly to potential aerial threats across long distances.</li>
-                        <li>Protecting critical infrastructure such as oil facilities and key economic zones.</li>
-                        <li>Ensuring airspace security in a region with dynamic geopolitical conditions.</li>
-                        <li>Operating efficiently under extreme weather conditions such as heat and sandstorms.</li>
-                    </ul>
-                </div>
-
+    <section class="air-challenges-section">
+        <div class="air-challenges-container">
+            <div class="air-challenges-header">
+                <span class="section-badge">Challenges</span>
+                <h2>Geographical & Strategic Challenges</h2>
             </div>
-        </section> -->
-
+            <div class="air-challenges-content">
+                <p class="air-challenges-intro">
+                    The Royal Saudi Air Force operates across vast airspace, requiring continuous monitoring,
+                    rapid response capabilities, and advanced coordination to ensure national security
+                    and effective air defense operations.
+                </p>
+                <ul class="air-challenges-list">
+                    <li>Securing a vast and complex airspace across the Kingdom.</li>
+                    <li>Detecting and responding rapidly to aerial threats.</li>
+                    <li>Maintaining advanced aircraft and high-tech defense systems.</li>
+                    <li>Coordinating joint operations with land and naval forces.</li>
+                    <li>Adapting to modern warfare technologies such as drones and cyber threats.</li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}

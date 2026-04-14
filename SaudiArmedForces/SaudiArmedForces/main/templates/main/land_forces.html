@@ -5,13 +5,11 @@
 
 {% block content %}
 <div class="land">
-    <!-- hero -->
     <header class="land-hero">
         <video autoplay muted loop playsinline class="land-hero-video">
             <source src="{% static 'videos/land-video.mp4' %}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
         <div class="land-hero-content">
             <span class="section-badge">Land Power</span>
             <h1>Royal Saudi Land Forces</h1>
@@ -23,52 +21,40 @@
             <a href="#overview" class="hero-btn">Explore More</a>
         </div>
     </header>
-
-    <!-- overview -->
     <section class="overview-section" id="overview">
         <div class="overview-container">
-
             <div class="overview-header">
                 <span class="section-badge">Overview</span>
                 <h2 class="overview-title">Royal Saudi Land Forces</h2>
             </div>
-
             <div class="overview-body">
                 <div class="overview-image">
                     <img src="{% static 'images/land-image.png' %}" alt="Royal Saudi Land Forces">
                 </div>
-
                 <div class="overview-content">
                     <div class="overview-texts">
                         <p class="overview-text">
                             The Royal Saudi Land Forces are one of the main branches of the Saudi Armed Forces and represent the first organized military force in the Kingdom. They are responsible for defending the nation’s territory, protecting its interests from external threats, and carrying out ground military operations with strength, discipline, and coordination.
                         </p>
-
                         <p class="overview-text">
                             Over the years, the Land Forces have evolved into a modern and advanced military branch, equipped with sophisticated armored vehicles, artillery systems, tactical weapons, and specialized support units that ensure operational readiness across various environments. They are strategically distributed across eight military regions covering the entire geographical scope of Saudi Arabia, and consist of regional commands, independent branches, colleges, institutes, advanced training schools, formations, and administrative bodies.
                         </p>
-
                         <p class="overview-text">
                             In addition to border defense, the Land Forces play a vital role in strategic planning, rapid deployment, and joint operations with other branches of the armed forces. They also work in close coordination with national entities to enhance overall security, while optimizing the use of resources through a merit-based operational environment. This integration contributes significantly to maintaining national stability and strengthening regional security.
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- leader -->
     <section class="content-section">
         <div class="content-container">
-
             <div class="content-header">
                 <span class="section-badge">Leadership</span>
                 <h2>Military Leadership</h2>
             </div>
-
             <div class="leadership-wrapper">
-
                 <div class="content-text">
                     <ul>
                         <li>
@@ -80,18 +66,13 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="leader-image">
                     <img src="{% static 'images/land-leader.jpeg' %}" alt="Commander">
                 </div>
-
             </div>
-
         </div>
     </section>
 
-
-    <!-- mission -->
     <section class="land-section">
         <div class="land-container">
             <div class="land-text">
@@ -103,23 +84,19 @@
                     precision and efficiency.
                 </p>
             </div>
-
             <div class="land-cards">
                 <div class="land-card">
                     <h3>Border Protection</h3>
                     <p>Securing land borders and defending national territory from threats.</p>
                 </div>
-
                 <div class="land-card">
                     <h3>Ground Operations</h3>
                     <p>Executing tactical and strategic land missions in different combat situations.</p>
                 </div>
-
                 <div class="land-card">
                     <h3>Rapid Response</h3>
                     <p>Deploying forces quickly to maintain readiness and operational control.</p>
                 </div>
-
                 <div class="land-card">
                     <h3>Joint Support</h3>
                     <p>Supporting other military branches through coordinated field operations.</p>
@@ -128,10 +105,8 @@
         </div>
     </section>
 
-    <!-- structure -->
     <section class="structure-section">
         <div class="structure-container">
-
             <div class="structure-intro">
                 <span class="section-badge">Organization & Structure</span>
                 <h2>Land Forces Structure</h2>
@@ -141,10 +116,8 @@
                     work together to ensure combat effectiveness and continuous readiness.
                 </p>
             </div>
-
             <div class="structure-layout">
                 <div class="structure-line"></div>
-
                 <div class="structure-item">
                     <h3>Armored Units</h3>
                     <p>
@@ -152,7 +125,6 @@
                         and frontline battlefield support.
                     </p>
                 </div>
-
                 <div class="structure-item">
                     <h3>Infantry Forces</h3>
                     <p>
@@ -160,7 +132,6 @@
                         territorial defense, and field operations.
                     </p>
                 </div>
-
                 <div class="structure-item">
                     <h3>Support & Logistics</h3>
                     <p>
@@ -172,7 +143,6 @@
         </div>
     </section>
 
-    <!-- equipment -->
     <section class="land-section equipment-section" id="equipment">
         <div class="land-container">
             <div class="land-text center-text">
@@ -183,9 +153,7 @@
                     firepower, battlefield protection, and mission effectiveness.
                 </p>
             </div>
-
             <div class="equipment-table">
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/M1A2Abram.jpg' %}" alt="M1A2 Abrams">
@@ -196,7 +164,6 @@
                     </div>
                     <span class="equipment-type">Main Battle Tank</span>
                 </article>
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/BradleyIFV.jpg' %}" alt="Bradley IFV">
@@ -207,7 +174,6 @@
                     </div>
                     <span class="equipment-type">Infantry Vehicle</span>
                 </article>
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/howitzer.jpg' %}" alt="Howitzer">
@@ -218,7 +184,6 @@
                     </div>
                     <span class="equipment-type">Artillery System</span>
                 </article>
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/humvee.jpg' %}" alt="Humvee">
@@ -229,7 +194,6 @@
                     </div>
                     <span class="equipment-type">Light Tactical Vehicle</span>
                 </article>
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/M109-Paladin.jpg' %}" alt="M109 Paladin">
@@ -241,7 +205,6 @@
                     </div>
                     <span class="equipment-type">Artillery System</span>
                 </article>
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/TOW Missile System.jpg' %}" alt="TOW Missile System">
@@ -253,7 +216,6 @@
                     </div>
                     <span class="equipment-type">Anti-Tank Weapon</span>
                 </article>
-
                 <article class="equipment-row reveal">
                     <div class="equipment-thumb">
                         <img src="{% static 'images/(MLRS).jpg' %}" alt="(MLRS)">
@@ -269,35 +231,13 @@
         </div>
     </section>
 
-    <!-- script -->
-    <script>
-        const reveals = document.querySelectorAll(".reveal");
-
-        function revealOnScroll() {
-            const triggerBottom = window.innerHeight * 0.85;
-
-            reveals.forEach((item) => {
-                const itemTop = item.getBoundingClientRect().top;
-                if (itemTop < triggerBottom) {
-                    item.classList.add("active");
-                }
-            });
-        }
-
-        window.addEventListener("scroll", revealOnScroll);
-        window.addEventListener("load", revealOnScroll);
-    </script>
-
-    <!-- history -->
     <section class="history-section">
         <div class="history-container">
             <div class="history-header">
                 <span class="section-badge">Military History</span>
                 <h2>History of the Royal Saudi Land Forces</h2>
             </div>
-
             <div class="timeline">
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -311,7 +251,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -324,7 +263,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -337,7 +275,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -351,7 +288,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -364,7 +300,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -376,7 +311,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -394,7 +328,6 @@
         </div>
     </section>
 
-    <!-- vision -->
     <section class="vision-section">
         <div class="vision-container">
             <div class="vision-header">
@@ -405,7 +338,6 @@
                     military readiness, modernizing defense systems, and supporting national defense industries.
                 </p>
             </div>
-
             <div class="vision-cards">
                 <div class="vision-card">
                     <h3>Modernization</h3>
@@ -413,14 +345,12 @@
                         Upgrading armored vehicles, support systems, and battlefield technology to meet modern military needs.
                     </p>
                 </div>
-
                 <div class="vision-card">
                     <h3>Training & Skills</h3>
                     <p>
                         Developing highly qualified personnel through advanced field training and professional military programs.
                     </p>
                 </div>
-
                 <div class="vision-card">
                     <h3>National Capability</h3>
                     <p>
@@ -431,7 +361,6 @@
         </div>
     </section>
 
-    <!-- achievements -->
     <section class="achievements-section">
         <div class="achievements-container">
 
@@ -443,7 +372,6 @@
                     strong field readiness, and continuous operational development.
                 </p>
             </div>
-
             <div class="achievements-cards">
                 <div class="achievement-card">
                     <h3>Operational Readiness</h3>
@@ -451,21 +379,18 @@
                         Maintaining high ground readiness and strong defensive capabilities across the Kingdom.
                     </p>
                 </div>
-
                 <div class="achievement-card">
                     <h3>Advanced Equipment</h3>
                     <p>
                         Strengthening land defense through modern armored systems and military vehicles.
                     </p>
                 </div>
-
                 <div class="achievement-card">
                     <h3>Professional Training</h3>
                     <p>
                         Building highly capable soldiers through continuous exercises and specialized programs.
                     </p>
                 </div>
-
                 <div class="achievement-card">
                     <h3>Strategic Development</h3>
                     <p>
@@ -476,30 +401,25 @@
         </div>
     </section>
 
-    <!-- <section class="land-challenges-section">
+    <section class="land-challenges-section">
         <div class="land-challenges-container">
-
             <div class="land-challenges-header">
                 <span class="section-badge">Challenges</span>
                 <h2>Geographical & Strategic Challenges</h2>
             </div>
-
             <div class="land-challenges-content">
                 <p class="land-challenges-intro">
                     The Kingdom of Saudi Arabia spans over two million square kilometers,
                     making the mission of the Royal Saudi Land Forces highly complex due to
                     geographical and strategic factors.
                 </p>
-
                 <ul class="land-challenges-list">
                     <li>Extensive borders with countries facing varying political conditions.</li>
                     <li>Protection of vital oil facilities that are among the most important in the world.</li>
                     <li>Safeguarding Makkah and Madinah, which hold great religious and political significance.</li>
                 </ul>
             </div>
-
         </div>
-    </section> -->
-
+    </section>
 </div>
 {% endblock %}

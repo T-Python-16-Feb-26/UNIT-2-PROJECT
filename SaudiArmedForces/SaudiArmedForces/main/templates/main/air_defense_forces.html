@@ -3,7 +3,6 @@
 {% block title %} Saudi Air Defense Forces {% endblock %}
 {% block content %}
 <div class="air-defense-page">
-    <!-- hero start -->
     <header class="defense-hero">
         <video autoplay muted loop playsinline class="defense-hero-video">
             <source src="{% static 'videos/air-defence.mp4' %}" type="video/mp4">
@@ -20,9 +19,7 @@
             <a href="#over" class="hero-btn">Discover More</a>
         </div>
     </header>
-    <!-- hero end -->
 
-    <!-- overview start -->
     <section class="overview-section" id="over">
         <div class="overview-container">
             <div class="overview-header">
@@ -52,9 +49,7 @@
             </div>
         </div>
     </section>
-    <!-- overview end -->
 
-    <!-- leadership start -->
     <section class="content-section">
         <div class="content-container">
             <div class="content-header">
@@ -81,9 +76,7 @@
             </div>
         </div>
     </section>
-    <!-- leadership end -->
 
-    <!-- mission start -->
     <section class="defense-section">
         <div class="defense-container">
             <div class="defense-text">
@@ -115,9 +108,7 @@
             </div>
         </div>
     </section>
-    <!-- mission end -->
 
-    <!-- structure start -->
     <section class="structure-section">
         <div class="structure-container">
             <div class="structure-intro">
@@ -152,9 +143,7 @@
             </div>
         </div>
     </section>
-    <!-- structure end -->
 
-    <!-- defense systems start -->
     <section class="defense-section systems-section">
         <div class="defense-container">
             <div class="defense-text center-text">
@@ -221,9 +210,7 @@
             </div>
         </div>
     </section>
-    <!-- defense systems end -->
 
-    <!-- history start -->
     <section class="history-section">
         <div class="history-container">
             <div class="history-header">
@@ -278,9 +265,7 @@
             </div>
         </div>
     </section>
-    <!-- history end -->
 
-    <!-- vision start -->
     <section class="vision-section">
         <div class="vision-container">
             <div class="vision-header">
@@ -313,9 +298,7 @@
             </div>
         </div>
     </section>
-    <!-- vision end -->
 
-    <!-- achievements start -->
     <section class="achievements-section">
         <div class="achievements-container">
             <div class="achievements-header">
@@ -354,48 +337,28 @@
             </div>
         </div>
     </section>
-    <!-- achievements end -->
 
-    <!-- challenges start
-    <section class="content-section">
-        <div class="content-container">
-            <div class="content-header">
-                <span class="section-badge">Challenges</span>
-                <h2>Strategic & Operational Challenges</h2>
+    <section class="air-defense-challenges-section">
+        <div class="air-defense-challenges-container">
+            <div class="air-defense-challenges-header">
+                <span class="air-defense-section-badge">Challenges</span>
+                <h2>Air Defense & Strategic Challenges</h2>
             </div>
-
-            <div class="content-text">
-                <p>
-                    The mission of the Royal Saudi Air Defense Forces requires constant vigilance,
-                    advanced coordination, and rapid response due to the speed and complexity of
-                    modern aerial threats.
+            <div class="air-defense-challenges-content">
+                <p class="air-defense-challenges-intro">
+                    The Royal Saudi Air Defense Forces operate in a demanding security environment that requires
+                    constant readiness, rapid interception capabilities, and strong coordination to protect the
+                    Kingdom’s airspace, vital facilities, and strategic locations.
                 </p>
-
-                <ul class="content-list">
-                    <li>Monitoring wide airspace and detecting threats in real time.</li>
-                    <li>Protecting major cities, vital facilities, and strategic national sites.</li>
-                    <li>Maintaining integration between radar systems, missile units, and command centers.</li>
+                <ul class="air-defense-challenges-list">
+                    <li>Monitoring and defending wide airspace against fast-moving aerial threats.</li>
+                    <li>Protecting vital infrastructure, strategic facilities, and sensitive national locations.</li>
+                    <li>Responding quickly to missiles, drones, and other advanced air attack systems.</li>
+                    <li>Maintaining high operational readiness of radar, interception, and command systems.</li>
+                    <li>Coordinating integrated defense operations with other branches of the armed forces.</li>
                 </ul>
             </div>
         </div>
-    </section> -->
-    <!-- challenges end -->
-
-    <!-- reveal script -->
-    <script>
-        const reveals = document.querySelectorAll(".reveal");
-        function revealOnScroll() {
-            const triggerBottom = window.innerHeight * 0.85;
-            reveals.forEach((item) => {
-                const itemTop = item.getBoundingClientRect().top;
-                if (itemTop < triggerBottom) {
-                    item.classList.add("active");
-                }
-            });
-        }
-        window.addEventListener("scroll", revealOnScroll);
-        window.addEventListener("load", revealOnScroll);
-    </script>
-    <!-- reveal script -->
+    </section>
 </div>
 {% endblock %}

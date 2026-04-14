@@ -3,7 +3,6 @@
 {% block title %} Royal Saudi Naval Forces {% endblock %}
 {% block content %}
 <div class="naval-page">
-    <!-- hero -->
     <header class="naval-hero">
         <video autoplay muted loop playsinline class="naval-hero-video">
             <source src="{% static 'videos/naval-video.mp4' %}" type="video/mp4">
@@ -20,7 +19,7 @@
             <a href="#mission" class="naval-hero-btn">Explore More</a>
         </div>
     </header>
-    <!-- overview -->
+
     <section class="naval-overview-section">
         <div class="naval-overview-container">
             <div class="naval-overview-header">
@@ -53,7 +52,7 @@
             </div>
         </div>
     </section>
-    <!-- leadership -->
+
     <section class="naval-content-section">
         <div class="naval-content-container">
             <div class="naval-content-header">
@@ -77,7 +76,7 @@
             </div>
         </div>
     </section>
-    <!-- mission -->
+
     <section class="naval-section" id="mission">
         <div class="naval-container">
             <div class="naval-text">
@@ -109,7 +108,7 @@
             </div>
         </div>
     </section>
-    <!-- structure -->
+
     <section class="naval-structure-section">
         <div class="naval-structure-container">
             <div class="naval-structure-intro">
@@ -147,7 +146,7 @@
             </div>
         </div>
     </section>
-    <!-- equipment -->
+
     <section class="naval-section naval-equipment-section" id="equipment">
         <div class="naval-container">
             <div class="naval-text naval-center-text">
@@ -222,7 +221,7 @@
             </div>
         </div>
     </section>
-    <!-- history -->
+
     <section class="naval-history-section">
         <div class="naval-history-container">
             <div class="naval-history-header">
@@ -277,7 +276,7 @@
             </div>
         </div>
     </section>
-    <!-- vision -->
+
     <section class="naval-vision-section">
         <div class="naval-vision-container">
             <div class="naval-vision-header">
@@ -311,7 +310,7 @@
             </div>
         </div>
     </section>
-    <!-- achievements -->
+
     <section class="naval-achievements-section">
         <div class="naval-achievements-container">
             <div class="naval-achievements-header">
@@ -350,40 +349,29 @@
             </div>
         </div>
     </section>
-    <!-- challenges -->
-    <!-- <section class="naval-content-section">
-        <div class="naval-content-container">
-            <div class="naval-content-header">
+
+    <section class="naval-challenges-section">
+        <div class="naval-challenges-container">
+
+            <div class="naval-challenges-header">
                 <span class="naval-section-badge">Challenges</span>
                 <h2>Maritime & Strategic Challenges</h2>
             </div>
-            <div class="naval-content-text">
-                <p>
-                    Naval operations require constant readiness and strategic coordination
-                    due to the wide maritime domain and the importance of securing national waters.
+            <div class="naval-challenges-content">
+                <p class="naval-challenges-intro">
+                    The Royal Saudi Naval Forces operate across vast maritime regions, requiring advanced surveillance,
+                    rapid response capabilities, and strong coordination to secure territorial waters, protect shipping
+                    routes, and ensure maritime stability.
                 </p>
-                <ul class="naval-content-list">
-                    <li>Protecting long coastlines and maritime borders.</li>
-                    <li>Securing major sea lanes and strategic maritime routes.</li>
-                    <li>Maintaining rapid response to evolving maritime threats.</li>
+                <ul class="naval-challenges-list">
+                    <li>Securing long coastlines across the Red Sea and Arabian Gulf.</li>
+                    <li>Protecting vital maritime trade routes and energy supply lines.</li>
+                    <li>Monitoring and responding to naval and underwater threats.</li>
+                    <li>Maintaining readiness of fleets, vessels, and naval defense systems.</li>
+                    <li>Coordinating joint operations with air and land defense forces.</li>
                 </ul>
             </div>
         </div>
-    </section> -->
-    <!-- script -->
-    <script>
-        const navalReveals = document.querySelectorAll(".naval-reveal");
-        function navalRevealOnScroll() {
-            const triggerBottom = window.innerHeight * 0.85;
-            navalReveals.forEach((item) => {
-                const itemTop = item.getBoundingClientRect().top;
-                if (itemTop < triggerBottom) {
-                    item.classList.add("naval-active");
-                }
-            });
-        }
-        window.addEventListener("scroll", navalRevealOnScroll);
-        window.addEventListener("load", navalRevealOnScroll);
-    </script>
+    </section>
 </div>
 {% endblock %}

@@ -14,5 +14,4 @@ urlpatterns = [
     path("heroes/", views.heroes_view, name="heroes_view"),
     path("technology/", views.technology_view, name="technology_view"),
     path("mode/<mode>/", views.mode_view,name="mode_view"),
-
 ]
