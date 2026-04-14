@@ -28,6 +28,49 @@
             <li><a href="{% url 'main:folk_arts_view' %}" class="links-nav">{% trans "Performing Arts" %}</a></li>
             <li><a href="{% url 'main:traditions_view' %}" class="links-nav">{% trans "Customs & Traditions" %}</a></li>
         </ul>
+        <div class="nav-settings">
+
+           
+            <button class="settings-btn">
+                <span class="material-symbols-outlined">more_vert</span>
+            </button>
+
+            
+            <div class="settings-menu">
+
+               
+                <div class="toggle">
+
+                    <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}" 
+                    class="mode light {% if request.COOKIES.mode != 'dark' %}active{% endif %}">
+                        <span class="material-symbols-outlined">light_mode</span>
+                    </a>
+
+                    <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}" 
+                    class="mode dark {% if request.COOKIES.mode == 'dark' %}active{% endif %}">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </a>
+
+                    <span class="slider"></span>
+
+                 </div>
+
+            
+                <form action="{% url 'set_language' %}" method="post" class="lang-switch">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+
+                    {% get_current_language as LANGUAGE_CODE %}
+
+                    {% if LANGUAGE_CODE == 'ar' %}
+                        <button type="submit" name="language" value="en">English</button>
+                    {% else %}
+                        <button type="submit" name="language" value="ar">العربية</button>
+                    {% endif %}
+                </form>
+
+            </div>
+        </div>
     </nav>
 
     {% block header %}
@@ -54,32 +97,7 @@
                 </p>
             </div>
 
-            <div class="footer-center">
-                <h5>{% trans "Settings" %}</h5>
-                <div class="toggle">
-                    <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}" class="mode light {% if request.COOKIES.mode != 'dark' %}active{% endif %}">
-                        <span class="material-symbols-outlined">light_mode</span>
-                    </a>
-                    <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}" class="mode dark {% if request.COOKIES.mode == 'dark' %}active{% endif %}">
-                        <span class="material-symbols-outlined">dark_mode</span>
-                    </a>
-                    <span class="slider"></span>
-                </div>
 
-                <form action="{% url 'set_language' %}" method="post" class="lang-switch">
-                    {% csrf_token %}
-                    <input type="hidden" name="next" value="{{ request.path }}">
-
-                    {% get_current_language as LANGUAGE_CODE %}
-
-                    {% if LANGUAGE_CODE == 'ar' %}
-                        <button type="submit" name="language" value="en">English</button>
-                    {% else %}
-                        <button type="submit" name="language" value="ar"> العربية</button>
-                    {% endif %}
-                </form>
-
-            </div>
 
             <div class="footer-links">
                 <div class="footer-link">

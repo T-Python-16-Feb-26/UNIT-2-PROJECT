@@ -32,6 +32,7 @@ body{
     background: rgba(0,0,0,0.4);
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 
@@ -70,6 +71,43 @@ body{
     z-index: -1;
 }
 
+.nav-settings {
+    position: relative;
+}
+
+
+.settings-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3fa37c;
+    font-size: 26px;
+}
+
+.settings-menu {
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #F5E9D8;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 100px;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.nav-settings:focus-within .settings-menu {
+    display: flex;
+}
+
+
+.dark .settings-menu {
+    background: #2c2c2c;
+}
+
 
 
 /*nav bar design*/
@@ -89,7 +127,7 @@ body{
 }
 
 .nav-bar .logo{
-    width: 14vh;
+    width: 13vh;
 }
 
 
@@ -256,8 +294,8 @@ footer{
 /*Dark mode*/
 .toggle{
     position: relative;
-    width: 80px;
-    height: 40px;
+    width: 75px;
+    height: 33px;
     background: #6E5034;
     border-radius: 50px;
     display: flex;
@@ -270,35 +308,41 @@ footer{
     text-align: center;
     z-index: 2;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: #3fa37c;
 }
 
 
 .toggle .slider{
     position: absolute;
-    width: 35px;
-    height: 35px;
-    background: #CFAB8D;
+    width: 28px;
+    height: 28px;
+    background: #F5E9D8;
     border-radius: 50%;
     left: 5px;
     transition: 0.3s;
-}
+    pointer-events: none; }
 
 
 .toggle .dark.active ~ .slider{
     left: 40px;
-    background: #c19a6b;
 }
 
-
 .toggle .light.active ~ .slider{
-    left: 5px;
+    left: 8px
 }
 
 body.dark .toggle{
-    background: #333;
+    background: #444;
 }
 
+body.dark .toggle .slider{
+    background: #2c2c2c;
+}
 
 
 body.dark{
@@ -363,7 +407,7 @@ body.dark p{
 }
 .lang-switch button {
     background: #6E5034;
-    color: #fff;
+    color: #CFC7B8;
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
@@ -480,40 +524,24 @@ html[lang="ar"] body {
 
 html[dir="rtl"] body {
     direction: rtl;
+    text-align: center;
+}
+
+
+
+
+
+html[dir="rtl"] .title-header{
     text-align: right;
 }
 
 
-html[dir="rtl"] .nav-bar {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-list {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-bar .nav-list li {
-    margin-left: 0;
-    margin-right: 15px;
+html[dir="rtl"] .intro,
+html[dir="rtl"] .box-intro {
+    text-align: center;
 }
 
 
-html[dir="rtl"] .title-header {
-    text-align: right;
-}
-
-
-html[dir="rtl"] .btn {
-    margin-left: 0;
-    margin-right: 20rem;
-}
-
-
-html[dir="rtl"] .intro {
-    margin-left: 0;
-    margin-right: 5rem;
-    text-align: right;
-}
 
 html[dir="rtl"] .card-data,
 html[dir="rtl"] .card-desc,
@@ -521,9 +549,28 @@ html[dir="rtl"] .card-title {
     text-align: right;
 }
 
+html[dir="trl"] .title-header i{
+    text-align: right;
+}
 
-html[dir="rtl"] .images-scroll {
-    flex-direction: row-reverse;
+
+html[dir="rtl"] .btn{
+    margin-inline-start: 12rem;
+}
+
+html[dir="rtl"] .card-content {
+    text-align: right;
+    max-width: 200px ;
+}
+
+html[dir="rtl"] .card-data{
+    text-align: right ;
+    height: 180px;
+}
+
+html[dir="rtl"] .clothes-p{
+    margin-right: 7rem;
+    text-align: center !important;
 }
 
 
@@ -532,19 +579,20 @@ html[dir="rtl"] .popup p {
     text-align: right;
 }
 
+html[dir="rtl"] .heritage p{
+    max-width: 300rem;
+    text-align: right;
+}
+
+
+
 html[dir="rtl"] .close {
     right: auto;
     left: 15px;
 }
 
 
-html[dir="rtl"] .footer-container {
-    flex-direction: row-reverse;
-}
 
-html[dir="rtl"] .footer-links {
-    flex-direction: row-reverse;
-}
 
 
 html[dir="rtl"] .toggle .slider {

@@ -20,7 +20,7 @@
         text-transform: uppercase;
         font-size: 15px;
         transition: all 0.5s ease;
-        margin-left:20rem ;
+        margin-inline-start: 20rem;
  }
 
  .btn:hover{
@@ -85,6 +85,7 @@
     right: 0;
     margin-inline: auto;
     opacity: 1; 
+    
 }
 
 .card-desc{
@@ -165,7 +166,6 @@ body.dark .back-video{
 
 @media (max-width: 768px){
 
-    /* زر */
     .btn{
         margin: 1rem auto; 
         display: block;
@@ -174,7 +174,7 @@ body.dark .back-video{
         font-size: 13px;
     }
 
-    /* الهيرو */
+    
     .title-header{
         padding: 0 1rem;
         text-align: center;
@@ -190,14 +190,14 @@ body.dark .back-video{
         margin-bottom: 2rem;
     }
 
-    /* المحتوى */
+    
     .content{
         grid-template-columns: 1fr; 
         padding: 2rem 1rem;
         row-gap: 2.5rem;
     }
 
-    /* الكارد */
+    
     .card-main{
         width: 100%;
         display: flex;
@@ -220,23 +220,13 @@ body.dark .back-video{
         bottom: -5rem;
     }
 
-    /* النص */
+
     .card-title{
         font-size: 15px;
     }
 
     .card-desc{
         font-size: 12px;
-    }
-
-    /* intro */
-    .intro{
-        margin: 0;
-        text-align: center;
-    }
-
-    .box-intro{
-        padding: 2rem 1rem;
     }
 
 }
