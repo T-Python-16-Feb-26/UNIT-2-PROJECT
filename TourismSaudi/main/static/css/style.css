@@ -172,7 +172,6 @@ body {
     display: none; 
 }
 
-
 .city-card-link {
     flex: 0 0 300px; 
     text-decoration: none;
@@ -286,8 +285,13 @@ body {
     background: #885b8d; 
 }
 
-.prev { left: -20px; }
-.next { right: -20px; }
+.prev { 
+    left: -20px; 
+}
+
+.next {
+     right: -20px; 
+}
 
 
 .contact-container {
@@ -628,7 +632,6 @@ body[dir="rtl"] .nav-container {
 }
 
 
-
 .accessibility-controls {
     position: fixed;
     bottom: 20px;
@@ -840,11 +843,11 @@ body[dir="rtl"] .nav-container {
     z-index: 10000;
     overflow: hidden;
     animation: slideUp 0.4s ease-out;
-
+/*
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
+}*/
 }
 
 
@@ -1181,6 +1184,10 @@ body[dir="rtl"] .nav-container {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(122, 27, 128, 0.2);
     text-align: center;
+}
+
+.vision-card h2{
+    color:white;
 }
 
 .vision-icon {
@@ -1522,8 +1529,6 @@ body[dir="rtl"] .nav-container {
 }
 
 
-
-
 .login-nav .breadcrumb-static a, 
 .login-nav .breadcrumb-static .sep, 
 .login-nav .breadcrumb-static .current-page {
@@ -1556,6 +1561,20 @@ body[dir="rtl"] .nav-container {
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    padding-top: 1.25rem;
-    
+    padding-top: 1.25rem; 
+}
+
+.btn{
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: var(--accent-purple);
+    color: white;
+    border-radius: 25px;
+    justify-content: center;
+    text-decoration: none;
+    margin-right: 550px;
+}
+
+.btn:hover{
+    background-color: #a741ae ;
 }

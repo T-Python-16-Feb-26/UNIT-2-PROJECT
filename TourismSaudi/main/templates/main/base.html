@@ -15,8 +15,9 @@
             </div>
             <div class="nav-right">
                 <a href="{% url 'main:home_view' %}" class="translate-text" data-ar="الرئيسية" data-en="Home">Home</a>
+                <a href="{% url 'main:home_view' %}#cities" class="translate-text" data-ar="المدن" data-en="Cities">Cities</a>
                 <a href="#contact" class="translate-text" data-ar="تواصل معنا" data-en="Contact">Contact</a>
-                <a href="{% url 'main:login_view' %}" class="translate-text" data-ar="سجل دخول" data-en="Log in">Log in</a>
+                <!--<a href="{% url 'main:login_view' %}" class="translate-text" data-ar="سجل دخول" data-en="Log in">Log in</a>-->
             </div>
         </div>
     </nav>
@@ -76,43 +77,79 @@
             </div>
         </div>
     </section>
+    <br>
+    <br>
+        <div>
+            <a href="{% url 'main:home_view' %}#cities" class="translate-text btn" data-ar="العودة لقائمة المدن "data-en="Back to Cities"> Back to Cities</a>
+        </div>
 <br>
 <br>
 <br>
    <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-controls">
-            <div class="lang-switcher">
-                <button onclick="changeLanguage('ar')" class="footer-btn">العربية</button>
-                <button onclick="changeLanguage('en')" class="footer-btn">English</button>
+        <div class="footer-container">
+            <div class="footer-controls">
+                <div class="lang-switcher">
+                    <button onclick="changeLanguage('ar')" class="footer-btn">العربية</button>
+                    <button onclick="changeLanguage('en')" class="footer-btn">English</button>
+                </div>
+
+                <div class="accessibility-controls">
+                    <button onclick="changeFontSize('increase')" class="footer-icon-btn" title="A+">A+</button>
+                    <button onclick="changeFontSize('decrease')" class="footer-icon-btn" title="A-">A-</button>
+                    <button id="theme-toggle" onclick="toggleTheme()" class="footer-icon-btn">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                </div>
             </div>
 
-            <div class="accessibility-controls">
-                <button onclick="changeFontSize('increase')" class="footer-icon-btn" title="A+">A+</button>
-                <button onclick="changeFontSize('decrease')" class="footer-icon-btn" title="A-">A-</button>
-                <button id="theme-toggle" onclick="toggleTheme()" class="footer-icon-btn">
-                    <span id="theme-icon">🌙</span>
-                </button>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Let's Discover Saudi. All rights reserved.</p>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Let's Discover Saudi. All rights reserved.</p>
-        </div>
-    </div>
     </footer>
 
     <script>
-    function changeFontSize(action) {
-        const root = document.documentElement;
-        let currentSize = parseFloat(window.getComputedStyle(root).fontSize);
-        
-        if (action === 'increase') {
-            root.style.fontSize = (currentSize + 2) + "px";
-        } else if (action === 'decrease') {
-            root.style.fontSize = (currentSize - 2) + "px";
+        function changeFontSize(action) {
+            const root = document.documentElement;
+            let currentSize = parseFloat(window.getComputedStyle(root).fontSize);
+            
+            if (action === 'increase') {
+                root.style.fontSize = (currentSize + 2) + "px";
+            } else if (action === 'decrease') {
+                root.style.fontSize = (currentSize - 2) + "px";
+            }
         }
-    }
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('.translate-text');
+            elements.forEach(el => {
+                const text = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+                if (text) el.innerText = text;
+            });
+            document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            setCookie('prefLang', lang, 7);
+        }
+
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -126,182 +163,140 @@
     function getCookie(name) {
         let nameEQ = name + "=";
         let ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
+        for(let i=0; i < ca.length; i++) {
             let c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
         }
         return null;
     }
 
-    function changeLanguage(lang) {
-        const elements = document.querySelectorAll('.translate-text');
-        elements.forEach(el => {
-            const text = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-            if (text) el.innerText = text;
-        });
-        document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-        setCookie('prefLang', lang, 7);
-    }
-
-function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-function getCookie(name) {
-    let nameEQ = name + "=";
-    let ca = document.cookie.split(';');
-    for(let i=0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-
-function toggleTheme() {
-    let theme = document.documentElement.getAttribute('data-theme') || 'light';
-    let newTheme = (theme === 'light') ? 'dark' : 'light';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    setCookie('theme', newTheme, 7); 
-    updateThemeIcon(newTheme);
-}
-
-function updateThemeIcon(theme) {
-    const icon = document.getElementById('theme-icon');
-    if (icon) {
-        icon.innerText = (theme === 'light') ? '🌙' : '☀️';
-    }
-}
-
-// 3. أخيراً كود التشغيل عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = getCookie('theme') || 'light'; // تستخدم دالة getCookie
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-});
-
-    // 5. التشغيل التلقائي عند تحميل أي صفحة
-    window.addEventListener('DOMContentLoaded', () => {
-        // تطبيق اللغة المحفوظة
-        const savedLang = getCookie('prefLang') || 'en';
-        changeLanguage(savedLang);
-
-        // تطبيق حجم الخط المحفوظ
-        const savedSize = getCookie('fontSize') || 16;
-        document.body.style.fontSize = savedSize + "px";
+    function toggleTheme() {
+        let theme = document.documentElement.getAttribute('data-theme') || 'light';
+        let newTheme = (theme === 'light') ? 'dark' : 'light';
         
-        // تطبيق الثيم المحفوظ
-        const savedTheme = getCookie('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        setCookie('theme', newTheme, 7); 
+        updateThemeIcon(newTheme);
+    }
+
+    function updateThemeIcon(theme) {
+        const icon = document.getElementById('theme-icon');
+        if (icon) {
+            icon.innerText = (theme === 'light') ? '🌙' : '☀️';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = getCookie('theme') || 'light'; 
         document.documentElement.setAttribute('data-theme', savedTheme);
         updateThemeIcon(savedTheme);
     });
 
-        function toggleChat() {
-        const chatWin = document.getElementById('chat-window');
-        const bubble = document.getElementById('bot-bubble');
-        
-        if (chatWin.style.display === 'none' || chatWin.style.display === '') {
-            chatWin.style.display = 'flex';
-            bubble.style.display = 'none'; // إخفاء الفقاعة عند فتح الشات
-        } else {
-            chatWin.style.display = 'none';
-            bubble.style.display = 'block';
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = getCookie('prefLang') || 'en';
+            changeLanguage(savedLang);
+
+            const savedSize = getCookie('fontSize') || 16;
+            document.body.style.fontSize = savedSize + "px";
+            
+            const savedTheme = getCookie('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        });
+
+            function toggleChat() {
+            const chatWin = document.getElementById('chat-window');
+            const bubble = document.getElementById('bot-bubble');
+            
+            if (chatWin.style.display === 'none' || chatWin.style.display === '') {
+                chatWin.style.display = 'flex'; 
+                bubble.style.display = 'none'; 
+            } else {
+                chatWin.style.display = 'none';
+                bubble.style.display = 'block';
+            }
         }
-    }
 
         document.getElementById('send-btn').addEventListener('click', sendMessage);
 
-    // السماح بالإرسال عند الضغط على زر Enter
-    document.getElementById('user-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') sendMessage();
-    });
+        document.getElementById('user-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') sendMessage();
+        });
 
-    function sendMessage() {
-        const inputField = document.getElementById('user-input');
-        const message = inputField.value.trim();
-        const chatMessages = document.getElementById('chat-messages');
+        function sendMessage() {
+            const inputField = document.getElementById('user-input');
+            const message = inputField.value.trim();
+            const chatMessages = document.getElementById('chat-messages');
 
-        if (message === "") return;
+            if (message === "") return;
 
-        // 1. إضافة رسالة المستخدم للدردشة
-        appendMessage('user', message);
-        inputField.value = "";
+            appendMessage('user', message);
+            inputField.value = "";
 
-        // 2. محاكاة تفكير البوت (تأخير بسيط)
-        setTimeout(() => {
-            const botResponse = getAIResponse(message);
-            appendMessage('bot', botResponse);
-        }, 600);
-    }
-
-    function appendMessage(sender, text) {
-        const chatMessages = document.getElementById('chat-messages');
-        const msgDiv = document.createElement('div');
-        msgDiv.className = sender === 'user' ? 'user-msg' : 'bot-msg';
-        msgDiv.style.cssText = sender === 'user' 
-            ? "align-self: flex-end; background: #e2d5e2; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px;" 
-            : "align-self: flex-start; background: #7a1b80; color: white; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px;";
-        
-        msgDiv.innerText = text;
-        chatMessages.appendChild(msgDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // النزول لآخر رسالة
-    }
-
-    
-
-    // "دماغ" البوت - يمكنك توسيع هذه القائمة لتشمل كل أسئلة السياحة
-    function getAIResponse(input) {
-        const query = input.toLowerCase();
-        
-        if (query.includes("مكة") || query.includes("makkah")) {
-            return "مكة المكرمة وجهة الروحانية؛ بجانب الحرم، يمكنك زيارة غار حراء ومتحف برج الساعة.";
-        } else if (query.includes("المدينة") || query.includes("medina")) {
-            return "المدينة المنورة السكينة والجمال؛ لا تفوت زيارة المسجد النبوي، ومسجد قباء، ومزارع النخيل التاريخية.";
-        } else if (query.includes("جدة") || query.includes("jeddah")) {
-            return "جدة غير! أنصحك بزيارة الكورنيش الجديد، ومنطقة 'البلد' التاريخية، وفقيه أكواريوم.";
-        } else if (query.includes("الطائف") || query.includes("taif")) {
-            return "عروس المصائف! استمتع بأجواء الهدا والشفا، وزيارة مزارع الورد الطائفي الشهيرة.";
-        } else if (query.includes("الرياض") || query.includes("riyadh")) {
-            return "الرياض تنبض بالحياة! لا تفوتك منطقة 'فيا رياض'، 'بوليفارد سيتي'، وقلعة المصمك التاريخية.";
-        } else if (query.includes("القصيم") || query.includes("alqassim")) {
-            return "أرض النخيل والكرم؛ أنصحك بزيارة سوق التمور في بريدة وبلدة خب الخبراء التراثية.";
-        } else if (query.includes("الخبر")  || query.includes("khobar") || query.includes("دمام") || query.includes("dammam") || query.includes("الشرقية")) {
-            return "المنطقة الشرقية وجهة بحرية رائعة! استمتع بواجهة الخبر البحرية، وجزيرة المرجان بالدمام، ومركز إثراء.";
-        } else if (query.includes("الأحساء") || query.includes("alhasa")) {
-            return "الأحساء أكبر واحة نخيل عالمية؛ لا تفوت جبل القارة، وسوق القيصرية، وبحيرة الأصفر.";
-        } else if (query.includes("تبوك") || query.includes("tabuk")) {
-            return "تبوك الورد والجمال؛ أنصحك بوادي الديسة الساحر وشواطئ حقل حيث تقع السفينة الغارقة.";
-        } else if (query.includes("العلا") || query.includes("alula")) {
-            return "العلا متحف مفتوح! استكشف الحجر (مدائن صالح)، وجبل الفيل، والبلدة القديمة.";
-        } else if (query.includes("الجوف") || query.includes("aljouf")) {
-            return "أرض الزيتون؛ قم بزيارة قلعة مارد ومسجد عمر بن الخطاب في دومة الجندل.";
-        } else if (query.includes("أبها") || query.includes("عسير") || query.includes("abha")) {
-            return "عسير الأجواء الباردة والغيوم! توجه إلى جبل السودة، وقرية رجال ألمع التراثية، ومنتزه الحبلة.";
-        } else if (query.includes("جازان") || query.includes("jazan")) {
-            return "جازان لؤلؤة الجنوب؛ أنصحك بزيارة جزر فرسان الساحرة ووادي لجب الجبلي.";
-        } else if (query.includes("بحر") || query.includes("sea")) {
-            return "للبحر والأنشطة البحرية، أنصحك بشواطئ أملج (مالديف السعودية) أو واجهة جدة والخبر البحرية.";
-        } else if (query.includes("طبيعة") || query.includes("nature")) {
-            return "للأماكن الطبيعية، أنصحك بوادي الديسة في تبوك أو غابات جبال السودة في عسير.";
-        } else if (query.includes("تسوق") || query.includes("shopping")) {
-            return "عشاق التسوق! الرياض وجدة تضمان أفخم المولات مثل 'النخيل مول' و'رد سي مول'.";
-        } else if (query.includes("تاريخ") || query.includes("متحف") || query.includes("history")) {
-            return "لعشاق التاريخ، المملكة غنية بالمتاحف! أنصحك بالمتحف الوطني بالرياض، وقصر شبرا بالطائف.";
-        } else if (query.includes("ثلج") || query.includes("snow")) {
-            return "هل تبحث عن الثلج؟ في الشتاء، جبل اللوز في تبوك يكتسي بالبياض ويقدم تجربة لا تُنسى!";
-        } else {
-            return "أهلاً بك! أنا سديم، مساعدتك السياحية. يمكنك سؤالي عن أي مدينة أو نشاط في مملكتنا الغالية.";
+            setTimeout(() => {
+                const botResponse = getAIResponse(message);
+                appendMessage('bot', botResponse);
+            }, 600);
         }
-    }
-</script>
+
+        function appendMessage(sender, text) {
+            const chatMessages = document.getElementById('chat-messages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = sender === 'user' ? 'user-msg' : 'bot-msg';
+            msgDiv.style.cssText = sender === 'user' 
+                ? "align-self: flex-end; background: #e2d5e2; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px;" 
+                : "align-self: flex-start; background: #7a1b80; color: white; padding: 8px 12px; border-radius: 12px; max-width: 80%; font-size: 14px;";
+            
+            msgDiv.innerText = text;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight; 
+        }
+
+        function getAIResponse(input) {
+            const query = input.toLowerCase();
+            
+            if (query.includes("مكة") || query.includes("makkah")) {
+                return "مكة المكرمة وجهة الروحانية؛ بجانب الحرم، يمكنك زيارة غار حراء ومتحف برج الساعة.";
+            } else if (query.includes("المدينة") || query.includes("medina")) {
+                return "المدينة المنورة السكينة والجمال؛ لا تفوت زيارة المسجد النبوي، ومسجد قباء، ومزارع النخيل التاريخية.";
+            } else if (query.includes("جدة") || query.includes("jeddah")) {
+                return "جدة غير! أنصحك بزيارة الكورنيش الجديد، ومنطقة 'البلد' التاريخية، وفقيه أكواريوم.";
+            } else if (query.includes("الطائف") || query.includes("taif")) {
+                return "عروس المصائف! استمتع بأجواء الهدا والشفا، وزيارة مزارع الورد الطائفي الشهيرة.";
+            } else if (query.includes("الرياض") || query.includes("riyadh")) {
+                return "الرياض تنبض بالحياة! لا تفوتك منطقة 'فيا رياض'، 'بوليفارد سيتي'، وقلعة المصمك التاريخية.";
+            } else if (query.includes("القصيم") || query.includes("alqassim")) {
+                return "أرض النخيل والكرم؛ أنصحك بزيارة سوق التمور في بريدة وبلدة خب الخبراء التراثية.";
+            } else if (query.includes("الخبر")  || query.includes("khobar") || query.includes("دمام") || query.includes("dammam") || query.includes("الشرقية")) {
+                return "المنطقة الشرقية وجهة بحرية رائعة! استمتع بواجهة الخبر البحرية، وجزيرة المرجان بالدمام، ومركز إثراء.";
+            } else if (query.includes("الأحساء") || query.includes("alhasa")) {
+                return "الأحساء أكبر واحة نخيل عالمية؛ لا تفوت جبل القارة، وسوق القيصرية، وبحيرة الأصفر.";
+            } else if (query.includes("تبوك") || query.includes("tabuk")) {
+                return "تبوك الورد والجمال؛ أنصحك بوادي الديسة الساحر وشواطئ حقل حيث تقع السفينة الغارقة.";
+            } else if (query.includes("العلا") || query.includes("alula")) {
+                return "العلا متحف مفتوح! استكشف الحجر (مدائن صالح)، وجبل الفيل، والبلدة القديمة.";
+            } else if (query.includes("الجوف") || query.includes("aljouf")) {
+                return "أرض الزيتون؛ قم بزيارة قلعة مارد ومسجد عمر بن الخطاب في دومة الجندل.";
+            } else if (query.includes("أبها") || query.includes("عسير") || query.includes("abha")) {
+                return "عسير الأجواء الباردة والغيوم! توجه إلى جبل السودة، وقرية رجال ألمع التراثية، ومنتزه الحبلة.";
+            } else if (query.includes("جازان") || query.includes("jazan")) {
+                return "جازان لؤلؤة الجنوب؛ أنصحك بزيارة جزر فرسان الساحرة ووادي لجب الجبلي.";
+            } else if (query.includes("بحر") || query.includes("sea")) {
+                return "للبحر والأنشطة البحرية، أنصحك بشواطئ أملج (مالديف السعودية) أو واجهة جدة والخبر البحرية.";
+            } else if (query.includes("طبيعة") || query.includes("nature")) {
+                return "للأماكن الطبيعية، أنصحك بوادي الديسة في تبوك أو غابات جبال السودة في عسير.";
+            } else if (query.includes("تسوق") || query.includes("shopping")) {
+                return "عشاق التسوق! الرياض وجدة تضمان أفخم المولات مثل 'النخيل مول' و'رد سي مول'.";
+            } else if (query.includes("تاريخ") || query.includes("متحف") || query.includes("history")) {
+                return "لعشاق التاريخ، المملكة غنية بالمتاحف! أنصحك بالمتحف الوطني بالرياض، وقصر شبرا بالطائف.";
+            } else if (query.includes("ثلج") || query.includes("snow")) {
+                return "هل تبحث عن الثلج؟ في الشتاء، جبل اللوز في تبوك يكتسي بالبياض ويقدم تجربة لا تُنسى!";
+            } else {
+                return "أهلاً بك! أنا سديم، مساعدتك السياحية. يمكنك سؤالي عن أي مدينة أو نشاط في مملكتنا الغالية.";
+            }
+        }
+    </script>
     
 </body>
 </html>
