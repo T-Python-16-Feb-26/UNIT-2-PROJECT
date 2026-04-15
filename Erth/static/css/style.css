@@ -1,6 +1,3 @@
-/* 
-   إرث - الأنماط الأساسية 
-   */
 
 * {
     margin: 0;
@@ -33,10 +30,6 @@ img, video {
 button, input, textarea {
     font: inherit;
 }
-
-/* 
-   شريط التنقل (Header)
-   */
 
 .site-header {
     position: fixed;
@@ -92,7 +85,6 @@ button, input, textarea {
     filter: brightness(1.05);
 }
 
-/* زر تبديل الوضع */
 .theme-toggle {
     display: flex;
     gap: 5px;
@@ -113,7 +105,6 @@ button, input, textarea {
     transform: translateY(-2px);
 }
 
-/* القائمة  */
 .explore-dropdown {
     position: relative;
 }
@@ -148,9 +139,6 @@ button, input, textarea {
     color: #111;
 }
 
-/* 
-   الأقسام الرئيسية 
-    */
 
 .hero-section, .full-screen-section, .timeline-section, .map-preview-section, .page-hero {
     position: relative;
@@ -161,15 +149,17 @@ button, input, textarea {
     min-height: 100vh;
 }
 
-.section-video, .page-hero img {
+.section-video {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+    z-index: 0; 
 
-.section-overlay, .page-hero-overlay {
+}
+.section-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.48);
@@ -226,11 +216,16 @@ button, input, textarea {
     margin-bottom: 16px;
 }
 
-.hero-tagline, .section-subtitle, .page-hero p, .section-head p, .map-preview-head p {
-    line-height: 1.95;
-    font-size: 1.05rem;
-    max-width: 760px;
-    margin: 0 auto 24px;
+
+.hero-tagline,
+.section-subtitle,
+.page-hero p,
+.section-head p,
+.map-preview-head p {
+    font-size: 1.2rem;   
+    font-weight: 700;      
+    letter-spacing: 0.75px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .primary-btn {
@@ -241,9 +236,7 @@ button, input, textarea {
     font-weight: 700;
 }
 
-/* 
-  (Timeline)
-  */
+
 
 .timeline-section {
     padding: 120px 0 80px;
@@ -357,9 +350,6 @@ button, input, textarea {
     line-height: 2;
 }
 
-/* 
-   سلالات الإبل 
-   */
 
 .breeds-grid-section, .breeds-section {
     padding: 80px 24px;
@@ -414,7 +404,7 @@ button, input, textarea {
     margin: 12px 0 18px;
 }
 
-/* تفاصيل السلالة */
+
 .breed-detail-section {
     padding: 80px 24px;
 }
@@ -435,8 +425,8 @@ button, input, textarea {
 
 .breed-detail-image img {
     width: 100%;
-    max-width: 400px;
-    height: 300px;
+    max-width: 700px;
+    height: 400px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -491,9 +481,7 @@ button, input, textarea {
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
 }
 
-/*
-   البطاقات والمحتوى
-    */
+
 
 .cards-section, .content-section, .map-section {
     padding: 80px 24px;
@@ -584,9 +572,7 @@ button, input, textarea {
     margin: 0;
 }
 
-/* 
-   العناصر المستقبلية 
-    */
+
 
 .future-item {
     position: relative;
@@ -610,9 +596,7 @@ button, input, textarea {
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
 }
 
-/* 
-   الإحصائيات
-   */
+
 
 .stats-section {
     padding: 60px 24px;
@@ -644,9 +628,7 @@ button, input, textarea {
     color: #ccc;
 }
 
-/* 
-   القصص 
-   */
+
 
 .story-block {
     display: grid;
@@ -676,9 +658,7 @@ button, input, textarea {
     margin-bottom: 12px;
 }
 
-/* 
-   الفيديو
-  */
+
 
 .video-grid {
     max-width: 1200px;
@@ -712,10 +692,13 @@ button, input, textarea {
     cursor: pointer;
     border-radius: 16px;
     overflow: hidden;
+    height: 220px; 
 }
 
-.video-thumb img {
+.video-thumb video {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-thumb span {
@@ -746,11 +729,11 @@ button, input, textarea {
     position: relative;
 }
 
-.video-box iframe {
+.video-box video {
     width: 100%;
     height: 500px;
-    border: none;
     border-radius: 12px;
+    background: #000;
 }
 
 .video-box span {
@@ -762,9 +745,6 @@ button, input, textarea {
     cursor: pointer;
 }
 
-/* =
-    تسجيل الدخول والتواصل
-    */
 
 .login-box {
     max-width: 460px;
@@ -800,9 +780,7 @@ button, input, textarea {
     cursor: pointer;
 }
 
-/*
-   الفوتر 
-  */
+
 
 .site-footer {
     background: #090909;
@@ -849,7 +827,7 @@ body.light {
     color: #1a1a1a;
 }
 
-/* العناوين */
+
 body.light h1,
 body.light h2,
 body.light h3,
@@ -862,11 +840,14 @@ body.light .map-preview-head h2 {
     color: #0a0a0a !important;
 }
 
-/* النصوص العامة */
+body.light .hero-tagline{
+    color: white !important;
+}
+
 body.light p,
 body.light li,
 body.light span,
-body.light .hero-tagline,
+
 body.light .section-subtitle,
 body.light .page-hero p,
 body.light .map-preview-head p,
@@ -876,7 +857,7 @@ body.light .auth-switch {
     font-weight: 500;
 }
 
-/* النصوص داخل البطاقات */
+
 body.light .info-card p,
 body.light .content-block p,
 body.light .future-item p,
@@ -891,7 +872,7 @@ body.light .breed-intro p {
     font-weight: 500;
 }
 
-/* النصوص الذهبية */
+
 body.light .hero-author,
 body.light .timeline-year,
 body.light .map-info h3,
@@ -904,13 +885,13 @@ body.light .story-text h3 {
     color: #b8902c !important;
 }
 
-/* النص فوق الفيديو */
+
 body.light .hero-quote {
     color: #ffffff !important;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* خلفيات  */
+
 body.light .info-card,
 body.light .content-block,
 body.light .video-card,
@@ -927,7 +908,6 @@ body.light .breed-intro {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* شريط التنقل */
 body.light .site-header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
@@ -953,7 +933,6 @@ body.light .theme-toggle button:hover {
     background: #D4AF37;
 }
 
-/* القائمة  */
 body.light .explore-menu {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -969,7 +948,7 @@ body.light .explore-menu a:hover {
     color: #0a0a0a;
 }
 
-/* الخلفيات */
+
 body.light .timeline-section {
     background: linear-gradient(180deg, #f5f1ea, #eee7dd);
 }
@@ -986,7 +965,7 @@ body.light .page-hero.simple-hero {
     background: linear-gradient(135deg, #e8e0d5, #d4c9b8);
 }
 
-/* الفوتر */
+
 body.light .site-footer {
     background: #e9e2d8;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -1002,18 +981,16 @@ body.light .footer-links a:hover {
     color: #0a0a0a;
 }
 
-/* الخريطة */
 body.light .map-shape {
     fill: #e9dfd0;
     stroke: #b8902c;
 }
 
-/* الخط الزمني */
 body.light .timeline::before {
     background: linear-gradient(to bottom, #D4AF37, #8d6c16);
 }
 
-/* حقول الإدخال */
+
 body.light .login-box input,
 body.light .login-box textarea {
     background: #ffffff;
@@ -1028,7 +1005,7 @@ body.light .login-box textarea:focus {
     box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
 }
 
-/* الزر الأساسي */
+
 body.light .primary-btn {
     background: #D4AF37;
     color: #0a0a0a;
@@ -1038,7 +1015,7 @@ body.light .primary-btn:hover {
     background: #c4a030;
 }
 
-/* حركات التمرير */
+
 body.light .info-card:hover,
 body.light .future-item:hover,
 body.light .breed-card:hover,
@@ -1048,7 +1025,7 @@ body.light .timeline-card:hover {
     border-color: rgba(212, 175, 55, 0.4) !important;
 }
 
-/* شريط التمرير */
+
 body.light::-webkit-scrollbar {
     width: 10px;
 }
@@ -1066,15 +1043,12 @@ body.light::-webkit-scrollbar-thumb:hover {
     background: #b8902c;
 }
 
-/* تحديد النص */
 body.light ::selection {
     background: #D4AF37;
     color: #0a0a0a;
 }
 
-/* 
-  للجوال
-  */
+
 
 @media (max-width: 1050px) {
     .breeds-grid, .video-grid, .cards-grid, .saudi-map {
@@ -1180,4 +1154,20 @@ body.light ::selection {
         font-size: 0.9rem;
     }
 }
-ody.light .section-head p, body.light .section-subtitle, body.light .hero-tagline, body.light .page-hero p, body.light .map-preview-head p, body.light .breed-intro p { color: #111111 !important; font-weight: 600 !important; } body.light .info-card p { color: #1f1f1f !important; font-weight: 500; } body.light .map-section .section-head p, body.light .content-section .section-head p { color: #0a0a0a !important; font-weight: 600 !important; }
+body.light .section-head p, body.light .section-subtitle, body.light .hero-tagline, body.light .page-hero p, body.light .map-preview-head p, body.light .breed-intro p { color: #111111 !important; font-weight: 600 !important; } body.light .info-card p { color: #1f1f1f !important; font-weight: 500; } body.light .map-section .section-head p, body.light .content-section .section-head p { color: #0a0a0a !important; font-weight: 600 !important; }
+
+.page-nav {
+    display: flex;
+    flex-direction: row-reverse;   
+    justify-content: flex-end;    
+    gap: 12px;                    
+    margin-top: 40px;
+}
+
+.page-nav .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    text-align: center;
+}

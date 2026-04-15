@@ -1,30 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<section class="timeline-hero">
-    <video class="section-video" autoplay muted loop playsinline>
-        <source src="/static/videos/history.mp4" type="video/mp4">
-    </video>
-    <div class="section-overlay strong"></div>
-
-    <div class="timeline-hero-content">
-        <h1>{% if is_en %}Journey Through Time{% else %}رحلة الإبل عبر الزمن{% endif %}</h1>
-        <p>{% if is_en %}An interactive timeline telling the camel story in Saudi Arabia{% else %}تايم لاين تفاعلي يروي مكانة الإبل في المملكة{% endif %}</p>
-    </div>
-</section>
-
 <section class="timeline-page">
     <div class="timeline-wrapper">
         <div class="timeline">
+
             {% for item in timeline %}
             <article class="timeline-item {% cycle 'right' 'left' %}">
+                
                 <div class="timeline-card">
-                    <span class="timeline-year">{% if is_en %}{{ item.year_en }}{% else %}{{ item.year_ar }}{% endif %}</span>
-                    <h3>{% if is_en %}{{ item.title_en }}{% else %}{{ item.title_ar }}{% endif %}</h3>
-                    <p>{% if is_en %}{{ item.body_en }}{% else %}{{ item.body_ar }}{% endif %}</p>
+                    <span class="timeline-year">{{ item.year }}</span>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
                 </div>
+
             </article>
             {% endfor %}
+
         </div>
     </div>
 </section>

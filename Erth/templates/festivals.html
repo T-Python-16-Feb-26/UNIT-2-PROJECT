@@ -1,5 +1,5 @@
-
 {% extends 'base.html' %}
+
 {% block content %}
 
 <section class="page-hero simple-hero">
@@ -8,6 +8,7 @@
         <p>تعرف على أبرز مهرجانات الإبل في المملكة العربية السعودية</p>
     </div>
 </section>
+
 <section class="stats-section">
     <div class="stats-grid">
 
@@ -40,10 +41,10 @@
                 ويجمع بين مسابقات المزاين والأنشطة الثقافية.
             </p>
 
-            <div class="video-thumb" onclick="openVideo('j7CmWWdFi1M')">
-                <img src="https://img.youtube.com/vi/j7CmWWdFi1M/hqdefault.jpg">
-                <span>▶</span>
-            </div>
+            <div class="video-thumb">
+    <video src="https://res.cloudinary.com/dd9tdahsd/video/upload/v1776168898/WhatsApp_Video_2026-04-14_at_2.58.01_PM_sffkys.mp4" muted></video>
+    <span onclick="openVideo('https://res.cloudinary.com/dd9tdahsd/video/upload/v1776168898/WhatsApp_Video_2026-04-14_at_2.58.01_PM_sffkys.mp4')">▶️</span>
+</div>
         </div>
 
         <!-- ولي العهد -->
@@ -54,10 +55,10 @@
                 في هذه الرياضة التراثية.
             </p>
 
-            <div class="video-thumb" onclick="openVideo('8Ug7gi4hrFU')">
-                <img src="https://img.youtube.com/vi/8Ug7gi4hrFU/hqdefault.jpg">
-                <span>▶</span>
-            </div>
+            <div class="video-thumb">
+    <video src="https://res.cloudinary.com/dd9tdahsd/video/upload/v1776168148/WhatsApp_Video_2026-04-14_at_2.51.36_PM_u3f2o9.mp4" muted></video>
+    <span onclick="openVideo('https://res.cloudinary.com/dd9tdahsd/video/upload/v1776168148/WhatsApp_Video_2026-04-14_at_2.51.36_PM_u3f2o9.mp4')">▶️</span>
+</div>
         </div>
 
         <!-- العلا -->
@@ -68,10 +69,10 @@
                 بين الإبل والتاريخ.
             </p>
 
-            <div class="video-thumb" onclick="openVideo('m05CZXhC0SM')">
-                <img src="https://img.youtube.com/vi/m05CZXhC0SM/hqdefault.jpg">
-                <span>▶</span>
-            </div>
+            <div class="video-thumb">
+    <video src="https://res.cloudinary.com/dd9tdahsd/video/upload/v1776166761/WhatsApp_Video_2026-04-14_at_2.37.59_PM_bagb7z.mp4" muted></video>
+    <span onclick="openVideo('https://res.cloudinary.com/dd9tdahsd/video/upload/v1776166761/WhatsApp_Video_2026-04-14_at_2.37.59_PM_bagb7z.mp4')">▶️</span>
+</div>
         </div>
 
     </div>
@@ -81,8 +82,12 @@
 <div id="videoModal" class="video-modal">
     <div class="video-box">
         <span onclick="closeVideo()">✕</span>
-        <iframe id="videoFrame" allowfullscreen></iframe>
+        <video id="videoFrame" controls></video>
     </div>
+</div>
+<div class="page-nav">
+    <a href="/impact/" class="primary-btn">السابق</a>
+    <a href="/stories/" class="primary-btn">التالي</a>
 </div>
 
 {% endblock %}
