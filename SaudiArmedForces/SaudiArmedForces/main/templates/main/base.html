@@ -16,7 +16,7 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 
-<body {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="dark" {% endif %}>
+<body id="top" {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="dark" {% endif %}>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -43,7 +43,7 @@
                 <li><a href="{% url 'main:home_view' %}">Home</a></li>
                 <li><a href="{% url 'main:military_system_view' %}">Military System</a></li>
                 <li class="dropdown">
-                    <a href=" javascript:void(0);">Armed Forces</a>
+                    <a href="#">Armed Forces</a>
                     <ul class="dropdown-menu">
                         <li><a href="{% url 'main:land_forces_view' %}">Land Forces</a></li>
                         <li><a href="{% url 'main:air_forces_view' %}">Air Force</a></li>
@@ -65,8 +65,7 @@
         <div class="footer-container">
             <div class="footer-left">
                 <div class="footer-top">
-                    <img src="{% static 'images/nav-logo.png' %}" alt="logo">
-                    <h3>Saudi Armed Forces</h3>
+                    <h3>SAF</h3>
                 </div>
                 <p>
                     Strength, discipline, and protection of the Kingdom.
@@ -75,20 +74,17 @@
             </div>
             <div class="footer-right">
                 <div class="socials">
-                    <a href="https://x.com/modgovksa"> <i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/modgovksa/"> <i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/modgovksa"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/modgovksa/"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/modgovksa" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/modgovksa/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/modgovksa" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/modgovksa/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="back-to-top" onclick="scrollToTop()">
-            ↑
         </div>
     </footer>
 
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}?v=3"></script>
 </body>
 
 </html>

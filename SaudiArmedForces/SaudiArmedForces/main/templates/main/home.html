@@ -4,142 +4,141 @@
 {% block title %} Saudi Armed Forces {% endblock %}
 
 {% block content %}
-<div class="home">
-    <div class="slider-section">
-        <div class="slider-container">
-            <div class="slider-track-wrapper">
-                <div class="slides" id="slides">
-                    <div class="slide">
-                        <div class="video-card">
-                            <div class="video-wrapper">
-                                <video autoplay muted playsinline>
-                                    <source src="{% static 'videos/IMG_7309.mp4' %}" type="video/mp4">
-                                </video>
-                                <div class="video-overlay">
-                                    <h1>Saudi Armed Forces</h1>
-                                    <p>Strength, discipline, and protection of the Kingdom</p>
-                                    <a href="#military-section" class="explore-btn">
-                                        Explore More
-                                    </a>
-                                </div>
+<div class="slider-section">
+    <div class="slider-container">
+        <div class="slider-track-wrapper">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline>
+                                <source src="{% static 'videos/IMG_7309.mp4' %}" type="video/mp4">
+                            </video>
+                            <div class="video-overlay">
+                                <h1>Saudi Armed Forces</h1>
+                                <p>Strength, discipline, and protection of the Kingdom</p>
+                                <a href="#military-section" class="explore-btn">
+                                    Explore More
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="video-card">
-                            <div class="video-wrapper">
-                                <video autoplay muted playsinline>
-                                    <source src="{% static 'videos/IMG_2222.mp4' %}" type="video/mp4">
-                                </video>
-                                <div class="video-overlay">
-                                    <h1>Saudi Armed Forces</h1>
-                                    <p>Strength, discipline, and protection of the Kingdom</p>
-                                    <a href="#military-section" class="explore-btn">
-                                        Explore More
-                                    </a>
-                                </div>
+                </div>
+                <div class="slide">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline>
+                                <source src="{% static 'videos/IMG_2222.mp4' %}" type="video/mp4">
+                            </video>
+                            <div class="video-overlay">
+                                <h1>Saudi Armed Forces</h1>
+                                <p>Strength, discipline, and protection of the Kingdom</p>
+                                <a href="#military-section" class="explore-btn">
+                                    Explore More
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="slide">
-                        <div class="video-card">
-                            <div class="video-wrapper">
-                                <video autoplay muted playsinline>
-                                    <source src="{% static 'videos/IMG_3333.mp4' %}" type="video/mp4">
-                                </video>
-                                <div class="video-overlay">
-                                    <h1>Saudi Armed Forces</h1>
-                                    <p>Strength, discipline, and protection of the Kingdom</p>
-                                    <a href="#military-section" class="explore-btn">
-                                        Explore More
-                                    </a>
-                                </div>
+                </div>
+                <div class="slide">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline>
+                                <source src="{% static 'videos/IMG_3333.mp4' %}" type="video/mp4">
+                            </video>
+                            <div class="video-overlay">
+                                <h1>Saudi Armed Forces</h1>
+                                <p>Strength, discipline, and protection of the Kingdom</p>
+                                <a href="#military-section" class="explore-btn">
+                                    Explore More
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="dots-container" id="dots">
-            <span class="dot active" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
         </div>
     </div>
-
-    <section class="military-system-section reveal-section">
-        <div class="military-system-container">
-            <div id="military-section" class="military-system-image reveal-left">
-                <img src="{% static 'images/kings.jpg' %}" alt="kings">
-            </div>
-            <div class="military-system-content reveal-right">
-                <h2> Military System</h2>
-                <p>
-                    The Saudi military system is a unified structure that strengthens national security and ensures the protection of the Kingdom.
-
-                    Guided by King Salman bin Abdulaziz Al Saud and Crown Prince Mohammed bin Salman, the Armed Forces continue to advance through modernization, strategic development, and the goals of Saudi Vision 2030.
-                </p>
-                <a href="{% url 'main:military_system_view' %}" class="explore-btn">
-                    Explore More
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="forces-showcase">
-        <div class="forces-intro">
-            <div class="ministry-logo-box reveal-left">
-                <img src="{% static 'images/Saudi-Arabian-Armed-Forces-Logo.png' %}" alt="Ministry of Defense">
-            </div>
-            <div class="ministry-content reveal-right">
-                <span class="forces-badge">Ministry of Defense</span>
-                <h2>Saudi Ministry of Defense</h2>
-                <p>
-                    The Ministry of Defense is one of the main sovereign institutions in the Kingdom of Saudi Arabia.
-                    It is responsible for protecting the nation, preserving its security, and strengthening its defense
-                    readiness through advanced military systems and specialized armed branches.
-                </p>
-                <p>
-                    The Ministry consists of several major branches that work together in an integrated structure,
-                    including the Land Forces, Air Force, Naval Forces, Air Defense Forces, and Strategic Missile Force.
-                </p>
-                <a href="{% url 'main:military_system_view' %}#forces" class="explore-btn">
-                    Explore More
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="tech-section">
-        <div class="tech-header">
-            <h2>Advanced Military Technology</h2>
-            <p>Saudi Arabia utilizes cutting-edge technology to enhance its defense capabilities</p>
-        </div>
-        <div class="tech-cards">
-            <div class="tech-card">
-                <img src="{% static 'images/drone.jpg' %}" alt="">
-                <div class="overlay">
-                    <h3>Drones</h3>
-                    <p>Advanced UAVs for surveillance and missions</p>
-                </div>
-            </div>
-            <div class="tech-card">
-                <img src="{% static 'images/cyber.jpg' %}" alt="">
-                <div class="overlay">
-                    <h3>Cyber Security</h3>
-                    <p>Protecting military networks and data</p>
-                </div>
-            </div>
-            <div class="tech-card">
-                <img src="{% static 'images/radar.jpg' %}" alt="">
-                <div class="overlay">
-                    <h3>Radar Systems</h3>
-                    <p>Detection and tracking with high precision</p>
-                </div>
-            </div>
-        </div>
-        <a href="{% url 'main:technology_view' %}" class="explore-btn">Learn More</a>
-    </section>
+    <div class="dots-container" id="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
 </div>
+
+<section class="military-system-section reveal-section">
+    <div class="military-system-container">
+        <div id="military-section" class="military-system-image reveal-left">
+            <img src="{% static 'images/kings.jpg' %}" alt="kings">
+        </div>
+        <div class="military-system-content reveal-right">
+            <h2> Military System</h2>
+            <p>
+                The Saudi military system is a unified structure that strengthens national security and ensures the protection of the Kingdom.
+
+                Guided by King Salman bin Abdulaziz Al Saud and Crown Prince Mohammed bin Salman, the Armed Forces continue to advance through modernization, strategic development, and the goals of Saudi Vision 2030.
+            </p>
+            <a href="{% url 'main:military_system_view' %}" class="explore-btn">
+                Explore More
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="forces-showcase">
+    <div class="forces-intro">
+        <div class="ministry-logo-box reveal-left">
+            <img src="{% static 'images/Saudi-Arabian-Armed-Forces-Logo.png' %}" alt="Ministry of Defense">
+        </div>
+        <div class="ministry-content reveal-right">
+            <span class="forces-badge">Ministry of Defense</span>
+            <h2>Saudi Ministry of Defense</h2>
+            <p>
+                The Ministry of Defense is one of the main sovereign institutions in the Kingdom of Saudi Arabia.
+                It is responsible for protecting the nation, preserving its security, and strengthening its defense
+                readiness through advanced military systems and specialized armed branches.
+            </p>
+            <p>
+                The Ministry consists of several major branches that work together in an integrated structure,
+                including the Land Forces, Air Force, Naval Forces, Air Defense Forces, and Strategic Missile Force.
+            </p>
+            <a href="{% url 'main:military_system_view' %}#forces" class="explore-btn">
+                Explore More
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="tech-section">
+    <div class="tech-header">
+        <h2>Advanced Military Technology</h2>
+        <p>Saudi Arabia utilizes cutting-edge technology to enhance its defense capabilities</p>
+    </div>
+    <div class="tech-cards">
+        <div class="tech-card">
+            <img src="{% static 'images/drone.jpg' %}" alt="Military drone">
+            <div class="overlay">
+                <h3>Drones</h3>
+                <p>Advanced UAVs for surveillance and missions</p>
+            </div>
+        </div>
+        <div class="tech-card">
+            <img src="{% static 'images/cyber.jpg' %}" alt="Cyber">
+            <div class="overlay">
+                <h3>Cyber Security</h3>
+                <p>Protecting military networks and data</p>
+            </div>
+        </div>
+        <div class="tech-card">
+            <img src="{% static 'images/radar.jpg' %}" alt="Radar Systems">
+            <div class="overlay">
+                <h3>Radar Systems</h3>
+                <p>Detection and tracking with high precision</p>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'main:technology_view' %}" class="explore-btn">Learn More</a>
+</section>
+
 
 {% endblock %}

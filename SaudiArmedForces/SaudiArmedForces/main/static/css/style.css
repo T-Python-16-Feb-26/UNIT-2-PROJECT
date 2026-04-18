@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +69,7 @@ main {
 .logo-text:hover::after {
     width: 100%;
 }
+
 .nav-links,
 .dropdown-menu {
     list-style: none;
@@ -283,13 +285,10 @@ main {
     gap: 12px;
 }
 
-.footer-top img {
-    width: 60px;
-}
-
 .footer-left h3 {
     color: #0F3D2E;
     margin-bottom: 8px;
+    align-items: center;
 }
 
 .footer-left p {
@@ -328,27 +327,6 @@ main {
     color: #ffffff;
 }
 
-.back-to-top {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: #000000;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.back-to-top:hover {
-    background: #d4b26a;
-    color: #fff;
-}
 
 @media (max-width: 992px) {
     .nav-links {
@@ -365,16 +343,6 @@ main {
         min-height: 70px;
         padding: 0 16px;
         justify-content: space-between;
-    }
-
-    .nav-logo a {
-        width: 56px;
-        height: 56px;
-    }
-
-    .nav-logo img {
-        width: 56px;
-        height: 56px;
     }
 
     .menu-toggle {
@@ -493,10 +461,6 @@ main {
         gap: 10px;
     }
 
-    .footer-top img {
-        width: 55px;
-    }
-
     .footer-left h3 {
         margin-bottom: 4px;
     }
@@ -525,11 +489,6 @@ main {
         margin-left: 0;
     }
 
-    .back-to-top {
-        width: 38px;
-        height: 38px;
-        bottom: 12px;
-    }
 }
 
 /* *******************************************************base end********************************************************* */
@@ -538,17 +497,12 @@ main {
 /********************************************************** home page start *********************************************************/
 .slider-section {
     width: 100%;
-    height: 100vh;
-    padding: 0;
-    background: transparent;
     position: relative;
     overflow: hidden;
 }
 
 .slider-container {
     width: 100%;
-    max-width: 100%;
-    margin: 0;
     height: 100%;
 }
 
@@ -575,18 +529,13 @@ main {
 }
 
 .video-card {
-    width: 100%;
     height: 100%;
     border-radius: 0;
-    max-width: 100%;
     box-shadow: none;
-    background: none;
 }
 
 .video-wrapper {
-    width: 100%;
     height: 100%;
-    padding: 0;
     position: relative;
     overflow: hidden;
 }
@@ -625,14 +574,14 @@ main {
 
 .dots-container {
     position: absolute;
-    bottom: -40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 10;
 }
 
 .dot {
@@ -734,7 +683,7 @@ main {
 .forces-showcase {
     width: 100%;
     padding: 100px 20px 120px;
-    background: transparent;
+    background: linear-gradient(135deg, rgb(243, 248, 245), rgb(232, 241, 236));
 }
 
 .forces-intro {
@@ -1006,7 +955,7 @@ main {
     }
 
     .dots-container {
-        bottom: -30px;
+        bottom: 10px;
     }
 
     .dot {
@@ -1186,30 +1135,6 @@ main {
     }
 }
 
-body.dark .video-card {
-    background: #10281e;
-    box-shadow:
-        0 24px 60px rgba(0, 0, 0, 0.45),
-        0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-body.dark .video-wrapper {
-    background: #142c22;
-}
-
-body.dark .nav-btn {
-    border: 1px solid rgba(212, 178, 106, 0.18);
-    background: linear-gradient(135deg, #0f3d2e, #165340);
-}
-
-body.dark .nav-btn:hover {
-    background: linear-gradient(135deg, #d4b26a, #b8964f);
-}
-
-body.dark .nav-btn:hover svg {
-    fill: #0f3d2e;
-}
-
 body.dark .dot {
     background: rgba(212, 178, 106, 0.28);
 }
@@ -1236,16 +1161,6 @@ body.dark .military-system-image img {
         0 20px 45px rgba(0, 0, 0, 0.4),
         0 8px 18px rgba(212, 178, 106, 0.08);
 }
-
-body.dark .system-btn {
-    background: linear-gradient(135deg, #d4b26a, #b8964f);
-    color: #0f3d2e;
-}
-
-body.dark .system-btn:hover {
-    background: linear-gradient(135deg, #e3c88a, #d4b26a);
-}
-
 
 body.dark .forces-intro {
     background: rgba(255, 255, 255, 0.05);
@@ -1326,10 +1241,9 @@ body.dark .overlay p {
 
 /* ********************************************************************* home end **************************************************** */
 
-
 /* ******************************* Military System Page start **************************** */
 
-.hero {
+.military .hero {
     position: relative;
     min-height: 100vh;
     background: url("https://i.pinimg.com/1200x/35/58/21/3558216af19a08309f15471a7f00dc50.jpg") center/cover no-repeat;
@@ -1340,20 +1254,20 @@ body.dark .overlay p {
     padding: 20px;
 }
 
-.hero-overlay {
+.military .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom right, rgba(226, 240, 234, 0.86), rgba(206, 227, 217, 0.72));
 }
 
-.hero-content {
+.military .hero-content {
     position: relative;
     z-index: 2;
     max-width: 800px;
     color: #17352c;
 }
 
-.hero-subtitle {
+.military .hero-subtitle {
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 3px;
@@ -1362,7 +1276,7 @@ body.dark .overlay p {
     margin-bottom: 15px;
 }
 
-.hero h1 {
+.military .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
     color: #2E6B50;
@@ -1378,12 +1292,12 @@ body.dark .overlay p {
     text-align: center;
 }
 
-.section-title {
+.military .section-title {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.section-title span {
+.military .section-title span {
     display: inline-block;
     color: #67b095;
     font-size: 0.95rem;
@@ -1392,28 +1306,28 @@ body.dark .overlay p {
     margin-bottom: 10px;
 }
 
-.section-title h2 {
+.military .section-title h2 {
     font-size: 2.3rem;
     color: #1f3b34;
 }
 
-.section-title.light h2,
-.section-title.light span {
+.military .section-title.light h2,
+.military .section-title.light span {
     color: #17352c;
 }
 
-.about-section {
+.military .about-section {
     padding: 100px 8%;
     background-color: #f6faf8;
 }
 
-.about-grid {
+.military .about-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
-.about-card {
+.military .about-card {
     background-color: #ffffff;
     padding: 35px;
     border-radius: 18px;
@@ -1422,54 +1336,54 @@ body.dark .overlay p {
     transition: 0.3s ease;
 }
 
-.about-card:hover {
+.military .about-card:hover {
     transform: translateY(-8px);
 }
 
-.about-card h3 {
+.military .about-card h3 {
     color: #1f3b34;
     margin-bottom: 15px;
     font-size: 1.4rem;
 }
 
-.ministry-section {
+.military .ministry-section {
     padding: 100px 8%;
     background: linear-gradient(135deg, #edf6f1, #e3f0ea);
     color: #1f322c;
 }
 
-.container {
+.military .ministry-container {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 40px;
     align-items: center;
 }
 
-.small-title {
+.military .small-title {
     color: #63a98e;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
 }
 
-.text-box h2 {
+.military .text-box h2 {
     font-size: 2.3rem;
     margin: 15px 0 25px;
     color: #17352c;
 }
 
-.text-box p {
+.military .text-box p {
     margin-bottom: 18px;
     color: #557068;
 }
 
-.info-box {
+.military .info-box {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.info-item {
+.military .info-item {
     background-color: rgba(255, 255, 255, 0.72);
     padding: 25px;
     border-left: 4px solid #7fc7ab;
@@ -1478,42 +1392,42 @@ body.dark .overlay p {
     box-shadow: 0 8px 20px rgba(26, 57, 45, 0.05);
 }
 
-.info-item h4 {
+.military .info-item h4 {
     margin-bottom: 8px;
     color: #17352c;
     font-size: 1.2rem;
 }
 
-.info-item p {
+.military .info-item p {
     color: #597169;
 }
 
-.importance-section {
+.military .importance-section {
     padding: 100px 8%;
     background: linear-gradient(to bottom, #f7fbf9, #edf5f1);
     position: relative;
 }
 
-.importance-section::before {
+.military .importance-section::before {
     content: "";
     position: absolute;
     inset: 0;
     background-color: rgba(244, 250, 247, 0.82);
 }
 
-.importance-section .section-title,
-.importance-cards {
+.military .importance-section .section-title,
+.military .importance-cards {
     position: relative;
     z-index: 2;
 }
 
-.importance-cards {
+.military .importance-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.importance-card {
+.military .importance-card {
     background-color: #ffffff;
     color: #1f322c;
     padding: 30px;
@@ -1523,111 +1437,72 @@ body.dark .overlay p {
     box-shadow: 0 10px 24px rgba(26, 57, 45, 0.05);
 }
 
-.importance-card:hover {
+.military .importance-card:hover {
     transform: translateY(-8px);
 }
 
-.number {
+.military .number {
     font-size: 2rem;
     font-weight: bold;
     color: #67b095;
     margin-bottom: 15px;
 }
 
-.importance-card h3 {
+.military .importance-card h3 {
     margin-bottom: 12px;
     font-size: 1.3rem;
     color: #17352c;
 }
 
-.importance-card p {
+.military .importance-card p {
     color: #5b726b;
 }
 
-.closing-section {
-    padding: 90px 8%;
-    background-color: #ffffff;
+.military .closing-section {
     text-align: center;
+    width: 100%;
+    padding: 90px 8%;
+    background: linear-gradient(to bottom, #f0f8f4, #e5f2ec);
 }
 
-.closing-content {
-    max-width: 850px;
-    margin: auto;
+.military .closing-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(139, 208, 181, 0.24);
+    border-radius: 28px;
+    padding: 50px 35px;
+    box-shadow: 0 18px 35px rgba(26, 57, 45, 0.05);
 }
 
-.closing-content h2 {
-    font-size: 2.2rem;
-    color: #1f3b34;
-    margin-bottom: 20px;
-}
-
-.closing-content p {
-    color: #526760;
+.military .closing-content p {
     font-size: 1.05rem;
+    line-height: 1.9;
+    color: #587068;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
-@media (max-width: 992px) {
-
-    .about-grid,
-    .container,
-    .importance-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 2.7rem;
-    }
-
-    .section-title h2,
-    .text-box h2,
-    .closing-content h2 {
-        font-size: 2rem;
-    }
+.military .closing-content h2 {
+    font-size: 2.2rem;
+    color: #67b095;
+    margin-bottom: 18px;
+    line-height: 1.3;
 }
 
-@media (max-width: 600px) {
-    .hero {
-        min-height: 85vh;
-    }
-
-    .hero h1 {
-        font-size: 2.1rem;
-    }
-
-    .hero-text {
-        max-width: 92%;
-        font-size: 0.92rem;
-        line-height: 1.75;
-        margin: 0 auto 24px;
-
-    }
-
-    .about-card,
-    .importance-card,
-    .info-item {
-        padding: 22px;
-    }
-
-    .section-title h2,
-    .text-box h2,
-    .closing-content h2 {
-        font-size: 1.6rem;
-    }
-}
-
-
-.forces-overview {
+.military .forces-overview {
     width: 100%;
     padding: 90px 20px;
     background: linear-gradient(to bottom, #f8fcfa, #eef6f2);
 }
 
-.forces-container {
+.military .forces-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.forces-title {
+.military .forces-title {
     text-align: center;
     font-size: 2.2rem;
     font-weight: 800;
@@ -1637,7 +1512,7 @@ body.dark .overlay p {
     position: relative;
 }
 
-.forces-title::after {
+.military .forces-title::after {
     content: "";
     display: block;
     width: 80px;
@@ -1647,7 +1522,7 @@ body.dark .overlay p {
     border-radius: 999px;
 }
 
-.forces-subtitle {
+.military .forces-subtitle {
     max-width: 650px;
     margin: 0 auto 60px;
     text-align: center;
@@ -1656,14 +1531,14 @@ body.dark .overlay p {
     color: #647872;
 }
 
-.Components-section {
+.military .components-section {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.Components-card {
+.military .components-card {
     position: relative;
     width: 100%;
     max-width: 1100px;
@@ -1674,7 +1549,7 @@ body.dark .overlay p {
     margin: 0 auto;
 }
 
-.Components-circle {
+.military .components-circle {
     position: absolute;
     left: 40px;
     top: 50%;
@@ -1695,14 +1570,14 @@ body.dark .overlay p {
     transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
-.Components-circle img {
+.military .components-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.Components-bar {
+.military .components-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1721,26 +1596,26 @@ body.dark .overlay p {
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.Components-content {
+.military .components-content {
     flex: 1;
     max-width: 100%;
 }
 
-.Components-content h3 {
+.military .components-content h3 {
     font-size: 1.45rem;
     color: #17352c;
     margin-bottom: 10px;
     font-weight: 800;
 }
 
-.Components-content p {
+.military .components-content p {
     font-size: 1rem;
     line-height: 1.8;
     color: #60716b;
     margin: 0;
 }
 
-.Components-link {
+.military .components-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1757,13 +1632,13 @@ body.dark .overlay p {
     white-space: nowrap;
 }
 
-.Components-link:hover {
+.military .components-link:hover {
     background: linear-gradient(135deg, #63a98e, #559b82);
     transform: translateY(-3px);
     box-shadow: 0 12px 26px rgba(116, 189, 161, 0.32);
 }
 
-.Components-card:hover .Components-bar {
+.military .components-card:hover .components-bar {
     transform: translateY(-5px);
     border-color: rgba(127, 199, 171, 0.32);
     box-shadow:
@@ -1771,143 +1646,75 @@ body.dark .overlay p {
         0 5px 15px rgba(127, 199, 171, 0.1);
 }
 
-.Components-card:hover .Components-circle {
+.military .components-card:hover .components-circle {
     transform: translateY(-50%) scale(1.05);
     box-shadow:
         0 18px 34px rgba(26, 57, 45, 0.14),
         0 0 0 6px rgba(139, 208, 181, 0.18);
 }
 
-.Components-circle,
-.Components-bar,
-.Components-content,
-.Components-link {
+.military .components-circle,
+.military .components-bar,
+.military .components-content,
+.military .components-link {
     transition: all 0.6s ease;
 }
 
-.reveal-card .Components-circle {
+.military .reveal-card .components-circle {
     opacity: 0;
     transform: translateY(-50%) scale(0.8);
 }
 
-.reveal-card .Components-bar {
+.military .reveal-card .components-bar {
     opacity: 0;
     transform: scaleX(0.85);
     transform-origin: left center;
 }
 
-.reveal-card .Components-content {
+.military .reveal-card .components-content {
     opacity: 0;
     transform: translateY(25px);
 }
 
-.reveal-card .Components-link {
+.military .reveal-card .components-link {
     opacity: 0;
     transform: translateY(20px);
 }
 
-.reveal-card.is-visible .Components-circle {
+.military .reveal-card.is-visible .components-circle {
     opacity: 1;
     transform: translateY(-50%) scale(1);
 }
 
-.reveal-card.is-visible .Components-bar {
+.military .reveal-card.is-visible .components-bar {
     opacity: 1;
     transform: scaleX(1);
 }
 
-.reveal-card.is-visible .Components-content {
+.military .reveal-card.is-visible .components-content {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.2s;
 }
 
-.reveal-card.is-visible .Components-link {
+.military .reveal-card.is-visible .components-link {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.35s;
 }
 
-@media (max-width: 768px) {
-    .forces-overview {
-        padding: 80px 16px;
-    }
-
-    .forces-title {
-        font-size: 1.7rem;
-    }
-
-    .forces-subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 40px;
-    }
-
-    .Components-card {
-        min-height: auto;
-        padding-top: 90px;
-    }
-
-    .Components-circle {
-        left: 50%;
-        top: 0;
-        transform: translate(-50%, 0);
-        width: 110px;
-        height: 110px;
-    }
-
-    .reveal-card .Components-circle {
-        transform: translate(-50%, 0) scale(0.8);
-    }
-
-    .reveal-card.is-visible .Components-circle {
-        transform: translate(-50%, 0) scale(1);
-    }
-
-    .Components-card:hover .Components-circle {
-        transform: translate(-50%, 0) scale(1.05);
-    }
-
-    .Components-bar {
-        margin-left: 0;
-        width: 100%;
-        border-radius: 24px;
-        padding: 80px 20px 24px;
-        flex-direction: column;
-        text-align: center;
-        gap: 18px;
-    }
-
-    .Components-content {
-        max-width: 100%;
-    }
-
-    .Components-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .Components-content p {
-        font-size: 0.95rem;
-    }
-
-    .Components-link {
-        min-width: 120px;
-        height: 44px;
-        font-size: 0.9rem;
-    }
-}
-
-.objectives-section {
+.military .objectives-section {
     width: 100%;
     padding: 90px 20px;
     background: linear-gradient(to right, #edf7f2, #e3f0ea, #edf7f2);
 }
 
-.objectives-wrap {
+.military .objectives-wrap {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.objectives-title {
+.military .objectives-title {
     font-size: 2.5rem;
     color: #17352c;
     line-height: 1.2;
@@ -1915,19 +1722,19 @@ body.dark .overlay p {
     text-align: center;
 }
 
-.objectives-grid {
+.military .objectives-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-.objective-box:last-child {
+.military .objective-box:last-child {
     grid-column: 1 / -1;
     max-width: calc(50% - 9px);
     margin: 0 auto;
 }
 
-.objective-box {
+.military .objective-box {
     background: #ffffff;
     border-left: 4px solid #8bd0b5;
     border-radius: 18px;
@@ -1936,54 +1743,31 @@ body.dark .overlay p {
     transition: 0.3s ease;
 }
 
-.objective-box:hover {
+.military .objective-box:hover {
     transform: translateX(6px);
     background: #fcfffd;
 }
 
-.objective-box h3 {
+.military .objective-box h3 {
     font-size: 1.45rem;
     color: #17352c;
     margin-bottom: 10px;
     line-height: 1.3;
 }
 
-.objective-box p {
+.military .objective-box p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.8;
     color: #60716b;
 }
 
-@media (max-width: 768px) {
-    .objectives-section {
-        padding: 70px 16px;
-    }
-
-    .objectives-title {
-        font-size: 2rem;
-    }
-
-    .objective-box {
-        padding: 22px 20px;
-    }
-
-    .objective-box h3 {
-        font-size: 1.2rem;
-    }
-
-    .objective-box p {
-        font-size: 0.95rem;
-    }
-}
-
-
-.operate-section {
+.military .operate-section {
     padding: 90px 20px;
     background: #f6faf8;
 }
 
-.operate-wrap {
+.military .operate-wrap {
     max-width: 1150px;
     margin: 0 auto;
     display: grid;
@@ -1992,11 +1776,11 @@ body.dark .overlay p {
     align-items: center;
 }
 
-.operate-content {
+.military .operate-side {
     max-width: 500px;
 }
 
-.operate-label {
+.military .operate-label {
     display: inline-block;
     color: #67b095;
     margin-bottom: 12px;
@@ -2006,14 +1790,14 @@ body.dark .overlay p {
     font-weight: 600;
 }
 
-.operate-title {
+.military .operate-title {
     font-size: 2.7rem;
     color: #17352c;
     line-height: 1.2;
     margin: 0;
 }
 
-.operate-box {
+.military .operate-box {
     background: linear-gradient(135deg, #eef7f2, #e4f1eb);
     border-left: 4px solid #8bd0b5;
     padding: 30px 32px;
@@ -2021,19 +1805,19 @@ body.dark .overlay p {
     box-shadow: 0 14px 30px rgba(26, 57, 45, 0.05);
 }
 
-.operate-box p {
+.military .operate-box p {
     margin: 0;
     color: #557068;
     line-height: 1.9;
     font-size: 1.03rem;
 }
 
-.vision-section {
+.military .vision-section {
     padding: 90px 20px;
     background: #f1f8f4;
 }
 
-.vision-wrap {
+.military .vision-wrap {
     max-width: 1200px;
     margin: 0 auto;
     background: #ffffff;
@@ -2047,7 +1831,7 @@ body.dark .overlay p {
     box-shadow: 0 18px 40px rgba(26, 57, 45, 0.05);
 }
 
-.vision-content {
+.military .vision-content {
     text-align: left;
 }
 
@@ -2055,21 +1839,20 @@ body.dark .overlay p {
     display: inline-block;
     padding: 8px 16px;
     border-radius: 999px;
-    background: rgba(139, 208, 181, 0.18);
     color: #4d9279;
     margin-bottom: 18px;
     font-size: 0.9rem;
     font-weight: 700;
 }
 
-.vision-title {
+.military .vision-title {
     font-size: 2.3rem;
     color: #1f3b34;
     margin-bottom: 18px;
     line-height: 1.3;
 }
 
-.vision-text {
+.military .vision-text {
     max-width: 650px;
     margin: 0;
     color: #60716b;
@@ -2077,13 +1860,13 @@ body.dark .overlay p {
     font-size: 1.03rem;
 }
 
-.vision-image {
+.military .vision-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.vision-image img {
+.military .vision-image img {
     width: 100%;
     max-width: 420px;
     border-radius: 20px;
@@ -2094,603 +1877,659 @@ body.dark .overlay p {
     transition: transform 0.3s ease;
 }
 
-.vision-image img:hover {
+.military .vision-image img:hover {
     transform: scale(1.03);
 }
 
-@media (max-width: 1024px) {
-    .objectives-grid {
-        grid-template-columns: 1fr;
+.military .role-section {
+    padding: 90px 20px;
+    background: #f6faf8;
+}
+
+.military .role-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.military .role-title {
+    font-size: 2.3rem;
+    color: #1f3b34;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.military .role-intro {
+    text-align: center;
+    color: #667872;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.military .role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.military .role-card {
+    background: #ffffff;
+    border: 1px solid rgba(139, 208, 181, 0.28);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 24px rgba(26, 57, 45, 0.05);
+    text-align: center;
+}
+
+.military .role-card h3 {
+    color: #17352c;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.military .role-card p {
+    margin: 0;
+    color: #60716b;
+    line-height: 1.8;
+}
+
+.military .role-card:hover {
+    transform: translateY(-6px);
+}
+
+body.dark .military {
+    background: linear-gradient(to bottom, #0b1f18, #0f2e24);
+    color: #ffffff;
+}
+
+body.dark .military .hero-overlay {
+    background: linear-gradient(to bottom right, rgba(5, 25, 15, 0.9), rgba(0, 0, 0, 0.75));
+}
+
+body.dark .military .hero-subtitle {
+    color: #d4b26a;
+}
+
+body.dark .military .hero h1 {
+    color: #ffffff;
+}
+
+body.dark .military .hero-text {
+    color: #e8e8e8;
+}
+
+body.dark .military .section-title h2 {
+    color: #ffffff;
+}
+
+body.dark .military .section-title span {
+    color: #d4b26a;
+}
+
+body.dark .military .section-title.light h2,
+body.dark .military .section-title.light span {
+    color: #ffffff;
+}
+
+
+body.dark .military .about-section {
+    background: linear-gradient(135deg, #122f26, #0e2720);
+}
+
+body.dark .military .about-card {
+    background: #10281e;
+    border-top: 5px solid #d4b26a;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .military .about-card h3 {
+    color: #ffffff;
+}
+
+body.dark .military .about-card p {
+    color: #e0e0e0;
+}
+
+
+body.dark .military .ministry-section {
+    background: linear-gradient(135deg, #14362b, #102d24);
+}
+
+body.dark .military .small-title {
+    color: #d4b26a;
+}
+
+body.dark .military .text-box h2 {
+    color: #ffffff;
+}
+
+body.dark .military .text-box p {
+    color: #e0e0e0;
+}
+
+body.dark .military .info-item {
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 4px solid #d4b26a;
+}
+
+body.dark .military .info-item h4 {
+    color: #ffffff;
+}
+
+body.dark .military .info-item p {
+    color: #e0e0e0;
+}
+
+
+body.dark .military .importance-section::before {
+    background-color: rgba(12, 40, 30, 0.85);
+}
+
+body.dark .military .importance-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 178, 106, 0.15);
+}
+
+body.dark .military .importance-card h3 {
+    color: #ffffff;
+}
+
+body.dark .military .importance-card p {
+    color: #e0e0e0;
+}
+
+body.dark .military .number {
+    color: #d4b26a;
+}
+
+
+body.dark .military .forces-overview {
+    background: linear-gradient(to bottom, #0c241a, #091811);
+}
+
+body.dark .military .forces-title {
+    color: #ffffff;
+}
+
+body.dark .military .forces-subtitle {
+    color: #e0e0e0;
+}
+
+body.dark .military .components-circle {
+    background: #0f2e22;
+    border: 6px solid #d4b26a;
+}
+
+body.dark .military .components-bar {
+    background: linear-gradient(to right, #10281e, #0c241a);
+    border: 1px solid rgba(212, 178, 106, 0.18);
+}
+
+body.dark .military .components-content h3 {
+    color: #ffffff;
+}
+
+body.dark .military .components-content p {
+    color: #e0e0e0;
+}
+
+body.dark .military .components-link {
+    background: linear-gradient(135deg, #d4b26a, #b8964f);
+    color: #111111;
+}
+
+body.dark .military .components-link:hover {
+    color: #111111;
+}
+
+
+body.dark .military .objectives-section {
+    background: linear-gradient(to right, #041c1a, #0b2f29, #041c1a);
+}
+
+body.dark .military .objectives-title {
+    color: #ffffff;
+}
+
+body.dark .military .objective-box {
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 4px solid #d4b26a;
+}
+
+body.dark .military .objective-box h3 {
+    color: #ffffff;
+}
+
+body.dark .military .objective-box p {
+    color: #e0e0e0;
+}
+
+
+body.dark .military .operate-section {
+    background: linear-gradient(135deg, #0f2e24, #0c241d);
+}
+
+body.dark .military .operate-label {
+    color: #d4b26a;
+}
+
+body.dark .military .operate-title {
+    color: #ffffff;
+}
+
+body.dark .military .operate-box {
+    background: #173531;
+    border-left: 4px solid #d4b26a;
+
+}
+
+body.dark .military .operate-box p {
+    color: #f3f3f3;
+}
+
+
+body.dark .military .vision-section {
+    background: linear-gradient(135deg, #102f26, #0d261f);
+}
+
+body.dark .military .vision-wrap {
+    background: #10281e;
+    border: 1px solid rgba(212, 178, 106, 0.2);
+}
+
+body.dark .military .vision-badge {
+    background: rgba(212, 178, 106, 0.14);
+    color: #d4b26a;
+}
+
+body.dark .military .vision-title {
+    color: #ffffff;
+}
+
+body.dark .military .vision-text {
+    color: #e0e0e0;
+}
+
+body.dark .military .vision-image img {
+    background: #10281e;
+    border: 3px solid #d4b26a;
+}
+
+
+body.dark .military .role-section {
+    background: linear-gradient(135deg, #0f2c23, #0b211a);
+}
+
+body.dark .military .role-title {
+    color: #ffffff;
+}
+
+body.dark .military .role-intro {
+    color: #e0e0e0;
+}
+
+body.dark .military .role-card {
+    background: #1D3D39;
+    border: 3px solid #d4b26a;
+}
+
+body.dark .military .role-card h3 {
+    color: #ffffff;
+}
+
+body.dark .military .role-card p {
+    color: #f1f1f1;
+}
+
+
+body.dark .military .closing-section {
+    background: linear-gradient(to right, #0e2a22, #0a1f18);
+}
+
+body.dark .military .closing-content {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 178, 106, 0.18);
+}
+
+body.dark .military .closing-content h2 {
+    color: #d4b26a;
+}
+
+body.dark .military .closing-content p {
+    color: #f0f0f0;
+}
+
+
+@media (min-width: 601px) and (max-width: 820px) {
+
+    .military .role-section,
+    .military .objectives-section {
+        padding: 80px 20px;
     }
 
-    .objective-box:last-child {
+    .military .role-title,
+    .military .objectives-title {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    .military .role-intro {
+        font-size: 0.95rem;
+        margin: 0 auto 28px;
+        max-width: 620px;
+    }
+
+    .military .role-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .military .role-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+    }
+
+    .military .role-card:last-child {
         grid-column: auto;
         max-width: 100%;
         margin: 0;
     }
 
-    .operate-wrap,
-    .vision-wrap {
+    .military .objectives-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .military .objective-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 20px;
+    }
+
+    .military .objective-box:last-child {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .military .objective-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .military .objective-box p {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .military .about-grid,
+    .military .ministry-container,
+    .military .importance-cards {
         grid-template-columns: 1fr;
     }
 
-    .operate-content,
-    .vision-content {
+    .military .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .military .section-title h2,
+    .military .text-box h2,
+    .military .closing-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .military .hero {
+        min-height: 85vh;
+    }
+
+    .military .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .military .hero-text {
+        max-width: 92%;
+        font-size: 0.92rem;
+        line-height: 1.75;
+        margin: 0 auto 24px;
+
+    }
+
+    .military .about-card,
+    .military .importance-card,
+    .military .info-item {
+        padding: 22px;
+    }
+
+    .military .section-title h2,
+    .military .text-box h2,
+    .military .closing-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .military .role-section {
+        padding: 70px 16px;
+    }
+
+    .military .role-title {
+        font-size: 1.8rem;
+    }
+
+    .military .role-intro {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .military .role-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .military .role-card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .military .role-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .military .role-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .military .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .military .objective-box:last-child {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .military .operate-wrap,
+    .military .vision-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .military .operate-side,
+    .military .vision-content {
         max-width: 100%;
         text-align: center;
     }
 
-    .vision-text {
+    .military .vision-text {
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .vision-image {
+    .military .vision-image {
         justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
 
-    .operate-section,
-    .vision-section {
+    .military .operate-section,
+    .military .vision-section {
         padding: 70px 16px;
     }
 
-    .operate-title {
+    .military .operate-title {
         font-size: 2rem;
     }
 
-    .operate-box {
+    .military .operate-box {
         padding: 24px 20px;
     }
 
-    .vision-wrap {
+    .military .vision-wrap {
         padding: 30px 22px;
     }
 
-    .vision-title {
+    .military .vision-title {
         font-size: 1.8rem;
     }
 
-    .vision-text {
+    .military .vision-text {
         font-size: 0.96rem;
     }
-}
 
-.role-section {
-    padding: 90px 20px;
-    background: #f6faf8;
-}
-
-.role-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.role-title {
-    font-size: 2.3rem;
-    color: #1f3b34;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.role-intro {
-    text-align: center;
-    color: #667872;
-    max-width: 700px;
-    margin: 0 auto 35px;
-    line-height: 1.8;
-}
-
-.role-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.role-card {
-    background: #ffffff;
-    border: 1px solid rgba(139, 208, 181, 0.28);
-    border-radius: 20px;
-    padding: 28px 24px;
-    box-shadow: 0 10px 24px rgba(26, 57, 45, 0.05);
-    text-align: center;
-}
-
-.role-card h3 {
-    color: #17352c;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-}
-
-.role-card p {
-    margin: 0;
-    color: #60716b;
-    line-height: 1.8;
-}
-
-.closing-section {
-    width: 100%;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #f0f8f4, #e5f2ec);
-}
-
-.closing-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    background: #ffffff;
-    border: 1px solid rgba(139, 208, 181, 0.24);
-    border-radius: 28px;
-    padding: 50px 35px;
-    box-shadow: 0 18px 35px rgba(26, 57, 45, 0.05);
-}
-
-.closing-content h2 {
-    font-size: 2.2rem;
-    color: #67b095;
-    margin-bottom: 18px;
-    line-height: 1.3;
-}
-
-.closing-content p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #587068;
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .closing-section {
+    .military .closing-section {
         padding: 70px 16px;
     }
 
-    .closing-content {
+    .military .closing-content {
         padding: 35px 22px;
         border-radius: 22px;
     }
 
-    .closing-content h2 {
+    .military .closing-content h2 {
         font-size: 1.7rem;
     }
 
-    .closing-content p {
+    .military .closing-content p {
         font-size: 0.95rem;
     }
-}
 
-
-
-body.dark .main {
-    background:
-        radial-gradient(circle at top, rgba(212, 178, 106, 0.05), transparent 30%),
-        linear-gradient(to bottom, #091811, #0f2e22 40%, #0c241a);
-    color: #ffffff;
-}
-
-
-body.dark .hero-overlay {
-    background: linear-gradient(to bottom right, rgba(5, 25, 15, 0.9), rgba(0, 0, 0, 0.75));
-}
-
-body.dark .hero-subtitle {
-    color: #d4b26a;
-}
-
-body.dark .hero h1 {
-    color: #ffffff;
-}
-
-body.dark .hero-text {
-    color: #e8e8e8;
-}
-
-body.dark .hero-btn {
-    background: linear-gradient(135deg, #d4b26a, #b8964f);
-    color: #111111;
-}
-
-body.dark .hero-btn:hover {
-    background: #ffffff;
-    color: #111111;
-}
-
-
-body.dark .section-title h2 {
-    color: #ffffff;
-}
-
-body.dark .section-title span {
-    color: #d4b26a;
-}
-
-body.dark .section-title.light h2,
-body.dark .section-title.light span {
-    color: #ffffff;
-}
-
-
-body.dark .about-section {
-    background: linear-gradient(135deg, #0c241a, #091811);
-}
-
-body.dark .about-card {
-    background: #10281e;
-    border-top: 5px solid #d4b26a;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
-body.dark .about-card h3 {
-    color: #ffffff;
-}
-
-body.dark .about-card p {
-    color: #e0e0e0;
-}
-
-
-body.dark .ministry-section {
-    background: linear-gradient(135deg, #0f3d2e, #0b241b);
-}
-
-body.dark .small-title {
-    color: #d4b26a;
-}
-
-body.dark .text-box h2 {
-    color: #ffffff;
-}
-
-body.dark .text-box p {
-    color: #e0e0e0;
-}
-
-body.dark .info-item {
-    background: rgba(255, 255, 255, 0.06);
-    border-left: 4px solid #d4b26a;
-}
-
-body.dark .info-item h4 {
-    color: #ffffff;
-}
-
-body.dark .info-item p {
-    color: #e0e0e0;
-}
-
-
-body.dark .importance-section::before {
-    background-color: rgba(5, 20, 12, 0.9);
-}
-
-body.dark .importance-card {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(212, 178, 106, 0.15);
-}
-
-body.dark .importance-card h3 {
-    color: #ffffff;
-}
-
-body.dark .importance-card p {
-    color: #e0e0e0;
-}
-
-body.dark .number {
-    color: #d4b26a;
-}
-
-
-body.dark .forces-overview {
-    background: linear-gradient(to bottom, #0c241a, #091811);
-}
-
-body.dark .forces-title {
-    color: #ffffff;
-}
-
-body.dark .forces-subtitle {
-    color: #e0e0e0;
-}
-
-body.dark .Components-circle {
-    background: #0f2e22;
-    border: 6px solid #d4b26a;
-}
-
-body.dark .Components-bar {
-    background: linear-gradient(to right, #10281e, #0c241a);
-    border: 1px solid rgba(212, 178, 106, 0.18);
-}
-
-body.dark .Components-content h3 {
-    color: #ffffff;
-}
-
-body.dark .Components-content p {
-    color: #e0e0e0;
-}
-
-body.dark .Components-link {
-    background: linear-gradient(135deg, #d4b26a, #b8964f);
-    color: #111111;
-}
-
-body.dark .Components-link:hover {
-    color: #111111;
-}
-
-
-body.dark .objectives-section {
-    background: linear-gradient(to right, #041c1a, #0b2f29, #041c1a);
-}
-
-body.dark .objectives-title {
-    color: #ffffff;
-}
-
-body.dark .objective-box {
-    background: rgba(255, 255, 255, 0.06);
-    border-left: 4px solid #d4b26a;
-}
-
-body.dark .objective-box h3 {
-    color: #ffffff;
-}
-
-body.dark .objective-box p {
-    color: #e0e0e0;
-}
-
-
-body.dark .operate-section {
-    background: linear-gradient(135deg, #091811, #0c241a);
-}
-
-body.dark .operate-label {
-    color: #d4b26a;
-}
-
-body.dark .operate-title {
-    color: #ffffff;
-}
-
-body.dark .operate-box {
-    background: linear-gradient(135deg, #173733, #1d3d39);
-}
-
-body.dark .operate-box p {
-    color: #f3f3f3;
-}
-
-
-body.dark .vision-section {
-    background: linear-gradient(135deg, #091811, #0c241a);
-}
-
-body.dark .vision-wrap {
-    background: #10281e;
-    border: 1px solid rgba(212, 178, 106, 0.2);
-}
-
-body.dark .vision-badge {
-    background: rgba(212, 178, 106, 0.14);
-    color: #d4b26a;
-}
-
-body.dark .vision-title {
-    color: #ffffff;
-}
-
-body.dark .vision-text {
-    color: #e0e0e0;
-}
-
-body.dark .vision-image img {
-    background: #10281e;
-    border: 3px solid #d4b26a;
-}
-
-
-body.dark .role-section {
-    background: linear-gradient(135deg, #091811, #0c241a);
-}
-
-body.dark .role-title {
-    color: #ffffff;
-}
-
-body.dark .role-intro {
-    color: #e0e0e0;
-}
-
-body.dark .role-card {
-    background: #1D3D39;
-    border: 3px solid #d4b26a;
-}
-
-body.dark .role-card h3 {
-    color: #ffffff;
-}
-
-body.dark .role-card p {
-    color: #f1f1f1;
-}
-
-
-body.dark .closing-section {
-    background: linear-gradient(to right, #0b2f29, #041c1a);
-}
-
-body.dark .closing-content {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(212, 178, 106, 0.18);
-}
-
-body.dark .closing-content h2 {
-    color: #d4b26a;
-}
-
-body.dark .closing-content p {
-    color: #f0f0f0;
-}
-
-.role-section {
-    padding: 90px 20px;
-    background: #f6faf8;
-}
-
-.role-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.role-title {
-    font-size: 2.3rem;
-    color: #1f3b34;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.role-intro {
-    text-align: center;
-    color: #667872;
-    max-width: 700px;
-    margin: 0 auto 35px;
-    line-height: 1.8;
-}
-
-.role-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.role-card {
-    background: #ffffff;
-    border: 1px solid rgba(139, 208, 181, 0.28);
-    border-radius: 20px;
-    padding: 28px 24px;
-    box-shadow: 0 10px 24px rgba(26, 57, 45, 0.05);
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.role-card:hover {
-    transform: translateY(-6px);
-}
-
-.role-card h3 {
-    color: #17352c;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-}
-
-.role-card p {
-    margin: 0;
-    color: #60716b;
-    line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-
-    .role-section {
-        padding: 70px 16px;
+    .military .forces-overview {
+        padding: 80px 16px;
     }
 
-    .role-title {
-        font-size: 1.8rem;
+    .military .forces-title {
+        font-size: 1.7rem;
     }
 
-    .role-intro {
+    .military .forces-subtitle {
         font-size: 0.95rem;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
 
-    .role-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .military .components-card {
+        min-height: auto;
+        padding-top: 90px;
     }
 
-    .role-card {
-        padding: 22px 18px;
-        border-radius: 18px;
+    .military .components-circle {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+        width: 110px;
+        height: 110px;
     }
 
-    .role-card h3 {
-        font-size: 1.1rem;
+    .military .reveal-card .components-circle {
+        transform: translate(-50%, 0) scale(0.8);
     }
 
-    .role-card p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 820px) {
-
-    .role-section,
-    .objectives-section {
-        padding: 80px 20px;
+    .military .reveal-card.is-visible .components-circle {
+        transform: translate(-50%, 0) scale(1);
     }
 
-    .role-title,
-    .objectives-title {
-        font-size: 2rem;
-        margin-bottom: 24px;
+    .military .components-card:hover .components-circle {
+        transform: translate(-50%, 0) scale(1.05);
     }
 
-    .role-intro {
-        font-size: 0.95rem;
-        margin: 0 auto 28px;
-        max-width: 620px;
-    }
-
-    .role-grid {
-        grid-template-columns: 1fr !important;
+    .military .components-bar {
+        margin-left: 0;
+        width: 100%;
+        border-radius: 24px;
+        padding: 80px 20px 24px;
+        flex-direction: column;
+        text-align: center;
         gap: 18px;
     }
 
-    .role-card {
-        width: 100%;
+    .military .components-content {
         max-width: 100%;
-        padding: 24px 20px;
     }
 
-    .role-card:last-child {
-        grid-column: auto !important;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .objectives-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px;
-    }
-
-    .objective-box {
-        width: 100%;
-        max-width: 100%;
-        padding: 22px 20px;
-    }
-
-    .objective-box:last-child {
-        grid-column: auto !important;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .objective-box h3 {
+    .military .components-content h3 {
         font-size: 1.2rem;
     }
 
-    .objective-box p {
+    .military .components-content p {
+        font-size: 0.95rem;
+    }
+
+    .military .components-link {
+        min-width: 120px;
+        height: 44px;
+        font-size: 0.9rem;
+    }
+
+    .military .objectives-section {
+        padding: 70px 16px;
+    }
+
+    .military .objectives-title {
+        font-size: 2rem;
+    }
+
+    .military .objective-box {
+        padding: 22px 20px;
+    }
+
+    .military .objective-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .military .objective-box p {
         font-size: 0.95rem;
     }
 }
 
 /* ************************************************************ Military System Page End ************************************************************ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2727,10 +2566,15 @@ body.dark .closing-content p {
 .land .section-badge {
     display: inline-block;
     color: #a97a3d;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     letter-spacing: 1.2px;
-    font-size: 0.9rem;
     text-transform: uppercase;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    width: fit-content;
+
+
 }
 
 .land .land-hero {
@@ -2816,17 +2660,6 @@ body.dark .closing-content p {
 .land .overview-header {
     text-align: center;
     margin-bottom: 45px;
-}
-
-.land .section-badge {
-    display: inline-block;
-    width: fit-content;
-    padding: 8px 16px;
-    margin-bottom: 16px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .land .overview-title {
@@ -2919,7 +2752,7 @@ body.dark .closing-content p {
     border-radius: 20px;
     border: 1px solid rgba(179, 139, 77, 0.3);
     box-shadow: 0 10px 25px rgba(90, 65, 35, 0.08);
-    color: #4e4237;
+    color: #374e46;
     line-height: 1.8;
     transition: 0.3s ease;
     width: 100%;
@@ -2930,7 +2763,6 @@ body.dark .closing-content p {
     justify-content: center;
 
 }
-
 
 .land .content-text li::before {
     content: "";
@@ -3047,14 +2879,6 @@ body.dark .closing-content p {
     margin: 0 auto 70px;
 }
 
-.land .structure-badge {
-    display: inline-block;
-    color: #a97a3d;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
 .land .structure-intro h2 {
     font-size: 2.9rem;
     color: #2a2118;
@@ -3150,8 +2974,6 @@ body.dark .closing-content p {
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(179, 139, 77, 0.18);
     transition: 0.35s ease;
-    opacity: 0;
-    transform: translateY(60px);
     box-shadow: 0 8px 22px rgba(90, 65, 35, 0.06);
 }
 
@@ -3205,6 +3027,12 @@ body.dark .closing-content p {
     white-space: nowrap;
 }
 
+.land .reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
 .land .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -3224,35 +3052,6 @@ body.dark .closing-content p {
 .land .history-header {
     text-align: center;
     margin-bottom: 70px;
-}
-
-.land .history-badge {
-    display: inline-block;
-    color: #a97a3d;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    position: relative;
-}
-
-.land .history-badge::before,
-.land .history-badge::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 90px;
-    height: 1px;
-    background: rgba(179, 139, 77, 0.5);
-}
-
-.land .history-badge::before {
-    right: 100%;
-    margin-right: 18px;
-}
-
-.land .history-badge::after {
-    left: 100%;
-    margin-left: 18px;
 }
 
 .land .history-header h2 {
@@ -3357,14 +3156,6 @@ body.dark .closing-content p {
     text-align: center;
 }
 
-.land .vision-badge {
-    display: inline-block;
-    color: #a97a3d;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
 .land .vision-header h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     color: #2a2118;
@@ -3424,14 +3215,6 @@ body.dark .closing-content p {
     text-align: center;
     max-width: 720px;
     margin: 0 auto 60px;
-}
-
-.land .achievements-badge {
-    color: #a97a3d;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 10px;
 }
 
 .land .achievements-header h2 {
@@ -3507,73 +3290,22 @@ body.dark .closing-content p {
     margin: 0;
 }
 
-.land .content-text>p {
-    max-width: 920px;
-    margin: 0 auto 26px;
-    text-align: center;
-    color: #655748;
-    font-size: 1rem;
-    line-height: 1.9;
-}
-
-.land .content-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.land .content-list li {
-    position: relative;
-    padding: 24px 26px 24px 64px;
-    margin: 0;
-    background: #ffffff;
-    border-radius: 24px;
-    border: 1px solid rgba(171, 129, 80, 0.16);
-    color: #4f4336;
-    font-size: 1rem;
-    line-height: 1.8;
-    box-shadow: 0 10px 26px rgba(73, 53, 33, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.land .content-list li::before {
-    content: "";
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #b48756;
-    box-shadow: 0 0 0 6px rgba(180, 135, 86, 0.15);
-}
-
-.land .content-list li:hover {
-    transform: translateY(-4px);
-    border-color: rgba(171, 129, 80, 0.3);
-    box-shadow: 0 16px 32px rgba(73, 53, 33, 0.12);
-}
-
-.land-challenges-section {
+.land .land-challenges-section {
     padding: 100px 20px;
     background: linear-gradient(to top, #f8f4ee, #ffffff);
 }
 
-.land-challenges-container {
+.land .land-challenges-container {
     max-width: 1050px;
     margin: 0 auto;
 }
 
-.land-challenges-header {
+.land .land-challenges-header {
     text-align: center;
     margin-bottom: 28px;
 }
 
-.land-challenges-header .section-badge {
+.land .land-challenges-header .section-badge {
     display: inline-block;
     padding: 8px 18px;
     color: #8b6238;
@@ -3582,14 +3314,14 @@ body.dark .closing-content p {
     margin-bottom: 14px;
 }
 
-.land-challenges-header h2 {
+.land .land-challenges-header h2 {
     font-size: clamp(2rem, 5vw, 3rem);
     color: #3d2d1f;
     line-height: 1.2;
     margin: 0;
 }
 
-.land-challenges-intro {
+.land .land-challenges-intro {
     max-width: 920px;
     margin: 0 auto 26px;
     text-align: center;
@@ -3598,7 +3330,7 @@ body.dark .closing-content p {
     line-height: 1.9;
 }
 
-.land-challenges-list {
+.land .land-challenges-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -3607,7 +3339,7 @@ body.dark .closing-content p {
     gap: 18px;
 }
 
-.land-challenges-list li {
+.land .land-challenges-list li {
     position: relative;
     padding: 24px 26px 24px 64px;
     margin: 0;
@@ -3621,7 +3353,7 @@ body.dark .closing-content p {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.land-challenges-list li::before {
+.land .land-challenges-list li::before {
     content: "";
     position: absolute;
     left: 24px;
@@ -3634,7 +3366,7 @@ body.dark .closing-content p {
     box-shadow: 0 0 0 6px rgba(180, 135, 86, 0.15);
 }
 
-.land-challenges-list li:hover {
+.land .land-challenges-list li:hover {
     transform: translateY(-4px);
     border-color: rgba(171, 129, 80, 0.3);
     box-shadow: 0 16px 32px rgba(73, 53, 33, 0.12);
@@ -3652,23 +3384,6 @@ body.dark .closing-content p {
     .land .content-text>p {
         font-size: 0.95rem;
         margin-bottom: 20px;
-    }
-
-    .land .content-list {
-        gap: 14px;
-    }
-
-    .land .content-list li {
-        padding: 20px 18px 20px 52px;
-        border-radius: 20px;
-        font-size: 0.94rem;
-    }
-
-    .land .content-list li::before {
-        left: 20px;
-        width: 10px;
-        height: 10px;
-        box-shadow: 0 0 0 5px rgba(180, 135, 86, 0.15);
     }
 }
 
@@ -3755,11 +3470,6 @@ body.dark .closing-content p {
 
     .land .equipment-thumb {
         height: 110px;
-    }
-
-    .land .history-badge::before,
-    .land .history-badge::after {
-        width: 50px;
     }
 
     .land .timeline {
@@ -3857,7 +3567,6 @@ body.dark .closing-content p {
     .land .vision-header p,
     .land .achievement-card p,
     .land .timeline-card p,
-    .land .content-text p,
     .land .equipment-info p {
         font-size: 0.95rem;
     }
@@ -3902,11 +3611,6 @@ body.dark .closing-content p {
         width: 14px;
         height: 14px;
         top: 28px;
-    }
-
-    .land .history-badge::before,
-    .land .history-badge::after {
-        width: 38px;
     }
 
     .land .timeline {
@@ -4189,14 +3893,13 @@ body.dark .land .overview-text {
     color: #dcdcdc;
 }
 
-.land .content-text li,
+body.dark .land .content-text li,
 body.dark .land .land-card,
 body.dark .land .vision-card,
 body.dark .land .achievement-card,
 body.dark .land .structure-item,
 body.dark .land .timeline-card,
-body.dark .land .equipment-row,
-body.dark .land .content-list li {
+body.dark .land .equipment-row {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(212, 178, 106, 0.2);
 }
@@ -4214,10 +3917,6 @@ body.dark .land .vision-card p,
 body.dark .land .achievement-card p,
 body.dark .land .structure-item p,
 body.dark .land .timeline-card p {
-    color: #e0e0e0;
-}
-
-body.dark .land .content-text li {
     color: #e0e0e0;
 }
 
@@ -4247,50 +3946,45 @@ body.dark .land .equipment-type {
     color: #d4b26a;
 }
 
-body.dark .land .content-list li {
-    color: #e0e0e0;
-}
-
 body.dark .land .hero-btn {
     background: linear-gradient(to right, #d4b26a, #a07a3a);
     color: #111;
 }
 
-body.dark .land-challenges-section {
+body.dark .land .land-challenges-section {
     background: linear-gradient(to bottom, #1e1b18, #26221e, #1e1b18);
 }
 
-body.dark .land-challenges-header h2 {
+body.dark .land .land-challenges-header h2 {
     color: #ffffff;
 }
 
-body.dark .land-challenges-header .section-badge {
+body.dark .land .land-challenges-header .section-badge {
     color: #d4b26a;
 }
 
-body.dark .land-challenges-intro {
+body.dark .land .land-challenges-intro {
     color: #d6d6d6;
 }
 
-body.dark .land-challenges-list li {
+body.dark .land .land-challenges-list li {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 178, 106, 0.2);
     color: #e6e6e6;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
-body.dark .land-challenges-list li::before {
+body.dark .land .land-challenges-list li::before {
     background: #d4b26a;
     box-shadow: 0 0 0 6px rgba(212, 178, 106, 0.2);
 }
 
-body.dark .land-challenges-list li:hover {
+body.dark .land .land-challenges-list li:hover {
     border-color: rgba(212, 178, 106, 0.4);
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* ************************************************************ land page end********************************************************************** */
-
 
 
 /* ************************************************************ air page start ********************************************************************** */
@@ -4306,14 +4000,14 @@ body.dark .land-challenges-list li:hover {
     width: 100%;
 }
 
-.air-text {
+.air .air-text {
     max-width: 650px;
     text-align: center;
     margin: 0 auto;
     padding: 0 0 40px 0;
 }
 
-.section-badge {
+.air .section-badge {
     display: inline-block;
     color: #8b6b2e;
     margin-bottom: 10px;
@@ -4322,25 +4016,25 @@ body.dark .land-challenges-list li:hover {
     font-weight: 600;
 }
 
-.air-text h2 {
-    color: #183247;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 15px;
+.air .air-text h2 {
+    color: #2a2118;
+    font-size: 2.6rem;
+    margin-bottom: 14px;
     line-height: 1.25;
 }
 
-.air-text p {
-    color: #4f6475;
-    line-height: 1.8;
+.air .air-text p {
+    color: #5e5349;
+    line-height: 1.9;
 }
 
-.air-hero {
+.air .air-hero {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
 }
 
-.air-hero-video {
+.air .air-hero-video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -4348,14 +4042,14 @@ body.dark .land-challenges-list li:hover {
     object-fit: cover;
 }
 
-.air-hero::after {
+.air .air-hero::after {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(15, 30, 45, 0.28);
 }
 
-.air-hero-content {
+.air .air-hero-content {
     position: relative;
     z-index: 2;
     min-height: 100vh;
@@ -4367,7 +4061,7 @@ body.dark .land-challenges-list li:hover {
     padding: 30px 20px;
 }
 
-.air-hero-content h1 {
+.air .air-hero-content h1 {
     font-size: clamp(2.2rem, 6vw, 3.5rem);
     color: #ffffff;
     margin-bottom: 15px;
@@ -4375,7 +4069,7 @@ body.dark .land-challenges-list li:hover {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-.air-hero-content p {
+.air .air-hero-content p {
     color: #f5f7fa;
     max-width: 700px;
     line-height: 1.8;
@@ -4383,7 +4077,7 @@ body.dark .land-challenges-list li:hover {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
 }
 
-.hero-btn {
+.air .hero-btn {
     margin-top: 20px;
     padding: 12px 26px;
     border-radius: 999px;
@@ -4397,18 +4091,18 @@ body.dark .land-challenges-list li:hover {
     justify-content: center;
 }
 
-.hero-btn:hover {
+.air .hero-btn:hover {
     background: #c39c2d;
     color: #ffffff;
     transform: translateY(-2px);
 }
 
-.overview-section {
+.air .overview-section {
     padding: 110px 20px;
     background: linear-gradient(to bottom, #f8fbff, #edf4fa);
 }
 
-.overview-container {
+.air .overview-container {
     max-width: 1100px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.96);
@@ -4418,19 +4112,19 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 10px 30px rgba(24, 50, 71, 0.08);
 }
 
-.overview-header {
+.air .overview-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.overview-header h2 {
+.air .overview-header h2 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     color: #183247;
     margin-bottom: 25px;
     line-height: 1.2;
 }
 
-.overview-text {
+.air .overview-text {
     position: relative;
     padding-left: 20px;
     margin-bottom: 24px;
@@ -4439,7 +4133,7 @@ body.dark .land-challenges-list li:hover {
     color: #506474;
 }
 
-.overview-text::before {
+.air .overview-text::before {
     content: "";
     position: absolute;
     left: 0;
@@ -4450,11 +4144,11 @@ body.dark .land-challenges-list li:hover {
     border-radius: 2px;
 }
 
-.overview-image {
+.air .overview-image {
     margin-top: 30px;
 }
 
-.overview-image img {
+.air .overview-image img {
     width: 100%;
     display: block;
     border-radius: 20px;
@@ -4676,35 +4370,24 @@ body.dark .land-challenges-list li:hover {
     }
 }
 
-.air .air-text h2 {
-    color: #2a2118;
-    font-size: 2.6rem;
-    margin-bottom: 14px;
-}
-
-.air .air-text p {
-    color: #5e5349;
-    line-height: 1.9;
-}
-
-.structure-section {
+.air .structure-section {
     padding: 110px 20px;
     background: linear-gradient(to bottom, #f8fbff, #edf4fa);
 }
 
-.structure-container {
+.air .structure-container {
     max-width: 1150px;
     margin: 0 auto;
     width: 100%;
 }
 
-.structure-intro {
+.air .structure-intro {
     text-align: center;
     max-width: 760px;
     margin: 0 auto 70px;
 }
 
-.structure-badge {
+.air .structure-badge {
     display: inline-block;
     color: #8b6b2e;
     font-size: 0.95rem;
@@ -4713,20 +4396,20 @@ body.dark .land-challenges-list li:hover {
     font-weight: 600;
 }
 
-.structure-intro h2 {
+.air .structure-intro h2 {
     font-size: clamp(2rem, 4vw, 2.9rem);
     color: #183247;
     margin-bottom: 16px;
     line-height: 1.2;
 }
 
-.structure-intro p {
+.air .structure-intro p {
     color: #506474;
     line-height: 1.9;
     font-size: 1.02rem;
 }
 
-.structure-layout {
+.air .structure-layout {
     position: relative;
     max-width: 850px;
     margin: 0 auto;
@@ -4736,7 +4419,7 @@ body.dark .land-challenges-list li:hover {
     gap: 30px;
 }
 
-.structure-line {
+.air .structure-line {
     position: absolute;
     left: 24px;
     top: 0;
@@ -4745,7 +4428,7 @@ body.dark .land-challenges-list li:hover {
     background: linear-gradient(to bottom, rgba(212, 175, 55, 0.85), rgba(212, 175, 55, 0.18));
 }
 
-.structure-item {
+.air .structure-item {
     width: 100%;
     max-width: 100%;
     min-height: auto;
@@ -4759,7 +4442,7 @@ body.dark .land-challenges-list li:hover {
     overflow-wrap: break-word;
 }
 
-.structure-item::before {
+.air .structure-item::before {
     content: "";
     position: absolute;
     left: -57px;
@@ -4771,34 +4454,34 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.12);
 }
 
-.structure-item:hover {
+.air .structure-item:hover {
     transform: translateX(8px);
     background: #ffffff;
     border-left-color: rgba(212, 175, 55, 0.55);
 }
 
-.structure-item h3 {
+.air .structure-item h3 {
     color: #8b6b2e;
     font-size: 1.45rem;
     margin-bottom: 10px;
     line-height: 1.3;
 }
 
-.structure-item p {
+.air .structure-item p {
     color: #506474;
     line-height: 1.8;
     font-size: 0.98rem;
     max-width: 100%;
 }
 
-.air-cards {
+.air .air-cards {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 25px;
     margin-top: 40px;
 }
 
-.air-card {
+.air .air-card {
     padding: 25px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.92);
@@ -4807,29 +4490,29 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 10px 30px rgba(24, 50, 71, 0.06);
 }
 
-.air-card h3 {
+.air .air-card h3 {
     color: #183247;
     margin-bottom: 10px;
     line-height: 1.3;
 }
 
-.air-card p {
+.air .air-card p {
     color: #506474;
     line-height: 1.7;
 }
 
-.air-card:hover {
+.air .air-card:hover {
     transform: translateY(-5px);
     background: #ffffff;
 }
 
-.equipment-grid {
+.air .equipment-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
 }
 
-.equipment-card {
+.air .equipment-card {
     background: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(24, 50, 71, 0.08);
     border-radius: 24px;
@@ -4839,18 +4522,18 @@ body.dark .land-challenges-list li:hover {
     min-width: 0;
 }
 
-.equipment-card:hover {
+.air .equipment-card:hover {
     transform: translateY(-8px);
     border-color: rgba(216, 184, 123, 0.45);
     box-shadow: 0 18px 35px rgba(24, 50, 71, 0.14);
 }
 
-.equipment-image {
+.air .equipment-image {
     height: 240px;
     overflow: hidden;
 }
 
-.equipment-image img {
+.air .equipment-image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -4858,66 +4541,57 @@ body.dark .land-challenges-list li:hover {
     display: block;
 }
 
-.equipment-card:hover .equipment-image img {
+.air .equipment-card:hover .equipment-image img {
     transform: scale(1.06);
 }
 
-.equipment-content {
+.air .equipment-content {
     padding: 24px;
 }
 
-.equipment-content h3 {
+.air .equipment-content h3 {
     font-size: 1.35rem;
     margin-bottom: 12px;
     color: #183247;
     line-height: 1.3;
 }
 
-.equipment-content p {
+.air .equipment-content p {
     color: #5a6d7d;
     font-size: 0.97rem;
     margin-bottom: 18px;
     line-height: 1.8;
 }
 
-.equipment-tag {
-    color: #0f2235;
-    display: inline-block;
-    padding: 0px 0px;
-    border-radius: 999px;
-    font-size: 0.88rem;
-    line-height: 1.4;
-}
-
-.reveal {
+.air .reveal {
     opacity: 0;
     transform: translateY(70px);
     transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.reveal.active {
+.air .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
 
-.history-section {
+.air .history-section {
     padding: 110px 20px;
     background: radial-gradient(circle at center, #f9fbfe 0%, #eef4f9 48%, #e6eef6 100%);
     overflow: hidden;
 }
 
-.history-container {
+.air .history-container {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
 }
 
-.history-header {
+.air .history-header {
     text-align: center;
     margin-bottom: 70px;
 }
 
-.history-badge {
+.air .history-badge {
     display: inline-block;
     color: #8b6b2e;
     font-size: 1rem;
@@ -4927,8 +4601,8 @@ body.dark .land-challenges-list li:hover {
     font-weight: 600;
 }
 
-.history-badge::before,
-.history-badge::after {
+.air .history-badge::before,
+.air .history-badge::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -4937,17 +4611,17 @@ body.dark .land-challenges-list li:hover {
     background: rgba(212, 175, 55, 0.55);
 }
 
-.history-badge::before {
+.air .history-badge::before {
     right: 100%;
     margin-right: 18px;
 }
 
-.history-badge::after {
+.air .history-badge::after {
     left: 100%;
     margin-left: 18px;
 }
 
-.history-header h2 {
+.air .history-header h2 {
     font-size: clamp(2rem, 5vw, 4rem);
     line-height: 1.2;
     color: #183247;
@@ -4955,14 +4629,14 @@ body.dark .land-challenges-list li:hover {
     margin: 0 auto;
 }
 
-.timeline {
+.air .timeline {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
     padding-left: 90px;
 }
 
-.timeline::before {
+.air .timeline::before {
     content: "";
     position: absolute;
     left: 28px;
@@ -4973,12 +4647,12 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 0 18px rgba(243, 201, 98, 0.18);
 }
 
-.timeline-item {
+.air .timeline-item {
     position: relative;
     margin-bottom: 42px;
 }
 
-.timeline-dot {
+.air .timeline-dot {
     position: absolute;
     left: -74px;
     top: 34px;
@@ -4993,7 +4667,7 @@ body.dark .land-challenges-list li:hover {
     z-index: 2;
 }
 
-.timeline-card {
+.air .timeline-card {
     position: relative;
     padding: 30px 28px;
     border-radius: 24px;
@@ -5002,7 +4676,7 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 12px 28px rgba(24, 50, 71, 0.08);
 }
 
-.timeline-card::before {
+.air .timeline-card::before {
     content: "";
     position: absolute;
     left: -58px;
@@ -5013,7 +4687,7 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 0 12px rgba(212, 175, 55, 0.15);
 }
 
-.timeline-year {
+.air .timeline-year {
     display: inline-block;
     margin-bottom: 18px;
     padding: 10px 20px;
@@ -5028,38 +4702,38 @@ body.dark .land-challenges-list li:hover {
         0 8px 18px rgba(212, 175, 55, 0.16);
 }
 
-.timeline-card h3 {
+.air .timeline-card h3 {
     font-size: 1.7rem;
     color: #8b6b2e;
     margin-bottom: 16px;
     line-height: 1.2;
 }
 
-.timeline-card p {
+.air .timeline-card p {
     color: #4f6475;
     font-size: 1rem;
     line-height: 1.9;
     max-width: 100%;
 }
 
-.vision-section {
+.air .vision-section {
     padding: 110px 20px;
     background: linear-gradient(to bottom, #f8fbff, #edf4fa);
 }
 
-.vision-container {
+.air .vision-container {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
 }
 
-.vision-header {
+.air .vision-header {
     max-width: 760px;
     margin: 0 auto 60px;
     text-align: center;
 }
 
-.vision-badge {
+.air .vision-badge {
     display: inline-block;
     color: #8b6b2e;
     font-size: 0.95rem;
@@ -5068,26 +4742,26 @@ body.dark .land-challenges-list li:hover {
     font-weight: 600;
 }
 
-.vision-header h2 {
+.air .vision-header h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     color: #183247;
     margin-bottom: 18px;
     line-height: 1.2;
 }
 
-.vision-header p {
+.air .vision-header p {
     color: #506474;
     line-height: 1.9;
     font-size: 1.05rem;
 }
 
-.vision-cards {
+.air .vision-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
 }
 
-.vision-card {
+.air .vision-card {
     padding: 30px 24px;
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.94);
@@ -5097,43 +4771,43 @@ body.dark .land-challenges-list li:hover {
     min-width: 0;
 }
 
-.vision-card:hover {
+.air .vision-card:hover {
     transform: translateY(-8px);
     border-color: rgba(212, 175, 55, 0.45);
     background: #ffffff;
 }
 
-.vision-card h3 {
+.air .vision-card h3 {
     color: #8b6b2e;
     font-size: 1.35rem;
     margin-bottom: 12px;
     line-height: 1.3;
 }
 
-.vision-card p {
+.air .vision-card p {
     color: #506474;
     line-height: 1.8;
     font-size: 0.98rem;
 }
 
-.achievements-section {
+.air .achievements-section {
     padding: 110px 20px;
     background: linear-gradient(to bottom, #f8fbff, #edf4fa);
 }
 
-.achievements-container {
+.air .achievements-container {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
 }
 
-.achievements-header {
+.air .achievements-header {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 60px;
 }
 
-.achievements-badge {
+.air .achievements-badge {
     color: #8b6b2e;
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -5142,25 +4816,25 @@ body.dark .land-challenges-list li:hover {
     font-weight: 600;
 }
 
-.achievements-header h2 {
+.air .achievements-header h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
     color: #183247;
     margin-bottom: 15px;
     line-height: 1.2;
 }
 
-.achievements-header p {
+.air .achievements-header p {
     color: #506474;
     line-height: 1.8;
 }
 
-.achievements-cards {
+.air .achievements-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
 }
 
-.achievement-card {
+.air .achievement-card {
     padding: 30px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.94);
@@ -5170,39 +4844,39 @@ body.dark .land-challenges-list li:hover {
     min-width: 0;
 }
 
-.achievement-card:hover {
+.air .achievement-card:hover {
     transform: translateY(-8px);
     border-color: #d4af37;
     background: #ffffff;
 }
 
-.achievement-card h3 {
+.air .achievement-card h3 {
     color: #8b6b2e;
     margin-bottom: 10px;
     line-height: 1.3;
 }
 
-.achievement-card p {
+.air .achievement-card p {
     color: #506474;
     line-height: 1.7;
 }
 
-.air-challenges-section {
+.air .air-challenges-section {
     padding: 100px 20px;
     background: linear-gradient(to top, #f8fbff, #edf4fa);
 }
 
-.air-challenges-container {
+.air .air-challenges-container {
     max-width: 1050px;
     margin: 0 auto;
 }
 
-.air-challenges-header {
+.air .air-challenges-header {
     text-align: center;
     margin-bottom: 28px;
 }
 
-.air-challenges-header .section-badge {
+.air .air-challenges-header .section-badge {
     display: inline-block;
     padding: 8px 18px;
     font-size: 0.9rem;
@@ -5210,14 +4884,14 @@ body.dark .land-challenges-list li:hover {
     margin-bottom: 14px;
 }
 
-.air-challenges-header h2 {
+.air .air-challenges-header h2 {
     font-size: clamp(2rem, 5vw, 3rem);
     color: #3d2d1f;
     line-height: 1.2;
     margin: 0;
 }
 
-.air-challenges-intro {
+.air .air-challenges-intro {
     max-width: 920px;
     margin: 0 auto 26px;
     text-align: center;
@@ -5226,7 +4900,7 @@ body.dark .land-challenges-list li:hover {
     line-height: 1.9;
 }
 
-.air-challenges-list {
+.air .air-challenges-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -5235,7 +4909,7 @@ body.dark .land-challenges-list li:hover {
     gap: 18px;
 }
 
-.air-challenges-list li {
+.air .air-challenges-list li {
     position: relative;
     padding: 24px 26px 24px 64px;
     margin: 0;
@@ -5249,7 +4923,7 @@ body.dark .land-challenges-list li:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.air-challenges-list li::before {
+.air .air-challenges-list li::before {
     content: "";
     position: absolute;
     left: 24px;
@@ -5262,22 +4936,22 @@ body.dark .land-challenges-list li:hover {
     box-shadow: 0 0 0 6px rgba(180, 135, 86, 0.15);
 }
 
-.air-challenges-list li:hover {
+.air .air-challenges-list li:hover {
     transform: translateY(-4px);
     border-color: rgba(171, 129, 80, 0.3);
     box-shadow: 0 16px 32px rgba(73, 53, 33, 0.12);
 }
 
 @media (max-width: 1100px) {
-    .air-cards {
+    .air .air-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .equipment-grid {
+    .air .equipment-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .vision-cards {
+    .air .vision-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -5285,190 +4959,190 @@ body.dark .land-challenges-list li:hover {
 @media (max-width: 900px) {
 
     .air .air-section,
-    .overview-section,
-    .structure-section,
-    .history-section,
-    .vision-section,
-    .achievements-section {
+    .air .overview-section,
+    .air .structure-section,
+    .air .history-section,
+    .air .vision-section,
+    .air .achievements-section {
         padding: 85px 18px;
     }
 
-    .overview-container {
+    .air .overview-container {
         padding: 30px 24px;
     }
 
-    .structure-layout {
+    .air .structure-layout {
         padding-left: 52px;
     }
 
-    .structure-line {
+    .air .structure-line {
         left: 16px;
     }
 
-    .structure-item::before {
+    .air .structure-item::before {
         left: -41px;
         width: 15px;
         height: 15px;
     }
 
-    .timeline {
+    .air .timeline {
         padding-left: 58px;
     }
 
-    .timeline::before {
+    .air .timeline::before {
         left: 16px;
     }
 
-    .timeline-dot {
+    .air .timeline-dot {
         left: -44px;
         width: 18px;
         height: 18px;
     }
 
-    .timeline-card::before {
+    .air .timeline-card::before {
         left: -34px;
         width: 34px;
     }
 
-    .vision-cards,
-    .achievements-cards {
+    .air .vision-cards,
+    .air .achievements-cards {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
 
-    .air-hero,
-    .air-hero-content {
+    .air .air-hero,
+    .air .air-hero-content {
         min-height: 85vh;
     }
 
-    .air-hero-content {
+    .air .air-hero-content {
         padding: 24px 16px;
     }
 
-    .air-hero-content p {
+    .air .air-hero-content p {
         max-width: 100%;
         font-size: 0.95rem;
     }
 
-    .hero-btn {
+    .air .hero-btn {
         padding: 11px 22px;
         font-size: 0.95rem;
     }
 
     .air .air-section,
-    .overview-section,
-    .structure-section,
-    .history-section,
-    .vision-section,
-    .achievements-section {
+    .air .overview-section,
+    .air .structure-section,
+    .air .history-section,
+    .air .vision-section,
+    .air .achievements-section {
         padding: 75px 16px;
     }
 
-    .overview-container {
+    .air .overview-container {
         padding: 24px 18px;
         border-radius: 18px;
     }
 
-    .overview-text {
+    .air .overview-text {
         font-size: 0.96rem;
         line-height: 1.85;
         padding-left: 16px;
     }
 
-    .air-cards,
-    .equipment-grid,
-    .vision-cards,
-    .achievements-cards {
+    .air .air-cards,
+    .air .equipment-grid,
+    .air .vision-cards,
+    .air .achievements-cards {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    .air-card,
-    .vision-card,
-    .achievement-card {
+    .air .air-card,
+    .air .vision-card,
+    .air .achievement-card {
         padding: 22px 18px;
         border-radius: 18px;
     }
 
-    .structure-layout {
+    .air .structure-layout {
         padding-left: 38px;
         gap: 22px;
     }
 
-    .structure-line {
+    .air .structure-line {
         left: 10px;
     }
 
-    .structure-item {
+    .air .structure-item {
         padding: 22px 18px;
         border-radius: 16px;
     }
 
-    .structure-item::before {
+    .air .structure-item::before {
         left: -29px;
         top: 24px;
         width: 12px;
         height: 12px;
     }
 
-    .structure-item h3 {
+    .air .structure-item h3 {
         font-size: 1.15rem;
     }
 
-    .structure-item p {
+    .air .structure-item p {
         font-size: 0.93rem;
     }
 
-    .equipment-card {
+    .air .equipment-card {
         border-radius: 18px;
     }
 
-    .equipment-image {
+    .air .equipment-image {
         height: 220px;
     }
 
-    .equipment-content {
+    .air .equipment-content {
         padding: 18px;
     }
 
-    .equipment-content h3 {
+    .air .equipment-content h3 {
         font-size: 1.15rem;
     }
 
-    .equipment-content p {
+    .air .equipment-content p {
         font-size: 0.92rem;
         line-height: 1.75;
     }
 
-    .equipment-tag {
+    .air .equipment-tag {
         font-size: 0.8rem;
         padding: 7px 12px;
     }
 
-    .history-header {
+    .air .history-header {
         margin-bottom: 45px;
     }
 
-    .history-badge::before,
-    .history-badge::after {
+    .air .history-badge::before,
+    .air .history-badge::after {
         width: 35px;
     }
 
-    .timeline {
+    .air .timeline {
         padding-left: 40px;
     }
 
-    .timeline::before {
+    .air .timeline::before {
         left: 10px;
     }
 
-    .timeline-item {
+    .air .timeline-item {
         margin-bottom: 28px;
     }
 
-    .timeline-dot {
+    .air .timeline-dot {
         left: -30px;
         width: 14px;
         height: 14px;
@@ -5476,29 +5150,29 @@ body.dark .land-challenges-list li:hover {
         border-width: 3px;
     }
 
-    .timeline-card {
+    .air .timeline-card {
         padding: 20px 16px;
         border-radius: 18px;
     }
 
-    .timeline-card::before {
+    .air .timeline-card::before {
         left: -18px;
         width: 18px;
         top: 24px;
     }
 
-    .timeline-year {
+    .air .timeline-year {
         font-size: 0.95rem;
         padding: 8px 14px;
         margin-bottom: 12px;
     }
 
-    .timeline-card h3 {
+    .air .timeline-card h3 {
         font-size: 1.18rem;
         margin-bottom: 10px;
     }
 
-    .timeline-card p {
+    .air .timeline-card p {
         font-size: 0.93rem;
         line-height: 1.75;
     }
@@ -5506,140 +5180,140 @@ body.dark .land-challenges-list li:hover {
 
 @media (max-width: 480px) {
 
-    .air-hero,
-    .air-hero-content {
+    .air .air-hero,
+    .air .air-hero-content {
         min-height: 78vh;
     }
 
-    .air-hero-content p {
+    .air .air-hero-content p {
         font-size: 0.9rem;
     }
 
-    .hero-btn {
+    .air .hero-btn {
         width: 100%;
         max-width: 220px;
     }
 
     .air .air-section,
-    .overview-section,
-    .structure-section,
-    .history-section,
-    .vision-section,
-    .achievements-section {
+    .air .overview-section,
+    .air .structure-section,
+    .air .history-section,
+    .air .vision-section,
+    .air .achievements-section {
         padding: 65px 14px;
     }
 
-    .section-badge,
-    .structure-badge,
-    .history-badge,
-    .vision-badge,
-    .achievements-badge {
+    .air .section-badge,
+    .air .structure-badge,
+    .air .history-badge,
+    .air .vision-badge,
+    .air .achievements-badge {
         font-size: 0.78rem;
     }
 
-    .overview-container,
-    .structure-item,
-    .air-card,
-    .equipment-content,
-    .vision-card,
-    .achievement-card,
-    .timeline-card {
+    .air .overview-container,
+    .air .structure-item,
+    .air .air-card,
+    .air .equipment-content,
+    .air .vision-card,
+    .air .achievement-card,
+    .air .timeline-card {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    .equipment-image {
+    .air .equipment-image {
         height: 190px;
     }
 
-    .history-badge::before,
-    .history-badge::after {
+    .air .history-badge::before,
+    .air .history-badge::after {
         display: none;
     }
 }
 
 body.dark .air .air-section,
 body.dark .air .air-content-section,
-body.dark .overview-section,
-body.dark .structure-section,
-body.dark .history-section,
-body.dark .vision-section,
-body.dark .achievements-section,
-body.dark .air-challenges-section {
+body.dark .air .overview-section,
+body.dark .air .structure-section,
+body.dark .air .history-section,
+body.dark .air .vision-section,
+body.dark .air .achievements-section,
+body.dark .air .air-challenges-section {
     background: linear-gradient(to bottom, #0b1420, #0f1c2b, #132638);
 }
 
-body.dark .air-hero::after {
+body.dark .air .air-hero::after {
     background: linear-gradient(rgba(6, 12, 20, 0.55), rgba(6, 12, 20, 0.82));
 }
 
-body.dark .air-hero-content h1 {
+body.dark .air .air-hero-content h1 {
     color: #ffffff;
 }
 
-body.dark .air-hero-content p {
+body.dark .air .air-hero-content p {
     color: #e7edf5;
 }
 
-body.dark .hero-btn {
+body.dark .air .hero-btn {
     background: linear-gradient(to right, #d4af37, #b8891f);
     color: #0f2235;
     box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
 }
 
-body.dark .hero-btn:hover {
+body.dark .air .hero-btn:hover {
     background: linear-gradient(to right, #e0bc4e, #c79628);
     color: #ffffff;
 }
 
-body.dark .air-text h2,
-body.dark .overview-header h2,
-body.dark .structure-intro h2,
-body.dark .history-header h2,
-body.dark .vision-header h2,
-body.dark .achievements-header h2,
-body.dark .air-challenges-header h2,
+body.dark .air .air-text h2,
+body.dark .air .overview-header h2,
+body.dark .air .structure-intro h2,
+body.dark .air .history-header h2,
+body.dark .air .vision-header h2,
+body.dark .air .achievements-header h2,
+body.dark .air .air-challenges-header h2,
 body.dark .air .air-content-header h2 {
     color: #ffffff;
 }
 
-body.dark .air-text p,
-body.dark .overview-text,
-body.dark .structure-intro p,
-body.dark .structure-item p,
-body.dark .timeline-card p,
-body.dark .vision-header p,
-body.dark .vision-card p,
-body.dark .achievements-header p,
-body.dark .achievement-card p,
-body.dark .equipment-content p,
-body.dark .air-challenges-intro,
-body.dark .air-challenges-list li,
+body.dark .air .air-text p,
+body.dark .air .overview-text,
+body.dark .air .structure-intro p,
+body.dark .air .structure-item p,
+body.dark .air .timeline-card p,
+body.dark .air .vision-header p,
+body.dark .air .vision-card p,
+body.dark .air .achievements-header p,
+body.dark .air .achievement-card p,
+body.dark .air .equipment-content p,
+body.dark .air .air-challenges-intro,
+body.dark .air .air-challenges-list li,
 body.dark .air .air-content-text .leader-bio {
     color: #d7e1eb;
 }
 
-body.dark .section-badge,
-body.dark .structure-badge,
-body.dark .history-badge,
-body.dark .vision-badge,
-body.dark .achievements-badge,
+body.dark .air .section-badge,
+body.dark .air .structure-badge,
+body.dark .air .history-badge,
+body.dark .air .vision-badge,
+body.dark .air .achievements-badge,
 body.dark .air .air-section-badge,
-body.dark .air-challenges-header .section-badge {
+body.dark .air .air-challenges-header .section-badge {
     color: #e0c36c;
 }
 
-body.dark .overview-container {
+body.dark .air .overview-container {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(212, 175, 55, 0.18);
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32);
 }
 
-body.dark .overview-text::before {
+body.dark .air .overview-text::before {
     background: linear-gradient(to bottom, #d4af37, transparent);
 }
 
-body.dark .overview-image img {
+body.dark .air .overview-image img {
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
 }
 
@@ -5669,83 +5343,83 @@ body.dark .air .air-leader-image img {
     box-shadow: 0 18px 38px rgba(0, 0, 0, 0.4);
 }
 
-body.dark .structure-line {
+body.dark .air .structure-line {
     background: linear-gradient(to bottom, rgba(212, 175, 55, 0.9), rgba(212, 175, 55, 0.14));
 }
 
-body.dark .structure-item {
+body.dark .air .structure-item {
     background: rgba(255, 255, 255, 0.06);
     border-left: 1px solid rgba(212, 175, 55, 0.25);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
 }
 
-body.dark .structure-item::before {
+body.dark .air .structure-item::before {
     background: #d4af37;
     box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.14);
 }
 
-body.dark .structure-item:hover {
+body.dark .air .structure-item:hover {
     background: rgba(255, 255, 255, 0.08);
     border-left-color: rgba(212, 175, 55, 0.5);
 }
 
-body.dark .structure-item h3 {
+body.dark .air .structure-item h3 {
     color: #f2d37a;
 }
 
-body.dark .air-card {
+body.dark .air .air-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.18);
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
 }
 
-body.dark .air-card h3 {
+body.dark .air .air-card h3 {
     color: #ffffff;
 }
 
-body.dark .air-card p {
+body.dark .air .air-card p {
     color: #d7e1eb;
 }
 
-body.dark .air-card:hover {
+body.dark .air .air-card:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(212, 175, 55, 0.34);
 }
 
-body.dark .equipment-card {
+body.dark .air .equipment-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.16);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
 }
 
-body.dark .equipment-card:hover {
+body.dark .air .equipment-card:hover {
     border-color: rgba(212, 175, 55, 0.42);
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.4);
 }
 
-body.dark .equipment-content h3 {
+body.dark .air .equipment-content h3 {
     color: #ffffff;
 }
 
-body.dark .equipment-tag {
+body.dark .air .equipment-tag {
     color: #e0c36c;
 }
 
-body.dark .history-section {
+body.dark .air .history-section {
     background: radial-gradient(circle at center, #0b1420 0%, #0f1c2b 48%, #132638 100%);
 }
 
-body.dark .history-badge::before,
-body.dark .history-badge::after {
+body.dark .air .history-badge::before,
+body.dark .air .history-badge::after {
     background: rgba(212, 175, 55, 0.45);
 }
 
-body.dark .timeline::before {
+body.dark .air .timeline::before {
     background: linear-gradient(to bottom, rgba(243, 201, 98, 0.92), rgba(243, 201, 98, 0.12));
     box-shadow: 0 0 18px rgba(243, 201, 98, 0.14);
 }
 
-body.dark .timeline-dot {
+body.dark .air .timeline-dot {
     background: #132638;
     border: 4px solid #d4af37;
     box-shadow:
@@ -5753,1385 +5427,73 @@ body.dark .timeline-dot {
         0 0 18px rgba(212, 175, 55, 0.16);
 }
 
-body.dark .timeline-card {
+body.dark .air .timeline-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.22);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
 }
 
-body.dark .timeline-card::before {
+body.dark .air .timeline-card::before {
     background: linear-gradient(to right, #d4af37, rgba(212, 175, 55, 0.12));
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.12);
 }
 
-body.dark .timeline-year {
+body.dark .air .timeline-year {
     background: linear-gradient(to bottom, #e2bf58, #b8861d);
     color: #111827;
 }
 
-body.dark .timeline-card h3 {
+body.dark .air .timeline-card h3 {
     color: #ffffff;
 }
 
-body.dark .vision-card {
+body.dark .air .vision-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.18);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
-body.dark .vision-card:hover {
+body.dark .air .vision-card:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(212, 175, 55, 0.38);
 }
 
-body.dark .vision-card h3 {
+body.dark .air .vision-card h3 {
     color: #ffffff;
 }
 
-body.dark .achievement-card {
+body.dark .air .achievement-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.18);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
-body.dark .achievement-card:hover {
+body.dark .air .achievement-card:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(212, 175, 55, 0.38);
 }
 
-body.dark .achievement-card h3 {
+body.dark .air .achievement-card h3 {
     color: #ffffff;
 }
 
-body.dark .air-challenges-list li {
+body.dark .air .air-challenges-list li {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.18);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
-body.dark .air-challenges-list li::before {
+body.dark .air .air-challenges-list li::before {
     background: #d4af37;
     box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.16);
 }
 
-body.dark .air-challenges-list li:hover {
+body.dark .air .air-challenges-list li:hover {
     border-color: rgba(212, 175, 55, 0.38);
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* ************************************************************ air page end********************************************************************** */
-
-
-/* ************************************************************ air defense page start********************************************************************** */
-
-
-.air-defense-page .defense-section {
-    padding: 100px 20px;
-    background:
-        radial-gradient(circle at top, rgba(186, 209, 181, 0.12), transparent 34%),
-        linear-gradient(to bottom, #faf8f4, #f6f4ef, #ffffff);
-}
-
-.air-defense-page .defense-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.air-defense-page .defense-text {
-    max-width: 720px;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 45px;
-}
-
-.center-text {
-    text-align: center;
-}
-
-.air-defense-page .section-badge {
-    display: inline-block;
-    padding: 7px 16px;
-    margin-bottom: 14px;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-.air-defense-page .defense-hero {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.air-defense-page .defense-hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.air-defense-page .defense-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(rgba(255, 252, 247, 0.7), rgba(247, 242, 234, 0.9)),
-        linear-gradient(to right, rgba(186, 209, 181, 0.08), rgba(255, 255, 255, 0.05));
-}
-
-.air-defense-page .defense-hero-content {
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-}
-
-.defense-hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4.4rem);
-    color: #2a2f28;
-    margin-bottom: 18px;
-    text-shadow: 0 6px 18px rgba(255, 255, 255, 0.35);
-}
-
-.defense-hero-content p {
-    max-width: 760px;
-    color: #586056;
-    line-height: 1.9;
-    font-size: 1.05rem;
-}
-
-.air-defense-page .hero-btn {
-    margin-top: 24px;
-    padding: 13px 30px;
-    border-radius: 999px;
-    background: linear-gradient(to right, #8daf87, #a9c7a2);
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 10px 24px rgba(141, 175, 135, 0.22);
-    transition: 0.35s ease;
-}
-
-.air-defense-page .hero-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 28px rgba(141, 175, 135, 0.28);
-}
-
-.air-defense-page .overview-section {
-    padding: 110px 20px;
-    background: linear-gradient(to bottom, #ffffff, #f8f6f1);
-}
-
-.air-defense-page .overview-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.96);
-    padding: 42px;
-    border-radius: 24px;
-    border: 1px solid rgba(174, 201, 167, 0.2);
-    box-shadow: 0 16px 36px rgba(60, 70, 60, 0.06);
-}
-
-.air-defense-page .overview-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.air-defense-page .overview-header h2 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    color: #2a2f28;
-    margin-bottom: 18px;
-}
-
-.air-defense-page .overview-text {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 26px;
-    line-height: 2;
-    font-size: 1.02rem;
-    color: #5a6258;
-}
-
-.air-defense-page .overview-text::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 4px;
-    height: 80%;
-    border-radius: 8px;
-    background: linear-gradient(to bottom, #a7c39f, transparent);
-}
-
-.air-defense-page .overview-image img {
-    width: 100%;
-    display: block;
-    margin-top: 26px;
-    border-radius: 22px;
-    box-shadow: 0 18px 40px rgba(60, 70, 60, 0.1);
-}
-
-
-.content-section {
-    padding: 110px 20px;
-    background: #f3f1ed;
-}
-
-.content-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.content-header {
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.section-badge {
-    display: inline-block;
-    padding: 10px 22px;
-    color: #a97b3c;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.content-header h2 {
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    color: #2c241d;
-}
-
-.leadership-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.content-text ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.content-text li {
-    position: relative;
-    background: #f7f5f1;
-    border: 1px solid #d9cdb9;
-    border-radius: 26px;
-    padding: 35px 40px;
-    box-shadow: 0 15px 30px rgba(60, 40, 20, 0.08);
-    text-align: center;
-}
-
-.content-text li::before {
-    content: "";
-    position: absolute;
-    left: 18px;
-    top: 26px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #b88a45;
-    box-shadow: 0 0 0 6px rgba(184, 138, 69, 0.15);
-}
-
-.content-text strong {
-    display: block;
-    font-size: 1.6rem;
-    color: #a06f2c;
-    margin-bottom: 14px;
-}
-
-.leader-bio {
-    display: block;
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #5f5245;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.leader-image img {
-    width: 280px;
-    border-radius: 22px;
-    border: 2px solid #d9cdb9;
-    background: #f7f5f1;
-    box-shadow: 0 18px 35px rgba(60, 40, 20, 0.1);
-}
-
-.air-defense-page .defense-text h2 {
-    color: #2a2f28;
-    font-size: 2.6rem;
-    margin-bottom: 14px;
-}
-
-.air-defense-page .defense-text p {
-    color: #596156;
-    line-height: 1.9;
-}
-
-.air-defense-page .defense-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-top: 35px;
-}
-
-.air-defense-page .defense-card {
-    padding: 28px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 245, 240, 0.96));
-    border: 1px solid rgba(174, 201, 167, 0.22);
-    transition: 0.35s ease;
-    box-shadow: 0 10px 24px rgba(60, 70, 60, 0.06);
-}
-
-.air-defense-page .defense-card h3 {
-    color: #5d7b58;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.air-defense-page .defense-card p {
-    color: #596156;
-    line-height: 1.8;
-}
-
-.air-defense-page .defense-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(174, 201, 167, 0.45);
-    box-shadow: 0 18px 34px rgba(60, 70, 60, 0.1);
-}
-
-.air-defense-page .structure-section {
-    padding: 110px 20px;
-    background: linear-gradient(to bottom, #f8f6f1, #ffffff);
-}
-
-.air-defense-page .structure-container {
-    max-width: 1150px;
-    margin: 0 auto;
-}
-
-.air-defense-page .structure-intro {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 70px;
-}
-
-.air-defense-page .structure-badge {
-    display: inline-block;
-    color: #6b8b65;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.air-defense-page .structure-intro h2 {
-    font-size: 2.9rem;
-    color: #2a2f28;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.air-defense-page .structure-intro p {
-    color: #5a6258;
-    line-height: 1.9;
-    font-size: 1.02rem;
-}
-
-.air-defense-page .structure-layout {
-    position: relative;
-    max-width: 860px;
-    margin: 0 auto;
-    padding-left: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-}
-
-.air-defense-page .structure-line {
-    position: absolute;
-    left: 25px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, rgba(167, 195, 159, 0.8), rgba(167, 195, 159, 0.12));
-}
-
-.air-defense-page .structure-item {
-    position: relative;
-    width: 100%;
-    padding: 38px 34px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.97);
-    border: 1px solid rgba(174, 201, 167, 0.22);
-    transition: 0.35s ease;
-    box-shadow: 0 10px 22px rgba(60, 70, 60, 0.05);
-}
-
-.air-defense-page .structure-item::before {
-    content: "";
-    position: absolute;
-    left: -56px;
-    top: 34px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #9cbd96;
-    box-shadow: 0 0 0 6px rgba(174, 201, 167, 0.15);
-}
-
-.air-defense-page .structure-item:hover {
-    transform: translateX(8px);
-    border-color: rgba(174, 201, 167, 0.45);
-    box-shadow: 0 16px 30px rgba(60, 70, 60, 0.1);
-}
-
-.air-defense-page .structure-item h3 {
-    color: #5d7b58;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.air-defense-page .structure-item p {
-    color: #5a6258;
-    line-height: 1.85;
-}
-
-.air-defense-page .systems-section {
-    background:
-        radial-gradient(circle at center, rgba(186, 209, 181, 0.12), transparent 35%),
-        linear-gradient(to bottom, #ffffff, #f8f6f1);
-}
-
-.air-defense-page .equipment-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 40px;
-}
-
-.air-defense-page .air-defense-page .equipment-card {
-    border-radius: 24px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid rgba(174, 201, 167, 0.2);
-    box-shadow: 0 10px 24px rgba(60, 70, 60, 0.06);
-    transition: 0.35s ease;
-    opacity: 0;
-    transform: translateY(60px);
-}
-
-.air-defense-page .equipment-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(174, 201, 167, 0.42);
-    box-shadow: 0 16px 30px rgba(60, 70, 60, 0.1);
-}
-
-.air-defense-page .equipment-image {
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-}
-
-.air-defense-page .equipment-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.4s ease;
-}
-
-.air-defense-page .equipment-card:hover .equipment-image img {
-    transform: scale(1.06);
-}
-
-.air-defense-page .equipment-content {
-    padding: 24px;
-}
-
-.air-defense-page .equipment-content h3 {
-    color: #2a2f28;
-    font-size: 1.35rem;
-    margin-bottom: 12px;
-}
-
-.air-defense-page .equipment-content p {
-    color: #5a6258;
-    line-height: 1.85;
-    margin-bottom: 14px;
-}
-
-.air-defense-page .equipment-badge {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 0.88rem;
-}
-
-.air-defense-page .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.air-defense-page .history-section {
-    padding: 110px 20px;
-    background: radial-gradient(circle at center, #f8f6f1 0%, #fcfbf8 45%, #ffffff 100%);
-    overflow: hidden;
-}
-
-.air-defense-page .history-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.air-defense-page .history-header {
-    text-align: center;
-    margin-bottom: 70px;
-}
-
-.air-defense-page .history-badge {
-    display: inline-block;
-    color: #6b8b65;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    position: relative;
-}
-
-.air-defense-page .history-badge::before,
-.air-defense-page .history-badge::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 90px;
-    height: 1px;
-    background: rgba(174, 201, 167, 0.55);
-}
-
-.air-defense-page .history-badge::before {
-    right: 100%;
-    margin-right: 18px;
-}
-
-.air-defense-page .history-badge::after {
-    left: 100%;
-    margin-left: 18px;
-}
-
-.air-defense-page .history-header h2 {
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    color: #2a2f28;
-    line-height: 1.2;
-}
-
-.air-defense-page .timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 90px;
-}
-
-.air-defense-page .timeline::before {
-    content: "";
-    position: absolute;
-    left: 28px;
-    top: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(167, 195, 159, 0.9), rgba(167, 195, 159, 0.15));
-    box-shadow: 0 0 18px rgba(167, 195, 159, 0.14);
-}
-
-.air-defense-page .timeline-item {
-    position: relative;
-    margin-bottom: 58px;
-}
-
-.air-defense-page .timeline-dot {
-    position: absolute;
-    left: -74px;
-    top: 34px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #d6e6d1;
-    border: 4px solid #9fbe98;
-    box-shadow:
-        0 0 0 8px rgba(174, 201, 167, 0.12),
-        0 0 24px rgba(167, 195, 159, 0.18);
-    z-index: 2;
-}
-
-.air-defense-page .timeline-card {
-    position: relative;
-    padding: 34px 32px 30px;
-    border-radius: 28px;
-    border: 1px solid rgba(174, 201, 167, 0.22);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 246, 241, 0.96));
-    box-shadow: 0 12px 28px rgba(60, 70, 60, 0.06);
-}
-
-.air-defense-page .timeline-card::before {
-    content: "";
-    position: absolute;
-    left: -58px;
-    top: 38px;
-    width: 58px;
-    height: 2px;
-    background: linear-gradient(to right, #a8c59f, rgba(167, 195, 159, 0.15));
-}
-
-.air-defense-page .timeline-year {
-    display: inline-block;
-    margin-bottom: 18px;
-    padding: 9px 18px;
-    border-radius: 14px;
-    background: linear-gradient(to right, #95b98e, #aecba7);
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.air-defense-page .timeline-card h3 {
-    font-size: 1.8rem;
-    color: #5d7b58;
-    margin-bottom: 14px;
-}
-
-.air-defense-page .timeline-card p {
-    color: #586056;
-    font-size: 1.04rem;
-    line-height: 1.9;
-}
-
-.air-defense-page .vision-section {
-    padding: 110px 20px;
-    background: linear-gradient(to bottom, #ffffff, #f8f6f1);
-}
-
-.air-defense-page .vision-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.air-defense-page .vision-header {
-    max-width: 760px;
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
-.air-defense-page .vision-badge {
-    display: inline-block;
-    color: #6b8b65;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.air-defense-page .vision-header h2 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    color: #2a2f28;
-    margin-bottom: 18px;
-}
-
-.air-defense-page .vision-header p {
-    color: #5a6258;
-    line-height: 1.9;
-    font-size: 1.05rem;
-}
-
-.air-defense-page .vision-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.air-defense-page .vision-card {
-    padding: 30px 24px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid rgba(174, 201, 167, 0.2);
-    box-shadow: 0 10px 25px rgba(60, 70, 60, 0.06);
-    transition: 0.35s ease;
-}
-
-.air-defense-page .vision-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(174, 201, 167, 0.45);
-    box-shadow: 0 18px 34px rgba(60, 70, 60, 0.1);
-}
-
-.air-defense-page .vision-card h3 {
-    color: #5d7b58;
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-}
-
-.air-defense-page .vision-card p {
-    color: #5a6258;
-    line-height: 1.8;
-}
-
-.air-defense-page .achievements-section {
-    padding: 110px 20px;
-    background: linear-gradient(to bottom, #f8f6f1, #ffffff);
-}
-
-.air-defense-page .achievements-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.air-defense-page .achievements-header {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 60px;
-}
-
-.air-defense-page .achievements-badge {
-    color: #6b8b65;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.air-defense-page .achievements-header h2 {
-    font-size: 2.8rem;
-    color: #2a2f28;
-    margin-bottom: 15px;
-}
-
-.air-defense-page .achievements-header p {
-    color: #5a6258;
-    line-height: 1.8;
-}
-
-.air-defense-page .achievements-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.air-defense-page .achievement-card {
-    padding: 30px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid rgba(174, 201, 167, 0.2);
-    transition: 0.35s ease;
-    box-shadow: 0 10px 24px rgba(60, 70, 60, 0.06);
-}
-
-.air-defense-page .achievement-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(174, 201, 167, 0.45);
-    box-shadow: 0 18px 34px rgba(60, 70, 60, 0.1);
-}
-
-.air-defense-page .achievement-card h3 {
-    color: #5d7b58;
-    margin-bottom: 12px;
-}
-
-.air-defense-page .achievement-card p {
-    color: #5a6258;
-    line-height: 1.8;
-}
-
-
-.air .content-section {
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #0f2235, #0b1a2a);
-}
-
-.air .content-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.air .content-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.air .content-header h2 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.air .section-badge {
-    display: inline-block;
-    padding: 6px 16px;
-    color: #d4b26a;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
-}
-
-.air .content-text p {
-    text-align: center;
-    color: #cfd9e3;
-    margin-bottom: 25px;
-    line-height: 1.8;
-}
-
-.air .content-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.air .content-list li {
-    position: relative;
-    padding: 22px 25px 22px 60px;
-    background: #1b2f45;
-    border-radius: 25px;
-    color: #e6edf5;
-    line-height: 1.8;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
-}
-
-.air .content-list li::before {
-    content: "";
-    position: absolute;
-    left: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #d4b26a;
-    box-shadow: 0 0 0 6px rgba(212, 178, 106, 0.15);
-}
-
-.air .content-list li:hover {
-    transform: translateY(-5px);
-}
-
-.air-defense-challenges-section {
-    padding: 100px 20px;
-    background: #FCFCFA;
-}
-
-.air-defense-challenges-container {
-    max-width: 1050px;
-    margin: 0 auto;
-}
-
-.air-defense-challenges-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.air-defense-section-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    color: #8a6a2f;
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.air-defense-challenges-header h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: #2A2F28;
-    line-height: 1.2;
-    margin: 0;
-}
-
-.air-defense-challenges-intro {
-    max-width: 900px;
-    margin: 0 auto 28px;
-    text-align: center;
-    color: #5b6b79;
-    font-size: 1rem;
-    line-height: 1.9;
-}
-
-.air-defense-challenges-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.air-defense-challenges-list li {
-    position: relative;
-    padding: 24px 26px 24px 64px;
-    margin: 0;
-    background: #FCFCFA;
-    border-radius: 24px;
-    border: 1px solid rgba(31, 47, 61, 0.08);
-    color: #334454;
-    font-size: 1rem;
-    line-height: 1.8;
-    box-shadow: 0 10px 24px rgba(20, 32, 43, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.air-defense-challenges-list li::before {
-    content: "";
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #b89456;
-    box-shadow: 0 0 0 6px rgba(184, 148, 86, 0.14);
-}
-
-.air-defense-challenges-list li:hover {
-    transform: translateY(-4px);
-    border-color: rgba(184, 148, 86, 0.28);
-    box-shadow: 0 16px 30px rgba(20, 32, 43, 0.1);
-}
-
-@media (max-width: 768px) {
-    .air-defense-challenges-section {
-        padding: 80px 16px;
-    }
-
-    .air-defense-challenges-header h2 {
-        font-size: 2rem;
-    }
-
-    .air-defense-challenges-intro {
-        font-size: 0.95rem;
-        margin-bottom: 22px;
-    }
-
-    .air-defense-challenges-list li {
-        padding: 20px 18px 20px 52px;
-        border-radius: 20px;
-        font-size: 0.94rem;
-    }
-
-    .air-defense-challenges-list li::before {
-        left: 18px;
-        width: 10px;
-        height: 10px;
-        box-shadow: 0 0 0 5px rgba(184, 148, 86, 0.14);
-    }
-}
-
-@media (max-width: 576px) {
-    .air-defense-challenges-section {
-        padding: 72px 14px;
-    }
-
-    .air-defense-challenges-header h2 {
-        font-size: 1.75rem;
-    }
-
-    .air-defense-challenges-list li {
-        padding: 18px 16px 18px 46px;
-        border-radius: 18px;
-    }
-
-    .air-defense-challenges-list li::before {
-        left: 16px;
-    }
-}
-
-@media (max-width: 900px) {
-    .air-defense-page .vision-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .air-defense-page .equipment-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .air-defense-page .achievements-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .air-defense-page .overview-section,
-    .air-defense-page .defense-section,
-    .air-defense-page .structure-section,
-    .air-defense-page .history-section,
-    .air-defense-page .achievements-section,
-    .air-defense-page .content-section {
-        padding: 90px 16px;
-    }
-
-    .air-defense-page .overview-container {
-        padding: 28px 20px;
-    }
-
-    .air-defense-page .defense-hero-content h1 {
-        font-size: 2.3rem;
-    }
-
-    .air-defense-page .overview-header h2,
-    .air-defense-page .defense-text h2,
-    .air-defense-page .structure-intro h2,
-    .air-defense-page .achievements-header h2,
-    .air-defense-page .content-header h2,
-    .air-defense-page .vision-header h2 {
-        font-size: 2.1rem;
-    }
-
-    .air-defense-page .leadership-wrapper {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .air-defense-page .leader-image {
-        justify-content: center;
-    }
-
-    .air-defense-page .leader-image img {
-        width: 260px;
-    }
-
-    .air-defense-page .content-text {
-        text-align: center;
-    }
-
-    .air-defense-page .content-text li {
-        padding: 20px 20px 20px 45px;
-        text-align: left;
-    }
-
-    .air-defense-page .content-text li::before {
-        left: 15px;
-        top: 25px;
-        width: 10px;
-        height: 10px;
-    }
-
-    .air-defense-page .structure-layout {
-        padding-left: 45px;
-    }
-
-    .air-defense-page .structure-line {
-        left: 14px;
-    }
-
-    .air-defense-page .structure-item::before {
-        left: -38px;
-        width: 14px;
-        height: 14px;
-    }
-
-    .air-defense-page .history-badge::before,
-    .air-defense-page .history-badge::after {
-        width: 45px;
-    }
-
-    .air-defense-page .timeline {
-        padding-left: 54px;
-    }
-
-    .air-defense-page .timeline::before {
-        left: 14px;
-    }
-
-    .air-defense-page .timeline-dot {
-        left: -44px;
-        width: 18px;
-        height: 18px;
-        top: 28px;
-    }
-
-    .air-defense-page .timeline-card {
-        padding: 24px 20px 22px;
-        border-radius: 22px;
-    }
-
-    .air-defense-page .timeline-card::before {
-        left: -34px;
-        width: 34px;
-        top: 32px;
-    }
-
-    .air-defense-page .timeline-year {
-        font-size: 0.95rem;
-        padding: 8px 14px;
-    }
-
-    .air-defense-page .timeline-card h3 {
-        font-size: 1.4rem;
-    }
-
-    .air-defense-page .timeline-card p,
-    .air-defense-page .overview-text,
-    .air-defense-page .vision-header p,
-    .air-defense-page .achievement-card p {
-        font-size: 0.96rem;
-    }
-
-    .air-defense-page .equipment-image {
-        height: 220px;
-    }
-}
-
-
-@media (max-width: 992px) {
-    .leader-wrapper {
-        gap: 30px;
-    }
-
-    .leader-text strong {
-        font-size: 1.35rem;
-    }
-
-    .leader-bio {
-        font-size: 0.98rem;
-    }
-
-    .leader-image img {
-        width: 240px;
-    }
-}
-
-@media (max-width: 768px) {
-    .leader-section {
-        padding: 80px 16px;
-    }
-
-    .leader-header {
-        margin-bottom: 35px;
-    }
-
-    .leader-header h2 {
-        font-size: 2rem;
-    }
-
-    .leader-wrapper {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 24px;
-    }
-
-    .leader-text {
-        width: 100%;
-    }
-
-    .leader-text li {
-        padding: 24px 18px;
-        border-radius: 20px;
-    }
-
-    .leader-text li::before {
-        left: 14px;
-        top: 20px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .leader-text strong {
-        font-size: 1.2rem;
-        margin-bottom: 12px;
-    }
-
-    .leader-bio {
-        font-size: 0.95rem;
-        line-height: 1.8;
-    }
-
-    .leader-image img {
-        width: 220px;
-        border-radius: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .leader-section {
-        padding: 70px 14px;
-    }
-
-    .leader-badge {
-        font-size: 0.75rem;
-        padding: 8px 16px;
-    }
-
-    .leader-header h2 {
-        font-size: 1.7rem;
-    }
-
-    .leader-text li {
-        padding: 22px 16px;
-    }
-
-    .leader-text strong {
-        font-size: 1.05rem;
-    }
-
-    .leader-bio {
-        font-size: 0.9rem;
-    }
-
-    .leader-image img {
-        width: 200px;
-    }
-}
-
-
-body.dark .air-defense-page {
-    background: #141615;
-}
-
-body.dark .air-defense-page .defense-section,
-body.dark .air-defense-page .overview-section,
-body.dark .air-defense-page .structure-section,
-body.dark .air-defense-page .history-section,
-body.dark .air-defense-page .vision-section,
-body.dark .air-defense-page .achievements-section,
-body.dark .content-section {
-    background:
-        linear-gradient(to bottom, #141615, #181b19, #1c1f1d);
-}
-
-body.dark .air-defense-page .defense-hero-overlay {
-    background:
-        linear-gradient(rgba(20, 22, 21, 0.75), rgba(20, 22, 21, 0.92)),
-        linear-gradient(to right, rgba(194, 168, 109, 0.08), rgba(0, 0, 0, 0.2));
-}
-
-body.dark h1,
-body.dark h2,
-body.dark h3 {
-    color: #e6e9e7;
-}
-
-body.dark p,
-body.dark li,
-body.dark span {
-    color: #aab2ad;
-}
-
-body.dark .air-defense-page .overview-container,
-body.dark .air-defense-page .defense-card,
-body.dark .air-defense-page .structure-item,
-body.dark .air-defense-page .timeline-card,
-body.dark .air-defense-page .vision-card,
-body.dark .air-defense-page .achievement-card,
-body.dark .air-defense-page .equipment-card,
-body.dark .content-text li {
-    background: #1c1f1d;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-body.dark .air-defense-page .section-badge,
-body.dark .air-defense-page .vision-badge,
-body.dark .air-defense-page .history-badge,
-body.dark .air-defense-page .structure-badge,
-body.dark .air-defense-page .achievements-badge {
-    color: #c2a86d;
-}
-
-body.dark .air-defense-page .hero-btn {
-    background: linear-gradient(to right, #b89a5e, #d2b77a);
-    color: #fff;
-}
-
-body.dark .air-defense-page .structure-line,
-body.dark .air-defense-page .timeline::before {
-    background: linear-gradient(to bottom, #c2a86d, transparent);
-}
-
-body.dark .air-defense-page .structure-item::before,
-body.dark .air-defense-page .content-list li::before {
-    background: #c2a86d;
-}
-
-body.dark .air-defense-page .timeline-dot {
-    background: #d2b77a;
-    border: 4px solid #b89a5e;
-}
-
-body.dark .air-defense-page .content-list li {
-    background: #181b19;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-body.dark .air-defense-page h1,
-body.dark .air-defense-page h2,
-body.dark .air-defense-page h3 {
-    color: #ffffff;
-}
-
-body.dark .air-defense-page p,
-body.dark .air-defense-page li,
-body.dark .air-defense-page span {
-    color: #e5e5e5;
-}
-
-
-body.dark .air-defense-challenges-section {
-    background: linear-gradient(to top, #141615, #181b19, #1c1f1d);
-
-}
-
-body.dark .air-defense-challenges-list li {
-    background: #1C1F1D;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: #e6edf3;
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
-}
-
-body.dark .air-defense-challenges-list li:hover {
-    border-color: rgba(212, 175, 55, 0.25);
-
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.7),
-        0 0 25px rgba(212, 175, 55, 0.06),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-body.dark .air-defense-challenges-intro {
-    color: #cfd8dc;
-}
-
-body.dark .air-defense-challenges-header h2 {
-    color: #ffffff;
-}
-
-body.dark .air-defense-section-badge {
-    color: #d4af37;
-}
-
-body.dark .air-defense-challenges-list li::before {
-    background: #d4af37;
-    box-shadow:
-        0 0 0 6px rgba(212, 175, 55, 0.15),
-        0 0 12px rgba(212, 175, 55, 0.3);
-}
-
-/* ************************************************************ air defense page end********************************************************************** */
-
-
-
 
 
 /* ************************************************************ naval page start ************************************************************ */
@@ -7158,18 +5520,15 @@ body.dark .air-defense-challenges-list li::before {
     padding-bottom: 45px;
 }
 
-.naval-center-text {
-    text-align: center;
-}
-
 .naval-section-badge {
     display: inline-block;
-    color: #2d628d;
+    color: #2f5c7a;
     margin-bottom: 12px;
     letter-spacing: 1.2px;
     font-size: 0.9rem;
     text-transform: uppercase;
-    padding: 7px 16px;
+    padding: 8px 18px;
+    font-weight: 700;
 }
 
 .naval-hero {
@@ -7333,7 +5692,7 @@ body.dark .air-defense-challenges-list li::before {
     font-size: 1.05rem;
 }
 
-.naval-content-list-reset {
+.naval-content-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -7350,7 +5709,7 @@ body.dark .air-defense-challenges-list li::before {
     line-height: 1.8;
     transition: 0.3s ease;
     text-align: left;
-    height: 400px;
+    min-height: 100px;
 
 }
 
@@ -7619,10 +5978,18 @@ body.dark .air-defense-challenges-list li::before {
     font-weight: 400;
 }
 
+.naval-reveal,
+.missile-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
 .naval-reveal.active,
 .missile-reveal.active {
     opacity: 1;
     transform: translateY(0);
+
 }
 
 .naval-history-section {
@@ -7890,47 +6257,6 @@ body.dark .air-defense-challenges-list li::before {
     line-height: 1.8;
 }
 
-.naval-content-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-}
-
-.naval-content-list li {
-    position: relative;
-    padding: 15px 20px 15px 45px;
-    margin-bottom: 15px;
-    background: #ffffff;
-    border-radius: 16px;
-    border: 1px solid rgba(45, 98, 141, 0.14);
-    color: #556979;
-    font-size: 0.98rem;
-    line-height: 1.7;
-    transition: 0.3s ease;
-    box-shadow: 0 6px 16px rgba(35, 61, 84, 0.05);
-    text-align: left;
-}
-
-.naval-content-list li::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #2d628d;
-    box-shadow: 0 0 0 4px rgba(45, 98, 141, 0.12);
-}
-
-.naval-content-list li:hover {
-    transform: translateY(-4px);
-    border-color: rgba(45, 98, 141, 0.28);
-    box-shadow: 0 12px 24px rgba(35, 61, 84, 0.10);
-}
-
-
 .naval-challenges-section {
     padding: 100px 20px;
     background: linear-gradient(to bottom, #f5f9fc, #eaf1f7);
@@ -7946,14 +6272,7 @@ body.dark .air-defense-challenges-list li::before {
     margin-bottom: 30px;
 }
 
-.naval-section-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    color: #2f5c7a;
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 14px;
-}
+
 
 .naval-challenges-header h2 {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -8436,10 +6755,6 @@ body.dark .naval-section {
         linear-gradient(to bottom, #0d1822, #122130, #0d1822);
 }
 
-body.dark .naval-section-badge {
-    color: #8fc3ef;
-}
-
 body.dark .naval-hero::after {
     background:
         linear-gradient(rgba(8, 18, 28, 0.62), rgba(10, 18, 28, 0.84)),
@@ -8758,24 +7073,6 @@ body.dark .naval-achievement-card p {
     color: #d0deea;
 }
 
-body.dark .naval-content-list li {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(95, 154, 203, 0.16);
-    color: #d0deea;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
-}
-
-body.dark .naval-content-list li::before {
-    background: #69a7da;
-    box-shadow: 0 0 0 4px rgba(95, 154, 203, 0.14);
-}
-
-body.dark .naval-content-list li:hover {
-    border-color: rgba(95, 154, 203, 0.28);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
-}
-
-
 body.dark .naval-challenges-section {
     background: radial-gradient(circle at top, #12202F, #0d1824 40%, #09121b 100%);
 }
@@ -8869,7 +7166,1155 @@ body.dark .naval-challenges-list li:hover {
 /* ************************************************************ naval page end********************************************************************** */
 
 
+/* ************************************************************ air defense page start********************************************************************** */
 
+
+.air-defense-page .defense-section {
+    padding: 100px 20px;
+    background:
+        radial-gradient(circle at top, rgba(186, 209, 181, 0.12), transparent 34%),
+        linear-gradient(to bottom, #faf8f4, #f6f4ef, #ffffff);
+}
+
+.air-defense-page .defense-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.air-defense-page .defense-text {
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+
+.air-defense-page .center-text {
+    text-align: center;
+}
+
+.air-defense-page .section-badge {
+    display: inline-block;
+    padding: 10px 22px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #a97b3c;
+
+}
+
+.air-defense-page .defense-hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.air-defense-page .defense-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.air-defense-page .defense-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255, 252, 247, 0.7), rgba(247, 242, 234, 0.9)),
+        linear-gradient(to right, rgba(186, 209, 181, 0.08), rgba(255, 255, 255, 0.05));
+}
+
+.air-defense-page .defense-hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.air-defense-page .defense-hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+    color: #2a2f28;
+    margin-bottom: 18px;
+    text-shadow: 0 6px 18px rgba(255, 255, 255, 0.35);
+}
+
+.air-defense-page .defense-hero-content p {
+    max-width: 760px;
+    color: #586056;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.air-defense-page .hero-btn {
+    margin-top: 24px;
+    padding: 13px 30px;
+    border-radius: 999px;
+    background: linear-gradient(to right, #8daf87, #a9c7a2);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(141, 175, 135, 0.22);
+    transition: 0.35s ease;
+}
+
+.air-defense-page .hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 28px rgba(141, 175, 135, 0.28);
+}
+
+.air-defense-page .overview-section {
+    padding: 110px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f8f6f1);
+}
+
+.air-defense-page .overview-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 42px;
+    border-radius: 24px;
+    border: 1px solid rgba(174, 201, 167, 0.2);
+    box-shadow: 0 16px 36px rgba(60, 70, 60, 0.06);
+}
+
+.air-defense-page .overview-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.air-defense-page .overview-header h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: #2a2f28;
+    margin-bottom: 18px;
+}
+
+.air-defense-page .overview-text {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 26px;
+    line-height: 2;
+    font-size: 1.02rem;
+    color: #5a6258;
+}
+
+.air-defense-page .overview-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 4px;
+    height: 80%;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #a7c39f, transparent);
+}
+
+.air-defense-page .overview-image img {
+    width: 100%;
+    display: block;
+    margin-top: 26px;
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(60, 70, 60, 0.1);
+}
+
+.air-defense-page .content-section {
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f8f6f1);
+}
+
+.air-defense-page .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.air-defense-page .content-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.air-defense-page .content-header h2 {
+    color: #2c241d;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.air-defense-page .leadership-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.air-defense-page .content-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.air-defense-page .content-text li {
+    position: relative;
+    background: #f7f5f1;
+    border: 1px solid #d9cdb9;
+    border-radius: 26px;
+    padding: 35px 40px;
+    box-shadow: 0 15px 30px rgba(60, 40, 20, 0.08);
+    text-align: center;
+}
+
+.air-defense-page .content-text li::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 26px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #b88a45;
+    box-shadow: 0 0 0 6px rgba(184, 138, 69, 0.15);
+}
+
+.air-defense-page .content-text strong {
+    display: block;
+    font-size: 1.6rem;
+    color: #a06f2c;
+    margin-bottom: 14px;
+}
+
+.air-defense-page .leader-bio {
+    display: block;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #5f5245;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.air-defense-page .leader-image img {
+    width: 280px;
+    border-radius: 22px;
+    border: 2px solid #d9cdb9;
+    background: #f7f5f1;
+    box-shadow: 0 18px 35px rgba(60, 40, 20, 0.1);
+}
+
+.air-defense-page .defense-text h2 {
+    color: #2a2f28;
+    font-size: 2.6rem;
+    margin-bottom: 14px;
+}
+
+.air-defense-page .defense-text p {
+    color: #596156;
+    line-height: 1.9;
+}
+
+.air-defense-page .defense-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.air-defense-page .defense-card {
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 245, 240, 0.96));
+    border: 1px solid rgba(174, 201, 167, 0.22);
+    transition: 0.35s ease;
+    box-shadow: 0 10px 24px rgba(60, 70, 60, 0.06);
+}
+
+.air-defense-page .defense-card h3 {
+    color: #5d7b58;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.air-defense-page .defense-card p {
+    color: #596156;
+    line-height: 1.8;
+}
+
+.air-defense-page .defense-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(174, 201, 167, 0.45);
+    box-shadow: 0 18px 34px rgba(60, 70, 60, 0.1);
+}
+
+.air-defense-page .structure-section {
+    padding: 110px 20px;
+    background: linear-gradient(to bottom, #f8f6f1, #ffffff);
+}
+
+.air-defense-page .structure-container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.air-defense-page .structure-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 70px;
+}
+
+.air-defense-page .structure-badge {
+    display: inline-block;
+    color: #6b8b65;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.air-defense-page .structure-intro h2 {
+    font-size: 2.9rem;
+    color: #2a2f28;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.air-defense-page .structure-intro p {
+    color: #5a6258;
+    line-height: 1.9;
+    font-size: 1.02rem;
+}
+
+.air-defense-page .structure-layout {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.air-defense-page .structure-line {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(167, 195, 159, 0.8), rgba(167, 195, 159, 0.12));
+}
+
+.air-defense-page .structure-item {
+    position: relative;
+    width: 100%;
+    padding: 38px 34px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(174, 201, 167, 0.22);
+    transition: 0.35s ease;
+    box-shadow: 0 10px 22px rgba(60, 70, 60, 0.05);
+}
+
+.air-defense-page .structure-item::before {
+    content: "";
+    position: absolute;
+    left: -56px;
+    top: 34px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #9cbd96;
+    box-shadow: 0 0 0 6px rgba(174, 201, 167, 0.15);
+}
+
+.air-defense-page .structure-item:hover {
+    transform: translateX(8px);
+    border-color: rgba(174, 201, 167, 0.45);
+    box-shadow: 0 16px 30px rgba(60, 70, 60, 0.1);
+}
+
+.air-defense-page .structure-item h3 {
+    color: #5d7b58;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.air-defense-page .structure-item p {
+    color: #5a6258;
+    line-height: 1.85;
+}
+
+.air-defense-page .systems-section {
+    background:
+        radial-gradient(circle at center, rgba(186, 209, 181, 0.12), transparent 35%),
+        linear-gradient(to bottom, #ffffff, #f8f6f1);
+}
+
+.air-defense-page .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.air-defense-page .equipment-card {
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(174, 201, 167, 0.2);
+    box-shadow: 0 10px 24px rgba(60, 70, 60, 0.06);
+    transition: 0.35s ease;
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.air-defense-page .equipment-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(174, 201, 167, 0.42);
+    box-shadow: 0 16px 30px rgba(60, 70, 60, 0.1);
+}
+
+.air-defense-page .equipment-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.air-defense-page .equipment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.air-defense-page .equipment-card:hover .equipment-image img {
+    transform: scale(1.06);
+}
+
+.air-defense-page .equipment-content {
+    padding: 24px;
+}
+
+.air-defense-page .equipment-content h3 {
+    color: #2a2f28;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.air-defense-page .equipment-content p {
+    color: #5a6258;
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+
+.air-defense-page .equipment-badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+}
+
+.air-defense-page .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.air-defense-page .history-section {
+    padding: 110px 20px;
+    background: radial-gradient(circle at center, #f8f6f1 0%, #fcfbf8 45%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.air-defense-page .history-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.air-defense-page .history-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.air-defense-page .history-badge {
+    display: inline-block;
+    color: #6b8b65;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.air-defense-page .history-badge::before,
+.air-defense-page .history-badge::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 90px;
+    height: 1px;
+    background: rgba(174, 201, 167, 0.55);
+}
+
+.air-defense-page .history-badge::before {
+    right: 100%;
+    margin-right: 18px;
+}
+
+.air-defense-page .history-badge::after {
+    left: 100%;
+    margin-left: 18px;
+}
+
+.air-defense-page .history-header h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #2a2f28;
+    line-height: 1.2;
+}
+
+.air-defense-page .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 90px;
+}
+
+.air-defense-page .timeline::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(167, 195, 159, 0.9), rgba(167, 195, 159, 0.15));
+    box-shadow: 0 0 18px rgba(167, 195, 159, 0.14);
+}
+
+.air-defense-page .timeline-item {
+    position: relative;
+    margin-bottom: 58px;
+}
+
+.air-defense-page .timeline-dot {
+    position: absolute;
+    left: -74px;
+    top: 34px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #d6e6d1;
+    border: 4px solid #9fbe98;
+    box-shadow:
+        0 0 0 8px rgba(174, 201, 167, 0.12),
+        0 0 24px rgba(167, 195, 159, 0.18);
+    z-index: 2;
+}
+
+.air-defense-page .timeline-card {
+    position: relative;
+    padding: 34px 32px 30px;
+    border-radius: 28px;
+    border: 1px solid rgba(174, 201, 167, 0.22);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 246, 241, 0.96));
+    box-shadow: 0 12px 28px rgba(60, 70, 60, 0.06);
+}
+
+.air-defense-page .timeline-card::before {
+    content: "";
+    position: absolute;
+    left: -58px;
+    top: 38px;
+    width: 58px;
+    height: 2px;
+    background: linear-gradient(to right, #a8c59f, rgba(167, 195, 159, 0.15));
+}
+
+.air-defense-page .timeline-year {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 9px 18px;
+    border-radius: 14px;
+    background: linear-gradient(to right, #95b98e, #aecba7);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.air-defense-page .timeline-card h3 {
+    font-size: 1.8rem;
+    color: #5d7b58;
+    margin-bottom: 14px;
+}
+
+.air-defense-page .timeline-card p {
+    color: #586056;
+    font-size: 1.04rem;
+    line-height: 1.9;
+}
+
+.air-defense-page .vision-section {
+    padding: 110px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f8f6f1);
+}
+
+.air-defense-page .vision-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.air-defense-page .vision-header {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.air-defense-page .vision-badge {
+    display: inline-block;
+    color: #6b8b65;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.air-defense-page .vision-header h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: #2a2f28;
+    margin-bottom: 18px;
+}
+
+.air-defense-page .vision-header p {
+    color: #5a6258;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.air-defense-page .vision-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.air-defense-page .vision-card {
+    padding: 30px 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(174, 201, 167, 0.2);
+    box-shadow: 0 10px 25px rgba(60, 70, 60, 0.06);
+    transition: 0.35s ease;
+}
+
+.air-defense-page .vision-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(174, 201, 167, 0.45);
+    box-shadow: 0 18px 34px rgba(60, 70, 60, 0.1);
+}
+
+.air-defense-page .vision-card h3 {
+    color: #5d7b58;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.air-defense-page .vision-card p {
+    color: #5a6258;
+    line-height: 1.8;
+}
+
+.air-defense-page .achievements-section {
+    padding: 110px 20px;
+    background: linear-gradient(to bottom, #f8f6f1, #ffffff);
+}
+
+.air-defense-page .achievements-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.air-defense-page .achievements-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 60px;
+}
+
+.air-defense-page .achievements-badge {
+    color: #6b8b65;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.air-defense-page .achievements-header h2 {
+    font-size: 2.8rem;
+    color: #2a2f28;
+    margin-bottom: 15px;
+}
+
+.air-defense-page .achievements-header p {
+    color: #5a6258;
+    line-height: 1.8;
+}
+
+.air-defense-page .achievements-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.air-defense-page .achievement-card {
+    padding: 30px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(174, 201, 167, 0.2);
+    transition: 0.35s ease;
+    box-shadow: 0 10px 24px rgba(60, 70, 60, 0.06);
+}
+
+.air-defense-page .achievement-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(174, 201, 167, 0.45);
+    box-shadow: 0 18px 34px rgba(60, 70, 60, 0.1);
+}
+
+.air-defense-page .achievement-card h3 {
+    color: #5d7b58;
+    margin-bottom: 12px;
+}
+
+.air-defense-page .achievement-card p {
+    color: #5a6258;
+    line-height: 1.8;
+}
+
+.air-defense-challenges-section {
+    padding: 100px 20px;
+    background: #FCFCFA;
+}
+
+.air-defense-challenges-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.air-defense-challenges-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.air-defense-challenge-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    color: #8a6a2f;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.air-defense-challenges-header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #2A2F28;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.air-defense-challenges-intro {
+    max-width: 900px;
+    margin: 0 auto 28px;
+    text-align: center;
+    color: #5b6b79;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.air-defense-challenges-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.air-defense-challenges-list li {
+    position: relative;
+    padding: 24px 26px 24px 64px;
+    margin: 0;
+    background: #FCFCFA;
+    border-radius: 24px;
+    border: 1px solid rgba(31, 47, 61, 0.08);
+    color: #334454;
+    font-size: 1rem;
+    line-height: 1.8;
+    box-shadow: 0 10px 24px rgba(20, 32, 43, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.air-defense-challenges-list li::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #b89456;
+    box-shadow: 0 0 0 6px rgba(184, 148, 86, 0.14);
+}
+
+.air-defense-challenges-list li:hover {
+    transform: translateY(-4px);
+    border-color: rgba(184, 148, 86, 0.28);
+    box-shadow: 0 16px 30px rgba(20, 32, 43, 0.1);
+}
+
+@media (max-width: 768px) {
+    .air-defense-challenges-section {
+        padding: 80px 16px;
+    }
+
+    .air-defense-challenges-header h2 {
+        font-size: 2rem;
+    }
+
+    .air-defense-challenges-intro {
+        font-size: 0.95rem;
+        margin-bottom: 22px;
+    }
+
+    .air-defense-challenges-list li {
+        padding: 20px 18px 20px 52px;
+        border-radius: 20px;
+        font-size: 0.94rem;
+    }
+
+    .air-defense-challenges-list li::before {
+        left: 18px;
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 5px rgba(184, 148, 86, 0.14);
+    }
+}
+
+@media (max-width: 576px) {
+    .air-defense-challenges-section {
+        padding: 72px 14px;
+    }
+
+    .air-defense-challenges-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .air-defense-challenges-list li {
+        padding: 18px 16px 18px 46px;
+        border-radius: 18px;
+    }
+
+    .air-defense-challenges-list li::before {
+        left: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .air-defense-page .vision-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .air-defense-page .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .air-defense-page .achievements-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .air-defense-page .overview-section,
+    .air-defense-page .defense-section,
+    .air-defense-page .structure-section,
+    .air-defense-page .history-section,
+    .air-defense-page .achievements-section,
+    .air-defense-page .content-section {
+        padding: 90px 16px;
+    }
+
+    .air-defense-page .overview-container {
+        padding: 28px 20px;
+    }
+
+    .air-defense-page .defense-hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .air-defense-page .overview-header h2,
+    .air-defense-page .defense-text h2,
+    .air-defense-page .structure-intro h2,
+    .air-defense-page .achievements-header h2,
+    .air-defense-page .content-header h2,
+    .air-defense-page .vision-header h2 {
+        font-size: 2.1rem;
+    }
+
+    .air-defense-page .leadership-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .air-defense-page .leader-image {
+        justify-content: center;
+    }
+
+    .air-defense-page .leader-image img {
+        width: 260px;
+    }
+
+    .air-defense-page .content-text {
+        text-align: center;
+    }
+
+    .air-defense-page .content-text li {
+        padding: 20px 20px 20px 45px;
+        text-align: left;
+    }
+
+    .air-defense-page .content-text li::before {
+        left: 15px;
+        top: 25px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .air-defense-page .structure-layout {
+        padding-left: 45px;
+    }
+
+    .air-defense-page .structure-line {
+        left: 14px;
+    }
+
+    .air-defense-page .structure-item::before {
+        left: -38px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .air-defense-page .history-badge::before,
+    .air-defense-page .history-badge::after {
+        width: 45px;
+    }
+
+    .air-defense-page .timeline {
+        padding-left: 54px;
+    }
+
+    .air-defense-page .timeline::before {
+        left: 14px;
+    }
+
+    .air-defense-page .timeline-dot {
+        left: -44px;
+        width: 18px;
+        height: 18px;
+        top: 28px;
+    }
+
+    .air-defense-page .timeline-card {
+        padding: 24px 20px 22px;
+        border-radius: 22px;
+    }
+
+    .air-defense-page .timeline-card::before {
+        left: -34px;
+        width: 34px;
+        top: 32px;
+    }
+
+    .air-defense-page .timeline-year {
+        font-size: 0.95rem;
+        padding: 8px 14px;
+    }
+
+    .air-defense-page .timeline-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .air-defense-page .timeline-card p,
+    .air-defense-page .overview-text,
+    .air-defense-page .vision-header p,
+    .air-defense-page .achievement-card p {
+        font-size: 0.96rem;
+    }
+
+    .air-defense-page .equipment-image {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .air-defense-page .leader-bio {
+        font-size: 0.98rem;
+    }
+
+    .air-defense-page .leader-image img {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .air-defense-page .leader-bio {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .air-defense-page .leader-image img {
+        width: 220px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .air-defense-page .leader-bio {
+        font-size: 0.9rem;
+    }
+
+    .air-defense-page .leader-image img {
+        width: 200px;
+    }
+}
+
+
+body.dark .air-defense-page {
+    background: #141615;
+}
+
+body.dark .air-defense-page .defense-section,
+body.dark .air-defense-page .overview-section,
+body.dark .air-defense-page .structure-section,
+body.dark .air-defense-page .history-section,
+body.dark .air-defense-page .vision-section,
+body.dark .air-defense-page .achievements-section,
+body.dark .air-defense-page .content-section {
+    background:
+        linear-gradient(to bottom, #141615, #181b19, #1c1f1d);
+}
+
+body.dark .air-defense-page .defense-hero-overlay {
+    background:
+        linear-gradient(rgba(20, 22, 21, 0.75), rgba(20, 22, 21, 0.92)),
+        linear-gradient(to right, rgba(194, 168, 109, 0.08), rgba(0, 0, 0, 0.2));
+}
+
+body.dark .air-defense-page h1,
+body.dark .air-defense-page h2,
+body.dark .air-defense-page h3 {
+    color: #e6e9e7;
+}
+
+body.dark .air-defense-page p,
+body.dark .air-defense-page li,
+body.dark .air-defense-page span {
+    color: #aab2ad;
+}
+
+body.dark .air-defense-page .overview-container,
+body.dark .air-defense-page .defense-card,
+body.dark .air-defense-page .structure-item,
+body.dark .air-defense-page .timeline-card,
+body.dark .air-defense-page .vision-card,
+body.dark .air-defense-page .achievement-card,
+body.dark .air-defense-page .equipment-card,
+body.dark .content-text li {
+    background: #1c1f1d;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .air-defense-page .section-badge,
+body.dark .air-defense-page .vision-badge,
+body.dark .air-defense-page .history-badge,
+body.dark .air-defense-page .structure-badge,
+body.dark .air-defense-page .achievements-badge,
+body.dark .air-defense-page .challenge-badge {
+    color: #c2a86d;
+}
+
+body.dark .air-defense-page .timeline-year {
+    background: linear-gradient(to right, #8f7747, #c2a86d);
+    color: #ffffff;
+}
+
+body.dark .air-defense-page .hero-btn {
+    background: linear-gradient(to right, #b89a5e, #d2b77a);
+    color: #fff;
+}
+
+body.dark .air-defense-page .structure-line,
+body.dark .air-defense-page .timeline::before {
+    background: linear-gradient(to bottom, #c2a86d, transparent);
+}
+
+body.dark .air-defense-page .structure-item::before {
+    background: #c2a86d;
+}
+
+body.dark .air-defense-page .timeline-dot {
+    background: #d2b77a;
+    border: 4px solid #b89a5e;
+}
+
+body.dark .air-defense-page h1,
+body.dark .air-defense-page h2,
+body.dark .air-defense-page h3 {
+    color: #ffffff;
+}
+
+body.dark .air-defense-challenges-section {
+    background: linear-gradient(to top, #141615, #181b19, #1c1f1d);
+
+}
+
+body.dark .air-defense-challenges-list li {
+    background: #1C1F1D;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e6edf3;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+body.dark .air-defense-challenges-list li:hover {
+    border-color: rgba(212, 175, 55, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(212, 175, 55, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .air-defense-challenges-intro {
+    color: #cfd8dc;
+}
+
+body.dark .air-defense-challenges-header h2 {
+    color: #ffffff;
+}
+
+body.dark .challenge-badge {
+    color: #d4af37;
+}
+
+body.dark .air-defense-challenges-list li::before {
+    background: #d4af37;
+    box-shadow:
+        0 0 0 6px rgba(212, 175, 55, 0.15),
+        0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+/* ************************************************************ air defense page end********************************************************************** */
 
 
 /* ************************************************************ missile page start ************************************************************ */
@@ -9067,8 +8512,32 @@ body.dark .naval-challenges-list li:hover {
     margin-top: 25px;
 }
 
-.missile-content-list-reset {
+.missile-content-list {
+    padding: 0;
+    margin-top: 30px;
     width: 100%;
+    list-style: none;
+}
+
+.missile-content-list li {
+    position: relative;
+    padding: 15px 20px 15px 45px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: #6b6b6b;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 16px rgba(50, 50, 50, 0.05);
+    text-align: left;
+}
+
+.missile-content-list li:hover {
+    transform: translateY(-4px);
+    border-color: rgba(194, 168, 109, 0.35);
+    box-shadow: 0 12px 24px rgba(50, 50, 50, 0.10);
 }
 
 .missile-content-text p {
@@ -9079,12 +8548,12 @@ body.dark .naval-challenges-list li:hover {
 
 .missile-content-text li {
     width: 100%;
-    max-width: 2000px;
+    max-width: 100%;
 }
 
 .missile-leadership-card {
     position: relative;
-    padding: 22px 30px 25px 60px;
+    padding: 22px 28px;
     background: linear-gradient(to bottom, #ffffff, #f7f6f3);
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.06);
@@ -9093,10 +8562,20 @@ body.dark .naval-challenges-list li:hover {
     line-height: 1.8;
     transition: 0.3s ease;
     text-align: left;
-    height: 380px;
+    min-height: 380px;
 }
 
-
+.missile-leadership-card::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #8b9d83;
+    box-shadow: 0 0 0 4px rgba(139, 157, 131, 0.16);
+}
 
 .missile-leadership-card strong {
     display: block;
@@ -9172,102 +8651,6 @@ body.dark .naval-challenges-list li:hover {
     border-color: rgba(194, 168, 109, 0.35);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(244, 242, 237, 0.98));
     box-shadow: 0 18px 34px rgba(50, 50, 50, 0.14);
-}
-
-.missile-structure-section {
-    padding: 110px 20px;
-    background: linear-gradient(to bottom, #f1f1ef, #ffffff);
-}
-
-.missile-structure-container {
-    max-width: 1150px;
-    margin: 0 auto;
-}
-
-.missile-structure-intro {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 70px;
-}
-
-.missile-structure-badge {
-    display: inline-block;
-    color: #6f7b5a;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.missile-structure-intro h2 {
-    font-size: 2.9rem;
-    color: #2e2e2e;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.missile-structure-intro p {
-    color: #6b6b6b;
-    line-height: 1.9;
-    font-size: 1.02rem;
-}
-
-.missile-structure-layout {
-    position: relative;
-    max-width: 860px;
-    margin: 0 auto;
-    padding-left: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-}
-
-.missile-structure-line {
-    position: absolute;
-    left: 25px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #8b9d83, rgba(139, 157, 131, 0.10));
-}
-
-.missile-structure-item {
-    position: relative;
-    width: 100%;
-    padding: 38px 34px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    transition: 0.35s ease;
-    box-shadow: 0 10px 22px rgba(50, 50, 50, 0.06);
-}
-
-.missile-structure-item::before {
-    content: "";
-    position: absolute;
-    left: -56px;
-    top: 34px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #8b9d83;
-    box-shadow: 0 0 0 6px rgba(139, 157, 131, 0.12);
-}
-
-.missile-structure-item:hover {
-    transform: translateX(8px);
-    border-color: rgba(194, 168, 109, 0.35);
-    box-shadow: 0 16px 30px rgba(50, 50, 50, 0.12);
-}
-
-.missile-structure-item h3 {
-    color: #5f7057;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.missile-structure-item p {
-    color: #6b6b6b;
-    line-height: 1.85;
 }
 
 .missile-equipment-section {
@@ -9366,35 +8749,6 @@ body.dark .naval-challenges-list li:hover {
 .missile-history-header {
     text-align: center;
     margin-bottom: 70px;
-}
-
-.missile-history-badge {
-    display: inline-block;
-    color: #8b9d83;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    position: relative;
-}
-
-.missile-history-badge::before,
-.missile-history-badge::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 90px;
-    height: 1px;
-    background: rgba(139, 157, 131, 0.35);
-}
-
-.missile-history-badge::before {
-    right: 100%;
-    margin-right: 18px;
-}
-
-.missile-history-badge::after {
-    left: 100%;
-    margin-left: 18px;
 }
 
 .missile-history-header h2 {
@@ -9499,14 +8853,6 @@ body.dark .naval-challenges-list li:hover {
     text-align: center;
 }
 
-.missile-vision-badge {
-    display: inline-block;
-    color: #8b9d83;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
 .missile-vision-header h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     color: #2e2e2e;
@@ -9568,14 +8914,6 @@ body.dark .naval-challenges-list li:hover {
     margin: 0 auto 60px;
 }
 
-.missile-achievements-badge {
-    color: #8b9d83;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
 .missile-achievements-header h2 {
     font-size: 2.8rem;
     color: #2e2e2e;
@@ -9618,47 +8956,6 @@ body.dark .naval-challenges-list li:hover {
     line-height: 1.8;
 }
 
-.missile-content-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-}
-
-.missile-content-list li {
-    position: relative;
-    padding: 15px 20px 15px 45px;
-    margin-bottom: 15px;
-    background: #ffffff;
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    color: #6b6b6b;
-    font-size: 0.98rem;
-    line-height: 1.7;
-    transition: 0.3s ease;
-    box-shadow: 0 6px 16px rgba(50, 50, 50, 0.05);
-    text-align: left;
-}
-
-.missile-content-list li::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #8b9d83;
-    box-shadow: 0 0 0 4px rgba(139, 157, 131, 0.12);
-}
-
-.missile-content-list li:hover {
-    transform: translateY(-4px);
-    border-color: rgba(194, 168, 109, 0.35);
-    box-shadow: 0 12px 24px rgba(50, 50, 50, 0.10);
-}
-
-
 .missile-challenges-section {
     padding: 100px 20px;
     background: #F8F8F7;
@@ -9674,15 +8971,6 @@ body.dark .naval-challenges-list li:hover {
     margin-bottom: 30px;
 }
 
-.missile-section-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 999px;
-    color: #8a6a2f;
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 14px;
-}
 
 .missile-challenges-header h2 {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -9758,7 +9046,6 @@ body.dark .naval-challenges-list li:hover {
 
     .missile-overview-section,
     .missile-section,
-    .missile-structure-section,
     .missile-history-section,
     .missile-vision-section,
     .missile-achievements-section,
@@ -9776,7 +9063,6 @@ body.dark .naval-challenges-list li:hover {
 
     .missile-overview-header h2,
     .missile-text h2,
-    .missile-structure-intro h2,
     .missile-achievements-header h2,
     .missile-content-header h2 {
         font-size: 2.1rem;
@@ -9801,33 +9087,18 @@ body.dark .naval-challenges-list li:hover {
     }
 
     .missile-leadership-card {
-        padding: 20px 20px 20px 45px;
+        padding: 18px 16px 20px 40px;
+        min-height: auto;
+        height: auto;
+        border-radius: 18px;
     }
 
     .missile-leadership-card::before {
-        left: 15px;
-        top: 25px;
-        width: 10px;
-        height: 10px;
-    }
-
-    .missile-structure-layout {
-        padding-left: 45px;
-    }
-
-    .missile-structure-line {
         left: 14px;
-    }
-
-    .missile-structure-item::before {
-        left: -38px;
-        width: 14px;
-        height: 14px;
-    }
-
-    .missile-history-badge::before,
-    .missile-history-badge::after {
-        width: 45px;
+        top: 18px;
+        width: 8px;
+        height: 8px;
+        box-shadow: 0 0 0 3px rgba(139, 157, 131, 0.16);
     }
 
     .missile-timeline {
@@ -9881,17 +9152,12 @@ body.dark .missile-page {
 body.dark .missile-section,
 body.dark .missile-overview-section,
 body.dark .missile-content-section,
-body.dark .missile-structure-section,
 body.dark .missile-history-section,
 body.dark .missile-vision-section,
 body.dark .missile-achievements-section {
     background:
         radial-gradient(circle at top, rgba(139, 157, 131, 0.08), transparent 35%),
         linear-gradient(to bottom, #121413, #161a17, #1b201c);
-}
-
-body.dark .missile-section-badge {
-    color: #8b9d83;
 }
 
 body.dark .missile-hero::after {
@@ -9914,7 +9180,6 @@ body.dark .missile-hero-btn {
 
 body.dark .missile-card,
 body.dark .missile-overview-container,
-body.dark .missile-structure-item,
 body.dark .missile-equipment-row,
 body.dark .missile-timeline-card,
 body.dark .missile-vision-card,
@@ -9928,7 +9193,6 @@ body.dark .missile-leadership-card {
 body.dark .missile-overview-header h2,
 body.dark .missile-content-header h2,
 body.dark .missile-text h2,
-body.dark .missile-structure-intro h2,
 body.dark .missile-history-header h2,
 body.dark .missile-vision-header h2,
 body.dark .missile-achievements-header h2 {
@@ -9938,7 +9202,6 @@ body.dark .missile-achievements-header h2 {
 body.dark .missile-text p,
 body.dark .missile-overview-text,
 body.dark .missile-content-text p,
-body.dark .missile-structure-item p,
 body.dark .missile-timeline-card p,
 body.dark .missile-vision-card p,
 body.dark .missile-achievement-card p,
@@ -9947,13 +9210,10 @@ body.dark .missile-content-list li {
     color: #aab5ad;
 }
 
-body.dark .missile-structure-line,
 body.dark .missile-timeline::before {
     background: linear-gradient(to bottom, #8b9d83, transparent);
 }
 
-body.dark .missile-structure-item::before,
-body.dark .missile-content-list li::before,
 body.dark .missile-leadership-card::before {
     background: #8b9d83;
 }
@@ -10080,18 +9340,312 @@ body.dark .missile-challenges-list li:hover {
 
 /* ************************************************************ missile page end ************************************************************ */
 
+/* ************************************************************* tech page start ************************************************************* */
 
+.defense-tech-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+.defense-tech-page .hero-box {
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 32px;
+    background:
+        linear-gradient(135deg, rgba(90, 201, 145, 0.10), rgba(255, 255, 255, 0.88)),
+        rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(55, 110, 82, 0.10);
+    box-shadow: 0 20px 50px rgba(22, 38, 31, 0.08);
+    margin-bottom: 35px;
+}
+
+.defense-tech-page .tec-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 20px;
+    color: #4f9d76;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.defense-tech-page .hero-box h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.3;
+    color: #1d3028;
+    margin-bottom: 22px;
+}
+
+.defense-tech-page .hero-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #4f635a;
+}
+
+.defense-tech-page .intro-highlight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 50px;
+}
+
+.defense-tech-page .highlight-card {
+    padding: 28px 24px;
+    border-radius: 24px;
+    background: #f7fbf9;
+    border: 1px solid rgba(70, 111, 90, 0.08);
+    box-shadow: 0 14px 30px rgba(20, 34, 28, 0.06);
+    transition: 0.3s ease;
+}
+
+.defense-tech-page .highlight-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 18px 34px rgba(20, 34, 28, 0.09);
+}
+
+.defense-tech-page .highlight-card h3 {
+    color: #0F3D2E;
+    margin-bottom: 12px;
+}
+
+.defense-tech-page .highlight-card p {
+    color: #4f635a;
+}
+
+.defense-tech-page .main-section {
+    margin-bottom: 28px;
+    padding: 34px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(70, 111, 90, 0.08);
+    box-shadow: 0 12px 35px rgba(18, 31, 25, 0.06);
+}
+
+.defense-tech-page .alt-section {
+    background:
+        linear-gradient(135deg, rgba(90, 201, 145, 0.08), rgba(255, 255, 255, 0.85)),
+        rgba(255, 255, 255, 0.80);
+}
+
+.defense-tech-page .section-heading {
+    margin-bottom: 24px;
+}
+
+.defense-tech-page .section-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: #e4efe7;
+    color: #4f9d76;
+    font-weight: bold;
+}
+
+.defense-tech-page .section-heading h2 {
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    color: #1f332b;
+    letter-spacing: 0.3px;
+}
+
+.defense-tech-page .content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.defense-tech-page .content-card {
+    padding: 28px 24px;
+    border-radius: 24px;
+    background: #f6faf8;
+    border: 1px solid rgba(70, 111, 90, 0.08);
+    transition: 0.3s ease;
+}
+
+.defense-tech-page .content-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 14px 30px rgba(22, 36, 30, 0.07);
+}
+
+.defense-tech-page .content-card h3 {
+    color: #0b1f18;
+    margin-bottom: 14px;
+}
+
+.defense-tech-page .content-card p {
+    color: #4f635a;
+}
+
+.defense-tech-page .technology-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #d4b26a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(212, 178, 106, 0.25);
+}
+
+.defense-tech-page .technology-btn:hover {
+    background: #be9950;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(212, 178, 106, 0.35);
+}
+
+.defense-tech-page .summary-section {
+    margin-top: 45px;
+}
+
+.defense-tech-page .summary-box {
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg, rgba(90, 201, 145, 0.10), rgba(255, 255, 255, 0.92)),
+        rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(90, 201, 145, 0.16);
+    box-shadow: 0 18px 45px rgba(18, 31, 25, 0.08);
+}
+
+.defense-tech-page .summary-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 18px;
+    color: #4f9d76;
+}
+
+.defense-tech-page .summary-box h2 {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    color: #1f332b;
+    margin-bottom: 18px;
+}
+
+.defense-tech-page .summary-box p {
+    max-width: 920px;
+    margin: 0 auto;
+    color: #596f66;
+}
+
+@media (max-width: 992px) {
+
+    .defense-tech-page .intro-highlight,
+    .defense-tech-page .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .defense-tech-page {
+        padding: 40px 0 80px;
+    }
+
+    .defense-tech-page .hero-box,
+    .defense-tech-page .main-section,
+    .defense-tech-page .summary-box {
+        padding: 28px 20px;
+    }
+
+    .defense-tech-page .hero-box h1 {
+        font-size: 2rem;
+    }
+}
+
+body.dark {
+    background: linear-gradient(to right, #041c1a, #0b2f29, #041c1a);
+}
+
+body.dark .defense-tech-page {
+    margin: 90px auto;
+    border: 2px solid #d4b26a;
+    border-radius: 30px;
+    padding: 40px 30px;
+    background: linear-gradient(to right, #041c1a, #0b2f29, #041c1a);
+}
+
+body.dark .defense-tech-page .hero-box {
+    background: linear-gradient(to bottom, #0f3d2e, #0b3025);
+    border: 2px solid #d4b26a;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .defense-tech-page .tec-badge {
+    color: #d4b26a;
+}
+
+body.dark .defense-tech-page .hero-text,
+body.dark .defense-tech-page .content-card p,
+body.dark .defense-tech-page .highlight-card p {
+    color: #dce7e2;
+}
+
+body.dark .defense-tech-page .hero-box h1,
+body.dark .defense-tech-page .section-heading h2,
+body.dark .defense-tech-page .summary-box h2 {
+    color: #d4b26a;
+}
+
+body.dark .defense-tech-page .content-card h3 {
+    color: white;
+}
+
+body.dark .defense-tech-page .highlight-card,
+body.dark .defense-tech-page .content-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 178, 106, 0.18);
+}
+
+body.dark .defense-tech-page .highlight-card h3 {
+    color: white;
+}
+
+body.dark .defense-tech-page .main-section {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark .defense-tech-page .alt-section {
+    background: linear-gradient(135deg, #0f3d2e, #123f34);
+}
+
+body.dark .defense-tech-page .section-tag {
+    background: rgba(212, 178, 106, 0.12);
+    border: 1px solid rgba(212, 178, 106, 0.28);
+    color: #d4b26a;
+}
+
+body.dark .defense-tech-page .summary-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 178, 106, 0.25);
+}
+
+body.dark .defense-tech-page .summary-box p {
+    color: #e2ece6;
+}
+
+body.dark .defense-tech-page .summary-badge {
+    color: #d4b26a;
+}
+
+/* ************************************************************* tech page end ************************************************************* */
 
 /* ************************************************************ hero page start ************************************************************ */
-.martyrs-section {
+.martyrs-section,
+.families-section,
+.recognition-section {
     width: 100%;
     background: #f4f6f3;
+}
+
+.martyrs-section {
     padding: 24px 16px 5px;
     animation: fadeInPage 1s ease;
 }
 
 .martyrs-hero {
-    width: 100%;
     max-width: 980px;
     margin: 0 auto;
     border-radius: 22px;
@@ -10110,15 +9664,7 @@ body.dark .missile-challenges-list li:hover {
     animation: zoomSoft 8s ease-in-out infinite alternate;
 }
 
-.martyrs-overlay {
-    display: none;
-}
-
 .martyrs-content {
-    position: static;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
     text-align: center;
     padding: 24px 18px 28px;
     color: #1d3328;
@@ -10130,29 +9676,36 @@ body.dark .missile-challenges-list li:hover {
 .martyrs-badge {
     display: inline-block;
     padding: 7px 16px;
-    margin-bottom: 10px;
-    border-radius: 999px;
-    background: #e4efe7;
-    border: 1px solid #cfe0d4;
+    margin-bottom: 14px;
     color: #5f9c7f;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     animation: pulseSoft 2.5s ease-in-out infinite;
 }
 
-.martyrs-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+.martyrs-content h1,
+.families-content h2,
+.glass-box h2 {
     color: #1c3028;
+    font-weight: 700;
+}
+
+.martyrs-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
     letter-spacing: 0.3px;
     animation: fadeInUp 1s ease;
 }
 
-.martyrs-content p {
+.martyrs-content p,
+.families-content .intro-text,
+.glass-box p {
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.martyrs-content p {
     color: #52685d;
     max-width: 700px;
     margin: 0 auto;
@@ -10191,64 +9744,8 @@ body.dark .missile-challenges-list li:hover {
     content: " ”";
 }
 
-@media (max-width: 768px) {
-    .martyrs-section {
-        padding: 20px 12px 32px;
-    }
-
-    .martyrs-hero {
-        border-radius: 18px;
-    }
-
-    .martyrs-media {
-        height: 220px;
-    }
-
-    .martyrs-content {
-        padding: 20px 14px 24px;
-    }
-
-    .martyrs-content h2 {
-        font-size: 1.6rem;
-    }
-
-    .martyrs-content p {
-        font-size: 0.92rem;
-        line-height: 1.75;
-    }
-
-    .martyrs-quote-box {
-        margin: 22px auto 45px;
-        padding: 18px 10px 0;
-    }
-
-    .martyrs-quote {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .martyrs-media {
-        height: 180px;
-    }
-
-    .martyrs-badge {
-        font-size: 0.72rem;
-        padding: 6px 12px;
-    }
-
-    .martyrs-content h2 {
-        font-size: 1.35rem;
-    }
-
-    .martyrs-content p {
-        font-size: 0.85rem;
-    }
-}
-
-.families-v2 {
-    padding: 5px 20px;
-    background: #f4f6f3;
+.families-section {
+    padding: 40px 20px;
 }
 
 .families-container {
@@ -10274,47 +9771,30 @@ body.dark .missile-challenges-list li:hover {
 .families-line {
     width: 4px;
     min-width: 4px;
-    height: 100%;
     min-height: 180px;
-    background: linear-gradient(to bottom, #76a98a, rgba(118, 169, 138, 0.15));
     border-radius: 4px;
+    background: linear-gradient(to bottom, #76a98a, rgba(118, 169, 138, 0.15));
 }
 
 .families-content {
     flex: 1;
 }
 
-.tag {
-    display: inline-block;
-    padding: 7px 16px;
-    margin-bottom: 14px;
-    border-radius: 999px;
-    background: #e4efe7;
-    border: 1px solid #cfe0d4;
-    color: #5f9c7f;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    animation: pulseSoft 2.5s ease-in-out infinite;
-}
-
 .families-content h2 {
-    color: #1c3028;
-    margin-bottom: 12px;
     font-size: 1.9rem;
+    margin-bottom: 12px;
 }
 
 .families-content .intro-text {
     color: #5c7166;
-    line-height: 1.9;
     margin-bottom: 18px;
-    font-size: 1rem;
+    line-height: 1.9;
 }
 
 .families-list {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .families-list li {
@@ -10341,45 +9821,16 @@ body.dark .missile-challenges-list li:hover {
     color: #1c3028;
 }
 
-@media (max-width: 768px) {
-    .families-v2 {
-        padding: 50px 16px;
-    }
-
-    .families-container {
-        padding: 24px 18px;
-        gap: 16px;
-    }
-
-    .families-line {
-        min-height: 150px;
-    }
-
-    .families-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .families-content .intro-text {
-        font-size: 0.93rem;
-    }
-
-    .families-list li {
-        font-size: 0.9rem;
-        line-height: 1.65;
-    }
-}
-
 .recognition-section {
     padding: 90px 20px;
-    background: linear-gradient(135deg, #f4f6f3, #eaf1eb);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .glass-box {
-    max-width: 700px;
     width: 100%;
+    max-width: 700px;
     padding: 45px 35px;
     border-radius: 26px;
     background: rgba(237, 243, 238, 0.75);
@@ -10401,34 +9852,82 @@ body.dark .missile-challenges-list li:hover {
         0 0 25px rgba(118, 169, 138, 0.08);
 }
 
-.small-badge {
-    display: inline-block;
-    padding: 7px 18px;
-    margin-bottom: 18px;
-    border-radius: 999px;
-    background: #e4efe7;
-    border: 1px solid #cfe0d4;
-    color: #5f9c7f;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    animation: pulseSoft 2.5s ease-in-out infinite;
-}
-
 .glass-box h2 {
     font-size: 2rem;
     margin-bottom: 14px;
-    color: #1c3028;
 }
 
 .glass-box p {
-    font-size: 1rem;
-    line-height: 1.9;
     color: #556b60;
+    line-height: 1.9;
 }
 
 @media (max-width: 768px) {
-    .recognition-glass {
+    .martyrs-section {
+        padding: 20px 12px 32px;
+    }
+
+    .martyrs-hero {
+        border-radius: 18px;
+    }
+
+    .martyrs-media {
+        height: 220px;
+    }
+
+    .martyrs-content {
+        padding: 20px 14px 24px;
+    }
+
+    .martyrs-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .martyrs-content p {
+        font-size: 0.92rem;
+        line-height: 1.75;
+    }
+
+    .martyrs-quote-box {
+        margin: 20px auto 10px;
+        padding: 18px 10px 0;
+    }
+
+    .martyrs-quote {
+        font-size: 0.95rem;
+    }
+
+    .families-section {
+        padding: 40px 16px;
+    }
+
+    .families-container {
+        flex-direction: column;
+        padding: 24px 18px;
+        gap: 16px;
+    }
+
+    .families-line {
+        width: 100%;
+        min-width: 100%;
+        min-height: 4px;
+        height: 4px;
+    }
+
+    .families-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .families-content .intro-text {
+        font-size: 0.93rem;
+    }
+
+    .families-list li {
+        font-size: 0.9rem;
+        line-height: 1.65;
+    }
+
+    .recognition-section {
         padding: 60px 16px;
     }
 
@@ -10443,6 +9942,47 @@ body.dark .missile-challenges-list li:hover {
 
     .glass-box p {
         font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .martyrs-media {
+        height: 180px;
+    }
+
+    .martyrs-badge {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+    }
+
+    .martyrs-content h1 {
+        font-size: 1.35rem;
+    }
+
+    .martyrs-content p {
+        font-size: 0.85rem;
+    }
+
+    .martyrs-quote {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .families-list li {
+        padding-left: 22px;
+    }
+
+    .glass-box {
+        padding: 24px 14px;
+    }
+
+    .glass-box h2 {
+        font-size: 1.35rem;
+    }
+
+    .glass-box p {
+        font-size: 0.88rem;
+        line-height: 1.8;
     }
 }
 
@@ -10504,42 +10044,18 @@ body.dark .missile-challenges-list li:hover {
     }
 }
 
-
-body.dark .martyrs-section {
-    width: 100%;
+body.dark .martyrs-section,
+body.dark .families-section {
     background: #0f3d2e;
-    padding: 24px 16px 5px;
 }
 
 body.dark .martyrs-hero {
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
-    border-radius: 22px;
-    overflow: hidden;
     border: 1.5px solid rgba(212, 178, 106, 0.3);
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25);
     background: linear-gradient(to bottom, #0f3d2e, #0b3025);
 }
 
-body.dark .martyrs-media {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
-
-body.dark .martyrs-overlay {
-    display: none;
-}
-
 body.dark .martyrs-content {
-    position: static;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    padding: 24px 18px 28px;
     color: #ffffff;
     background: linear-gradient(to bottom,
             rgba(15, 61, 46, 0.98),
@@ -10547,806 +10063,72 @@ body.dark .martyrs-content {
 }
 
 body.dark .martyrs-badge {
-    display: inline-block;
-    padding: 7px 16px;
-    margin-bottom: 10px;
-    border-radius: 999px;
-    background: rgba(212, 175, 55, 0.14);
-    border: 1px solid rgba(212, 175, 55, 0.28);
-    color: #f2d98a;
-    font-size: 0.78rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    color: #d4b26a;
 }
 
-body.dark .martyrs-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+body.dark .martyrs-content h1,
+body.dark .families-content h2,
+body.dark .glass-box h2 {
     color: #d4b26a;
-    letter-spacing: 0.3px;
 }
 
 body.dark .martyrs-content p {
-    font-size: 1rem;
-    line-height: 1.8;
     color: #ffffff;
-    max-width: 700px;
-    margin: 0 auto;
 }
 
 body.dark .martyrs-quote-box {
-    max-width: 900px;
-    margin: 28px auto 60px;
-    padding: 22px 16px 0;
-    text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 body.dark .martyrs-quote {
     color: #d4b26a;
-    font-size: 1.05rem;
-    line-height: 1.9;
-    font-style: italic;
-    margin: 0;
 }
 
 body.dark .martyrs-quote::before,
 body.dark .martyrs-quote::after {
     color: rgba(212, 175, 55, 0.65);
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-body.dark .martyrs-quote::before {
-    content: "“ ";
-}
-
-body.dark .martyrs-quote::after {
-    content: " ”";
-}
-
-
-body.dark .families-v2 {
-    padding: 5px 20px;
-    background: #0f3d2e;
 }
 
 body.dark .families-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(212, 178, 106, 0.18);
-    border-radius: 22px;
-    padding: 32px 28px;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-    transition: 0.3s ease;
-}
-
-body.dark .families-container:hover {
-    transform: translateY(-5px);
 }
 
 body.dark .families-line {
-    width: 4px;
-    min-width: 4px;
-    height: 100%;
-    min-height: 180px;
     background: linear-gradient(to bottom, #d4b26a, rgba(212, 178, 106, 0.15));
-    border-radius: 4px;
-}
-
-body.dark .families-content {
-    flex: 1;
-}
-
-body.dark .tag {
-    display: inline-block;
-    padding: 7px 16px;
-    margin-bottom: 14px;
-    border-radius: 999px;
-    background: rgba(212, 178, 106, 0.12);
-    border: 1px solid rgba(212, 178, 106, 0.28);
-    color: #d4b26a;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-body.dark .families-content h2 {
-    color: #d4b26a;
-    margin-bottom: 12px;
-    font-size: 1.9rem;
 }
 
 body.dark .families-content .intro-text {
     color: #d8e5dd;
-    line-height: 1.9;
-    margin-bottom: 18px;
-    font-size: 1rem;
-}
-
-body.dark .families-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 body.dark .families-list li {
-    position: relative;
-    padding-left: 28px;
-    margin-bottom: 12px;
     color: #e6f2ec;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    transition: 0.3s ease;
 }
 
 body.dark .families-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
     color: #d4b26a;
-    font-size: 0.9rem;
 }
 
 body.dark .families-list li:hover {
-    transform: translateX(6px);
     color: #ffffff;
 }
 
-
 body.dark .recognition-section {
-    padding: 90px 20px;
     background: linear-gradient(135deg, #0f3d2e, #123f34);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body.dark .glass-box {
-    max-width: 700px;
-    width: 100%;
-    padding: 45px 35px;
-    border-radius: 26px;
     background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(212, 178, 106, 0.3);
     box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.25),
         0 0 20px rgba(212, 178, 106, 0.08);
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-body.dark .glass-box:hover {
-    transform: translateY(-6px);
-}
-
-body.dark .small-badge {
-    display: inline-block;
-    padding: 7px 18px;
-    margin-bottom: 18px;
-    border-radius: 999px;
-    background: rgba(212, 178, 106, 0.12);
-    border: 1px solid rgba(212, 178, 106, 0.35);
-    color: #d4b26a;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-body.dark .glass-box h2 {
-    font-size: 2rem;
-    margin-bottom: 14px;
-    color: #d4b26a;
 }
 
 body.dark .glass-box p {
-    font-size: 1rem;
-    line-height: 1.9;
     color: #e2ece6;
-}
-
-
-@media (max-width: 992px) {
-    body.dark .martyrs-hero {
-        max-width: 90%;
-    }
-
-    body.dark .martyrs-content h2 {
-        font-size: 1.8rem;
-    }
-
-    body.dark .martyrs-content p {
-        font-size: 0.95rem;
-    }
-
-    body.dark .families-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    body.dark .families-line {
-        width: 100%;
-        height: 3px;
-        min-height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    body.dark .martyrs-section {
-        padding: 20px 12px 30px;
-    }
-
-    body.dark .martyrs-hero {
-        border-radius: 18px;
-    }
-
-    body.dark .martyrs-media {
-        height: 220px;
-    }
-
-    body.dark .martyrs-content {
-        padding: 20px 14px 22px;
-    }
-
-    body.dark .martyrs-content h2 {
-        font-size: 1.5rem;
-        line-height: 1.4;
-    }
-
-    body.dark .martyrs-content p {
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
-
-    body.dark .martyrs-badge {
-        font-size: 0.7rem;
-        padding: 6px 12px;
-    }
-
-    body.dark .martyrs-quote {
-        font-size: 0.95rem;
-    }
-
-    body.dark .families-container {
-        padding: 22px 16px;
-        border-radius: 18px;
-    }
-
-    body.dark .families-content h2 {
-        font-size: 1.4rem;
-    }
-
-    body.dark .families-content .intro-text {
-        font-size: 0.9rem;
-    }
-
-    body.dark .families-list li {
-        font-size: 0.88rem;
-    }
-
-    body.dark .glass-box {
-        padding: 28px 18px;
-        border-radius: 20px;
-    }
-
-    body.dark .glass-box h2 {
-        font-size: 1.5rem;
-    }
-
-    body.dark .glass-box p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    body.dark .martyrs-media {
-        height: 180px;
-    }
-
-    body.dark .martyrs-content h2 {
-        font-size: 1.3rem;
-    }
-
-    body.dark .martyrs-content p {
-        font-size: 0.85rem;
-    }
-
-    body.dark .families-list li {
-        padding-left: 22px;
-    }
-
-    body.dark .glass-box {
-        padding: 24px 14px;
-    }
 }
 
 /* ************************************************************ hero page end ************************************************************ */
-
-
-
-
-/* ************************************************************* tech page start ************************************************************* */
-
-.defense-tech-page {
-    width: min(1200px, 92%);
-    margin: 0 auto;
-    padding: 70px 0 100px;
-}
-
-.hero-box {
-    text-align: center;
-    padding: 60px 30px;
-    border-radius: 32px;
-    background:
-        linear-gradient(135deg, rgba(90, 201, 145, 0.10), rgba(255, 255, 255, 0.88)),
-        rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(55, 110, 82, 0.10);
-    box-shadow: 0 20px 50px rgba(22, 38, 31, 0.08);
-    margin-bottom: 35px;
-}
-
-.hero-badge {
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 999px;
-    margin-bottom: 20px;
-    background: rgba(90, 201, 145, 0.12);
-    border: 1px solid rgba(90, 201, 145, 0.22);
-    color: #4f9d76;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.hero-box h1 {
-    font-size: clamp(2rem, 4vw, 3.8rem);
-    line-height: 1.3;
-    color: #1d3028;
-    margin-bottom: 22px;
-}
-
-.intro-highlight {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-bottom: 50px;
-}
-
-.highlight-card {
-    padding: 28px 24px;
-    border-radius: 24px;
-    background: #f3f8f5;
-    border: 1px solid rgba(74, 114, 92, 0.10);
-    box-shadow: 0 14px 30px rgba(20, 34, 28, 0.06);
-    transition: 0.3s ease;
-}
-
-.highlight-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(90, 201, 145, 0.28);
-    box-shadow: 0 18px 34px rgba(20, 34, 28, 0.09);
-}
-
-.highlight-card h3 {
-    color: #1f332b;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-}
-
-.highlight-card p {
-    color: #5b7067;
-    font-size: 0.98rem;
-}
-
-.technology-section {
-    padding: 100px 20px;
-    background: linear-gradient(180deg, #f8f5ef 0%, #f1ebe0 100%);
-}
-
-.technology-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.technology-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
-}
-
-.technology-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 999px;
-    background: #d4b26a;
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
-}
-
-.technology-header h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: #1f2a37;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.technology-header p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #5b6470;
-    margin: 0;
-}
-
-.technology-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-}
-
-.technology-card {
-    background: #ffffff;
-    border-radius: 24px;
-    padding: 35px 30px;
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(212, 178, 106, 0.18);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.technology-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-
-.technology-card-top {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-}
-
-.technology-number {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #1f3b57;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1rem;
-    flex-shrink: 0;
-}
-
-.technology-card h3 {
-    font-size: 1.4rem;
-    color: #243241;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.technology-card p {
-    font-size: 1rem;
-    line-height: 1.9;
-    color: #5f6975;
-    margin-bottom: 24px;
-}
-
-.technology-btn {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #d4b26a;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.technology-btn:hover {
-    background: #be9950;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 992px) {
-    .technology-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .technology-card {
-        padding: 30px 24px;
-    }
-}
-
-@media (max-width: 576px) {
-    .technology-section {
-        padding: 80px 16px;
-    }
-
-    .technology-header {
-        margin-bottom: 40px;
-    }
-
-    .technology-card-top {
-        align-items: flex-start;
-    }
-
-    .technology-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .technology-card p {
-        font-size: 0.95rem;
-    }
-
-    .technology-btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-.main-section {
-    margin-bottom: 28px;
-    padding: 34px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(67, 110, 88, 0.08);
-    box-shadow: 0 12px 35px rgba(18, 31, 25, 0.06);
-}
-
-.alt-section {
-    background:
-        linear-gradient(135deg, rgba(90, 201, 145, 0.08), rgba(255, 255, 255, 0.82)),
-        rgba(255, 255, 255, 0.78);
-}
-
-.section-heading {
-    margin-bottom: 24px;
-}
-
-.section-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-
-    font-weight: bold;
-    margin-bottom: 14px;
-}
-
-.section-heading h2 {
-    font-size: clamp(1.6rem, 3vw, 2.5rem);
-    color: #1f332b;
-    line-height: 1.4;
-}
-
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-}
-
-.content-card {
-    padding: 28px 24px;
-    border-radius: 24px;
-    background: #f4f8f6;
-    border: 1px solid rgba(70, 111, 90, 0.10);
-    transition: 0.3s ease;
-}
-
-.content-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(90, 201, 145, 0.26);
-    box-shadow: 0 14px 30px rgba(22, 36, 30, 0.07);
-}
-
-.content-card h3 {
-    color: #20342c;
-    margin-bottom: 14px;
-    font-size: 1.15rem;
-}
-
-.content-card p {
-    color: #5c7168;
-    font-size: 0.99rem;
-}
-
-.summary-section {
-    margin-top: 45px;
-}
-
-.summary-box {
-    text-align: center;
-    padding: 50px 30px;
-    border-radius: 30px;
-    background:
-        linear-gradient(135deg, rgba(90, 201, 145, 0.10), rgba(255, 255, 255, 0.92)),
-        rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(90, 201, 145, 0.16);
-    box-shadow: 0 18px 45px rgba(18, 31, 25, 0.08);
-}
-
-.summary-badge {
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 999px;
-    margin-bottom: 18px;
-    color: #4f9d76;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-}
-
-.summary-box h2 {
-    font-size: clamp(1.8rem, 3vw, 3rem);
-    color: #1f332b;
-    margin-bottom: 18px;
-    line-height: 1.4;
-}
-
-.summary-box p {
-    max-width: 920px;
-    margin: 0 auto;
-    color: #596f66;
-    font-size: 1.03rem;
-}
-
-@media (max-width: 992px) {
-    .intro-highlight {
-        grid-template-columns: 1fr;
-    }
-
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .defense-tech-page {
-        padding: 40px 0 80px;
-    }
-
-    .hero-box,
-    .main-section,
-    .summary-box {
-        padding: 28px 20px;
-    }
-
-    .hero-box h1 {
-        font-size: 2rem;
-    }
-
-    .summary-box p,
-    .content-card p,
-    .highlight-card p {
-        font-size: 0.97rem;
-    }
-}
-
-
-body.dark .defense-tech-page {
-    width: min(1200px, 92%);
-    margin: 90px auto;
-    background: #0f3d2e;
-    border: 2px solid #d4b26a;
-    border-radius: 30px;
-    padding: 40px 30px;
-    background: linear-gradient(to right, #041c1a, #0b2f29, #041c1a);
-
-}
-
-body.dark main:has(.defense-tech-page) {
-    background: linear-gradient(to right, #041c1a, #0b2f29, #041c1a);
-}
-
-body.dark .hero-box {
-    text-align: center;
-    padding: 60px 30px;
-    border-radius: 32px;
-    background: linear-gradient(to bottom, #0f3d2e, #0b3025);
-    border: 1.5px solid rgba(212, 178, 106, 0.3);
-    border: 2px solid #d4b26a;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.25),
-        0 0 0 2px rgba(212, 178, 106, 0.15),
-        0 0 25px rgba(212, 178, 106, 0.25);
-
-}
-
-body.dark .hero-badge {
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 999px;
-    margin-bottom: 20px;
-    background: rgba(212, 178, 106, 0.12);
-    border: 1px solid rgba(212, 178, 106, 0.28);
-    color: #d4b26a;
-    font-size: 0.9rem;
-}
-
-body.dark .hero-box h1 {
-    color: #d4b26a;
-}
-
-body.dark .highlight-card {
-    padding: 28px 24px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 178, 106, 0.18);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-}
-
-body.dark .highlight-card h3 {
-    color: #ffffff;
-}
-
-body.dark .highlight-card p {
-    color: #e0e0e0;
-}
-
-body.dark .main-section {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 178, 106, 0.18);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
-}
-
-body.dark .alt-section {
-    background: linear-gradient(135deg, #0f3d2e, #123f34);
-}
-
-body.dark .section-tag {
-    background: rgba(212, 178, 106, 0.12);
-    border: 1px solid rgba(212, 178, 106, 0.28);
-    color: #d4b26a;
-}
-
-body.dark .section-heading h2 {
-    color: #ffffff;
-}
-
-body.dark .content-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 178, 106, 0.18);
-}
-
-body.dark .content-card h3 {
-    color: #ffffff;
-}
-
-body.dark .content-card p {
-    color: #e0e0e0;
-}
-
-body.dark .summary-box {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(212, 178, 106, 0.25);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
-}
-
-body.dark .summary-badge {
-    background: rgba(212, 178, 106, 0.12);
-    border: 1px solid rgba(212, 178, 106, 0.28);
-    color: #d4b26a;
-}
-
-body.dark .summary-box h2 {
-    color: #d4b26a;
-}
-
-body.dark .summary-box p {
-    color: #e2ece6;
-}
-
-/* ************************************************************* tech page end ************************************************************* */

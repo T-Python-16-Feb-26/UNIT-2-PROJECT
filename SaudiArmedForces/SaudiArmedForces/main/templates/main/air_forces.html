@@ -1,7 +1,7 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %} Royal Saudi Air Forces {% endblock %}
+{% block title %} Royal Saudi Air Force {% endblock %}
 
 {% block content %}
 <div class="air">
@@ -145,9 +145,9 @@
         </div>
     </section>
 
-    <section class="air-section aircraft-section" id="aircraft">
+    <section class="air-section">
         <div class="air-container">
-            <div class="air-text center-text">
+            <div class="air-text">
                 <span class="section-badge">Aircraft</span>
                 <h2>Aircraft & Capabilities</h2>
                 <p>
@@ -159,7 +159,7 @@
             <div class="equipment-grid">
                 <article class="equipment-card reveal">
                     <div class="equipment-image">
-                        <img src="{% static 'images/F-15SA.jpg' %}" alt=" F-15SA">
+                        <img src="{% static 'images/F-15SA.jpg' %}" alt="F-15SA">
                     </div>
                     <div class="equipment-content">
                         <h3>F-15SA</h3>
@@ -372,21 +372,18 @@
                 <span class="section-badge">Challenges</span>
                 <h2>Geographical & Strategic Challenges</h2>
             </div>
-            <div class="air-challenges-content">
-                <p class="air-challenges-intro">
-                    The Royal Saudi Air Force operates across vast airspace, requiring continuous monitoring,
-                    rapid response capabilities, and advanced coordination to ensure national security
-                    and effective air defense operations.
-                </p>
-                <ul class="air-challenges-list">
-                    <li>Securing a vast and complex airspace across the Kingdom.</li>
-                    <li>Detecting and responding rapidly to aerial threats.</li>
-                    <li>Maintaining advanced aircraft and high-tech defense systems.</li>
-                    <li>Coordinating joint operations with land and naval forces.</li>
-                    <li>Adapting to modern warfare technologies such as drones and cyber threats.</li>
-                </ul>
-                </ul>
-            </div>
+            <p class="air-challenges-intro">
+                The Royal Saudi Air Force operates across vast airspace, requiring continuous monitoring,
+                rapid response capabilities, and advanced coordination to ensure national security
+                and effective air defense operations.
+            </p>
+            <ul class="air-challenges-list">
+                <li>Securing a vast and complex airspace across the Kingdom.</li>
+                <li>Detecting and responding rapidly to aerial threats.</li>
+                <li>Maintaining advanced aircraft and high-tech defense systems.</li>
+                <li>Coordinating joint operations with land and naval forces.</li>
+                <li>Adapting to modern warfare technologies such as drones and cyber threats.</li>
+            </ul>
         </div>
     </section>
 </div>

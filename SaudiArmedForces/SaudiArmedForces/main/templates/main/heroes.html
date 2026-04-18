@@ -1,23 +1,25 @@
 {% extends 'main/base.html' %}
 {% load static %}
-{% block title %} Saudi Heroes {% endblock %}
+{% block title %}Saudi Heroes{% endblock %}
+
 {% block content %}
 
 <section class="martyrs-section">
     <div class="martyrs-hero">
         <video autoplay muted loop playsinline class="martyrs-media">
             <source src="{% static 'videos/heroes.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div class="martyrs-overlay"></div>
+
         <div class="martyrs-content">
             <span class="martyrs-badge">In Memory</span>
-            <h2>Martyrs of Honor</h2>
+            <h1>Martyrs of Honor</h1>
             <p>
                 We honor the martyrs who gave their lives in defense of the Kingdom.
-
             </p>
         </div>
     </div>
+
     <div class="martyrs-quote-box">
         <p class="martyrs-quote">
             Their sacrifice will forever remain a light of honor, loyalty,
@@ -26,16 +28,18 @@
     </div>
 </section>
 
-<section class="families-v2">
+<section class="families-section">
     <div class="families-container">
         <div class="families-line"></div>
+
         <div class="families-content">
-            <span class="tag">Support</span>
+            <span class="martyrs-badge">Support</span>
             <h2>Support for Families</h2>
             <p class="intro-text">
                 The Kingdom places great importance on supporting the families of martyrs,
                 recognizing their sacrifice as a shared national responsibility.
             </p>
+
             <ul class="families-list">
                 <li>Providing continuous social and emotional support for martyrs’ families</li>
                 <li>Offering financial assistance to ensure long-term stability</li>
@@ -49,7 +53,7 @@
 
 <section class="recognition-section">
     <div class="glass-box">
-        <span class="small-badge">Recognition</span>
+        <span class="martyrs-badge">Recognition</span>
         <h2>National Recognition</h2>
         <p>
             Martyrs are honored through official recognition, national ceremonies,
@@ -58,6 +62,5 @@
         </p>
     </div>
 </section>
-
 
 {% endblock %}
