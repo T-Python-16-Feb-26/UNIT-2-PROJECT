@@ -150,11 +150,12 @@
           <p style="margin-bottom:0.5rem">You answered <strong>${score}</strong> out of <strong>${questions.length}</strong> questions correctly (<strong>${pct}%</strong>).</p>
           <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="restartQuiz()">🔄 Try Again</button>
-            <a href="facts.html" class="btn btn-secondary">📊 Explore Facts</a>
+            <a href="/" class="btn btn-secondary">📊 Explore More</a>
           </div>
         </div>
       `;
     }
+  
 
     function restartQuiz() {
       current = 0;

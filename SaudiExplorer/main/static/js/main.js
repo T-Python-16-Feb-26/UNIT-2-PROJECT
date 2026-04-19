@@ -1,6 +1,3 @@
-// ===== GHOSN - SHARED JS =====
-
-// ===== COOKIE THEME STORAGE =====
 function setThemeCookie(theme) {
   document.cookie = `ghosn-theme=${theme}; path=/; max-age=31536000`;
 }
@@ -12,7 +9,7 @@ function getThemeCookie() {
     ?.split('=')[1] || null;
 }
 
-// ===== THEME CORE =====
+
 function getTheme() {
   return getThemeCookie() || 'light';
 }
@@ -28,7 +25,7 @@ function toggleTheme() {
   setTheme(current === 'dark' ? 'light' : 'dark');
 }
 
-// ===== UI UPDATE =====
+
 function updateThemeUI(theme) {
   const icon = document.querySelector('.theme-toggle-icon');
   const label = document.querySelector('.theme-toggle-label');
@@ -42,10 +39,10 @@ function updateThemeUI(theme) {
   }
 }
 
-// ===== APPLY THEME EARLY (prevent flash) =====
+
 document.documentElement.setAttribute('data-theme', getTheme());
 
-// ===== DOM READY =====
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // Apply UI once DOM is ready
